@@ -28,6 +28,7 @@ xcuserdata
 # for Windows
 #
 .vs/
+.vscode/
 /x64/
 /[Dd]ebug/
 /[Rr]elease/
@@ -43,9 +44,8 @@ xcuserdata
 *.opendb
 *.userosscache
 *.sln.docstates
-*.VC.VC.opendb
-*.VC.db
-Thumbs.db
+*.opendb
+*.db
 #
 # anothre stuff
 #

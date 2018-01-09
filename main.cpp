@@ -1,28 +1,38 @@
-// ƒEƒBƒ“ƒhƒEŠÖ˜A‚Ìˆ—
-#include "Window.h"
+ï»¿//
+// ãƒ¡ã‚¤ãƒ³ãƒ—ãƒ­ã‚°ãƒ©ãƒ 
+//
+
+// ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒœãƒƒã‚¯ã‚¹ã®è¡¨ç¤ºã®æº–å‚™
+#if defined(_WIN32)
+#  include <Windows.h>
+#  include <atlstr.h>  
+#endif
+
+// ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³æœ¬ä½“
+#include "GgApplication.h"
 
 //
-// ƒƒCƒ“ƒvƒƒOƒ‰ƒ€
+// ãƒ¡ã‚¤ãƒ³ãƒ—ãƒ­ã‚°ãƒ©ãƒ 
 //
-int main()
+int main() try
 {
-  // ƒEƒBƒ“ƒhƒE‚ğì¬‚·‚é
-  Window window("ggsample01");
+  // ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³æœ¬ä½“
+  GgApplication app;
 
-  // ”wŒiF‚ğw’è‚·‚é
-  glClearColor(1.0f, 1.0f, 1.0f, 0.0f);
+  // ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚’å®Ÿè¡Œã™ã‚‹
+  app.run();
+}
+catch (const std::exception &e)
+{
+  // ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’è¡¨ç¤ºã™ã‚‹
+#if defined(_WIN32)
+  const CStringW message(e.what());
+  MessageBox(NULL, LPCWSTR(message), TEXT("ã‚²ãƒ¼ãƒ ã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ã‚¹ç‰¹è«–"), MB_OK | MB_ICONERROR);
+#else
+  std::cerr << e.what() << "\n\n[Type enter key] ";
+  std::cin.get();
+#endif
 
-  // ƒEƒBƒ“ƒhƒE‚ªŠJ‚¢‚Ä‚¢‚éŠÔŒJ‚è•Ô‚·
-  while (window.shouldClose() == GL_FALSE)
-  {
-    // ƒEƒBƒ“ƒhƒE‚ğÁ‹‚·‚é
-    glClear(GL_COLOR_BUFFER_BIT);
-
-    //
-    // ‚±‚±‚Å OpenGL ‚É‚æ‚é•`‰æ‚ğs‚¤
-    //
-
-    // ƒJƒ‰[ƒoƒbƒtƒ@‚ğ“ü‚ê‘Ö‚¦‚ÄƒCƒxƒ“ƒg‚ğæ‚èo‚·
-    window.swapBuffers();
-  }
+  // ãƒ–ãƒ­ã‚°ãƒ©ãƒ ã‚’çµ‚äº†ã™ã‚‹
+  return EXIT_FAILURE;
 }
