@@ -2557,9 +2557,6 @@ void gg::ggInit()
 
   // 使用している GPU のバッファアライメントを調べる
   glGetIntegerv(GL_UNIFORM_BUFFER_OFFSET_ALIGNMENT, &ggBufferAlignment);
-
-  // GPU のバッファアライメントが取得できなければエラー
-  if (ggBufferAlignment == 0) throw std::runtime_error("Can't get uniform buffer offset alignment");
 }
 
 /*
@@ -2658,7 +2655,7 @@ void gg::_ggFBOError(const char *name, unsigned int line)
 **   width 画像の横の画素数
 **   height 画像の縦の画素数
 **   depth 画像の 1 画素のバイト数
-**   戻り値 保存に成功したら true
+**   戻り値 保存に成功すれば true, 失敗すれば false
 */
 bool gg::ggSaveTga(const char *name, const void *buffer,
   unsigned int width, unsigned int height, unsigned int depth)
@@ -2667,7 +2664,7 @@ bool gg::ggSaveTga(const char *name, const void *buffer,
   std::ofstream file(name, std::ios::binary);
 
   // ファイルが開けなかったら戻る
-  if (!file) throw "TGA ファイルが作成できませんでした";
+  if (!file) return false;
 
   // 画像のヘッダ
   const unsigned char type(depth == 0 ? 0 : depth < 3 ? 3 : 2);
@@ -2697,7 +2694,7 @@ bool gg::ggSaveTga(const char *name, const void *buffer,
   if (file.bad())
   {
     file.close();
-    throw "TGA ファイルのヘッダが書き込めませんでした";
+    return false;
   }
 
   // データを書き込む
@@ -2729,7 +2726,7 @@ bool gg::ggSaveTga(const char *name, const void *buffer,
   if (file.bad())
   {
     file.close();
-    throw "TGA ファイルに画像データが書き込めませんでした";
+    return false;
   }
 
   // ファイルを閉じる
@@ -2741,7 +2738,7 @@ bool gg::ggSaveTga(const char *name, const void *buffer,
 ** カラーバッファの内容を TGA ファイルに保存する
 **
 **   name 保存するファイル名
-**   戻り値 保存に成功したら true
+**   戻り値 保存に成功すれば true, 失敗すれば false
 */
 bool gg::ggSaveColor(const char *name)
 {
@@ -2767,7 +2764,7 @@ bool gg::ggSaveColor(const char *name)
 ** デプスバッファの内容を TGA ファイルに保存する
 **
 **   name 保存するファイル名
-**   戻り値 保存に成功したら true
+**   戻り値 保存に成功すれば true, 失敗すれば false
 */
 bool gg::ggSaveDepth(const char *name)
 {
@@ -2797,15 +2794,15 @@ bool gg::ggSaveDepth(const char *name)
 **   pHeight 読み込んだファイルの縦の画素数の格納先のポインタ (nullptr なら格納しない)
 **   pFormat 読み込んだファイルのフォーマットの格納先のポインタ (nullptr なら格納しない)
 **   image 読み込んだ画像を格納する vector
-**   戻り値 読み込み成功したら true
+**   戻り値 読み込みに成功すれば true, 失敗すれば false
 */
-void gg::ggReadImage(const char *name, std::vector<GLubyte> &image, GLsizei *pWidth, GLsizei *pHeight, GLenum *pFormat)
+bool gg::ggReadImage(const char *name, std::vector<GLubyte> &image, GLsizei *pWidth, GLsizei *pHeight, GLenum *pFormat)
 {
   // ファイルを開く
   std::ifstream file(name, std::ios::binary);
 
   // ファイルが開けなかったら戻る
-  if (!file) throw "TGA ファイルが開けませんでした";
+  if (!file) return false;
 
   // ヘッダを読み込む
   unsigned char header[18];
@@ -2815,7 +2812,7 @@ void gg::ggReadImage(const char *name, std::vector<GLubyte> &image, GLsizei *pWi
   if (file.bad())
   {
     file.close();
-    throw "TGA ファイルのヘッダが読み込めませんでした";
+    return false;
   }
 
   // 深度
@@ -2837,7 +2834,7 @@ void gg::ggReadImage(const char *name, std::vector<GLubyte> &image, GLsizei *pWi
   default:
     // 取り扱えないフォーマットだったら戻る
     file.close();
-    throw "ファイルが取り扱うことのできないフォーマットでした";
+    return false;
   }
 
   // 画像の縦横の画素数
@@ -2846,7 +2843,7 @@ void gg::ggReadImage(const char *name, std::vector<GLubyte> &image, GLsizei *pWi
 
   // データサイズ
   const int size(*pWidth * *pHeight * depth);
-  if (size < 2) throw "TGA ファイルのサイズが小さすぎます";
+  if (size < 2) return false;
 
   // 読み込みに使うメモリを確保する
   image.resize(size);
@@ -2887,8 +2884,16 @@ void gg::ggReadImage(const char *name, std::vector<GLubyte> &image, GLsizei *pWi
     file.read(reinterpret_cast<char *>(image.data()), size);
   }
 
+  // 読み込みに失敗したら戻る
+  if (file.bad())
+  {
+    file.close();
+    return false;
+  }
+
   // ファイルを閉じる
   file.close();
+  return true;
 }
 
 /*
@@ -3182,10 +3187,10 @@ void gg::GgNormalTexture::load(const char *name, float nz, GLenum internal)
 namespace gg
 {
   // GLfloat 型の 2 要素のベクトル
-  typedef std::array<GLfloat, 2> vec2;
+  using  vec2 = std::array<GLfloat, 2>;
 
   // GLfloat 型の 3 要素のベクトル
-  typedef std::array<GLfloat, 3> vec3;
+  using vec3 = std::array<GLfloat, 3>;
 
   // 三角形データ
   struct fidx
@@ -3960,7 +3965,7 @@ static GLboolean printProgramInfoLog(GLuint program)
 **   vtext バーテックスシェーダのコンパイル時のメッセージに追加する文字列
 **   ftext フラグメントシェーダのコンパイル時のメッセージに追加する文字列
 **   gtext ジオメトリシェーダのコンパイル時のメッセージに追加する文字列
-**   戻り値 シェーダプログラムのプログラム名 (作成できなければ 0)
+**   戻り値 プログラムオブジェクトのプログラム名 (作成できなければ 0)
 */
 GLuint gg::ggCreateShader(const char *vsrc, const char *fsrc, const char *gsrc,
   GLint nvarying, const char *const varyings[],
@@ -4031,10 +4036,14 @@ GLuint gg::ggCreateShader(const char *vsrc, const char *fsrc, const char *gsrc,
 
 /*
 ** シェーダのソースファイルを読み込んだ vector を返す
+**
+**   name ソースファイル名
+**   src 読み込んだソースファイルの文字列
+**   戻り値 読み込みの成功すれば true, 失敗したら false
 */
-bool ggReadShaderSource(const char *name, std::vector<GLchar> &src)
+static bool readShaderSource(const char *name, std::vector<GLchar> &src)
 {
-  // ファイル名が nullptr ならそのまま戻る
+// ファイル名が nullptr ならそのまま戻る
   if (name == nullptr) return true;
 
   // ソースファイルを開く
@@ -4077,11 +4086,11 @@ bool ggReadShaderSource(const char *name, std::vector<GLchar> &src)
 /*
 ** シェーダのソースファイルを読み込んでプログラムオブジェクトを作成する
 **
-**    vert バーテックスシェーダのソースファイル名
-**    frag フラグメントシェーダのソースファイル名 (nullptr なら不使用)
-**    geom ジオメトリシェーダのソースファイル名 (nullptr なら不使用)
-**    nvarying フィードバックする varying 変数の数 (0 なら不使用)
-**    varyings フィードバックする varying 変数のリスト (nullptr なら不使用)
+**   vert バーテックスシェーダのソースファイル名
+**   frag フラグメントシェーダのソースファイル名 (nullptr なら不使用)
+**   geom ジオメトリシェーダのソースファイル名 (nullptr なら不使用)
+**   nvarying フィードバックする varying 変数の数 (0 なら不使用)
+**   varyings フィードバックする varying 変数のリスト (nullptr なら不使用)
 **   戻り値 シェーダプログラムのプログラム名 (作成できなければ 0)
 */
 GLuint gg::ggLoadShader(const char *vert, const char *frag, const char *geom,
@@ -4089,7 +4098,7 @@ GLuint gg::ggLoadShader(const char *vert, const char *frag, const char *geom,
 {
   // シェーダのソースファイルを読み込む
   std::vector<GLchar> vsrc, fsrc, gsrc;
-  if (ggReadShaderSource(vert, vsrc) && ggReadShaderSource(frag, fsrc) && ggReadShaderSource(geom, gsrc))
+  if (readShaderSource(vert, vsrc) && readShaderSource(frag, fsrc) && readShaderSource(geom, gsrc))
   {
     // プログラムオブジェクトを作成する
     return ggCreateShader(vsrc.data(), fsrc.data(), gsrc.data(), nvarying, varyings, vert, frag, geom);
@@ -4098,6 +4107,69 @@ GLuint gg::ggLoadShader(const char *vert, const char *frag, const char *geom,
   // プログラムオブジェクト作成失敗
   return 0;
 }
+
+#if !defined(__APPLE__)
+/*
+** コンピュートシェーダのソースプログラムの文字列を読み込んでプログラムオブジェクトを作成する
+**
+**   csrc コンピュートシェーダのソースプログラムの文字列
+**   戻り値 プログラムオブジェクトのプログラム名 (作成できなければ 0)
+*/
+GLuint gg::ggCreateComputeShader(const char *csrc, const char *ctext)
+{
+  // シェーダプログラムの作成
+  const GLuint program(glCreateProgram());
+
+  if (program > 0)
+  {
+    if (csrc)
+    {
+      // コンピュートシェーダのシェーダオブジェクトを作成する
+      const GLuint compShader(glCreateShader(GL_COMPUTE_SHADER));
+      glShaderSource(compShader, 1, &csrc, nullptr);
+      glCompileShader(compShader);
+
+      // コンピュートシェーダのシェーダオブジェクトをプログラムオブジェクトに組み込む
+      if (printShaderInfoLog(compShader, ctext))
+        glAttachShader(program, compShader);
+      glDeleteShader(compShader);
+    }
+
+    // シェーダプログラムをリンクする
+    glLinkProgram(program);
+
+    // プログラムオブジェクトが作成できなければ 0 を返す
+    if (printProgramInfoLog(program) == GL_FALSE)
+    {
+      glDeleteProgram(program);
+      return 0;
+    }
+  }
+
+  // プログラムオブジェクトを返す
+  return program;
+}
+
+/*
+** コンピュートシェーダのソースファイルを読み込んでプログラムオブジェクトを作成する
+**
+**   comp コンピュートシェーダのソースファイル名
+**   戻り値 プログラムオブジェクトのプログラム名 (作成できなければ 0)
+*/
+GLuint gg::ggLoadComputeShader(const char *comp)
+{
+  // シェーダのソースファイルを読み込む
+  std::vector<GLchar> csrc;
+  if (readShaderSource(comp, csrc))
+  {
+    // プログラムオブジェクトを作成する
+    return ggCreateComputeShader(csrc.data(), comp);
+  }
+
+  // プログラムオブジェクト作成失敗
+  return 0;
+}
+#endif
 
 /*
 ** 3 要素の長さ
@@ -4782,8 +4854,8 @@ void gg::GgTrackball::reset()
 void gg::GgTrackball::region(float w, float h)
 {
   // マウスポインタ位置のウィンドウ内の相対的位置への換算用
-  sx = 1.0f / w;
-  sy = 1.0f / h;
+  scale[0] = 1.0f / w;
+  scale[1] = 1.0f / h;
 }
 
 /*
@@ -4792,14 +4864,14 @@ void gg::GgTrackball::region(float w, float h)
 **   マウスボタンを押したときに実行する
 **   (x, y) 現在のマウス位置
 */
-void gg::GgTrackball::start(float x, float y)
+void gg::GgTrackball::begin(float x, float y)
 {
   // ドラッグ開始
   drag = true;
 
   // ドラッグ開始点を記録する
-  cx = x;
-  cy = y;
+  start[0] = x;
+  start[1] = y;
 }
 
 /*
@@ -4813,16 +4885,15 @@ void gg::GgTrackball::motion(float x, float y)
   if (drag)
   {
     // マウスポインタの位置のドラッグ開始位置からの変位
-    const float dx((x - cx) * sx);
-    const float dy((y - cy) * sy);
+    const float d[] = { (x - start[0]) * scale[0], (y - start[1]) * scale[1] };
 
     // マウスポインタの位置のドラッグ開始位置からの距離
-    const float a(sqrt(dx * dx + dy * dy));
+    const float a(sqrt(d[0] * d[0] + d[1] * d[1]));
 
     if (a != 0.0)
     {
       // 現在の回転の四元数に作った四元数を掛けて合成する
-      tq = ggRotateQuaternion(dy, dx, 0.0f, a * 6.283185f) * cq;
+      tq = ggRotateQuaternion(d[1], d[0], 0.0f, a * 6.283185f) * cq;
 
       // 合成した四元数から回転の変換行列を求める
       tq.getMatrix(rt);
@@ -4857,7 +4928,7 @@ void gg::GgTrackball::rotate(const GgQuaternion &q)
 **   マウスボタンを離したときに実行する
 **   (x, y) 現在のマウス位置
 */
-void gg::GgTrackball::stop(float x, float y)
+void gg::GgTrackball::end(float x, float y)
 {
   // ドラッグ終了点における回転を求める
   motion(x, y);
@@ -5052,7 +5123,7 @@ gg::GgElements *gg::ggElementsObj(const char *name, bool normalize)
 /*
 ** メッシュ形状を作成する (Elements 形式)
 */
-gg::GgElements *gg::ggElementsMesh(GLuint slices, GLuint stacks, const GLfloat(*pos)[3], const GLfloat(*norm)[3])
+gg::GgElements *gg::ggElementsMesh(GLuint slices, GLuint stacks, const GLfloat (*pos)[3], const GLfloat (*norm)[3])
 {
   // 頂点属性
   std::vector<GgVertex> vert;
@@ -5181,8 +5252,8 @@ gg::GgElements *gg::ggElementsSphere(GLfloat radius, int slices, int stacks)
   }
 
   // GgElements オブジェクトを作成する
-  return ggElementsMesh(slices, stacks, reinterpret_cast<GLfloat(*)[3]>(&p[0]),
-    reinterpret_cast<GLfloat(*)[3]>(&n[0]));
+  return ggElementsMesh(slices, stacks, reinterpret_cast<GLfloat (*)[3]>(&p[0]),
+    reinterpret_cast<GLfloat (*)[3]>(&n[0]));
 }
 
 /*
@@ -5322,6 +5393,29 @@ void gg::GgSimpleShader::LightBuffer::loadLightPosition(GLfloat x, GLfloat y, GL
     light->position[1] = y;
     light->position[2] = z;
     light->position[3] = w;
+  }
+  unmap();
+}
+
+/*
+** 三角形に単純な陰影付けを行うシェーダが参照する光源データ：光源の位置を設定する
+**
+**   position 光源の位置
+**   first 値を設定する光源データの最初の番号, デフォルトは 0
+**   count 値を設定する光源データの数, デフォルトは 1
+*/
+void gg::GgSimpleShader::LightBuffer::loadLightPosition(const GgVector &position,
+  GLint first, GLsizei count) const
+{
+  // データを格納するバッファオブジェクトの先頭のポインタ
+  char *const start(static_cast<char *>(map(first, count)));
+  for (GLsizei i = 0; i < count; ++i)
+  {
+    // バッファオブジェクトの i 番目のブロックのポインタ
+    Light *const light(reinterpret_cast<Light *>(start + getStride() * i));
+
+    // 光源の位置を設定する
+    light->position = position;
   }
   unmap();
 }

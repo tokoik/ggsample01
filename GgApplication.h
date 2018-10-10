@@ -90,14 +90,16 @@ inline int Compare(const ovrGraphicsLuid& lhs, const ovrGraphicsLuid& rhs)
 struct GgApplication
 {
   // コンストラクタ
-  GgApplication()
+  GgApplication(int major = 4, int minor = 1)
   {
     // GLFW を初期化する
     if (glfwInit() == GL_FALSE) throw std::runtime_error("Can't initialize GLFW");
 
-    // OpenGL Version 4.1 Core Profile を選択する
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
+    // OpenGL のバージョンを指定する
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, major);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, minor);
+
+    // Core Profile を選択する
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
   }
@@ -121,7 +123,7 @@ struct GgApplication
     GLFWwindow *window;
 
     // ビューポートの横幅と高さ
-    GLsizei width, height;
+    GLsizei size[2];
 
     // ビューポートのアスペクト比
     GLfloat aspect;
@@ -130,10 +132,13 @@ struct GgApplication
     int arrow[4][2];
 
     // マウスの現在位置
-    double mouse_position[2];
+    GLfloat mouse_position[2];
 
     // マウスホイールの回転量
-    double wheel_rotation[2];
+    GLfloat wheel_rotation[2];
+
+    // 平行移動量量[ボタン][直前/更新][X/Y/Z]
+    GLfloat translation[2][2][3];
 
     // トラックボール
     GgTrackball trackball[2];
@@ -282,7 +287,7 @@ struct GgApplication
       window = glfwCreateWindow(width, height, title, monitor, share);
 
       // ウィンドウが作成できなければ戻る
-      if (!window) throw std::runtime_error("Can't create GLFW window");
+      if (!window) return;
 
       // 現在のウィンドウを処理対象にする
       glfwMakeContextCurrent(window);
@@ -306,8 +311,11 @@ struct GgApplication
       glfwSetFramebufferSizeCallback(window, resize);
 
       // 矢印キー・マウス・ジョイスティック操作の初期値を設定する
-      for (int i = 0; i < 4; ++i) arrow[i][0] = arrow[i][1] = 0;
-      wheel_rotation[0] = wheel_rotation[1] = 0.0;
+      for (auto a : arrow) a[0] = a[1] = 0;
+      wheel_rotation[0] = wheel_rotation[1] = 0.0f;
+
+      // 平行移動量の初期値を設定する
+      std::fill(translation[0][0], translation[2][0], 0.0f);
 
 #if defined(USE_OCULUS_RIFT)
       // Oculus Rift の情報を取り出す
@@ -583,7 +591,7 @@ struct GgApplication
     //
     // Oculus Rift による描画開始
     //
-    bool start()
+    bool begin()
     {
 #  if OVR_PRODUCT_VERSION > 0
       // セッションの状態を取得する
@@ -832,15 +840,24 @@ struct GgApplication
       glfwPollEvents();
 
       // マウスの位置を調べる
-      glfwGetCursorPos(window, &mouse_position[0], &mouse_position[1]);
-      const GLfloat x(static_cast<GLfloat>(mouse_position[0]));
-      const GLfloat y(static_cast<GLfloat>(mouse_position[1]));
+      double x, y;
+      glfwGetCursorPos(window, &x, &y);
+      mouse_position[0] = static_cast<GLfloat>(x);
+      mouse_position[1] = static_cast<GLfloat>(y);
 
       // 左ボタンドラッグ
-      if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_1)) trackball[0].motion(x, y);
+      if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_1))
+      {
+        calcTranslation(translation[GLFW_MOUSE_BUTTON_1][1], GLFW_MOUSE_BUTTON_1);
+        trackball[0].motion(mouse_position[0], mouse_position[1]);
+      }
 
       // 右ボタンドラッグ
-      if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_2)) trackball[1].motion(x, y);
+      if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_2))
+      {
+        calcTranslation(translation[GLFW_MOUSE_BUTTON_2][1], GLFW_MOUSE_BUTTON_2);
+        trackball[1].motion(mouse_position[0], mouse_position[1]);
+      }
     }
 
     //
@@ -854,8 +871,8 @@ struct GgApplication
       if (instance)
       {
         // ウィンドウのサイズを保存する
-        instance->width = width;
-        instance->height = height;
+        instance->size[0] = width;
+        instance->size[1] = height;
 
         // トラックボール処理の範囲を設定する
         instance->trackball[0].region(width, height);
@@ -887,8 +904,9 @@ struct GgApplication
           {
           case GLFW_KEY_R:
             // 矢印キーの設定値とマウスホイールの回転量をリセットする
-            for (int i = 0; i < 4; ++i) instance->arrow[i][0] = instance->arrow[i][1] = 0;
-            instance->wheel_rotation[0] = instance->wheel_rotation[1] = 0.0;
+            for (auto a : instance->arrow) a[0] = a[1] = 0;
+            std::fill(instance->translation[0][0], instance->translation[2][0], 0.0f);
+            instance->wheel_rotation[0] = instance->wheel_rotation[1] = 0.0f;
 
           case GLFW_KEY_O:
             // トラックボールをリセットする
@@ -965,8 +983,8 @@ struct GgApplication
       if (instance)
       {
         // マウスの現在位置を得る
-        const GLfloat x(static_cast<GLfloat>(instance->mouse_position[0]));
-        const GLfloat y(static_cast<GLfloat>(instance->mouse_position[1]));
+        const GLfloat x(instance->mouse_position[0]);
+        const GLfloat y(instance->mouse_position[1]);
 
         switch (button)
         {
@@ -974,12 +992,15 @@ struct GgApplication
           if (action)
           {
             // 左ドラッグ開始
-            instance->trackball[0].start(x, y);
+            instance->trackball[0].begin(x, y);
           }
           else
           {
             // 左ドラッグ終了
-            instance->trackball[0].stop(x, y);
+            instance->translation[0][0][0] = instance->translation[0][1][0];
+            instance->translation[0][0][1] = instance->translation[0][1][1];
+            instance->translation[0][0][2] = instance->translation[0][1][2];
+            instance->trackball[0].end(x, y);
           }
           break;
 
@@ -987,12 +1008,15 @@ struct GgApplication
           if (action)
           {
             // 右ドラッグ開始
-            instance->trackball[1].start(x, y);
+            instance->trackball[1].begin(x, y);
           }
           else
           {
             // 右ドラッグ終了
-            instance->trackball[1].stop(x, y);
+            instance->translation[1][0][0] = instance->translation[1][1][0];
+            instance->translation[1][0][1] = instance->translation[1][1][1];
+            instance->translation[1][0][2] = instance->translation[1][1][2];
+            instance->trackball[1].end(x, y);
           }
           break;
 
@@ -1015,8 +1039,9 @@ struct GgApplication
 
       if (instance)
       {
-        instance->wheel_rotation[0] += x;
-        instance->wheel_rotation[1] += y;
+        instance->wheel_rotation[0] += static_cast<GLfloat>(x);
+        instance->wheel_rotation[1] += static_cast<GLfloat>(y);
+        instance->translation[0][1][2] = instance->translation[1][1][2] = instance->getWheelY() * 0.05f;
       }
     }
 
@@ -1025,7 +1050,7 @@ struct GgApplication
     //
     GLsizei getWidth() const
     {
-      return width;
+      return size[0];
     }
 
     //
@@ -1033,7 +1058,15 @@ struct GgApplication
     //
     GLsizei getHeight() const
     {
-      return height;
+      return size[1];
+    }
+
+    //
+    // ウィンドウのサイズを得る
+    //
+    const GLsizei *getSize() const
+    {
+      return size;
     }
 
     //
@@ -1060,7 +1093,7 @@ struct GgApplication
     {
 #if !defined(USE_OCULUS_RIFT)
       // ウィンドウ全体に描画する
-      glViewport(0, 0, width, height);
+      glViewport(0, 0, size[0], size[1]);
 #endif
     }
 
@@ -1069,8 +1102,8 @@ struct GgApplication
     //
     GLfloat getArrow(int direction = 0, int mods = 0) const
     {
-      if (direction < 0 || direction > 1) throw std::out_of_range("No such directon.");
-      if (mods < 0 || mods > 3) throw std::out_of_range("No such modifier key.");
+      if (direction < 0 || direction > 1) throw std::out_of_range("No such directon");
+      if (mods < 0 || mods > 3) throw std::out_of_range("No such modifier key");
       return static_cast<GLfloat>(arrow[mods][direction]);
     }
 
@@ -1129,7 +1162,7 @@ struct GgApplication
     //
     GLfloat getControlArrowX() const
     {
-      return getArrow(2, 0);
+      return getArrow(0, 2);
     }
 
     //
@@ -1137,7 +1170,7 @@ struct GgApplication
     //
     GLfloat getControlArrowY() const
     {
-      return getArrow(2, 1);
+      return getArrow(1, 2);
     }
 
     //
@@ -1154,7 +1187,7 @@ struct GgApplication
     //
     GLfloat getAltArrowX() const
     {
-      return getArrow(3, 0);
+      return getArrow(0, 3);
     }
 
     //
@@ -1162,7 +1195,7 @@ struct GgApplication
     //
     GLfloat getAltArrowY() const
     {
-      return getArrow(3, 1);
+      return getArrow(1, 3);
     }
 
     //
@@ -1175,28 +1208,61 @@ struct GgApplication
     }
 
     //
-    // マウスの X 座標を得る
+    // マウスカーソルの現在位置を得る
     //
-    GLfloat getMouseX() const
+    const GLfloat *getMouse() const
     {
-      return static_cast<GLfloat>(mouse_position[0]);
+      return mouse_position;
     }
 
     //
-    // マウスの Y 座標を得る
-    //
-    GLfloat getMouseY() const
-    {
-      return static_cast<GLfloat>(mouse_position[1]);
-    }
-
-    //
-    // マウスの現在位置を得る
+    // マウスカーソルの現在位置を得る
     //
     void getMouse(GLfloat *position) const
     {
-      position[0] = getMouseX();
-      position[1] = getMouseY();
+      position[0] = mouse_position[0];
+      position[1] = mouse_position[1];
+    }
+
+    //
+    // マウスカーソルの現在位置を得る
+    //
+    const GLfloat getMouse(int direction) const
+    {
+      return mouse_position[direction & 1];
+    }
+
+    //
+    // マウスカーソルの現在位置の X 座標を得る
+    //
+    GLfloat getMouseX() const
+    {
+      return mouse_position[0];
+    }
+
+    //
+    // マウスカーソルの現在位置の Y 座標を得る
+    //
+    GLfloat getMouseY() const
+    {
+      return mouse_position[1];
+    }
+
+    //
+    // マウスホイールの現在の回転角を得る
+    //
+    const GLfloat *getWheel() const
+    {
+      return wheel_rotation;
+    }
+
+    //
+    // マウスホイールの現在の回転角を得る
+    //
+    void getWheel(GLfloat *rotation) const
+    {
+      rotation[0] = wheel_rotation[0];
+      rotation[1] = wheel_rotation[1];
     }
 
     //
@@ -1204,31 +1270,49 @@ struct GgApplication
     //
     GLfloat getWheel(int direction = 1) const
     {
-      return static_cast<GLfloat>(wheel_rotation[direction & 1]);
+      return wheel_rotation[direction & 1];
+    }
+
+    //
+    // マウスホイールの現在の X 方向の回転角を得る
+    //
+    const GLfloat getWheelX() const
+    {
+      return wheel_rotation[0];
+    }
+
+    //
+    // マウスホイールの現在の Y 方向の回転角を得る
+    //
+    const GLfloat getWheelY() const
+    {
+      return wheel_rotation[1];
+    }
+
+    //
+    // 平行移動量を計算する (X, Y のみ, Z は wheel() で計算する)
+    //
+    void calcTranslation(GLfloat *t, int button) const
+    {
+      const GLfloat d(fabs(translation[0][0][2]) + 1.0f);
+      t[0] = (mouse_position[0] - trackball[button].getStart(0)) * trackball[button].getScale(0) * d + translation[button][0][0];
+      t[1] = (trackball[button].getStart(1) - mouse_position[1]) * trackball[button].getScale(1) * d + translation[button][0][1];
+    }
+ 
+    //
+    // 平行移動量を得る
+    //
+    GgMatrix getTranslation(int button = GLFW_MOUSE_BUTTON_1) const
+    {
+      return ggTranslate(translation[button][1]);
     }
 
     //
     // トラックボールの回転変換行列を得る
     //
-    const GgMatrix getTrackball(int button = GLFW_MOUSE_BUTTON_1) const
+    GgMatrix getTrackball(int button = GLFW_MOUSE_BUTTON_1) const
     {
-      return trackball[button & 1].getMatrix();
-    }
-
-    //
-    // 左ボタンによるトラックボールの回転変換行列を得る
-    //
-    const GgMatrix getLeftTrackball() const
-    {
-      return getTrackball(GLFW_MOUSE_BUTTON_1);
-    }
-
-    //
-    // 右ボタンによるトラックボールの回転変換行列を得る
-    //
-    const GgMatrix getRightTrackball() const
-    {
-      return getTrackball(GLFW_MOUSE_BUTTON_2);
+      return trackball[button].getMatrix();
     }
   };
 };
