@@ -1,13 +1,12 @@
-﻿ggsample01
-==========
+﻿# ggsample01
+
 ## ゲームグラフィックス特論　第１回　宿題
 
-### OpenGL の開発環境整備をしてください
+OpenGL の開発環境整備をしてください．
 
-* 宿題のひな形は GitHub にあります
- - https://github.com/tokoik/ggsample01
-* 詳しくは講義のスライドを参照してください
- - http://www.wakayama-u.ac.jp/~tokoi/lecture/gg/ggnote01.pdf
+* 宿題のひな形は [GitHub](https://github.com/tokoik/ggsample01) にあります
+ (宿題のひな形で使っている[補助プログラムの解説](http://www.wakayama-u.ac.jp/~tokoi/lecture/gg/html/namespacegg.html))．
+* 詳しくは[講義のスライド](http://www.wakayama-u.ac.jp/~tokoi/lecture/gg/ggnote01.pdf)を参照してください．
 
 ## 宿題プログラムの作成に必要な環境
 
