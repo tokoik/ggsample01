@@ -2912,8 +2912,7 @@ GLuint gg::ggLoadTexture(const GLvoid *image, GLsizei width, GLsizei height,
   GLenum format, GLenum type, GLenum internal, GLenum wrap)
 {
   // テクスチャオブジェクト
-  GLuint tex;
-  glGenTextures(1, &tex);
+  const GLuint tex([] { GLuint tex;  glGenTextures(1, &tex); return tex; } ());
   glBindTexture(GL_TEXTURE_2D, tex);
 
   // アルファチャンネルがついていれば 4 バイト境界に設定する
