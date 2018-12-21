@@ -31,7 +31,7 @@ using namespace gg;
 
 // Oculus Rift SDK ライブラリ (LibOVR) の組み込み
 #if defined(USE_OCULUS_RIFT)
-#  if defined(_WIN32)
+#  if defined(_MSC_VER)
 #    define GLFW_EXPOSE_NATIVE_WIN32
 #    define GLFW_EXPOSE_NATIVE_WGL
 #    include <GLFW/glfw3native.h>
@@ -48,7 +48,7 @@ inline ovrGraphicsLuid GetDefaultAdapterLuid()
 {
   ovrGraphicsLuid luid = ovrGraphicsLuid();
 
-#    if defined(_WIN32)
+#    if defined(_MSC_VER)
   IDXGIFactory *factory(nullptr);
 
   if (SUCCEEDED(CreateDXGIFactory(IID_PPV_ARGS(&factory))))
@@ -198,12 +198,6 @@ struct GgApplication
 #  endif
 #endif
 
-    // コピーコンストラクタを封じる
-    Window(const Window &w);
-
-    // 代入を封じる
-    Window &operator=(const Window &w);
-
   public:
 
     //
@@ -211,7 +205,7 @@ struct GgApplication
     //
     Window(const char *title = "GLFW Window", int width = 640, int height = 480,
       int fullscreen = 0, GLFWwindow *share = nullptr)
-      : window(nullptr)
+      : window(nullptr), size{ width, height }
     {
 #if defined(USE_OCULUS_RIFT)
       // Oculus Rift が初期化済なら true
@@ -515,6 +509,12 @@ struct GgApplication
       resize(window, width, height);
     }
 
+    // コピーコンストラクタを封じる
+    Window(const Window &w) = delete;
+
+    // 代入を封じる
+    Window &operator=(const Window &w) = delete;
+
     //
     // デストラクタ
     //
@@ -765,7 +765,7 @@ struct GgApplication
 #endif
 
     //
-    // ウィンドウの識別子の取得
+    // ウィンドウの識別子を取得する
     //
     GLFWwindow *get() const
     {
@@ -773,12 +773,54 @@ struct GgApplication
     }
 
     //
+    // ウィンドウを閉じるよう指示する
+    //
+    void setClose(bool close) const
+    {
+      glfwSetWindowShouldClose(window, close);
+    }
+
+    //
     // ウィンドウを閉じるべきかを判定する
     //
-    bool shouldClose()
+    bool shouldClose() const
     {
-      // ウィンドウを閉じるか ESC キーがタイプされていれば真を返す
-      return glfwWindowShouldClose(window) || glfwGetKey(window, GLFW_KEY_ESCAPE);
+      // ウィンドウを閉じるべきなら真を返す
+      return glfwWindowShouldClose(window) != GLFW_FALSE;
+    }
+
+    //
+    // イベントを取得してループを継続するなら真を返す
+    //
+    operator bool()
+    {
+      // イベントを取り出す
+      glfwPollEvents();
+
+      // ウィンドウを閉じるべきなら false を返す
+      if (shouldClose()) return false;
+
+      // マウスの位置を調べる
+      double x, y;
+      glfwGetCursorPos(window, &x, &y);
+      mouse_position[0] = static_cast<GLfloat>(x);
+      mouse_position[1] = static_cast<GLfloat>(y);
+
+      // 左ボタンドラッグ
+      if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_1))
+      {
+        calcTranslation(translation[GLFW_MOUSE_BUTTON_1][1], GLFW_MOUSE_BUTTON_1);
+        trackball[0].motion(mouse_position[0], mouse_position[1]);
+      }
+
+      // 右ボタンドラッグ
+      if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_2))
+      {
+        calcTranslation(translation[GLFW_MOUSE_BUTTON_2][1], GLFW_MOUSE_BUTTON_2);
+        trackball[1].motion(mouse_position[0], mouse_position[1]);
+      }
+
+      return true;
     }
 
     //
@@ -787,7 +829,7 @@ struct GgApplication
     void swapBuffers()
     {
       // エラーチェック
-      _ggError(__FILE__, __LINE__);
+      ggError();
 
 #if defined(USE_OCULUS_RIFT)
 #  if OVR_PRODUCT_VERSION > 0
@@ -835,29 +877,6 @@ struct GgApplication
       // カラーバッファを入れ替える
       glfwSwapBuffers(window);
 #endif
-
-      // イベントを取り出す
-      glfwPollEvents();
-
-      // マウスの位置を調べる
-      double x, y;
-      glfwGetCursorPos(window, &x, &y);
-      mouse_position[0] = static_cast<GLfloat>(x);
-      mouse_position[1] = static_cast<GLfloat>(y);
-
-      // 左ボタンドラッグ
-      if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_1))
-      {
-        calcTranslation(translation[GLFW_MOUSE_BUTTON_1][1], GLFW_MOUSE_BUTTON_1);
-        trackball[0].motion(mouse_position[0], mouse_position[1]);
-      }
-
-      // 右ボタンドラッグ
-      if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_2))
-      {
-        calcTranslation(translation[GLFW_MOUSE_BUTTON_2][1], GLFW_MOUSE_BUTTON_2);
-        trackball[1].motion(mouse_position[0], mouse_position[1]);
-      }
     }
 
     //
@@ -919,6 +938,11 @@ struct GgApplication
 
           case GLFW_KEY_BACKSPACE:
           case GLFW_KEY_DELETE:
+            break;
+
+          case GLFW_KEY_ESCAPE:
+            // ESC キーがタイプされたらウィンドウを閉じる
+            instance->setClose(true);
             break;
 
           case GLFW_KEY_UP:
@@ -1098,6 +1122,14 @@ struct GgApplication
     }
 
     //
+    // キーが押されているかどうかを判定する
+    //
+    bool getKey(int key)
+    {
+      return glfwGetKey(window, key) != GLFW_RELEASE;
+    }
+
+    //
     // 矢印キーの現在の値を得る
     //
     GLfloat getArrow(int direction = 0, int mods = 0) const
@@ -1268,7 +1300,7 @@ struct GgApplication
     //
     // マウスホイールの現在の回転角を得る
     //
-    GLfloat getWheel(int direction = 1) const
+    GLfloat getWheel(int direction) const
     {
       return wheel_rotation[direction & 1];
     }
@@ -1298,7 +1330,7 @@ struct GgApplication
       t[0] = (mouse_position[0] - trackball[button].getStart(0)) * trackball[button].getScale(0) * d + translation[button][0][0];
       t[1] = (trackball[button].getStart(1) - mouse_position[1]) * trackball[button].getScale(1) * d + translation[button][0][1];
     }
- 
+
     //
     // 平行移動量を得る
     //

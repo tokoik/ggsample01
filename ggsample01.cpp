@@ -13,7 +13,7 @@ void GgApplication::run()
   glClearColor(1.0f, 1.0f, 1.0f, 0.0f);
 
   // ウィンドウが開いている間繰り返す
-  while (window.shouldClose() == GL_FALSE)
+  while (window)
   {
     // ウィンドウを消去する
     glClear(GL_COLOR_BUFFER_BIT);
