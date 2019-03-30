@@ -309,7 +309,7 @@ struct GgApplication
       wheel_rotation[0] = wheel_rotation[1] = 0.0f;
 
       // 平行移動量の初期値を設定する
-      std::fill(translation[0][0], translation[2][0], 0.0f);
+      std::fill(*(*translation), *(*translation + 2), 0.0f);
 
 #if defined(USE_OCULUS_RIFT)
       // Oculus Rift の情報を取り出す
@@ -924,7 +924,7 @@ struct GgApplication
           case GLFW_KEY_R:
             // 矢印キーの設定値とマウスホイールの回転量をリセットする
             for (auto a : instance->arrow) a[0] = a[1] = 0;
-            std::fill(instance->translation[0][0], instance->translation[2][0], 0.0f);
+            std::fill(*(*instance->translation), *(*(instance->translation + 2)), 0.0f);
             instance->wheel_rotation[0] = instance->wheel_rotation[1] = 0.0f;
 
           case GLFW_KEY_O:
