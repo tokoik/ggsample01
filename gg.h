@@ -4,7 +4,7 @@
 ** ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版
 **
 
-Copyright (c) 2011-2017 Kohe Tokoi. All Rights Reserved.
+Copyright (c) 2011-2019 Kohe Tokoi. All Rights Reserved.
 
 Permission is hereby granted, free of charge,  to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -1294,6 +1294,13 @@ extern PFNGLWINDOWRECTANGLESEXTPROC glWindowRectanglesEXT;
 */
 namespace gg
 {
+  // 光源と材質の uniform buffer object の binding point
+  enum BindingPoints
+  {
+    LightBindingPoint = 0,
+    MaterialBindingPoint
+  };
+
   /*!
   ** \brief 使用している GPU のバッファオブジェクトのアライメント
   */
@@ -5364,7 +5371,7 @@ namespace gg
       {
         // バッファオブジェクトの i 番目のブロックの位置
         const GLintptr offset(static_cast<GLintptr>(getStride()) * i);
-        glBindBufferRange(getTarget(), 0, getBuffer(), offset, sizeof (Light));
+        glBindBufferRange(getTarget(), LightBindingPoint, getBuffer(), offset, sizeof (Light));
       }
     };
 
@@ -5508,7 +5515,7 @@ namespace gg
       {
         // バッファオブジェクトの i 番目のブロックの位置
         const GLintptr offset(static_cast<GLintptr>(getStride()) * i);
-        glBindBufferRange(getTarget(), 1, getBuffer(), offset, sizeof (Material));
+        glBindBufferRange(getTarget(), MaterialBindingPoint, getBuffer(), offset, sizeof (Material));
       }
     };
 

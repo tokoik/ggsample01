@@ -2,7 +2,7 @@
 ** ゲームグラフィックス特論用補助プログラム GLFW3 版
 **
 
-Copyright (c) 2011-2017 Kohe Tokoi. All Rights Reserved.
+Copyright (c) 2011-2019 Kohe Tokoi. All Rights Reserved.
 
 Permission is hereby granted, free of charge,  to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -3260,7 +3260,17 @@ namespace gg
     while (std::getline(mtlfile, mtlline))
     {
       // 空行は読み飛ばす
-      if (mtlline == "" || mtlline == "\r") continue;
+      if (mtlline == "") continue;
+
+      // 最後の文字が '\r' なら
+      if (*(mtlline.end() - 1) == '\r')
+      {
+        // 最後の文字を削除する
+        mtlline.erase(mtlline.end() - 1, mtlline.end());
+
+        // 空行になったら読み飛ばす
+        if (mtlline == "") continue;
+      }
 
       // 読み込んだ行を文字列ストリームにする
       std::istringstream mtlstr(mtlline);
@@ -3402,11 +3412,18 @@ namespace gg
     // データの読み込み
     while (std::getline(file, line))
     {
-      // 最後の文字が \r なら削除する
-      if (*(line.end() - 1) == '\r') line.erase(--line.end());
-
       // 空行は読み飛ばす
       if (line == "") continue;
+
+      // 最後の文字が '\r' なら
+      if (*(line.end() - 1) == '\r')
+      {
+        // 最後の文字を削除する
+        line.erase(line.end() - 1, line.end());
+
+        // 空行になったら読み飛ばす
+        if (line == "") continue;
+      }
 
       // 一行を文字列ストリームに入れる
       std::istringstream str(line);
