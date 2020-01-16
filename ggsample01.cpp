@@ -1,10 +1,14 @@
-﻿// アプリケーション本体
-#include "GgApplication.h"
+﻿//
+// メインプログラム
+//
+
+// アプリケーション本体
+#include "Window.h"
 
 //
-// アプリケーションの実行
+// メインプログラム
 //
-void GgApplication::run()
+int main() try
 {
   // ウィンドウを作成する
   Window window("ggsample01");
@@ -25,4 +29,12 @@ void GgApplication::run()
     // カラーバッファを入れ替えてイベントを取り出す
     window.swapBuffers();
   }
+}
+catch (const std::runtime_error &e)
+{
+  // エラーメッセージを表示する
+  Window::message(e.what());
+
+  // ブログラムを終了する
+  return EXIT_FAILURE;
 }
