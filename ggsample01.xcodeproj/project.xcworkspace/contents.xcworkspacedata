@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ggsample01.xcodeproj">
+      location = "group:/Users/tokoi/Documents/Projects/ggsample01/ggsample01.cpp">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

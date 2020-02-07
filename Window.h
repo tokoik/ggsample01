@@ -99,7 +99,7 @@ inline int Compare(const ovrGraphicsLuid &lhs, const ovrGraphicsLuid &rhs)
 class Window
 {
   // ウィンドウの識別子
-  GLFWwindow* window;
+  GLFWwindow *window;
 
   // ビューポートの横幅と高さ
   GLsizei size[2];
@@ -143,6 +143,7 @@ class Window
   GLuint mirrorFbo;
 
 #  if OVR_PRODUCT_VERSION > 0
+
   // Oculus Rift に送る描画データ
   ovrLayerEyeFov layerData;
 
@@ -170,26 +171,27 @@ class Window
   ovrPosef eyePose[ovrEye_Count];
 
   // ミラー表示用の FBO のカラーテクスチャ
-  ovrGLTexture* mirrorTexture;
+  ovrGLTexture *mirrorTexture;
+
 #  endif
 #endif
 
   //
   // ユーザー定義のコールバック関数へのポインタ
   //
-  void* userPointer;
-  void (*resizeFunc)(const Window* window, int width, int height);
-  void (*keyboardFunc)(const Window* window, int key, int scancode, int action, int mods);
-  void (*mouseFunc)(const Window* window, int button, int action, int mods);
-  void (*wheelFunc)(const Window* window, double x, double y);
+  void *userPointer;
+  void (*resizeFunc)(const Window *window, int width, int height);
+  void (*keyboardFunc)(const Window *window, int key, int scancode, int action, int mods);
+  void (*mouseFunc)(const Window *window, int button, int action, int mods);
+  void (*wheelFunc)(const Window *window, double x, double y);
 
   //
   // ウィンドウのサイズ変更時の処理
   //
-  static void resize(GLFWwindow* window, int width, int height)
+  static void resize(GLFWwindow *window, int width, int height)
   {
     // このインスタンスの this ポインタを得る
-    Window* const instance(static_cast<Window*>(glfwGetWindowUserPointer(window)));
+    Window *const instance(static_cast<Window *>(glfwGetWindowUserPointer(window)));
 
     if (instance)
     {
@@ -217,10 +219,10 @@ class Window
   //
   // キーボードをタイプした時の処理
   //
-  static void keyboard(GLFWwindow* window, int key, int scancode, int action, int mods)
+  static void keyboard(GLFWwindow *window, int key, int scancode, int action, int mods)
   {
     // このインスタンスの this ポインタを得る
-    Window* const instance(static_cast<Window*>(glfwGetWindowUserPointer(window)));
+    Window *const instance(static_cast<Window *>(glfwGetWindowUserPointer(window)));
 
     if (instance && action)
     {
@@ -306,10 +308,10 @@ class Window
   //
   // マウスボタンを操作したときの処理
   //
-  static void mouse(GLFWwindow* window, int button, int action, int mods)
+  static void mouse(GLFWwindow *window, int button, int action, int mods)
   {
     // このインスタンスの this ポインタを得る
-    Window* const instance(static_cast<Window*>(glfwGetWindowUserPointer(window)));
+    Window *const instance(static_cast<Window *>(glfwGetWindowUserPointer(window)));
 
     if (instance)
     {
@@ -366,10 +368,10 @@ class Window
   //
   // マウスホイールを操作した時の処理
   //
-  static void wheel(GLFWwindow* window, double x, double y)
+  static void wheel(GLFWwindow *window, double x, double y)
   {
     // このインスタンスの this ポインタを得る
-    Window* const instance(static_cast<Window*>(glfwGetWindowUserPointer(window)));
+    Window *const instance(static_cast<Window *>(glfwGetWindowUserPointer(window)));
 
     if (instance)
     {
@@ -390,7 +392,7 @@ public:
   //
   // コンストラクタ
   //
-  Window(const char* title = "GLFW Window", int width = 640, int height = 480, int major = 4, int minor = 1,
+  Window(const char *title = "GLFW Window", int width = 640, int height = 480, int major = 4, int minor = 1,
     int fullscreen = 0, GLFWwindow *share = nullptr)
     : window(nullptr), size{ width, height }
     , userPointer(nullptr), resizeFunc(nullptr), keyboardFunc(nullptr), mouseFunc(nullptr), wheelFunc(nullptr)
@@ -564,6 +566,7 @@ public:
       screen[eye][3] = fov.UpTan;
 
 #  if OVR_PRODUCT_VERSION > 0
+
       // 描画データに視野を設定する
       layerData.Fov[eye] = fov;
 
@@ -638,10 +641,12 @@ public:
 
       // Oculus Rift のレンズ補正等の設定値を取得する
       eyeRenderDesc[eye] = ovr_GetRenderDesc(session, ovrEyeType(eye), fov);
+
 #  endif
     }
 
 #  if OVR_PRODUCT_VERSION > 0
+
     // 姿勢のトラッキングにおける床の高さを 0 に設定する
     ovr_SetTrackingOriginType(session, ovrTrackingOrigin_FloorLevel);
 
@@ -673,7 +678,7 @@ public:
 #  else
 
     // ミラー表示用の FBO を作成する
-    if (OVR_SUCCESS(ovr_CreateMirrorTextureGL(session, GL_SRGB8_ALPHA8, width, height, reinterpret_cast<ovrTexture**>(&mirrorTexture))))
+    if (OVR_SUCCESS(ovr_CreateMirrorTextureGL(session, GL_SRGB8_ALPHA8, width, height, reinterpret_cast<ovrTexture **>(&mirrorTexture))))
     {
       glGenFramebuffers(1, &mirrorFbo);
       glBindFramebuffer(GL_READ_FRAMEBUFFER, mirrorFbo);
@@ -681,6 +686,7 @@ public:
       glFramebufferRenderbuffer(GL_READ_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, 0);
       glBindFramebuffer(GL_READ_FRAMEBUFFER, 0);
     }
+
 #  endif
 
     // Oculus Rift のレンダリング用の FBO を作成する
@@ -696,6 +702,7 @@ public:
 
     // 垂直同期タイミングに合わせる
     glfwSwapInterval(1);
+
 #endif
 
     // ビューポートと投影変換行列を初期化する
@@ -717,6 +724,7 @@ public:
     if (!window) return;
 
 #ifdef USE_OCULUS_RIFT
+
     // ミラー表示用の FBO を削除する
     if (mirrorFbo) glDeleteFramebuffers(1, &mirrorFbo);
 
@@ -727,7 +735,7 @@ public:
       ovr_DestroyMirrorTexture(session, mirrorTexture);
 #  else
       glDeleteTextures(1, &mirrorTexture->OGL.TexId);
-      ovr_DestroyMirrorTexture(session, reinterpret_cast<ovrTexture*>(mirrorTexture));
+      ovr_DestroyMirrorTexture(session, reinterpret_cast<ovrTexture *>(mirrorTexture));
 #  endif
     }
 
@@ -738,6 +746,7 @@ public:
     for (int eye = 0; eye < ovrEye_Count; ++eye)
     {
 #  if OVR_PRODUCT_VERSION > 0
+
       // レンダリングターゲットに使ったテクスチャを開放する
       if (layerData.ColorTexture[eye])
       {
@@ -755,7 +764,7 @@ public:
       auto *const colorTexture(layerData.EyeFov.ColorTexture[eye]);
       for (int i = 0; i < colorTexture->TextureCount; ++i)
       {
-        const auto *const ctex(reinterpret_cast<ovrGLTexture*>(&colorTexture->Textures[i]));
+        const auto *const ctex(reinterpret_cast<ovrGLTexture *>(&colorTexture->Textures[i]));
         glDeleteTextures(1, &ctex->OGL.TexId);
       }
       ovr_DestroySwapTextureSet(session, colorTexture);
@@ -764,16 +773,18 @@ public:
       auto *const depthTexture(layerData.EyeFovDepth.DepthTexture[eye]);
       for (int i = 0; i < depthTexture->TextureCount; ++i)
       {
-        const auto *const dtex(reinterpret_cast<ovrGLTexture*>(&depthTexture->Textures[i]));
+        const auto *const dtex(reinterpret_cast<ovrGLTexture *>(&depthTexture->Textures[i]));
         glDeleteTextures(1, &dtex->OGL.TexId);
       }
       ovr_DestroySwapTextureSet(session, depthTexture);
+
 #  endif
     }
 
     // Oculus Rift のセッションを破棄する
     ovr_Destroy(session);
     session = nullptr;
+
 #endif
 
     // ウィンドウを破棄する
@@ -781,12 +792,14 @@ public:
   }
 
 #ifdef USE_OCULUS_RIFT
+
   //
   // Oculus Rift による描画開始
   //
   bool begin()
   {
 #  if OVR_PRODUCT_VERSION > 0
+
     // セッションの状態を取得する
     ovrSessionStatus sessionStatus;
     ovr_GetSessionStatus(session, &sessionStatus);
@@ -837,6 +850,7 @@ public:
 
     // 視点の姿勢情報を求める
     ovr_CalcEyePoses(hmdState.HeadPose.ThePose, hmdToEyeViewOffset, eyePose);
+
 #  endif
 
     return true;
@@ -853,6 +867,7 @@ public:
   void select(int eye, GLfloat *screen, GLfloat *position, GLfloat *orientation)
   {
 #  if OVR_PRODUCT_VERSION > 0
+
     // Oculus Rift にレンダリングする FBO に切り替える
     if (layerData.ColorTexture[eye])
     {
@@ -888,9 +903,9 @@ public:
 
     // レンダーターゲットを切り替える
     glBindFramebuffer(GL_FRAMEBUFFER, oculusFbo[eye]);
-    const auto &ctex(reinterpret_cast<ovrGLTexture*>(&colorTexture->Textures[colorTexture->CurrentIndex]));
+    const auto &ctex(reinterpret_cast<ovrGLTexture *>(&colorTexture->Textures[colorTexture->CurrentIndex]));
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, ctex->OGL.TexId, 0);
-    const auto &dtex(reinterpret_cast<ovrGLTexture*>(&depthTexture->Textures[depthTexture->CurrentIndex]));
+    const auto &dtex(reinterpret_cast<ovrGLTexture *>(&depthTexture->Textures[depthTexture->CurrentIndex]));
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, dtex->OGL.TexId, 0);
 
     // ビューポートを設定する
@@ -900,6 +915,7 @@ public:
     // Oculus Rift の片目の位置と回転を取得する
     const auto &p(eyePose[eye].Position);
     const auto &o(eyePose[eye].Orientation);
+
 #  endif
 
     // Oculus Rift のスクリーンの大きさを返す
@@ -925,8 +941,8 @@ public:
   //
   void timewarp(const GgMatrix &projection)
   {
-    // TimeWarp に使う変換行列の成分を設定する
 #  if OVR_PRODUCT_VERSION < 1
+    // TimeWarp に使う変換行列の成分を設定する
     auto &posTimewarpProjectionDesc(layerData.EyeFovDepth.ProjectionDesc);
     posTimewarpProjectionDesc.Projection22 = (projection.get()[4 * 2 + 2] + projection.get()[4 * 3 + 2]) * 0.5f;
     posTimewarpProjectionDesc.Projection23 = projection.get()[4 * 2 + 3] * 0.5f;
@@ -1011,9 +1027,12 @@ public:
 
   // 視点の数
   const int eyeCount = ovrEye_Count;
+
 #else
+
   // 視点の数
   const int eyeCount = 1;
+
 #endif
 
   //
@@ -1268,7 +1287,7 @@ public:
   //
   // マウスカーソルの現在位置を得る
   //
-  void getMouse(GLfloat* position) const
+  void getMouse(GLfloat *position) const
   {
     position[0] = mouse_position[0];
     position[1] = mouse_position[1];
@@ -1301,7 +1320,7 @@ public:
   //
   // マウスホイールの現在の回転角を得る
   //
-  const GLfloat* getWheel() const
+  const GLfloat *getWheel() const
   {
     return wheel_rotation;
   }
@@ -1309,7 +1328,7 @@ public:
   //
   // マウスホイールの現在の回転角を得る
   //
-  void getWheel(GLfloat* rotation) const
+  void getWheel(GLfloat *rotation) const
   {
     rotation[0] = wheel_rotation[0];
     rotation[1] = wheel_rotation[1];
@@ -1342,7 +1361,7 @@ public:
   //
   // 平行移動量を計算する (X, Y のみ, Z は wheel() で計算する)
   //
-  void calcTranslation(GLfloat* t, int button) const
+  void calcTranslation(GLfloat *t, int button) const
   {
     const GLfloat d(fabs(translation[0][0][2]) + 1.0f);
     t[0] = (mouse_position[0] - trackball[button].getStart(0)) * trackball[button].getScale(0) * d + translation[button][0][0];
@@ -1368,7 +1387,7 @@ public:
   //
   // ユーザーポインタを取り出す
   //
-  void* getUserPointer() const
+  void *getUserPointer() const
   {
     return userPointer;
   }
@@ -1376,7 +1395,7 @@ public:
   //
   // 任意のユーザポインタを保存する
   //
-  void setUserPointer(void* pointer)
+  void setUserPointer(void *pointer)
   {
     userPointer = pointer;
   }
@@ -1384,7 +1403,7 @@ public:
   //
   // ユーザ定義の resize 関数を設定する
   //
-  void setResizeFunc(void (*func)(const Window* window, int width, int height))
+  void setResizeFunc(void (*func)(const Window *window, int width, int height))
   {
     resizeFunc = func;
   }
@@ -1392,7 +1411,7 @@ public:
   //
   // ユーザ定義の keyboard 関数を設定する
   //
-  void setKeyboardFunc(void (*func)(const Window* window, int key, int scancode, int action, int mods))
+  void setKeyboardFunc(void (*func)(const Window *window, int key, int scancode, int action, int mods))
   {
     keyboardFunc = func;
   }
@@ -1400,7 +1419,7 @@ public:
   //
   // ユーザ定義の mouse 関数を設定する
   //
-  void setMouseFunc(void (*func)(const Window* window, int button, int action, int mods))
+  void setMouseFunc(void (*func)(const Window *window, int button, int action, int mods))
   {
     mouseFunc = func;
   }
@@ -1408,7 +1427,7 @@ public:
   //
   // ユーザ定義の wheel 関数を設定する
   //
-  void setResizeFunc(void (*func)(const Window* window, double x, double y))
+  void setResizeFunc(void (*func)(const Window *window, double x, double y))
   {
     wheelFunc = func;
   }
