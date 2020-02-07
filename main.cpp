@@ -14,8 +14,8 @@
 #endif
 #define HEADER_STR "ゲームグラフィックス特論"
 
-// 例外処理
-#include <stdexcept>
+// ウィンドウ関連の処理
+#include "Window.h"
 
 // アプリケーション本体
 extern void app();
@@ -25,6 +25,8 @@ extern void app();
 //
 int main() try
 {
+  Window::init(4, 1);
+
   // アプリケーションの実行
   app();
 }

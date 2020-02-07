@@ -25,12 +25,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 **
 */
 
-// MessageBox の準備
-#if defined(_MSC_VER)
-#  include <Windows.h>
-#  include <atlstr.h>  
-#endif
-
 // 補助プログラム
 #include "gg.h"
 using namespace gg;
@@ -387,26 +381,29 @@ class Window
     }
   }
 
+  //
+  // GLFW のエラー表示
+  //
+  static void glfwErrorCallback(int error, const char *description)
+  {
+    throw std::runtime_error(description);
+  }
+
 public:
 
   //
-  // コンストラクタ
+  // 初期化
   //
-  Window(const char *title = "GLFW Window", int width = 640, int height = 480, int major = 4, int minor = 1,
-    int fullscreen = 0, GLFWwindow *share = nullptr)
-    : window(nullptr), size{ width, height }
-    , userPointer(nullptr), resizeFunc(nullptr), keyboardFunc(nullptr), mouseFunc(nullptr), wheelFunc(nullptr)
-    , arrow{ { 0, 0 }, { 0, 0 }, { 0, 0 }, { 0, 0 } }, mouse_position{ 0.0f, 0.0f }, wheel_rotation{ 0.0f, 0.0f }
-    , translation{ { { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } }, { { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } } }
-    , aspect(1.0f)
+  static void init(int major = 4, int minor = 1)
   {
-    // 最初のインスタンスのときだけ true
+    // 最初に実行するときだけ true
     static bool firstTime(true);
 
-    // 最初のインスタンスのときだけ実行
+    // 一度だけ実行
     if (firstTime)
     {
       // GLFW を初期化する
+      glfwSetErrorCallback(glfwErrorCallback);
       if (glfwInit() == GL_FALSE) throw std::runtime_error("Can't initialize GLFW");
 
       // 後始末を登録する
@@ -461,7 +458,19 @@ public:
       // 初期化済みの印をつける
       firstTime = false;
     }
+  }
 
+  //
+  // コンストラクタ
+  //
+  Window(const char *title = "GLFW Window", int width = 640, int height = 480,
+    int fullscreen = 0, GLFWwindow *share = nullptr)
+    : window(nullptr), size{ width, height }
+    , userPointer(nullptr), resizeFunc(nullptr), keyboardFunc(nullptr), mouseFunc(nullptr), wheelFunc(nullptr)
+    , arrow{ { 0, 0 }, { 0, 0 }, { 0, 0 }, { 0, 0 } }, mouse_position{ 0.0f, 0.0f }, wheel_rotation{ 0.0f, 0.0f }
+    , translation{ { { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } }, { { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } } }
+    , aspect(1.0f)
+  {
     // ディスプレイの情報
     GLFWmonitor *monitor(nullptr);
 
@@ -487,8 +496,8 @@ public:
     // GLFW のウィンドウを作成する
     window = glfwCreateWindow(width, height, title, monitor, share);
 
-    // ウィンドウが作成できなければ戻る
-    if (!window) return;
+    // ウィンドウが作成できなければエラー
+    if (!window) throw std::runtime_error("Unable to open the GLFW window.");
 
     // 現在のウィンドウを処理対象にする
     glfwMakeContextCurrent(window);
@@ -1171,9 +1180,7 @@ public:
   //
   GLfloat getArrow(int direction = 0, int mods = 0) const
   {
-    if (direction < 0 || direction > 1) throw std::out_of_range("No such directon");
-    if (mods < 0 || mods > 3) throw std::out_of_range("No such modifier key");
-    return static_cast<GLfloat>(arrow[mods][direction]);
+    return static_cast<GLfloat>(arrow[mods & 3][direction & 1]);
   }
 
   //
@@ -1430,17 +1437,5 @@ public:
   void setResizeFunc(void (*func)(const Window *window, double x, double y))
   {
     wheelFunc = func;
-  }
-
-  //
-  // エラーメッセージを表示する
-  //
-  static void message(const char *msg)
-  {
-#if defined(_MSC_VER)
-    MessageBox(NULL, CString(msg), TEXT("ゲームグラフィックス特論"), MB_ICONERROR);
-#else
-    std::cerr << msg << '\n';
-#endif
   }
 };
