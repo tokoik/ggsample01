@@ -10,6 +10,11 @@
 		7D24C83814F8F3A700C23BB6 /* gg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D24C83614F8F3A700C23BB6 /* gg.cpp */; };
 		7D27311B23EEE29600438307 /* gg.icns in Resources */ = {isa = PBXBuildFile; fileRef = 7D27311A23EEE29600438307 /* gg.icns */; };
 		7DDCB0FA23EDBFD5007C2AD3 /* ggsample01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DDCB0F923EDBFD5007C2AD3 /* ggsample01.cpp */; };
+		7DF4DDD223EF0E40005D4BCB /* imgui_impl_opengl3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DF4DDCD23EF0E40005D4BCB /* imgui_impl_opengl3.cpp */; };
+		7DF4DDD323EF0E40005D4BCB /* imgui_impl_glfw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DF4DDCE23EF0E40005D4BCB /* imgui_impl_glfw.cpp */; };
+		7DF4DDD423EF0E40005D4BCB /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DF4DDCF23EF0E40005D4BCB /* imgui_widgets.cpp */; };
+		7DF4DDD523EF0E40005D4BCB /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DF4DDD023EF0E40005D4BCB /* imgui.cpp */; };
+		7DF4DDD623EF0E40005D4BCB /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DF4DDD123EF0E40005D4BCB /* imgui_draw.cpp */; };
 		7DF9CC4520047E4E009E3F96 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DF9CC4420047E4E009E3F96 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +26,11 @@
 		7D27311A23EEE29600438307 /* gg.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = gg.icns; sourceTree = "<group>"; };
 		7DDCB0F723EDA73D007C2AD3 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
 		7DDCB0F923EDBFD5007C2AD3 /* ggsample01.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ggsample01.cpp; path = /Users/tokoi/Documents/Projects/ggsample01/ggsample01.cpp; sourceTree = "<absolute>"; };
+		7DF4DDCD23EF0E40005D4BCB /* imgui_impl_opengl3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_opengl3.cpp; path = lib/imgui_impl_opengl3.cpp; sourceTree = "<group>"; };
+		7DF4DDCE23EF0E40005D4BCB /* imgui_impl_glfw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_glfw.cpp; path = lib/imgui_impl_glfw.cpp; sourceTree = "<group>"; };
+		7DF4DDCF23EF0E40005D4BCB /* imgui_widgets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_widgets.cpp; path = lib/imgui_widgets.cpp; sourceTree = "<group>"; };
+		7DF4DDD023EF0E40005D4BCB /* imgui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui.cpp; path = lib/imgui.cpp; sourceTree = "<group>"; };
+		7DF4DDD123EF0E40005D4BCB /* imgui_draw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_draw.cpp; path = lib/imgui_draw.cpp; sourceTree = "<group>"; };
 		7DF9CC4420047E4E009E3F96 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -40,6 +50,11 @@
 			children = (
 				7DDCB0F923EDBFD5007C2AD3 /* ggsample01.cpp */,
 				7DF9CC4420047E4E009E3F96 /* main.cpp */,
+				7DF4DDD123EF0E40005D4BCB /* imgui_draw.cpp */,
+				7DF4DDCE23EF0E40005D4BCB /* imgui_impl_glfw.cpp */,
+				7DF4DDCD23EF0E40005D4BCB /* imgui_impl_opengl3.cpp */,
+				7DF4DDCF23EF0E40005D4BCB /* imgui_widgets.cpp */,
+				7DF4DDD023EF0E40005D4BCB /* imgui.cpp */,
 				7D24C83614F8F3A700C23BB6 /* gg.cpp */,
 				7D24C83714F8F3A700C23BB6 /* gg.h */,
 				7DDCB0F723EDA73D007C2AD3 /* Window.h */,
@@ -123,8 +138,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D24C83814F8F3A700C23BB6 /* gg.cpp in Sources */,
+				7DF4DDD423EF0E40005D4BCB /* imgui_widgets.cpp in Sources */,
 				7DDCB0FA23EDBFD5007C2AD3 /* ggsample01.cpp in Sources */,
+				7DF4DDD223EF0E40005D4BCB /* imgui_impl_opengl3.cpp in Sources */,
+				7DF4DDD323EF0E40005D4BCB /* imgui_impl_glfw.cpp in Sources */,
+				7DF4DDD523EF0E40005D4BCB /* imgui.cpp in Sources */,
 				7DF9CC4520047E4E009E3F96 /* main.cpp in Sources */,
+				7DF4DDD623EF0E40005D4BCB /* imgui_draw.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

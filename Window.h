@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 /*
 ** ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版
@@ -569,7 +569,7 @@ public:
 #ifdef USE_IMGUI
     // Setup Platform/Renderer bindings
     ImGui_ImplGlfw_InitForOpenGL(window, true);
-    ImGui_ImplOpenGL3_Init("#version 430");
+    ImGui_ImplOpenGL3_Init("#version 410");
 #endif
 
     // このインスタンスの this ポインタを記録しておく
