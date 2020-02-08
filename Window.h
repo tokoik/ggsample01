@@ -50,6 +50,16 @@ using namespace gg;
 #  endif
 #endif
 
+// ImGui を使うなら
+#define USE_IMGUI
+
+// ImGui の組み込み
+#ifdef USE_IMGUI
+#  include "imgui.h"
+#  include "imgui_impl_glfw.h"
+#  include "imgui_impl_opengl3.h"
+#endif
+
 // 標準ライブラリ
 #include <cmath>
 #include <cstdlib>
@@ -223,6 +233,9 @@ class Window
 
     if (instance && action)
     {
+      // ユーザー定義のコールバック関数の呼び出し
+      if (instance->keyboardFunc) (*instance->keyboardFunc)(instance, key, scancode, action, mods);
+
       switch (key)
       {
       case GLFW_KEY_R:
@@ -245,8 +258,10 @@ class Window
         break;
 
       case GLFW_KEY_ESCAPE:
+#ifndef USE_IMGUI
         // ESC キーがタイプされたらウィンドウを閉じる
         instance->setClose(GLFW_TRUE);
+#endif
         break;
 
       case GLFW_KEY_UP:
@@ -296,9 +311,6 @@ class Window
       default:
         break;
       }
-
-      // ユーザー定義のコールバック関数の呼び出し
-      if (instance->keyboardFunc) (*instance->keyboardFunc)(instance, key, scancode, action, mods);
     }
   }
 
@@ -312,6 +324,9 @@ class Window
 
     if (instance)
     {
+      // ユーザー定義のコールバック関数の呼び出し
+      if (instance->mouseFunc) (*instance->mouseFunc)(instance, button, action, mods);
+
       // マウスの現在位置を得る
       const GLfloat x(instance->mouse_position[0]);
       const GLfloat y(instance->mouse_position[1]);
@@ -356,9 +371,6 @@ class Window
       default:
         break;
       }
-
-      // ユーザー定義のコールバック関数の呼び出し
-      if (instance->mouseFunc) (*instance->mouseFunc)(instance, button, action, mods);
     }
   }
 
@@ -372,15 +384,15 @@ class Window
 
     if (instance)
     {
+      // ユーザー定義のコールバック関数の呼び出し
+      if (instance->wheelFunc) (*instance->wheelFunc)(instance, x, y);
+
       // マウスホイールの回転量の保存
       instance->wheel_rotation[0] += static_cast<GLfloat>(x);
       instance->wheel_rotation[1] += static_cast<GLfloat>(y);
 
       // マウスによる平行移動量の z 値の更新
       instance->translation[0][1][2] = instance->translation[1][1][2] = instance->getWheelY() * 0.05f;
-
-      // ユーザー定義のコールバック関数の呼び出し
-      if (instance->wheelFunc) (*instance->wheelFunc)(instance, x, y);
     }
   }
 
@@ -390,6 +402,20 @@ class Window
   static void glfwErrorCallback(int error, const char *description)
   {
     throw std::runtime_error(description);
+  }
+
+  //
+  // 後始末
+  //
+  static void cleanup()
+  {
+#ifdef USE_IMGUI
+    // ImGui のコンテキストを破棄する
+    ImGui::DestroyContext();
+#endif
+
+    // GLFW を終了する
+    glfwTerminate();
   }
 
 public:
@@ -410,7 +436,7 @@ public:
       if (glfwInit() == GL_FALSE) throw std::runtime_error("Can't initialize GLFW");
 
       // 後始末を登録する
-      atexit(glfwTerminate);
+      atexit(cleanup);
 
       // OpenGL の major 番号が指定されていれば
       if (major > 0)
@@ -462,6 +488,34 @@ public:
       glfwWindowHint(GLFW_SRGB_CAPABLE, GL_TRUE);
 #endif
 
+#ifdef USE_IMGUI
+      // ImGui を初期化する
+      IMGUI_CHECKVERSION();
+      ImGui::CreateContext();
+      ImGuiIO& io = ImGui::GetIO(); (void)io;
+      //io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
+      //io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
+
+      // Setup Dear ImGui style
+      ImGui::StyleColorsDark();
+      //ImGui::StyleColorsClassic();
+
+      // Load Fonts
+      // - If no fonts are loaded, dear imgui will use the default font. You can also load multiple fonts and use ImGui::PushFont()/PopFont() to select them.
+      // - AddFontFromFileTTF() will return the ImFont* so you can store it if you need to select the font among multiple.
+      // - If the file cannot be loaded, the function will return NULL. Please handle those errors in your application (e.g. use an assertion, or display an error and quit).
+      // - The fonts will be rasterized at a given size (w/ oversampling) and stored into a texture when calling ImFontAtlas::Build()/GetTexDataAsXXXX(), which ImGui_ImplXXXX_NewFrame below will call.
+      // - Read 'docs/FONTS.txt' for more instructions and details.
+      // - Remember that in C/C++ if you want to include a backslash \ in a string literal you need to write a double backslash \\ !
+      //io.Fonts->AddFontDefault();
+      //io.Fonts->AddFontFromFileTTF("../../misc/fonts/Roboto-Medium.ttf", 16.0f);
+      //io.Fonts->AddFontFromFileTTF("../../misc/fonts/Cousine-Regular.ttf", 15.0f);
+      //io.Fonts->AddFontFromFileTTF("../../misc/fonts/DroidSans.ttf", 16.0f);
+      //io.Fonts->AddFontFromFileTTF("../../misc/fonts/ProggyTiny.ttf", 10.0f);
+      //ImFont* font = io.Fonts->AddFontFromFileTTF("c:\\Windows\\Fonts\\ArialUni.ttf", 18.0f, NULL, io.Fonts->GetGlyphRangesJapanese());
+      //IM_ASSERT(font != NULL);
+#endif
+
       // 初期化済みの印をつける
       firstTime = false;
     }
@@ -511,6 +565,12 @@ public:
 
     // ゲームグラフィックス特論の都合による初期化を行う
     ggInit();
+
+#ifdef USE_IMGUI
+    // Setup Platform/Renderer bindings
+    ImGui_ImplGlfw_InitForOpenGL(window, true);
+    ImGui_ImplOpenGL3_Init("#version 430");
+#endif
 
     // このインスタンスの this ポインタを記録しておく
     glfwSetWindowUserPointer(window, this);
@@ -803,6 +863,12 @@ public:
 
 #endif
 
+#ifdef USE_IMGUI
+    // Shutdown Platform/Renderer bindings
+    ImGui_ImplOpenGL3_Shutdown();
+    ImGui_ImplGlfw_Shutdown();
+#endif
+
     // ウィンドウを破棄する
     glfwDestroyWindow(window);
   }
@@ -1036,6 +1102,11 @@ public:
 #  endif
       glBindFramebuffer(GL_READ_FRAMEBUFFER, 0);
 
+#ifdef USE_IMGUI
+      // ImGui のフレームをレンダリングする
+      ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+#endif
+
       // 残っている OpenGL コマンドを実行する
       glFlush();
     }
@@ -1087,6 +1158,13 @@ public:
     // ウィンドウを閉じるべきなら false を返す
     if (shouldClose()) return false;
 
+#ifdef USE_IMGUI
+    // ImGui の新規フレームを作成する
+    ImGui_ImplOpenGL3_NewFrame();
+    ImGui_ImplGlfw_NewFrame();
+    ImGui::NewFrame();
+#endif
+
     // マウスの位置を調べる
     double x, y;
     glfwGetCursorPos(window, &x, &y);
@@ -1115,6 +1193,11 @@ public:
   //
   void swapBuffers()
   {
+#ifdef USE_IMGUI
+    // ImGui のフレームをレンダリングする
+    ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+#endif
+
     // エラーチェック
     ggError();
 

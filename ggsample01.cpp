@@ -21,6 +21,15 @@ void app()
     //
     // ここで OpenGL による描画を行う
     //
+    //
+    // ユーザインタフェース
+    //
+    ImGui::SetNextWindowSize(ImVec2(256, 228));
+    ImGui::Begin("Control panel");
+    ImGui::Text("Frame rate: %6.2f fps", ImGui::GetIO().Framerate);
+    if (ImGui::Button("Quit")) window.setClose();
+    ImGui::End();
+    ImGui::Render();
 
     // カラーバッファを入れ替えてイベントを取り出す
     window.swapBuffers();
