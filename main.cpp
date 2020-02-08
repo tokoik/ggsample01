@@ -25,6 +25,7 @@ extern void app();
 //
 int main() try
 {
+  // ウィンドウ関連の初期設定
   Window::init(4, 1);
 
   // アプリケーションの実行
@@ -38,7 +39,7 @@ catch (const std::runtime_error &e)
 #elif defined(__APPLE__)
   // the following code is copied from http://blog.jorgearimany.com/2010/05/messagebox-from-windows-to-mac.html
   // convert the strings from char* to CFStringRef
-  CFStringRef msg_ref = CFStringCreateWithCString(NULL, e.what(), static_cast<unsigned int>(strlen(e.what())));
+  CFStringRef msg_ref = CFStringCreateWithCString(NULL, e.what(), kCFStringEncodingUTF8);
 
   // result code from the message box
   CFOptionFlags result;

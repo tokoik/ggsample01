@@ -39,10 +39,10 @@
 			isa = PBXGroup;
 			children = (
 				7DDCB0F923EDBFD5007C2AD3 /* ggsample01.cpp */,
-				7DDCB0F723EDA73D007C2AD3 /* Window.h */,
 				7DF9CC4420047E4E009E3F96 /* main.cpp */,
-				7D24C83714F8F3A700C23BB6 /* gg.h */,
 				7D24C83614F8F3A700C23BB6 /* gg.cpp */,
+				7D24C83714F8F3A700C23BB6 /* gg.h */,
+				7DDCB0F723EDA73D007C2AD3 /* Window.h */,
 				7D1E90EF1123E36C005E6C75 /* Products */,
 				7D1E90F11123E36C005E6C75 /* Info.plist */,
 				7D7AF85E1222C8CC003A0434 /* opengl.icns */,
@@ -83,7 +83,7 @@
 		7D1E90DA1123E2F7005E6C75 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1130;
 			};
 			buildConfigurationList = 7D1E90DD1123E2F7005E6C75 /* Build configuration list for PBXProject "ggsample01" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -206,6 +206,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -243,6 +244,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

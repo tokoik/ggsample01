@@ -47,37 +47,6 @@ using namespace gg;
 #  if OVR_PRODUCT_VERSION > 0
 #    include <dxgi.h> // GetDefaultAdapterLuid のため
 #    pragma comment(lib, "dxgi.lib")
-inline ovrGraphicsLuid GetDefaultAdapterLuid()
-{
-  ovrGraphicsLuid luid = ovrGraphicsLuid();
-
-#    if defined(_MSC_VER)
-  IDXGIFactory *factory(nullptr);
-
-  if (SUCCEEDED(CreateDXGIFactory(IID_PPV_ARGS(&factory))))
-  {
-    IDXGIAdapter *adapter(nullptr);
-
-    if (SUCCEEDED(factory->EnumAdapters(0, &adapter)))
-    {
-      DXGI_ADAPTER_DESC desc;
-
-      adapter->GetDesc(&desc);
-      memcpy(&luid, &desc.AdapterLuid, sizeof luid);
-      adapter->Release();
-    }
-
-    factory->Release();
-  }
-#    endif
-
-  return luid;
-}
-
-inline int Compare(const ovrGraphicsLuid &lhs, const ovrGraphicsLuid &rhs)
-{
-  return memcmp(&lhs, &rhs, sizeof(ovrGraphicsLuid));
-}
 #  endif
 #endif
 
@@ -152,6 +121,40 @@ class Window
 
   // ミラー表示用の FBO のカラーテクスチャ
   ovrMirrorTexture mirrorTexture;
+
+  // グラフィックスカードのデフォルトの LUID を得る
+  inline ovrGraphicsLuid GetDefaultAdapterLuid()
+  {
+    ovrGraphicsLuid luid = ovrGraphicsLuid();
+
+#    if defined(_MSC_VER)
+    IDXGIFactory *factory(nullptr);
+
+    if (SUCCEEDED(CreateDXGIFactory(IID_PPV_ARGS(&factory))))
+    {
+      IDXGIAdapter *adapter(nullptr);
+
+      if (SUCCEEDED(factory->EnumAdapters(0, &adapter)))
+      {
+        DXGI_ADAPTER_DESC desc;
+
+        adapter->GetDesc(&desc);
+        memcpy(&luid, &desc.AdapterLuid, sizeof luid);
+        adapter->Release();
+      }
+
+      factory->Release();
+    }
+#    endif
+
+    return luid;
+  }
+
+  // グラフィックスカードの LUID の比較
+  inline int Compare(const ovrGraphicsLuid &lhs, const ovrGraphicsLuid &rhs)
+  {
+    return memcmp(&lhs, &rhs, sizeof(ovrGraphicsLuid));
+  }
 
 #  else
 
@@ -243,7 +246,7 @@ class Window
 
       case GLFW_KEY_ESCAPE:
         // ESC キーがタイプされたらウィンドウを閉じる
-        instance->setClose(true);
+        instance->setClose(GLFW_TRUE);
         break;
 
       case GLFW_KEY_UP:
@@ -814,7 +817,7 @@ public:
     ovr_GetSessionStatus(session, &sessionStatus);
 
     // アプリケーションが終了を要求しているときはウィンドウのクローズフラグを立てる
-    if (sessionStatus.ShouldQuit) glfwSetWindowShouldClose(window, GL_TRUE);
+    if (sessionStatus.ShouldQuit) setClose(GLFW_TRUE);
 
     // Oculus Rift に表示されていないときは戻る
     if (!sessionStatus.IsVisible) return false;
@@ -1011,7 +1014,7 @@ public:
     {
       // 転送に失敗したら Oculus Rift の設定を最初からやり直す必要があるらしい
       // けどめんどくさいのでウィンドウを閉じてしまう
-      glfwSetWindowShouldClose(window, GLFW_TRUE);
+      setClose(GLFW_TRUE);
     }
 
     // ミラー表示
@@ -1055,9 +1058,9 @@ public:
   //
   // ウィンドウを閉じるよう指示する
   //
-  void setClose(bool close) const
+  void setClose(int flag = GLFW_TRUE) const
   {
-    glfwSetWindowShouldClose(window, close);
+    glfwSetWindowShouldClose(window, flag);
   }
 
   //
