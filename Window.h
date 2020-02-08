@@ -397,7 +397,7 @@ public:
   //
   // 初期化
   //
-  static void init(int major = 4, int minor = 1)
+  static void init(int major = 0, int minor = 1)
   {
     // 最初に実行するときだけ true
     static bool firstTime(true);
@@ -412,13 +412,17 @@ public:
       // 後始末を登録する
       atexit(glfwTerminate);
 
-      // OpenGL のバージョンを指定する
-      glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, major);
-      glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, minor);
+      // OpenGL の major 番号が指定されていれば
+      if (major > 0)
+      {
+        // OpenGL のバージョンを指定する
+        glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, major);
+        glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, minor);
 
-      // Core Profile を選択する
-      glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-      glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+        // Core Profile を選択する
+        glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+        glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+      }
 
 #ifdef USE_OCULUS_RIFT
       // Oculus Rift (LibOVR) を初期化する
