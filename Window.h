@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 /*
 ** ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版
@@ -428,97 +428,96 @@ public:
     // 最初に実行するときだけ true
     static bool firstTime(true);
 
-    // 一度だけ実行
-    if (firstTime)
+    // 既に実行されていたら何もしない
+    if (!firstTime) return;
+
+    // 初期化済みの印をつける
+    firstTime = false;
+
+    // GLFW を初期化する
+    glfwSetErrorCallback(glfwErrorCallback);
+    if (glfwInit() == GL_FALSE) throw std::runtime_error("Can't initialize GLFW");
+
+    // 後始末を登録する
+    atexit(cleanup);
+
+    // OpenGL の major 番号が指定されていれば
+    if (major > 0)
     {
-      // GLFW を初期化する
-      glfwSetErrorCallback(glfwErrorCallback);
-      if (glfwInit() == GL_FALSE) throw std::runtime_error("Can't initialize GLFW");
+      // OpenGL のバージョンを指定する
+      glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, major);
+      glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, minor);
 
-      // 後始末を登録する
-      atexit(cleanup);
-
-      // OpenGL の major 番号が指定されていれば
-      if (major > 0)
-      {
-        // OpenGL のバージョンを指定する
-        glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, major);
-        glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, minor);
-
-        // Core Profile を選択する
-        glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-        glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-      }
+      // Core Profile を選択する
+      glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+      glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    }
 
 #ifdef USE_OCULUS_RIFT
-      // Oculus Rift (LibOVR) を初期化する
-      ovrInitParams initParams = { ovrInit_RequestVersion, OVR_MINOR_VERSION, NULL, 0, 0 };
-      if (OVR_FAILURE(ovr_Initialize(&initParams))) throw std::runtime_error("Can't initialize LibOVR");
+    // Oculus Rift (LibOVR) を初期化する
+    ovrInitParams initParams = { ovrInit_RequestVersion, OVR_MINOR_VERSION, NULL, 0, 0 };
+    if (OVR_FAILURE(ovr_Initialize(&initParams))) throw std::runtime_error("Can't initialize LibOVR");
 
-      // プログラム終了時には LibOVR を終了する
-      atexit(ovr_Shutdown);
+    // プログラム終了時には LibOVR を終了する
+    atexit(ovr_Shutdown);
 
-      // Oculus Rift のセッションを作成する
-      ovrGraphicsLuid luid;
-      session = nullptr;
-      if (OVR_FAILURE(ovr_Create(&session, &luid))) throw std::runtime_error("Can't create Oculus Rift session");
+    // Oculus Rift のセッションを作成する
+    ovrGraphicsLuid luid;
+    session = nullptr;
+    if (OVR_FAILURE(ovr_Create(&session, &luid))) throw std::runtime_error("Can't create Oculus Rift session");
 
-      // Oculus Rift へのレンダリングに使う FBO の初期値を設定する
-      for (int eye = 0; eye < ovrEye_Count; ++eye) oculusFbo[eye] = 0;
+    // Oculus Rift へのレンダリングに使う FBO の初期値を設定する
+    for (int eye = 0; eye < ovrEye_Count; ++eye) oculusFbo[eye] = 0;
 
-      // ミラー表示に使う FBO の初期値を設定する
-      mirrorFbo = 0;
-      mirrorTexture = nullptr;
+    // ミラー表示に使う FBO の初期値を設定する
+    mirrorFbo = 0;
+    mirrorTexture = nullptr;
 
 #  if OVR_PRODUCT_VERSION > 0
-      // デフォルトのグラフィックスアダプタが使われているか確かめる
-      if (Compare(luid, GetDefaultAdapterLuid())) throw std::runtime_error("Graphics adapter is not default");
+    // デフォルトのグラフィックスアダプタが使われているか確かめる
+    if (Compare(luid, GetDefaultAdapterLuid())) throw std::runtime_error("Graphics adapter is not default");
 
-      // Asynchronous TimeWarp 処理に使うフレーム番号の初期値を設定する
-      frameIndex = 0LL;
+    // Asynchronous TimeWarp 処理に使うフレーム番号の初期値を設定する
+    frameIndex = 0LL;
 
-      // Oculus Rift へのレンダリングに使う FBO のデプステクスチャの初期値を設定する
-      for (int eye = 0; eye < ovrEye_Count; ++eye) oculusDepth[eye] = 0;
+    // Oculus Rift へのレンダリングに使う FBO のデプステクスチャの初期値を設定する
+    for (int eye = 0; eye < ovrEye_Count; ++eye) oculusDepth[eye] = 0;
 #  endif
 
-      // Oculus Rift ではダブルバッファリングしない
-      glfwWindowHint(GLFW_DOUBLEBUFFER, GL_FALSE);
+    // Oculus Rift ではダブルバッファリングしない
+    glfwWindowHint(GLFW_DOUBLEBUFFER, GL_FALSE);
 
-      // Oculus Rift では SRGB でレンダリングする
-      glfwWindowHint(GLFW_SRGB_CAPABLE, GL_TRUE);
+    // Oculus Rift では SRGB でレンダリングする
+    glfwWindowHint(GLFW_SRGB_CAPABLE, GL_TRUE);
 #endif
 
 #ifdef USE_IMGUI
-      // ImGui を初期化する
-      IMGUI_CHECKVERSION();
-      ImGui::CreateContext();
-      ImGuiIO& io = ImGui::GetIO(); (void)io;
-      //io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
-      //io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
+    // ImGui を初期化する
+    IMGUI_CHECKVERSION();
+    ImGui::CreateContext();
+    ImGuiIO& io = ImGui::GetIO(); (void)io;
+    //io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
+    //io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
 
-      // Setup Dear ImGui style
-      ImGui::StyleColorsDark();
-      //ImGui::StyleColorsClassic();
+    // Setup Dear ImGui style
+    ImGui::StyleColorsDark();
+    //ImGui::StyleColorsClassic();
 
-      // Load Fonts
-      // - If no fonts are loaded, dear imgui will use the default font. You can also load multiple fonts and use ImGui::PushFont()/PopFont() to select them.
-      // - AddFontFromFileTTF() will return the ImFont* so you can store it if you need to select the font among multiple.
-      // - If the file cannot be loaded, the function will return NULL. Please handle those errors in your application (e.g. use an assertion, or display an error and quit).
-      // - The fonts will be rasterized at a given size (w/ oversampling) and stored into a texture when calling ImFontAtlas::Build()/GetTexDataAsXXXX(), which ImGui_ImplXXXX_NewFrame below will call.
-      // - Read 'docs/FONTS.txt' for more instructions and details.
-      // - Remember that in C/C++ if you want to include a backslash \ in a string literal you need to write a double backslash \\ !
-      //io.Fonts->AddFontDefault();
-      //io.Fonts->AddFontFromFileTTF("../../misc/fonts/Roboto-Medium.ttf", 16.0f);
-      //io.Fonts->AddFontFromFileTTF("../../misc/fonts/Cousine-Regular.ttf", 15.0f);
-      //io.Fonts->AddFontFromFileTTF("../../misc/fonts/DroidSans.ttf", 16.0f);
-      //io.Fonts->AddFontFromFileTTF("../../misc/fonts/ProggyTiny.ttf", 10.0f);
-      //ImFont* font = io.Fonts->AddFontFromFileTTF("c:\\Windows\\Fonts\\ArialUni.ttf", 18.0f, NULL, io.Fonts->GetGlyphRangesJapanese());
-      //IM_ASSERT(font != NULL);
+    // Load Fonts
+    // - If no fonts are loaded, dear imgui will use the default font. You can also load multiple fonts and use ImGui::PushFont()/PopFont() to select them.
+    // - AddFontFromFileTTF() will return the ImFont* so you can store it if you need to select the font among multiple.
+    // - If the file cannot be loaded, the function will return NULL. Please handle those errors in your application (e.g. use an assertion, or display an error and quit).
+    // - The fonts will be rasterized at a given size (w/ oversampling) and stored into a texture when calling ImFontAtlas::Build()/GetTexDataAsXXXX(), which ImGui_ImplXXXX_NewFrame below will call.
+    // - Read 'docs/FONTS.txt' for more instructions and details.
+    // - Remember that in C/C++ if you want to include a backslash \ in a string literal you need to write a double backslash \\ !
+    //io.Fonts->AddFontDefault();
+    //io.Fonts->AddFontFromFileTTF("../../misc/fonts/Roboto-Medium.ttf", 16.0f);
+    //io.Fonts->AddFontFromFileTTF("../../misc/fonts/Cousine-Regular.ttf", 15.0f);
+    //io.Fonts->AddFontFromFileTTF("../../misc/fonts/DroidSans.ttf", 16.0f);
+    //io.Fonts->AddFontFromFileTTF("../../misc/fonts/ProggyTiny.ttf", 10.0f);
+    //ImFont* font = io.Fonts->AddFontFromFileTTF("c:\\Windows\\Fonts\\ArialUni.ttf", 18.0f, NULL, io.Fonts->GetGlyphRangesJapanese());
+    //IM_ASSERT(font != NULL);
 #endif
-
-      // 初期化済みの印をつける
-      firstTime = false;
-    }
   }
 
   //
