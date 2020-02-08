@@ -46,6 +46,7 @@ xcuserdata
 *.sln.docstates
 *.opendb
 *.db
+*.aps
 #
 # anothre stuff
 #
@@ -53,3 +54,4 @@ xcuserdata
 *.bak
 *.tmp
 *.swp
+imgui.ini

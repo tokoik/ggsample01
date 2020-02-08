@@ -150,7 +150,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gg.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ggsample01.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="gg.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
