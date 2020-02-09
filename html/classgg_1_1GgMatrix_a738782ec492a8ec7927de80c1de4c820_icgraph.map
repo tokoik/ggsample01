@@ -1,0 +1,6 @@
+<map id="gg::GgMatrix::normal" name="gg::GgMatrix::normal">
+<area shape="rect" id="node1" title="法線変換行列を返す." alt="" coords="224,64,368,91"/>
+<area shape="rect" id="node2" href="$namespacegg.html#a350b2d7c3e52ba2fe973c9aff0ba76c3" title="法線変換行列を返す." alt="" coords="41,5,140,32"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgSimpleShader.html#a9ff06e613dce7235db2ec0c9efe23ba7" title="投影変換行列とモデルビュー変換行列を設定しモデルビュー変換行列から求めた法線変換行列を設定する." alt="" coords="19,57,162,98"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgSimpleShader.html#aab413041074bf37a137c30b5a1946fec" title="投影変換行列とモデルビュー変換行列を設定しモデルビュー変換行列から求めた法線変換行列を設定してシェーダプログラムの使用を開始する." alt="" coords="5,123,176,149"/>
+</map>

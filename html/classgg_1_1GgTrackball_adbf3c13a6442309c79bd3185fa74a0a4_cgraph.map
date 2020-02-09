@@ -1,0 +1,4 @@
+<map id="gg::GgTrackball::rotate" name="gg::GgTrackball::rotate">
+<area shape="rect" id="node1" title="トラックボールの回転角を修正する." alt="" coords="5,5,160,32"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a605ed85eaa2a82e0d3e2097002d5c583" title="四元数が表す回転の変換行列を a に求める." alt="" coords="208,5,395,32"/>
+</map>

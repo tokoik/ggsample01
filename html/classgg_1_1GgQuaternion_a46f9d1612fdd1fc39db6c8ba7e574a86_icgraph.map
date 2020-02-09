@@ -1,0 +1,7 @@
+<map id="gg::GgQuaternion::loadInvert" name="gg::GgQuaternion::loadInvert">
+<area shape="rect" id="node1" title="引数に指定した四元数の逆元を格納する." alt="" coords="376,56,563,83"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a0d70c27c7840e8bcb1031e12669a9405" title="四元数を別の四元数で除算した結果を返す." alt="" coords="153,5,317,32"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgQuaternion.html#ae76a0626497b4b3c203be499169a49af" title="逆元に変換する." alt="" coords="153,56,316,83"/>
+<area shape="rect" id="node5" href="$classgg_1_1GgQuaternion.html#a938136b65190b0cb6b232d9311b043f2" title="引数に指定した四元数の逆元を格納する." alt="" coords="141,107,328,133"/>
+<area shape="rect" id="node4" href="$namespacegg.html#ac834686c8605553fbe7c2709c685ba4e" title="四元数の逆元を求める." alt="" coords="5,56,93,83"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="gg::GgPointShader::get" name="gg::GgPointShader::get">
+<area shape="rect" id="node1" title="シェーダのプログラム名を得る." alt="" coords="224,78,383,105"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgSimpleShader.html#a08c3997010253884a9e7d8e887d5f145" title="コンストラクタ." alt="" coords="19,5,162,47"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgSimpleShader.html#a3745eedb23842a6849b05b6107dca6ba" title="モデルビュー変換行列とそれから求めた法線変換行列を設定する." alt="" coords="16,71,165,112"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgSimpleShader.html#af5e5866c70b586721d40ca81e380960f" title="投影変換行列とモデルビュー変換行列を設定しモデルビュー変換行列から求めた法線変換行列を設定してシェーダプログラムの使用を開始する." alt="" coords="5,137,176,163"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="gg::GgMatrix::loadSubtract" name="gg::GgMatrix::loadSubtract">
+<area shape="rect" id="node1" title="変換行列から配列に格納した変換行列を減算した結果を格納する." alt="" coords="648,56,827,83"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgMatrix.html#a38057b82c7b689b04179f5451a8229b1" title="変換行列から別の変換行列を減算した結果を格納する." alt="" coords="421,5,600,32"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgMatrix.html#a4b4ed45883e31e4bedec910698a77bff" title=" " alt="" coords="429,56,593,83"/>
+<area shape="rect" id="node5" href="$classgg_1_1GgMatrix.html#a115b706bba7a1a105e5aa5e7d4606d0e" title="変換行列から配列に格納した変換行列を減算した値を返す." alt="" coords="435,107,587,133"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgMatrix.html#a73a113efe945ec8169a267de36c37f47" title=" " alt="" coords="209,56,373,83"/>
+<area shape="rect" id="node6" href="$classgg_1_1GgMatrix.html#a38a533625fe483e8d6ee209f7e313604" title=" " alt="" coords="213,107,369,133"/>
+<area shape="rect" id="node8" href="$classgg_1_1GgMatrix.html#a90d1a529793c86272b408c27dcc88920" title="変換行列から別の変換行列を減算した値を返す." alt="" coords="215,157,367,184"/>
+<area shape="rect" id="node7" href="$classgg_1_1GgMatrix.html#aafae7c9391986b884ebf95f81a3408f0" title=" " alt="" coords="5,107,161,133"/>
+</map>

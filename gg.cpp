@@ -3016,9 +3016,11 @@ void gg::ggCreateNormalMap(const GLubyte *hmap, GLsizei width, GLsizei height, G
   case GL_RG:
     stride = 2;
     break;
+  case GL_RGB:
   case GL_BGR:
     stride = 3;
     break;
+  case GL_RGBA:
   case GL_BGRA:
     stride = 4;
     break;
@@ -3729,7 +3731,7 @@ namespace gg
 **   戻り値 読み込みに成功したら true
 */
 bool gg::ggLoadSimpleObj(const char *name,
-  std::vector< std::array<GLuint, 3> > &group,
+  std::vector<std::array<GLuint, 3>> &group,
   std::vector<GgSimpleShader::Material> &material,
   std::vector<GgVertex> &vert,
   bool normalize)
@@ -3818,7 +3820,7 @@ bool gg::ggLoadSimpleObj(const char *name,
 **   戻り値 読み込みに成功したら true
 */
 bool gg::ggLoadSimpleObj(const char *name,
-  std::vector< std::array<GLuint, 3> > &group,
+  std::vector<std::array<GLuint, 3>> &group,
   std::vector<GgSimpleShader::Material> &material,
   std::vector<GgVertex> &vert,
   std::vector<GLuint> &face,

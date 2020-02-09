@@ -1,0 +1,6 @@
+<map id="gg::GgSimpleShader::LightBuffer::select" name="gg::GgSimpleShader::LightBuffer::select">
+<area shape="rect" id="node1" title="光源を選択する." alt="" coords="5,71,148,112"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgUniformBuffer.html#ad327c1c3f214d85efcbd28db019bbaa4" title="ユニフォームバッファオブジェクト名を取り出す." alt="" coords="196,5,335,47"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506" title="ユニフォームバッファオブジェクトのアライメントを考慮したデータの間隔を取り出す." alt="" coords="196,71,335,112"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgUniformBuffer.html#a4ad0f5571d91f9148872318d6ae24601" title="ユニフォームバッファオブジェクトのターゲットを取り出す." alt="" coords="196,136,335,177"/>
+</map>

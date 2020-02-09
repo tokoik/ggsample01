@@ -1,0 +1,4 @@
+<map id="gg::GgQuaternion::get" name="gg::GgQuaternion::get">
+<area shape="rect" id="node1" title="四元数を取り出す." alt="" coords="141,5,292,32"/>
+<area shape="rect" id="node2" href="$namespacegg.html#af14e01e111b4a4b141c268038e69809e" title="二つの四元数の球面線形補間の結果を返す." alt="" coords="5,5,93,32"/>
+</map>

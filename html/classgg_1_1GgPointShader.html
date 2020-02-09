@@ -1,0 +1,935 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ゲームグラフィックス特論: gg::GgPointShader クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ゲームグラフィックス特論
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacegg.html">gg</a></li><li class="navelem"><a class="el" href="classgg_1_1GgPointShader.html">GgPointShader</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="classgg_1_1GgPointShader-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">gg::GgPointShader クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>点のシェーダ.  
+ <a href="classgg_1_1GgPointShader.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="gg_8h_source.html">gg.h</a>&gt;</code></p>
+<div class="dynheader">
+gg::GgPointShader の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgPointShader__inherit__graph.png" border="0" usemap="#gg_1_1GgPointShader_inherit__map" alt="Inheritance graph"/></div>
+<map name="gg_1_1GgPointShader_inherit__map" id="gg_1_1GgPointShader_inherit__map">
+<area shape="rect" title="点のシェーダ." alt="" coords="11,5,143,32"/>
+<area shape="rect" href="classgg_1_1GgSimpleShader.html" title="三角形に単純な陰影付けを行うシェーダ." alt="" coords="5,80,148,107"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a0e243c613ba8cede855c017b403927e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgPointShader.html#a0e243c613ba8cede855c017b403927e7">GgPointShader</a> ()</td></tr>
+<tr class="memdesc:a0e243c613ba8cede855c017b403927e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ.  <a href="classgg_1_1GgPointShader.html#a0e243c613ba8cede855c017b403927e7">[詳解]</a><br /></td></tr>
+<tr class="separator:a0e243c613ba8cede855c017b403927e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad58a3c3d252e425b9e1540a112893918"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgPointShader.html#ad58a3c3d252e425b9e1540a112893918">GgPointShader</a> (const char *vert, const char *frag=0, const char *geom=0, GLint nvarying=0, const char **varyings=0)</td></tr>
+<tr class="memdesc:ad58a3c3d252e425b9e1540a112893918"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="classgg_1_1GgPointShader.html#ad58a3c3d252e425b9e1540a112893918">[詳解]</a><br /></td></tr>
+<tr class="separator:ad58a3c3d252e425b9e1540a112893918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a824b38f7511fe905f0a130dbd7edb7e0"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgPointShader.html#a824b38f7511fe905f0a130dbd7edb7e0">~GgPointShader</a> ()</td></tr>
+<tr class="memdesc:a824b38f7511fe905f0a130dbd7edb7e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ.  <a href="classgg_1_1GgPointShader.html#a824b38f7511fe905f0a130dbd7edb7e0">[詳解]</a><br /></td></tr>
+<tr class="separator:a824b38f7511fe905f0a130dbd7edb7e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35ef8670f580eb11d40386aa63ac615b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgPointShader.html#a35ef8670f580eb11d40386aa63ac615b">loadProjectionMatrix</a> (const GLfloat *mp) const</td></tr>
+<tr class="memdesc:a35ef8670f580eb11d40386aa63ac615b"><td class="mdescLeft">&#160;</td><td class="mdescRight">投影変換行列を設定する.  <a href="classgg_1_1GgPointShader.html#a35ef8670f580eb11d40386aa63ac615b">[詳解]</a><br /></td></tr>
+<tr class="separator:a35ef8670f580eb11d40386aa63ac615b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a634da09936448435b4d9b162d9ec28c1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgPointShader.html#a634da09936448435b4d9b162d9ec28c1">loadProjectionMatrix</a> (const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;mp) const</td></tr>
+<tr class="memdesc:a634da09936448435b4d9b162d9ec28c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">投影変換行列を設定する.  <a href="classgg_1_1GgPointShader.html#a634da09936448435b4d9b162d9ec28c1">[詳解]</a><br /></td></tr>
+<tr class="separator:a634da09936448435b4d9b162d9ec28c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6e9398fa71096e9866fcd84cb542a91"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgPointShader.html#ac6e9398fa71096e9866fcd84cb542a91">loadModelviewMatrix</a> (const GLfloat *mv) const</td></tr>
+<tr class="memdesc:ac6e9398fa71096e9866fcd84cb542a91"><td class="mdescLeft">&#160;</td><td class="mdescRight">モデルビュー変換行列を設定する.  <a href="classgg_1_1GgPointShader.html#ac6e9398fa71096e9866fcd84cb542a91">[詳解]</a><br /></td></tr>
+<tr class="separator:ac6e9398fa71096e9866fcd84cb542a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3d2435dbea4708f95d26a5f85a3b28b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgPointShader.html#ad3d2435dbea4708f95d26a5f85a3b28b">loadModelviewMatrix</a> (const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;mv) const</td></tr>
+<tr class="memdesc:ad3d2435dbea4708f95d26a5f85a3b28b"><td class="mdescLeft">&#160;</td><td class="mdescRight">モデルビュー変換行列を設定する.  <a href="classgg_1_1GgPointShader.html#ad3d2435dbea4708f95d26a5f85a3b28b">[詳解]</a><br /></td></tr>
+<tr class="separator:ad3d2435dbea4708f95d26a5f85a3b28b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa852790b42b43a23161fb86d551cb33b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgPointShader.html#aa852790b42b43a23161fb86d551cb33b">loadMatrix</a> (const GLfloat *mp, const GLfloat *mv) const</td></tr>
+<tr class="memdesc:aa852790b42b43a23161fb86d551cb33b"><td class="mdescLeft">&#160;</td><td class="mdescRight">投影変換行列とモデルビュー変換行列を設定する.  <a href="classgg_1_1GgPointShader.html#aa852790b42b43a23161fb86d551cb33b">[詳解]</a><br /></td></tr>
+<tr class="separator:aa852790b42b43a23161fb86d551cb33b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58d95699d054dd86c0a54846c00f691a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgPointShader.html#a58d95699d054dd86c0a54846c00f691a">loadMatrix</a> (const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;mp, const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;mv) const</td></tr>
+<tr class="memdesc:a58d95699d054dd86c0a54846c00f691a"><td class="mdescLeft">&#160;</td><td class="mdescRight">投影変換行列とモデルビュー変換行列を設定する.  <a href="classgg_1_1GgPointShader.html#a58d95699d054dd86c0a54846c00f691a">[詳解]</a><br /></td></tr>
+<tr class="separator:a58d95699d054dd86c0a54846c00f691a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6809087ef5e8a563310c3fc396246e78"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgPointShader.html#a6809087ef5e8a563310c3fc396246e78">use</a> () const</td></tr>
+<tr class="memdesc:a6809087ef5e8a563310c3fc396246e78"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダプログラムの使用を開始する.  <a href="classgg_1_1GgPointShader.html#a6809087ef5e8a563310c3fc396246e78">[詳解]</a><br /></td></tr>
+<tr class="separator:a6809087ef5e8a563310c3fc396246e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a41d6e019fea4ac9e8633b988f5fa91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgPointShader.html#a2a41d6e019fea4ac9e8633b988f5fa91">use</a> (const GLfloat *mp) const</td></tr>
+<tr class="memdesc:a2a41d6e019fea4ac9e8633b988f5fa91"><td class="mdescLeft">&#160;</td><td class="mdescRight">投影変換行列を設定してシェーダプログラムの使用を開始する.  <a href="classgg_1_1GgPointShader.html#a2a41d6e019fea4ac9e8633b988f5fa91">[詳解]</a><br /></td></tr>
+<tr class="separator:a2a41d6e019fea4ac9e8633b988f5fa91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d46e3571f4ffdb85368e8b438baa09f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgPointShader.html#a8d46e3571f4ffdb85368e8b438baa09f">use</a> (const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;mp) const</td></tr>
+<tr class="memdesc:a8d46e3571f4ffdb85368e8b438baa09f"><td class="mdescLeft">&#160;</td><td class="mdescRight">投影変換行列を設定してシェーダプログラムの使用を開始する.  <a href="classgg_1_1GgPointShader.html#a8d46e3571f4ffdb85368e8b438baa09f">[詳解]</a><br /></td></tr>
+<tr class="separator:a8d46e3571f4ffdb85368e8b438baa09f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6ebf90fca8545b5ea896ee5b19a2722"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgPointShader.html#ab6ebf90fca8545b5ea896ee5b19a2722">use</a> (const GLfloat *mp, const GLfloat *mv) const</td></tr>
+<tr class="memdesc:ab6ebf90fca8545b5ea896ee5b19a2722"><td class="mdescLeft">&#160;</td><td class="mdescRight">投影変換行列とモデルビューを設定してシェーダプログラムの使用を開始する.  <a href="classgg_1_1GgPointShader.html#ab6ebf90fca8545b5ea896ee5b19a2722">[詳解]</a><br /></td></tr>
+<tr class="separator:ab6ebf90fca8545b5ea896ee5b19a2722"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7108b9cd35e312266adfc40af1d658ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgPointShader.html#a7108b9cd35e312266adfc40af1d658ca">use</a> (const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;mp, const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;mv) const</td></tr>
+<tr class="memdesc:a7108b9cd35e312266adfc40af1d658ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">投影変換行列とモデルビューを設定してシェーダプログラムの使用を開始する.  <a href="classgg_1_1GgPointShader.html#a7108b9cd35e312266adfc40af1d658ca">[詳解]</a><br /></td></tr>
+<tr class="separator:a7108b9cd35e312266adfc40af1d658ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72f2255985115d2bd171eaf0b3b6948e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgPointShader.html#a72f2255985115d2bd171eaf0b3b6948e">unuse</a> () const</td></tr>
+<tr class="memdesc:a72f2255985115d2bd171eaf0b3b6948e"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダプログラムの使用を終了する.  <a href="classgg_1_1GgPointShader.html#a72f2255985115d2bd171eaf0b3b6948e">[詳解]</a><br /></td></tr>
+<tr class="separator:a72f2255985115d2bd171eaf0b3b6948e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a491b86fce18818a1a757bc1a81e0f60b"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgPointShader.html#a491b86fce18818a1a757bc1a81e0f60b">get</a> () const</td></tr>
+<tr class="memdesc:a491b86fce18818a1a757bc1a81e0f60b"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダのプログラム名を得る.  <a href="classgg_1_1GgPointShader.html#a491b86fce18818a1a757bc1a81e0f60b">[詳解]</a><br /></td></tr>
+<tr class="separator:a491b86fce18818a1a757bc1a81e0f60b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>点のシェーダ. </p>
+
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04988">4988</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a0e243c613ba8cede855c017b403927e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e243c613ba8cede855c017b403927e7">&#9670;&nbsp;</a></span>GgPointShader() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">gg::GgPointShader::GgPointShader </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コンストラクタ. </p>
+
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05002">5002</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad58a3c3d252e425b9e1540a112893918"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad58a3c3d252e425b9e1540a112893918">&#9670;&nbsp;</a></span>GgPointShader() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">gg::GgPointShader::GgPointShader </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>vert</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>frag</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>geom</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLint&#160;</td>
+          <td class="paramname"><em>nvarying</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char **&#160;</td>
+          <td class="paramname"><em>varyings</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vert</td><td>バーテックスシェーダのソースファイル名. </td></tr>
+    <tr><td class="paramname">frag</td><td>フラグメントシェーダのソースファイル名 (0 なら不使用). </td></tr>
+    <tr><td class="paramname">geom</td><td>ジオメトリシェーダのソースファイル名 (0 なら不使用). </td></tr>
+    <tr><td class="paramname">nvarying</td><td>フィードバックする varying 変数の数 (0 なら不使用). </td></tr>
+    <tr><td class="paramname">varyings</td><td>フィードバックする varying 変数のリスト. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05010">5010</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a824b38f7511fe905f0a130dbd7edb7e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a824b38f7511fe905f0a130dbd7edb7e0">&#9670;&nbsp;</a></span>~GgPointShader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual gg::GgPointShader::~GgPointShader </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デストラクタ. </p>
+
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05025">5025</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a491b86fce18818a1a757bc1a81e0f60b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a491b86fce18818a1a757bc1a81e0f60b">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLuint gg::GgPointShader::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>シェーダのプログラム名を得る. </p>
+<dl class="section return"><dt>戻り値</dt><dd>シェーダのプログラム名. </dd></dl>
+
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05118">5118</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgPointShader_a491b86fce18818a1a757bc1a81e0f60b_icgraph.png" border="0" usemap="#classgg_1_1GgPointShader_a491b86fce18818a1a757bc1a81e0f60b_icgraph" alt=""/></div>
+<map name="classgg_1_1GgPointShader_a491b86fce18818a1a757bc1a81e0f60b_icgraph" id="classgg_1_1GgPointShader_a491b86fce18818a1a757bc1a81e0f60b_icgraph">
+<area shape="rect" title="シェーダのプログラム名を得る." alt="" coords="224,78,383,105"/>
+<area shape="rect" href="classgg_1_1GgSimpleShader.html#a08c3997010253884a9e7d8e887d5f145" title="コンストラクタ." alt="" coords="19,5,162,47"/>
+<area shape="rect" href="classgg_1_1GgSimpleShader.html#a3745eedb23842a6849b05b6107dca6ba" title="モデルビュー変換行列とそれから求めた法線変換行列を設定する." alt="" coords="16,71,165,112"/>
+<area shape="rect" href="classgg_1_1GgSimpleShader.html#af5e5866c70b586721d40ca81e380960f" title="投影変換行列とモデルビュー変換行列を設定しモデルビュー変換行列から求めた法線変換行列を設定してシェーダプログラムの使用を開始する." alt="" coords="5,137,176,163"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a58d95699d054dd86c0a54846c00f691a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58d95699d054dd86c0a54846c00f691a">&#9670;&nbsp;</a></span>loadMatrix() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void gg::GgPointShader::loadMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>mp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>mv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>投影変換行列とモデルビュー変換行列を設定する. </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mp</td><td><a class="el" href="classgg_1_1GgMatrix.html" title="変換行列.">GgMatrix</a> 型の投影変換行列. </td></tr>
+    <tr><td class="paramname">mv</td><td><a class="el" href="classgg_1_1GgMatrix.html" title="変換行列.">GgMatrix</a> 型のモデルビュー変換行列. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classgg_1_1GgSimpleShader.html#a9ff06e613dce7235db2ec0c9efe23ba7">gg::GgSimpleShader</a>で再実装されています。</p>
+
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05067">5067</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgPointShader_a58d95699d054dd86c0a54846c00f691a_cgraph.png" border="0" usemap="#classgg_1_1GgPointShader_a58d95699d054dd86c0a54846c00f691a_cgraph" alt=""/></div>
+<map name="classgg_1_1GgPointShader_a58d95699d054dd86c0a54846c00f691a_cgraph" id="classgg_1_1GgPointShader_a58d95699d054dd86c0a54846c00f691a_cgraph">
+<area shape="rect" title="投影変換行列とモデルビュー変換行列を設定する." alt="" coords="5,27,145,69"/>
+<area shape="rect" href="classgg_1_1GgMatrix.html#aa5b928ad41aa3ea57c0d1e8b4fc50614" title="変換行列を取り出す." alt="" coords="202,5,325,32"/>
+<area shape="rect" href="classgg_1_1GgPointShader.html#aa852790b42b43a23161fb86d551cb33b" title="投影変換行列とモデルビュー変換行列を設定する." alt="" coords="193,57,333,98"/>
+<area shape="rect" href="classgg_1_1GgPointShader.html#ac6e9398fa71096e9866fcd84cb542a91" title="モデルビュー変換行列を設定する." alt="" coords="381,23,523,65"/>
+<area shape="rect" href="classgg_1_1GgPointShader.html#a35ef8670f580eb11d40386aa63ac615b" title="投影変換行列を設定する." alt="" coords="382,89,522,130"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa852790b42b43a23161fb86d551cb33b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa852790b42b43a23161fb86d551cb33b">&#9670;&nbsp;</a></span>loadMatrix() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void gg::GgPointShader::loadMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const GLfloat *&#160;</td>
+          <td class="paramname"><em>mp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const GLfloat *&#160;</td>
+          <td class="paramname"><em>mv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>投影変換行列とモデルビュー変換行列を設定する. </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mp</td><td>GLfloat 型の 16 要素の配列変数に格納された投影変換行列. </td></tr>
+    <tr><td class="paramname">mv</td><td>GLfloat 型の 16 要素の配列変数に格納されたモデルビュー変換行列. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classgg_1_1GgSimpleShader.html#abc5a17dcbd9815579f08eb21f48d6fe3">gg::GgSimpleShader</a>で再実装されています。</p>
+
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05058">5058</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgPointShader_aa852790b42b43a23161fb86d551cb33b_cgraph.png" border="0" usemap="#classgg_1_1GgPointShader_aa852790b42b43a23161fb86d551cb33b_cgraph" alt=""/></div>
+<map name="classgg_1_1GgPointShader_aa852790b42b43a23161fb86d551cb33b_cgraph" id="classgg_1_1GgPointShader_aa852790b42b43a23161fb86d551cb33b_cgraph">
+<area shape="rect" title="投影変換行列とモデルビュー変換行列を設定する." alt="" coords="5,39,145,80"/>
+<area shape="rect" href="classgg_1_1GgPointShader.html#ac6e9398fa71096e9866fcd84cb542a91" title="モデルビュー変換行列を設定する." alt="" coords="193,5,335,47"/>
+<area shape="rect" href="classgg_1_1GgPointShader.html#a35ef8670f580eb11d40386aa63ac615b" title="投影変換行列を設定する." alt="" coords="194,71,334,112"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgPointShader_aa852790b42b43a23161fb86d551cb33b_icgraph.png" border="0" usemap="#classgg_1_1GgPointShader_aa852790b42b43a23161fb86d551cb33b_icgraph" alt=""/></div>
+<map name="classgg_1_1GgPointShader_aa852790b42b43a23161fb86d551cb33b_icgraph" id="classgg_1_1GgPointShader_aa852790b42b43a23161fb86d551cb33b_icgraph">
+<area shape="rect" title="投影変換行列とモデルビュー変換行列を設定する." alt="" coords="415,39,555,80"/>
+<area shape="rect" href="classgg_1_1GgPointShader.html#a58d95699d054dd86c0a54846c00f691a" title="投影変換行列とモデルビュー変換行列を設定する." alt="" coords="225,5,365,47"/>
+<area shape="rect" href="classgg_1_1GgSimpleShader.html#a236d3a1d071666d7fe22e7d7b5eb0874" title="投影変換行列とモデルビュー変換行列と法線変換行列を設定する." alt="" coords="224,71,367,112"/>
+<area shape="rect" href="classgg_1_1GgSimpleShader.html#a80389f621f4aafcf8149ae769af77063" title="投影変換行列とモデルビュー変換行列と法線変換行列を設定する." alt="" coords="19,41,162,83"/>
+<area shape="rect" href="classgg_1_1GgSimpleShader.html#a4931140d1083f3b0ce791d5302c32179" title="投影変換行列とモデルビュー変換行列と法線変換行列を設定してシェーダプログラムの使用を開始する." alt="" coords="5,107,176,134"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad3d2435dbea4708f95d26a5f85a3b28b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3d2435dbea4708f95d26a5f85a3b28b">&#9670;&nbsp;</a></span>loadModelviewMatrix() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void gg::GgPointShader::loadModelviewMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>mv</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>モデルビュー変換行列を設定する. </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mv</td><td><a class="el" href="classgg_1_1GgMatrix.html" title="変換行列.">GgMatrix</a> 型のモデルビュー変換行列. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classgg_1_1GgSimpleShader.html#a6be6daa9ab0ad591e2257f594cf5ab34">gg::GgSimpleShader</a>で再実装されています。</p>
+
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05050">5050</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgPointShader_ad3d2435dbea4708f95d26a5f85a3b28b_cgraph.png" border="0" usemap="#classgg_1_1GgPointShader_ad3d2435dbea4708f95d26a5f85a3b28b_cgraph" alt=""/></div>
+<map name="classgg_1_1GgPointShader_ad3d2435dbea4708f95d26a5f85a3b28b_cgraph" id="classgg_1_1GgPointShader_ad3d2435dbea4708f95d26a5f85a3b28b_cgraph">
+<area shape="rect" title="モデルビュー変換行列を設定する." alt="" coords="5,27,147,69"/>
+<area shape="rect" href="classgg_1_1GgMatrix.html#aa5b928ad41aa3ea57c0d1e8b4fc50614" title="変換行列を取り出す." alt="" coords="204,5,327,32"/>
+<area shape="rect" href="classgg_1_1GgPointShader.html#ac6e9398fa71096e9866fcd84cb542a91" title="モデルビュー変換行列を設定する." alt="" coords="195,57,336,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac6e9398fa71096e9866fcd84cb542a91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6e9398fa71096e9866fcd84cb542a91">&#9670;&nbsp;</a></span>loadModelviewMatrix() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void gg::GgPointShader::loadModelviewMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const GLfloat *&#160;</td>
+          <td class="paramname"><em>mv</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>モデルビュー変換行列を設定する. </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mv</td><td>GLfloat 型の 16 要素の配列変数に格納されたモデルビュー変換行列. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="classgg_1_1GgSimpleShader.html#a3745eedb23842a6849b05b6107dca6ba">gg::GgSimpleShader</a>で再実装されています。</p>
+
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05043">5043</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgPointShader_ac6e9398fa71096e9866fcd84cb542a91_icgraph.png" border="0" usemap="#classgg_1_1GgPointShader_ac6e9398fa71096e9866fcd84cb542a91_icgraph" alt=""/></div>
+<map name="classgg_1_1GgPointShader_ac6e9398fa71096e9866fcd84cb542a91_icgraph" id="classgg_1_1GgPointShader_ac6e9398fa71096e9866fcd84cb542a91_icgraph">
+<area shape="rect" title="モデルビュー変換行列を設定する." alt="" coords="631,136,772,177"/>
+<area shape="rect" href="classgg_1_1GgPointShader.html#aa852790b42b43a23161fb86d551cb33b" title="投影変換行列とモデルビュー変換行列を設定する." alt="" coords="432,37,572,79"/>
+<area shape="rect" href="classgg_1_1GgPointShader.html#ad3d2435dbea4708f95d26a5f85a3b28b" title="モデルビュー変換行列を設定する." alt="" coords="431,103,573,144"/>
+<area shape="rect" href="classgg_1_1GgSimpleShader.html#a56ebe35618715b611eda5d1b3d4637da" title="モデルビュー変換行列と法線変換行列を設定する." alt="" coords="427,168,577,209"/>
+<area shape="rect" href="classgg_1_1GgPointShader.html#ab6ebf90fca8545b5ea896ee5b19a2722" title="投影変換行列とモデルビューを設定してシェーダプログラムの使用を開始する." alt="" coords="421,234,583,261"/>
+<area shape="rect" href="classgg_1_1GgPointShader.html#a58d95699d054dd86c0a54846c00f691a" title="投影変換行列とモデルビュー変換行列を設定する." alt="" coords="229,5,369,47"/>
+<area shape="rect" href="classgg_1_1GgSimpleShader.html#a236d3a1d071666d7fe22e7d7b5eb0874" title="投影変換行列とモデルビュー変換行列と法線変換行列を設定する." alt="" coords="227,71,370,112"/>
+<area shape="rect" href="classgg_1_1GgSimpleShader.html#a80389f621f4aafcf8149ae769af77063" title="投影変換行列とモデルビュー変換行列と法線変換行列を設定する." alt="" coords="19,41,162,83"/>
+<area shape="rect" href="classgg_1_1GgSimpleShader.html#a4931140d1083f3b0ce791d5302c32179" title="投影変換行列とモデルビュー変換行列と法線変換行列を設定してシェーダプログラムの使用を開始する." alt="" coords="5,107,176,134"/>
+<area shape="rect" href="classgg_1_1GgSimpleShader.html#a139427bcc11fdd9988f5bb5d5c3c65ba" title="モデルビュー変換行列と法線変換行列を設定する." alt="" coords="224,168,373,209"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a634da09936448435b4d9b162d9ec28c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a634da09936448435b4d9b162d9ec28c1">&#9670;&nbsp;</a></span>loadProjectionMatrix() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void gg::GgPointShader::loadProjectionMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>mp</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>投影変換行列を設定する. </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mp</td><td><a class="el" href="classgg_1_1GgMatrix.html" title="変換行列.">GgMatrix</a> 型の投影変換行列. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05036">5036</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgPointShader_a634da09936448435b4d9b162d9ec28c1_cgraph.png" border="0" usemap="#classgg_1_1GgPointShader_a634da09936448435b4d9b162d9ec28c1_cgraph" alt=""/></div>
+<map name="classgg_1_1GgPointShader_a634da09936448435b4d9b162d9ec28c1_cgraph" id="classgg_1_1GgPointShader_a634da09936448435b4d9b162d9ec28c1_cgraph">
+<area shape="rect" title="投影変換行列を設定する." alt="" coords="5,27,145,69"/>
+<area shape="rect" href="classgg_1_1GgMatrix.html#aa5b928ad41aa3ea57c0d1e8b4fc50614" title="変換行列を取り出す." alt="" coords="202,5,325,32"/>
+<area shape="rect" href="classgg_1_1GgPointShader.html#a35ef8670f580eb11d40386aa63ac615b" title="投影変換行列を設定する." alt="" coords="193,57,333,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a35ef8670f580eb11d40386aa63ac615b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35ef8670f580eb11d40386aa63ac615b">&#9670;&nbsp;</a></span>loadProjectionMatrix() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void gg::GgPointShader::loadProjectionMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const GLfloat *&#160;</td>
+          <td class="paramname"><em>mp</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>投影変換行列を設定する. </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mp</td><td>GLfloat 型の 16 要素の配列変数に格納された投影変換行列. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05029">5029</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgPointShader_a35ef8670f580eb11d40386aa63ac615b_icgraph.png" border="0" usemap="#classgg_1_1GgPointShader_a35ef8670f580eb11d40386aa63ac615b_icgraph" alt=""/></div>
+<map name="classgg_1_1GgPointShader_a35ef8670f580eb11d40386aa63ac615b_icgraph" id="classgg_1_1GgPointShader_a35ef8670f580eb11d40386aa63ac615b_icgraph">
+<area shape="rect" title="投影変換行列を設定する." alt="" coords="633,132,773,173"/>
+<area shape="rect" href="classgg_1_1GgPointShader.html#aa852790b42b43a23161fb86d551cb33b" title="投影変換行列とモデルビュー変換行列を設定する." alt="" coords="430,37,570,79"/>
+<area shape="rect" href="classgg_1_1GgPointShader.html#a634da09936448435b4d9b162d9ec28c1" title="投影変換行列を設定する." alt="" coords="430,103,570,144"/>
+<area shape="rect" href="classgg_1_1GgPointShader.html#a2a41d6e019fea4ac9e8633b988f5fa91" title="投影変換行列を設定してシェーダプログラムの使用を開始する." alt="" coords="419,169,581,195"/>
+<area shape="rect" href="classgg_1_1GgSimpleShader.html#a6d368889dad14a63c04b45cbb45b2892" title="光源を指定し投影変換行列を設定してシェーダプログラムの使用を開始する." alt="" coords="415,219,585,246"/>
+<area shape="rect" href="classgg_1_1GgPointShader.html#a58d95699d054dd86c0a54846c00f691a" title="投影変換行列とモデルビュー変換行列を設定する." alt="" coords="225,5,365,47"/>
+<area shape="rect" href="classgg_1_1GgSimpleShader.html#a236d3a1d071666d7fe22e7d7b5eb0874" title="投影変換行列とモデルビュー変換行列と法線変換行列を設定する." alt="" coords="224,71,367,112"/>
+<area shape="rect" href="classgg_1_1GgSimpleShader.html#a80389f621f4aafcf8149ae769af77063" title="投影変換行列とモデルビュー変換行列と法線変換行列を設定する." alt="" coords="19,41,162,83"/>
+<area shape="rect" href="classgg_1_1GgSimpleShader.html#a4931140d1083f3b0ce791d5302c32179" title="投影変換行列とモデルビュー変換行列と法線変換行列を設定してシェーダプログラムの使用を開始する." alt="" coords="5,107,176,134"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a72f2255985115d2bd171eaf0b3b6948e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72f2255985115d2bd171eaf0b3b6948e">&#9670;&nbsp;</a></span>unuse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gg::GgPointShader::unuse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>シェーダプログラムの使用を終了する. </p>
+
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05111">5111</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6809087ef5e8a563310c3fc396246e78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6809087ef5e8a563310c3fc396246e78">&#9670;&nbsp;</a></span>use() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void gg::GgPointShader::use </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>シェーダプログラムの使用を開始する. </p>
+
+<p><a class="el" href="classgg_1_1GgSimpleShader.html#aaa721d9ae49296194f949d6ba2f927db">gg::GgSimpleShader</a>で再実装されています。</p>
+
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05073">5073</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgPointShader_a6809087ef5e8a563310c3fc396246e78_icgraph.png" border="0" usemap="#classgg_1_1GgPointShader_a6809087ef5e8a563310c3fc396246e78_icgraph" alt=""/></div>
+<map name="classgg_1_1GgPointShader_a6809087ef5e8a563310c3fc396246e78_icgraph" id="classgg_1_1GgPointShader_a6809087ef5e8a563310c3fc396246e78_icgraph">
+<area shape="rect" title="シェーダプログラムの使用を開始する." alt="" coords="443,31,604,57"/>
+<area shape="rect" href="classgg_1_1GgPointShader.html#a2a41d6e019fea4ac9e8633b988f5fa91" title="投影変換行列を設定してシェーダプログラムの使用を開始する." alt="" coords="229,5,390,32"/>
+<area shape="rect" href="classgg_1_1GgSimpleShader.html#aaa721d9ae49296194f949d6ba2f927db" title="シェーダプログラムの使用を開始する." alt="" coords="224,56,395,83"/>
+<area shape="rect" href="classgg_1_1GgSimpleShader.html#a4931140d1083f3b0ce791d5302c32179" title="投影変換行列とモデルビュー変換行列と法線変換行列を設定してシェーダプログラムの使用を開始する." alt="" coords="5,56,176,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8d46e3571f4ffdb85368e8b438baa09f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d46e3571f4ffdb85368e8b438baa09f">&#9670;&nbsp;</a></span>use() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gg::GgPointShader::use </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>mp</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>投影変換行列を設定してシェーダプログラムの使用を開始する. </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mp</td><td><a class="el" href="classgg_1_1GgMatrix.html" title="変換行列.">GgMatrix</a> 型の投影変換行列. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05088">5088</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgPointShader_a8d46e3571f4ffdb85368e8b438baa09f_cgraph.png" border="0" usemap="#classgg_1_1GgPointShader_a8d46e3571f4ffdb85368e8b438baa09f_cgraph" alt=""/></div>
+<map name="classgg_1_1GgPointShader_a8d46e3571f4ffdb85368e8b438baa09f_cgraph" id="classgg_1_1GgPointShader_a8d46e3571f4ffdb85368e8b438baa09f_cgraph">
+<area shape="rect" title="投影変換行列を設定してシェーダプログラムの使用を開始する." alt="" coords="5,31,167,57"/>
+<area shape="rect" href="classgg_1_1GgMatrix.html#aa5b928ad41aa3ea57c0d1e8b4fc50614" title="変換行列を取り出す." alt="" coords="234,5,357,32"/>
+<area shape="rect" href="classgg_1_1GgPointShader.html#a6809087ef5e8a563310c3fc396246e78" title="シェーダプログラムの使用を開始する." alt="" coords="215,56,376,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7108b9cd35e312266adfc40af1d658ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7108b9cd35e312266adfc40af1d658ca">&#9670;&nbsp;</a></span>use() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gg::GgPointShader::use </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>mp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>mv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>投影変換行列とモデルビューを設定してシェーダプログラムの使用を開始する. </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mp</td><td><a class="el" href="classgg_1_1GgMatrix.html" title="変換行列.">GgMatrix</a> 型の投影変換行列. </td></tr>
+    <tr><td class="paramname">mv</td><td><a class="el" href="classgg_1_1GgMatrix.html" title="変換行列.">GgMatrix</a> 型のモデルビュー変換行列. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05105">5105</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgPointShader_a7108b9cd35e312266adfc40af1d658ca_cgraph.png" border="0" usemap="#classgg_1_1GgPointShader_a7108b9cd35e312266adfc40af1d658ca_cgraph" alt=""/></div>
+<map name="classgg_1_1GgPointShader_a7108b9cd35e312266adfc40af1d658ca_cgraph" id="classgg_1_1GgPointShader_a7108b9cd35e312266adfc40af1d658ca_cgraph">
+<area shape="rect" title="投影変換行列とモデルビューを設定してシェーダプログラムの使用を開始する." alt="" coords="5,31,167,57"/>
+<area shape="rect" href="classgg_1_1GgMatrix.html#aa5b928ad41aa3ea57c0d1e8b4fc50614" title="変換行列を取り出す." alt="" coords="234,5,357,32"/>
+<area shape="rect" href="classgg_1_1GgPointShader.html#a6809087ef5e8a563310c3fc396246e78" title="シェーダプログラムの使用を開始する." alt="" coords="215,56,376,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2a41d6e019fea4ac9e8633b988f5fa91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a41d6e019fea4ac9e8633b988f5fa91">&#9670;&nbsp;</a></span>use() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gg::GgPointShader::use </td>
+          <td>(</td>
+          <td class="paramtype">const GLfloat *&#160;</td>
+          <td class="paramname"><em>mp</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>投影変換行列を設定してシェーダプログラムの使用を開始する. </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mp</td><td>GLfloat 型の 16 要素の配列変数に格納された投影変換行列. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05080">5080</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgPointShader_a2a41d6e019fea4ac9e8633b988f5fa91_cgraph.png" border="0" usemap="#classgg_1_1GgPointShader_a2a41d6e019fea4ac9e8633b988f5fa91_cgraph" alt=""/></div>
+<map name="classgg_1_1GgPointShader_a2a41d6e019fea4ac9e8633b988f5fa91_cgraph" id="classgg_1_1GgPointShader_a2a41d6e019fea4ac9e8633b988f5fa91_cgraph">
+<area shape="rect" title="投影変換行列を設定してシェーダプログラムの使用を開始する." alt="" coords="5,42,167,69"/>
+<area shape="rect" href="classgg_1_1GgPointShader.html#a35ef8670f580eb11d40386aa63ac615b" title="投影変換行列を設定する." alt="" coords="225,5,365,47"/>
+<area shape="rect" href="classgg_1_1GgPointShader.html#a6809087ef5e8a563310c3fc396246e78" title="シェーダプログラムの使用を開始する." alt="" coords="215,71,376,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab6ebf90fca8545b5ea896ee5b19a2722"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6ebf90fca8545b5ea896ee5b19a2722">&#9670;&nbsp;</a></span>use() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gg::GgPointShader::use </td>
+          <td>(</td>
+          <td class="paramtype">const GLfloat *&#160;</td>
+          <td class="paramname"><em>mp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const GLfloat *&#160;</td>
+          <td class="paramname"><em>mv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>投影変換行列とモデルビューを設定してシェーダプログラムの使用を開始する. </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mp</td><td>GLfloat 型の 16 要素の配列変数に格納された投影変換行列. </td></tr>
+    <tr><td class="paramname">mv</td><td>GLfloat 型の 16 要素の配列変数に格納されたモデルビュー変換行列. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05096">5096</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgPointShader_ab6ebf90fca8545b5ea896ee5b19a2722_cgraph.png" border="0" usemap="#classgg_1_1GgPointShader_ab6ebf90fca8545b5ea896ee5b19a2722_cgraph" alt=""/></div>
+<map name="classgg_1_1GgPointShader_ab6ebf90fca8545b5ea896ee5b19a2722_cgraph" id="classgg_1_1GgPointShader_ab6ebf90fca8545b5ea896ee5b19a2722_cgraph">
+<area shape="rect" title="投影変換行列とモデルビューを設定してシェーダプログラムの使用を開始する." alt="" coords="5,42,167,69"/>
+<area shape="rect" href="classgg_1_1GgPointShader.html#ac6e9398fa71096e9866fcd84cb542a91" title="モデルビュー変換行列を設定する." alt="" coords="225,5,366,47"/>
+<area shape="rect" href="classgg_1_1GgPointShader.html#a6809087ef5e8a563310c3fc396246e78" title="シェーダプログラムの使用を開始する." alt="" coords="215,71,376,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="gg_8h_source.html">gg.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2020年02月09日(日) 14時55分09秒作成 - ゲームグラフィックス特論 / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

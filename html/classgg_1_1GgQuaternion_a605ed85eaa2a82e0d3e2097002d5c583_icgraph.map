@@ -1,0 +1,8 @@
+<map id="gg::GgQuaternion::getMatrix" name="gg::GgQuaternion::getMatrix">
+<area shape="rect" id="node1" title="四元数が表す回転の変換行列を a に求める." alt="" coords="433,93,620,120"/>
+<area shape="rect" id="node2" href="$namespacegg.html#aaebe1f427ad451c6768aaee18da84c66" title="四元数 q の回転の変換行列を返す." alt="" coords="216,5,373,32"/>
+<area shape="rect" id="node3" href="$namespacegg.html#a01f9b60e48e923f40f5a183a3e54d94e" title="四元数 q の回転の転置した変換行列を返す." alt="" coords="204,57,385,98"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgTrackball.html#a4f12392353b387cc7ec116b9e2d740b0" title="回転の変換行列を計算する." alt="" coords="215,123,375,149"/>
+<area shape="rect" id="node6" href="$classgg_1_1GgTrackball.html#adbf3c13a6442309c79bd3185fa74a0a4" title="トラックボールの回転角を修正する." alt="" coords="217,173,372,200"/>
+<area shape="rect" id="node5" href="$classWindow.html#aa948dc12020c54ffd0cd1ebdfbfe65f1" title="イベントを取得してループを継続すべきかどうか調べる." alt="" coords="5,123,156,149"/>
+</map>

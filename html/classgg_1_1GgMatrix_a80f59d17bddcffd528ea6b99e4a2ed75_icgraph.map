@@ -1,0 +1,4 @@
+<map id="gg::GgMatrix::rotate" name="gg::GgMatrix::rotate">
+<area shape="rect" id="node1" title="(x, y, z) 方向のベクトルを軸とする回転変換を乗じた結果を返す." alt="" coords="192,5,331,32"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgMatrix.html#a1c381883fc9dc2f3303dd729432c586d" title="r 方向のベクトルを軸とする回転変換を乗じた結果を返す." alt="" coords="5,5,144,32"/>
+</map>

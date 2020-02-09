@@ -1,0 +1,5 @@
+<map id="gg::GgMatrix::loadRotateX" name="gg::GgMatrix::loadRotateX">
+<area shape="rect" id="node1" title="x 軸中心の回転の変換行列を格納する." alt="" coords="199,31,373,57"/>
+<area shape="rect" id="node2" href="$namespacegg.html#acaf06b5bfe66fc430155ae3d4410d854" title="x 軸中心の回転の変換行列を返す." alt="" coords="27,5,129,32"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgMatrix.html#a673d91ac86c3109a0fc6c0839e5bebee" title="x 軸中心の回転変換を乗じた結果を返す." alt="" coords="5,56,151,83"/>
+</map>

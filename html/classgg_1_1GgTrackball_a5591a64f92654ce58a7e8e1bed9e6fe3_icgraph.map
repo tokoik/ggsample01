@@ -1,0 +1,4 @@
+<map id="gg::GgTrackball::getMatrix" name="gg::GgTrackball::getMatrix">
+<area shape="rect" id="node1" title="現在の回転の変換行列を取り出す." alt="" coords="200,5,375,32"/>
+<area shape="rect" id="node2" href="$classWindow.html#af1fd1eb71ea45357acb3c7f24964297a" title="トラックボールの回転変換行列を得る." alt="" coords="5,5,152,32"/>
+</map>

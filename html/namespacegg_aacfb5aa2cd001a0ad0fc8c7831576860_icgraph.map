@@ -1,0 +1,4 @@
+<map id="gg::ggEulerQuaternion" name="gg::ggEulerQuaternion">
+<area shape="rect" id="node1" title="オイラー角 (heading, pitch, roll) で与えられた回転を表す四元数を返す." alt="" coords="204,5,355,32"/>
+<area shape="rect" id="node2" href="$namespacegg.html#a3ac6682d2eb32fa126445a1df1e934b6" title="オイラー角 (e[0], e[1], e[2]) で与えられた回転を表す四元数を返す." alt="" coords="5,5,156,32"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="gg::GgPointShader::loadProjectionMatrix" name="gg::GgPointShader::loadProjectionMatrix">
+<area shape="rect" id="node1" title="投影変換行列を設定する." alt="" coords="5,27,145,69"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgMatrix.html#aa5b928ad41aa3ea57c0d1e8b4fc50614" title="変換行列を取り出す." alt="" coords="202,5,325,32"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgPointShader.html#a35ef8670f580eb11d40386aa63ac615b" title="投影変換行列を設定する." alt="" coords="193,57,333,98"/>
+</map>

@@ -66,9 +66,11 @@ using namespace gg;
 #include <stdexcept>
 #include <iostream>
 
-//
-// ウィンドウ関連の処理
-//
+/*!
+** \brief ウィンドウ関連の処理.
+**
+** GLFW を使って OpenGL のウィンドウを操作するラッパークラス.
+*/
 class Window
 {
   // ウィンドウの識別子
@@ -90,10 +92,10 @@ class Window
   GLfloat wheel_rotation[2];
 
   // 平行移動量量[ボタン][直前/更新][X/Y/Z]
-  GLfloat translation[2][2][3];
+  GLfloat translation[3][2][3];
 
   // トラックボール
-  GgTrackball trackball[2];
+  GgTrackball trackball[3];
 
 #ifdef USE_OCULUS_RIFT
   //
@@ -238,30 +240,17 @@ class Window
 
       switch (key)
       {
-      case GLFW_KEY_R:
-        // 矢印キーの設定値とマウスホイールの回転量をリセットする
-        for (auto a : instance->arrow) a[0] = a[1] = 0;
-        std::fill(*(*instance->translation), *(*(instance->translation + 2)), 0.0f);
-        instance->wheel_rotation[0] = instance->wheel_rotation[1] = 0.0f;
-
-      case GLFW_KEY_O:
+      case GLFW_KEY_HOME:
         // トラックボールをリセットする
         instance->trackball[0].reset();
         instance->trackball[1].reset();
         break;
 
-      case GLFW_KEY_SPACE:
-        break;
-
-      case GLFW_KEY_BACKSPACE:
-      case GLFW_KEY_DELETE:
-        break;
-
-      case GLFW_KEY_ESCAPE:
-#ifndef USE_IMGUI
-        // ESC キーがタイプされたらウィンドウを閉じる
-        instance->setClose(GLFW_TRUE);
-#endif
+      case GLFW_KEY_END:
+        // 矢印キーの設定値とマウスホイールの回転量をリセットする
+        for (auto a : instance->arrow) a[0] = a[1] = 0;
+        std::fill(*(*instance->translation), *(*(instance->translation + 3)), 0.0f);
+        instance->wheel_rotation[0] = instance->wheel_rotation[1] = 0.0f;
         break;
 
       case GLFW_KEY_UP:
@@ -334,38 +323,21 @@ class Window
       switch (button)
       {
       case GLFW_MOUSE_BUTTON_1:
+      case GLFW_MOUSE_BUTTON_2:
+      case GLFW_MOUSE_BUTTON_3:
         if (action)
         {
           // 左ドラッグ開始
-          instance->trackball[0].begin(x, y);
+          instance->trackball[button].begin(x, y);
         }
         else
         {
           // 左ドラッグ終了
-          instance->translation[0][0][0] = instance->translation[0][1][0];
-          instance->translation[0][0][1] = instance->translation[0][1][1];
-          instance->translation[0][0][2] = instance->translation[0][1][2];
-          instance->trackball[0].end(x, y);
+          instance->translation[button][0][0] = instance->translation[button][1][0];
+          instance->translation[button][0][1] = instance->translation[button][1][1];
+          instance->translation[button][0][2] = instance->translation[button][1][2];
+          instance->trackball[button].end(x, y);
         }
-        break;
-
-      case GLFW_MOUSE_BUTTON_2:
-        if (action)
-        {
-          // 右ドラッグ開始
-          instance->trackball[1].begin(x, y);
-        }
-        else
-        {
-          // 右ドラッグ終了
-          instance->translation[1][0][0] = instance->translation[1][1][0];
-          instance->translation[1][0][1] = instance->translation[1][1][1];
-          instance->translation[1][0][2] = instance->translation[1][1][2];
-          instance->trackball[1].end(x, y);
-        }
-        break;
-
-      case GLFW_MOUSE_BUTTON_3:
         break;
 
       default:
@@ -392,8 +364,21 @@ class Window
       instance->wheel_rotation[1] += static_cast<GLfloat>(y);
 
       // マウスによる平行移動量の z 値の更新
-      instance->translation[0][1][2] = instance->translation[1][1][2] = instance->getWheelY() * 0.05f;
+      const GLfloat z(instance->getWheelY() * 0.05f);
+      instance->translation[GLFW_MOUSE_BUTTON_1][1][2] = z;
+      instance->translation[GLFW_MOUSE_BUTTON_2][1][2] = z;
+      instance->translation[GLFW_MOUSE_BUTTON_3][1][2] = z;
     }
+  }
+
+  //
+  // トラックボール処理を考慮した平行移動量を計算する (X, Y のみ, Z は wheel() で計算する)
+  //
+  void calcTranslation(GLfloat *t, int button) const
+  {
+    const GLfloat d(fabs(translation[button][0][2]) + 1.0f);
+    t[0] = (mouse_position[0] - trackball[button].getStart(0)) * trackball[button].getScale(0) * d + translation[button][0][0];
+    t[1] = (trackball[button].getStart(1) - mouse_position[1]) * trackball[button].getScale(1) * d + translation[button][0][1];
   }
 
   //
@@ -420,9 +405,9 @@ class Window
 
 public:
 
-  //
-  // 初期化
-  //
+  //! \brief 初期化, 最初に一度だけ実行する.
+  //!   \param major 使用する OpenGL の major 番号, 0 なら無指定.
+  //!   \param minor 使用する OpenGL の minor 番号, major 番号が 0 なら無視.
   static void init(int major = 0, int minor = 1)
   {
     // 最初に実行するときだけ true
@@ -448,9 +433,12 @@ public:
       glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, major);
       glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, minor);
 
-      // Core Profile を選択する
-      glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-      glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+      if (major >= 3 && minor >= 2)
+      {
+        // Core Profile を選択する
+        glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+        glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+      }
     }
 
 #ifdef USE_OCULUS_RIFT
@@ -520,15 +508,18 @@ public:
 #endif
   }
 
-  //
-  // コンストラクタ
-  //
+  //! \brief コンストラクタ.
+  //!   \param title ウィンドウタイトルの文字列.
+  //!   \param width 開くウィンドウの幅.
+  //!   \param height 開くウィンドウの高さ.
+  //!   \param fullscreen フルスクリーン表示を行うディスプレイ番号, 0 ならフルスクリーン表示を行わない.
+  //!   \param share 共有するコンテキスト, nullptr ならコンテキストを共有しない.
   Window(const char *title = "GLFW Window", int width = 640, int height = 480,
     int fullscreen = 0, GLFWwindow *share = nullptr)
     : window(nullptr), size{ width, height }
     , userPointer(nullptr), resizeFunc(nullptr), keyboardFunc(nullptr), mouseFunc(nullptr), wheelFunc(nullptr)
-    , arrow{ { 0, 0 }, { 0, 0 }, { 0, 0 }, { 0, 0 } }, mouse_position{ 0.0f, 0.0f }, wheel_rotation{ 0.0f, 0.0f }
-    , translation{ { { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } }, { { 0.0f, 0.0f, 0.0f }, { 0.0f, 0.0f, 0.0f } } }
+    , arrow{ { 0 }, { 0 }, { 0 }, { 0 } }, mouse_position{ 0.0f }, wheel_rotation{ 0.0f }
+    , translation{ { { 0.0f }, { 0.0f } }, { { 0.0f }, { 0.0f } }, { { 0.0f }, { 0.0f } } }
     , aspect(1.0f)
   {
     // ディスプレイの情報
@@ -784,15 +775,13 @@ public:
     resize(window, width, height);
   }
 
-  // コピーコンストラクタを封じる
+  //! \brief コピーコンストラクタは使用禁止.
   Window(const Window &w) = delete;
 
-  // 代入を封じる
+  //! \brief 代入演算子は使用禁止.
   Window &operator=(const Window &w) = delete;
 
-  //
-  // デストラクタ
-  //
+  //! \brief デストラクタ.
   virtual ~Window()
   {
     // ウィンドウが作成されていなければ戻る
@@ -874,9 +863,8 @@ public:
 
 #ifdef USE_OCULUS_RIFT
 
-  //
-  // Oculus Rift による描画開始
-  //
+  //! \brief Oculus Rift による描画開始.
+  //!   \return 描画可能なら true.
   bool begin()
   {
 #  if OVR_PRODUCT_VERSION > 0
@@ -937,14 +925,11 @@ public:
     return true;
   }
 
-  //
-  // Oculus Rift の描画する目の指定
-  //
-  //   eye: 表示する目, int
-  //   screen: HMD の視野の視錐台, GLfloat[4]
-  //   position: HMD の位置, GLfloat[3]
-  //   orientation: HMD の方法の四元数, GLfloat[4]
-  //
+  //! \brief Oculus Rift の描画する目の指定.
+  //!   \param eye 表示する目.
+  //!   \param screen HMD の視野の視錐台.
+  //!   \param position HMD の位置.
+  //!   \param orientation HMD の方法の四元数.
   void select(int eye, GLfloat *screen, GLfloat *position, GLfloat *orientation)
   {
 #  if OVR_PRODUCT_VERSION > 0
@@ -1017,9 +1002,8 @@ public:
     orientation[3] = o.w;
   }
 
-  //
-  // Time Warp 処理に使う投影変換行列の成分の設定
-  //
+  //! \brief Time Warp 処理に使う投影変換行列の成分の設定 (DK1, DK2).
+  //!   \param projection 投影変換行列.
   void timewarp(const GgMatrix &projection)
   {
 #  if OVR_PRODUCT_VERSION < 1
@@ -1031,11 +1015,8 @@ public:
 #  endif
   }
 
-  //
-  // 図形の描画を完了する
-  //
-  //   eye: 表示する目, int
-  //
+  //! \brief 図形の描画を完了する (CV1 以降).
+  //!   \param eye 表示する目.
   void commit(int eye)
   {
 #  if OVR_PRODUCT_VERSION > 0
@@ -1051,11 +1032,8 @@ public:
 #  endif
   }
 
-  //
-  // フレームを転送する
-  //
-  //   mirror: true ならミラー表示を行う. デフォルトは true.
-  //
+  //! \brief フレームを転送する.
+  //!   \param mirror true ならミラー表示を行う, デフォルトは true.
   void submit(bool mirror = true)
   {
     // エラーチェック
@@ -1111,44 +1089,40 @@ public:
     }
   }
 
-  // 視点の数
+  //! \brief 視点の数.
   const int eyeCount = ovrEye_Count;
 
 #else
 
-  // 視点の数
+  //! \brief 視点の数.
   const int eyeCount = 1;
 
 #endif
 
-  //
-  // ウィンドウの識別子を取得する
-  //
+  //! \brief ウィンドウの識別子のポインタを取得する.
+  //!   \return GLFWwindow 型のウィンドウ識別子のポインタ.
   GLFWwindow *get() const
   {
     return window;
   }
 
-  //
-  // ウィンドウを閉じるよう指示する
-  //
+  //! \brief ウィンドウのクローズフラグを設定する.
+  //!   \param flag クローズフラグ, 0 (GLFW_FALSE) 以外ならウィンドウを閉じる.
   void setClose(int flag = GLFW_TRUE) const
   {
     glfwSetWindowShouldClose(window, flag);
   }
 
-  //
-  // ウィンドウを閉じるべきかを判定する
-  //
+  //! \brief ウィンドウを閉じるべきかどうか調べる.
+  //!   \return ウィンドウを閉じるべきなら true.
   bool shouldClose() const
   {
-    // ウィンドウを閉じるべきなら真を返す
+    // ウィンドウを閉じるべきなら true を返す
     return glfwWindowShouldClose(window) != GLFW_FALSE;
   }
 
-  //
-  // イベントを取得してループを継続するなら真を返す
-  //
+  //! \brief イベントを取得してループを継続すべきかどうか調べる.
+  //!   \return ループを継続すべきなら true.
   operator bool()
   {
     // イベントを取り出す
@@ -1170,26 +1144,20 @@ public:
     mouse_position[0] = static_cast<GLfloat>(x);
     mouse_position[1] = static_cast<GLfloat>(y);
 
-    // 左ボタンドラッグ
-    if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_1))
+    // マウスドラッグ
+    for (int button = GLFW_MOUSE_BUTTON_1; button < GLFW_MOUSE_BUTTON_1 + 3; ++button)
     {
-      calcTranslation(translation[GLFW_MOUSE_BUTTON_1][1], GLFW_MOUSE_BUTTON_1);
-      trackball[0].motion(mouse_position[0], mouse_position[1]);
-    }
-
-    // 右ボタンドラッグ
-    if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_2))
-    {
-      calcTranslation(translation[GLFW_MOUSE_BUTTON_2][1], GLFW_MOUSE_BUTTON_2);
-      trackball[1].motion(mouse_position[0], mouse_position[1]);
+      if (glfwGetMouseButton(window, button))
+      {
+        calcTranslation(translation[button][1], button);
+        trackball[0].motion(mouse_position[0], mouse_position[1]);
+      }
     }
 
     return true;
   }
 
-  //
-  // カラーバッファを入れ替える
-  //
+  //! \brief カラーバッファを入れ替える.
   void swapBuffers()
   {
 #ifdef USE_IMGUI
@@ -1204,50 +1172,43 @@ public:
     glfwSwapBuffers(window);
   }
 
-  //
-  // ウィンドウの横幅を得る
-  //
+  //! \brief ウィンドウの横幅を得る.
+  //!   \return ウィンドウの横幅.
   GLsizei getWidth() const
   {
     return size[0];
   }
 
-  //
-  // ウィンドウの高さを得る
-  //
+  //! \brief ウィンドウの高さを得る.
+  //!   \return ウィンドウの高さ.
   GLsizei getHeight() const
   {
     return size[1];
   }
 
-  //
-  // ウィンドウのサイズを得る
-  //
+  //! \brief ウィンドウのサイズを得る.
+  //!   \return ウィンドウの幅と高さを格納した GLsizei 型の 2 要素の配列.
   const GLsizei *getSize() const
   {
     return size;
   }
 
-  //
-  // ウィンドウのサイズを得る
-  //
+  //! \brief ウィンドウのサイズを得る.
+  //!   \param size ウィンドウの幅と高さを格納した GLsizei 型の 2 要素の配列.
   void getSize(GLsizei *size) const
   {
     size[0] = getWidth();
     size[1] = getHeight();
   }
 
-  //
-  // ウィンドウのアスペクト比を得る
-  //
+  //! \brief ウィンドウのアスペクト比を得る.
+  //!   \return ウィンドウの縦横比.
   GLfloat getAspect() const
   {
     return aspect;
   }
 
-  //
-  // ビューポートをもとに戻す
-  //
+  //! ビューポートをウィンドウ全体に設定する.
   void resetViewport()
   {
 #ifndef USE_OCULUS_RIFT
@@ -1256,273 +1217,238 @@ public:
 #endif
   }
 
-  //
-  // キーが押されているかどうかを判定する
-  //
+  //! \brief キーが押されているかどうかを判定する.
+  //!   \return キーが押されていれば true.
   bool getKey(int key)
   {
     return glfwGetKey(window, key) != GLFW_RELEASE;
   }
 
-  //
-  // 矢印キーの現在の値を得る
-  //
+  //! \brief 矢印キーの現在の値を得る.
+  //!   \param direction 方向 (0: X, 1:Y).
+  //!   \param mods 修飾キーの状態 (0:なし, 1, SHIFT, 2: CTRL, 3: ALT).
+  //!   \return 矢印キーの値.
   GLfloat getArrow(int direction = 0, int mods = 0) const
   {
     return static_cast<GLfloat>(arrow[mods & 3][direction & 1]);
   }
 
-  //
-  // 矢印キーの現在の X 値を得る
-  //
+  //! \brief 矢印キーの現在の X 値を得る.
+  //!   \param mods 修飾キーの状態 (0:なし, 1, SHIFT, 2: CTRL, 3: ALT).
+  //!   \return 矢印キーの X 値.
   GLfloat getArrowX(int mods = 0) const
   {
     return getArrow(0, mods);
   }
 
-  //
-  // 矢印キーの現在の Y 値を得る
-  //
+  //! \brief 矢印キーの現在の Y 値を得る.
+  //!   \param mods 修飾キーの状態 (0:なし, 1, SHIFT, 2: CTRL, 3: ALT).
+  //!   \return 矢印キーの Y 値.
   GLfloat getArrowY(int mods = 0) const
   {
     return getArrow(1, mods);
   }
 
-  //
-  // 矢印キーの現在の値を得る
-  //
+  //! \brief 矢印キーの現在の値を得る.
+  //!   \param arrow 矢印キーの値を格納する GLfloat[2] の配列.
+  //!   \param mods 修飾キーの状態 (0:なし, 1, SHIFT, 2: CTRL, 3: ALT).
   void getArrow(GLfloat *arrow, int mods = 0) const
   {
     arrow[0] = getArrowX(mods);
     arrow[1] = getArrowY(mods);
   }
 
-  //
-  // Shift キーを押しながら矢印キーの現在の X 値を得る
-  //
+  //! \brief SHIFT キーを押しながら矢印キーを押したときの現在の X 値を得る.
+  //!   \return SHIFT キーを押しながら矢印キーを押したときの現在の X 値.
   GLfloat getShiftArrowX() const
   {
     return getArrow(0, 1);
   }
 
-  //
-  // Shift キーを押しながら矢印キーの現在の Y 値を得る
-  //
+  //! \brief SHIFT キーを押しながら矢印キーを押したときの現在の Y 値を得る.
+  //!   \return SHIFT キーを押しながら矢印キーを押したときの現在の Y 値.
   GLfloat getShiftArrowY() const
   {
     return getArrow(1, 1);
   }
 
-  //
-  // Shift キーを押しながら矢印キーの現在の値を得る
-  //
+  //! \brief SHIFT キーを押しながら矢印キーを押したときの現在の値を得る.
+  //!   \param shift_arrow SHIFT キーを押しながら矢印キーを押したときの値を格納する GLfloat 型の 2 要素の配列.
   void getShiftArrow(GLfloat *shift_arrow) const
   {
     shift_arrow[0] = getShiftArrowX();
     shift_arrow[1] = getShiftArrowY();
   }
 
-  //
-  // Control キーを押しながら矢印キーの現在の X 値を得る
-  //
+  //! \brief CTRL キーを押しながら矢印キーを押したときの現在の X 値を得る.
+  //!   \return CTRL キーを押しながら矢印キーを押したときの現在の X 値.
   GLfloat getControlArrowX() const
   {
     return getArrow(0, 2);
   }
 
-  //
-  // Control キーを押しながら矢印キーの現在の Y 値を得る
-  //
+  //! \brief CTRL キーを押しながら矢印キーを押したときの現在の Y 値を得る.
+  //!   \return CTRL キーを押しながら矢印キーを押したときの現在の Y 値.
   GLfloat getControlArrowY() const
   {
     return getArrow(1, 2);
   }
 
-  //
-  // Control キーを押しながら矢印キーの現在の値を得る
-  //
+  //! \brief CTRL キーを押しながら矢印キーを押したときの現在の値を得る.
+  //!   \param control_arrow CTRL キーを押しながら矢印キーを押したときの値を格納する GLfloat 型の 2 要素の配列.
   void getControlArrow(GLfloat *control_arrow) const
   {
     control_arrow[0] = getControlArrowX();
     control_arrow[1] = getControlArrowY();
   }
 
-  //
-  // Alt キーを押しながら矢印キーの現在の X 値を得る
-  //
+  //! \brief ALT キーを押しながら矢印キーを押したときの現在の X 値を得る.
+  //!   \return ALT キーを押しながら矢印キーを押したときの現在の X 値.
   GLfloat getAltArrowX() const
   {
     return getArrow(0, 3);
   }
 
-  //
-  // Alt キーを押しながら矢印キーの現在の Y 値を得る
-  //
+  //! \brief ALT キーを押しながら矢印キーを押したときの現在の Y 値を得る.
+  //!   \return ALT キーを押しながら矢印キーを押したときの現在の Y 値.
   GLfloat getAltArrowY() const
   {
     return getArrow(1, 3);
   }
 
-  //
-  // Alt キーを押しながら矢印キーの現在の値を得る
-  //
+  //! \brief ALT キーを押しながら矢印キーを押したときの現在の値を得る.
+  //!   \param alt_arrow ALT キーを押しながら矢印キーを押したときの値を格納する GLfloat 型の 2 要素の配列.
   void getAltlArrow(GLfloat *alt_arrow) const
   {
     alt_arrow[0] = getAltArrowX();
     alt_arrow[1] = getAltArrowY();
   }
 
-  //
-  // マウスカーソルの現在位置を得る
-  //
+  //! \brief マウスカーソルの現在位置を得る.
+  //!   \return マウスカーソルの現在位置を格納した GLfloat 型の 2 要素の配列.
   const GLfloat *getMouse() const
   {
     return mouse_position;
   }
 
-  //
-  // マウスカーソルの現在位置を得る
-  //
+  //! \brief マウスカーソルの現在位置を得る.
+  //!   \param position マウスカーソルの現在位置を格納した GLfloat 型の 2 要素の配列.
   void getMouse(GLfloat *position) const
   {
     position[0] = mouse_position[0];
     position[1] = mouse_position[1];
   }
 
-  //
-  // マウスカーソルの現在位置を得る
-  //
+  //! \brief マウスカーソルの現在位置を得る.
+  //!   \param direction 方向 (0:X, 1:Y).
+  //!   \return direction 方向のマウスカーソルの現在位置.
   const GLfloat getMouse(int direction) const
   {
     return mouse_position[direction & 1];
   }
 
-  //
-  // マウスカーソルの現在位置の X 座標を得る
-  //
+  //! \brief マウスカーソルの現在位置の X 座標を得る.
+  //!   \return direction 方向のマウスカーソルの X 方向の現在位置.
   GLfloat getMouseX() const
   {
     return mouse_position[0];
   }
 
-  //
-  // マウスカーソルの現在位置の Y 座標を得る
-  //
+  //! \brief マウスカーソルの現在位置の Y 座標を得る.
+  //!   \return direction 方向のマウスカーソルの Y 方向の現在位置.
   GLfloat getMouseY() const
   {
     return mouse_position[1];
   }
 
-  //
-  // マウスホイールの現在の回転角を得る
-  //
+  //! \brief マウスホイールの回転量を得る.
+  //!   \return マウスホイールの回転量を格納した GLfloat 型の 2 要素の配列.
   const GLfloat *getWheel() const
   {
     return wheel_rotation;
   }
 
-  //
-  // マウスホイールの現在の回転角を得る
-  //
+  //! \brief マウスホイールの回転量を得る.
+  //!   \param rotation マウスホイールの回転量を格納した GLfloat 型の 2 要素の配列.
   void getWheel(GLfloat *rotation) const
   {
     rotation[0] = wheel_rotation[0];
     rotation[1] = wheel_rotation[1];
   }
 
-  //
-  // マウスホイールの現在の回転角を得る
-  //
+  //! \brief マウスホイールの回転量を得る.
+  //!   \param direction 方向 (0:X, 1:Y).
+  //!   \return direction 方向のマウスホイールの回転量.
   GLfloat getWheel(int direction) const
   {
     return wheel_rotation[direction & 1];
   }
 
-  //
-  // マウスホイールの現在の X 方向の回転角を得る
-  //
+  //! \brief マウスホイールの X 方向の回転量を得る.
   const GLfloat getWheelX() const
   {
     return wheel_rotation[0];
   }
 
-  //
-  // マウスホイールの現在の Y 方向の回転角を得る
-  //
+  //! \brief マウスホイールの Y 方向の回転量を得る.
   const GLfloat getWheelY() const
   {
     return wheel_rotation[1];
   }
 
-  //
-  // 平行移動量を計算する (X, Y のみ, Z は wheel() で計算する)
-  //
-  void calcTranslation(GLfloat *t, int button) const
-  {
-    const GLfloat d(fabs(translation[0][0][2]) + 1.0f);
-    t[0] = (mouse_position[0] - trackball[button].getStart(0)) * trackball[button].getScale(0) * d + translation[button][0][0];
-    t[1] = (trackball[button].getStart(1) - mouse_position[1]) * trackball[button].getScale(1) * d + translation[button][0][1];
-  }
-
-  //
-  // 平行移動量を得る
-  //
+  //! \brief トラックボール処理を考慮したマウスによる平行移動の変換行列を得る.
+  //!   \param button 平行移動量を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]).
+  //!   \return 平行移動を行う GgMarix 型の変換行列.
   GgMatrix getTranslation(int button = GLFW_MOUSE_BUTTON_1) const
   {
     return ggTranslate(translation[button][1]);
   }
 
-  //
-  // トラックボールの回転変換行列を得る
-  //
+  //! \brief トラックボールの回転変換行列を得る.
+  //!   \param button 回転変換行列を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]).
+  //!   \return 回転を行う GgMarix 型の変換行列.
   GgMatrix getTrackball(int button = GLFW_MOUSE_BUTTON_1) const
   {
     return trackball[button].getMatrix();
   }
 
-  //
-  // ユーザーポインタを取り出す
-  //
+  //! \brief ユーザーポインタを取り出す.
+  //!   \return 保存されているユーザポインタ.
   void *getUserPointer() const
   {
     return userPointer;
   }
 
-  //
-  // 任意のユーザポインタを保存する
-  //
+  //! \brief 任意のユーザポインタを保存する.
+  //!   \param pointer 保存するユーザポインタ.
   void setUserPointer(void *pointer)
   {
     userPointer = pointer;
   }
 
-  //
-  // ユーザ定義の resize 関数を設定する
-  //
+  //! \brief ユーザ定義の resize 関数を設定する.
+  //!   \param func ユーザ定義の resize 関数, ウィンドウのサイズ変更時に呼び出される.
   void setResizeFunc(void (*func)(const Window *window, int width, int height))
   {
     resizeFunc = func;
   }
 
-  //
-  // ユーザ定義の keyboard 関数を設定する
-  //
+  //! \brief ユーザ定義の keyboard 関数を設定する.
+  //!   \param func ユーザ定義の keyboard 関数, キーボードの操作時に呼び出される.
   void setKeyboardFunc(void (*func)(const Window *window, int key, int scancode, int action, int mods))
   {
     keyboardFunc = func;
   }
 
-  //
-  // ユーザ定義の mouse 関数を設定する
-  //
+  //! \brief ユーザ定義の mouse 関数を設定する.
+  //!   \param func ユーザ定義の mouse 関数, マウスボタンの操作時に呼び出される.
   void setMouseFunc(void (*func)(const Window *window, int button, int action, int mods))
   {
     mouseFunc = func;
   }
 
-  //
-  // ユーザ定義の wheel 関数を設定する
-  //
+  //! \brief ユーザ定義の wheel 関数を設定する.
+  //!   \param func ユーザ定義の wheel 関数, マウスホイールの操作時に呼び出される.
   void setResizeFunc(void (*func)(const Window *window, double x, double y))
   {
     wheelFunc = func;

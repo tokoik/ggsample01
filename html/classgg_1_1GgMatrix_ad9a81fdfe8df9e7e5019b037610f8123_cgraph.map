@@ -1,0 +1,4 @@
+<map id="gg::GgMatrix::loadRotate" name="gg::GgMatrix::loadRotate">
+<area shape="rect" id="node1" title="r 方向のベクトルを軸とする回転の変換行列を格納する." alt="" coords="5,5,172,32"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgMatrix.html#acc357cb933db716a49e4b0ef09ad69cb" title="(x, y, z) 方向のベクトルを軸とする回転の変換行列を格納する." alt="" coords="220,5,387,32"/>
+</map>

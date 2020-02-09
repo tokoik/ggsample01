@@ -1,0 +1,5 @@
+<map id="gg::GgBuffer::map" name="gg::GgBuffer::map">
+<area shape="rect" id="node1" title="バッファオブジェクトの指定した範囲をマップする." alt="" coords="5,31,132,57"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgBuffer.html#a69d5d638946dbb66d390c1207ca4ae1f" title="バッファオブジェクトが保持するデータの数を取り出す." alt="" coords="180,5,335,32"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgBuffer.html#ad47094790f7d71b016ff9e3c677eea30" title="バッファオブジェクトのアライメントを考慮したデータの間隔を取り出す." alt="" coords="180,56,335,83"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Window::timewarp" name="Window::timewarp">
+<area shape="rect" id="node1" title="Time Warp 処理に使う投影変換行列の成分の設定 (DK1, DK2)." alt="" coords="5,5,133,32"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgMatrix.html#aa5b928ad41aa3ea57c0d1e8b4fc50614" title="変換行列を取り出す." alt="" coords="181,5,304,32"/>
+</map>

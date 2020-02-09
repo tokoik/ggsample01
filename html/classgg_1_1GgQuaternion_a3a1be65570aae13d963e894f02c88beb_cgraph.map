@@ -1,0 +1,6 @@
+<map id="gg::GgQuaternion::loadEuler" name="gg::GgQuaternion::loadEuler">
+<area shape="rect" id="node1" title="オイラー角 (heading, pitch, roll) で与えられた回転を表す四元数を格納する." alt="" coords="5,56,192,83"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a6f9cd8893b1adbbaf17588b1ba5ee9c3" title="x 軸中心に角度 a 回転する四元数を格納する." alt="" coords="241,5,442,32"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgQuaternion.html#a308e08f78d2dfeadc2efbcd7a470d6bd" title="y 軸中心に角度 a 回転する四元数を格納する." alt="" coords="240,56,443,83"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgQuaternion.html#a345f63c1d1278daece7b1a09d279d74a" title="z 軸中心に角度 a 回転する四元数を格納する." alt="" coords="241,107,442,133"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="gg::ggLength4" name="gg::ggLength4">
+<area shape="rect" id="node1" title="4 要素の長さ." alt="" coords="904,56,1008,83"/>
+<area shape="rect" id="node2" href="$namespacegg.html#a2c5a85961402558c05dc869a1329f12d" title="GgVector 型の長さ." alt="" coords="723,5,827,32"/>
+<area shape="rect" id="node3" href="$namespacegg.html#ab2f149e2a719574c966ff6ad0fdc17cf" title="4 要素の正規化." alt="" coords="714,56,837,83"/>
+<area shape="rect" id="node8" href="$classgg_1_1GgQuaternion.html#a7948622a1020c4b8cff6a699cbea8696" title="四元数のノルムを求める." alt="" coords="695,107,856,133"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgQuaternion.html#af529d76bbf4048ad56625575c7af3668" title="引数に指定した四元数を正規化して格納する." alt="" coords="432,56,647,83"/>
+<area shape="rect" id="node5" href="$classgg_1_1GgQuaternion.html#a2b6ba23dc4182f8e711defc9a0f33436" title="引数に指定した四元数を正規化して格納する." alt="" coords="169,31,384,57"/>
+<area shape="rect" id="node6" href="$classgg_1_1GgQuaternion.html#a8667e065b18d857126f5481d0be8d527" title="正規化する." alt="" coords="183,81,371,108"/>
+<area shape="rect" id="node7" href="$namespacegg.html#aab31210c17598a7d14ecb3c9f461040c" title="正規化した四元数を返す." alt="" coords="5,81,121,108"/>
+<area shape="rect" id="node9" href="$namespacegg.html#aca5935d7314e7ba3f7d8043b56e04931" title="四元数のノルムを返す." alt="" coords="495,107,584,133"/>
+</map>

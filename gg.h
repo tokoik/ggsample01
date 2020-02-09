@@ -1,7 +1,7 @@
 ﻿#pragma once
 
-/*
-** ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版
+/*!
+** \mainpage ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版
 **
 
 Copyright (c) 2011-2019 Kohe Tokoi. All Rights Reserved.
@@ -1294,27 +1294,29 @@ extern PFNGLWINDOWRECTANGLESEXTPROC glWindowRectanglesEXT;
 */
 namespace gg
 {
-  // 光源と材質の uniform buffer object の binding point
+  /*!
+  ** \brief 光源と材質の uniform buffer object の結合ポイント.
+  */
   enum BindingPoints
   {
-    LightBindingPoint = 0,
-    MaterialBindingPoint
+    LightBindingPoint = 0,  //!< \brief 光源の uniform buffer object の結合ポイント
+    MaterialBindingPoint,   //!< \brief 材質の uniform buffer object の結合ポイント
   };
 
   /*!
-  ** \brief 使用している GPU のバッファオブジェクトのアライメント
+  ** \brief 使用している GPU のバッファオブジェクトのアライメント, 初期化に取得される.
   */
   extern GLint ggBufferAlignment;
 
   /*!
-  ** \brief 4 要素の単精度実数の配列
+  ** \brief 4 要素の単精度実数の配列.
   */
   using GgVector = std::array<GLfloat, 4>;
 
   /*!
   ** \brief ゲームグラフィックス特論の都合にもとづく初期化を行う.
   **
-  **   Windows で OpenGL 1.2 以降の API を有効化する.
+  **   Windows において OpenGL 1.2 以降の API を有効化する.
   */
   extern void ggInit();
 
@@ -1323,9 +1325,19 @@ namespace gg
   **
   **   OpenGL の API を呼び出し直後に実行すればエラーのあるときにメッセージを表示する.
   **
-  **   \param msg エラー発生時に標準エラー出力に出力する文字列. nullptr なら何も出力しない.
+  **   \param name エラー発生時に標準エラー出力に出力する文字列, nullptr なら何も出力しない.
+  **   \param line エラー発生時に標準エラー出力に出力する数値, 0 なら何も出力しない.
   */
   extern void _ggError(const char *name = nullptr, unsigned int line = 0);
+
+  /*!
+  ** @def ggError()
+  **
+  ** @brief OpenGL のエラーの発生を検知したときにソースファイル名と行番号を表示する.
+  **
+  ** このマクロを置いた場所（より前）で OpenGL のエラーが発生していた時に, このマクロを置いたソースファイル名と行番号を出力する.
+  ** リリースビルド時には無視される.
+  */
 #if defined(DEBUG)
 #  define ggError() gg::_ggError(__FILE__, __LINE__)
 #else
@@ -1337,9 +1349,19 @@ namespace gg
   **
   **   FBO の API を呼び出し直後に実行すればエラーのあるときにメッセージを表示する.
   **
-  **   \param msg エラー発生時に標準エラー出力に出力する文字列. nullptr なら何も出力しない.
+  **   \param name エラー発生時に標準エラー出力に出力する文字列, nullptr なら何も出力しない.
+  **   \param line エラー発生時に標準エラー出力に出力する数値, 0 なら何も出力しない.
   */
   extern void _ggFBOError(const char *name = nullptr, unsigned int line = 0);
+
+  /*!
+  ** @def ggFBOError()
+  **
+  ** @brief FBO のエラーの発生を検知したときにソースファイル名と行番号を表示する.
+  **
+  ** このマクロを置いた場所（より前）で FBO のエラーが発生していた時に, このマクロを置いたソースファイル名と行番号を出力する.
+  ** リリースビルド時には無視される.
+  */
 #if defined(DEBUG)
 #  define ggFBOError() gg::_ggFBOError(__FILE__, __LINE__)
 #else
@@ -1380,9 +1402,9 @@ namespace gg
   **
   **   \param name 読み込むファイル名.
   **   \param image 読み込んだデータを格納する vector.
-  **   \param pWidth 読み込んだ画像の横の画素数の格納先のポインタ. nullptr なら格納しない.
-  **   \param pHeight 読み込んだ画像の縦の画素数の格納先のポインタ. nullptr なら格納しない.
-  **   \param pFormat 読み込んだファイルの書式 (GL_RED, G_RG, GL_BGR, G_BGRA) の格納先のポインタ. nullptr なら格納しない.
+  **   \param pWidth 読み込んだ画像の横の画素数の格納先のポインタ, nullptr なら格納しない.
+  **   \param pHeight 読み込んだ画像の縦の画素数の格納先のポインタ, nullptr なら格納しない.
+  **   \param pFormat 読み込んだファイルの書式 (GL_RED, G_RG, GL_BGR, G_BGRA) の格納先のポインタ, nullptr なら格納しない.
   **   \return 読み込みに成功すれば true, 失敗すれば false.
   */
   extern bool ggReadImage(const char *name, std::vector<GLubyte> &image, GLsizei *pWidth, GLsizei *pHeight, GLenum *pFormat);
@@ -1390,7 +1412,7 @@ namespace gg
   /*!
   ** \brief テクスチャメモリを確保して画像データをテクスチャとして読み込む.
   **
-  **   \param image テクスチャとして読み込むデータ. nullptr ならテクスチャメモリの確保のみを行う.
+  **   \param image テクスチャとして読み込むデータ, nullptr ならテクスチャメモリの確保のみを行う.
   **   \param width テクスチャとして読み込むデータ image の横の画素数.
   **   \param height テクスチャとして読み込むデータ image の縦の画素数.
   **   \param format image のフォーマット.
@@ -1409,7 +1431,7 @@ namespace gg
   **   \param name 読み込むファイル名.
   **   \param pWidth 読みだした画像ファイルの横の画素数の格納先のポインタ (nullptr なら格納しない).
   ++   \param pHeight 読みだした画像ファイルの縦の画素数の格納先のポインタ (nullptr なら格納しない).
-  **   \param internal glTexImage2D() に指定するテクスチャの内部フォーマット. 0 なら外部フォーマットに合わせる.
+  **   \param internal glTexImage2D() に指定するテクスチャの内部フォーマット, 0 なら外部フォーマットに合わせる.
   **   \param wrap テクスチャのラッピングモード, デフォルトは GL_CLAMP_TO_EDGE.
   **   \return テクスチャの作成に成功すればテクスチャ名, 失敗すれば 0.
   */
@@ -1422,9 +1444,9 @@ namespace gg
   **   \param hmap グレースケール画像のデータ.
   **   \param width 高さマップのグレースケール画像 hmap の横の画素数.
   **   \param height 高さマップのグレースケール画像 hmap の縦の画素数.
-  **   \param stride データの間隔.
+  **   \param format データの書式 (GL_RED, GL_RG, GL_RGB, GL_BGR, GL_RGBA, GL_BGRA).
   **   \param nz 法線の z 成分の割合.
-  **   \param 法線マップを格納するテクスチャの内部フォーマット.
+  **   \param internal 法線マップを格納するテクスチャの内部フォーマット.
   **   \param nmap 法線マップを格納する vector.
   */
   extern void ggCreateNormalMap(const GLubyte *hmap, GLsizei width, GLsizei height, GLenum format, GLfloat nz,
@@ -1488,7 +1510,7 @@ namespace gg
   /*!
   ** \brief コンピュートシェーダのソースファイルを読み込んでプログラムオブジェクトを作成する.
   **
-  **   \param vert コンピュートシェーダのソースファイル名.
+  **   \param comp コンピュートシェーダのソースファイル名.
   **   \returnプログラムオブジェクトのプログラム名 (作成できなければ 0).
   */
   extern GLuint ggLoadComputeShader(const char *comp);
@@ -2090,7 +2112,7 @@ namespace gg
     GgMatrix &loadNormal(const GLfloat *a);
 
     //! \brief 法線変換行列を格納する.
-    //!   \param GgMatrix 型の変換行列.
+    //!   \param m GgMatrix 型の変換行列.
     //!   \return 設定した m の法線変換行列.
     GgMatrix &loadNormal(const GgMatrix &m)
     {
@@ -3224,7 +3246,7 @@ namespace gg
     GgQuaternion &loadRotateY(GLfloat a);
 
     //! \brief z 軸中心に角度 a 回転する四元数を格納する.
-    //!   \param v 軸ベクトルを表す GLfloat 型の 4 要素の配列変数.
+    //!   \param a 回転角.
     //!   \return 格納された回転を表す四元数.
     GgQuaternion &loadRotateZ(GLfloat a);
 
@@ -3539,8 +3561,8 @@ namespace gg
   }
 
   //! \brief 回転の変換行列 m を表す四元数を返す.
-  //!   \param m GLfloat 型の 16 要素の配列変数.
-  //!   \return m による回転の変換に相当する四元数.
+  //!   \param a GLfloat 型の 16 要素の配列変数.
+  //!   \return a による回転の変換に相当する四元数.
   inline GgQuaternion ggMatrixQuaternion(const GLfloat *a)
   {
     GgQuaternion q;
@@ -3776,7 +3798,7 @@ namespace gg
     }
 
     //! \brief トラックボール処理の開始位置を取り出す.
-    //!   \param \position トラックボールの開始位置を格納する 2 要素の配列.
+    //!   \param position トラックボールの開始位置を格納する 2 要素の配列.
     void getStart(GLfloat *position) const
     {
       position[0] = start[0];
@@ -3798,7 +3820,7 @@ namespace gg
     }
 
     //! \brief トラックボール処理の換算係数を取り出す.
-    //!   \param \factor トラックボールの換算係数を格納する 2 要素の配列.
+    //!   \param factor トラックボールの換算係数を格納する 2 要素の配列.
     void getScale(GLfloat *factor) const
     {
       factor[0] = scale[0];
@@ -3864,10 +3886,10 @@ namespace gg
       glDeleteTextures(1, &texture);
     }
 
-    // コピーコンストラクタを封じる
+    //! \brief コピーコンストラクタは使用禁止.
     GgTexture(const GgTexture &o) = delete;
 
-    // 代入演算子を封じる
+    //! \brief 代入演算子は使用禁止.
     GgTexture &operator=(const GgTexture &o) = delete;
 
     //! \brief テクスチャの使用開始 (このテクスチャを使用する際に呼び出す).
@@ -3897,7 +3919,7 @@ namespace gg
     }
 
     //! \brief 使用しているテクスチャのサイズを取り出す.
-    //!   \param テクスチャのサイズを格納する GLsizei 型の 2 要素の配列変数.
+    //!   \param size テクスチャのサイズを格納する GLsizei 型の 2 要素の配列変数.
     void getSize(GLsizei *size) const
     {
       size[0] = getWidth();
@@ -3951,7 +3973,8 @@ namespace gg
 
     //! \brief ファイルからデータを読み込んでテクスチャを作成するコンストラクタ.
     //!   \param name 読み込むファイル名.
-    //!   \param internal glTexImage2D() に指定するテクスチャの内部フォーマット. 0 なら外部フォーマットに合わせる.
+    //!   \param internal glTexImage2D() に指定するテクスチャの内部フォーマット, 0 なら外部フォーマットに合わせる.
+    //!   \param wrap テクスチャのラッピングモード, GL_TEXTURE_WRAP_S および GL_TEXTURE_WRAP_T に設定する値.
     GgColorTexture(const char *name, GLenum internal = 0, GLenum wrap = GL_CLAMP_TO_EDGE)
     {
       load(name, internal, wrap);
@@ -3966,8 +3989,8 @@ namespace gg
     //!   \param height テクスチャの縦の画素数.
     //!   \param format 読み込む画像のフォーマット.
     //!   \param type 読み込む画像のデータ型.
-    //!   \param internal テクスチャの内部フォーマット.
-    //!   \param wrap テクスチャのラッピングモード.
+    //!   \param internal glTexImage2D() に指定するテクスチャの内部フォーマット.
+    //!   \param wrap テクスチャのラッピングモード (GL_CLAMP_TO_EDGE, GL_CLAMP_TO_BORDER, GL_REPEAT, GL_MIRRORED_REPEAT).
     void load(const GLvoid *image, GLsizei width, GLsizei height,
       GLenum format = GL_BGR, GLenum type = GL_UNSIGNED_BYTE,
       GLenum internal = GL_RGB, GLenum wrap = GL_CLAMP_TO_EDGE)
@@ -3978,8 +4001,8 @@ namespace gg
 
     //! \brief テクスチャを作成してファイルからデータを読み込む.
     //!   \param name 読み込むファイル名.
-    //!   \param internal glTexImage2D() に指定するテクスチャの内部フォーマット. 0 なら外部フォーマットに合わせる.
-    //!   \return テクスチャの作成に成功すれば true, 失敗すれば false.
+    //!   \param internal glTexImage2D() に指定するテクスチャの内部フォーマット, 0 ならファイルの画像フォーマットに合わせる.
+    //!   \param wrap テクスチャのラッピングモード (GL_CLAMP_TO_EDGE, GL_CLAMP_TO_BORDER, GL_REPEAT, GL_MIRRORED_REPEAT).
     void load(const char *name, GLenum internal = 0, GLenum wrap = GL_CLAMP_TO_EDGE);
   };
 
@@ -4099,10 +4122,10 @@ namespace gg
       glDeleteBuffers(1, &buffer);
     }
 
-    // コピーコンストラクタを封じる
+    //! コピーコンストラクタは使用禁止.
     GgBuffer<T>(const GgBuffer<T> &o) = delete;
 
-    // 代入演算子を封じる
+    //! \brief 代入演算子は使用禁止.
     GgBuffer<T> &operator=(const GgBuffer<T> &o) = delete;
 
     //! \brief バッファオブジェクトのターゲットを取り出す.
@@ -4502,10 +4525,10 @@ namespace gg
       glDeleteVertexArrays(1, &vao);
     }
 
-    // コピーコンストラクタを封じる
+    //! \brief コピーコンストラクタは使用禁止.
     GgShape(const GgShape &o) = delete;
 
-    // 代入演算子を封じる
+    //! \brief 代入演算子は使用禁止.
     GgShape &operator=(const GgShape &o) = delete;
 
     //! \brief 頂点配列オブジェクト名を取り出す.
@@ -4660,7 +4683,7 @@ namespace gg
 
   public:
 
-    //! \brief コンストラクタ
+    //! \brief コンストラクタ.
     //!   \param mode 描画する基本図形の種類.
     GgTriangles(GLenum mode = GL_TRIANGLES)
       : GgShape(mode)
@@ -4779,7 +4802,7 @@ namespace gg
     }
 
     //! \brief 既存のバッファオブジェクトに頂点属性と三角形の頂点インデックスデータを転送する.
-    //!   \param vertex 頂点属性が格納されてている領域の先頭のポインタ.
+    //!   \param vert 頂点属性が格納されてている領域の先頭のポインタ.
     //!   \param firstv 頂点属性の転送先のバッファオブジェクトの先頭の要素番号.
     //!   \param countv 頂点のデータの数 (頂点数).
     //!   \param face 三角形の頂点インデックスデータ.
@@ -4793,7 +4816,7 @@ namespace gg
     }
 
     //! \brief バッファオブジェクトを確保して頂点属性と三角形の頂点インデックスデータを格納する.
-    //!   \param vertex 頂点属性が格納されてている領域の先頭のポインタ.
+    //!   \param vert 頂点属性が格納されてている領域の先頭のポインタ.
     //!   \param countv 頂点のデータの数 (頂点数).
     //!   \param face 三角形の頂点インデックスデータ.
     //!   \param countf 三角形の頂点数.
@@ -4933,10 +4956,10 @@ namespace gg
       glDeleteProgram(program);
     }
 
-    // コピーコンストラクタを封じる
+    //! \brief コピーコンストラクタは使用禁止.
     GgShader(const GgShader &o) = delete;
 
-    // 代入演算子をｐ封じる
+    //! \brief 代入演算子は使用禁止.
     GgShader &operator=(const GgShader &o) = delete;
 
     //! \brief シェーダプログラムの使用を開始する.
@@ -5118,7 +5141,7 @@ namespace gg
     //! \brief コンストラクタ.
     GgSimpleShader() {}
 
-    //! \brief コンストラクタ
+    //! \brief コンストラクタ.
     //!   \param vert バーテックスシェーダのソースファイル名.
     //!   \param frag フラグメントシェーダのソースファイル名 (0 なら不使用).
     //!   \param geom ジオメトリシェーダのソースファイル名 (0 なら不使用).
@@ -5153,7 +5176,7 @@ namespace gg
 
     //! \brief モデルビュー変換行列と法線変換行列を設定する.
     //!   \param mv GLfloat 型の 16 要素の配列変数に格納されたモデルビュー変換行列.
-    //!   \param mv GLfloat 型の 16 要素の配列変数に格納されたモデルビュー変換行列の法線変換行列.
+    //!   \param mn GLfloat 型の 16 要素の配列変数に格納されたモデルビュー変換行列の法線変換行列.
     virtual void loadModelviewMatrix(const GLfloat *mv, const GLfloat *mn) const
     {
       GgPointShader::loadModelviewMatrix(mv);
@@ -5185,7 +5208,7 @@ namespace gg
     //! \brief 投影変換行列とモデルビュー変換行列と法線変換行列を設定する.
     //!   \param mp GLfloat 型の 16 要素の配列変数に格納された投影変換行列.
     //!   \param mv GLfloat 型の 16 要素の配列変数に格納されたモデルビュー変換行列.
-    //!   \param mv GLfloat 型の 16 要素の配列変数に格納されたモデルビュー変換行列の法線変換行列.
+    //!   \param mn GLfloat 型の 16 要素の配列変数に格納されたモデルビュー変換行列の法線変換行列.
     virtual void loadMatrix(const GLfloat *mp, const GLfloat *mv, const GLfloat *mn) const
     {
       GgPointShader::loadMatrix(mp, mv);
@@ -5222,10 +5245,10 @@ namespace gg
     */
     struct Light
     {
-      GgVector ambient;   //! 光源強度の環境光成分.
-      GgVector diffuse;   //! 光源強度の拡散反射光成分.
-      GgVector specular;  //! 光源強度の鏡面反射光成分.
-      GgVector position;  //! 光源の位置.
+      GgVector ambient;   //!< 光源強度の環境光成分.
+      GgVector diffuse;   //!< 光源強度の拡散反射光成分.
+      GgVector specular;  //!< 光源強度の鏡面反射光成分.
+      GgVector position;  //!< 光源の位置.
     };
 
     /*!
@@ -5239,12 +5262,14 @@ namespace gg
       //! \brief デフォルトコンストラクタ.
       //!   \param light GgSimpleShader::Light 型の光源データのポインタ.
       //!   \param count バッファ中の GgSimpleShader::Light 型の光源データの数.
+      //!   \param usage バッファの使い方のパターン, glBufferData() の第 4 引数の usage に渡される.
       LightBuffer(const Light *light = nullptr, GLsizei count = 1, GLenum usage = GL_STATIC_DRAW)
         : GgUniformBuffer<Light>(light, count, usage) {}
 
       //! \brief 同じデータで埋めるコンストラクタ.
       //!   \param light GgSimpleShader::Light 型の光源データ.
       //!   \param count バッファ中の GgSimpleShader::Light 型の光源データの数.
+      //!   \param usage バッファの使い方のパターン, glBufferData() の第 4 引数の usage に渡される.
       LightBuffer(const Light &light, GLsizei count = 1, GLenum usage = GL_STATIC_DRAW)
         : GgUniformBuffer<Light>(light, count, usage) {}
 
@@ -5255,6 +5280,7 @@ namespace gg
       //!   \param r 光源の強度の環境光成分の赤成分.
       //!   \param g 光源の強度の環境光成分の緑成分.
       //!   \param b 光源の強度の環境光成分の青成分.
+      //!   \param a 光源の強度の拡散反射光成分の不透明度, デフォルトは 1.
       //!   \param first 値を設定する光源データの最初の番号, デフォルトは 0.
       //!   \param count 値を設定する光源データの数, デフォルトは 1.
       void loadAmbient(GLfloat r, GLfloat g, GLfloat b, GLfloat a = 1.0f, GLint first = 0, GLsizei count = 1) const;
@@ -5380,10 +5406,10 @@ namespace gg
     */
     struct Material
     {
-      GgVector ambient;   //! 環境光に対する反射係数.
-      GgVector diffuse;   //! 拡散反射係数.
-      GgVector specular;  //! 鏡面反射係数.
-      GLfloat shininess;  //! 輝き係数.
+      GgVector ambient;   //!< 環境光に対する反射係数.
+      GgVector diffuse;   //!< 拡散反射係数.
+      GgVector specular;  //!< 鏡面反射係数.
+      GLfloat shininess;  //!< 輝き係数.
     };
 
     /*!
@@ -5394,15 +5420,17 @@ namespace gg
     {
     public:
 
-      //! \brief デフォルトコンストラクタ
+      //! \brief デフォルトコンストラクタ.
       //!   \param material GgSimpleShader::Material 型の材質データのポインタ.
       //!   \param count バッファ中の GgSimpleShader::Material 型の材質データの数.
+      //!   \param usage バッファの使い方のパターン, glBufferData() の第 4 引数の usage に渡される.
       MaterialBuffer(const Material *material = nullptr, GLsizei count = 1, GLenum usage = GL_STATIC_DRAW)
         : GgUniformBuffer<Material>(material, count, usage) {}
 
-      //! \brief 同じデータで埋めるコンストラクタ
+      //! \brief 同じデータで埋めるコンストラクタ.
       //!   \param material GgSimpleShader::Material 型の材質データ.
       //!   \param count バッファ中の GgSimpleShader::Material 型の材質データの数.
+      //!   \param usage バッファの使い方のパターン, glBufferData() の第 4 引数の usage に渡される.
       MaterialBuffer(const Material &material, GLsizei count = 1, GLenum usage = GL_STATIC_DRAW)
         : GgUniformBuffer<Material>(material, count, usage) {}
 
@@ -5420,6 +5448,8 @@ namespace gg
 
       //! \brief 環境光に対する反射係数を設定する.
       //!   \param ambient 環境光に対する反射係数を格納した GLfloat 型の 4 要素の配列変数.
+      //!   \param first 値を設定する材質データの最初の番号, デフォルトは 0.
+      //!   \param count 値を設定する材質データの数, デフォルトは 1.
       void loadAmbient(const GLfloat *ambient, GLint first = 0, GLsizei count = 1) const
       {
         // first 番目のブロックから count 個のブロックの ambient 要素に値を設定する
@@ -5529,7 +5559,7 @@ namespace gg
     //! \brief 投影変換行列とモデルビュー変換行列と法線変換行列を設定してシェーダプログラムの使用を開始する.
     //!   \param mp GLfloat 型の 16 要素の配列変数に格納された投影変換行列.
     //!   \param mv GLfloat 型の 16 要素の配列変数に格納されたモデルビュー変換行列.
-    //!   \param mv GLfloat 型の 16 要素の配列変数に格納されたモデルビュー変換行列の法線変換行列.
+    //!   \param mn GLfloat 型の 16 要素の配列変数に格納されたモデルビュー変換行列の法線変換行列.
     void use(const GLfloat *mp, const GLfloat *mv, const GLfloat *mn) const
     {
       // プログラムオブジェクトを指定する
@@ -5587,7 +5617,7 @@ namespace gg
     //! \brief 光源を指定し投影変換行列とモデルビュー変換行列と法線変換行列を設定してシェーダプログラムの使用を開始する.
     //!   \param mp GLfloat 型の 16 要素の配列変数に格納された投影変換行列.
     //!   \param mv GLfloat 型の 16 要素の配列変数に格納されたモデルビュー変換行列.
-    //!   \param mv GLfloat 型の 16 要素の配列変数に格納されたモデルビュー変換行列の法線変換行列.
+    //!   \param mn GLfloat 型の 16 要素の配列変数に格納されたモデルビュー変換行列の法線変換行列.
     //!   \param light 光源の特性の gg::LightBuffer 構造体のポインタ.
     //!   \param i 光源データの uniform block のインデックス.
     void use(const GLfloat *mp, const GLfloat *mv, const GLfloat *mn, const LightBuffer *light, GLint i = 0) const

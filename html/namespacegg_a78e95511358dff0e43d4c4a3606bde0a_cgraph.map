@@ -1,0 +1,5 @@
+<map id="gg::ggConjugate" name="gg::ggConjugate">
+<area shape="rect" id="node1" title="共役四元数を返す." alt="" coords="5,5,121,32"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#aa6149d5fc7b04e147179857ada502d51" title="共役四元数に変換する." alt="" coords="169,5,357,32"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgQuaternion.html#af9a9577581a5f9bbebd675998f741215" title="引数に指定した四元数の共役四元数を格納する." alt="" coords="405,5,620,32"/>
+</map>

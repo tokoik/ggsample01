@@ -55,3 +55,5 @@ xcuserdata
 *.tmp
 *.swp
 imgui.ini
+/pdf/*
+!/pdf/refman.pdf

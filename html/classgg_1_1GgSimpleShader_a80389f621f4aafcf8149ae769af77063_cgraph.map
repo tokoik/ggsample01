@@ -1,0 +1,8 @@
+<map id="gg::GgSimpleShader::loadMatrix" name="gg::GgSimpleShader::loadMatrix">
+<area shape="rect" id="node1" title="投影変換行列とモデルビュー変換行列と法線変換行列を設定する." alt="" coords="5,27,148,69"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgMatrix.html#aa5b928ad41aa3ea57c0d1e8b4fc50614" title="変換行列を取り出す." alt="" coords="206,5,329,32"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgSimpleShader.html#a236d3a1d071666d7fe22e7d7b5eb0874" title="投影変換行列とモデルビュー変換行列と法線変換行列を設定する." alt="" coords="196,57,339,98"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgPointShader.html#aa852790b42b43a23161fb86d551cb33b" title="投影変換行列とモデルビュー変換行列を設定する." alt="" coords="387,57,527,98"/>
+<area shape="rect" id="node5" href="$classgg_1_1GgPointShader.html#ac6e9398fa71096e9866fcd84cb542a91" title="モデルビュー変換行列を設定する." alt="" coords="575,23,716,65"/>
+<area shape="rect" id="node6" href="$classgg_1_1GgPointShader.html#a35ef8670f580eb11d40386aa63ac615b" title="投影変換行列を設定する." alt="" coords="575,89,715,130"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="gg::GgUniformBuffer::send" name="gg::GgUniformBuffer::send">
+<area shape="rect" id="node1" title="ユニフォームバッファオブジェクトを確保してユニフォームバッファオブジェクトのブロックごとのメンバを同じデータで埋める." alt="" coords="192,5,331,47"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgUniformBuffer.html#a1af7292924eb187968a4ea1a9221e9e7" title="ユニフォームバッファオブジェクトを確保してブロックごとにデータを転送する." alt="" coords="5,5,144,47"/>
+</map>

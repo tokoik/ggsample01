@@ -1,0 +1,4 @@
+<map id="gg::GgTriangles::draw" name="gg::GgTriangles::draw">
+<area shape="rect" id="node1" title="三角形の描画." alt="" coords="5,5,153,32"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgShape.html#adf1b1da86a75b4c74dddf6194e615f6d" title="図形の描画, 派生クラスでこの手続きをオーバーライドする." alt="" coords="201,5,335,32"/>
+</map>

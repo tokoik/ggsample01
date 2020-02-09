@@ -1,0 +1,5 @@
+<map id="gg::ggQuaternionMatrix" name="gg::ggQuaternionMatrix">
+<area shape="rect" id="node1" title="四元数 q の回転の変換行列を返す." alt="" coords="5,31,163,57"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a605ed85eaa2a82e0d3e2097002d5c583" title="四元数が表す回転の変換行列を a に求める." alt="" coords="211,5,397,32"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgMatrix.html#ab0e10b02fd4435abeeeec4d1d962d61d" title="配列変数の値を格納する." alt="" coords="239,56,369,83"/>
+</map>

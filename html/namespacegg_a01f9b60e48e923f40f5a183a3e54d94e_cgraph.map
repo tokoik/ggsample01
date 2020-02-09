@@ -1,0 +1,5 @@
+<map id="gg::ggQuaternionTransposeMatrix" name="gg::ggQuaternionTransposeMatrix">
+<area shape="rect" id="node1" title="四元数 q の回転の転置した変換行列を返す." alt="" coords="5,23,187,65"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a605ed85eaa2a82e0d3e2097002d5c583" title="四元数が表す回転の変換行列を a に求める." alt="" coords="236,5,423,32"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgMatrix.html#aeb944e9d5e45ee4c64ad3565492b2852" title="転置行列を格納する." alt="" coords="235,56,424,83"/>
+</map>

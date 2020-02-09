@@ -1,0 +1,4 @@
+<map id="gg::GgMatrix::rotateZ" name="gg::GgMatrix::rotateZ">
+<area shape="rect" id="node1" title="z 軸中心の回転変換を乗じた結果を返す." alt="" coords="5,5,151,32"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgMatrix.html#ae314b688f465c548dfa4b5a5ed3a916f" title="z 軸中心の回転の変換行列を格納する." alt="" coords="199,5,373,32"/>
+</map>

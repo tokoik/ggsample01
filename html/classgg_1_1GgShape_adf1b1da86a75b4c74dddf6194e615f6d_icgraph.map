@@ -1,0 +1,6 @@
+<map id="gg::GgShape::draw" name="gg::GgShape::draw">
+<area shape="rect" id="node1" title="図形の描画, 派生クラスでこの手続きをオーバーライドする." alt="" coords="204,56,337,83"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgPoints.html#a132523e30fbb6afa7e27cf43d3ccaece" title="点の描画." alt="" coords="14,5,147,32"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgTriangles.html#ac6af2cf80311f3429271e7cbde302e02" title="三角形の描画." alt="" coords="7,56,155,83"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgElements.html#a81e0b1de878227acdea4cb4fd450c6db" title="インデックスを使った三角形の描画." alt="" coords="5,107,156,133"/>
+</map>

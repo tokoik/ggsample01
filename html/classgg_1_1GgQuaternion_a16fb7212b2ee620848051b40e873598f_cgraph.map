@@ -1,0 +1,5 @@
+<map id="gg::GgQuaternion::loadMatrix" name="gg::GgQuaternion::loadMatrix">
+<area shape="rect" id="node1" title="回転の変換行列 m を表す四元数を格納する." alt="" coords="5,31,197,57"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgMatrix.html#aa5b928ad41aa3ea57c0d1e8b4fc50614" title="変換行列を取り出す." alt="" coords="280,5,403,32"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgQuaternion.html#a5e75f5a66841921b5662aade43e85181" title="回転の変換行列を表す四元数を格納する." alt="" coords="245,56,437,83"/>
+</map>

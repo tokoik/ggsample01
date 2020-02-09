@@ -1,0 +1,7 @@
+<map id="gg::GgBuffer::getStride" name="gg::GgBuffer::getStride">
+<area shape="rect" id="node1" title="バッファオブジェクトのアライメントを考慮したデータの間隔を取り出す." alt="" coords="184,81,339,108"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgBuffer.html#a30cfc7b79da921f4a5d0412ea6780522" title="別のバッファオブジェクトからデータを複写する." alt="" coords="5,5,136,32"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgBuffer.html#aa9d5b9a5dbb6c521e352432f73e65ca1" title="バッファオブジェクトの指定した範囲をマップする." alt="" coords="7,56,134,83"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgBuffer.html#a42fb5b6c8f42841b6054d3313033b7c5" title="バッファオブジェクトのデータから抽出する." alt="" coords="7,107,134,133"/>
+<area shape="rect" id="node5" href="$classgg_1_1GgBuffer.html#a479120414c50643ebcfb93f3f2f59ed7" title="すでに確保したバッファオブジェクトにデータを転送する." alt="" coords="5,157,136,184"/>
+</map>

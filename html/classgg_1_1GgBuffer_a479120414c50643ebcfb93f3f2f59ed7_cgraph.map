@@ -1,0 +1,5 @@
+<map id="gg::GgBuffer::send" name="gg::GgBuffer::send">
+<area shape="rect" id="node1" title="すでに確保したバッファオブジェクトにデータを転送する." alt="" coords="5,31,136,57"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgBuffer.html#a69d5d638946dbb66d390c1207ca4ae1f" title="バッファオブジェクトが保持するデータの数を取り出す." alt="" coords="184,5,339,32"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgBuffer.html#ad47094790f7d71b016ff9e3c677eea30" title="バッファオブジェクトのアライメントを考慮したデータの間隔を取り出す." alt="" coords="184,56,339,83"/>
+</map>

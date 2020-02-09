@@ -1,0 +1,4 @@
+<map id="gg::GgQuaternion::getConjugateMatrix" name="gg::GgQuaternion::getConjugateMatrix">
+<area shape="rect" id="node1" title="四元数の共役が表す回転の変換行列を取り出す." alt="" coords="261,5,469,47"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a9bfa877fdb7e650afd1f5d760e510c4d" title="四元数の共役が表す回転の変換行列を m に求める." alt="" coords="5,5,213,47"/>
+</map>

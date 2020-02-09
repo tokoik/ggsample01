@@ -1,0 +1,4 @@
+<map id="gg::ggTranslate" name="gg::ggTranslate">
+<area shape="rect" id="node1" title="平行移動の変換行列を返す." alt="" coords="211,5,321,32"/>
+<area shape="rect" id="node2" href="$classWindow.html#a9988e8c5d5ed2bd21c894773cf767459" title="トラックボール処理を考慮したマウスによる平行移動の変換行列を得る." alt="" coords="5,5,163,32"/>
+</map>

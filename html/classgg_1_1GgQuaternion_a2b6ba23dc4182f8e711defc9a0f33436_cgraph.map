@@ -1,0 +1,7 @@
+<map id="gg::GgQuaternion::loadNormalize" name="gg::GgQuaternion::loadNormalize">
+<area shape="rect" id="node1" title="引数に指定した四元数を正規化して格納する." alt="" coords="5,5,220,32"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#af529d76bbf4048ad56625575c7af3668" title="引数に指定した四元数を正規化して格納する." alt="" coords="268,5,483,32"/>
+<area shape="rect" id="node3" href="$namespacegg.html#ab2f149e2a719574c966ff6ad0fdc17cf" title="4 要素の正規化." alt="" coords="531,5,653,32"/>
+<area shape="rect" id="node4" href="$namespacegg.html#a2f383a711d58b805ebaf26bc004986ab" title="4 要素の長さ." alt="" coords="701,5,805,32"/>
+<area shape="rect" id="node5" href="$namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title="4 要素の内積" alt="" coords="853,5,939,32"/>
+</map>

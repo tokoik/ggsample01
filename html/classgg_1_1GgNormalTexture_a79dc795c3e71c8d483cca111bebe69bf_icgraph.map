@@ -1,0 +1,4 @@
+<map id="gg::GgNormalTexture::load" name="gg::GgNormalTexture::load">
+<area shape="rect" id="node1" title="メモリ上のデータから法線マップのテクスチャを作成する." alt="" coords="199,5,344,47"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgNormalTexture.html#a909b3bfc500e88e2965510a9fe76f3ed" title="メモリ上のデータから法線マップのテクスチャを作成するコンストラクタ." alt="" coords="5,5,151,47"/>
+</map>

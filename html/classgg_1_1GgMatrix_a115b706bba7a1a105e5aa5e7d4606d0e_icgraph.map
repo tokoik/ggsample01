@@ -1,0 +1,6 @@
+<map id="gg::GgMatrix::subtract" name="gg::GgMatrix::subtract">
+<area shape="rect" id="node1" title="変換行列から配列に格納した変換行列を減算した値を返す." alt="" coords="413,31,565,57"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgMatrix.html#a38a533625fe483e8d6ee209f7e313604" title=" " alt="" coords="209,5,365,32"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgMatrix.html#a90d1a529793c86272b408c27dcc88920" title="変換行列から別の変換行列を減算した値を返す." alt="" coords="211,56,363,83"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgMatrix.html#aafae7c9391986b884ebf95f81a3408f0" title=" " alt="" coords="5,5,161,32"/>
+</map>

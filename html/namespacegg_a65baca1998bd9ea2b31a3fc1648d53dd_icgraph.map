@@ -1,0 +1,6 @@
+<map id="gg::ggRotateQuaternion" name="gg::ggRotateQuaternion">
+<area shape="rect" id="node1" title="(x, y, z) を軸として角度 a 回転する四元数を返す." alt="" coords="412,31,571,57"/>
+<area shape="rect" id="node2" href="$namespacegg.html#a4e721a0a9a903540b11921447ecac772" title="(v[0], v[1], v[2]) を軸として角度 a 回転する四元数を返す." alt="" coords="205,5,363,32"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgTrackball.html#a4f12392353b387cc7ec116b9e2d740b0" title="回転の変換行列を計算する." alt="" coords="204,56,364,83"/>
+<area shape="rect" id="node4" href="$classWindow.html#aa948dc12020c54ffd0cd1ebdfbfe65f1" title="イベントを取得してループを継続すべきかどうか調べる." alt="" coords="5,56,156,83"/>
+</map>

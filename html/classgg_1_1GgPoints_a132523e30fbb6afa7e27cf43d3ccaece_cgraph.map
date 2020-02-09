@@ -1,0 +1,4 @@
+<map id="gg::GgPoints::draw" name="gg::GgPoints::draw">
+<area shape="rect" id="node1" title="点の描画." alt="" coords="5,5,139,32"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgShape.html#adf1b1da86a75b4c74dddf6194e615f6d" title="図形の描画, 派生クラスでこの手続きをオーバーライドする." alt="" coords="187,5,320,32"/>
+</map>

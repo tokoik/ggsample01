@@ -1,0 +1,6 @@
+<map id="gg::GgUniformBuffer::getTarget" name="gg::GgUniformBuffer::getTarget">
+<area shape="rect" id="node1" title="ユニフォームバッファオブジェクトのターゲットを取り出す." alt="" coords="192,71,331,112"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgUniformBuffer.html#a54af5ca44551f3d6799966590b80d7a1" title="ユニフォームバッファオブジェクトの全ブロックのメンバーを同じデータを格納する." alt="" coords="5,5,144,47"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgUniformBuffer.html#ae9cc42d251faad15a2f506777d280c67" title="ユニフォームバッファオブジェクトからデータを抽出する." alt="" coords="5,71,144,112"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgUniformBuffer.html#af998019f39e666887550170538e5ebd4" title="ユニフォームバッファオブジェクトを確保してユニフォームバッファオブジェクトのブロックごとのメンバを同じデータで埋める." alt="" coords="5,136,144,177"/>
+</map>

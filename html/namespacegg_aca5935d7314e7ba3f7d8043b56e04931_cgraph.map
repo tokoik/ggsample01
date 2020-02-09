@@ -1,0 +1,6 @@
+<map id="gg::ggNorm" name="gg::ggNorm">
+<area shape="rect" id="node1" title="四元数のノルムを返す." alt="" coords="5,5,95,32"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a7948622a1020c4b8cff6a699cbea8696" title="四元数のノルムを求める." alt="" coords="143,5,304,32"/>
+<area shape="rect" id="node3" href="$namespacegg.html#a2f383a711d58b805ebaf26bc004986ab" title="4 要素の長さ." alt="" coords="352,5,456,32"/>
+<area shape="rect" id="node4" href="$namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title="4 要素の内積" alt="" coords="504,5,589,32"/>
+</map>

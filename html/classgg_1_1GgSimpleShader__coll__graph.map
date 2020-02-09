@@ -1,0 +1,4 @@
+<map id="gg::GgSimpleShader" name="gg::GgSimpleShader">
+<area shape="rect" id="node1" title="三角形に単純な陰影付けを行うシェーダ." alt="" coords="5,80,148,107"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgPointShader.html" title="点のシェーダ." alt="" coords="11,5,143,32"/>
+</map>
