@@ -1,6 +1,6 @@
 TARGET	= ggsample01
-SOURCES	= $(wildcard *.cpp)
-HEADERS	= $(wildcard *.h)
+SOURCES	= $(wildcard *.cpp) $(wildcard lib/*.cpp)
+HEADERS	= $(wildcard *.h) $(wildcard lib/*.h)
 OBJECTS	= $(patsubst %.cpp,%.o,$(SOURCES))
 CXXFLAGS	= --std=c++11 -g -Wall -DDEBUG -DX11 -Iinclude
 LDLIBS	= -Llib -lglfw3_linux -lGL -lXrandr -lXinerama -lXcursor -lXxf86vm -lXi -lX11 -lpthread -lrt -lm -ldl
@@ -14,6 +14,6 @@ $(TARGET).dep: $(SOURCES) $(HEADERS)
 	$(CXX) $(CXXFLAGS) -MM $(SOURCES) > $@
 
 clean:
-	-$(RM) $(TARGET) *.o *~ .*~ *.bak *.dep a.out core
+	-$(RM) $(TARGET) *.o lib/*.o *~ .*~ *.bak *.dep imgui.ini a.out core
 
 -include $(TARGET).dep

@@ -516,11 +516,10 @@ public:
   //!   \param share 共有するコンテキスト, nullptr ならコンテキストを共有しない.
   Window(const char *title = "GLFW Window", int width = 640, int height = 480,
     int fullscreen = 0, GLFWwindow *share = nullptr)
-    : window(nullptr), size{ width, height }
-    , userPointer(nullptr), resizeFunc(nullptr), keyboardFunc(nullptr), mouseFunc(nullptr), wheelFunc(nullptr)
+    : window(nullptr), size{ width, height }, aspect(1.0f)
     , arrow{ { 0 }, { 0 }, { 0 }, { 0 } }, mouse_position{ 0.0f }, wheel_rotation{ 0.0f }
     , translation{ { { 0.0f }, { 0.0f } }, { { 0.0f }, { 0.0f } }, { { 0.0f }, { 0.0f } } }
-    , aspect(1.0f)
+    , userPointer(nullptr), resizeFunc(nullptr), keyboardFunc(nullptr), mouseFunc(nullptr), wheelFunc(nullptr)
   {
     // ディスプレイの情報
     GLFWmonitor *monitor(nullptr);
