@@ -433,7 +433,7 @@ public:
       glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, major);
       glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, minor);
 
-      if (major >= 3 && minor >= 2)
+      if (major * 10 + minor >= 32)
       {
         // Core Profile を選択する
         glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
@@ -559,7 +559,7 @@ public:
 #ifdef USE_IMGUI
     // Setup Platform/Renderer bindings
     ImGui_ImplGlfw_InitForOpenGL(window, true);
-    ImGui_ImplOpenGL3_Init("#version 410");
+    ImGui_ImplOpenGL3_Init(nullptr);
 #endif
 
     // このインスタンスの this ポインタを記録しておく

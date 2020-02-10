@@ -144,7 +144,11 @@ bool    ImGui_ImplOpenGL3_Init(const char* glsl_version)
     GLint major, minor;
     glGetIntegerv(GL_MAJOR_VERSION, &major);
     glGetIntegerv(GL_MINOR_VERSION, &minor);
+#if 0 /* modified by Kohe Tokoi Feb. 10. 2020 */
     g_GlVersion = major * 1000 + minor;
+#else
+    g_GlVersion = major * 1000 + minor * 100;
+#endif
 #else
     g_GlVersion = 2000; // GLES 2
 #endif
@@ -166,8 +170,17 @@ bool    ImGui_ImplOpenGL3_Init(const char* glsl_version)
     if (glsl_version == NULL)
         glsl_version = "#version 300 es";
 #else
+#if 0 /* modified by Kohe Tokoi Feb. 10. 2020 */
     if (glsl_version == NULL)
         glsl_version = "#version 130";
+#else
+    char my_version[13];
+    if (glsl_version == nullptr)
+    {
+        sprintf(my_version, "#version %-3u", major * 100 + minor * 10);
+        glsl_version = my_version;
+    }
+#endif
 #endif
     IM_ASSERT((int)strlen(glsl_version) + 2 < IM_ARRAYSIZE(g_GlslVersionString));
     strcpy(g_GlslVersionString, glsl_version);
