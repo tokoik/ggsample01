@@ -209,8 +209,9 @@ class Window
       instance->size[1] = height;
 
       // トラックボール処理の範囲を設定する
-      instance->trackball[0].region(width, height);
-      instance->trackball[1].region(width, height);
+      instance->trackball[GLFW_MOUSE_BUTTON_1].region(width, height);
+      instance->trackball[GLFW_MOUSE_BUTTON_2].region(width, height);
+      instance->trackball[GLFW_MOUSE_BUTTON_3].region(width, height);
 
 #ifndef USE_OCULUS_RIFT
       // ウィンドウのアスペクト比を保存する
@@ -242,8 +243,9 @@ class Window
       {
       case GLFW_KEY_HOME:
         // トラックボールをリセットする
-        instance->trackball[0].reset();
-        instance->trackball[1].reset();
+        instance->trackball[GLFW_MOUSE_BUTTON_1].reset();
+        instance->trackball[GLFW_MOUSE_BUTTON_2].reset();
+        instance->trackball[GLFW_MOUSE_BUTTON_3].reset();
         break;
 
       case GLFW_KEY_END:
@@ -1149,7 +1151,7 @@ public:
       if (glfwGetMouseButton(window, button))
       {
         calcTranslation(translation[button][1], button);
-        trackball[0].motion(mouse_position[0], mouse_position[1]);
+        trackball[button].motion(mouse_position[0], mouse_position[1]);
       }
     }
 
