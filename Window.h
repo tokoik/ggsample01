@@ -391,20 +391,6 @@ class Window
     throw std::runtime_error(description);
   }
 
-  //
-  // 後始末
-  //
-  static void cleanup()
-  {
-#ifdef USE_IMGUI
-    // ImGui のコンテキストを破棄する
-    ImGui::DestroyContext();
-#endif
-
-    // GLFW を終了する
-    glfwTerminate();
-  }
-
 public:
 
   //! \brief 初期化, 最初に一度だけ実行する.
@@ -426,7 +412,7 @@ public:
     if (glfwInit() == GL_FALSE) throw std::runtime_error("Can't initialize GLFW");
 
     // 後始末を登録する
-    atexit(cleanup);
+    atexit(glfwTerminate);
 
     // OpenGL の major 番号が指定されていれば
     if (major > 0)
@@ -482,31 +468,14 @@ public:
 #endif
 
 #ifdef USE_IMGUI
-    // ImGui を初期化する
+    // ImGui のバージョンをチェックする
     IMGUI_CHECKVERSION();
+
+    // ImGui のコンテキストを作成する
     ImGui::CreateContext();
-    ImGuiIO& io = ImGui::GetIO(); (void)io;
-    //io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
-    //io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
 
-    // Setup Dear ImGui style
-    ImGui::StyleColorsDark();
-    //ImGui::StyleColorsClassic();
-
-    // Load Fonts
-    // - If no fonts are loaded, dear imgui will use the default font. You can also load multiple fonts and use ImGui::PushFont()/PopFont() to select them.
-    // - AddFontFromFileTTF() will return the ImFont* so you can store it if you need to select the font among multiple.
-    // - If the file cannot be loaded, the function will return NULL. Please handle those errors in your application (e.g. use an assertion, or display an error and quit).
-    // - The fonts will be rasterized at a given size (w/ oversampling) and stored into a texture when calling ImFontAtlas::Build()/GetTexDataAsXXXX(), which ImGui_ImplXXXX_NewFrame below will call.
-    // - Read 'docs/FONTS.txt' for more instructions and details.
-    // - Remember that in C/C++ if you want to include a backslash \ in a string literal you need to write a double backslash \\ !
-    //io.Fonts->AddFontDefault();
-    //io.Fonts->AddFontFromFileTTF("../../misc/fonts/Roboto-Medium.ttf", 16.0f);
-    //io.Fonts->AddFontFromFileTTF("../../misc/fonts/Cousine-Regular.ttf", 15.0f);
-    //io.Fonts->AddFontFromFileTTF("../../misc/fonts/DroidSans.ttf", 16.0f);
-    //io.Fonts->AddFontFromFileTTF("../../misc/fonts/ProggyTiny.ttf", 10.0f);
-    //ImFont* font = io.Fonts->AddFontFromFileTTF("c:\\Windows\\Fonts\\ArialUni.ttf", 18.0f, NULL, io.Fonts->GetGlyphRangesJapanese());
-    //IM_ASSERT(font != NULL);
+    // プログラム終了時には ImGui のコンテキストを破棄する
+    atexit([] { ImGui::DestroyContext(); });
 #endif
   }
 
@@ -1133,17 +1102,32 @@ public:
     if (shouldClose()) return false;
 
 #ifdef USE_IMGUI
+
     // ImGui の新規フレームを作成する
     ImGui_ImplOpenGL3_NewFrame();
     ImGui_ImplGlfw_NewFrame();
-    ImGui::NewFrame();
-#endif
 
-    // マウスの位置を調べる
+    // マウスが ImGui のウィンドウ上にあったら Window クラスのマウス位置を更新しない
+    if (ImGui::IsAnyWindowHovered()) return true;
+
+    // マウスの現在位置を調べる
+    const ImGuiIO &io(ImGui::GetIO());
+
+    // マウスの位置を更新する
+    mouse_position[0] = io.MousePos.x;
+    mouse_position[1] = io.MousePos.y;
+
+#else
+
+    // マウスの現在位置を調べる
     double x, y;
     glfwGetCursorPos(window, &x, &y);
+
+    // マウスの位置を更新する
     mouse_position[0] = static_cast<GLfloat>(x);
     mouse_position[1] = static_cast<GLfloat>(y);
+
+#endif
 
     // マウスドラッグ
     for (int button = GLFW_MOUSE_BUTTON_1; button < GLFW_MOUSE_BUTTON_1 + 3; ++button)

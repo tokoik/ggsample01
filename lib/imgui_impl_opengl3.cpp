@@ -174,7 +174,7 @@ bool    ImGui_ImplOpenGL3_Init(const char* glsl_version)
     if (glsl_version == NULL)
         glsl_version = "#version 130";
 #else
-    char my_version[13];
+    char my_version[20];
     if (glsl_version == nullptr)
     {
         sprintf(my_version, "#version %-3u", major * 100 + minor * 10);
