@@ -231,6 +231,11 @@ class Window
   //
   static void keyboard(GLFWwindow *window, int key, int scancode, int action, int mods)
   {
+#ifdef USE_IMGUI
+    // ImGui のウィンドウが選択されていたらキーボードの処理を行わない
+    if (ImGui::IsAnyWindowFocused()) return;
+#endif
+
     // このインスタンスの this ポインタを得る
     Window *const instance(static_cast<Window *>(glfwGetWindowUserPointer(window)));
 
@@ -1107,8 +1112,8 @@ public:
     ImGui_ImplOpenGL3_NewFrame();
     ImGui_ImplGlfw_NewFrame();
 
-    // マウスが ImGui のウィンドウ上にあったら Window クラスのマウス位置を更新しない
-    if (ImGui::IsAnyWindowHovered()) return true;
+    // ImGui のウィンドウが選択されていたら Window クラスのマウス位置を更新しない
+    if (ImGui::IsAnyWindowFocused()) return true;
 
     // マウスの現在位置を調べる
     const ImGuiIO &io(ImGui::GetIO());
@@ -1206,6 +1211,11 @@ public:
   //!   \return キーが押されていれば true.
   bool getKey(int key)
   {
+#ifdef USE_IMGUI
+    // ImGui のウィンドウが選択されていたらキーボードの処理を行わない
+    if (ImGui::IsAnyWindowFocused()) return false;
+#endif
+
     return glfwGetKey(window, key) != GLFW_RELEASE;
   }
 
