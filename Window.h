@@ -50,8 +50,8 @@ using namespace gg;
 #  endif
 #endif
 
-// ImGui を使うなら
-#define USE_IMGUI
+// Dear ImGui を使うなら
+//#define USE_IMGUI
 
 // ImGui の組み込み
 #ifdef USE_IMGUI

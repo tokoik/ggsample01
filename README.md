@@ -1,6 +1,6 @@
 # ggsample01
 
-## ゲームグラフィックス特論　第１回　宿題
+## ゲームグラフィックス特論 A　第１回　宿題
 
 OpenGL の開発環境整備をしてください．
 
@@ -10,12 +10,212 @@ OpenGL の開発環境整備をしてください．
 
 ## 宿題プログラムの作成に必要な環境
 
-* Linux Mint 17 / Windows 10 (Visual Studio 2017) / macOS X 10.13 (Xcode 9.2) に対応しています．
-* OpenGL 3.2 以降が実行できる環境が必要です．
-* OpenGL 3.2 / DirectX 10 に対応したビデオカードが必要です．
+* Linux Mint 17 / Windows 10 (Visual Studio 2017) / macOS X 10.13 (Xcode 9.2) 以降に対応しています．
+* OpenGL 3.2 以降が実行できる環境 (対応した GPU を搭載したビデオカード や CPU) が必要です．
 
 ## 補足
 
 * 今回はソースプログラムを修正していないので送る必要はありません．
 * ひな形プログラムがコンパイル／実行できなかったら知らせてください．
 * fork 推奨ですが解答をプルリクで受け取る気力はないと思います．
+
+## 宿題プログラム用補助プログラムについて
+
+ゲームグラフィックス特論 A / B で課す宿題プログラムでは，専用の補助プログラムを用意しています．
+これは以下の 3 つのファイルで構成されています．
+
+* gg.h / gg.cpp
+    * GLFW での利用を想定した OpenGL のローダとユーティリティ
+* Window.h
+    * ウィンドウやマウス関連のユーザインタフェースを管理する GLFW のラッパー
+
+[GLFW](https://www.glfw.org/) は OpenGL や，
+その後継の Vulkan を使用したアプリケーションを作成するための，
+非常にコンパクトなフレームワークです．
+本当はこれだけで十分アプリケーションが作れるのですが，
+授業内容とはあまり関係のない処理を分離するために，
+これらを用意しています．
+なお，gg.h / gg.cpp には OpenGL の拡張機能を使用可能にする機能を含んでいるので，
+別に [GLEW](http://glew.sourceforge.net/) や [glad](https://github.com/Dav1dde/glad)，
+[GL3W](https://github.com/skaslev/gl3w) などを用意する必要はありません．
+また Windows.h には，Oculus Rift (DK1, DK2, [CV1](https://www.oculus.com/rift/), 
+[S](https://www.oculus.com/rift-s/)) をサポートする機能と，
+[Dear ImGui](https://github.com/ocornut/imgui) をサポートする機能を組み込んでいます．
+
+### 補助プログラムのドキュメント
+
+Doxygen で生成したドキュメントの [HTML 版](html/index.html)を html フォルダに，[PDF 版](pdf/refman.pdf)を pdf フォルダに置いています．
+
+### 補助プログラムの使い方
+
+補助プログラムを使用するには，最小限，GLFW が使える環境が必要です．
+ゲームグラフィックス特論 A / B の宿題のリポジトリには，Windows 用，macOS 用，
+および Linux 用にコンパイルしたライブラリファイル一式を含めています．
+gg.h, gg.cpp, Window.h だけを使うときは，それぞれの環境で　GLFW をインストールしておいてください．
+補助プログラムを使用した最小のプログラムは，こんな感じになります．
+これと同じところに gg.h, gg.cpp, Window.h を置き，
+gg.cpp と一緒にコンパイルして，それらに GLFW のライブラリファイルをリンクしてください．
+
+```cpp
+#include "Window.h"
+
+int main()
+{
+    Window::init();
+
+    Window window;
+
+    while (window)
+    {
+        //
+        // ここで OpenGL による描画を行う
+        //
+    }
+}
+```
+
+使用する OpenGL のバージョンは，`Window::init(major, minor)` の `major` と `minor` で指定できます．`major` を 0 または省略すると，OpenGL のバージョンを指定しません．その場合，macOS 以外では OpenGL のハードウェアもしくはドライバで対応可能な最大のバージョンが使用されます．**macOS の場合**は `Window::init(3, 2)` もしくは `Window::init(4, 1)` を指定してください．
+
+### Oculus Rift を使う場合
+
+`#include "Window.h"` の前に `#define USE_OCULUS_RIFT` を置いてください．
+
+```cpp
+// ウィンドウ関連の処理
+#define USE_OCULUS_RIFT
+#include "Window.h"
+```
+
+あるいは，Windows.h の中に `#define USE_OCULUS_RIFT` を置いてください．
+
+```cpp
+// Oculus Rift を使うなら
+#define USE_OCULUS_RIFT
+```
+
+実際の使い方は，以前の補助プログラムの場合ですが，
+「[Oculus Rift に図形を表示するプログラムを C++ で作る](http://marina.sys.wakayama-u.ac.jp/~tokoi/?date=20190602)」を参考にしてください．
+
+### Dear ImGui を使う場合
+
+`#include "Window.h"` の前に `#define USE_IMGUI` を置いてください．
+
+```cpp
+// ウィンドウ関連の処理
+#define USE_IMGUI
+#include "Window.h"
+```
+
+あるいは，Windows.h の中に `#define USE_IMGUI` を置いてください．
+
+```cpp
+// Dear ImGui を使うなら
+#define USE_IMGUI
+```
+
+そして，OpenGL の描画ループの中で
+`ImGui::NewFrame();` と `ImGui::Render();` の間に Dear ImGui の API を置いてください．
+
+```cpp
+// ウィンドウ関連の処理
+#define USE_IMGUI
+#include "Window.h"
+
+int main()
+{
+  // ウィンドウ関連の初期設定
+  Window::init(4, 1);
+
+  // ウィンドウを作成する
+  Window window("Window Title");
+
+  //
+  // ImGui の初期設定
+  //
+  ImGui::StyleColorsDark();
+
+  // 背景色を指定する
+  glClearColor(1.0f, 1.0f, 1.0f, 0.0f);
+
+  // ウィンドウが開いている間繰り返す
+  while (window)
+  {
+    // ウィンドウを消去する
+    glClear(GL_COLOR_BUFFER_BIT);
+
+    //
+    // ここで OpenGL による描画を行う
+    //
+
+    //
+    // ImGui によるユーザインタフェース
+    //
+    ImGui::NewFrame();
+
+    ImGui::Begin("Control panel");
+    ImGui::Text("Frame rate: %6.2f fps", ImGui::GetIO().Framerate);
+    if (ImGui::Button("Quit")) window.setClose();
+    ImGui::End();
+
+    ImGui::Render();
+
+    // カラーバッファを入れ替えてイベントを取り出す
+    window.swapBuffers();
+  }
+}
+```
+
+これと Dear ImGui に含まれる以下のファイルを同じところに置いてください．
+
+> imconfig.h  
+> imgui.h  
+> imgui_impl_glfw.h  
+> imgui_impl_opengl3.h  
+> imgui_internal.h  
+> imstb_rectpack.h  
+> imstb_textedit.h  
+> imstb_truetype.h  
+
+> imgui.cpp  
+> imgui_draw.cpp  
+> imgui_impl_glfw.cpp  
+> imgui_impl_opengl3.cpp  
+> imgui_widgets.cpp  
+
+Dear ImGui は使用している OpenGL のローダを自動判別するのですが，この授業オリジナルの gg.h / gg.cpp は見つけてくれません．そこで，この中の imconfig.h の最後に，以下の定義を追加します．
+
+```cpp
+// My custum OpenGL loader
+#define IMGUI_IMPL_OPENGL_LOADER_CUSTOM "gg.h"
+```
+
+また，Dear ImGui の OpenGL インプリメンテーションである imgui_impl_opengl3.cpp も，以下の 2 箇所を変更します．ひとつ目は g_GlVersion を求める際の minor を 100 倍します．
+
+```cpp
+    g_GlVersion = major * 1000 + minor;
+```
+↓
+```cpp
+    g_GlVersion = major * 1000 + minor * 100;
+```
+
+ふたつ目は引数の glsl_version が NULL のときに，それを "#version 130" (OpenGL 3.0) に決め打ちせずに，g_GlVersion の値で決めるようにします．なお，この変更を加えなくても動作します．
+
+```cpp
+    if (glsl_version == NULL)
+        glsl_version = "#version 130";
+```
+↓
+```cpp
+    char my_version[20];
+    if (glsl_version == nullptr)
+    {
+        unsigned int version(g_GlVersion / 10);
+        if (version < 300) version -= 90;
+        else if (version < 330) version -= 170;
+        sprintf(my_version, "#version %-3u", version);
+        glsl_version = my_version;
+    }
+```
+
+そして，先の `main()` 関数を含むソースファイルをこれらの *.cpp ファイルと一緒にコンパイルして，それらに GLFW のライブラリファイルをリンクしてください．

@@ -1,4 +1,5 @@
 ﻿// ウィンドウ関連の処理
+#define USE_IMGUI
 #include "Window.h"
 
 //

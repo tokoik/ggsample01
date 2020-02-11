@@ -15,6 +15,7 @@
 #define HEADER_STR "ゲームグラフィックス特論"
 
 // ウィンドウ関連の処理
+#define USE_IMGUI
 #include "Window.h"
 
 // アプリケーション本体
