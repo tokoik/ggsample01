@@ -115,9 +115,7 @@ int main()
   // ウィンドウを作成する
   Window window("Window Title");
 
-  //
   // ImGui の初期設定
-  //
   ImGui::StyleColorsDark();
 
   // 背景色を指定する
