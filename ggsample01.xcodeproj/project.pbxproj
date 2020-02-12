@@ -56,10 +56,6 @@
 		7D1E90D81123E2F7005E6C75 = {
 			isa = PBXGroup;
 			children = (
-				7D61778623F3FECA00A4B1A4 /* bunny.mtl */,
-				7D61778723F3FECA00A4B1A4 /* bunny.obj */,
-				7D61778223F3FEAE00A4B1A4 /* simple.frag */,
-				7D61778323F3FEAE00A4B1A4 /* simple.vert */,
 				7DDCB0F923EDBFD5007C2AD3 /* ggsample01.cpp */,
 				7DF9CC4420047E4E009E3F96 /* main.cpp */,
 				7DF4DDD123EF0E40005D4BCB /* imgui_draw.cpp */,
@@ -70,6 +66,10 @@
 				7D24C83614F8F3A700C23BB6 /* gg.cpp */,
 				7D24C83714F8F3A700C23BB6 /* gg.h */,
 				7DDCB0F723EDA73D007C2AD3 /* Window.h */,
+				7D61778323F3FEAE00A4B1A4 /* simple.vert */,
+				7D61778223F3FEAE00A4B1A4 /* simple.frag */,
+				7D61778723F3FECA00A4B1A4 /* bunny.obj */,
+				7D61778623F3FECA00A4B1A4 /* bunny.mtl */,
 				7D1E90EF1123E36C005E6C75 /* Products */,
 				7D1E90F11123E36C005E6C75 /* Info.plist */,
 				7D27311A23EEE29600438307 /* gg.icns */,
