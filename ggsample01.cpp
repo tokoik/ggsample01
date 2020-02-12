@@ -77,6 +77,10 @@ void app()
     GgMatrix mm(window.getTrackball());
 
 #ifdef USE_IMGUI
+    //
+    // ImGui によるユーザインタフェース
+    //
+
     // オブジェクトのオイラー角
     static float roll, pitch, yaw;
 

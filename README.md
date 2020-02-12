@@ -28,7 +28,7 @@ OpenGL の開発環境を整備してください。
 * Window.h
     * ウィンドウやマウス関連のユーザインタフェースを管理する GLFW のラッパー
 
-[GLFW](https://www.glfw.org/) は OpenGL や、その後継の Vulkan を使用したアプリケーションを作成するための、非常にコンパクトなフレームワークです。本当はこれだけで十分アプリケーションが作れるのですが、授業内容とはあまり関係のない処理を分離するために、これらを用意しています。なお、gg.h / gg.cpp には OpenGL の拡張機能を使用可能にする機能を含んでいるので、別に [GLEW](http://glew.sourceforge.net/) や [glad](https://github.com/Dav1dde/glad)、[GL3W](https://github.com/skaslev/gl3w) などを用意する必要はありません。また Window.h には、[Dear ImGui](https://github.com/ocornut/imgui) をサポートする機能と、Oculus Rift (DK1, DK2, [CV1](https://www.oculus.com/rift/), [S](https://www.oculus.com/rift-s/)) をサポートする機能を組み込んでいます。これを使って C++ だけで VR アプリケーション () が作れます。
+[GLFW](https://www.glfw.org/) は OpenGL や、その後継の Vulkan を使用したアプリケーションを作成するための、非常にコンパクトなフレームワークです。本当はこれだけで簡単にアプリケーションが作れるのですが、授業内容とはあまり関係のない処理を分離するために、屋上屋ながら**この授業専用の**フレームワークを用意しました。なお、gg.h / gg.cpp には OpenGL の拡張機能を使用可能にする機能を含んでいるので、別に [GLEW](http://glew.sourceforge.net/) や [glad](https://github.com/Dav1dde/glad)、[GL3W](https://github.com/skaslev/gl3w) などを用意する必要はありません。また Window.h には、[Dear ImGui](https://github.com/ocornut/imgui) をサポートする機能と、Oculus Rift (DK1, DK2, [CV1](https://www.oculus.com/rift/), [S](https://www.oculus.com/rift-s/)) をサポートする機能を組み込んでいます。これを使って C++ だけで VR アプリケーション () が作れます。
 
 ### 補助プログラムのドキュメント
 
@@ -100,10 +100,9 @@ int main()
 ```
 
 そして、OpenGL の描画ループの中で
-`ImGui::NewFrame();` と `ImGui::Render();` の間に Dear ImGui の API を置いてください。Dear ImGui のウィンドウの実際のレンダリング
-(`ImGui_ImplOpenGL3_RenderDrawData();` の呼び出し) は `window.swapbuffers()` の中で行っているので、Dear ImGui の API と OpenGL の API は描画ループの中で混在していても構いません。
+`ImGui::NewFrame();` と `ImGui::Render();` の間に Dear ImGui の API を置いてください。Dear ImGui のウィンドウの実際のレンダリング (`ImGui_ImplOpenGL3_RenderDrawData();` の呼び出し) は `window.swapbuffers()` の中で行っているので、Dear ImGui の API と OpenGL の API は描画ループの中で混在していても構いません。
 
-なお、Dear ImGui を有効にした場合は、マウスカーソルが Dear ImGui のウィンドウ上にあるとき (`IsAnyWindowHovered() == true`) に、Window クラスが保持しているマウスカーソルの位置を更新しません。また、Dear ImGui のいずれかのウィンドウが選択されているとき (`IsAnyWindowFocused() == true`) には、Window クラスはキーボードのイベントを処理しません。
+なお、Dear ImGui を有効にした場合は、マウスカーソルが Dear ImGui のウィンドウ上にあるとき (`IsAnyWindowHovered() == true`) に、Window クラスが保持しているマウスカーソルの位置を更新しないようにしています。また、Dear ImGui のいずれかのウィンドウが選択されているとき (`IsAnyWindowFocused() == true`) には、Window クラスはキーボードのイベントを処理しないようにしています。
 
 ```cpp
 // ウィンドウ関連の処理
@@ -116,7 +115,7 @@ int main()
   Window::init(4, 1);
 
   // ウィンドウを作成する
-  Window window("Window Title");
+  Window window("Window Title", 1280, 720);
 
   // ImGui の初期設定
   ImGui::StyleColorsDark();
@@ -171,14 +170,14 @@ int main()
 
 #### Dear ImGui の変更点
 
-このリポジトリに含めている Dear ImGui には、以下の変更を加えてあります。まず、Dear ImGui は使用している OpenGL のローダを自動判別するのですが、この授業オリジナルの gg.h / gg.cpp は見つけてくれません。そこで、この中の imconfig.h の**最後**に、以下の定義を追加しています (このリポジトリでは Dear ImGui のファイルを別のディレクトリに分けたので，下記は実際には `"../gg.h"` になっています)。
+このリポジトリに含めている Dear ImGui のソースプログラムには、以下の変更を加えてあります。まず、Dear ImGui は使用している OpenGL のローダを自動判別するのですが、この授業オリジナルの gg.h / gg.cpp は見つけてくれません。そこで、この中の imconfig.h の**最後**に、以下の定義を追加しています (このリポジトリでは Dear ImGui のファイルを別のディレクトリに分けたので，下記は実際には `"../gg.h"` になっています)。
 
 ```cpp
 // My custum OpenGL loader
 #define IMGUI_IMPL_OPENGL_LOADER_CUSTOM "gg.h"
 ```
 
-また、Dear ImGui の OpenGL インプリメンテーション用の関数が納められている imgui_impl_opengl3.cpp では、以下の 2 箇所を変更しています (これらの変更を行わなくても動作します)。ひとつ目は、g_GlVersion を求める際の minor を 100 倍するようにしました。
+また、Dear ImGui の OpenGL インプリメンテーション用の関数が納められている imgui_impl_opengl3.cpp では、以下の 2 箇所を変更しています (これらの変更を行わなくても動作します)。ひとつ目は、`g_GlVersion` を求める際の `minor` を 100 倍するようにしました。
 
 ```cpp
     g_GlVersion = major * 1000 + minor;
@@ -188,7 +187,7 @@ int main()
     g_GlVersion = major * 1000 + minor * 100;
 ```
 
-ふたつ目は、引数の glsl_version が NULL のときに、それを "#version 130" (OpenGL 3.0) に決め打ちせずに、g_GlVersion の値で決めるようにしました。
+ふたつ目は、`ImGui_ImplOpenGL3_Init(glsl_version)` の引数の `glsl_version` が `NULL` のときに、それを `"#version 130"` (すなわち OpenGL 3.0) に決め打ちせずに、`g_GlVersion` の値で決めるようにしました。
 
 ```cpp
     if (glsl_version == NULL)
