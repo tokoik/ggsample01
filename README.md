@@ -100,7 +100,10 @@ int main()
 ```
 
 そして、OpenGL の描画ループの中で
-`ImGui::NewFrame();` と `ImGui::Render();` の間に Dear ImGui の API を置いてください。
+`ImGui::NewFrame();` と `ImGui::Render();` の間に Dear ImGui の API を置いてください。Dear ImGui のウィンドウの実際のレンダリング
+(`ImGui_ImplOpenGL3_RenderDrawData();` の呼び出し) は `window.swapbuffers()` の中で行っているので、Dear ImGui の API と OpenGL の API は描画ループの中で混在していても構いません。
+
+なお、Dear ImGui を有効にした場合は、マウスカーソルが Dear ImGui のウィンドウ上にあるとき (`IsAnyWindowHovered() == true`) に、Window クラスが保持しているマウスカーソルの位置を更新しません。また、Dear ImGui のいずれかのウィンドウが選択されているとき (`IsAnyWindowFocused() == true`) には、Window クラスはキーボードのイベントを処理しません。
 
 ```cpp
 // ウィンドウ関連の処理
@@ -124,9 +127,6 @@ int main()
   // ウィンドウが開いている間繰り返す
   while (window)
   {
-    // ウィンドウを消去する
-    glClear(GL_COLOR_BUFFER_BIT);
-
     // ImGui のフレームを準備する
     ImGui::NewFrame();
 
@@ -136,12 +136,15 @@ int main()
     if (ImGui::Button("Quit")) window.setClose();
     ImGui::End();
 
+    // ImGui のフレームに描画する
+    ImGui::Render();
+
+    // ウィンドウを消去する
+    glClear(GL_COLOR_BUFFER_BIT);
+
     //
     // ここで OpenGL による描画を行う
     //
-
-    // ImGui のフレームを重ねて表示する
-    ImGui::Render();
 
     // カラーバッファを入れ替えてイベントを取り出す
     window.swapBuffers();
