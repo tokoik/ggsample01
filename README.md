@@ -80,7 +80,7 @@ int main()
 #define USE_OCULUS_RIFT
 ```
 
-実際の使い方は、「[Oculus Rift に図形を表示するプログラムを C++ で作る](http://marina.sys.wakayama-u.ac.jp/~tokoi/?date=20190602)」を参考にしてください。これは以前の補助プログラムを使って解説していますが、Window クラスの使い方は変わりません (以前の補助プログラムでは GgApplication クラス内に置いていました)。
+実際の使い方は、「[Oculus Rift に図形を表示するプログラムを C++ で作る](http://marina.sys.wakayama-u.ac.jp/~tokoi/?date=20190602)」を参考にしてください。この記事では以前の補助プログラムを使って解説していますが、Window クラスの使い方は変わりません (以前の補助プログラムでは GgApplication クラス内に置いていました)。
 
 ### Dear ImGui を使う場合
 
@@ -129,20 +129,20 @@ int main()
     // ウィンドウを消去する
     glClear(GL_COLOR_BUFFER_BIT);
 
-    //
-    // ここで OpenGL による描画を行う
-    //
-
-    //
-    // ImGui によるユーザインタフェース
-    //
+    // ImGui のフレームを準備する
     ImGui::NewFrame();
 
+    // ImGui のフレームに一つ目の ImGui のウィンドウを描く
     ImGui::Begin("Control panel");
     ImGui::Text("Frame rate: %6.2f fps", ImGui::GetIO().Framerate);
     if (ImGui::Button("Quit")) window.setClose();
     ImGui::End();
 
+    //
+    // ここで OpenGL による描画を行う
+    //
+
+    // ImGui のフレームを重ねて表示する
     ImGui::Render();
 
     // カラーバッファを入れ替えてイベントを取り出す

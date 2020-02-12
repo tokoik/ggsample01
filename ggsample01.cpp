@@ -2,6 +2,15 @@
 #define USE_IMGUI
 #include "Window.h"
 
+// 光源データ
+GgSimpleShader::Light light =
+{
+  { 0.2f, 0.2f, 0.2f, 1.0f }, // 環境光成分
+  { 1.0f, 1.0f, 1.0f, 0.0f }, // 拡散反射光成分
+  { 1.0f, 1.0f, 1.0f, 0.0f }, // 鏡面反射光成分
+  { 0.0f, 0.0f, 1.0f, 1.0f }  // 光源位置
+};
+
 //
 // アプリケーション本体
 //
@@ -9,6 +18,18 @@ void app()
 {
   // ウィンドウを作成する
   Window window("ggsample01");
+
+  // シェーダを作成する
+  const GgSimpleShader simple("simple.vert", "simple.frag");
+
+  // 図形データを読み込む (大きさを正規化する)
+  const GgSimpleObj object("bunny.obj", true);
+
+  // 光源データから光源のバッファオブジェクトを作成する
+  const GgSimpleShader::LightBuffer lightBuffer(light);
+
+  // ビュー変換行列を設定する
+  const GgMatrix mv(ggLookat(0.0f, 0.0f, 5.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f));
 
 #ifdef USE_IMGUI
   //
@@ -39,30 +60,53 @@ void app()
   //IM_ASSERT(font != NULL);
 #endif
 
-  // 背景色を指定する
-  glClearColor(1.0f, 1.0f, 1.0f, 0.0f);
+  // 背景色を設定する
+  glClearColor(0.1f, 0.2f, 0.3f, 0.0f);
+
+  // 隠面消去処理を設定する
+  glEnable(GL_DEPTH_TEST);
+  glEnable(GL_CULL_FACE);
 
   // ウィンドウが開いている間繰り返す
   while (window)
   {
     // ウィンドウを消去する
-    glClear(GL_COLOR_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    //
-    // ここで OpenGL による描画を行う
-    //
+    // オブジェクトのモデル変換行列を設定する
+    GgMatrix mm(window.getTrackball());
 
 #ifdef USE_IMGUI
-    //
-    // ImGui によるユーザインタフェース
-    //
+    // オブジェクトのオイラー角
+    static float roll, pitch, yaw;
+
+    // ImGui のフレームを準備する
     ImGui::NewFrame();
 
+    // ImGui のフレームに一つ目の ImGui のウィンドウを描く
     ImGui::Begin("Control panel");
     ImGui::Text("Frame rate: %6.2f fps", ImGui::GetIO().Framerate);
+    ImGui::SliderAngle("Roll", &roll);
+    ImGui::SliderAngle("Pitch", &pitch);
+    ImGui::SliderAngle("Yaw", &yaw);
     if (ImGui::Button("Quit")) window.setClose();
     ImGui::End();
 
+    // モデル変換行列にオイラー角を乗じる
+    mm = mm.rotateY(yaw).rotateX(pitch).rotateZ(roll);
+#endif
+
+    // 投影変換行列を設定する
+    const GgMatrix mp(ggPerspective(0.5f, window.getAspect(), 1.0f, 15.0f));
+
+    // シェーダプログラムを指定する
+    simple.use(mp, mv * mm, lightBuffer);
+
+    // 図形を描画する
+    object.draw();
+
+#ifdef USE_IMGUI
+    // ImGui のフレームを重ねて表示する
     ImGui::Render();
 #endif
 

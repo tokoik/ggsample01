@@ -315,6 +315,11 @@ class Window
   //
   static void mouse(GLFWwindow *window, int button, int action, int mods)
   {
+#ifdef USE_IMGUI
+    // マウスカーソルが ImGui のウィンドウ上にあったら Window クラスのマウス位置を更新しない
+    if (ImGui::IsAnyWindowHovered()) return;
+#endif
+
     // このインスタンスの this ポインタを得る
     Window *const instance(static_cast<Window *>(glfwGetWindowUserPointer(window)));
 
@@ -1112,8 +1117,8 @@ public:
     ImGui_ImplOpenGL3_NewFrame();
     ImGui_ImplGlfw_NewFrame();
 
-    // ImGui のウィンドウが選択されていたら Window クラスのマウス位置を更新しない
-    if (ImGui::IsAnyWindowFocused()) return true;
+    // マウスカーソルが ImGui のウィンドウ上にあったら Window クラスのマウス位置を更新しない
+    if (ImGui::IsAnyWindowHovered()) return true;
 
     // マウスの現在位置を調べる
     const ImGuiIO &io(ImGui::GetIO());

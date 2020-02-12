@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="シェーダ― ファイル">
+      <UniqueIdentifier>{293809fc-94d5-4219-9a16-7c97b549ab96}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="gg.cpp">
@@ -72,5 +75,13 @@
     <Image Include="gg.ico">
       <Filter>リソース ファイル</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="simple.vert">
+      <Filter>シェーダ― ファイル</Filter>
+    </None>
+    <None Include="simple.frag">
+      <Filter>シェーダ― ファイル</Filter>
+    </None>
   </ItemGroup>
 </Project>
