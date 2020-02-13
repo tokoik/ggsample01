@@ -393,6 +393,77 @@ class Window
     t[1] = (trackball[button].getStart(1) - mouse_position[1]) * trackball[button].getScale(1) * d + translation[button][0][1];
   }
 
+  #ifdef USE_OCULUS_RIFT
+  //
+  // Oculus Rift の使用終了
+  //
+  void terminateLibOVR()
+  {
+    // ミラー表示用の FBO を削除する
+    if (mirrorFbo) glDeleteFramebuffers(1, &mirrorFbo);
+
+    // ミラー表示に使ったテクスチャを開放する
+    if (mirrorTexture)
+    {
+#  if OVR_PRODUCT_VERSION > 0
+      ovr_DestroyMirrorTexture(session, mirrorTexture);
+#  else
+      glDeleteTextures(1, &mirrorTexture->OGL.TexId);
+      ovr_DestroyMirrorTexture(session, reinterpret_cast<ovrTexture *>(mirrorTexture));
+#  endif
+    }
+
+    // Oculus Rift のレンダリング用の FBO を削除する
+    glDeleteFramebuffers(ovrEye_Count, oculusFbo);
+
+    // Oculus Rift 表示用の FBO を削除する
+    for (int eye = 0; eye < ovrEye_Count; ++eye)
+    {
+#  if OVR_PRODUCT_VERSION > 0
+
+      // レンダリングターゲットに使ったテクスチャを開放する
+      if (layerData.ColorTexture[eye])
+      {
+        ovr_DestroyTextureSwapChain(session, layerData.ColorTexture[eye]);
+        layerData.ColorTexture[eye] = nullptr;
+      }
+
+      // デプスバッファとして使ったテクスチャを開放する
+      glDeleteTextures(1, &oculusDepth[eye]);
+      oculusDepth[eye] = 0;
+
+#  else
+
+      // レンダリングターゲットに使ったテクスチャを開放する
+      auto *const colorTexture(layerData.EyeFov.ColorTexture[eye]);
+      for (int i = 0; i < colorTexture->TextureCount; ++i)
+      {
+        const auto *const ctex(reinterpret_cast<ovrGLTexture *>(&colorTexture->Textures[i]));
+        glDeleteTextures(1, &ctex->OGL.TexId);
+      }
+      ovr_DestroySwapTextureSet(session, colorTexture);
+
+      // デプスバッファとして使ったテクスチャを開放する
+      auto *const depthTexture(layerData.EyeFovDepth.DepthTexture[eye]);
+      for (int i = 0; i < depthTexture->TextureCount; ++i)
+      {
+        const auto *const dtex(reinterpret_cast<ovrGLTexture *>(&depthTexture->Textures[i]));
+        glDeleteTextures(1, &dtex->OGL.TexId);
+      }
+      ovr_DestroySwapTextureSet(session, depthTexture);
+
+#  endif
+    }
+
+    // Oculus Rift のセッションを破棄する
+    ovr_Destroy(session);
+    session = nullptr;
+
+    // LibOVR を終了する
+    ovr_Shutdown();
+  }
+#endif
+
   //
   // GLFW のエラー表示
   //
@@ -444,8 +515,8 @@ public:
     ovrInitParams initParams = { ovrInit_RequestVersion, OVR_MINOR_VERSION, NULL, 0, 0 };
     if (OVR_FAILURE(ovr_Initialize(&initParams))) throw std::runtime_error("Can't initialize LibOVR");
 
-    // プログラム終了時には LibOVR を終了する
-    atexit(ovr_Shutdown);
+    // プログラム終了時に LibOVR を終了する
+    atexit(terminateLibOVR);
 
     // Oculus Rift のセッションを作成する
     ovrGraphicsLuid luid;
@@ -766,70 +837,6 @@ public:
   {
     // ウィンドウが作成されていなければ戻る
     if (!window) return;
-
-#ifdef USE_OCULUS_RIFT
-
-    // ミラー表示用の FBO を削除する
-    if (mirrorFbo) glDeleteFramebuffers(1, &mirrorFbo);
-
-    // ミラー表示に使ったテクスチャを開放する
-    if (mirrorTexture)
-    {
-#  if OVR_PRODUCT_VERSION > 0
-      ovr_DestroyMirrorTexture(session, mirrorTexture);
-#  else
-      glDeleteTextures(1, &mirrorTexture->OGL.TexId);
-      ovr_DestroyMirrorTexture(session, reinterpret_cast<ovrTexture *>(mirrorTexture));
-#  endif
-    }
-
-    // Oculus Rift のレンダリング用の FBO を削除する
-    glDeleteFramebuffers(ovrEye_Count, oculusFbo);
-
-    // Oculus Rift 表示用の FBO を削除する
-    for (int eye = 0; eye < ovrEye_Count; ++eye)
-    {
-#  if OVR_PRODUCT_VERSION > 0
-
-      // レンダリングターゲットに使ったテクスチャを開放する
-      if (layerData.ColorTexture[eye])
-      {
-        ovr_DestroyTextureSwapChain(session, layerData.ColorTexture[eye]);
-        layerData.ColorTexture[eye] = nullptr;
-      }
-
-      // デプスバッファとして使ったテクスチャを開放する
-      glDeleteTextures(1, &oculusDepth[eye]);
-      oculusDepth[eye] = 0;
-
-#  else
-
-      // レンダリングターゲットに使ったテクスチャを開放する
-      auto *const colorTexture(layerData.EyeFov.ColorTexture[eye]);
-      for (int i = 0; i < colorTexture->TextureCount; ++i)
-      {
-        const auto *const ctex(reinterpret_cast<ovrGLTexture *>(&colorTexture->Textures[i]));
-        glDeleteTextures(1, &ctex->OGL.TexId);
-      }
-      ovr_DestroySwapTextureSet(session, colorTexture);
-
-      // デプスバッファとして使ったテクスチャを開放する
-      auto *const depthTexture(layerData.EyeFovDepth.DepthTexture[eye]);
-      for (int i = 0; i < depthTexture->TextureCount; ++i)
-      {
-        const auto *const dtex(reinterpret_cast<ovrGLTexture *>(&depthTexture->Textures[i]));
-        glDeleteTextures(1, &dtex->OGL.TexId);
-      }
-      ovr_DestroySwapTextureSet(session, depthTexture);
-
-#  endif
-    }
-
-    // Oculus Rift のセッションを破棄する
-    ovr_Destroy(session);
-    session = nullptr;
-
-#endif
 
 #ifdef USE_IMGUI
     // Shutdown Platform/Renderer bindings
