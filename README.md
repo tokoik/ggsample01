@@ -28,7 +28,7 @@ OpenGL の開発環境を整備してください。
 * Window.h
     * ウィンドウやマウス関連のユーザインタフェースを管理する GLFW のラッパー
 
-[GLFW](https://www.glfw.org/) は OpenGL や、その後継の Vulkan を使用したアプリケーションを作成するための、非常にコンパクトなフレームワークです。本当はこれだけで簡単にアプリケーションが作れるのですが、授業内容とはあまり関係のない処理を分離するために、屋上屋ながら**この授業専用の**フレームワークを用意しました。なお、gg.h / gg.cpp には OpenGL の拡張機能を使用可能にする機能を含んでいるので、別に [GLEW](http://glew.sourceforge.net/) や [glad](https://github.com/Dav1dde/glad)、[GL3W](https://github.com/skaslev/gl3w) などを用意する必要はありません。また Window.h には、[Dear ImGui](https://github.com/ocornut/imgui) をサポートする機能と、Oculus Rift (DK1, DK2, [CV1](https://www.oculus.com/rift/), [S](https://www.oculus.com/rift-s/)) をサポートする機能を組み込んでいます。これを使って C++ だけで VR アプリケーション () が作れます。
+[GLFW](https://www.glfw.org/) は [OpenGL](https://www.opengl.org/) や、その後継の Vulkan を使用したアプリケーションを作成するための、非常にコンパクトなフレームワークです。本当はこれだけで簡単にアプリケーションが作れるのですが、授業内容とはあまり関係のない処理を分離するために、屋上屋ながら**この授業専用の**フレームワークを用意しました。なお、gg.h / gg.cpp には OpenGL の拡張機能を使用可能にする機能を含んでいるので、別に [GLEW](http://glew.sourceforge.net/) や [glad](https://github.com/Dav1dde/glad)、[GL3W](https://github.com/skaslev/gl3w) などを導入する必要はありません。また Window.h には、[Dear ImGui](https://github.com/ocornut/imgui) をサポートする機能と、Oculus Rift (DK1, DK2, [CV1](https://www.oculus.com/rift/), [S](https://www.oculus.com/rift-s/)) をサポートする機能を組み込んでいます。これを使って、C++ だけで VR アプリケーション () が作れます。
 
 ### 補助プログラムのドキュメント
 
@@ -36,7 +36,7 @@ Doxygen で生成したドキュメントの [HTML 版](html/index.html)を html
 
 ### 補助プログラムの使い方
 
-補助プログラムを使用するには、最小限、GLFW が使える環境が必要です。ゲームグラフィックス特論 A / B の宿題のリポジトリには、Windows 用、macOS 用、および Linux 用にコンパイルしたライブラリファイル一式を含めています。gg.h, gg.cpp, Window.h だけを使うときは、それぞれの環境で　GLFW をインストールしておいてください。補助プログラムを使用した最小のプログラムは、こんな感じになります。このソースファイルと同じところに gg.h, gg.cpp, Window.h を置き、gg.cpp と一緒にコンパイルして、GLFW のライブラリファイルをリンクしてください。
+補助プログラムを使用するには、最小限、GLFW が使える環境が必要です。ゲームグラフィックス特論 A / B の宿題のリポジトリには Windows 用、macOS 用、および Linux 用にコンパイルしたライブラリファイル一式を含めていますので、宿題のために別に用意する必要はありません。gg.h, gg.cpp, Window.h だけを使うときは、それぞれの環境で GLFW をインストールしておいてください。この補助プログラムを使用した最小のプログラムは、多分こんな感じになります。このソースファイルと同じところに gg.h, gg.cpp, Window.h を置き、gg.cpp と一緒にコンパイルして、GLFW のライブラリファイルをリンクしてください。
 
 ```cpp
 #include "Window.h"
@@ -56,7 +56,7 @@ int main()
 }
 ```
 
-使用する OpenGL のバージョンは、`Window::init(major, minor)` の `major` と `minor` で指定できます。`major` を 0 または省略すると、OpenGL のバージョンを指定しません。その場合、macOS 以外では恐らく OpenGL のハードウェアもしくはドライバで対応可能な最大のバージョンが使用されます。なお、3.2 以降を指定したときは forward compatible プロファイルと core プロファイルを有効にします。**macOS の場合**は `Window::init(3, 2)` もしくは `Window::init(4, 1)` を指定してください。
+使用する OpenGL のバージョンは、`Window::init(major, minor)` の `major` と `minor` で指定できます。`major` を 0 にするか省略すると、OpenGL のバージョンの指定を行いません。その場合は、macOS 以外では恐らく OpenGL のハードウェアもしくはドライバで対応可能な最大のバージョンが使用されます。なお、3.2 以降を指定したときは **macOS 対応の都合で** forward compatible プロファイルと core プロファイルを有効にします。macOS の場合は `Window::init(3, 2)` もしくは `Window::init(4, 1)` を指定してください。
 
 ```cpp
     // for macOS
