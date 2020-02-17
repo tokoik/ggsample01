@@ -10,7 +10,7 @@ OpenGL の開発環境を整備してください。
 
 ## 宿題プログラムの作成に必要な環境
 
-* Linux Mint 17 / Windows 10 (Visual Studio 2017) / macOS 10.13 (Xcode 9.2) 以降に対応しています。
+* Linux Mint 18.3 / Windows 10 (Visual Studio 2017) / macOS 10.15 (Xcode 11) 以降に対応しています。
 * OpenGL 4.1 以降が実行できる環境 (対応した GPU を搭載したビデオカード や CPU) が必要です。
 
 ## 補足
