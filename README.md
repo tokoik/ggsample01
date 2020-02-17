@@ -5,8 +5,8 @@
 OpenGL の開発環境を整備してください。
 
 * 宿題のひな形は [GitHub](https://github.com/tokoik/ggsample01) にあります
- (宿題のひな形で使っている[補助プログラムの解説](http://www.wakayama-u.ac.jp/~tokoi/lecture/gg/html/namespacegg.html))。
-* 詳しくは[講義のスライド](http://www.wakayama-u.ac.jp/~tokoi/lecture/gg/ggnote01.pdf)を参照してください。
+ (宿題のひな形で使っている[補助プログラムの解説](https://tokoik.github.io/gg/html/annotated.html))。
+* 詳しくは[講義のスライド](https://tokoik.github.io/gg/ggnote01.pdf)を参照してください。
 
 ## 宿題プログラムの作成に必要な環境
 
