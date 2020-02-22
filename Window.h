@@ -363,6 +363,11 @@ class Window
   //
   static void wheel(GLFWwindow *window, double x, double y)
   {
+#ifdef USE_IMGUI
+    // マウスカーソルが ImGui のウィンドウ上にあったら Window クラスのマウスホイール回転量を更新しない
+    if (ImGui::IsAnyWindowHovered()) return;
+#endif
+
     // このインスタンスの this ポインタを得る
     Window *const instance(static_cast<Window *>(glfwGetWindowUserPointer(window)));
 
