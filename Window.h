@@ -364,7 +364,7 @@ class Window
   static void wheel(GLFWwindow *window, double x, double y)
   {
 #ifdef USE_IMGUI
-    // マウスカーソルが ImGui のウィンドウ上にあったら Window クラスのマウスホイール回転量を更新しない
+    // マウスカーソルが ImGui のウィンドウ上にあったら Window クラスのマウスホイールの回転量を更新しない
     if (ImGui::IsAnyWindowHovered()) return;
 #endif
 
@@ -612,12 +612,6 @@ public:
     // ゲームグラフィックス特論の都合による初期化を行う
     ggInit();
 
-#ifdef USE_IMGUI
-    // Setup Platform/Renderer bindings
-    ImGui_ImplGlfw_InitForOpenGL(window, true);
-    ImGui_ImplOpenGL3_Init(nullptr);
-#endif
-
     // このインスタンスの this ポインタを記録しておく
     glfwSetWindowUserPointer(window, this);
 
@@ -829,6 +823,12 @@ public:
 
     // ビューポートと投影変換行列を初期化する
     resize(window, width, height);
+
+#ifdef USE_IMGUI
+    // Setup Platform/Renderer bindings
+    ImGui_ImplGlfw_InitForOpenGL(window, true);
+    ImGui_ImplOpenGL3_Init(nullptr);
+#endif
   }
 
   //! \brief コピーコンストラクタは使用禁止.
@@ -1422,6 +1422,22 @@ public:
   GgMatrix getTrackball(int button = GLFW_MOUSE_BUTTON_1) const
   {
     return trackball[button].getMatrix();
+  }
+
+  //! \brief トラックボール・マウスホイール・矢印キーの値を初期化する
+  void reset()
+  {
+    // トラックボールをリセットする
+    trackball[GLFW_MOUSE_BUTTON_1].reset();
+    trackball[GLFW_MOUSE_BUTTON_2].reset();
+    trackball[GLFW_MOUSE_BUTTON_3].reset();
+
+    // 矢印キーの設定値をリセットする
+    for (auto a : arrow) a[0] = a[1] = 0;
+    std::fill(*(*translation), *(*(translation + 3)), 0.0f);
+
+    // マウスホイールの回転量をリセットする
+    wheel_rotation[0] = wheel_rotation[1] = 0.0f;
   }
 
   //! \brief ユーザーポインタを取り出す.
