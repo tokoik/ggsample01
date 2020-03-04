@@ -1169,7 +1169,8 @@ public:
   {
 #ifdef USE_IMGUI
     // ImGui のフレームをレンダリングする
-    ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+    ImDrawData *const data(ImGui::GetDrawData());
+    if (data) ImGui_ImplOpenGL3_RenderDrawData(data);
 #endif
 
     // エラーチェック

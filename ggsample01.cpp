@@ -23,7 +23,7 @@ void app()
   const GgSimpleShader simple("simple.vert", "simple.frag");
 
   // 図形データを読み込む (大きさを正規化する)
-  const GgSimpleObj object("bunny.obj", true);
+  const GgSimpleObj object("logo.obj", true);
 
   // 光源データから光源のバッファオブジェクトを作成する
   const GgSimpleShader::LightBuffer lightBuffer(light);
