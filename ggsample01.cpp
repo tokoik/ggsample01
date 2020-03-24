@@ -96,9 +96,6 @@ void app()
     if (ImGui::Button("Quit")) window.setClose();
     ImGui::End();
 
-    // ImGui のフレームに描画する
-    ImGui::Render();
-
     // モデル変換行列にオイラー角を乗じる
     mm = mm.rotateY(yaw).rotateX(pitch).rotateZ(roll);
 #endif
@@ -111,6 +108,11 @@ void app()
 
     // 図形を描画する
     object.draw();
+
+#ifdef USE_IMGUI
+    // ImGui のフレームに描画する
+    ImGui::Render();
+#endif
 
     // カラーバッファを入れ替えてイベントを取り出す
     window.swapBuffers();
