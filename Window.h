@@ -25,12 +25,21 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 **
 */
 
+// Oculus Rift を使うなら
+//#define USE_OCULUS_RIFT
+
+// Dear ImGui を使うなら
+//#define USE_IMGUI
+
+// 使用するマウスのボタン数
+constexpr int BUTTON_COUNT(3);
+
+// 使用するユーザインタフェースの数
+constexpr int INTERFACE_COUNT(3);
+
 // 補助プログラム
 #include "gg.h"
 using namespace gg;
-
-// Oculus Rift を使うなら
-//#define USE_OCULUS_RIFT
 
 // Oculus Rift SDK ライブラリ (LibOVR) の組み込み
 #ifdef USE_OCULUS_RIFT
@@ -50,9 +59,6 @@ using namespace gg;
 #  endif
 #endif
 
-// Dear ImGui を使うなら
-//#define USE_IMGUI
-
 // ImGui の組み込み
 #ifdef USE_IMGUI
 #  include "imgui.h"
@@ -63,6 +69,7 @@ using namespace gg;
 // 標準ライブラリ
 #include <cmath>
 #include <cstdlib>
+#include <cassert>
 #include <stdexcept>
 #include <iostream>
 
@@ -77,25 +84,82 @@ class Window
   GLFWwindow *window;
 
   // ビューポートの横幅と高さ
-  GLsizei size[2];
+  std::array<GLsizei, 2> size;
 
   // ビューポートのアスペクト比
   GLfloat aspect;
 
-  // 矢印キー
-  int arrow[4][2];
+  // マウスの移動速度[X/Y]
+  std::array<GLfloat, 2> velocity;
 
-  // マウスの現在位置
-  GLfloat mouse_position[2];
+  // マウスボタンの状態
+  bool status[BUTTON_COUNT];
 
-  // マウスホイールの回転量
-  GLfloat wheel_rotation[2];
+  // ユーザインタフェースのデータ構造
+  struct UserInterface
+  {
+    // 矢印キー
+    std::array<std::array<int, 2>, 4> arrow;
 
-  // 平行移動量量[ボタン][直前/更新][X/Y/Z]
-  GLfloat translation[3][2][3];
+    // マウスの現在位置
+    std::array<GLfloat, 2> mouse;
 
-  // トラックボール
-  GgTrackball trackball[3];
+    // マウスホイールの回転量
+    std::array<GLfloat, 2> wheel;
+
+    // 現在位置[ボタン][直前/更新][X/Y]
+    std::array<std::array<std::array<GLfloat, 2>, 2>, BUTTON_COUNT> location;
+
+    // 平行移動量[ボタン][直前/更新][X/Y/Z]
+    std::array<std::array<std::array<GLfloat, 3>, 2>, BUTTON_COUNT> translation;
+
+    // トラックボール
+    std::array<GgTrackball, BUTTON_COUNT> trackball;
+
+    // コンストラクタ
+    UserInterface()
+      : arrow{}
+      , mouse{}
+      , wheel{}
+      , location{}
+      , translation{}
+    {}
+
+    // トラックボール処理を考慮した平行移動量を計算する (X, Y のみ, Z は wheel() で計算する)
+    void calcTranslation(int button, const std::array<GLfloat, 2>& velocity)
+    {
+      // マウスの相対変位
+      assert(button >= GLFW_MOUSE_BUTTON_1 && button < GLFW_MOUSE_BUTTON_1 + BUTTON_COUNT);
+      const GLfloat dx((mouse[0] - trackball[button].getStart(0)) * trackball[button].getScale(0));
+      const GLfloat dy((trackball[button].getStart(1) - mouse[1]) * trackball[button].getScale(1));
+
+      // 現在位置
+      auto& l(location[button]);
+
+      // 現在位置の更新
+      l[1][0] = dx * velocity[0] + l[0][0];
+      l[1][1] = dy * velocity[1] + l[0][1];
+
+      // 平行移動量
+      auto& t(translation[button]);
+
+      // 移動前の平行移動量の z 値
+      const GLfloat d(fabs(t[1][2]));
+
+      // 平行移動量の更新
+      t[1][0] = dx * d + t[0][0];
+      t[1][1] = dy * d + t[0][1];
+
+      // トラックボールの更新
+      trackball[button].motion(mouse[0], mouse[1]);
+    }
+  };
+
+  // ユーザインタフェースのデータ
+  std::array<UserInterface, INTERFACE_COUNT> ui_data;
+
+  // ユーザインタフェースの番号
+  int ui_no;
 
 #ifdef USE_OCULUS_RIFT
   //
@@ -209,9 +273,13 @@ class Window
       instance->size[1] = height;
 
       // トラックボール処理の範囲を設定する
-      instance->trackball[GLFW_MOUSE_BUTTON_1].region(width, height);
-      instance->trackball[GLFW_MOUSE_BUTTON_2].region(width, height);
-      instance->trackball[GLFW_MOUSE_BUTTON_3].region(width, height);
+      for (auto& current_if : instance->ui_data)
+      {
+        for (auto& t : current_if.trackball)
+        {
+          t.region(width, height);
+        }
+      }
 
 #ifndef USE_OCULUS_RIFT
       // ウィンドウのアスペクト比を保存する
@@ -233,7 +301,7 @@ class Window
   {
 #ifdef USE_IMGUI
     // ImGui のウィンドウが選択されていたらキーボードの処理を行わない
-    if (ImGui::IsAnyWindowFocused()) return;
+    if (ImGui::IsWindowFocused(ImGuiFocusedFlags_AnyWindow)) return;
 #endif
 
     // このインスタンスの this ポインタを得る
@@ -244,67 +312,72 @@ class Window
       // ユーザー定義のコールバック関数の呼び出し
       if (instance->keyboardFunc) (*instance->keyboardFunc)(instance, key, scancode, action, mods);
 
+      // 対象のユーザインタフェース
+      auto& current_if(instance->ui_data[instance->ui_no]);
+
       switch (key)
       {
       case GLFW_KEY_HOME:
+
         // トラックボールをリセットする
-        instance->trackball[GLFW_MOUSE_BUTTON_1].reset();
-        instance->trackball[GLFW_MOUSE_BUTTON_2].reset();
-        instance->trackball[GLFW_MOUSE_BUTTON_3].reset();
-        break;
+        instance->reset_trackball();
 
       case GLFW_KEY_END:
-        // 矢印キーの設定値とマウスホイールの回転量をリセットする
-        for (auto a : instance->arrow) a[0] = a[1] = 0;
-        std::fill(*(*instance->translation), *(*(instance->translation + 3)), 0.0f);
-        instance->wheel_rotation[0] = instance->wheel_rotation[1] = 0.0f;
+
+        // 現在位置と平行移動量をリセットする
+        instance->reset_translation();
         break;
 
       case GLFW_KEY_UP:
+
         if (mods & GLFW_MOD_SHIFT)
-          instance->arrow[1][1]++;
+          current_if.arrow[1][1]++;
         else if (mods & GLFW_MOD_CONTROL)
-          instance->arrow[2][1]++;
+          current_if.arrow[2][1]++;
         else if (mods & GLFW_MOD_ALT)
-          instance->arrow[3][1]++;
+          current_if.arrow[3][1]++;
         else
-          instance->arrow[0][1]++;
+          current_if.arrow[0][1]++;
         break;
 
       case GLFW_KEY_DOWN:
+
         if (mods & GLFW_MOD_SHIFT)
-          instance->arrow[1][1]--;
+          current_if.arrow[1][1]--;
         else if (mods & GLFW_MOD_CONTROL)
-          instance->arrow[2][1]--;
+          current_if.arrow[2][1]--;
         else if (mods & GLFW_MOD_ALT)
-          instance->arrow[3][1]--;
+          current_if.arrow[3][1]--;
         else
-          instance->arrow[0][1]--;
+          current_if.arrow[0][1]--;
         break;
 
       case GLFW_KEY_RIGHT:
+
         if (mods & GLFW_MOD_SHIFT)
-          instance->arrow[1][0]++;
+          current_if.arrow[1][0]++;
         else if (mods & GLFW_MOD_CONTROL)
-          instance->arrow[2][0]++;
+          current_if.arrow[2][0]++;
         else if (mods & GLFW_MOD_ALT)
-          instance->arrow[3][0]++;
+          current_if.arrow[3][0]++;
         else
-          instance->arrow[0][0]++;
+          current_if.arrow[0][0]++;
         break;
 
       case GLFW_KEY_LEFT:
+
         if (mods & GLFW_MOD_SHIFT)
-          instance->arrow[1][0]--;
+          current_if.arrow[1][0]--;
         else if (mods & GLFW_MOD_CONTROL)
-          instance->arrow[2][0]--;
+          current_if.arrow[2][0]--;
         else if (mods & GLFW_MOD_ALT)
-          instance->arrow[3][0]--;
+          current_if.arrow[3][0]--;
         else
-          instance->arrow[0][0]--;
+          current_if.arrow[0][0]--;
         break;
 
       default:
+
         break;
       }
     }
@@ -317,43 +390,41 @@ class Window
   {
 #ifdef USE_IMGUI
     // マウスカーソルが ImGui のウィンドウ上にあったら Window クラスのマウス位置を更新しない
-    if (ImGui::IsAnyWindowHovered()) return;
+    if (ImGui::IsWindowHovered(ImGuiHoveredFlags_AnyWindow)) return;
 #endif
 
     // このインスタンスの this ポインタを得る
-    Window *const instance(static_cast<Window *>(glfwGetWindowUserPointer(window)));
+    Window* const instance(static_cast<Window*>(glfwGetWindowUserPointer(window)));
+
+    // マウスボタンの状態を記録する
+    assert(button >= GLFW_MOUSE_BUTTON_1 && button < GLFW_MOUSE_BUTTON_1 + BUTTON_COUNT);
+    instance->status[button] = action != GLFW_RELEASE;
 
     if (instance)
     {
       // ユーザー定義のコールバック関数の呼び出し
       if (instance->mouseFunc) (*instance->mouseFunc)(instance, button, action, mods);
 
+      // 対象のユーザインタフェース
+      auto& current_if(instance->ui_data[instance->ui_no]);
+
       // マウスの現在位置を得る
-      const GLfloat x(instance->mouse_position[0]);
-      const GLfloat y(instance->mouse_position[1]);
+      const GLfloat x(current_if.mouse[0]);
+      const GLfloat y(current_if.mouse[1]);
 
-      switch (button)
+      if (x < 0 || x >= instance->size[0] || y < 0 || y >= instance->size[1]) return;
+      
+      if (action)
       {
-      case GLFW_MOUSE_BUTTON_1:
-      case GLFW_MOUSE_BUTTON_2:
-      case GLFW_MOUSE_BUTTON_3:
-        if (action)
-        {
-          // 左ドラッグ開始
-          instance->trackball[button].begin(x, y);
-        }
-        else
-        {
-          // 左ドラッグ終了
-          instance->translation[button][0][0] = instance->translation[button][1][0];
-          instance->translation[button][0][1] = instance->translation[button][1][1];
-          instance->translation[button][0][2] = instance->translation[button][1][2];
-          instance->trackball[button].end(x, y);
-        }
-        break;
-
-      default:
-        break;
+        // ドラッグ開始
+        current_if.trackball[button].begin(x, y);
+      }
+      else
+      {
+        // ドラッグ終了
+        current_if.location[button][0] = current_if.location[button][1];
+        current_if.translation[button][0] = current_if.translation[button][1];
+        current_if.trackball[button].end(x, y);
       }
     }
   }
@@ -365,7 +436,7 @@ class Window
   {
 #ifdef USE_IMGUI
     // マウスカーソルが ImGui のウィンドウ上にあったら Window クラスのマウスホイールの回転量を更新しない
-    if (ImGui::IsAnyWindowHovered()) return;
+    if (ImGui::IsWindowHovered(ImGuiHoveredFlags_AnyWindow)) return;
 #endif
 
     // このインスタンスの this ポインタを得る
@@ -376,26 +447,17 @@ class Window
       // ユーザー定義のコールバック関数の呼び出し
       if (instance->wheelFunc) (*instance->wheelFunc)(instance, x, y);
 
+      // 対象のユーザインタフェース
+      auto& current_if(instance->ui_data[instance->ui_no]);
+
       // マウスホイールの回転量の保存
-      instance->wheel_rotation[0] += static_cast<GLfloat>(x);
-      instance->wheel_rotation[1] += static_cast<GLfloat>(y);
+      current_if.wheel[0] += static_cast<GLfloat>(x);
+      current_if.wheel[1] += static_cast<GLfloat>(y);
 
       // マウスによる平行移動量の z 値の更新
-      const GLfloat z(instance->getWheelY() * 0.05f);
-      instance->translation[GLFW_MOUSE_BUTTON_1][1][2] = z;
-      instance->translation[GLFW_MOUSE_BUTTON_2][1][2] = z;
-      instance->translation[GLFW_MOUSE_BUTTON_3][1][2] = z;
+      const GLfloat z(instance->getWheelY() * 0.5f);
+      for (auto& t : current_if.translation) t[1][2] = z;
     }
-  }
-
-  //
-  // トラックボール処理を考慮した平行移動量を計算する (X, Y のみ, Z は wheel() で計算する)
-  //
-  void calcTranslation(GLfloat *t, int button) const
-  {
-    const GLfloat d(fabs(translation[button][0][2]) + 1.0f);
-    t[0] = (mouse_position[0] - trackball[button].getStart(0)) * trackball[button].getScale(0) * d + translation[button][0][0];
-    t[1] = (trackball[button].getStart(1) - mouse_position[1]) * trackball[button].getScale(1) * d + translation[button][0][1];
   }
 
   #ifdef USE_OCULUS_RIFT
@@ -574,9 +636,14 @@ public:
   Window(const char *title = "GLFW Window", int width = 640, int height = 480,
     int fullscreen = 0, GLFWwindow *share = nullptr)
     : window(nullptr), size{ width, height }, aspect(1.0f)
-    , arrow{ { 0 }, { 0 }, { 0 }, { 0 } }, mouse_position{ 0.0f }, wheel_rotation{ 0.0f }
-    , translation{ { { 0.0f }, { 0.0f } }, { { 0.0f }, { 0.0f } }, { { 0.0f }, { 0.0f } } }
-    , userPointer(nullptr), resizeFunc(nullptr), keyboardFunc(nullptr), mouseFunc(nullptr), wheelFunc(nullptr)
+    , velocity{ 1.0f, 1.0f }
+    , status{ false }
+    , ui_no(0)
+    , userPointer(nullptr)
+    , resizeFunc(nullptr)
+    , keyboardFunc(nullptr)
+    , mouseFunc(nullptr)
+    , wheelFunc(nullptr)
   {
     // ディスプレイの情報
     GLFWmonitor *monitor(nullptr);
@@ -1123,6 +1190,9 @@ public:
     // ウィンドウを閉じるべきなら false を返す
     if (shouldClose()) return false;
 
+    // 対象のユーザインタフェース
+    auto& current_if(ui_data[ui_no]);
+
 #ifdef USE_IMGUI
 
     // ImGui の新規フレームを作成する
@@ -1130,15 +1200,14 @@ public:
     ImGui_ImplGlfw_NewFrame();
 
     // マウスカーソルが ImGui のウィンドウ上にあったら Window クラスのマウス位置を更新しない
-    if (ImGui::IsAnyWindowHovered()) return true;
+    if (ImGui::IsWindowHovered(ImGuiHoveredFlags_AnyWindow)) return true;
 
     // マウスの現在位置を調べる
     const ImGuiIO &io(ImGui::GetIO());
 
     // マウスの位置を更新する
-    mouse_position[0] = io.MousePos.x;
-    mouse_position[1] = io.MousePos.y;
-
+    current_if.mouse = std::array<GLfloat, 2>{ io.MousePos.x, io.MousePos.y };
+    
 #else
 
     // マウスの現在位置を調べる
@@ -1146,18 +1215,18 @@ public:
     glfwGetCursorPos(window, &x, &y);
 
     // マウスの位置を更新する
-    mouse_position[0] = static_cast<GLfloat>(x);
-    mouse_position[1] = static_cast<GLfloat>(y);
+    current_if.mouse = std::array<GLfloat, 2>{ static_cast<GLfloat>(x), static_cast<GLfloat>(y) };
 
 #endif
 
     // マウスドラッグ
-    for (int button = GLFW_MOUSE_BUTTON_1; button < GLFW_MOUSE_BUTTON_1 + 3; ++button)
+    for (int button = GLFW_MOUSE_BUTTON_1; button < GLFW_MOUSE_BUTTON_1 + BUTTON_COUNT; ++button)
     {
-      if (glfwGetMouseButton(window, button))
+      // マウスボタンを押していたら
+      if (status[button])
       {
-        calcTranslation(translation[button][1], button);
-        trackball[button].motion(mouse_position[0], mouse_position[1]);
+        // 現在位置と平行移動量を更新する
+        current_if.calcTranslation(button, velocity);
       }
     }
 
@@ -1169,8 +1238,7 @@ public:
   {
 #ifdef USE_IMGUI
     // ImGui のフレームをレンダリングする
-    ImDrawData *const data(ImGui::GetDrawData());
-    if (data) ImGui_ImplOpenGL3_RenderDrawData(data);
+    ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 #endif
 
     // エラーチェック
@@ -1198,7 +1266,7 @@ public:
   //!   \return ウィンドウの幅と高さを格納した GLsizei 型の 2 要素の配列.
   const GLsizei *getSize() const
   {
-    return size;
+    return size.data();
   }
 
   //! \brief ウィンドウのサイズを得る.
@@ -1217,7 +1285,7 @@ public:
   }
 
   //! ビューポートをウィンドウ全体に設定する.
-  void resetViewport()
+  void restoreViewport()
   {
 #ifndef USE_OCULUS_RIFT
     // ウィンドウ全体に描画する
@@ -1231,10 +1299,26 @@ public:
   {
 #ifdef USE_IMGUI
     // ImGui のウィンドウが選択されていたらキーボードの処理を行わない
-    if (ImGui::IsAnyWindowFocused()) return false;
+    if (ImGui::IsWindowFocused(ImGuiFocusedFlags_AnyWindow)) return false;
 #endif
 
     return glfwGetKey(window, key) != GLFW_RELEASE;
+  }
+
+  //! \brief インタフェースを選択する
+  //!   \param no インターフェース番号
+  void selectInterface(int no)
+  {
+    assert(static_cast<size_t>(no) < ui_data.size());
+    ui_no = no;
+  }
+
+  //! \brief マウスの移動速度を設定する
+  //!   \param vx x 方向の移動速度.
+  //!   \param vy y 方向の移動速度.
+  void setVelocity(GLfloat vx, GLfloat vy)
+  {
+    velocity = std::array<GLfloat, 2>{ vx, vy };
   }
 
   //! \brief 矢印キーの現在の値を得る.
@@ -1243,7 +1327,8 @@ public:
   //!   \return 矢印キーの値.
   GLfloat getArrow(int direction = 0, int mods = 0) const
   {
-    return static_cast<GLfloat>(arrow[mods & 3][direction & 1]);
+    const auto& current_if(ui_data[ui_no]);
+    return static_cast<GLfloat>(current_if.arrow[mods & 3][direction & 1]);
   }
 
   //! \brief 矢印キーの現在の X 値を得る.
@@ -1341,15 +1426,17 @@ public:
   //!   \return マウスカーソルの現在位置を格納した GLfloat 型の 2 要素の配列.
   const GLfloat *getMouse() const
   {
-    return mouse_position;
+    const auto& current_if(ui_data[ui_no]);
+    return current_if.mouse.data();
   }
 
   //! \brief マウスカーソルの現在位置を得る.
   //!   \param position マウスカーソルの現在位置を格納した GLfloat 型の 2 要素の配列.
   void getMouse(GLfloat *position) const
   {
-    position[0] = mouse_position[0];
-    position[1] = mouse_position[1];
+    const auto& current_if(ui_data[ui_no]);
+    position[0] = current_if.mouse[0];
+    position[1] = current_if.mouse[1];
   }
 
   //! \brief マウスカーソルの現在位置を得る.
@@ -1357,36 +1444,41 @@ public:
   //!   \return direction 方向のマウスカーソルの現在位置.
   const GLfloat getMouse(int direction) const
   {
-    return mouse_position[direction & 1];
+    const auto& current_if(ui_data[ui_no]);
+    return current_if.mouse[direction & 1];
   }
 
   //! \brief マウスカーソルの現在位置の X 座標を得る.
   //!   \return direction 方向のマウスカーソルの X 方向の現在位置.
   GLfloat getMouseX() const
   {
-    return mouse_position[0];
+    const auto& current_if(ui_data[ui_no]);
+    return current_if.mouse[0];
   }
 
   //! \brief マウスカーソルの現在位置の Y 座標を得る.
   //!   \return direction 方向のマウスカーソルの Y 方向の現在位置.
   GLfloat getMouseY() const
   {
-    return mouse_position[1];
+    const auto& current_if(ui_data[ui_no]);
+    return current_if.mouse[1];
   }
 
   //! \brief マウスホイールの回転量を得る.
   //!   \return マウスホイールの回転量を格納した GLfloat 型の 2 要素の配列.
   const GLfloat *getWheel() const
   {
-    return wheel_rotation;
+    const auto& current_if(ui_data[ui_no]);
+    return current_if.wheel.data();
   }
 
   //! \brief マウスホイールの回転量を得る.
   //!   \param rotation マウスホイールの回転量を格納した GLfloat 型の 2 要素の配列.
   void getWheel(GLfloat *rotation) const
   {
-    rotation[0] = wheel_rotation[0];
-    rotation[1] = wheel_rotation[1];
+    const auto& current_if(ui_data[ui_no]);
+    rotation[0] = current_if.wheel[0];
+    rotation[1] = current_if.wheel[1];
   }
 
   //! \brief マウスホイールの回転量を得る.
@@ -1394,19 +1486,32 @@ public:
   //!   \return direction 方向のマウスホイールの回転量.
   GLfloat getWheel(int direction) const
   {
-    return wheel_rotation[direction & 1];
+    const auto& current_if(ui_data[ui_no]);
+    return current_if.wheel[direction & 1];
   }
 
   //! \brief マウスホイールの X 方向の回転量を得る.
   const GLfloat getWheelX() const
   {
-    return wheel_rotation[0];
+    const auto& current_if(ui_data[ui_no]);
+    return current_if.wheel[0];
   }
 
   //! \brief マウスホイールの Y 方向の回転量を得る.
   const GLfloat getWheelY() const
   {
-    return wheel_rotation[1];
+    const auto& current_if(ui_data[ui_no]);
+    return current_if.wheel[1];
+  }
+
+  //! \brief トラックボール処理を考慮したマウスによる現在位置のポインタを得る.
+  //!   \param button 平行移動量を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]).
+  //!   \return 現在位置のポインタ.
+  const GLfloat* getLocation(int button = GLFW_MOUSE_BUTTON_1) const
+  {
+    const auto& current_if(ui_data[ui_no]);
+    assert(button >= GLFW_MOUSE_BUTTON_1 && button < GLFW_MOUSE_BUTTON_1 + BUTTON_COUNT);
+    return current_if.location[button][1].data();
   }
 
   //! \brief トラックボール処理を考慮したマウスによる平行移動の変換行列を得る.
@@ -1414,7 +1519,19 @@ public:
   //!   \return 平行移動を行う GgMarix 型の変換行列.
   GgMatrix getTranslation(int button = GLFW_MOUSE_BUTTON_1) const
   {
-    return ggTranslate(translation[button][1]);
+    const auto& current_if(ui_data[ui_no]);
+    assert(button >= GLFW_MOUSE_BUTTON_1 && button < GLFW_MOUSE_BUTTON_1 + BUTTON_COUNT);
+    return ggTranslate(current_if.translation[button][1].data());
+  }
+
+  //! \brief トラックボールの回転変換行列を得る.
+  //!   \param button 回転変換行列を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]).
+  //!   \return 回転を行う GgQuaternion 型の四元数.
+  GgQuaternion getTrackballData(int button = GLFW_MOUSE_BUTTON_1) const
+  {
+    const auto& current_if(ui_data[ui_no]);
+    assert(button >= GLFW_MOUSE_BUTTON_1 && button < GLFW_MOUSE_BUTTON_1 + BUTTON_COUNT);
+    return current_if.trackball[button].getQuaternion();
   }
 
   //! \brief トラックボールの回転変換行列を得る.
@@ -1422,23 +1539,54 @@ public:
   //!   \return 回転を行う GgMarix 型の変換行列.
   GgMatrix getTrackball(int button = GLFW_MOUSE_BUTTON_1) const
   {
-    return trackball[button].getMatrix();
+    const auto& current_if(ui_data[ui_no]);
+    assert(button >= GLFW_MOUSE_BUTTON_1 && button < GLFW_MOUSE_BUTTON_1 + BUTTON_COUNT);
+    return current_if.trackball[button].getMatrix();
+  }
+
+  //! \brief トラックボール処理をリセットする
+  void reset_trackball()
+  {
+    // トラックボールをリセットする
+    for (auto& tb : ui_data[ui_no].trackball)
+    {
+      tb.reset();
+    }
+  }
+
+  //! 現在位置と平行移動量をリセットする
+  void reset_translation()
+  {
+    // 現在のインターフェース
+    auto& current_if(ui_data[ui_no]);
+
+    // 現在位置をリセットする
+    for (auto& l : current_if.location)
+    {
+      std::fill(l.begin(), l.end(), std::array<GLfloat, 2>{ 0.0f, 0.0f });
+    }
+
+    // 平行移動量をリセットする
+    for (auto& t : current_if.translation)
+    {
+      std::fill(t.begin(), t.end(), std::array<GLfloat, 3>{ 0.0f, 0.0f, 0.0f });
+    }
+
+    // 矢印キーの設定値をリセットする
+    std::fill(current_if.arrow.begin(), current_if.arrow.end(), std::array<int, 2>{ 0, 0 });
+
+    // マウスホイールの回転量をリセットする
+    std::fill(current_if.wheel.begin(), current_if.wheel.end(), 0.0f);
   }
 
   //! \brief トラックボール・マウスホイール・矢印キーの値を初期化する
   void reset()
   {
-    // トラックボールをリセットする
-    trackball[GLFW_MOUSE_BUTTON_1].reset();
-    trackball[GLFW_MOUSE_BUTTON_2].reset();
-    trackball[GLFW_MOUSE_BUTTON_3].reset();
+    // トラックボール処理をリセットする
+    reset_trackball();
 
-    // 矢印キーの設定値をリセットする
-    for (auto a : arrow) a[0] = a[1] = 0;
-    std::fill(*(*translation), *(*(translation + 3)), 0.0f);
-
-    // マウスホイールの回転量をリセットする
-    wheel_rotation[0] = wheel_rotation[1] = 0.0f;
+    // 平行移動量をリセットする
+    reset_translation();
   }
 
   //! \brief ユーザーポインタを取り出す.

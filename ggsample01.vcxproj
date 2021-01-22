@@ -150,6 +150,7 @@
     <ClCompile Include="lib\imgui_draw.cpp" />
     <ClCompile Include="lib\imgui_impl_glfw.cpp" />
     <ClCompile Include="lib\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="lib\imgui_tables.cpp" />
     <ClCompile Include="lib\imgui_widgets.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>

@@ -1,5 +1,7 @@
-﻿// ウィンドウ関連の処理
+﻿// Dear ImGui を使う
 #define USE_IMGUI
+
+// ウィンドウ関連の処理
 #include "Window.h"
 
 // 光源データ
