@@ -27,8 +27,13 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 //! \cond INCLUDE_OPENGL_FUNCTIONS
 
+// macOS で "OpenGL deprecated の警告を出さない
+#define GL_SILENCE_DEPRECATION
+
 // GLFW では OpenGL の Core Profile を使う
 #define GLFW_INCLUDE_GLCOREARB
+
+// フレームワークに GLFW 3 を使う
 #include <GLFW/glfw3.h>
 
 // Windows (Visual Studio) 用の設定
