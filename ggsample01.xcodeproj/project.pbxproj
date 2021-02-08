@@ -35,7 +35,7 @@
 		7DAF9071240F5D2D001E5CE2 /* logo.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = logo.obj; sourceTree = "<group>"; };
 		7DAF9072240F5D2D001E5CE2 /* logo.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = logo.mtl; sourceTree = "<group>"; };
 		7DD33CCB246A757600E99D6A /* ggsample01.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ggsample01.cpp; sourceTree = "<group>"; };
-		7DDCB0F723EDA73D007C2AD3 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		7DDCB0F723EDA73D007C2AD3 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; tabWidth = 2; };
 		7DF4DDCD23EF0E40005D4BCB /* imgui_impl_opengl3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_opengl3.cpp; path = lib/imgui_impl_opengl3.cpp; sourceTree = "<group>"; };
 		7DF4DDCE23EF0E40005D4BCB /* imgui_impl_glfw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_glfw.cpp; path = lib/imgui_impl_glfw.cpp; sourceTree = "<group>"; };
 		7DF4DDCF23EF0E40005D4BCB /* imgui_widgets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_widgets.cpp; path = lib/imgui_widgets.cpp; sourceTree = "<group>"; };

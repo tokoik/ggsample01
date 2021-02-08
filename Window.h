@@ -43,7 +43,7 @@ using namespace gg;
 
 // Oculus Rift SDK ライブラリ (LibOVR) の組み込み
 #ifdef USE_OCULUS_RIFT
-#  if defined(_MSC_VER)
+#  ifdef _MSC_VER
 #    define GLFW_EXPOSE_NATIVE_WIN32
 #    define GLFW_EXPOSE_NATIVE_WGL
 #    include <GLFW/glfw3native.h>
@@ -85,6 +85,9 @@ class Window
 
   // ビューポートの横幅と高さ
   std::array<GLsizei, 2> size;
+
+  // フレームバッファの横幅と高さ
+  std::array<GLsizei, 2> fboSize;
 
   // ビューポートのアスペクト比
   GLfloat aspect;
@@ -203,7 +206,7 @@ class Window
   {
     ovrGraphicsLuid luid = ovrGraphicsLuid();
 
-#    if defined(_MSC_VER)
+#    ifdef _MSC_VER
     IDXGIFactory *factory(nullptr);
 
     if (SUCCEEDED(CreateDXGIFactory(IID_PPV_ARGS(&factory))))
@@ -286,7 +289,8 @@ class Window
       instance->aspect = static_cast<GLfloat>(width) / static_cast<GLfloat>(height);
 
       // ウィンドウ全体に描画する
-      glViewport(0, 0, width, height);
+      glfwGetFramebufferSize(window, &instance->fboSize[0], &instance->fboSize[1]);
+      glViewport(0, 0, instance->fboSize[0], instance->fboSize[1]);
 #endif
 
       // ユーザー定義のコールバック関数の呼び出し
@@ -536,6 +540,9 @@ class Window
   //
   static void glfwErrorCallback(int error, const char *description)
   {
+#ifdef __aarch64__
+    if (error == 65544) return;
+#endif
     throw std::runtime_error(description);
   }
 
@@ -698,7 +705,7 @@ public:
     // Oculus Rift の情報を取り出す
     hmdDesc = ovr_GetHmdDesc(session);
 
-#  if defined(_DEBUG)
+#  ifdef _DEBUG
     // Oculus Rift の情報を表示する
     std::cerr
       << "\nProduct name: " << hmdDesc.ProductName
@@ -1289,7 +1296,7 @@ public:
   {
 #ifndef USE_OCULUS_RIFT
     // ウィンドウ全体に描画する
-    glViewport(0, 0, size[0], size[1]);
+    glViewport(0, 0, fboSize[0], fboSize[1]);
 #endif
   }
 
