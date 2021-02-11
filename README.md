@@ -12,6 +12,7 @@ OpenGL の開発環境を整備してください。
 
 * Linux Mint 18.3 / Windows 10 (Visual Studio 2017) / macOS 10.15 (Xcode 11) 以降に対応しています。
 * OpenGL 4.1 以降が実行できる環境 (対応した GPU を搭載したビデオカード や CPU) が必要です。
+* macOS では M1 Mac (Apple Silicon) に対応した Universal Binary を作成するようにしています。
 
 ## 補足
 
@@ -139,15 +140,15 @@ int main()
     if (ImGui::Button("Quit")) window.setClose();
     ImGui::End();
 
-    // ImGui のフレームに描画する
-    ImGui::Render();
-
     // ウィンドウを消去する
     glClear(GL_COLOR_BUFFER_BIT);
 
     //
     // ここで OpenGL による描画を行う
     //
+
+    // ImGui のフレームに描画する
+    ImGui::Render();
 
     // カラーバッファを入れ替えてイベントを取り出す
     window.swapBuffers();
@@ -170,42 +171,14 @@ int main()
 > imgui_draw.cpp  
 > imgui_impl_glfw.cpp  
 > imgui_impl_opengl3.cpp  
+> imgui_tables.cpp  
 > imgui_widgets.cpp  
 
-#### Dear ImGui の変更点
+#### imconfig.h の変更点
 
-このリポジトリに含めている Dear ImGui のソースプログラムには、以下の変更を加えてあります。まず、Dear ImGui は使用している OpenGL のローダを自動判別するのですが、この授業オリジナルの gg.h / gg.cpp は見つけてくれません。そこで、この中の imconfig.h の**最後**に、以下の定義を追加しています (このリポジトリでは Dear ImGui のファイルを別のディレクトリに分けたので，下記は実際には `"../gg.h"` になっています)。
+Dear ImGui は使用している OpenGL のローダを自動判別するのですが、この授業オリジナルの gg.h / gg.cpp は見つけてくれません。そこで、この中の imconfig.h の**最後**に、以下の定義を追加しています。
 
 ```cpp
 // My custum OpenGL loader
-#define IMGUI_IMPL_OPENGL_LOADER_CUSTOM "gg.h"
-```
-
-また、Dear ImGui の OpenGL インプリメンテーション用の関数が納められている imgui_impl_opengl3.cpp では、以下の 2 箇所を変更しています (これらの変更を行わなくても動作します)。ひとつ目は、`g_GlVersion` を求める際の `minor` を 100 倍するようにしました。
-
-```cpp
-    g_GlVersion = major * 1000 + minor;
-```
-↓
-```cpp
-    g_GlVersion = major * 1000 + minor * 100;
-```
-
-ふたつ目は、`ImGui_ImplOpenGL3_Init(glsl_version)` の引数の `glsl_version` が `NULL` のときに、それを `"#version 130"` (すなわち OpenGL 3.0) に決め打ちせずに、`g_GlVersion` の値で決めるようにしました。
-
-```cpp
-    if (glsl_version == NULL)
-        glsl_version = "#version 130";
-```
-↓
-```cpp
-    char my_version[20];
-    if (glsl_version == nullptr)
-    {
-        unsigned int version(g_GlVersion / 10);
-        if (version < 300) version -= 90;
-        else if (version < 330) version -= 170;
-        sprintf(my_version, "#version %-3u", version);
-        glsl_version = my_version;
-    }
+#define IMGUI_IMPL_OPENGL_LOADER_CUSTOM "../gg.h"
 ```
