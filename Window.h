@@ -96,7 +96,7 @@ class Window
   std::array<GLfloat, 2> velocity;
 
   // マウスボタンの状態
-  bool status[BUTTON_COUNT];
+  std::array<bool, BUTTON_COUNT> status;
 
   // ユーザインタフェースのデータ構造
   struct UserInterface

@@ -3181,7 +3181,7 @@ void gg::GgNormalTexture::load(const char *name, float nz, GLenum internal)
   ggCreateNormalMap(hmap.data(), width, height, format, nz, internal, nmap);
 }
 
-// \cond
+//! \cond
 /*
 ** OBJ ファイルの読み込みに使うデータ型と関数
 */
@@ -3718,7 +3718,7 @@ namespace gg
     return true;
   }
 }
-// \endcond
+//! \endcond
 
 /*
 ** 三角形分割された Alias OBJ 形式のファイルと MTL ファイルを読み込む (Arrays 形式)
