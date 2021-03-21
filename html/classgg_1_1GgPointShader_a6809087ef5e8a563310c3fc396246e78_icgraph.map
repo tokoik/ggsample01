@@ -1,6 +1,6 @@
 <map id="gg::GgPointShader::use" name="gg::GgPointShader::use">
 <area shape="rect" id="node1" title="シェーダプログラムの使用を開始する." alt="" coords="443,31,604,57"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgPointShader.html#a2a41d6e019fea4ac9e8633b988f5fa91" title="投影変換行列を設定してシェーダプログラムの使用を開始する." alt="" coords="229,5,390,32"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgSimpleShader.html#aaa721d9ae49296194f949d6ba2f927db" title="シェーダプログラムの使用を開始する." alt="" coords="224,56,395,83"/>
-<area shape="rect" id="node4" href="$classgg_1_1GgSimpleShader.html#a4931140d1083f3b0ce791d5302c32179" title="投影変換行列とモデルビュー変換行列と法線変換行列を設定してシェーダプログラムの使用を開始する." alt="" coords="5,56,176,83"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgSimpleShader.html#aaa721d9ae49296194f949d6ba2f927db" title="シェーダプログラムの使用を開始する." alt="" coords="224,5,395,32"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgPointShader.html#a2a41d6e019fea4ac9e8633b988f5fa91" title="投影変換行列を設定してシェーダプログラムの使用を開始する." alt="" coords="229,56,390,83"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgSimpleShader.html#a4931140d1083f3b0ce791d5302c32179" title="投影変換行列とモデルビュー変換行列と法線変換行列を設定してシェーダプログラムの使用を開始する." alt="" coords="5,5,176,32"/>
 </map>

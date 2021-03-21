@@ -1,0 +1,6 @@
+<map id="gg::GgUniformBuffer::copy" name="gg::GgUniformBuffer::copy">
+<area shape="rect" id="node1" title="別のバッファオブジェクトからデータを複写する." alt="" coords="5,71,144,112"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgUniformBuffer.html#ad327c1c3f214d85efcbd28db019bbaa4" title="ユニフォームバッファオブジェクト名を取り出す." alt="" coords="192,5,331,47"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgUniformBuffer.html#a057fe919fb0bf8627bcde7aff89d5de2" title="データの数を取り出す." alt="" coords="192,71,331,112"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506" title="ユニフォームバッファオブジェクトのアライメントを考慮したデータの間隔を取り出す." alt="" coords="192,136,331,177"/>
+</map>
