@@ -1,4 +1,0 @@
-<map id="gg::GgTrackball::motion" name="gg::GgTrackball::motion">
-<area shape="rect" id="node1" title="回転の変換行列を計算する." alt="" coords="204,5,364,32"/>
-<area shape="rect" id="node2" href="$classWindow.html#aa948dc12020c54ffd0cd1ebdfbfe65f1" title="イベントを取得してループを継続すべきかどうか調べる." alt="" coords="5,5,156,32"/>
-</map>

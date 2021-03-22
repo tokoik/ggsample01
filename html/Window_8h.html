@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: Window.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -29,10 +29,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.17 -->
+<!-- 構築: Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索');
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -63,47 +63,39 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">クラス</a> &#124;
-<a href="#define-members">マクロ定義</a>  </div>
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
   <div class="headertitle">
 <div class="title">Window.h ファイル</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.  
+<a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="gg_8h_source.html">gg.h</a>&quot;</code><br />
-<code>#include &lt;OVR_CAPI_GL.h&gt;</code><br />
-<code>#include &lt;Extras/OVR_Math.h&gt;</code><br />
 <code>#include &quot;imgui.h&quot;</code><br />
 <code>#include &quot;imgui_impl_glfw.h&quot;</code><br />
 <code>#include &quot;imgui_impl_opengl3.h&quot;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;stdexcept&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Window.h の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="Window_8h__incl.png" border="0" usemap="#Window_8h" alt=""/></div>
-<map name="Window_8h" id="Window_8h">
-<area shape="rect" title=" " alt="" coords="1030,5,1109,32"/>
-<area shape="rect" href="gg_8h.html" title=" " alt="" coords="127,95,174,121"/>
-<area shape="rect" title=" " alt="" coords="199,95,321,121"/>
-<area shape="rect" title=" " alt="" coords="345,95,484,121"/>
-<area shape="rect" title=" " alt="" coords="508,95,572,121"/>
-<area shape="rect" title=" " alt="" coords="597,80,790,136"/>
-<area shape="rect" title=" " alt="" coords="814,95,871,121"/>
-<area shape="rect" title=" " alt="" coords="896,95,965,121"/>
-<area shape="rect" title=" " alt="" coords="990,95,1058,121"/>
-<area shape="rect" title=" " alt="" coords="1082,95,1147,121"/>
-<area shape="rect" title=" " alt="" coords="1172,95,1241,121"/>
-<area shape="rect" title=" " alt="" coords="1266,95,1390,121"/>
-<area shape="rect" title=" " alt="" coords="1415,95,1561,121"/>
-<area shape="rect" title=" " alt="" coords="1585,95,1644,121"/>
-<area shape="rect" title=" " alt="" coords="1669,95,1729,121"/>
-<area shape="rect" title=" " alt="" coords="1753,95,1831,121"/>
-<area shape="rect" title=" " alt="" coords="1856,95,1928,121"/>
-<area shape="rect" title=" " alt="" coords="5,184,56,211"/>
-<area shape="rect" title=" " alt="" coords="80,184,136,211"/>
-<area shape="rect" title=" " alt="" coords="160,184,229,211"/>
-<area shape="rect" title=" " alt="" coords="253,184,317,211"/>
+<div class="center"><img src="Window_8h__incl.png" border="0" usemap="#aWindow_8h" alt=""/></div>
+<map name="aWindow_8h" id="aWindow_8h">
+<area shape="rect" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理." alt="" coords="475,5,553,32"/>
+<area shape="rect" href="gg_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言." alt="" coords="5,80,52,107"/>
+<area shape="rect" title=" " alt="" coords="77,80,141,107"/>
+<area shape="rect" title=" " alt="" coords="165,80,289,107"/>
+<area shape="rect" title=" " alt="" coords="314,80,461,107"/>
+<area shape="rect" title=" " alt="" coords="485,80,543,107"/>
+<area shape="rect" title=" " alt="" coords="568,80,628,107"/>
+<area shape="rect" title=" " alt="" coords="652,80,717,107"/>
+<area shape="rect" title=" " alt="" coords="741,80,820,107"/>
+<area shape="rect" title=" " alt="" coords="845,80,917,107"/>
 </map>
 </div>
 </div>
@@ -117,12 +109,23 @@ Window.h の依存先関係図:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 マクロ定義</h2></td></tr>
-<tr class="memitem:a6252aa0ff714f6d46f98ca2877895928"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Window_8h.html#a6252aa0ff714f6d46f98ca2877895928">USE_OCULUS_RIFT</a></td></tr>
-<tr class="separator:a6252aa0ff714f6d46f98ca2877895928"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39105c39ae1d1593f65cfda47b181814"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Window_8h.html#a39105c39ae1d1593f65cfda47b181814">USE_IMGUI</a></td></tr>
 <tr class="separator:a39105c39ae1d1593f65cfda47b181814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:aa9261a3b0d2fddfa82d9d5d8561a8573"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Window_8h.html#aa9261a3b0d2fddfa82d9d5d8561a8573">BUTTON_COUNT</a> (3)</td></tr>
+<tr class="separator:aa9261a3b0d2fddfa82d9d5d8561a8573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0a8a90d7635f6858be73a4458406040"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Window_8h.html#af0a8a90d7635f6858be73a4458406040">INTERFACE_COUNT</a> (3)</td></tr>
+<tr class="separator:af0a8a90d7635f6858be73a4458406040"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">マクロ定義詳解</h2>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理. </p>
+<dl class="section author"><dt>著者</dt><dd>Kohe Tokoi </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>March 31, 2021 </dd></dl>
+
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> に定義があります。</p>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
 <a id="a39105c39ae1d1593f65cfda47b181814"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a39105c39ae1d1593f65cfda47b181814">&#9670;&nbsp;</a></span>USE_IMGUI</h2>
 
@@ -135,32 +138,80 @@ Window.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00054">54</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00039">39</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a6252aa0ff714f6d46f98ca2877895928"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6252aa0ff714f6d46f98ca2877895928">&#9670;&nbsp;</a></span>USE_OCULUS_RIFT</h2>
+<h2 class="groupheader">関数詳解</h2>
+<a id="aa9261a3b0d2fddfa82d9d5d8561a8573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9261a3b0d2fddfa82d9d5d8561a8573">&#9670;&nbsp;</a></span>BUTTON_COUNT()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">#define USE_OCULUS_RIFT</td>
+          <td class="memname">constexpr int BUTTON_COUNT </td>
+          <td>(</td>
+          <td class="paramtype">3&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="Window_8h_aa9261a3b0d2fddfa82d9d5d8561a8573_icgraph.png" border="0" usemap="#aWindow_8h_aa9261a3b0d2fddfa82d9d5d8561a8573_icgraph" alt=""/></div>
+<map name="aWindow_8h_aa9261a3b0d2fddfa82d9d5d8561a8573_icgraph" id="aWindow_8h_aa9261a3b0d2fddfa82d9d5d8561a8573_icgraph">
+<area shape="rect" title=" " alt="" coords="227,107,351,133"/>
+<area shape="rect" href="classWindow.html#a8214100c0a26c4de5d691fd230c32355" title="トラックボール処理を考慮したマウスによる現在位置のポインタを得る." alt="" coords="21,5,163,32"/>
+<area shape="rect" href="classWindow.html#af1fd1eb71ea45357acb3c7f24964297a" title="トラックボールの回転変換行列を得る." alt="" coords="19,56,165,83"/>
+<area shape="rect" href="classWindow.html#a6c933a0820a5968ae2ed26bca498f08f" title="トラックボールの回転変換行列を得る." alt="" coords="5,107,179,133"/>
+<area shape="rect" href="classWindow.html#a9988e8c5d5ed2bd21c894773cf767459" title="トラックボール処理を考慮したマウスによる平行移動の変換行列を得る." alt="" coords="13,157,171,184"/>
+<area shape="rect" href="classWindow.html#aa948dc12020c54ffd0cd1ebdfbfe65f1" title="イベントを取得してループを継続すべきかどうか調べる." alt="" coords="17,208,167,235"/>
+</map>
+</div>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00033">33</a> 行目に定義があります。</p>
+</div>
+</div>
+<a id="af0a8a90d7635f6858be73a4458406040"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0a8a90d7635f6858be73a4458406040">&#9670;&nbsp;</a></span>INTERFACE_COUNT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int INTERFACE_COUNT </td>
+          <td>(</td>
+          <td class="paramtype">3&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2020年02月09日(日) 14時55分08秒作成 - ゲームグラフィックス特論 / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
+2021年03月22日(月) 23時39分51秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

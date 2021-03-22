@@ -1,4 +1,0 @@
-<map id="Window::calcTranslation" name="Window::calcTranslation">
-<area shape="rect" id="node1" title="トラックボール処理を考慮した平行移動量を計算する (X, Y のみ, Z は wheel() で計算する)." alt="" coords="5,5,168,32"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgTrackball.html#aac13a2715cc1128935d34b6eafb226e1" title="トラックボール処理の開始位置を取り出す." alt="" coords="216,5,383,32"/>
-</map>

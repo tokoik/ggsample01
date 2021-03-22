@@ -4,7 +4,7 @@
 ** \mainpage ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版
 **
 
-Copyright (c) 2011-2019 Kohe Tokoi. All Rights Reserved.
+Copyright (c) 2011-2021 Kohe Tokoi. All Rights Reserved.
 
 Permission is hereby granted, free of charge,  to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,15 +25,21 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 **
 */
 
-//! \cond INCLUDE_OPENGL_FUNCTIONS
+/*!
+** \file gg.h
+** \brief ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言.
+** \author Kohe Tokoi
+** \date March 31, 2021
+** \cond INCLUDE_OPENGL_FUNCTIONS
+*/
 
 // macOS で "OpenGL deprecated の警告を出さない
-#define GL_SILENCE_DEPRECATION
-
-// GLFW では OpenGL の Core Profile を使う
-#define GLFW_INCLUDE_GLCOREARB
+#if defined(__APPLE__)
+#  define GL_SILENCE_DEPRECATION
+#endif
 
 // フレームワークに GLFW 3 を使う
+#define GLFW_INCLUDE_GLCOREARB
 #include <GLFW/glfw3.h>
 
 // Windows (Visual Studio) 用の設定
@@ -5004,7 +5010,10 @@ namespace gg
   public:
 
     //! \brief コンストラクタ.
-    GgPointShader() {}
+    GgPointShader()
+      : mpLoc(-1)
+      , mvLoc(-1)
+    {}
 
     //! \brief コンストラクタ
     //!   \param vert バーテックスシェーダのソースファイル名.
@@ -5014,6 +5023,22 @@ namespace gg
     //!   \param varyings フィードバックする varying 変数のリスト.
     GgPointShader(const char *vert, const char *frag = 0,
       const char *geom = 0, GLint nvarying = 0, const char **varyings = 0)
+      : GgPointShader()
+    {
+      load(vert, frag, geom, nvarying, varyings);
+    }
+
+    //! \brief デストラクタ.
+    virtual ~GgPointShader() {}
+
+    //! \brief シェーダのソースファイルを読み込む.
+    //!   \param vert バーテックスシェーダのソースファイル名.
+    //!   \param frag フラグメントシェーダのソースファイル名 (0 なら不使用).
+    //!   \param geom ジオメトリシェーダのソースファイル名 (0 なら不使用).
+    //!   \param nvarying フィードバックする varying 変数の数 (0 なら不使用).
+    //!   \param varyings フィードバックする varying 変数のリスト.
+    void load(const char* vert, const char* frag = 0,
+      const char* geom = 0, GLint nvarying = 0, const char** varyings = 0)
     {
       // シェーダを作成する
       shader.reset(new GgShader(vert, frag, geom, nvarying, varyings));
@@ -5025,9 +5050,6 @@ namespace gg
       mpLoc = glGetUniformLocation(program, "mp");
       mvLoc = glGetUniformLocation(program, "mv");
     }
-
-    //! \brief デストラクタ.
-    virtual ~GgPointShader() {}
 
     //! \brief 投影変換行列を設定する.
     //!   \param mp GLfloat 型の 16 要素の配列変数に格納された投影変換行列.
@@ -5144,7 +5166,12 @@ namespace gg
   public:
 
     //! \brief コンストラクタ.
-    GgSimpleShader() {}
+    GgSimpleShader()
+      : GgPointShader()
+      , materialIndex(-1)
+      , lightIndex(-1)
+      , mnLoc(-1)
+    {}
 
     //! \brief コンストラクタ.
     //!   \param vert バーテックスシェーダのソースファイル名.
@@ -5152,8 +5179,11 @@ namespace gg
     //!   \param geom ジオメトリシェーダのソースファイル名 (0 なら不使用).
     //!   \param nvarying フィードバックする varying 変数の数 (0 なら不使用).
     //!   \param varyings フィードバックする varying 変数のリスト.
-    GgSimpleShader(const char *vert, const char *frag = 0,
-      const char *geom = 0, GLint nvarying = 0, const char **varyings = 0);
+    GgSimpleShader(const char* vert, const char* frag = 0,
+      const char* geom = 0, GLint nvarying = 0, const char** varyings = 0)
+    {
+      load(vert, frag, geom, nvarying, varyings);
+    }
 
     //! \brief コピーコンストラクタ.
     GgSimpleShader(const GgSimpleShader &o)
@@ -5165,7 +5195,7 @@ namespace gg
     //! \brief デストラクタ.
     virtual ~GgSimpleShader() {}
 
-    // 代入
+    //! \brief 代入演算子
     GgSimpleShader &operator=(const GgSimpleShader &o)
     {
       if (&o != this)
@@ -5178,6 +5208,10 @@ namespace gg
 
       return *this;
     }
+
+    //! \brief シェーダのソースファイルの読み込み
+    void load(const char* vert, const char* frag = 0,
+      const char* geom = 0, GLint nvarying = 0, const char** varyings = 0);
 
     //! \brief モデルビュー変換行列と法線変換行列を設定する.
     //!   \param mv GLfloat 型の 16 要素の配列変数に格納されたモデルビュー変換行列.

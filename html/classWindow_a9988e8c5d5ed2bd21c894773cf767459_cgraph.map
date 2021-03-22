@@ -1,5 +1,6 @@
 <map id="Window::getTranslation" name="Window::getTranslation">
-<area shape="rect" id="node1" title="トラックボール処理を考慮したマウスによる平行移動の変換行列を得る." alt="" coords="5,5,163,32"/>
-<area shape="rect" id="node2" href="$namespacegg.html#a1c44cf87582b032f9eeac980ed17f73b" title="平行移動の変換行列を返す." alt="" coords="211,5,321,32"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgMatrix.html#a1411224c2d99609e2a9c8753903df624" title="平行移動の変換行列を格納する." alt="" coords="369,5,552,32"/>
+<area shape="rect" id="node1" title="トラックボール処理を考慮したマウスによる平行移動の変換行列を得る." alt="" coords="5,31,163,57"/>
+<area shape="rect" id="node2" href="$Window_8h.html#aa9261a3b0d2fddfa82d9d5d8561a8573" title=" " alt="" coords="211,5,335,32"/>
+<area shape="rect" id="node3" href="$namespacegg.html#a1c44cf87582b032f9eeac980ed17f73b" title="平行移動の変換行列を返す." alt="" coords="217,56,328,83"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgMatrix.html#a1411224c2d99609e2a9c8753903df624" title="平行移動の変換行列を格納する." alt="" coords="383,56,565,83"/>
 </map>

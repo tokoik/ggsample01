@@ -1,9 +1,9 @@
 <map id="gg::GgSimpleShader::loadMatrix" name="gg::GgSimpleShader::loadMatrix">
-<area shape="rect" id="node1" title="投影変換行列とモデルビュー変換行列を設定しモデルビュー変換行列から求めた法線変換行列を設定する." alt="" coords="5,68,148,109"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgSimpleShader.html#a236d3a1d071666d7fe22e7d7b5eb0874" title="投影変換行列とモデルビュー変換行列と法線変換行列を設定する." alt="" coords="197,39,339,80"/>
-<area shape="rect" id="node6" href="$classgg_1_1GgMatrix.html#a738782ec492a8ec7927de80c1de4c820" title="法線変換行列を返す." alt="" coords="196,105,340,131"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgPointShader.html#aa852790b42b43a23161fb86d551cb33b" title="投影変換行列とモデルビュー変換行列を設定する." alt="" coords="403,39,543,80"/>
+<area shape="rect" id="node1" title="投影変換行列とモデルビュー変換行列を設定しモデルビュー変換行列から求めた法線変換行列を設定する." alt="" coords="5,67,148,108"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgSimpleShader.html#a236d3a1d071666d7fe22e7d7b5eb0874" title="投影変換行列とモデルビュー変換行列と法線変換行列を設定する." alt="" coords="197,37,339,79"/>
+<area shape="rect" id="node6" href="$classgg_1_1GgMatrix.html#a738782ec492a8ec7927de80c1de4c820" title="法線変換行列を返す." alt="" coords="196,103,340,130"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgPointShader.html#aa852790b42b43a23161fb86d551cb33b" title="投影変換行列とモデルビュー変換行列を設定する." alt="" coords="403,37,543,79"/>
 <area shape="rect" id="node4" href="$classgg_1_1GgPointShader.html#ac6e9398fa71096e9866fcd84cb542a91" title="モデルビュー変換行列を設定する." alt="" coords="607,5,748,47"/>
 <area shape="rect" id="node5" href="$classgg_1_1GgPointShader.html#a35ef8670f580eb11d40386aa63ac615b" title="投影変換行列を設定する." alt="" coords="607,71,747,112"/>
-<area shape="rect" id="node7" href="$classgg_1_1GgMatrix.html#afd68213cca68bbf403e86935e86b1096" title="法線変換行列を格納する." alt="" coords="388,105,559,131"/>
+<area shape="rect" id="node7" href="$classgg_1_1GgMatrix.html#afd68213cca68bbf403e86935e86b1096" title="法線変換行列を格納する." alt="" coords="388,103,559,130"/>
 </map>

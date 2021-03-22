@@ -1,8 +1,10 @@
-﻿/*
+﻿#include "gg.h"
+
+/*
 ** ゲームグラフィックス特論用補助プログラム GLFW3 版
 **
 
-Copyright (c) 2011-2019 Kohe Tokoi. All Rights Reserved.
+Copyright (c) 2011-2021 Kohe Tokoi. All Rights Reserved.
 
 Permission is hereby granted, free of charge,  to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,8 +25,13 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 **
 */
 
-// クラス定義
-#include "gg.h"
+/*!
+** \file gg.cpp
+** \brief ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の定義.
+** \author Kohe Tokoi
+** \date March 31, 2021
+** \cond INCLUDE_OPENGL_FUNCTIONS
+*/
 
 // 標準ライブラリ
 #include <cmath>
@@ -38,8 +45,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <string>
 #include <memory>
 #include <map>
-
-//! \cond INCLUDE_OPENGL_FUNCTIONS
 
 //! \def Alias OBJ ファイルからテクスチャ座標も読み込むなら 1
 #define READ_TEXTURE_COORDINATE_FROM_OBJ 0
@@ -5646,17 +5651,17 @@ void gg::GgSimpleShader::MaterialBuffer::loadShininess(const GLfloat *shininess,
 }
 
 /*
-** 三角形に単純な陰影付けを行うシェーダ：コンストラクタ
+** 三角形に単純な陰影付けを行うシェーダ：シェーダのソースファイルの読み込み
 */
-gg::GgSimpleShader::GgSimpleShader(const char *vert, const char *frag,
-  const char *geom, GLint nvarying, const char **varyings)
-  : GgPointShader(vert, frag, geom, nvarying, varyings)
-  , materialIndex(glGetUniformBlockIndex(get(), "Material"))
-  , lightIndex(glGetUniformBlockIndex(get(), "Light"))
-  , mnLoc(glGetUniformLocation(get(), "mn"))
+void gg::GgSimpleShader::load(const char* vert, const char* frag,
+  const char* geom, GLint nvarying, const char** varyings)
 {
-  glUniformBlockBinding(get(), materialIndex, 1);
+  GgPointShader::load(vert, frag, geom, nvarying, varyings);
+  mnLoc = glGetUniformLocation(get(), "mn");
+  lightIndex = glGetUniformBlockIndex(get(), "Light");
   glUniformBlockBinding(get(), lightIndex, 0);
+  materialIndex = glGetUniformBlockIndex(get(), "Material");
+  glUniformBlockBinding(get(), materialIndex, 1);
 }
 
 /*
