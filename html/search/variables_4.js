@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['normal_530',['normal',['../structgg_1_1GgVertex.html#a33f0042dbe503f3d31dddd2dd5af50f9',1,'gg::GgVertex']]]
+  ['light_541',['light',['../ggsample01_8cpp.html#a0f01dca12a750b7784d0d97c670a4e5e',1,'ggsample01.cpp']]]
 ];

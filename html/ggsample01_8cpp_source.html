@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ゲームグラフィックス特論: ggsample01.cpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ゲームグラフィックス特論
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ggsample01.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ggsample01_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Dear ImGui を使う</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno"><a class="line" href="ggsample01_8cpp.html#a39105c39ae1d1593f65cfda47b181814">    2</a></span>&#160;<span class="preprocessor">#define USE_IMGUI</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// ウィンドウ関連の処理</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Window_8h.html">Window.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// 光源データ</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="ggsample01_8cpp.html#a0f01dca12a750b7784d0d97c670a4e5e">    8</a></span>&#160;<a class="code" href="structgg_1_1GgSimpleShader_1_1Light.html">GgSimpleShader::Light</a> <a class="code" href="ggsample01_8cpp.html#a0f01dca12a750b7784d0d97c670a4e5e">light</a> =</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  { 0.2f, 0.2f, 0.2f, 1.0f }, <span class="comment">// 環境光成分</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  { 1.0f, 1.0f, 1.0f, 0.0f }, <span class="comment">// 拡散反射光成分</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  { 1.0f, 1.0f, 1.0f, 0.0f }, <span class="comment">// 鏡面反射光成分</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  { 0.0f, 0.0f, 1.0f, 1.0f }  <span class="comment">// 光源位置</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;};</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// アプリケーション本体</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="ggsample01_8cpp.html#abeb0715aa59f19646ce1bd7851dda276">   19</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="ggsample01_8cpp.html#abeb0715aa59f19646ce1bd7851dda276">app</a>()</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="comment">// ウィンドウを作成する</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="classWindow.html">Window</a> window(<span class="stringliteral">&quot;ggsample01&quot;</span>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="comment">// シェーダを作成する</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">const</span> <a class="code" href="classgg_1_1GgSimpleShader.html">GgSimpleShader</a> simple(<span class="stringliteral">&quot;simple.vert&quot;</span>, <span class="stringliteral">&quot;simple.frag&quot;</span>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="comment">// 図形データを読み込む (大きさを正規化する)</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">const</span> <a class="code" href="classgg_1_1GgSimpleObj.html">GgSimpleObj</a> object(<span class="stringliteral">&quot;logo.obj&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="comment">// 光源データから光源のバッファオブジェクトを作成する</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">const</span> <a class="code" href="classgg_1_1GgSimpleShader_1_1LightBuffer.html">GgSimpleShader::LightBuffer</a> lightBuffer(<a class="code" href="ggsample01_8cpp.html#a0f01dca12a750b7784d0d97c670a4e5e">light</a>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="comment">// ビュー変換行列を設定する</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">const</span> <a class="code" href="classgg_1_1GgMatrix.html">GgMatrix</a> mv(<a class="code" href="namespacegg.html#a2924895ad284e08b08a2cfd115c5a7bf">ggLookat</a>(0.0f, 0.0f, 5.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f));</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#ifdef USE_IMGUI</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="comment">// ImGui の初期設定</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="comment">//ImGuiIO&amp; io = ImGui::GetIO();</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="comment">//io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="comment">//io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="comment">// Setup Dear ImGui style</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="comment">//ImGui::StyleColorsDark();</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="comment">//ImGui::StyleColorsClassic();</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="comment">// Load Fonts</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="comment">// - If no fonts are loaded, dear imgui will use the default font. You can also load multiple fonts and use ImGui::PushFont()/PopFont() to select them.</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="comment">// - AddFontFromFileTTF() will return the ImFont* so you can store it if you need to select the font among multiple.</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="comment">// - If the file cannot be loaded, the function will return NULL. Please handle those errors in your application (e.g. use an assertion, or display an error and quit).</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="comment">// - The fonts will be rasterized at a given size (w/ oversampling) and stored into a texture when calling ImFontAtlas::Build()/GetTexDataAsXXXX(), which ImGui_ImplXXXX_NewFrame below will call.</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="comment">// - Read &#39;docs/FONTS.txt&#39; for more instructions and details.</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="comment">// - Remember that in C/C++ if you want to include a backslash \ in a string literal you need to write a double backslash \\ !</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="comment">//io.Fonts-&gt;AddFontDefault();</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="comment">//io.Fonts-&gt;AddFontFromFileTTF(&quot;../../misc/fonts/Roboto-Medium.ttf&quot;, 16.0f);</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="comment">//io.Fonts-&gt;AddFontFromFileTTF(&quot;../../misc/fonts/Cousine-Regular.ttf&quot;, 15.0f);</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="comment">//io.Fonts-&gt;AddFontFromFileTTF(&quot;../../misc/fonts/DroidSans.ttf&quot;, 16.0f);</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="comment">//io.Fonts-&gt;AddFontFromFileTTF(&quot;../../misc/fonts/ProggyTiny.ttf&quot;, 10.0f);</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="comment">//ImFont* font = io.Fonts-&gt;AddFontFromFileTTF(&quot;c:\\Windows\\Fonts\\ArialUni.ttf&quot;, 18.0f, NULL, io.Fonts-&gt;GetGlyphRangesJapanese());</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="comment">//IM_ASSERT(font != NULL);</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="comment">// 背景色を設定する</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  glClearColor(0.1f, 0.2f, 0.3f, 0.0f);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="comment">// 隠面消去処理を設定する</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  glEnable(GL_DEPTH_TEST);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  glEnable(GL_CULL_FACE);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="comment">// ウィンドウが開いている間繰り返す</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordflow">while</span> (window)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">// ウィンドウを消去する</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">// オブジェクトのモデル変換行列を設定する</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="classgg_1_1GgMatrix.html">GgMatrix</a> mm(window.<a class="code" href="classWindow.html#af1fd1eb71ea45357acb3c7f24964297a">getTrackball</a>());</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#ifdef USE_IMGUI</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">// ImGui によるユーザインタフェース</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">// オブジェクトのオイラー角</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">float</span> roll, pitch, yaw;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">// ImGui のフレームを準備する</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    ImGui::NewFrame();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">// ImGui のフレームに一つ目の ImGui のウィンドウを描く</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    ImGui::Begin(<span class="stringliteral">&quot;Control panel&quot;</span>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    ImGui::Text(<span class="stringliteral">&quot;Frame rate: %6.2f fps&quot;</span>, ImGui::GetIO().Framerate);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    ImGui::SliderAngle(<span class="stringliteral">&quot;Roll&quot;</span>, &amp;roll);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    ImGui::SliderAngle(<span class="stringliteral">&quot;Pitch&quot;</span>, &amp;pitch);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    ImGui::SliderAngle(<span class="stringliteral">&quot;Yaw&quot;</span>, &amp;yaw);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">if</span> (ImGui::Button(<span class="stringliteral">&quot;Quit&quot;</span>)) window.<a class="code" href="classWindow.html#a7dd6ce09e1d68c8576376179aa54fc79">setClose</a>();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    ImGui::End();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="comment">// モデル変換行列にオイラー角を乗じる</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    mm = mm.<a class="code" href="classgg_1_1GgMatrix.html#a9fc25e411f5fc0ca8cd6bc2d03f06570">rotateY</a>(yaw).<a class="code" href="classgg_1_1GgMatrix.html#a673d91ac86c3109a0fc6c0839e5bebee">rotateX</a>(pitch).<a class="code" href="classgg_1_1GgMatrix.html#a5de975c07013aff7f31b0a45c58e9998">rotateZ</a>(roll);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">// 投影変換行列を設定する</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">const</span> <a class="code" href="classgg_1_1GgMatrix.html">GgMatrix</a> mp(<a class="code" href="namespacegg.html#a7dcbaa73755efd46f1f19b0b3a39b473">ggPerspective</a>(0.5f, window.<a class="code" href="classWindow.html#a2002afaa92caca147fb00a6ea2ef468b">getAspect</a>(), 1.0f, 15.0f));</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">// シェーダプログラムを指定する</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    simple.<a class="code" href="classgg_1_1GgSimpleShader.html#aaa721d9ae49296194f949d6ba2f927db">use</a>(mp, mv * mm, lightBuffer);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="comment">// 図形を描画する</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">object</span>.draw();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#ifdef USE_IMGUI</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="comment">// ImGui のフレームに描画する</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    ImGui::Render();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment">// カラーバッファを入れ替えてイベントを取り出す</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    window.<a class="code" href="classWindow.html#af6ffedb8d12d5551bdb4c298de87ed56">swapBuffers</a>();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
+<div class="ttc" id="aWindow_8h_html"><div class="ttname"><a href="Window_8h.html">Window.h</a></div><div class="ttdoc">ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.</div></div>
+<div class="ttc" id="aclassWindow_html"><div class="ttname"><a href="classWindow.html">Window</a></div><div class="ttdoc">ウィンドウ関連の処理.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00088">Window.h:89</a></div></div>
+<div class="ttc" id="aclassWindow_html_a2002afaa92caca147fb00a6ea2ef468b"><div class="ttname"><a href="classWindow.html#a2002afaa92caca147fb00a6ea2ef468b">Window::getAspect</a></div><div class="ttdeci">GLfloat getAspect() const</div><div class="ttdoc">ウィンドウのアスペクト比を得る.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l01296">Window.h:1296</a></div></div>
+<div class="ttc" id="aclassWindow_html_a7dd6ce09e1d68c8576376179aa54fc79"><div class="ttname"><a href="classWindow.html#a7dd6ce09e1d68c8576376179aa54fc79">Window::setClose</a></div><div class="ttdeci">void setClose(int flag=GLFW_TRUE) const</div><div class="ttdoc">ウィンドウのクローズフラグを設定する.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l01184">Window.h:1184</a></div></div>
+<div class="ttc" id="aclassWindow_html_af1fd1eb71ea45357acb3c7f24964297a"><div class="ttname"><a href="classWindow.html#af1fd1eb71ea45357acb3c7f24964297a">Window::getTrackball</a></div><div class="ttdeci">GgMatrix getTrackball(int button=GLFW_MOUSE_BUTTON_1) const</div><div class="ttdoc">トラックボールの回転変換行列を得る.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l01554">Window.h:1554</a></div></div>
+<div class="ttc" id="aclassWindow_html_af6ffedb8d12d5551bdb4c298de87ed56"><div class="ttname"><a href="classWindow.html#af6ffedb8d12d5551bdb4c298de87ed56">Window::swapBuffers</a></div><div class="ttdeci">void swapBuffers()</div><div class="ttdoc">カラーバッファを入れ替える.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l01251">Window.h:1251</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgMatrix_html"><div class="ttname"><a href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></div><div class="ttdoc">変換行列.</div><div class="ttdef"><b>Definition:</b> <a href="gg_8h_source.html#l01654">gg.h:1655</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgMatrix_html_a5de975c07013aff7f31b0a45c58e9998"><div class="ttname"><a href="classgg_1_1GgMatrix.html#a5de975c07013aff7f31b0a45c58e9998">gg::GgMatrix::rotateZ</a></div><div class="ttdeci">GgMatrix rotateZ(GLfloat a) const</div><div class="ttdoc">z 軸中心の回転変換を乗じた結果を返す.</div><div class="ttdef"><b>Definition:</b> <a href="gg_8h_source.html#l02210">gg.h:2210</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgMatrix_html_a673d91ac86c3109a0fc6c0839e5bebee"><div class="ttname"><a href="classgg_1_1GgMatrix.html#a673d91ac86c3109a0fc6c0839e5bebee">gg::GgMatrix::rotateX</a></div><div class="ttdeci">GgMatrix rotateX(GLfloat a) const</div><div class="ttdoc">x 軸中心の回転変換を乗じた結果を返す.</div><div class="ttdef"><b>Definition:</b> <a href="gg_8h_source.html#l02192">gg.h:2192</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgMatrix_html_a9fc25e411f5fc0ca8cd6bc2d03f06570"><div class="ttname"><a href="classgg_1_1GgMatrix.html#a9fc25e411f5fc0ca8cd6bc2d03f06570">gg::GgMatrix::rotateY</a></div><div class="ttdeci">GgMatrix rotateY(GLfloat a) const</div><div class="ttdoc">y 軸中心の回転変換を乗じた結果を返す.</div><div class="ttdef"><b>Definition:</b> <a href="gg_8h_source.html#l02201">gg.h:2201</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgSimpleObj_html"><div class="ttname"><a href="classgg_1_1GgSimpleObj.html">gg::GgSimpleObj</a></div><div class="ttdoc">Wavefront OBJ 形式のファイル (Arrays 形式).</div><div class="ttdef"><b>Definition:</b> <a href="gg_8h_source.html#l05763">gg.h:5764</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgSimpleShader_1_1LightBuffer_html"><div class="ttname"><a href="classgg_1_1GgSimpleShader_1_1LightBuffer.html">gg::GgSimpleShader::LightBuffer</a></div><div class="ttdoc">三角形に単純な陰影付けを行うシェーダが参照する光源データのユニフォームバッファオブジェクト.</div><div class="ttdef"><b>Definition:</b> <a href="gg_8h_source.html#l05296">gg.h:5298</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgSimpleShader_html"><div class="ttname"><a href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></div><div class="ttdoc">三角形に単純な陰影付けを行うシェーダ.</div><div class="ttdef"><b>Definition:</b> <a href="gg_8h_source.html#l05154">gg.h:5156</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgSimpleShader_html_aaa721d9ae49296194f949d6ba2f927db"><div class="ttname"><a href="classgg_1_1GgSimpleShader.html#aaa721d9ae49296194f949d6ba2f927db">gg::GgSimpleShader::use</a></div><div class="ttdeci">void use() const</div><div class="ttdoc">シェーダプログラムの使用を開始する.</div><div class="ttdef"><b>Definition:</b> <a href="gg_8h_source.html#l05592">gg.h:5592</a></div></div>
+<div class="ttc" id="aggsample01_8cpp_html_a0f01dca12a750b7784d0d97c670a4e5e"><div class="ttname"><a href="ggsample01_8cpp.html#a0f01dca12a750b7784d0d97c670a4e5e">light</a></div><div class="ttdeci">GgSimpleShader::Light light</div><div class="ttdef"><b>Definition:</b> <a href="ggsample01_8cpp_source.html#l00008">ggsample01.cpp:8</a></div></div>
+<div class="ttc" id="aggsample01_8cpp_html_abeb0715aa59f19646ce1bd7851dda276"><div class="ttname"><a href="ggsample01_8cpp.html#abeb0715aa59f19646ce1bd7851dda276">app</a></div><div class="ttdeci">void app()</div><div class="ttdef"><b>Definition:</b> <a href="ggsample01_8cpp_source.html#l00019">ggsample01.cpp:19</a></div></div>
+<div class="ttc" id="anamespacegg_html_a2924895ad284e08b08a2cfd115c5a7bf"><div class="ttname"><a href="namespacegg.html#a2924895ad284e08b08a2cfd115c5a7bf">gg::ggLookat</a></div><div class="ttdeci">GgMatrix ggLookat(GLfloat ex, GLfloat ey, GLfloat ez, GLfloat tx, GLfloat ty, GLfloat tz, GLfloat ux, GLfloat uy, GLfloat uz)</div><div class="ttdoc">ビュー変換行列を返す.</div><div class="ttdef"><b>Definition:</b> <a href="gg_8h_source.html#l02604">gg.h:2604</a></div></div>
+<div class="ttc" id="anamespacegg_html_a7dcbaa73755efd46f1f19b0b3a39b473"><div class="ttname"><a href="namespacegg.html#a7dcbaa73755efd46f1f19b0b3a39b473">gg::ggPerspective</a></div><div class="ttdeci">GgMatrix ggPerspective(GLfloat fovy, GLfloat aspect, GLfloat zNear, GLfloat zFar)</div><div class="ttdoc">画角を指定して透視投影変換行列を返す.</div><div class="ttdef"><b>Definition:</b> <a href="gg_8h_source.html#l02682">gg.h:2682</a></div></div>
+<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Light_html"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Light.html">gg::GgSimpleShader::Light</a></div><div class="ttdoc">三角形に単純な陰影付けを行うシェーダが参照する光源データ.</div><div class="ttdef"><b>Definition:</b> <a href="gg_8h_source.html#l05285">gg.h:5286</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2021年03月23日(火) 14時36分22秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

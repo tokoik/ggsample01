@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['shininess_532',['shininess',['../structgg_1_1GgSimpleShader_1_1Material.html#a537c99818191226cb9ceddc7b7ff3d6c',1,'gg::GgSimpleShader::Material']]],
-  ['specular_533',['specular',['../structgg_1_1GgSimpleShader_1_1Light.html#acd20cfb495e5923bb67686ac09ceadb9',1,'gg::GgSimpleShader::Light::specular()'],['../structgg_1_1GgSimpleShader_1_1Material.html#a270cd1c30152ee8c29ec5a94e12ff843',1,'gg::GgSimpleShader::Material::specular()']]]
+  ['position_543',['position',['../structgg_1_1GgVertex.html#a789c403b3289b3f8de6dec3f6a2f46d4',1,'gg::GgVertex::position()'],['../structgg_1_1GgSimpleShader_1_1Light.html#a5f6b1744a8c35121c8e27a6a01c8aceb',1,'gg::GgSimpleShader::Light::position()']]]
 ];

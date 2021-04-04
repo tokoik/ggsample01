@@ -2,4 +2,6 @@
 <area shape="rect" id="node1" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言." alt="" coords="59,5,106,32"/>
 <area shape="rect" id="node2" href="$gg_8cpp.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の定義." alt="" coords="5,80,67,107"/>
 <area shape="rect" id="node3" href="$Window_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理." alt="" coords="91,80,170,107"/>
+<area shape="rect" id="node4" href="$ggsample01_8cpp.html" title=" " alt="" coords="12,155,129,181"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title=" " alt="" coords="153,155,228,181"/>
 </map>
