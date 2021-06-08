@@ -88,7 +88,7 @@ using namespace gg;
 class Window
 {
   // ウィンドウの識別子
-  GLFWwindow *window;
+  GLFWwindow* window;
 
   // ビューポートの横幅と高さ
   std::array<GLsizei, 2> size;
@@ -99,8 +99,8 @@ class Window
   // ビューポートのアスペクト比
   GLfloat aspect;
 
-  // マウスの移動速度[X/Y]
-  std::array<GLfloat, 2> velocity;
+  // マウスの移動速度[X/Y/Z]
+  std::array<GLfloat, 3> velocity;
 
   // マウスボタンの状態
   std::array<bool, BUTTON_COUNT> status;
@@ -117,51 +117,38 @@ class Window
     // マウスホイールの回転量
     std::array<GLfloat, 2> wheel;
 
-    // 現在位置[ボタン][直前/更新][X/Y]
-    std::array<std::array<std::array<GLfloat, 2>, 2>, BUTTON_COUNT> location;
-
     // 平行移動量[ボタン][直前/更新][X/Y/Z]
     std::array<std::array<std::array<GLfloat, 3>, 2>, BUTTON_COUNT> translation;
 
     // トラックボール
-    std::array<GgTrackball, BUTTON_COUNT> trackball;
+    std::array<GgTrackball, BUTTON_COUNT> rotation;
 
     // コンストラクタ
     UserInterface()
       : arrow{}
       , mouse{}
       , wheel{}
-      , location{}
       , translation{}
-    {}
+    {
+    }
 
-    // トラックボール処理を考慮した平行移動量を計算する (X, Y のみ, Z は wheel() で計算する)
-    void calcTranslation(int button, const std::array<GLfloat, 2>& velocity)
+    // 平行移動量と回転量を更新する (X, Y のみ, Z は wheel() で計算する)
+    void calcTranslation(int button, const std::array<GLfloat, 3>& velocity)
     {
       // マウスの相対変位
       assert(button >= GLFW_MOUSE_BUTTON_1 && button < GLFW_MOUSE_BUTTON_1 + BUTTON_COUNT);
-      const GLfloat dx((mouse[0] - trackball[button].getStart(0)) * trackball[button].getScale(0));
-      const GLfloat dy((trackball[button].getStart(1) - mouse[1]) * trackball[button].getScale(1));
-
-      // 現在位置
-      auto& l(location[button]);
-
-      // 現在位置の更新
-      l[1][0] = dx * velocity[0] + l[0][0];
-      l[1][1] = dy * velocity[1] + l[0][1];
+      const GLfloat dx((mouse[0] - rotation[button].getStart(0)) * rotation[button].getScale(0));
+      const GLfloat dy((rotation[button].getStart(1) - mouse[1]) * rotation[button].getScale(1));
 
       // 平行移動量
       auto& t(translation[button]);
 
-      // 移動前の平行移動量の z 値
-      const GLfloat d(fabs(t[1][2]));
-
       // 平行移動量の更新
-      t[1][0] = dx * d + t[0][0];
-      t[1][1] = dy * d + t[0][1];
+      t[1][0] = dx * velocity[0] + t[0][0];
+      t[1][1] = dy * velocity[1] + t[0][1];
 
-      // トラックボールの更新
-      trackball[button].motion(mouse[0], mouse[1]);
+      // 回転量の更新
+      rotation[button].motion(mouse[0], mouse[1]);
     }
   };
 
@@ -214,11 +201,11 @@ class Window
     ovrGraphicsLuid luid = ovrGraphicsLuid();
 
 #    ifdef _MSC_VER
-    IDXGIFactory *factory(nullptr);
+    IDXGIFactory* factory{ nullptr };
 
     if (SUCCEEDED(CreateDXGIFactory(IID_PPV_ARGS(&factory))))
     {
-      IDXGIAdapter *adapter(nullptr);
+      IDXGIAdapter* adapter{ nullptr };
 
       if (SUCCEEDED(factory->EnumAdapters(0, &adapter)))
       {
@@ -237,7 +224,7 @@ class Window
   }
 
   // グラフィックスカードの LUID の比較
-  inline int Compare(const ovrGraphicsLuid &lhs, const ovrGraphicsLuid &rhs)
+  inline int Compare(const ovrGraphicsLuid& lhs, const ovrGraphicsLuid& rhs)
   {
     return memcmp(&lhs, &rhs, sizeof(ovrGraphicsLuid));
   }
@@ -254,7 +241,7 @@ class Window
   ovrPosef eyePose[ovrEye_Count];
 
   // ミラー表示用の FBO のカラーテクスチャ
-  ovrGLTexture *mirrorTexture;
+  ovrGLTexture* mirrorTexture;
 
 #  endif
 #endif
@@ -262,19 +249,19 @@ class Window
   //
   // ユーザー定義のコールバック関数へのポインタ
   //
-  void *userPointer;
-  void (*resizeFunc)(const Window *window, int width, int height);
-  void (*keyboardFunc)(const Window *window, int key, int scancode, int action, int mods);
-  void (*mouseFunc)(const Window *window, int button, int action, int mods);
-  void (*wheelFunc)(const Window *window, double x, double y);
+  void* userPointer;
+  void (*resizeFunc)(const Window* window, int width, int height);
+  void (*keyboardFunc)(const Window* window, int key, int scancode, int action, int mods);
+  void (*mouseFunc)(const Window* window, int button, int action, int mods);
+  void (*wheelFunc)(const Window* window, double x, double y);
 
   //
   // ウィンドウのサイズ変更時の処理
   //
-  static void resize(GLFWwindow *window, int width, int height)
+  static void resize(GLFWwindow* window, int width, int height)
   {
     // このインスタンスの this ポインタを得る
-    Window *const instance(static_cast<Window *>(glfwGetWindowUserPointer(window)));
+    Window* const instance(static_cast<Window*>(glfwGetWindowUserPointer(window)));
 
     if (instance)
     {
@@ -285,7 +272,7 @@ class Window
       // トラックボール処理の範囲を設定する
       for (auto& current_if : instance->ui_data)
       {
-        for (auto& t : current_if.trackball)
+        for (auto& t : current_if.rotation)
         {
           t.region(width, height);
         }
@@ -296,8 +283,9 @@ class Window
       instance->aspect = static_cast<GLfloat>(width) / static_cast<GLfloat>(height);
 
       // ウィンドウ全体に描画する
-      glfwGetFramebufferSize(window, &instance->fboSize[0], &instance->fboSize[1]);
-      glViewport(0, 0, instance->fboSize[0], instance->fboSize[1]);
+      glfwGetFramebufferSize(window, &width, &height);
+      glViewport(0, 0, width, height);
+      instance->fboSize = std::array<GLsizei, 2>{ width, height };
 #endif
 
       // ユーザー定義のコールバック関数の呼び出し
@@ -308,7 +296,7 @@ class Window
   //
   // キーボードをタイプした時の処理
   //
-  static void keyboard(GLFWwindow *window, int key, int scancode, int action, int mods)
+  static void keyboard(GLFWwindow* window, int key, int scancode, int action, int mods)
   {
 #ifdef USE_IMGUI
     // ImGui のウィンドウが選択されていたらキーボードの処理を行わない
@@ -316,7 +304,7 @@ class Window
 #endif
 
     // このインスタンスの this ポインタを得る
-    Window *const instance(static_cast<Window *>(glfwGetWindowUserPointer(window)));
+    Window* const instance(static_cast<Window*>(glfwGetWindowUserPointer(window)));
 
     if (instance && action)
     {
@@ -331,12 +319,12 @@ class Window
       case GLFW_KEY_HOME:
 
         // トラックボールをリセットする
-        instance->reset_trackball();
+        instance->resetRotation();
 
       case GLFW_KEY_END:
 
         // 現在位置と平行移動量をリセットする
-        instance->reset_translation();
+        instance->resetTranslation();
         break;
 
       case GLFW_KEY_UP:
@@ -397,7 +385,7 @@ class Window
   //
   // マウスボタンを操作したときの処理
   //
-  static void mouse(GLFWwindow *window, int button, int action, int mods)
+  static void mouse(GLFWwindow* window, int button, int action, int mods)
   {
 #ifdef USE_IMGUI
     // マウスカーソルが ImGui のウィンドウ上にあったら Window クラスのマウス位置を更新しない
@@ -424,18 +412,17 @@ class Window
       const GLfloat y(current_if.mouse[1]);
 
       if (x < 0 || x >= instance->size[0] || y < 0 || y >= instance->size[1]) return;
-      
+
       if (action)
       {
         // ドラッグ開始
-        current_if.trackball[button].begin(x, y);
+        current_if.rotation[button].begin(x, y);
       }
       else
       {
         // ドラッグ終了
-        current_if.location[button][0] = current_if.location[button][1];
         current_if.translation[button][0] = current_if.translation[button][1];
-        current_if.trackball[button].end(x, y);
+        current_if.rotation[button].end(x, y);
       }
     }
   }
@@ -443,7 +430,7 @@ class Window
   //
   // マウスホイールを操作した時の処理
   //
-  static void wheel(GLFWwindow *window, double x, double y)
+  static void wheel(GLFWwindow* window, double x, double y)
   {
 #ifdef USE_IMGUI
     // マウスカーソルが ImGui のウィンドウ上にあったら Window クラスのマウスホイールの回転量を更新しない
@@ -451,7 +438,7 @@ class Window
 #endif
 
     // このインスタンスの this ポインタを得る
-    Window *const instance(static_cast<Window *>(glfwGetWindowUserPointer(window)));
+    Window* const instance(static_cast<Window*>(glfwGetWindowUserPointer(window)));
 
     if (instance)
     {
@@ -466,12 +453,12 @@ class Window
       current_if.wheel[1] += static_cast<GLfloat>(y);
 
       // マウスによる平行移動量の z 値の更新
-      const GLfloat z(instance->getWheelY() * 0.5f);
+      const GLfloat z(instance->getWheelY() * instance->velocity[2]);
       for (auto& t : current_if.translation) t[1][2] = z;
     }
   }
 
-  #ifdef USE_OCULUS_RIFT
+#ifdef USE_OCULUS_RIFT
   //
   // Oculus Rift の使用終了
   //
@@ -487,7 +474,7 @@ class Window
       ovr_DestroyMirrorTexture(session, mirrorTexture);
 #  else
       glDeleteTextures(1, &mirrorTexture->OGL.TexId);
-      ovr_DestroyMirrorTexture(session, reinterpret_cast<ovrTexture *>(mirrorTexture));
+      ovr_DestroyMirrorTexture(session, reinterpret_cast<ovrTexture*>(mirrorTexture));
 #  endif
     }
 
@@ -513,19 +500,19 @@ class Window
 #  else
 
       // レンダリングターゲットに使ったテクスチャを開放する
-      auto *const colorTexture(layerData.EyeFov.ColorTexture[eye]);
+      auto* const colorTexture(layerData.EyeFov.ColorTexture[eye]);
       for (int i = 0; i < colorTexture->TextureCount; ++i)
       {
-        const auto *const ctex(reinterpret_cast<ovrGLTexture *>(&colorTexture->Textures[i]));
+        const auto* const ctex(reinterpret_cast<ovrGLTexture*>(&colorTexture->Textures[i]));
         glDeleteTextures(1, &ctex->OGL.TexId);
       }
       ovr_DestroySwapTextureSet(session, colorTexture);
 
       // デプスバッファとして使ったテクスチャを開放する
-      auto *const depthTexture(layerData.EyeFovDepth.DepthTexture[eye]);
+      auto* const depthTexture(layerData.EyeFovDepth.DepthTexture[eye]);
       for (int i = 0; i < depthTexture->TextureCount; ++i)
       {
-        const auto *const dtex(reinterpret_cast<ovrGLTexture *>(&depthTexture->Textures[i]));
+        const auto* const dtex(reinterpret_cast<ovrGLTexture*>(&depthTexture->Textures[i]));
         glDeleteTextures(1, &dtex->OGL.TexId);
       }
       ovr_DestroySwapTextureSet(session, depthTexture);
@@ -545,7 +532,7 @@ class Window
   //
   // GLFW のエラー表示
   //
-  static void glfwErrorCallback(int error, const char *description)
+  static void glfwErrorCallback(int error, const char* description)
   {
 #ifdef __aarch64__
     if (error == 65544) return;
@@ -637,7 +624,7 @@ public:
     ImGui::CreateContext();
 
     // プログラム終了時には ImGui のコンテキストを破棄する
-    atexit([] { ImGui::DestroyContext(); });
+    atexit([]{ ImGui::DestroyContext(); });
 #endif
   }
 
@@ -647,34 +634,34 @@ public:
   //!   \param height 開くウィンドウの高さ.
   //!   \param fullscreen フルスクリーン表示を行うディスプレイ番号, 0 ならフルスクリーン表示を行わない.
   //!   \param share 共有するコンテキスト, nullptr ならコンテキストを共有しない.
-  Window(const char *title = "GLFW Window", int width = 640, int height = 480,
-    int fullscreen = 0, GLFWwindow *share = nullptr)
-    : window(nullptr), size{ width, height }, aspect(1.0f)
-    , velocity{ 1.0f, 1.0f }
+  Window(const std::string& title = "GLFW Window", int width = 640, int height = 480,
+    int fullscreen = 0, GLFWwindow* share = nullptr)
+    : window{ nullptr }, size{ width, height }, aspect{ 1.0f }
+    , velocity{ 1.0f, 1.0f, 0.1f }
     , status{ false }
     , ui_no(0)
-    , userPointer(nullptr)
-    , resizeFunc(nullptr)
-    , keyboardFunc(nullptr)
-    , mouseFunc(nullptr)
-    , wheelFunc(nullptr)
+    , userPointer{ nullptr }
+    , resizeFunc{ nullptr }
+    , keyboardFunc{ nullptr }
+    , mouseFunc{ nullptr }
+    , wheelFunc{ nullptr }
   {
     // ディスプレイの情報
-    GLFWmonitor *monitor(nullptr);
+    GLFWmonitor* monitor{ nullptr };
 
     // フルスクリーン表示
     if (fullscreen > 0)
     {
       // 接続されているモニタの数を数える
       int mcount;
-      GLFWmonitor **const monitors(glfwGetMonitors(&mcount));
+      GLFWmonitor** const monitors(glfwGetMonitors(&mcount));
 
       // セカンダリモニタがあればそれを使う
       if (fullscreen > mcount) fullscreen = mcount;
       monitor = monitors[fullscreen - 1];
 
       // モニタのモードを調べる
-      const GLFWvidmode *mode(glfwGetVideoMode(monitor));
+      const GLFWvidmode* mode(glfwGetVideoMode(monitor));
 
       // ウィンドウのサイズをディスプレイのサイズにする
       width = mode->width;
@@ -682,7 +669,7 @@ public:
     }
 
     // GLFW のウィンドウを作成する
-    window = glfwCreateWindow(width, height, title, monitor, share);
+    window = glfwCreateWindow(width, height, title.c_str(), monitor, share);
 
     // ウィンドウが作成できなければエラー
     if (!window) throw std::runtime_error("Unable to open the GLFW window.");
@@ -748,7 +735,7 @@ public:
     for (int eye = 0; eye < ovrEye_Count; ++eye)
     {
       // Oculus Rift の視野を取得する
-      const auto &fov(hmdDesc.DefaultEyeFov[ovrEyeType(eye)]);
+      const auto& fov(hmdDesc.DefaultEyeFov[ovrEyeType(eye)]);
 
       // Oculus Rift 表示用の FBO のサイズを求める
       const auto textureSize(ovr_GetFovTextureSize(session, ovrEyeType(eye), fov, 1.0f));
@@ -772,7 +759,7 @@ public:
       layerData.Viewport[eye].Size = textureSize;
 
       // Oculus Rift 表示用の FBO のカラーバッファとして使うテクスチャセットの特性
-      const ovrTextureSwapChainDesc colorDesc =
+      const ovrTextureSwapChainDesc colorDesc
       {
         ovrTexture_2D,                    // Type
         OVR_FORMAT_R8G8B8A8_UNORM_SRGB,   // Format
@@ -827,12 +814,12 @@ public:
       layerData.EyeFov.Viewport[eye].Size = textureSize;
 
       // Oculus Rift 表示用の FBO のカラーバッファとして使うテクスチャセットを作成する
-      ovrSwapTextureSet *colorTexture;
+      ovrSwapTextureSet* colorTexture;
       ovr_CreateSwapTextureSetGL(session, GL_SRGB8_ALPHA8, textureSize.w, textureSize.h, &colorTexture);
       layerData.EyeFov.ColorTexture[eye] = colorTexture;
 
       // Oculus Rift 表示用の FBO のデプスバッファとして使うテクスチャセットを作成する
-      ovrSwapTextureSet *depthTexture;
+      ovrSwapTextureSet* depthTexture;
       ovr_CreateSwapTextureSetGL(session, GL_DEPTH_COMPONENT32F, textureSize.w, textureSize.h, &depthTexture);
       layerData.EyeFovDepth.DepthTexture[eye] = depthTexture;
 
@@ -848,7 +835,7 @@ public:
     ovr_SetTrackingOriginType(session, ovrTrackingOrigin_FloorLevel);
 
     // ミラー表示用の FBO を作成する
-    const ovrMirrorTextureDesc mirrorDesc =
+    const ovrMirrorTextureDesc mirrorDesc
     {
       OVR_FORMAT_R8G8B8A8_UNORM_SRGB,   // Format
       mirrorWidth = width,              // Width
@@ -875,7 +862,7 @@ public:
 #  else
 
     // ミラー表示用の FBO を作成する
-    if (OVR_SUCCESS(ovr_CreateMirrorTextureGL(session, GL_SRGB8_ALPHA8, width, height, reinterpret_cast<ovrTexture **>(&mirrorTexture))))
+    if (OVR_SUCCESS(ovr_CreateMirrorTextureGL(session, GL_SRGB8_ALPHA8, width, height, reinterpret_cast<ovrTexture**>(&mirrorTexture))))
     {
       glGenFramebuffers(1, &mirrorFbo);
       glBindFramebuffer(GL_READ_FRAMEBUFFER, mirrorFbo);
@@ -913,10 +900,10 @@ public:
   }
 
   //! \brief コピーコンストラクタは使用禁止.
-  Window(const Window &w) = delete;
+  Window(const Window& w) = delete;
 
   //! \brief 代入演算子は使用禁止.
-  Window &operator=(const Window &w) = delete;
+  Window& operator=(const Window& w) = delete;
 
   //! \brief デストラクタ.
   virtual ~Window()
@@ -956,14 +943,14 @@ public:
     if (sessionStatus.ShouldRecenter) ovr_RecenterTrackingOrigin(session);
 
     // HmdToEyeOffset などは実行時に変化するので毎フレーム ovr_GetRenderDesc() で ovrEyeRenderDesc を取得する
-    const ovrEyeRenderDesc eyeRenderDesc[] =
+    const ovrEyeRenderDesc eyeRenderDesc[]
     {
       ovr_GetRenderDesc(session, ovrEyeType(0), hmdDesc.DefaultEyeFov[0]),
       ovr_GetRenderDesc(session, ovrEyeType(1), hmdDesc.DefaultEyeFov[1])
     };
 
     // Oculus Rift のスクリーンのヘッドトラッキング位置からの変位を取得する
-    const ovrPosef hmdToEyePose[] =
+    const ovrPosef hmdToEyePose[]
     {
       eyeRenderDesc[0].HmdToEyePose,
       eyeRenderDesc[1].HmdToEyePose
@@ -984,7 +971,7 @@ public:
     const auto hmdState(ovr_GetTrackingState(session, ftiming, ovrTrue));
 
     // Oculus Rift のスクリーンのヘッドトラッキング位置からの変位を取得する
-    const ovrVector3f hmdToEyeViewOffset[] =
+    const ovrVector3f hmdToEyeViewOffset[]
     {
       eyeRenderDesc[0].HmdToEyeViewOffset,
       eyeRenderDesc[1].HmdToEyeViewOffset
@@ -1003,7 +990,7 @@ public:
   //!   \param screen HMD の視野の視錐台.
   //!   \param position HMD の位置.
   //!   \param orientation HMD の方法の四元数.
-  void select(int eye, GLfloat *screen, GLfloat *position, GLfloat *orientation)
+  void select(int eye, GLfloat* screen, GLfloat* position, GLfloat* orientation)
   {
 #  if OVR_PRODUCT_VERSION > 0
 
@@ -1024,36 +1011,36 @@ public:
       glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, oculusDepth[eye], 0);
 
       // ビューポートを設定する
-      const auto &vp(layerData.Viewport[eye]);
+      const auto& vp{ layerData.Viewport[eye] };
       glViewport(vp.Pos.x, vp.Pos.y, vp.Size.w, vp.Size.h);
     }
 
     // Oculus Rift の片目の位置と回転を取得する
-    const auto &p(layerData.RenderPose[eye].Position);
-    const auto &o(layerData.RenderPose[eye].Orientation);
+    const auto& p{ layerData.RenderPose[eye].Position };
+    const auto& o{ layerData.RenderPose[eye].Orientation };
 
 #  else
 
     // レンダーターゲットに描画する前にレンダーターゲットのインデックスをインクリメントする
-    auto *const colorTexture(layerData.EyeFov.ColorTexture[eye]);
+    auto* const colorTexture{ layerData.EyeFov.ColorTexture[eye] };
     colorTexture->CurrentIndex = (colorTexture->CurrentIndex + 1) % colorTexture->TextureCount;
-    auto *const depthTexture(layerData.EyeFovDepth.DepthTexture[eye]);
+    auto* const depthTexture{ layerData.EyeFovDepth.DepthTexture[eye] };
     depthTexture->CurrentIndex = (depthTexture->CurrentIndex + 1) % depthTexture->TextureCount;
 
     // レンダーターゲットを切り替える
     glBindFramebuffer(GL_FRAMEBUFFER, oculusFbo[eye]);
-    const auto &ctex(reinterpret_cast<ovrGLTexture *>(&colorTexture->Textures[colorTexture->CurrentIndex]));
+    const auto& ctex{ reinterpret_cast<ovrGLTexture*>(&colorTexture->Textures[colorTexture->CurrentIndex]) };
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, ctex->OGL.TexId, 0);
-    const auto &dtex(reinterpret_cast<ovrGLTexture *>(&depthTexture->Textures[depthTexture->CurrentIndex]));
+    const auto& dtex{ reinterpret_cast<ovrGLTexture*>(&depthTexture->Textures[depthTexture->CurrentIndex]) };
     glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, dtex->OGL.TexId, 0);
 
     // ビューポートを設定する
-    const auto &vp(layerData.EyeFov.Viewport[eye]);
+    const auto& vp{ layerData.EyeFov.Viewport[eye] };
     glViewport(vp.Pos.x, vp.Pos.y, vp.Size.w, vp.Size.h);
 
     // Oculus Rift の片目の位置と回転を取得する
-    const auto &p(eyePose[eye].Position);
-    const auto &o(eyePose[eye].Orientation);
+    const auto& p{ eyePose[eye].Position };
+    const auto& o{ eyePose[eye].Orientation };
 
 #  endif
 
@@ -1077,11 +1064,11 @@ public:
 
   //! \brief Time Warp 処理に使う投影変換行列の成分の設定 (DK1, DK2).
   //!   \param projection 投影変換行列.
-  void timewarp(const GgMatrix &projection)
+  void timewarp(const GgMatrix& projection)
   {
 #  if OVR_PRODUCT_VERSION < 1
     // TimeWarp に使う変換行列の成分を設定する
-    auto &posTimewarpProjectionDesc(layerData.EyeFovDepth.ProjectionDesc);
+    auto& posTimewarpProjectionDesc{ layerData.EyeFovDepth.ProjectionDesc };
     posTimewarpProjectionDesc.Projection22 = (projection.get()[4 * 2 + 2] + projection.get()[4 * 3 + 2]) * 0.5f;
     posTimewarpProjectionDesc.Projection23 = projection.get()[4 * 2 + 3] * 0.5f;
     posTimewarpProjectionDesc.Projection32 = projection.get()[4 * 3 + 2];
@@ -1114,7 +1101,7 @@ public:
 
 #  if OVR_PRODUCT_VERSION > 0
     // 描画データを Oculus Rift に転送する
-    const auto *const layers(&layerData.Header);
+    const auto* const layers{ &layerData.Header };
     if (OVR_FAILURE(ovr_SubmitFrame(session, frameIndex++, nullptr, &layers, 1)))
 #  else
     // Oculus Rift 上の描画位置と拡大率を求める
@@ -1128,7 +1115,7 @@ public:
     layerData.EyeFov.RenderPose[1] = eyePose[1];
 
     // 描画データを Oculus Rift に転送する
-    const auto *const layers(&layerData.Header);
+    const auto* const layers{ &layerData.Header };
     if (OVR_FAILURE(ovr_SubmitFrame(session, 0, &viewScaleDesc, &layers, 1)))
 #  endif
     {
@@ -1146,15 +1133,15 @@ public:
 #  if OVR_PRODUCT_VERSION > 0
       glBlitFramebuffer(0, size[1], size[0], 0, 0, 0, size[0], size[1], GL_COLOR_BUFFER_BIT, GL_NEAREST);
 #  else
-      const auto w(mirrorTexture->OGL.Header.TextureSize.w);
-      const auto h(mirrorTexture->OGL.Header.TextureSize.h);
+      const auto w{ mirrorTexture->OGL.Header.TextureSize.w };
+      const auto h{ mirrorTexture->OGL.Header.TextureSize.h };
       glBlitFramebuffer(0, h, w, 0, 0, 0, w, h, GL_COLOR_BUFFER_BIT, GL_NEAREST);
 #  endif
       glBindFramebuffer(GL_READ_FRAMEBUFFER, 0);
 
 #ifdef USE_IMGUI
       // ImGui のフレームをレンダリングする
-      ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+      ImGui_ImplOpenGL3_RenderDrawData{ ImGui::GetDrawData() };
 #endif
 
       // 残っている OpenGL コマンドを実行する
@@ -1174,7 +1161,7 @@ public:
 
   //! \brief ウィンドウの識別子のポインタを取得する.
   //!   \return GLFWwindow 型のウィンドウ識別子のポインタ.
-  GLFWwindow *get() const
+  GLFWwindow* get() const
   {
     return window;
   }
@@ -1205,7 +1192,7 @@ public:
     if (shouldClose()) return false;
 
     // 対象のユーザインタフェース
-    auto& current_if(ui_data[ui_no]);
+    auto& current_if{ ui_data[ui_no] };
 
 #ifdef USE_IMGUI
 
@@ -1217,11 +1204,11 @@ public:
     if (ImGui::IsWindowHovered(ImGuiHoveredFlags_AnyWindow)) return true;
 
     // マウスの現在位置を調べる
-    const ImGuiIO &io(ImGui::GetIO());
+    const ImGuiIO& io{ ImGui::GetIO() };
 
     // マウスの位置を更新する
     current_if.mouse = std::array<GLfloat, 2>{ io.MousePos.x, io.MousePos.y };
-    
+
 #else
 
     // マウスの現在位置を調べる
@@ -1278,14 +1265,14 @@ public:
 
   //! \brief ウィンドウのサイズを得る.
   //!   \return ウィンドウの幅と高さを格納した GLsizei 型の 2 要素の配列.
-  const GLsizei *getSize() const
+  const GLsizei* getSize() const
   {
     return size.data();
   }
 
   //! \brief ウィンドウのサイズを得る.
   //!   \param size ウィンドウの幅と高さを格納した GLsizei 型の 2 要素の配列.
-  void getSize(GLsizei *size) const
+  void getSize(GLsizei* size) const
   {
     size[0] = getWidth();
     size[1] = getHeight();
@@ -1330,9 +1317,9 @@ public:
   //! \brief マウスの移動速度を設定する
   //!   \param vx x 方向の移動速度.
   //!   \param vy y 方向の移動速度.
-  void setVelocity(GLfloat vx, GLfloat vy)
+  void setVelocity(GLfloat vx, GLfloat vy, GLfloat vz = 0.1f)
   {
-    velocity = std::array<GLfloat, 2>{ vx, vy };
+    velocity = std::array<GLfloat, 3>{ vx, vy, vz };
   }
 
   //! \brief 矢印キーの現在の値を得る.
@@ -1341,7 +1328,7 @@ public:
   //!   \return 矢印キーの値.
   GLfloat getArrow(int direction = 0, int mods = 0) const
   {
-    const auto& current_if(ui_data[ui_no]);
+    const auto& current_if{ ui_data[ui_no] };
     return static_cast<GLfloat>(current_if.arrow[mods & 3][direction & 1]);
   }
 
@@ -1364,7 +1351,7 @@ public:
   //! \brief 矢印キーの現在の値を得る.
   //!   \param arrow 矢印キーの値を格納する GLfloat[2] の配列.
   //!   \param mods 修飾キーの状態 (0:なし, 1, SHIFT, 2: CTRL, 3: ALT).
-  void getArrow(GLfloat *arrow, int mods = 0) const
+  void getArrow(GLfloat* arrow, int mods = 0) const
   {
     arrow[0] = getArrowX(mods);
     arrow[1] = getArrowY(mods);
@@ -1386,7 +1373,7 @@ public:
 
   //! \brief SHIFT キーを押しながら矢印キーを押したときの現在の値を得る.
   //!   \param shift_arrow SHIFT キーを押しながら矢印キーを押したときの値を格納する GLfloat 型の 2 要素の配列.
-  void getShiftArrow(GLfloat *shift_arrow) const
+  void getShiftArrow(GLfloat* shift_arrow) const
   {
     shift_arrow[0] = getShiftArrowX();
     shift_arrow[1] = getShiftArrowY();
@@ -1408,7 +1395,7 @@ public:
 
   //! \brief CTRL キーを押しながら矢印キーを押したときの現在の値を得る.
   //!   \param control_arrow CTRL キーを押しながら矢印キーを押したときの値を格納する GLfloat 型の 2 要素の配列.
-  void getControlArrow(GLfloat *control_arrow) const
+  void getControlArrow(GLfloat* control_arrow) const
   {
     control_arrow[0] = getControlArrowX();
     control_arrow[1] = getControlArrowY();
@@ -1430,7 +1417,7 @@ public:
 
   //! \brief ALT キーを押しながら矢印キーを押したときの現在の値を得る.
   //!   \param alt_arrow ALT キーを押しながら矢印キーを押したときの値を格納する GLfloat 型の 2 要素の配列.
-  void getAltlArrow(GLfloat *alt_arrow) const
+  void getAltlArrow(GLfloat* alt_arrow) const
   {
     alt_arrow[0] = getAltArrowX();
     alt_arrow[1] = getAltArrowY();
@@ -1438,17 +1425,17 @@ public:
 
   //! \brief マウスカーソルの現在位置を得る.
   //!   \return マウスカーソルの現在位置を格納した GLfloat 型の 2 要素の配列.
-  const GLfloat *getMouse() const
+  const GLfloat* getMouse() const
   {
-    const auto& current_if(ui_data[ui_no]);
+    const auto& current_if{ ui_data[ui_no] };
     return current_if.mouse.data();
   }
 
   //! \brief マウスカーソルの現在位置を得る.
   //!   \param position マウスカーソルの現在位置を格納した GLfloat 型の 2 要素の配列.
-  void getMouse(GLfloat *position) const
+  void getMouse(GLfloat* position) const
   {
-    const auto& current_if(ui_data[ui_no]);
+    const auto& current_if{ ui_data[ui_no] };
     position[0] = current_if.mouse[0];
     position[1] = current_if.mouse[1];
   }
@@ -1458,7 +1445,7 @@ public:
   //!   \return direction 方向のマウスカーソルの現在位置.
   const GLfloat getMouse(int direction) const
   {
-    const auto& current_if(ui_data[ui_no]);
+    const auto& current_if{ ui_data[ui_no] };
     return current_if.mouse[direction & 1];
   }
 
@@ -1466,7 +1453,7 @@ public:
   //!   \return direction 方向のマウスカーソルの X 方向の現在位置.
   GLfloat getMouseX() const
   {
-    const auto& current_if(ui_data[ui_no]);
+    const auto& current_if{ ui_data[ui_no] };
     return current_if.mouse[0];
   }
 
@@ -1474,23 +1461,23 @@ public:
   //!   \return direction 方向のマウスカーソルの Y 方向の現在位置.
   GLfloat getMouseY() const
   {
-    const auto& current_if(ui_data[ui_no]);
+    const auto& current_if{ ui_data[ui_no] };
     return current_if.mouse[1];
   }
 
   //! \brief マウスホイールの回転量を得る.
   //!   \return マウスホイールの回転量を格納した GLfloat 型の 2 要素の配列.
-  const GLfloat *getWheel() const
+  const GLfloat* getWheel() const
   {
-    const auto& current_if(ui_data[ui_no]);
+    const auto& current_if{ ui_data[ui_no] };
     return current_if.wheel.data();
   }
 
   //! \brief マウスホイールの回転量を得る.
   //!   \param rotation マウスホイールの回転量を格納した GLfloat 型の 2 要素の配列.
-  void getWheel(GLfloat *rotation) const
+  void getWheel(GLfloat* rotation) const
   {
-    const auto& current_if(ui_data[ui_no]);
+    const auto& current_if{ ui_data[ui_no] };
     rotation[0] = current_if.wheel[0];
     rotation[1] = current_if.wheel[1];
   }
@@ -1500,85 +1487,86 @@ public:
   //!   \return direction 方向のマウスホイールの回転量.
   GLfloat getWheel(int direction) const
   {
-    const auto& current_if(ui_data[ui_no]);
+    const auto& current_if{ ui_data[ui_no] };
     return current_if.wheel[direction & 1];
   }
 
   //! \brief マウスホイールの X 方向の回転量を得る.
   const GLfloat getWheelX() const
   {
-    const auto& current_if(ui_data[ui_no]);
+    const auto& current_if{ ui_data[ui_no] };
     return current_if.wheel[0];
   }
 
   //! \brief マウスホイールの Y 方向の回転量を得る.
   const GLfloat getWheelY() const
   {
-    const auto& current_if(ui_data[ui_no]);
+    const auto& current_if{ ui_data[ui_no] };
     return current_if.wheel[1];
-  }
-
-  //! \brief トラックボール処理を考慮したマウスによる現在位置のポインタを得る.
-  //!   \param button 平行移動量を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]).
-  //!   \return 現在位置のポインタ.
-  const GLfloat* getLocation(int button = GLFW_MOUSE_BUTTON_1) const
-  {
-    const auto& current_if(ui_data[ui_no]);
-    assert(button >= GLFW_MOUSE_BUTTON_1 && button < GLFW_MOUSE_BUTTON_1 + BUTTON_COUNT);
-    return current_if.location[button][1].data();
   }
 
   //! \brief トラックボール処理を考慮したマウスによる平行移動の変換行列を得る.
   //!   \param button 平行移動量を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]).
-  //!   \return 平行移動を行う GgMarix 型の変換行列.
-  GgMatrix getTranslation(int button = GLFW_MOUSE_BUTTON_1) const
+  //!   \return 平行移動量を格納した GLfloat[3] の配列のポインタ.
+  const GLfloat* getTranslation(int button = GLFW_MOUSE_BUTTON_1) const
   {
-    const auto& current_if(ui_data[ui_no]);
+    const auto& current_if{ ui_data[ui_no] };
     assert(button >= GLFW_MOUSE_BUTTON_1 && button < GLFW_MOUSE_BUTTON_1 + BUTTON_COUNT);
-    return ggTranslate(current_if.translation[button][1].data());
+    return current_if.translation[button][1].data();
+  }
+
+  //! \brief トラックボール処理を考慮したマウスによる平行移動の変換行列を得る.
+  //!   \param button 平行移動量を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]).
+  //!   \return クリッピング空間で平行移動を行う GgMatrix 型の変換行列.
+  GgMatrix getTranslationMatrix(int button = GLFW_MOUSE_BUTTON_1) const
+  {
+    const auto& current_if{ ui_data[ui_no] };
+    assert(button >= GLFW_MOUSE_BUTTON_1 && button < GLFW_MOUSE_BUTTON_1 + BUTTON_COUNT);
+    const auto& t{ current_if.translation[button][1] };
+    GgMatrix m;
+    m[0] = m[5] = t[2] + 1.0f;
+    m[1] = m[2] = m[3] = m[4] = m[6] = m[7] = m[8] = m[9] = m[11] = m[14] = 0.0f;
+    m[10] = m[15] = 1.0f;
+    m[12] = t[0];
+    m[13] = t[1];
+    return m;
   }
 
   //! \brief トラックボールの回転変換行列を得る.
   //!   \param button 回転変換行列を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]).
   //!   \return 回転を行う GgQuaternion 型の四元数.
-  GgQuaternion getTrackballData(int button = GLFW_MOUSE_BUTTON_1) const
+  GgQuaternion getRotation(int button = GLFW_MOUSE_BUTTON_1) const
   {
-    const auto& current_if(ui_data[ui_no]);
+    const auto& current_if{ ui_data[ui_no] };
     assert(button >= GLFW_MOUSE_BUTTON_1 && button < GLFW_MOUSE_BUTTON_1 + BUTTON_COUNT);
-    return current_if.trackball[button].getQuaternion();
+    return current_if.rotation[button].getQuaternion();
   }
 
   //! \brief トラックボールの回転変換行列を得る.
   //!   \param button 回転変換行列を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]).
   //!   \return 回転を行う GgMarix 型の変換行列.
-  GgMatrix getTrackball(int button = GLFW_MOUSE_BUTTON_1) const
+  GgMatrix getRotationMatrix(int button = GLFW_MOUSE_BUTTON_1) const
   {
-    const auto& current_if(ui_data[ui_no]);
+    const auto& current_if{ ui_data[ui_no] };
     assert(button >= GLFW_MOUSE_BUTTON_1 && button < GLFW_MOUSE_BUTTON_1 + BUTTON_COUNT);
-    return current_if.trackball[button].getMatrix();
+    return current_if.rotation[button].getMatrix();
   }
 
   //! \brief トラックボール処理をリセットする
-  void reset_trackball()
+  void resetRotation()
   {
     // トラックボールをリセットする
-    for (auto& tb : ui_data[ui_no].trackball)
+    for (auto& tb : ui_data[ui_no].rotation)
     {
       tb.reset();
     }
   }
 
   //! 現在位置と平行移動量をリセットする
-  void reset_translation()
+  void resetTranslation()
   {
     // 現在のインターフェース
-    auto& current_if(ui_data[ui_no]);
-
-    // 現在位置をリセットする
-    for (auto& l : current_if.location)
-    {
-      std::fill(l.begin(), l.end(), std::array<GLfloat, 2>{ 0.0f, 0.0f });
-    }
+    auto& current_if{ ui_data[ui_no] };
 
     // 平行移動量をリセットする
     for (auto& t : current_if.translation)
@@ -1597,50 +1585,50 @@ public:
   void reset()
   {
     // トラックボール処理をリセットする
-    reset_trackball();
+    resetRotation();
 
     // 平行移動量をリセットする
-    reset_translation();
+    resetTranslation();
   }
 
   //! \brief ユーザーポインタを取り出す.
   //!   \return 保存されているユーザポインタ.
-  void *getUserPointer() const
+  void* getUserPointer() const
   {
     return userPointer;
   }
 
   //! \brief 任意のユーザポインタを保存する.
   //!   \param pointer 保存するユーザポインタ.
-  void setUserPointer(void *pointer)
+  void setUserPointer(void* pointer)
   {
     userPointer = pointer;
   }
 
   //! \brief ユーザ定義の resize 関数を設定する.
   //!   \param func ユーザ定義の resize 関数, ウィンドウのサイズ変更時に呼び出される.
-  void setResizeFunc(void (*func)(const Window *window, int width, int height))
+  void setResizeFunc(void (*func)(const Window* window, int width, int height))
   {
     resizeFunc = func;
   }
 
   //! \brief ユーザ定義の keyboard 関数を設定する.
   //!   \param func ユーザ定義の keyboard 関数, キーボードの操作時に呼び出される.
-  void setKeyboardFunc(void (*func)(const Window *window, int key, int scancode, int action, int mods))
+  void setKeyboardFunc(void (*func)(const Window* window, int key, int scancode, int action, int mods))
   {
     keyboardFunc = func;
   }
 
   //! \brief ユーザ定義の mouse 関数を設定する.
   //!   \param func ユーザ定義の mouse 関数, マウスボタンの操作時に呼び出される.
-  void setMouseFunc(void (*func)(const Window *window, int button, int action, int mods))
+  void setMouseFunc(void (*func)(const Window* window, int button, int action, int mods))
   {
     mouseFunc = func;
   }
 
   //! \brief ユーザ定義の wheel 関数を設定する.
   //!   \param func ユーザ定義の wheel 関数, マウスホイールの操作時に呼び出される.
-  void setResizeFunc(void (*func)(const Window *window, double x, double y))
+  void setResizeFunc(void (*func)(const Window* window, double x, double y))
   {
     wheelFunc = func;
   }

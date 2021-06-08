@@ -76,7 +76,7 @@ void app()
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     // オブジェクトのモデル変換行列を設定する
-    GgMatrix mm(window.getTrackball());
+    GgMatrix mm(window.getRotationMatrix());
 
 #ifdef USE_IMGUI
     //
