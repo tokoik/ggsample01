@@ -4,13 +4,16 @@
 // ウィンドウ関連の処理
 #include "Window.h"
 
+// 初期モデルデータ
+static std::string model{ "logo.obj" };
+
 // 光源データ
-GgSimpleShader::Light light =
+static GgSimpleShader::Light light
 {
   { 0.2f, 0.2f, 0.2f, 1.0f }, // 環境光成分
   { 1.0f, 1.0f, 1.0f, 0.0f }, // 拡散反射光成分
   { 1.0f, 1.0f, 1.0f, 0.0f }, // 鏡面反射光成分
-  { 0.0f, 0.0f, 1.0f, 1.0f }  // 光源位置
+  { 0.5f, 0.5f, 1.0f, 1.0f }  // 光源位置
 };
 
 //
@@ -19,19 +22,19 @@ GgSimpleShader::Light light =
 void app()
 {
   // ウィンドウを作成する
-  Window window("ggsample01");
-
-  // シェーダを作成する
-  const GgSimpleShader simple("simple.vert", "simple.frag");
+  Window window{ "ggsample01" };
 
   // 図形データを読み込む (大きさを正規化する)
-  const GgSimpleObj object("logo.obj", true);
+  GgSimpleObj object{ model, true };
+
+  // シェーダを作成する
+  const GgSimpleShader simple{ "simple.vert", "simple.frag" };
 
   // 光源データから光源のバッファオブジェクトを作成する
-  const GgSimpleShader::LightBuffer lightBuffer(light);
+  GgSimpleShader::LightBuffer lightBuffer{ light };
 
   // ビュー変換行列を設定する
-  const GgMatrix mv(ggLookat(0.0f, 0.0f, 5.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f));
+  const GgMatrix mv{ ggLookat(0.0f, 0.0f, 5.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f) };
 
 #ifdef USE_IMGUI
   //
@@ -75,38 +78,36 @@ void app()
     // ウィンドウを消去する
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    // オブジェクトのモデル変換行列を設定する
-    GgMatrix mm(window.getRotationMatrix());
-
 #ifdef USE_IMGUI
     //
     // ImGui によるユーザインタフェース
     //
 
-    // オブジェクトのオイラー角
-    static float roll, pitch, yaw;
-
     // ImGui のフレームを準備する
     ImGui::NewFrame();
 
-    // ImGui のフレームに一つ目の ImGui のウィンドウを描く
-    ImGui::Begin("Control panel");
-    ImGui::Text("Frame rate: %6.2f fps", ImGui::GetIO().Framerate);
-    ImGui::SliderAngle("Roll", &roll);
-    ImGui::SliderAngle("Pitch", &pitch);
-    ImGui::SliderAngle("Yaw", &yaw);
-    if (ImGui::Button("Quit")) window.setClose();
+    //
+    // 光源位置
+    //
+    ImGui::SetNextWindowPos(ImVec2(4, 4), ImGuiCond_Once);
+    ImGui::SetNextWindowSize(ImVec2(400, 54), ImGuiCond_Once);
+    ImGui::Begin("Contrl Panel");
+    if (ImGui::SliderFloat3("Light Position", light.position.data(), -10.0f, 10.0f, "%.2f"))
+      lightBuffer.loadPosition(light.position);
     ImGui::End();
-
-    // モデル変換行列にオイラー角を乗じる
-    mm = mm.rotateY(yaw).rotateX(pitch).rotateZ(roll);
 #endif
 
+    // オブジェクトのモデル変換行列を設定する
+    const GgMatrix mm{ window.getRotationMatrix(0) };
+
+    // スクリーンマッピングの変換行列を設定する
+    const GgMatrix ms{ window.getTranslationMatrix(1) };
+
     // 投影変換行列を設定する
-    const GgMatrix mp(ggPerspective(0.5f, window.getAspect(), 1.0f, 15.0f));
+    const GgMatrix mp{ ggPerspective(0.5f, window.getAspect(), 1.0f, 15.0f) };
 
     // シェーダプログラムを指定する
-    simple.use(mp, mv * mm, lightBuffer);
+    simple.use(ms * mp, mv * mm, lightBuffer);
 
     // 図形を描画する
     object.draw();
