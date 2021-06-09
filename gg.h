@@ -3560,7 +3560,7 @@ namespace gg
 
     //! \brief 四元数を取り出す.
     //!   \return 四元数を表す GLfloat 型の 4 要素の配列変数.
-    inline const GLfloat*const& get() const
+    inline const GLfloat* get() const
     {
       return quaternion.data();
     }
@@ -3879,7 +3879,7 @@ namespace gg
 
     //! \brief トラックボール処理の開始位置を取り出す.
     //!   \return トラックボールの開始位置のポインタ.
-    inline const GLfloat*const& getStart() const
+    inline const GLfloat* getStart() const
     {
       return start;
     }
@@ -3901,7 +3901,7 @@ namespace gg
 
     //! \brief トラックボール処理の換算係数を取り出す.
     //!   \return トラックボールの換算係数のポインタ.
-    inline const GLfloat*const& getScale() const
+    inline const GLfloat* getScale() const
     {
       return scale;
     }
@@ -3937,7 +3937,7 @@ namespace gg
 
     //! \brief 現在の回転の変換行列を取り出す.
     //!   \return 回転の変換を表す GLfloat 型の 16 要素の配列.
-    inline const GLfloat*const& get() const
+    inline const GLfloat* get() const
     {
       return rt.get();
     }
@@ -4029,7 +4029,7 @@ namespace gg
 
     //! \brief 使用しているテクスチャのサイズを取り出す.
     //!   \return テクスチャのサイズを格納した配列へのポインタ.
-    inline const GLsizei*const& getSize() const
+    inline const GLsizei* getSize() const
     {
       return size;
     }

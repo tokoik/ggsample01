@@ -4264,7 +4264,7 @@ GLuint gg::ggLoadComputeShader(const std::string& comp)
 */
 GLfloat gg::ggLength3(const GLfloat* a)
 {
-  return sqrt(ggDot3(a, a));
+  return sqrtf(ggDot3(a, a));
 }
 
 /*
@@ -4274,7 +4274,7 @@ GLfloat gg::ggLength3(const GLfloat* a)
 */
 GLfloat gg::ggLength4(const GLfloat* a)
 {
-  return sqrt(ggDot4(a, a));
+  return sqrtf(ggDot4(a, a));
 }
 
 /*
@@ -4351,8 +4351,8 @@ gg::GgMatrix& gg::GgMatrix::loadScale(GLfloat x, GLfloat y, GLfloat z, GLfloat w
 */
 gg::GgMatrix& gg::GgMatrix::loadRotateX(GLfloat a)
 {
-  const GLfloat c{ cos(a) };
-  const GLfloat s{ sin(a) };
+  const GLfloat c{ cosf(a) };
+  const GLfloat s{ sinf(a) };
 
   array[ 0] = 1.0f; array[ 1] = 0.0f; array[ 2] = 0.0f; array[ 3] = 0.0f;
   array[ 4] = 0.0f; array[ 5] = c;    array[ 6] = s;    array[ 7] = 0.0f;
@@ -4367,8 +4367,8 @@ gg::GgMatrix& gg::GgMatrix::loadRotateX(GLfloat a)
 */
 gg::GgMatrix& gg::GgMatrix::loadRotateY(GLfloat a)
 {
-  const GLfloat c{ cos(a) };
-  const GLfloat s{ sin(a) };
+  const GLfloat c{ cosf(a) };
+  const GLfloat s{ sinf(a) };
 
   array[ 0] = c;    array[ 1] = 0.0f; array[ 2] = -s;   array[ 3] = 0.0f;
   array[ 4] = 0.0f; array[ 5] = 1.0f; array[ 6] = 0.0f; array[ 7] = 0.0f;
@@ -4383,8 +4383,8 @@ gg::GgMatrix& gg::GgMatrix::loadRotateY(GLfloat a)
 */
 gg::GgMatrix& gg::GgMatrix::loadRotateZ(GLfloat a)
 {
-  const GLfloat c{ cos(a) };
-  const GLfloat s{ sin(a) };
+  const GLfloat c{ cosf(a) };
+  const GLfloat s{ sinf(a) };
 
   array[ 0] = c;    array[ 1] = s;    array[ 2] = 0.0f; array[ 3] = 0.0f;
   array[ 4] = -s;   array[ 5] = c;    array[ 6] = 0.0f; array[ 7] = 0.0f;
@@ -4399,15 +4399,15 @@ gg::GgMatrix& gg::GgMatrix::loadRotateZ(GLfloat a)
 */
 gg::GgMatrix& gg::GgMatrix::loadRotate(GLfloat x, GLfloat y, GLfloat z, GLfloat a)
 {
-  const GLfloat d{ sqrt(x * x + y * y + z * z) };
+  const GLfloat d{ sqrtf(x * x + y * y + z * z) };
 
   if (d > 0.0f)
   {
     const GLfloat l(x / d), m(y / d), n(z / d);
     const GLfloat l2(l * l), m2(m * m), n2(n * n);
     const GLfloat lm(l * m), mn(m * n), nl(n * l);
-    const GLfloat c(cos(a)), c1(1.0f - c);
-    const GLfloat s(sin(a));
+    const GLfloat c(cosf(a)), c1(1.0f - c);
+    const GLfloat s(sinf(a));
 
     array[ 0] = (1.0f - l2) * c + l2;
     array[ 1] = lm * c1 + n * s;
@@ -4468,11 +4468,11 @@ gg::GgMatrix& gg::GgMatrix::loadInvert(const GLfloat* marray)
   // j 行の要素の値の絶対値の最大値を plu[j][4] に求める
   for (int j = 0; j < 4; ++j)
   {
-    GLfloat max{ fabs(*(plu[j] = lu + 5 * j) = *(marray++)) };
+    GLfloat max{ fabsf(*(plu[j] = lu + 5 * j) = *(marray++)) };
 
     for (int i = 0; ++i < 4;)
     {
-      GLfloat a{ fabs(plu[j][i] = *(marray++)) };
+      GLfloat a{ fabsf(plu[j][i] = *(marray++)) };
       if (a > max) max = a;
     }
     if (max == 0.0f) return *this;
@@ -4482,12 +4482,12 @@ gg::GgMatrix& gg::GgMatrix::loadInvert(const GLfloat* marray)
   // ピボットを考慮した LU 分解
   for (int j = 0; j < 4; ++j)
   {
-    GLfloat max{ fabs(plu[j][j] * plu[j][4]) };
+    GLfloat max{ fabsf(plu[j][j] * plu[j][4]) };
     int i = j;
 
     for (int k = j; ++k < 4;)
     {
-      GLfloat a{ fabs(plu[k][j] * plu[k][4]) };
+      GLfloat a{ fabsf(plu[k][j] * plu[k][4]) };
       if (a > max)
       {
         max = a;
@@ -4589,19 +4589,19 @@ gg::GgMatrix& gg::GgMatrix::loadLookat(
   if (y == 0.0f) return *this;
 
   // x 軸の正規化
-  const GLfloat x{ sqrt(xx * xx + xy * xy + xz * xz) };
+  const GLfloat x{ sqrtf(xx * xx + xy * xy + xz * xz) };
   array[ 0] = xx / x;
   array[ 4] = xy / x;
   array[ 8] = xz / x;
 
   // y 軸の正規化
-  y = sqrt(y);
+  y = sqrtf(y);
   array[ 1] = yx / y;
   array[ 5] = yy / y;
   array[ 9] = yz / y;
 
   // z 軸の正規化
-  const GLfloat z{ sqrt(zx * zx + zy * zy + zz * zz) };
+  const GLfloat z{ sqrtf(zx * zx + zy * zy + zz * zz) };
   array[ 2] = zx / z;
   array[ 6] = zy / z;
   array[10] = zz / z;
@@ -4690,7 +4690,7 @@ gg::GgMatrix& gg::GgMatrix::loadPerspective(
 
   if (dz != 0.0f)
   {
-    array[ 5] = 1.0f / tan(fovy * 0.5f);
+    array[ 5] = 1.0f / tanf(fovy * 0.5f);
     array[ 0] = array[ 5] / aspect;
     array[10] = -(zFar + zNear) / dz;
     array[11] = -1.0f;
@@ -4751,7 +4751,7 @@ void gg::GgQuaternion::toQuaternion(GLfloat* q, const GLfloat* a) const
 
   if (tr > 0.0f)
   {
-    q[3] = sqrt(tr) * 0.5f;
+    q[3] = sqrtf(tr) * 0.5f;
     q[0] = (a[6] - a[9]) * 0.25f / q[3];
     q[1] = (a[8] - a[2]) * 0.25f / q[3];
     q[2] = (a[1] - a[4]) * 0.25f / q[3];
@@ -4778,11 +4778,11 @@ void gg::GgQuaternion::slerp(GLfloat* p, const GLfloat* q, const GLfloat* r, GLf
   }
   else
   {
-    const GLfloat sp{ sqrt(ss) };
-    const GLfloat ph{ acos(qr) };
+    const GLfloat sp{ sqrtf(ss) };
+    const GLfloat ph{ acosf(qr) };
     const GLfloat pt{ ph * t };
-    const GLfloat t1{ sin(pt) / sp };
-    const GLfloat t0{ sin(ph - pt) / sp };
+    const GLfloat t1{ sinf(pt) / sp };
+    const GLfloat t0{ sinf(ph - pt) / sp };
 
     p[0] = q[0] * t0 + r[0] * t1;
     p[1] = q[1] * t0 + r[1] * t1;
@@ -4800,7 +4800,7 @@ gg::GgQuaternion& gg::GgQuaternion::loadRotate(GLfloat x, GLfloat y, GLfloat z, 
 
   if (l != 0.0)
   {
-    GLfloat s{ sin(a *= 0.5f) / sqrt(l) };
+    GLfloat s{ sinf(a *= 0.5f) / sqrtf(l) };
 
     quaternion[0] = x * s;
     quaternion[1] = y * s;
@@ -4810,7 +4810,7 @@ gg::GgQuaternion& gg::GgQuaternion::loadRotate(GLfloat x, GLfloat y, GLfloat z, 
   {
     quaternion[0] = quaternion[1] = quaternion[2] = 0.0f;
   }
-  quaternion[3] = cos(a);
+  quaternion[3] = cosf(a);
 
   return *this;
 }
@@ -4822,8 +4822,8 @@ gg::GgQuaternion& gg::GgQuaternion::loadRotateX(GLfloat a)
 {
   const GLfloat t{ a * 0.5f };
 
-  quaternion[0] = sin(t);
-  quaternion[3] = cos(t);
+  quaternion[0] = sinf(t);
+  quaternion[3] = cosf(t);
   quaternion[1] = quaternion[2] = 0.0f;
 
   return *this;
@@ -4836,8 +4836,8 @@ gg::GgQuaternion& gg::GgQuaternion::loadRotateY(GLfloat a)
 {
   const GLfloat t{ a * 0.5f };
 
-  quaternion[1] = sin(t);
-  quaternion[3] = cos(t);
+  quaternion[1] = sinf(t);
+  quaternion[3] = cosf(t);
   quaternion[0] = quaternion[2] = 0.0f;
 
   return *this;
@@ -4850,8 +4850,8 @@ gg::GgQuaternion& gg::GgQuaternion::loadRotateZ(GLfloat a)
 {
   const GLfloat t{ a * 0.5f };
 
-  quaternion[2] = sin(t);
-  quaternion[3] = cos(t);
+  quaternion[2] = sinf(t);
+  quaternion[3] = cosf(t);
   quaternion[0] = quaternion[1] = 0.0f;
 
   return *this;
@@ -4984,7 +4984,7 @@ void gg::GgTrackball::motion(GLfloat x, GLfloat y)
     const GLfloat d[]{ (x - start[0]) * scale[0], (y - start[1]) * scale[1] };
 
     // マウスポインタの位置のドラッグ開始位置からの距離
-    const GLfloat a{ sqrt(d[0] * d[0] + d[1] * d[1]) };
+    const GLfloat a{ sqrtf(d[0] * d[0] + d[1] * d[1]) };
 
     if (a != 0.0)
     {
@@ -5151,9 +5151,9 @@ gg::GgPoints* gg::ggPointsSphere(GLsizei count, GLfloat radius,
     const GLfloat r{ radius * static_cast<GLfloat>(rand()) / static_cast<GLfloat>(RAND_MAX) };
     const GLfloat t{ 6.28318530718f * static_cast<GLfloat>(rand()) / (static_cast<GLfloat>(RAND_MAX) + 1.0f) };
     const GLfloat cp{ 2.0f * static_cast<GLfloat>(rand()) / static_cast<GLfloat>(RAND_MAX) - 1.0f };
-    const GLfloat sp{ sqrt(1.0f - cp * cp) };
-    const GLfloat ct{ cos(t) };
-    const GLfloat st{ sin(t) };
+    const GLfloat sp{ sqrtf(1.0f - cp * cp) };
+    const GLfloat ct{ cosf(t) };
+    const GLfloat st{ sinf(t) };
     const GgVector p{ r * sp * ct + cx, r * sp * st + cy, r * cp + cz, 1.0f };
 
     pos.emplace_back(p);
@@ -5203,8 +5203,8 @@ gg::GgTriangles* gg::ggEllipse(GLfloat width, GLfloat height, GLuint slices)
   for (GLuint v = 0; v < slices; ++v)
   {
     const GLfloat t{ 6.28318530717f * static_cast<GLfloat>(v) / static_cast<GLfloat>(slices) };
-    const GLfloat x{ cos(t) * width * scale };
-    const GLfloat y{ sin(t) * height * scale };
+    const GLfloat x{ cosf(t) * width * scale };
+    const GLfloat y{ sinf(t) * height * scale };
 
     vert.emplace_back(x, y, 0.0f, 0.0f, 0.0f, 1.0f);
   }
@@ -5356,15 +5356,15 @@ gg::GgElements* gg::ggElementsSphere(GLfloat radius, int slices, int stacks)
   {
     const GLfloat t{ static_cast<GLfloat>(j) / static_cast<GLfloat>(stacks) };
     const GLfloat ph{ 3.1415926536f * t };
-    const GLfloat y{ cos(ph) };
-    const GLfloat r{ sin(ph) };
+    const GLfloat y{ cosf(ph) };
+    const GLfloat r{ sinf(ph) };
 
     for (int i = 0; i <= slices; ++i)
     {
       const GLfloat s{ static_cast<GLfloat>(i) / static_cast<GLfloat>(slices) };
       const GLfloat th{ -2.0f * 3.1415926536f * s };
-      const GLfloat x{ r * cos(th) };
-      const GLfloat z{ r * sin(th) };
+      const GLfloat x{ r * cosf(th) };
+      const GLfloat z{ r * sinf(th) };
 
       // 頂点の座標値
       p.emplace_back(x * radius);
