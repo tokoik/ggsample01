@@ -4182,16 +4182,22 @@ GLuint gg::ggLoadShader(
   const char* const* varyings
 )
 {
-  // シェーダのソースファイルを読み込む
+  // 読み込んだシェーダのソースプログラム
   std::string vsrc, fsrc, gsrc;
-  if (readShaderSource(vert, vsrc) && readShaderSource(frag, fsrc) && readShaderSource(geom, gsrc))
-  {
-    // プログラムオブジェクトを作成する
-    return ggCreateShader(vsrc.c_str(), fsrc.c_str(), gsrc.c_str(), nvarying, varyings, vert, frag, geom);
-  }
 
-  // プログラムオブジェクト作成失敗
-  return 0;
+  // 読み込んだ結果
+  bool status;
+
+  // シェーダのソースファイルを読み込む
+  status = readShaderSource(vert, vsrc);
+  status = readShaderSource(frag, fsrc) && status;
+  status = readShaderSource(geom, gsrc) && status;
+
+  // 全てのソースファイルが読み込めていなかったらエラー
+  if(!status) return 0;
+
+  // プログラムオブジェクトを作成する
+  return ggCreateShader(vsrc.c_str(), fsrc.c_str(), gsrc.c_str(), nvarying, varyings, vert, frag, geom);
 }
 
 #if !defined(__APPLE__)

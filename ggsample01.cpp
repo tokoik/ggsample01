@@ -98,16 +98,13 @@ void app()
 #endif
 
     // オブジェクトのモデル変換行列を設定する
-    const GgMatrix mm{ window.getRotationMatrix(0) };
-
-    // スクリーンマッピングの変換行列を設定する
-    const GgMatrix ms{ window.getTranslationMatrix(1) };
+    const GgMatrix mm{ window.getTranslationMatrix(1) * window.getRotationMatrix(0) };
 
     // 投影変換行列を設定する
     const GgMatrix mp{ ggPerspective(0.5f, window.getAspect(), 1.0f, 15.0f) };
 
     // シェーダプログラムを指定する
-    simple.use(ms * mp, mv * mm, lightBuffer);
+    simple.use(mp, mv * mm, lightBuffer);
 
     // 図形を描画する
     object.draw();

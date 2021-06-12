@@ -1505,7 +1505,7 @@ public:
     return current_if.wheel[1];
   }
 
-  //! \brief トラックボール処理を考慮したマウスによる平行移動の変換行列を得る.
+  //! \brief トラックボール処理を考慮したマウスによるスクロールの変換行列を得る.
   //!   \param button 平行移動量を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]).
   //!   \return 平行移動量を格納した GLfloat[3] の配列のポインタ.
   const GLfloat* getTranslation(int button = GLFW_MOUSE_BUTTON_1) const
@@ -1517,8 +1517,25 @@ public:
 
   //! \brief トラックボール処理を考慮したマウスによる平行移動の変換行列を得る.
   //!   \param button 平行移動量を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]).
-  //!   \return クリッピング空間で平行移動を行う GgMatrix 型の変換行列.
+  //!   \return ワールド空間で平行移動を行う GgMatrix 型の変換行列.
   GgMatrix getTranslationMatrix(int button = GLFW_MOUSE_BUTTON_1) const
+  {
+    const auto& current_if{ ui_data[ui_no] };
+    assert(button >= GLFW_MOUSE_BUTTON_1 && button < GLFW_MOUSE_BUTTON_1 + BUTTON_COUNT);
+    const auto& t{ current_if.translation[button][1] };
+    GgMatrix m;
+    m[1] = m[2] = m[3] = m[4] = m[6] = m[7] = m[8] = m[9] = m[11] = 0.0f;
+    m[0] = m[5] = m[10] = m[15] = 1.0f;
+    m[12] = t[0];
+    m[13] = t[1];
+    m[14] = t[2];
+    return m;
+  }
+
+  //! \brief トラックボール処理を考慮したマウスによる平行移動の変換行列を得る.
+  //!   \param button 平行移動量を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]).
+  //!   \return クリッピング空間で平行移動を行う GgMatrix 型の変換行列.
+  GgMatrix getScrollMatrix(int button = GLFW_MOUSE_BUTTON_1) const
   {
     const auto& current_if{ ui_data[ui_no] };
     assert(button >= GLFW_MOUSE_BUTTON_1 && button < GLFW_MOUSE_BUTTON_1 + BUTTON_COUNT);
