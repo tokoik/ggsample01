@@ -97,14 +97,17 @@ void app()
     ImGui::End();
 #endif
 
-    // オブジェクトのモデル変換行列を設定する
-    const GgMatrix mm{ window.getTranslationMatrix(1) * window.getRotationMatrix(0) };
+    // オブジェクトの回転の変換行列を設定する
+    const GgMatrix&& mr{ window.getRotationMatrix(0) };
+
+    // 視点の平行移動の変換行列を設定する
+    const GgMatrix&& mt{ window.getTranslationMatrix(1) };
 
     // 投影変換行列を設定する
-    const GgMatrix mp{ ggPerspective(0.5f, window.getAspect(), 1.0f, 15.0f) };
+    const GgMatrix&& mp{ ggPerspective(0.5f, window.getAspect(), 1.0f, 15.0f) };
 
     // シェーダプログラムを指定する
-    simple.use(mp, mv * mm, lightBuffer);
+    simple.use(mp, mt * mv * mr, lightBuffer);
 
     // 図形を描画する
     object.draw();

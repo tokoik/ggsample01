@@ -1515,9 +1515,9 @@ public:
     return current_if.translation[button][1].data();
   }
 
-  //! \brief トラックボール処理を考慮したマウスによる平行移動の変換行列を得る.
+  //! \brief マウスによって視点の平行移動の変換行列を得る.
   //!   \param button 平行移動量を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]).
-  //!   \return ワールド空間で平行移動を行う GgMatrix 型の変換行列.
+  //!   \return 視点座標系で平行移動を行う GgMatrix 型の変換行列.
   GgMatrix getTranslationMatrix(int button = GLFW_MOUSE_BUTTON_1) const
   {
     const auto& current_if{ ui_data[ui_no] };
@@ -1532,9 +1532,9 @@ public:
     return m;
   }
 
-  //! \brief トラックボール処理を考慮したマウスによる平行移動の変換行列を得る.
+  //! \brief マウスによってオブジェクトの平行移動の変換行列を得る.
   //!   \param button 平行移動量を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]).
-  //!   \return クリッピング空間で平行移動を行う GgMatrix 型の変換行列.
+  //!   \return クリッピング座標系で平行移動を行う GgMatrix 型の変換行列.
   GgMatrix getScrollMatrix(int button = GLFW_MOUSE_BUTTON_1) const
   {
     const auto& current_if{ ui_data[ui_no] };
