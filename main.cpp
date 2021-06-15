@@ -1,6 +1,9 @@
 ﻿//
-// メインプログラム
+// ゲームグラフィックス特論宿題アプリケーション
 //
+
+// 使用する OpenGL のバージョン
+constexpr int major(4), minor(1);
 
 // MessageBox の準備
 #if defined(_MSC_VER)
@@ -14,23 +17,64 @@
 #endif
 #define HEADER_STR "ゲームグラフィックス特論"
 
-// ウィンドウ関連の処理
-#define USE_IMGUI
-#include "Window.h"
+// ゲームグラフィックス特論宿題アプリケーションクラス
+#include "GgApplication.h"
 
-// アプリケーション本体
-extern void app();
+// GLFW のエラー表示
+static void glfwErrorCallback(int error, const char* description)
+{
+#ifdef __aarch64__
+  if (error == 65544) return;
+#endif
+  throw std::runtime_error(description);
+}
 
 //
 // メインプログラム
 //
 int main() try
 {
-  // ウィンドウ関連の初期設定
-  Window::init(4, 1);
+  // GLFW のエラー表示関数を登録する
+  glfwSetErrorCallback(glfwErrorCallback);
 
-  // アプリケーションの実行
-  app();
+  // GLFW を初期化する
+  if (glfwInit() == GL_FALSE) throw std::runtime_error("Can't initialize GLFW");
+
+  // OpenGL のバージョンを指定する
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, major);
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, minor);
+
+  // OpenGL 3.2 以降なら Core Profiel を選択する (macOS の都合)
+  if (major * 10 + minor >= 32)
+  {
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+  }
+
+  // プログラム終了時に GLFW の後始末を行う
+  atexit(glfwTerminate);
+
+#ifdef USE_OCULUS_RIFT
+  // LibOVR を初期化してセッションを作成する
+  Window::initialize();
+#endif
+
+#ifdef USE_IMGUI
+  // ImGui のバージョンをチェックする
+  IMGUI_CHECKVERSION();
+
+  // ImGui のコンテキストを作成する
+  ImGui::CreateContext();
+#endif
+
+  // アプリケーションのオブジェクトを生成する
+  GgApplication app;
+
+  // アプリケーションを実行する
+  app.run();
+
+  // ImGui のコンテキストを破棄する
+  ImGui::DestroyContext();
 }
 catch (const std::runtime_error &e)
 {
@@ -69,3 +113,8 @@ catch (const std::runtime_error &e)
   // ブログラムを終了する
   return EXIT_FAILURE;
 }
+
+#ifdef USE_OCULUS_RIFT
+// Oculus Rift のセッション
+ovrSession Window::session(nullptr);
+#endif

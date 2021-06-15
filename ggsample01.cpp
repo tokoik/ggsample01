@@ -1,10 +1,9 @@
-﻿// Dear ImGui を使う
-#define USE_IMGUI
+﻿//
+// ゲームグラフィックス特論宿題アプリケーション
+//
+#include "GgApplication.h"
 
-// ウィンドウ関連の処理
-#include "Window.h"
-
-// 初期モデルデータ
+// 形状データ
 static std::string model{ "logo.obj" };
 
 // 光源データ
@@ -19,7 +18,7 @@ static GgSimpleShader::Light light
 //
 // アプリケーション本体
 //
-void app()
+void GgApplication::run()
 {
   // ウィンドウを作成する
   Window window{ "ggsample01" };
@@ -41,7 +40,7 @@ void app()
   // ImGui の初期設定
   //
 
-  //ImGuiIO& io = ImGui::GetIO();
+  ImGuiIO& io = ImGui::GetIO();
   //io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
   //io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
 
@@ -61,8 +60,8 @@ void app()
   //io.Fonts->AddFontFromFileTTF("../../misc/fonts/Cousine-Regular.ttf", 15.0f);
   //io.Fonts->AddFontFromFileTTF("../../misc/fonts/DroidSans.ttf", 16.0f);
   //io.Fonts->AddFontFromFileTTF("../../misc/fonts/ProggyTiny.ttf", 10.0f);
-  //ImFont* font = io.Fonts->AddFontFromFileTTF("c:\\Windows\\Fonts\\ArialUni.ttf", 18.0f, NULL, io.Fonts->GetGlyphRangesJapanese());
-  //IM_ASSERT(font != NULL);
+  ImFont* font = io.Fonts->AddFontFromFileTTF("Mplus1-Regular.ttf", 18.0f, NULL, io.Fonts->GetGlyphRangesJapanese());
+  IM_ASSERT(font != NULL);
 #endif
 
   // 背景色を設定する
@@ -86,12 +85,10 @@ void app()
     // ImGui のフレームを準備する
     ImGui::NewFrame();
 
-    //
-    // 光源位置
-    //
+    // 光源位置を決定する
     ImGui::SetNextWindowPos(ImVec2(4, 4), ImGuiCond_Once);
     ImGui::SetNextWindowSize(ImVec2(400, 54), ImGuiCond_Once);
-    ImGui::Begin("Contrl Panel");
+    ImGui::Begin(u8"コントロールパネル");
     if (ImGui::SliderFloat3("Light Position", light.position.data(), -10.0f, 10.0f, "%.2f"))
       lightBuffer.loadPosition(light.position);
     ImGui::End();
