@@ -37,16 +37,22 @@ int main() try
   // GLFW を初期化する
   if (glfwInit() == GL_FALSE) throw std::runtime_error("Can't initialize GLFW");
 
+  // プログラム終了時に GLFW の後始末を行う
+  atexit(glfwTerminate);
+
   // OpenGL のバージョンを指定する
   glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
   glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
   glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
   glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-  // プログラム終了時に GLFW の後始末を行う
-  atexit(glfwTerminate);
-
 #ifdef USE_OCULUS_RIFT
+  // Oculus Rift では SRGB でレンダリングする
+  glfwWindowHint(GLFW_SRGB_CAPABLE, GL_TRUE);
+
+  // Oculus Rift ではダブルバッファリングしない
+  glfwWindowHint(GLFW_DOUBLEBUFFER, GL_FALSE);
+
   // LibOVR を初期化してセッションを作成する
   Window::initialize();
 #endif
@@ -65,8 +71,10 @@ int main() try
   // アプリケーションを実行する
   app.run();
 
+#ifdef USE_IMGUI
   // ImGui のコンテキストを破棄する
   ImGui::DestroyContext();
+#endif
 }
 catch (const std::runtime_error &e)
 {

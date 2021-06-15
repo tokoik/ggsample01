@@ -40,6 +40,7 @@ void GgApplication::run()
   // ImGui の初期設定
   //
 
+  // ImGui のコンテキストの設定と入出力のデータへの参照を得る
   ImGuiIO& io = ImGui::GetIO();
   //io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
   //io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
