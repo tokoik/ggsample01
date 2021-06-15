@@ -12,6 +12,8 @@
 		7D27311B23EEE29600438307 /* gg.icns in Resources */ = {isa = PBXBuildFile; fileRef = 7D27311A23EEE29600438307 /* gg.icns */; };
 		7D61778423F3FEAE00A4B1A4 /* simple.frag in Resources */ = {isa = PBXBuildFile; fileRef = 7D61778223F3FEAE00A4B1A4 /* simple.frag */; };
 		7D61778523F3FEAE00A4B1A4 /* simple.vert in Resources */ = {isa = PBXBuildFile; fileRef = 7D61778323F3FEAE00A4B1A4 /* simple.vert */; };
+		7D779F272678C3AA0001FF6B /* Mplus1Code-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D779F262678C3AA0001FF6B /* Mplus1Code-Regular.ttf */; };
+		7D779F292678C4050001FF6B /* Mplus1-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D779F282678C4050001FF6B /* Mplus1-Regular.ttf */; };
 		7DAF9073240F5D2D001E5CE2 /* logo.obj in Resources */ = {isa = PBXBuildFile; fileRef = 7DAF9071240F5D2D001E5CE2 /* logo.obj */; };
 		7DAF9074240F5D2D001E5CE2 /* logo.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 7DAF9072240F5D2D001E5CE2 /* logo.mtl */; };
 		7DD33CCC246A757600E99D6A /* ggsample01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DD33CCB246A757600E99D6A /* ggsample01.cpp */; };
@@ -32,6 +34,9 @@
 		7D27311A23EEE29600438307 /* gg.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = gg.icns; sourceTree = "<group>"; };
 		7D61778223F3FEAE00A4B1A4 /* simple.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = simple.frag; sourceTree = "<group>"; };
 		7D61778323F3FEAE00A4B1A4 /* simple.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = simple.vert; sourceTree = "<group>"; };
+		7D779F232678BFDE0001FF6B /* GgApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GgApplication.h; sourceTree = "<group>"; };
+		7D779F262678C3AA0001FF6B /* Mplus1Code-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mplus1Code-Regular.ttf"; sourceTree = "<group>"; };
+		7D779F282678C4050001FF6B /* Mplus1-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mplus1-Regular.ttf"; sourceTree = "<group>"; };
 		7DAF9071240F5D2D001E5CE2 /* logo.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = logo.obj; sourceTree = "<group>"; };
 		7DAF9072240F5D2D001E5CE2 /* logo.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = logo.mtl; sourceTree = "<group>"; };
 		7DD33CCB246A757600E99D6A /* ggsample01.cpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; path = ggsample01.cpp; sourceTree = "<group>"; tabWidth = 2; };
@@ -59,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				7DD33CCB246A757600E99D6A /* ggsample01.cpp */,
+				7D779F232678BFDE0001FF6B /* GgApplication.h */,
 				7DF9CC4420047E4E009E3F96 /* main.cpp */,
 				7DF4DDD123EF0E40005D4BCB /* imgui_draw.cpp */,
 				7DF4DDCE23EF0E40005D4BCB /* imgui_impl_glfw.cpp */,
@@ -73,6 +79,8 @@
 				7D61778223F3FEAE00A4B1A4 /* simple.frag */,
 				7DAF9071240F5D2D001E5CE2 /* logo.obj */,
 				7DAF9072240F5D2D001E5CE2 /* logo.mtl */,
+				7D779F282678C4050001FF6B /* Mplus1-Regular.ttf */,
+				7D779F262678C3AA0001FF6B /* Mplus1Code-Regular.ttf */,
 				7D1E90EF1123E36C005E6C75 /* Products */,
 				7D1E90F11123E36C005E6C75 /* Info.plist */,
 				7D27311A23EEE29600438307 /* gg.icns */,
@@ -141,6 +149,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D779F292678C4050001FF6B /* Mplus1-Regular.ttf in Resources */,
+				7D779F272678C3AA0001FF6B /* Mplus1Code-Regular.ttf in Resources */,
 				7D61778423F3FEAE00A4B1A4 /* simple.frag in Resources */,
 				7D61778523F3FEAE00A4B1A4 /* simple.vert in Resources */,
 				7D27311B23EEE29600438307 /* gg.icns in Resources */,

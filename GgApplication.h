@@ -4,7 +4,7 @@
 //
 
 // Oculus Rift を使う
-#define USE_OCULUS_RIFT
+//#define USE_OCULUS_RIFT
 
 // Dear ImGui を使う
 #define USE_IMGUI

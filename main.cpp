@@ -2,9 +2,6 @@
 // ゲームグラフィックス特論宿題アプリケーション
 //
 
-// 使用する OpenGL のバージョン
-constexpr int major(4), minor(1);
-
 // MessageBox の準備
 #if defined(_MSC_VER)
 #  define NOMINMAX
@@ -41,15 +38,10 @@ int main() try
   if (glfwInit() == GL_FALSE) throw std::runtime_error("Can't initialize GLFW");
 
   // OpenGL のバージョンを指定する
-  glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, major);
-  glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, minor);
-
-  // OpenGL 3.2 以降なら Core Profiel を選択する (macOS の都合)
-  if (major * 10 + minor >= 32)
-  {
-    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-  }
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+  glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
+  glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+  glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
   // プログラム終了時に GLFW の後始末を行う
   atexit(glfwTerminate);

@@ -89,7 +89,7 @@ void GgApplication::run()
     ImGui::SetNextWindowPos(ImVec2(4, 4), ImGuiCond_Once);
     ImGui::SetNextWindowSize(ImVec2(400, 54), ImGuiCond_Once);
     ImGui::Begin(u8"コントロールパネル");
-    if (ImGui::SliderFloat3("Light Position", light.position.data(), -10.0f, 10.0f, "%.2f"))
+    if (ImGui::SliderFloat3(u8"光源位置", light.position.data(), -10.0f, 10.0f, "%.2f"))
       lightBuffer.loadPosition(light.position);
     ImGui::End();
 #endif
