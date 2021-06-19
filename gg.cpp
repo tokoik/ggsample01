@@ -5419,6 +5419,29 @@ void gg::GgSimpleShader::LightBuffer::loadAmbient(GLfloat r, GLfloat g, GLfloat 
 }
 
 /*
+** 三角形に単純な陰影付けを行うシェーダが参照する光源データ：光源の強度の環境光成分を設定する
+**
+**   ambient 光源の強度の環境光成分
+**   first 値を設定する光源データの最初の番号, デフォルトは 0
+**   count 値を設定する光源データの数, デフォルトは 1
+*/
+void gg::GgSimpleShader::LightBuffer::loadAmbient(const GgVector& ambient,
+  GLint first, GLsizei count) const
+{
+  // データを格納するバッファオブジェクトの先頭のポインタ
+  char* const start{ static_cast<char*>(map(first, count)) };
+  for (GLsizei i = 0; i < count; ++i)
+  {
+    // バッファオブジェクトの i 番目のブロックのポインタ
+    Light* const light{ reinterpret_cast<Light*>(start + getStride() * i) };
+
+    // 光源の強度の環境光成分を設定する
+    light->ambient = ambient;
+  }
+  unmap();
+}
+
+/*
 ** 三角形に単純な陰影付けを行うシェーダが参照する光源データ：光源の強度の拡散反射光成分を設定する
 **
 **   r 光源の強度の拡散反射光成分の赤成分
@@ -5448,6 +5471,29 @@ void gg::GgSimpleShader::LightBuffer::loadDiffuse(GLfloat r, GLfloat g, GLfloat 
 }
 
 /*
+** 三角形に単純な陰影付けを行うシェーダが参照する光源データ：光源の強度の拡散反射光成分を設定する
+**
+**   ambient 光源の強度の拡散反射光成分
+**   first 値を設定する光源データの最初の番号, デフォルトは 0
+**   count 値を設定する光源データの数, デフォルトは 1
+*/
+void gg::GgSimpleShader::LightBuffer::loadDiffuse(const GgVector& diffuse,
+  GLint first, GLsizei count) const
+{
+  // データを格納するバッファオブジェクトの先頭のポインタ
+  char* const start{ static_cast<char*>(map(first, count)) };
+  for (GLsizei i = 0; i < count; ++i)
+  {
+    // バッファオブジェクトの i 番目のブロックのポインタ
+    Light* const light{ reinterpret_cast<Light*>(start + getStride() * i) };
+
+    // 光源の強度の拡散反射光成分を設定する
+    light->diffuse = diffuse;
+  }
+  unmap();
+}
+
+/*
 ** 三角形に単純な陰影付けを行うシェーダが参照する光源データ：光源の強度の鏡面反射光成分を設定する
 **
 **   r 光源の強度の鏡面反射光成分の赤成分
@@ -5472,6 +5518,29 @@ void gg::GgSimpleShader::LightBuffer::loadSpecular(GLfloat r, GLfloat g, GLfloat
     light->specular[1] = g;
     light->specular[2] = b;
     light->specular[3] = a;
+  }
+  unmap();
+}
+
+/*
+** 三角形に単純な陰影付けを行うシェーダが参照する光源データ：光源の強度の鏡面反射光成分を設定する
+**
+**   ambient 光源の強度の鏡面反射光成分
+**   first 値を設定する光源データの最初の番号, デフォルトは 0
+**   count 値を設定する光源データの数, デフォルトは 1
+*/
+void gg::GgSimpleShader::LightBuffer::loadSpecular(const GgVector& specular,
+  GLint first, GLsizei count) const
+{
+  // データを格納するバッファオブジェクトの先頭のポインタ
+  char* const start{ static_cast<char*>(map(first, count)) };
+  for (GLsizei i = 0; i < count; ++i)
+  {
+    // バッファオブジェクトの i 番目のブロックのポインタ
+    Light* const light{ reinterpret_cast<Light*>(start + getStride() * i) };
+
+    // 光源の強度の鏡面反射光成分を設定する
+    light->specular = specular;
   }
   unmap();
 }

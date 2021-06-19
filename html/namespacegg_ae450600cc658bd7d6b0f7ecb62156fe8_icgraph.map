@@ -1,0 +1,5 @@
+<map id="gg::ggSaveTga" name="gg::ggSaveTga">
+<area shape="rect" id="node1" title="配列の内容を TGA ファイルに保存する." alt="" coords="173,31,280,57"/>
+<area shape="rect" id="node2" href="$namespacegg.html#a6dc1ef6d0e78a6694ae8aca973b1b9ae" title="カラーバッファの内容を TGA ファイルに保存する." alt="" coords="7,5,123,32"/>
+<area shape="rect" id="node3" href="$namespacegg.html#a236701485bbc8278654781a810bf2880" title="デプスバッファの内容を TGA ファイルに保存する." alt="" coords="5,56,125,83"/>
+</map>

@@ -160,7 +160,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gg.h" />
-    <ClInclude Include="GgApplication.h" />
+    <ClInclude Include="GgApp.h" />
     <ClInclude Include="include\imconfig.h" />
     <ClInclude Include="include\imgui.h" />
     <ClInclude Include="include\imgui_impl_glfw.h" />

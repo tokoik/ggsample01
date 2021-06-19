@@ -1,0 +1,8 @@
+<map id="gg::GgNormalTexture::GgNormalTexture" name="gg::GgNormalTexture::GgNormalTexture">
+<area shape="rect" id="node1" title="ファイルからデータを読み込んで法線マップのテクスチャを作成するコンストラクタ." alt="" coords="5,5,151,47"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgNormalTexture.html#a4d72c9169596e2040d41388ec375d253" title="メモリ上のデータから法線マップのテクスチャを作成する." alt="" coords="199,5,344,47"/>
+<area shape="rect" id="node3" href="$namespacegg.html#a2cd46afb53daa13fa8bb2de14baf4e7b" title="グレースケール画像 (8bit) から法線マップのデータを作成する." alt="" coords="392,13,555,39"/>
+<area shape="rect" id="node4" href="$namespacegg.html#af6a03a10f9a4d01016db6dceb0cc338d" title="3 要素の正規化." alt="" coords="603,13,725,39"/>
+<area shape="rect" id="node5" href="$namespacegg.html#a837850150a8293353ade7900452955b2" title="3 要素の長さ." alt="" coords="773,13,877,39"/>
+<area shape="rect" id="node6" href="$namespacegg.html#a4e49aff9138ef05a803f1ee703d0f67f" title="3 要素の内積." alt="" coords="925,13,1011,39"/>
+</map>

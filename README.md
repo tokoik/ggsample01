@@ -28,12 +28,16 @@ OpenGL の開発環境を整備してください。
 
 ゲームグラフィックス特論 A / B で課す宿題プログラムでは、専用の補助プログラムを用意しています。これは以下の 3 つのファイルで構成されています。
 
-* gg.h / gg.cpp
+* [gg.h](https://github.com/tokoik/ggsample01/blob/master/gg.h) / [gg.cpp](https://github.com/tokoik/ggsample01/blob/master/gg.cpp)
     * GLFW での利用を想定した OpenGL のローダとユーティリティ
-* Window.h
+* [Window.h](https://github.com/tokoik/ggsample01/blob/master/Window.h)
     * ウィンドウやマウス関連のユーザインタフェースを管理する GLFW のラッパー
 
-[GLFW](https://www.glfw.org/) は [OpenGL](https://www.opengl.org/) や、その後継の Vulkan を使用したアプリケーションを作成するための、非常にコンパクトなフレームワークです。本当はこれだけで簡単にアプリケーションが作れるのですが、授業内容とはあまり関係のない処理を分離するために、屋上屋ながら**この授業専用の**フレームワークを用意しました。なお、gg.h / gg.cpp には OpenGL の拡張機能を使用可能にする機能を含んでいるので、別に [GLEW](http://glew.sourceforge.net/) や [glad](https://github.com/Dav1dde/glad)、[GL3W](https://github.com/skaslev/gl3w) などを導入する必要はありません。また Window.h には、[Dear ImGui](https://github.com/ocornut/imgui) をサポートする機能と、Oculus Rift (DK1, DK2, [CV1](https://www.oculus.com/rift/), [S](https://www.oculus.com/rift-s/)) をサポートする機能を組み込んでいます。これを使って、C++ だけで VR アプリケーション () が作れます。
+[GLFW](https://www.glfw.org/) は [OpenGL](https://www.opengl.org/) や、その後継の [Vulkan](https://www.vulkan.org/) を使用したアプリケーションを作成するための、非常にコンパクトなフレームワークです。本当はこれだけで簡単にアプリケーションが作れるのですが、授業内容とはあまり関係のない処理を分離するために、屋上屋ながら**この授業専用の**フレームワークを用意しました。なお、gg.h / gg.cpp には OpenGL の拡張機能を使用可能にする機能を含んでいるので、別に [GLEW](http://glew.sourceforge.net/) や [glad](https://github.com/Dav1dde/glad)、[GL3W](https://github.com/skaslev/gl3w) などを導入する必要はありません。
+
+また、この Window.h には [Dear ImGui](https://github.com/ocornut/imgui) をサポートする機能を含んでいます。このプログラム ([ggsample01](https://github.com/tokoik/ggsample01)) には、その使い方のサンプルコードを示すために Dear ImGui のソースプログラムも含めています。日本語メニューの表示のために [M+ FONTS](https://mplusfonts.github.io/) の [Mplus1-Regular.ttf](https://github.com/coz-m/MPLUS_FONTS/blob/master/fonts/ttf/Mplus1-Regular.ttf) もリポジトリに含めています。
+
+このほか、この Window.h には Oculus Rift (DK1, DK2, [CV1](https://www.oculus.com/rift/), [S](https://www.oculus.com/rift-s/)) をサポートする機能を組み込んでいます。これを使って、C++ だけで VR アプリケーション () が作れます。
 
 ### 補助プログラムのドキュメント
 
@@ -107,7 +111,7 @@ int main()
 そして、OpenGL の描画ループの中で
 `ImGui::NewFrame();` と `ImGui::Render();` の間に Dear ImGui の API を置いてください。Dear ImGui のウィンドウの実際のレンダリング (`ImGui_ImplOpenGL3_RenderDrawData();` の呼び出し) は `window.swapbuffers()` の中で行っているので、Dear ImGui の API と OpenGL の API は描画ループの中で混在していても構いません。
 
-なお、Dear ImGui を有効にした場合は、マウスカーソルが Dear ImGui のウィンドウ上にあるとき (`IsAnyWindowHovered() == true`) に、Window クラスが保持しているマウスカーソルの位置を更新しないようにしています。また、Dear ImGui のいずれかのウィンドウが選択されているとき (`IsAnyWindowFocused() == true`) には、Window クラスはキーボードのイベントを処理しないようにしています。
+なお、Dear ImGui を有効にした場合は、Dear ImGui がマウスを使っているとき (`io.WantCaptureMouse == true`) に、Window クラスが保持しているマウスカーソルの位置を更新しないようにしています。また、Dear ImGui がキーボードを使っているとき (`io.WantCaptureKeyboard == true`) には、Window クラスはキーボードのイベントを処理しないようにしています。
 
 ```cpp
 // ウィンドウ関連の処理
@@ -140,15 +144,15 @@ int main()
     if (ImGui::Button("Quit")) window.setClose();
     ImGui::End();
 
+    // ImGui のフレームに描画する
+    ImGui::Render();
+
     // ウィンドウを消去する
     glClear(GL_COLOR_BUFFER_BIT);
 
     //
     // ここで OpenGL による描画を行う
     //
-
-    // ImGui のフレームに描画する
-    ImGui::Render();
 
     // カラーバッファを入れ替えてイベントを取り出す
     window.swapBuffers();

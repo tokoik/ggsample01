@@ -5613,6 +5613,12 @@ namespace gg
         send(ambient, offsetof(Light, ambient), sizeof(Light::ambient), first, count);
       }
 
+      //! \brief 光源の強度の環境光成分を設定する.
+      //!   \param ambient 光源の強度の環境光成分を格納した GgVector 型の変数.
+      //!   \param first 値を設定する光源データの最初の番号, デフォルトは 0.
+      //!   \param count 値を設定する光源データの数, デフォルトは 1.
+      void loadAmbient(const GgVector& ambient, GLint first = 0, GLsizei count = 1) const;
+
       //! \brief 光源の強度の拡散反射光成分を設定する.
       //!   \param r 光源の強度の拡散反射光成分の赤成分.
       //!   \param g 光源の強度の拡散反射光成分の緑成分.
@@ -5624,6 +5630,12 @@ namespace gg
         GLfloat r, GLfloat g, GLfloat b, GLfloat a = 1.0f,
         GLint first = 0, GLsizei count = 1
       ) const;
+
+      //! \brief 光源の強度の拡散反射光成分を設定する.
+      //!   \param specular 光源の強度の拡散反射光成分を格納した GgVector 型の変数.
+      //!   \param first 値を設定する光源データの最初の番号, デフォルトは 0.
+      //!   \param count 値を設定する光源データの数, デフォルトは 1.
+      void loadDiffuse(const GgVector& diffuse, GLint first = 0, GLsizei count = 1) const;
 
       //! \brief 光源の強度の拡散反射光成分を設定する.
       //!   \param diffuse 光源の強度の拡散反射光成分を格納した GLfloat 型の 4 要素の配列変数.
@@ -5646,6 +5658,12 @@ namespace gg
         GLfloat r, GLfloat g, GLfloat b, GLfloat a = 1.0f,
         GLint first = 0, GLsizei count = 1
       ) const;
+
+      //! \brief 光源の強度の鏡面反射光成分を設定する.
+      //!   \param specular 光源の強度の鏡面反射光成分を格納した GgVector 型の変数.
+      //!   \param first 値を設定する光源データの最初の番号, デフォルトは 0.
+      //!   \param count 値を設定する光源データの数, デフォルトは 1.
+      void loadSpecular(const GgVector& specular, GLint first = 0, GLsizei count = 1) const;
 
       //! \brief 光源の強度の鏡面反射光成分を設定する.
       //!   \param specular 光源の強度の鏡面反射光成分を格納した GLfloat 型の 4 要素の配列変数.

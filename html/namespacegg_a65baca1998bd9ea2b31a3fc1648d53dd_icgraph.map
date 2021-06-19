@@ -1,5 +1,5 @@
 <map id="gg::ggRotateQuaternion" name="gg::ggRotateQuaternion">
 <area shape="rect" id="node1" title="(x, y, z) を軸として角度 a 回転する四元数を返す." alt="" coords="213,31,372,57"/>
 <area shape="rect" id="node2" href="$namespacegg.html#a4e721a0a9a903540b11921447ecac772" title="(v[0], v[1], v[2]) を軸として角度 a 回転する四元数を返す." alt="" coords="6,5,165,32"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgTrackball.html#a4f12392353b387cc7ec116b9e2d740b0" title="回転の変換行列を計算する." alt="" coords="5,56,165,83"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgTrackball.html#a9613e5e3f4e41561938f8372ac8f55f2" title="回転の変換行列を計算する." alt="" coords="5,56,165,83"/>
 </map>

@@ -10,7 +10,7 @@ var searchData=
   ['setmousefunc_228',['setMouseFunc',['../classWindow.html#aeb09f22aed8453ec749d4c8e0d82d830',1,'Window']]],
   ['setresizefunc_229',['setResizeFunc',['../classWindow.html#a49c5c2961b448d71f87b0e5fd2a595c6',1,'Window::setResizeFunc(void(*func)(const Window *window, int width, int height))'],['../classWindow.html#a2201fff8d1793f92bd58225be6dc9a88',1,'Window::setResizeFunc(void(*func)(const Window *window, double x, double y))']]],
   ['setuserpointer_230',['setUserPointer',['../classWindow.html#adf319c45dfbe5bdc3e2ad04b8a9f7fa1',1,'Window']]],
-  ['setvelocity_231',['setVelocity',['../classWindow.html#a152039548854ccd3df50550fc8eaa83f',1,'Window']]],
+  ['setvelocity_231',['setVelocity',['../classWindow.html#a5fd44a07a4a1cd39eeb85911fa6b308d',1,'Window']]],
   ['shininess_232',['shininess',['../structgg_1_1GgSimpleShader_1_1Material.html#a537c99818191226cb9ceddc7b7ff3d6c',1,'gg::GgSimpleShader::Material']]],
   ['shouldclose_233',['shouldClose',['../classWindow.html#a1caaf150558c0c35a8811f19ccac817d',1,'Window']]],
   ['slerp_234',['slerp',['../classgg_1_1GgQuaternion.html#ae87cd428f7803b83a0ef4f1464128a2d',1,'gg::GgQuaternion::slerp(GLfloat *a, GLfloat t) const'],['../classgg_1_1GgQuaternion.html#af5e931d94ea34b3c63d79b081e594b95',1,'gg::GgQuaternion::slerp(const GgQuaternion &amp;q, GLfloat t) const']]],

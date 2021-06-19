@@ -1,7 +1,7 @@
 ﻿//
 // ゲームグラフィックス特論宿題アプリケーション
 //
-#include "GgApplication.h"
+#include "GgApp.h"
 
 // 形状データ
 static std::string model{ "logo.obj" };
@@ -18,10 +18,10 @@ static GgSimpleShader::Light light
 //
 // アプリケーション本体
 //
-void GgApplication::run()
+void GgApp::main(int argc, const char* const* argv)
 {
-  // ウィンドウを作成する
-  Window window{ "ggsample01" };
+  // ウィンドウを作成する (この行は変更しないでください)
+  Window window{ argc > 1 ? argv[1] : "ggsample01" };
 
   // 図形データを読み込む (大きさを正規化する)
   GgSimpleObj object{ model, true };
@@ -88,11 +88,16 @@ void GgApplication::run()
 
     // 光源位置を決定する
     ImGui::SetNextWindowPos(ImVec2(4, 4), ImGuiCond_Once);
-    ImGui::SetNextWindowSize(ImVec2(400, 54), ImGuiCond_Once);
+    ImGui::SetNextWindowSize(ImVec2(320, 92), ImGuiCond_Once);
     ImGui::Begin(u8"コントロールパネル");
     if (ImGui::SliderFloat3(u8"光源位置", light.position.data(), -10.0f, 10.0f, "%.2f"))
       lightBuffer.loadPosition(light.position);
+    if (ImGui::ColorEdit3(u8"光源色", light.diffuse.data(), ImGuiColorEditFlags_Float))
+      lightBuffer.loadDiffuse(light.diffuse);
     ImGui::End();
+
+    // ImGui のフレームに描画する
+    ImGui::Render();
 #endif
 
     // オブジェクトの回転の変換行列を設定する
@@ -109,11 +114,6 @@ void GgApplication::run()
 
     // 図形を描画する
     object.draw();
-
-#ifdef USE_IMGUI
-    // ImGui のフレームに描画する
-    ImGui::Render();
-#endif
 
     // カラーバッファを入れ替えてイベントを取り出す
     window.swapBuffers();

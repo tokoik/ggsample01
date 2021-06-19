@@ -15,66 +15,21 @@
 #define HEADER_STR "ゲームグラフィックス特論"
 
 // ゲームグラフィックス特論宿題アプリケーションクラス
-#include "GgApplication.h"
-
-// GLFW のエラー表示
-static void glfwErrorCallback(int error, const char* description)
-{
-#ifdef __aarch64__
-  if (error == 65544) return;
-#endif
-  throw std::runtime_error(description);
-}
+#include "GgApp.h"
 
 //
 // メインプログラム
 //
-int main() try
+int main(int argc, const char* const* argv) try
 {
-  // GLFW のエラー表示関数を登録する
-  glfwSetErrorCallback(glfwErrorCallback);
-
-  // GLFW を初期化する
-  if (glfwInit() == GL_FALSE) throw std::runtime_error("Can't initialize GLFW");
-
-  // プログラム終了時に GLFW の後始末を行う
-  atexit(glfwTerminate);
-
-  // OpenGL のバージョンを指定する
-  glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-  glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
-  glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-  glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-
-#ifdef USE_OCULUS_RIFT
-  // Oculus Rift では SRGB でレンダリングする
-  glfwWindowHint(GLFW_SRGB_CAPABLE, GL_TRUE);
-
-  // Oculus Rift ではダブルバッファリングしない
-  glfwWindowHint(GLFW_DOUBLEBUFFER, GL_FALSE);
-
-  // LibOVR を初期化してセッションを作成する
-  Window::initialize();
-#endif
-
-#ifdef USE_IMGUI
-  // ImGui のバージョンをチェックする
-  IMGUI_CHECKVERSION();
-
-  // ImGui のコンテキストを作成する
-  ImGui::CreateContext();
-#endif
+  // ウィンドウ関連の初期設定
+  Window::init(4, 1);
 
   // アプリケーションのオブジェクトを生成する
-  GgApplication app;
+  GgApp app;
 
   // アプリケーションを実行する
-  app.run();
-
-#ifdef USE_IMGUI
-  // ImGui のコンテキストを破棄する
-  ImGui::DestroyContext();
-#endif
+  app.main(argc, argv);
 }
 catch (const std::runtime_error &e)
 {
@@ -113,8 +68,3 @@ catch (const std::runtime_error &e)
   // ブログラムを終了する
   return EXIT_FAILURE;
 }
-
-#ifdef USE_OCULUS_RIFT
-// Oculus Rift のセッション
-ovrSession Window::session(nullptr);
-#endif

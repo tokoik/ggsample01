@@ -65,7 +65,6 @@ $(function() {
 <a href="#nested-classes">クラス</a> &#124;
 <a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
-<a href="#pub-attribs">公開変数類</a> &#124;
 <a href="classWindow-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle">
 <div class="title">Window クラス</div>  </div>
@@ -79,9 +78,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a6dd95b8ba304a9257523eccd1d1a3ef7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a6dd95b8ba304a9257523eccd1d1a3ef7">Window</a> (const char *title=&quot;GLFW <a class="el" href="classWindow.html">Window</a>&quot;, int width=640, int height=480, int fullscreen=0, GLFWwindow *share=nullptr)</td></tr>
-<tr class="memdesc:a6dd95b8ba304a9257523eccd1d1a3ef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ.  <a href="classWindow.html#a6dd95b8ba304a9257523eccd1d1a3ef7">[詳解]</a><br /></td></tr>
-<tr class="separator:a6dd95b8ba304a9257523eccd1d1a3ef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7c87ca45f27accaf4aa15fc36bafbb1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#ae7c87ca45f27accaf4aa15fc36bafbb1">Window</a> (const std::string &amp;title=&quot;GLFW <a class="el" href="classWindow.html">Window</a>&quot;, int width=640, int height=480, int fullscreen=0, GLFWwindow *share=nullptr)</td></tr>
+<tr class="memdesc:ae7c87ca45f27accaf4aa15fc36bafbb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ.  <a href="classWindow.html#ae7c87ca45f27accaf4aa15fc36bafbb1">[詳解]</a><br /></td></tr>
+<tr class="separator:ae7c87ca45f27accaf4aa15fc36bafbb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ce0353fc6ae2a98054a92fae433e624"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a0ce0353fc6ae2a98054a92fae433e624">Window</a> (const <a class="el" href="classWindow.html">Window</a> &amp;w)=delete</td></tr>
 <tr class="memdesc:a0ce0353fc6ae2a98054a92fae433e624"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピーコンストラクタは使用禁止.  <a href="classWindow.html#a0ce0353fc6ae2a98054a92fae433e624">[詳解]</a><br /></td></tr>
 <tr class="separator:a0ce0353fc6ae2a98054a92fae433e624"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,9 +129,9 @@ $(function() {
 <tr class="memitem:adbc1f060541189f00a0518b499217f1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#adbc1f060541189f00a0518b499217f1a">selectInterface</a> (int no)</td></tr>
 <tr class="memdesc:adbc1f060541189f00a0518b499217f1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">インタフェースを選択する  <a href="classWindow.html#adbc1f060541189f00a0518b499217f1a">[詳解]</a><br /></td></tr>
 <tr class="separator:adbc1f060541189f00a0518b499217f1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a152039548854ccd3df50550fc8eaa83f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a152039548854ccd3df50550fc8eaa83f">setVelocity</a> (GLfloat vx, GLfloat vy)</td></tr>
-<tr class="memdesc:a152039548854ccd3df50550fc8eaa83f"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスの移動速度を設定する  <a href="classWindow.html#a152039548854ccd3df50550fc8eaa83f">[詳解]</a><br /></td></tr>
-<tr class="separator:a152039548854ccd3df50550fc8eaa83f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fd44a07a4a1cd39eeb85911fa6b308d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a5fd44a07a4a1cd39eeb85911fa6b308d">setVelocity</a> (GLfloat vx, GLfloat vy, GLfloat vz=0.1f)</td></tr>
+<tr class="memdesc:a5fd44a07a4a1cd39eeb85911fa6b308d"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスの移動速度を設定する  <a href="classWindow.html#a5fd44a07a4a1cd39eeb85911fa6b308d">[詳解]</a><br /></td></tr>
+<tr class="separator:a5fd44a07a4a1cd39eeb85911fa6b308d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac91bc4516ae6b3b09ef1ef5990ac433"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#aac91bc4516ae6b3b09ef1ef5990ac433">getArrow</a> (int direction=0, int mods=0) const</td></tr>
 <tr class="memdesc:aac91bc4516ae6b3b09ef1ef5990ac433"><td class="mdescLeft">&#160;</td><td class="mdescRight">矢印キーの現在の値を得る.  <a href="classWindow.html#aac91bc4516ae6b3b09ef1ef5990ac433">[詳解]</a><br /></td></tr>
 <tr class="separator:aac91bc4516ae6b3b09ef1ef5990ac433"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,24 +201,27 @@ $(function() {
 <tr class="memitem:abe2d6a9ad52372c170df2e2aa021441b"><td class="memItemLeft" align="right" valign="top">const GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#abe2d6a9ad52372c170df2e2aa021441b">getWheelY</a> () const</td></tr>
 <tr class="memdesc:abe2d6a9ad52372c170df2e2aa021441b"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスホイールの Y 方向の回転量を得る.  <a href="classWindow.html#abe2d6a9ad52372c170df2e2aa021441b">[詳解]</a><br /></td></tr>
 <tr class="separator:abe2d6a9ad52372c170df2e2aa021441b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8214100c0a26c4de5d691fd230c32355"><td class="memItemLeft" align="right" valign="top">const GLfloat *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a8214100c0a26c4de5d691fd230c32355">getLocation</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
-<tr class="memdesc:a8214100c0a26c4de5d691fd230c32355"><td class="mdescLeft">&#160;</td><td class="mdescRight">トラックボール処理を考慮したマウスによる現在位置のポインタを得る.  <a href="classWindow.html#a8214100c0a26c4de5d691fd230c32355">[詳解]</a><br /></td></tr>
-<tr class="separator:a8214100c0a26c4de5d691fd230c32355"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9988e8c5d5ed2bd21c894773cf767459"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a9988e8c5d5ed2bd21c894773cf767459">getTranslation</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
-<tr class="memdesc:a9988e8c5d5ed2bd21c894773cf767459"><td class="mdescLeft">&#160;</td><td class="mdescRight">トラックボール処理を考慮したマウスによる平行移動の変換行列を得る.  <a href="classWindow.html#a9988e8c5d5ed2bd21c894773cf767459">[詳解]</a><br /></td></tr>
-<tr class="separator:a9988e8c5d5ed2bd21c894773cf767459"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c933a0820a5968ae2ed26bca498f08f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a6c933a0820a5968ae2ed26bca498f08f">getTrackballData</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
-<tr class="memdesc:a6c933a0820a5968ae2ed26bca498f08f"><td class="mdescLeft">&#160;</td><td class="mdescRight">トラックボールの回転変換行列を得る.  <a href="classWindow.html#a6c933a0820a5968ae2ed26bca498f08f">[詳解]</a><br /></td></tr>
-<tr class="separator:a6c933a0820a5968ae2ed26bca498f08f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1fd1eb71ea45357acb3c7f24964297a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#af1fd1eb71ea45357acb3c7f24964297a">getTrackball</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
-<tr class="memdesc:af1fd1eb71ea45357acb3c7f24964297a"><td class="mdescLeft">&#160;</td><td class="mdescRight">トラックボールの回転変換行列を得る.  <a href="classWindow.html#af1fd1eb71ea45357acb3c7f24964297a">[詳解]</a><br /></td></tr>
-<tr class="separator:af1fd1eb71ea45357acb3c7f24964297a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27af6675f5bb8f45fda3f994ec628b4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a27af6675f5bb8f45fda3f994ec628b4a">reset_trackball</a> ()</td></tr>
-<tr class="memdesc:a27af6675f5bb8f45fda3f994ec628b4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">トラックボール処理をリセットする  <a href="classWindow.html#a27af6675f5bb8f45fda3f994ec628b4a">[詳解]</a><br /></td></tr>
-<tr class="separator:a27af6675f5bb8f45fda3f994ec628b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e87ef256abb332c81b334b5c15839d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a0e87ef256abb332c81b334b5c15839d8">reset_translation</a> ()</td></tr>
-<tr class="memdesc:a0e87ef256abb332c81b334b5c15839d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在位置と平行移動量をリセットする  <a href="classWindow.html#a0e87ef256abb332c81b334b5c15839d8">[詳解]</a><br /></td></tr>
-<tr class="separator:a0e87ef256abb332c81b334b5c15839d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad4ea3d3293762a2c88aa72773c47e03"><td class="memItemLeft" align="right" valign="top">const GLfloat *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#aad4ea3d3293762a2c88aa72773c47e03">getTranslation</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
+<tr class="memdesc:aad4ea3d3293762a2c88aa72773c47e03"><td class="mdescLeft">&#160;</td><td class="mdescRight">トラックボール処理を考慮したマウスによるスクロールの変換行列を得る.  <a href="classWindow.html#aad4ea3d3293762a2c88aa72773c47e03">[詳解]</a><br /></td></tr>
+<tr class="separator:aad4ea3d3293762a2c88aa72773c47e03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac677470c87cc7f59f0d89d9e784b202"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#aac677470c87cc7f59f0d89d9e784b202">getTranslationMatrix</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
+<tr class="memdesc:aac677470c87cc7f59f0d89d9e784b202"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスによって視点の平行移動の変換行列を得る.  <a href="classWindow.html#aac677470c87cc7f59f0d89d9e784b202">[詳解]</a><br /></td></tr>
+<tr class="separator:aac677470c87cc7f59f0d89d9e784b202"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ec0a228d7e37a081e8f3af8175b9185"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a5ec0a228d7e37a081e8f3af8175b9185">getScrollMatrix</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
+<tr class="memdesc:a5ec0a228d7e37a081e8f3af8175b9185"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスによってオブジェクトの平行移動の変換行列を得る.  <a href="classWindow.html#a5ec0a228d7e37a081e8f3af8175b9185">[詳解]</a><br /></td></tr>
+<tr class="separator:a5ec0a228d7e37a081e8f3af8175b9185"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40def3d340c3924680515d666ead8313"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a40def3d340c3924680515d666ead8313">getRotation</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
+<tr class="memdesc:a40def3d340c3924680515d666ead8313"><td class="mdescLeft">&#160;</td><td class="mdescRight">トラックボールの回転変換行列を得る.  <a href="classWindow.html#a40def3d340c3924680515d666ead8313">[詳解]</a><br /></td></tr>
+<tr class="separator:a40def3d340c3924680515d666ead8313"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43c6828e3302df47a9781710fc21f609"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a43c6828e3302df47a9781710fc21f609">getRotationMatrix</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
+<tr class="memdesc:a43c6828e3302df47a9781710fc21f609"><td class="mdescLeft">&#160;</td><td class="mdescRight">トラックボールの回転変換行列を得る.  <a href="classWindow.html#a43c6828e3302df47a9781710fc21f609">[詳解]</a><br /></td></tr>
+<tr class="separator:a43c6828e3302df47a9781710fc21f609"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a559dbd55871ac1440c07531d96afe9a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a559dbd55871ac1440c07531d96afe9a3">resetRotation</a> ()</td></tr>
+<tr class="memdesc:a559dbd55871ac1440c07531d96afe9a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">トラックボール処理をリセットする  <a href="classWindow.html#a559dbd55871ac1440c07531d96afe9a3">[詳解]</a><br /></td></tr>
+<tr class="separator:a559dbd55871ac1440c07531d96afe9a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac11eb1ee22d693d46b32d60ac755d0aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#ac11eb1ee22d693d46b32d60ac755d0aa">resetTranslation</a> ()</td></tr>
+<tr class="memdesc:ac11eb1ee22d693d46b32d60ac755d0aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在位置と平行移動量をリセットする  <a href="classWindow.html#ac11eb1ee22d693d46b32d60ac755d0aa">[詳解]</a><br /></td></tr>
+<tr class="separator:ac11eb1ee22d693d46b32d60ac755d0aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00a00d153d98b446ec8b5b5ca870081d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a00a00d153d98b446ec8b5b5ca870081d">reset</a> ()</td></tr>
 <tr class="memdesc:a00a00d153d98b446ec8b5b5ca870081d"><td class="mdescLeft">&#160;</td><td class="mdescRight">トラックボール・マウスホイール・矢印キーの値を初期化する  <a href="classWindow.html#a00a00d153d98b446ec8b5b5ca870081d">[詳解]</a><br /></td></tr>
 <tr class="separator:a00a00d153d98b446ec8b5b5ca870081d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -245,14 +247,8 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静的公開メンバ関数</h2></td></tr>
 <tr class="memitem:a5ca61ecd518dc976306b922b1425adc9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a5ca61ecd518dc976306b922b1425adc9">init</a> (int major=0, int minor=1)</td></tr>
-<tr class="memdesc:a5ca61ecd518dc976306b922b1425adc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化, 最初に一度だけ実行する.  <a href="classWindow.html#a5ca61ecd518dc976306b922b1425adc9">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a5ca61ecd518dc976306b922b1425adc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームグラフィックス特論の宿題用補助プログラムの初期化, 最初に一度だけ実行する.  <a href="classWindow.html#a5ca61ecd518dc976306b922b1425adc9">[詳解]</a><br /></td></tr>
 <tr class="separator:a5ca61ecd518dc976306b922b1425adc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-公開変数類</h2></td></tr>
-<tr class="memitem:a767776600fc858073366016590f449d5"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a767776600fc858073366016590f449d5">eyeCount</a> = 1</td></tr>
-<tr class="memdesc:a767776600fc858073366016590f449d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">視点の数.  <a href="classWindow.html#a767776600fc858073366016590f449d5">[詳解]</a><br /></td></tr>
-<tr class="separator:a767776600fc858073366016590f449d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>ウィンドウ関連の処理. </p>
@@ -260,8 +256,8 @@ $(function() {
 
 <p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00088">88</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
-<a id="a6dd95b8ba304a9257523eccd1d1a3ef7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6dd95b8ba304a9257523eccd1d1a3ef7">&#9670;&nbsp;</a></span>Window() <span class="overload">[1/2]</span></h2>
+<a id="ae7c87ca45f27accaf4aa15fc36bafbb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7c87ca45f27accaf4aa15fc36bafbb1">&#9670;&nbsp;</a></span>Window() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -272,7 +268,7 @@ $(function() {
         <tr>
           <td class="memname">Window::Window </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>title</em> = <code>&quot;GLFW&#160;<a class="el" href="classWindow.html">Window</a>&quot;</code>, </td>
         </tr>
         <tr>
@@ -324,12 +320,12 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00650">650</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00445">445</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="classWindow_a6dd95b8ba304a9257523eccd1d1a3ef7_cgraph.png" border="0" usemap="#aclassWindow_a6dd95b8ba304a9257523eccd1d1a3ef7_cgraph" alt=""/></div>
-<map name="aclassWindow_a6dd95b8ba304a9257523eccd1d1a3ef7_cgraph" id="aclassWindow_a6dd95b8ba304a9257523eccd1d1a3ef7_cgraph">
+<div class="center"><img src="classWindow_ae7c87ca45f27accaf4aa15fc36bafbb1_cgraph.png" border="0" usemap="#aclassWindow_ae7c87ca45f27accaf4aa15fc36bafbb1_cgraph" alt=""/></div>
+<map name="aclassWindow_ae7c87ca45f27accaf4aa15fc36bafbb1_cgraph" id="aclassWindow_ae7c87ca45f27accaf4aa15fc36bafbb1_cgraph">
 <area shape="rect" title="コンストラクタ." alt="" coords="5,5,128,32"/>
 <area shape="rect" href="namespacegg.html#af7ab5857e56acfcf3e806f587f3737a0" title="ゲームグラフィックス特論の都合にもとづく初期化を行う." alt="" coords="176,5,251,32"/>
 </map>
@@ -390,7 +386,7 @@ $(function() {
 
 <p>デストラクタ. </p>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00922">922</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00528">528</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -421,7 +417,7 @@ $(function() {
 <p>ウィンドウの識別子のポインタを取得する. </p>
 <dl class="section return"><dt>戻り値</dt><dd>GLFWwindow 型のウィンドウ識別子のポインタ. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01177">1177</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00545">545</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -451,7 +447,7 @@ $(function() {
 <p>ALT キーを押しながら矢印キーを押したときの現在の X 値を得る. </p>
 <dl class="section return"><dt>戻り値</dt><dd>ALT キーを押しながら矢印キーを押したときの現在の X 値. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01419">1419</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00784">784</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -481,7 +477,7 @@ $(function() {
 <p>ALT キーを押しながら矢印キーを押したときの現在の Y 値を得る. </p>
 <dl class="section return"><dt>戻り値</dt><dd>ALT キーを押しながら矢印キーを押したときの現在の Y 値. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01426">1426</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00791">791</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -517,7 +513,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01433">1433</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00798">798</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -564,7 +560,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01367">1367</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00732">732</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -612,7 +608,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>矢印キーの値. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01342">1342</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00707">707</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -649,7 +645,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>矢印キーの X 値. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01351">1351</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00716">716</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -686,7 +682,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>矢印キーの Y 値. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01359">1359</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00724">724</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -716,17 +712,7 @@ $(function() {
 <p>ウィンドウのアスペクト比を得る. </p>
 <dl class="section return"><dt>戻り値</dt><dd>ウィンドウの縦横比. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01296">1296</a> 行目に定義があります。</p>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="classWindow_a2002afaa92caca147fb00a6ea2ef468b_icgraph.png" border="0" usemap="#aclassWindow_a2002afaa92caca147fb00a6ea2ef468b_icgraph" alt=""/></div>
-<map name="aclassWindow_a2002afaa92caca147fb00a6ea2ef468b_icgraph" id="aclassWindow_a2002afaa92caca147fb00a6ea2ef468b_icgraph">
-<area shape="rect" title="ウィンドウのアスペクト比を得る." alt="" coords="195,5,329,32"/>
-<area shape="rect" href="ggsample01_8cpp.html#abeb0715aa59f19646ce1bd7851dda276" title=" " alt="" coords="104,5,147,32"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
-</map>
-</div>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00664">664</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -762,7 +748,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01411">1411</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00776">776</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -792,7 +778,7 @@ $(function() {
 <p>CTRL キーを押しながら矢印キーを押したときの現在の X 値を得る. </p>
 <dl class="section return"><dt>戻り値</dt><dd>CTRL キーを押しながら矢印キーを押したときの現在の X 値. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01397">1397</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00762">762</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -822,7 +808,7 @@ $(function() {
 <p>CTRL キーを押しながら矢印キーを押したときの現在の Y 値を得る. </p>
 <dl class="section return"><dt>戻り値</dt><dd>CTRL キーを押しながら矢印キーを押したときの現在の Y 値. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01404">1404</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00769">769</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -852,7 +838,7 @@ $(function() {
 <p>ウィンドウの高さを得る. </p>
 <dl class="section return"><dt>戻り値</dt><dd>ウィンドウの高さ. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01274">1274</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00642">642</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -883,53 +869,7 @@ $(function() {
 <p>キーが押されているかどうかを判定する. </p>
 <dl class="section return"><dt>戻り値</dt><dd>キーが押されていれば true. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01312">1312</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a8214100c0a26c4de5d691fd230c32355"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8214100c0a26c4de5d691fd230c32355">&#9670;&nbsp;</a></span>getLocation()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const GLfloat* Window::getLocation </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>button</em> = <code>GLFW_MOUSE_BUTTON_1</code></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>トラックボール処理を考慮したマウスによる現在位置のポインタを得る. </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">button</td><td>平行移動量を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>戻り値</dt><dd>現在位置のポインタ. </dd></dl>
-
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01524">1524</a> 行目に定義があります。</p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="classWindow_a8214100c0a26c4de5d691fd230c32355_cgraph.png" border="0" usemap="#aclassWindow_a8214100c0a26c4de5d691fd230c32355_cgraph" alt=""/></div>
-<map name="aclassWindow_a8214100c0a26c4de5d691fd230c32355_cgraph" id="aclassWindow_a8214100c0a26c4de5d691fd230c32355_cgraph">
-<area shape="rect" title="トラックボール処理を考慮したマウスによる現在位置のポインタを得る." alt="" coords="5,5,148,32"/>
-<area shape="rect" href="Window_8h.html#aa9261a3b0d2fddfa82d9d5d8561a8573" title=" " alt="" coords="196,5,320,32"/>
-</map>
-</div>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00677">677</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -959,7 +899,7 @@ $(function() {
 <p>マウスカーソルの現在位置を得る. </p>
 <dl class="section return"><dt>戻り値</dt><dd>マウスカーソルの現在位置を格納した GLfloat 型の 2 要素の配列. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01441">1441</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00806">806</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -995,7 +935,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01449">1449</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00814">814</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1032,7 +972,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>direction 方向のマウスカーソルの現在位置. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01459">1459</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00824">824</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1062,7 +1002,7 @@ $(function() {
 <p>マウスカーソルの現在位置の X 座標を得る. </p>
 <dl class="section return"><dt>戻り値</dt><dd>direction 方向のマウスカーソルの X 方向の現在位置. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01467">1467</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00832">832</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1092,7 +1032,118 @@ $(function() {
 <p>マウスカーソルの現在位置の Y 座標を得る. </p>
 <dl class="section return"><dt>戻り値</dt><dd>direction 方向のマウスカーソルの Y 方向の現在位置. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01475">1475</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00840">840</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a40def3d340c3924680515d666ead8313"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40def3d340c3924680515d666ead8313">&#9670;&nbsp;</a></span>getRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> Window::getRotation </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>button</em> = <code>GLFW_MOUSE_BUTTON_1</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>トラックボールの回転変換行列を得る. </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>回転変換行列を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>回転を行う GgQuaternion 型の四元数. </dd></dl>
+
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00933">933</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a43c6828e3302df47a9781710fc21f609"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43c6828e3302df47a9781710fc21f609">&#9670;&nbsp;</a></span>getRotationMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> Window::getRotationMatrix </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>button</em> = <code>GLFW_MOUSE_BUTTON_1</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>トラックボールの回転変換行列を得る. </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>回転変換行列を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>回転を行う GgMarix 型の変換行列. </dd></dl>
+
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00943">943</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5ec0a228d7e37a081e8f3af8175b9185"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ec0a228d7e37a081e8f3af8175b9185">&#9670;&nbsp;</a></span>getScrollMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> Window::getScrollMatrix </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>button</em> = <code>GLFW_MOUSE_BUTTON_1</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>マウスによってオブジェクトの平行移動の変換行列を得る. </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>平行移動量を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>クリッピング座標系で平行移動を行う GgMatrix 型の変換行列. </dd></dl>
+
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00916">916</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1128,7 +1179,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01389">1389</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00754">754</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1158,7 +1209,7 @@ $(function() {
 <p>SHIFT キーを押しながら矢印キーを押したときの現在の X 値を得る. </p>
 <dl class="section return"><dt>戻り値</dt><dd>SHIFT キーを押しながら矢印キーを押したときの現在の X 値. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01375">1375</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00740">740</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1188,7 +1239,7 @@ $(function() {
 <p>SHIFT キーを押しながら矢印キーを押したときの現在の Y 値を得る. </p>
 <dl class="section return"><dt>戻り値</dt><dd>SHIFT キーを押しながら矢印キーを押したときの現在の Y 値. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01382">1382</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00747">747</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1218,7 +1269,7 @@ $(function() {
 <p>ウィンドウのサイズを得る. </p>
 <dl class="section return"><dt>戻り値</dt><dd>ウィンドウの幅と高さを格納した GLsizei 型の 2 要素の配列. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01281">1281</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00649">649</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1254,12 +1305,12 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01288">1288</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00656">656</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="af1fd1eb71ea45357acb3c7f24964297a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1fd1eb71ea45357acb3c7f24964297a">&#9670;&nbsp;</a></span>getTrackball()</h2>
+<a id="aad4ea3d3293762a2c88aa72773c47e03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad4ea3d3293762a2c88aa72773c47e03">&#9670;&nbsp;</a></span>getTranslation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1268,7 +1319,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> Window::getTrackball </td>
+          <td class="memname">const GLfloat* Window::getTranslation </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>button</em> = <code>GLFW_MOUSE_BUTTON_1</code></td><td>)</td>
@@ -1282,129 +1333,53 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p>トラックボールの回転変換行列を得る. </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">button</td><td>回転変換行列を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>戻り値</dt><dd>回転を行う GgMarix 型の変換行列. </dd></dl>
-
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01554">1554</a> 行目に定義があります。</p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="classWindow_af1fd1eb71ea45357acb3c7f24964297a_cgraph.png" border="0" usemap="#aclassWindow_af1fd1eb71ea45357acb3c7f24964297a_cgraph" alt=""/></div>
-<map name="aclassWindow_af1fd1eb71ea45357acb3c7f24964297a_cgraph" id="aclassWindow_af1fd1eb71ea45357acb3c7f24964297a_cgraph">
-<area shape="rect" title="トラックボールの回転変換行列を得る." alt="" coords="5,5,152,32"/>
-<area shape="rect" href="Window_8h.html#aa9261a3b0d2fddfa82d9d5d8561a8573" title=" " alt="" coords="200,5,324,32"/>
-</map>
-</div>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="classWindow_af1fd1eb71ea45357acb3c7f24964297a_icgraph.png" border="0" usemap="#aclassWindow_af1fd1eb71ea45357acb3c7f24964297a_icgraph" alt=""/></div>
-<map name="aclassWindow_af1fd1eb71ea45357acb3c7f24964297a_icgraph" id="aclassWindow_af1fd1eb71ea45357acb3c7f24964297a_icgraph">
-<area shape="rect" title="トラックボールの回転変換行列を得る." alt="" coords="195,5,341,32"/>
-<area shape="rect" href="ggsample01_8cpp.html#abeb0715aa59f19646ce1bd7851dda276" title=" " alt="" coords="104,5,147,32"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a6c933a0820a5968ae2ed26bca498f08f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c933a0820a5968ae2ed26bca498f08f">&#9670;&nbsp;</a></span>getTrackballData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> Window::getTrackballData </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>button</em> = <code>GLFW_MOUSE_BUTTON_1</code></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>トラックボールの回転変換行列を得る. </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">button</td><td>回転変換行列を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>戻り値</dt><dd>回転を行う GgQuaternion 型の四元数. </dd></dl>
-
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01544">1544</a> 行目に定義があります。</p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="classWindow_a6c933a0820a5968ae2ed26bca498f08f_cgraph.png" border="0" usemap="#aclassWindow_a6c933a0820a5968ae2ed26bca498f08f_cgraph" alt=""/></div>
-<map name="aclassWindow_a6c933a0820a5968ae2ed26bca498f08f_cgraph" id="aclassWindow_a6c933a0820a5968ae2ed26bca498f08f_cgraph">
-<area shape="rect" title="トラックボールの回転変換行列を得る." alt="" coords="5,5,179,32"/>
-<area shape="rect" href="Window_8h.html#aa9261a3b0d2fddfa82d9d5d8561a8573" title=" " alt="" coords="227,5,351,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a9988e8c5d5ed2bd21c894773cf767459"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9988e8c5d5ed2bd21c894773cf767459">&#9670;&nbsp;</a></span>getTranslation()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> Window::getTranslation </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>button</em> = <code>GLFW_MOUSE_BUTTON_1</code></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>トラックボール処理を考慮したマウスによる平行移動の変換行列を得る. </p>
+<p>トラックボール処理を考慮したマウスによるスクロールの変換行列を得る. </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">button</td><td>平行移動量を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>平行移動を行う GgMarix 型の変換行列. </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>平行移動量を格納した GLfloat[3] の配列のポインタ. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01534">1534</a> 行目に定義があります。</p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="classWindow_a9988e8c5d5ed2bd21c894773cf767459_cgraph.png" border="0" usemap="#aclassWindow_a9988e8c5d5ed2bd21c894773cf767459_cgraph" alt=""/></div>
-<map name="aclassWindow_a9988e8c5d5ed2bd21c894773cf767459_cgraph" id="aclassWindow_a9988e8c5d5ed2bd21c894773cf767459_cgraph">
-<area shape="rect" title="トラックボール処理を考慮したマウスによる平行移動の変換行列を得る." alt="" coords="5,31,163,57"/>
-<area shape="rect" href="Window_8h.html#aa9261a3b0d2fddfa82d9d5d8561a8573" title=" " alt="" coords="211,5,335,32"/>
-<area shape="rect" href="namespacegg.html#a1c44cf87582b032f9eeac980ed17f73b" title="平行移動の変換行列を返す." alt="" coords="217,56,328,83"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#a1411224c2d99609e2a9c8753903df624" title="平行移動の変換行列を格納する." alt="" coords="383,56,565,83"/>
-</map>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00889">889</a> 行目に定義があります。</p>
+
 </div>
+</div>
+<a id="aac677470c87cc7f59f0d89d9e784b202"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac677470c87cc7f59f0d89d9e784b202">&#9670;&nbsp;</a></span>getTranslationMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> Window::getTranslationMatrix </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>button</em> = <code>GLFW_MOUSE_BUTTON_1</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>マウスによって視点の平行移動の変換行列を得る. </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>平行移動量を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>視点座標系で平行移動を行う GgMatrix 型の変換行列. </dd></dl>
+
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00899">899</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1434,7 +1409,7 @@ $(function() {
 <p>ユーザーポインタを取り出す. </p>
 <dl class="section return"><dt>戻り値</dt><dd>保存されているユーザポインタ. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01608">1608</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00991">991</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1464,7 +1439,7 @@ $(function() {
 <p>マウスホイールの回転量を得る. </p>
 <dl class="section return"><dt>戻り値</dt><dd>マウスホイールの回転量を格納した GLfloat 型の 2 要素の配列. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01483">1483</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00848">848</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1500,7 +1475,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01491">1491</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00856">856</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1537,7 +1512,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>direction 方向のマウスホイールの回転量. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01501">1501</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00866">866</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1566,7 +1541,7 @@ $(function() {
 
 <p>マウスホイールの X 方向の回転量を得る. </p>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01508">1508</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00873">873</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1595,7 +1570,7 @@ $(function() {
 
 <p>マウスホイールの Y 方向の回転量を得る. </p>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01515">1515</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00880">880</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1625,7 +1600,7 @@ $(function() {
 <p>ウィンドウの横幅を得る. </p>
 <dl class="section return"><dt>戻り値</dt><dd>ウィンドウの横幅. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01267">1267</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00635">635</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1663,7 +1638,7 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p>初期化, 最初に一度だけ実行する. </p>
+<p>ゲームグラフィックス特論の宿題用補助プログラムの初期化, 最初に一度だけ実行する. </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">major</td><td>使用する OpenGL の major 番号, 0 なら無指定. </td></tr>
@@ -1672,14 +1647,14 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00561">561</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00387">387</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classWindow_a5ca61ecd518dc976306b922b1425adc9_icgraph.png" border="0" usemap="#aclassWindow_a5ca61ecd518dc976306b922b1425adc9_icgraph" alt=""/></div>
 <map name="aclassWindow_a5ca61ecd518dc976306b922b1425adc9_icgraph" id="aclassWindow_a5ca61ecd518dc976306b922b1425adc9_icgraph">
-<area shape="rect" title="初期化, 最初に一度だけ実行する." alt="" coords="104,5,197,32"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" title="ゲームグラフィックス特論の宿題用補助プログラムの初期化, 最初に一度だけ実行する." alt="" coords="104,5,197,32"/>
+<area shape="rect" href="main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>
 
@@ -1711,16 +1686,7 @@ $(function() {
 <p>イベントを取得してループを継続すべきかどうか調べる. </p>
 <dl class="section return"><dt>戻り値</dt><dd>ループを継続すべきなら true. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01199">1199</a> 行目に定義があります。</p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="classWindow_aa948dc12020c54ffd0cd1ebdfbfe65f1_cgraph.png" border="0" usemap="#aclassWindow_aa948dc12020c54ffd0cd1ebdfbfe65f1_cgraph" alt=""/></div>
-<map name="aclassWindow_aa948dc12020c54ffd0cd1ebdfbfe65f1_cgraph" id="aclassWindow_aa948dc12020c54ffd0cd1ebdfbfe65f1_cgraph">
-<area shape="rect" title="イベントを取得してループを継続すべきかどうか調べる." alt="" coords="5,5,156,32"/>
-<area shape="rect" href="Window_8h.html#aa9261a3b0d2fddfa82d9d5d8561a8573" title=" " alt="" coords="204,5,328,32"/>
-</map>
-</div>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00567">567</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1777,12 +1743,12 @@ $(function() {
 
 <p>トラックボール・マウスホイール・矢印キーの値を初期化する </p>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01597">1597</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00980">980</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a27af6675f5bb8f45fda3f994ec628b4a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27af6675f5bb8f45fda3f994ec628b4a">&#9670;&nbsp;</a></span>reset_trackball()</h2>
+<a id="a559dbd55871ac1440c07531d96afe9a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a559dbd55871ac1440c07531d96afe9a3">&#9670;&nbsp;</a></span>resetRotation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1791,7 +1757,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Window::reset_trackball </td>
+          <td class="memname">void Window::resetRotation </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1806,12 +1772,12 @@ $(function() {
 
 <p>トラックボール処理をリセットする </p>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01562">1562</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00951">951</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a0e87ef256abb332c81b334b5c15839d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e87ef256abb332c81b334b5c15839d8">&#9670;&nbsp;</a></span>reset_translation()</h2>
+<a id="ac11eb1ee22d693d46b32d60ac755d0aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac11eb1ee22d693d46b32d60ac755d0aa">&#9670;&nbsp;</a></span>resetTranslation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1820,7 +1786,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Window::reset_translation </td>
+          <td class="memname">void Window::resetTranslation </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1835,7 +1801,7 @@ $(function() {
 
 <p>現在位置と平行移動量をリセットする </p>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01572">1572</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00961">961</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1864,7 +1830,7 @@ $(function() {
 
 <p>ビューポートをウィンドウ全体に設定する. </p>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01302">1302</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00670">670</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1900,7 +1866,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01324">1324</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00689">689</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1936,17 +1902,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01184">1184</a> 行目に定義があります。</p>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="classWindow_a7dd6ce09e1d68c8576376179aa54fc79_icgraph.png" border="0" usemap="#aclassWindow_a7dd6ce09e1d68c8576376179aa54fc79_icgraph" alt=""/></div>
-<map name="aclassWindow_a7dd6ce09e1d68c8576376179aa54fc79_icgraph" id="aclassWindow_a7dd6ce09e1d68c8576376179aa54fc79_icgraph">
-<area shape="rect" title="ウィンドウのクローズフラグを設定する." alt="" coords="195,5,321,32"/>
-<area shape="rect" href="ggsample01_8cpp.html#abeb0715aa59f19646ce1bd7851dda276" title=" " alt="" coords="104,5,147,32"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
-</map>
-</div>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00552">552</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1982,7 +1938,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01629">1629</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01012">1012</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2018,7 +1974,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01636">1636</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01019">1019</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2054,7 +2010,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01643">1643</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01026">1026</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2090,7 +2046,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01622">1622</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01005">1005</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2126,12 +2082,12 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01615">1615</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00998">998</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a152039548854ccd3df50550fc8eaa83f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a152039548854ccd3df50550fc8eaa83f">&#9670;&nbsp;</a></span>setVelocity()</h2>
+<a id="a5fd44a07a4a1cd39eeb85911fa6b308d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fd44a07a4a1cd39eeb85911fa6b308d">&#9670;&nbsp;</a></span>setVelocity()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2149,7 +2105,13 @@ $(function() {
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">GLfloat&#160;</td>
-          <td class="paramname"><em>vy</em>&#160;</td>
+          <td class="paramname"><em>vy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&#160;</td>
+          <td class="paramname"><em>vz</em> = <code>0.1f</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2173,7 +2135,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01333">1333</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00698">698</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2203,7 +2165,7 @@ $(function() {
 <p>ウィンドウを閉じるべきかどうか調べる. </p>
 <dl class="section return"><dt>戻り値</dt><dd>ウィンドウを閉じるべきなら true. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01191">1191</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00559">559</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2232,36 +2194,7 @@ $(function() {
 
 <p>カラーバッファを入れ替える. </p>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01251">1251</a> 行目に定義があります。</p>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="classWindow_af6ffedb8d12d5551bdb4c298de87ed56_icgraph.png" border="0" usemap="#aclassWindow_af6ffedb8d12d5551bdb4c298de87ed56_icgraph" alt=""/></div>
-<map name="aclassWindow_af6ffedb8d12d5551bdb4c298de87ed56_icgraph" id="aclassWindow_af6ffedb8d12d5551bdb4c298de87ed56_icgraph">
-<area shape="rect" title="カラーバッファを入れ替える." alt="" coords="195,5,341,32"/>
-<area shape="rect" href="ggsample01_8cpp.html#abeb0715aa59f19646ce1bd7851dda276" title=" " alt="" coords="104,5,147,32"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<h2 class="groupheader">メンバ詳解</h2>
-<a id="a767776600fc858073366016590f449d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a767776600fc858073366016590f449d5">&#9670;&nbsp;</a></span>eyeCount</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int Window::eyeCount = 1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>視点の数. </p>
-
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01171">1171</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00619">619</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2271,7 +2204,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2021年03月23日(火) 14時36分23秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2021年06月20日(日) 00時59分00秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

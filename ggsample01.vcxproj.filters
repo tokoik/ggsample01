@@ -68,7 +68,7 @@
     <ClInclude Include="include\imconfig.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="GgApplication.h">
+    <ClInclude Include="GgApp.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>

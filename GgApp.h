@@ -12,19 +12,12 @@
 // Window 関連の処理
 #include "Window.h"
 
-class GgApplication
+class GgApp
 {
 public:
 
   //
-  // コンストラクタ
-  //
-  GgApplication()
-  {
-  }
-
-  //
   // アプリケーション本体
   //
-  void run();
+  void main(int argc, const char* const* argv);
 };

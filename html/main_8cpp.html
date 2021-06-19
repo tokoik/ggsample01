@@ -69,23 +69,21 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &quot;<a class="el" href="Window_8h_source.html">Window.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="GgApp_8h_source.html">GgApp.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 main.cpp の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#amain_8cpp" alt=""/></div>
 <map name="amain_8cpp" id="amain_8cpp">
-<area shape="rect" title=" " alt="" coords="225,5,300,32"/>
-<area shape="rect" title=" " alt="" coords="5,155,77,181"/>
-<area shape="rect" href="Window_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理." alt="" coords="365,80,443,107"/>
-<area shape="rect" href="gg_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言." alt="" coords="102,155,149,181"/>
-<area shape="rect" title=" " alt="" coords="173,155,237,181"/>
-<area shape="rect" title=" " alt="" coords="262,155,386,181"/>
-<area shape="rect" title=" " alt="" coords="411,155,557,181"/>
-<area shape="rect" title=" " alt="" coords="581,155,640,181"/>
-<area shape="rect" title=" " alt="" coords="665,155,725,181"/>
-<area shape="rect" title=" " alt="" coords="749,155,814,181"/>
-<area shape="rect" title=" " alt="" coords="838,155,917,181"/>
+<area shape="rect" title=" " alt="" coords="89,5,164,32"/>
+<area shape="rect" title=" " alt="" coords="5,229,77,256"/>
+<area shape="rect" href="GgApp_8h.html" title=" " alt="" coords="129,80,202,107"/>
+<area shape="rect" href="Window_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理." alt="" coords="175,155,254,181"/>
+<area shape="rect" title=" " alt="" coords="101,229,160,256"/>
+<area shape="rect" title=" " alt="" coords="185,229,245,256"/>
+<area shape="rect" title=" " alt="" coords="269,229,334,256"/>
+<area shape="rect" title=" " alt="" coords="358,229,437,256"/>
+<area shape="rect" href="gg_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言." alt="" coords="461,229,507,256"/>
 </map>
 </div>
 </div>
@@ -95,15 +93,11 @@ main.cpp の依存先関係図:</div>
 マクロ定義</h2></td></tr>
 <tr class="memitem:a9eb08c4f3ad005333d49aa2299e5c7c3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a9eb08c4f3ad005333d49aa2299e5c7c3">HEADER_STR</a>&#160;&#160;&#160;&quot;ゲームグラフィックス特論&quot;</td></tr>
 <tr class="separator:a9eb08c4f3ad005333d49aa2299e5c7c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39105c39ae1d1593f65cfda47b181814"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a39105c39ae1d1593f65cfda47b181814">USE_IMGUI</a></td></tr>
-<tr class="separator:a39105c39ae1d1593f65cfda47b181814"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:abeb0715aa59f19646ce1bd7851dda276"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#abeb0715aa59f19646ce1bd7851dda276">app</a> ()</td></tr>
-<tr class="separator:abeb0715aa59f19646ce1bd7851dda276"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
-<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a110745d0e996bc19a8c8e8cacbadd525"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525">main</a> (int argc, const char *const *argv)</td></tr>
+<tr class="separator:a110745d0e996bc19a8c8e8cacbadd525"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">マクロ定義詳解</h2>
 <a id="a9eb08c4f3ad005333d49aa2299e5c7c3"></a>
@@ -122,78 +116,9 @@ main.cpp の依存先関係図:</div>
 
 </div>
 </div>
-<a id="a39105c39ae1d1593f65cfda47b181814"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39105c39ae1d1593f65cfda47b181814">&#9670;&nbsp;</a></span>USE_IMGUI</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define USE_IMGUI</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="main_8cpp_source.html">main.cpp</a> の <a class="el" href="main_8cpp_source.html#l00018">18</a> 行目に定義があります。</p>
-
-</div>
-</div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="abeb0715aa59f19646ce1bd7851dda276"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abeb0715aa59f19646ce1bd7851dda276">&#9670;&nbsp;</a></span>app()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void app </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="ggsample01_8cpp_source.html">ggsample01.cpp</a> の <a class="el" href="ggsample01_8cpp_source.html#l00019">19</a> 行目に定義があります。</p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="main_8cpp_abeb0715aa59f19646ce1bd7851dda276_cgraph.png" border="0" usemap="#amain_8cpp_abeb0715aa59f19646ce1bd7851dda276_cgraph" alt=""/></div>
-<map name="amain_8cpp_abeb0715aa59f19646ce1bd7851dda276_cgraph" id="amain_8cpp_abeb0715aa59f19646ce1bd7851dda276_cgraph">
-<area shape="rect" title=" " alt="" coords="5,233,48,260"/>
-<area shape="rect" href="classWindow.html#a2002afaa92caca147fb00a6ea2ef468b" title="ウィンドウのアスペクト比を得る." alt="" coords="114,5,249,32"/>
-<area shape="rect" href="classWindow.html#af1fd1eb71ea45357acb3c7f24964297a" title="トラックボールの回転変換行列を得る." alt="" coords="108,56,255,83"/>
-<area shape="rect" href="namespacegg.html#a2924895ad284e08b08a2cfd115c5a7bf" title="ビュー変換行列を返す." alt="" coords="133,107,230,133"/>
-<area shape="rect" href="namespacegg.html#a7dcbaa73755efd46f1f19b0b3a39b473" title="画角を指定して透視投影変換行列を返す." alt="" coords="119,157,244,184"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#a673d91ac86c3109a0fc6c0839e5bebee" title="x 軸中心の回転変換を乗じた結果を返す." alt="" coords="109,208,254,235"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#a9fc25e411f5fc0ca8cd6bc2d03f06570" title="y 軸中心の回転変換を乗じた結果を返す." alt="" coords="108,259,255,285"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#a5de975c07013aff7f31b0a45c58e9998" title="z 軸中心の回転変換を乗じた結果を返す." alt="" coords="109,309,254,336"/>
-<area shape="rect" href="classWindow.html#a7dd6ce09e1d68c8576376179aa54fc79" title="ウィンドウのクローズフラグを設定する." alt="" coords="118,360,245,387"/>
-<area shape="rect" href="classWindow.html#af6ffedb8d12d5551bdb4c298de87ed56" title="カラーバッファを入れ替える." alt="" coords="108,411,255,437"/>
-<area shape="rect" href="classgg_1_1GgSimpleShader.html#aaa721d9ae49296194f949d6ba2f927db" title="シェーダプログラムの使用を開始する." alt="" coords="96,461,267,488"/>
-<area shape="rect" href="Window_8h.html#aa9261a3b0d2fddfa82d9d5d8561a8573" title=" " alt="" coords="351,56,475,83"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#a753d56545359ba6efc11aa9b5b3ade11" title="ビュー変換行列を格納する." alt="" coords="329,107,497,133"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#a2455429beaf82954d49fa3ca25143177" title="画角を指定して透視投影変換行列を格納する." alt="" coords="315,157,511,184"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#ad1cf1af0b03604dea2ccdfa38cf48219" title="x 軸中心の回転の変換行列を格納する." alt="" coords="325,208,500,235"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#adc134a1416496139bee3feb6c0359482" title="y 軸中心の回転の変換行列を格納する." alt="" coords="325,259,501,285"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#ae314b688f465c548dfa4b5a5ed3a916f" title="z 軸中心の回転の変換行列を格納する." alt="" coords="325,309,500,336"/>
-<area shape="rect" href="classgg_1_1GgPointShader.html#a6809087ef5e8a563310c3fc396246e78" title="シェーダプログラムの使用を開始する." alt="" coords="332,461,493,488"/>
-</map>
-</div>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="main_8cpp_abeb0715aa59f19646ce1bd7851dda276_icgraph.png" border="0" usemap="#amain_8cpp_abeb0715aa59f19646ce1bd7851dda276_icgraph" alt=""/></div>
-<map name="amain_8cpp_abeb0715aa59f19646ce1bd7851dda276_icgraph" id="amain_8cpp_abeb0715aa59f19646ce1bd7851dda276_icgraph">
-<area shape="rect" title=" " alt="" coords="104,5,147,32"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+<a id="a110745d0e996bc19a8c8e8cacbadd525"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a110745d0e996bc19a8c8e8cacbadd525">&#9670;&nbsp;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -201,38 +126,32 @@ main.cpp の依存先関係図:</div>
         <tr>
           <td class="memname">int main </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const char *const *&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="main_8cpp_source.html">main.cpp</a> の <a class="el" href="main_8cpp_source.html#l00027">27</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="main_8cpp_source.html">main.cpp</a> の <a class="el" href="main_8cpp_source.html#l00023">23</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#amain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
-<map name="amain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="amain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,259,56,285"/>
-<area shape="rect" href="main_8cpp.html#abeb0715aa59f19646ce1bd7851dda276" title=" " alt="" coords="129,233,172,260"/>
-<area shape="rect" href="classWindow.html#a5ca61ecd518dc976306b922b1425adc9" title="初期化, 最初に一度だけ実行する." alt="" coords="104,284,197,311"/>
-<area shape="rect" href="classWindow.html#a2002afaa92caca147fb00a6ea2ef468b" title="ウィンドウのアスペクト比を得る." alt="" coords="263,5,398,32"/>
-<area shape="rect" href="classWindow.html#af1fd1eb71ea45357acb3c7f24964297a" title="トラックボールの回転変換行列を得る." alt="" coords="257,56,404,83"/>
-<area shape="rect" href="namespacegg.html#a2924895ad284e08b08a2cfd115c5a7bf" title="ビュー変換行列を返す." alt="" coords="282,107,379,133"/>
-<area shape="rect" href="namespacegg.html#a7dcbaa73755efd46f1f19b0b3a39b473" title="画角を指定して透視投影変換行列を返す." alt="" coords="268,157,393,184"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#a673d91ac86c3109a0fc6c0839e5bebee" title="x 軸中心の回転変換を乗じた結果を返す." alt="" coords="258,208,403,235"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#a9fc25e411f5fc0ca8cd6bc2d03f06570" title="y 軸中心の回転変換を乗じた結果を返す." alt="" coords="257,259,404,285"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#a5de975c07013aff7f31b0a45c58e9998" title="z 軸中心の回転変換を乗じた結果を返す." alt="" coords="258,309,403,336"/>
-<area shape="rect" href="classWindow.html#a7dd6ce09e1d68c8576376179aa54fc79" title="ウィンドウのクローズフラグを設定する." alt="" coords="267,360,394,387"/>
-<area shape="rect" href="classWindow.html#af6ffedb8d12d5551bdb4c298de87ed56" title="カラーバッファを入れ替える." alt="" coords="257,411,404,437"/>
-<area shape="rect" href="classgg_1_1GgSimpleShader.html#aaa721d9ae49296194f949d6ba2f927db" title="シェーダプログラムの使用を開始する." alt="" coords="245,461,416,488"/>
-<area shape="rect" href="Window_8h.html#aa9261a3b0d2fddfa82d9d5d8561a8573" title=" " alt="" coords="500,56,624,83"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#a753d56545359ba6efc11aa9b5b3ade11" title="ビュー変換行列を格納する." alt="" coords="478,107,646,133"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#a2455429beaf82954d49fa3ca25143177" title="画角を指定して透視投影変換行列を格納する." alt="" coords="464,157,660,184"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#ad1cf1af0b03604dea2ccdfa38cf48219" title="x 軸中心の回転の変換行列を格納する." alt="" coords="475,208,649,235"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#adc134a1416496139bee3feb6c0359482" title="y 軸中心の回転の変換行列を格納する." alt="" coords="474,259,650,285"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#ae314b688f465c548dfa4b5a5ed3a916f" title="z 軸中心の回転の変換行列を格納する." alt="" coords="475,309,649,336"/>
-<area shape="rect" href="classgg_1_1GgPointShader.html#a6809087ef5e8a563310c3fc396246e78" title="シェーダプログラムの使用を開始する." alt="" coords="481,461,643,488"/>
+<div class="center"><img src="main_8cpp_a110745d0e996bc19a8c8e8cacbadd525_cgraph.png" border="0" usemap="#amain_8cpp_a110745d0e996bc19a8c8e8cacbadd525_cgraph" alt=""/></div>
+<map name="amain_8cpp_a110745d0e996bc19a8c8e8cacbadd525_cgraph" id="amain_8cpp_a110745d0e996bc19a8c8e8cacbadd525_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,56,57"/>
+<area shape="rect" href="classWindow.html#a5ca61ecd518dc976306b922b1425adc9" title="ゲームグラフィックス特論の宿題用補助プログラムの初期化, 最初に一度だけ実行する." alt="" coords="107,5,200,32"/>
+<area shape="rect" href="classGgApp.html#a95fad7c12285dedd2d9fbdd9c0a7622a" title=" " alt="" coords="104,56,203,83"/>
 </map>
 </div>
 
@@ -241,7 +160,7 @@ main.cpp の依存先関係図:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2021年03月23日(火) 14時36分22秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2021年06月20日(日) 00時59分00秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

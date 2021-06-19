@@ -92,16 +92,18 @@ $(function() {
 宿題プログラム用補助プログラムについて</h1>
 <p>ゲームグラフィックス特論 A / B で課す宿題プログラムでは、専用の補助プログラムを用意しています。これは以下の 3 つのファイルで構成されています。</p>
 <ul>
-<li><a class="el" href="gg_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言.">gg.h</a> / <a class="el" href="gg_8cpp.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の定義.">gg.cpp</a><ul>
+<li><a href="https://github.com/tokoik/ggsample01/blob/master/gg.h">gg.h</a> / <a href="https://github.com/tokoik/ggsample01/blob/master/gg.cpp">gg.cpp</a><ul>
 <li>GLFW での利用を想定した OpenGL のローダとユーティリティ</li>
 </ul>
 </li>
-<li><a class="el" href="Window_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.">Window.h</a><ul>
+<li><a href="https://github.com/tokoik/ggsample01/blob/master/Window.h">Window.h</a><ul>
 <li>ウィンドウやマウス関連のユーザインタフェースを管理する GLFW のラッパー</li>
 </ul>
 </li>
 </ul>
-<p><a href="https://www.glfw.org/">GLFW</a> は <a href="https://www.opengl.org/">OpenGL</a> や、その後継の Vulkan を使用したアプリケーションを作成するための、非常にコンパクトなフレームワークです。本当はこれだけで簡単にアプリケーションが作れるのですが、授業内容とはあまり関係のない処理を分離するために、屋上屋ながら**この授業専用の**フレームワークを用意しました。なお、gg.h / <a class="el" href="gg_8cpp.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の定義.">gg.cpp</a> には OpenGL の拡張機能を使用可能にする機能を含んでいるので、別に <a href="http://glew.sourceforge.net/">GLEW</a> や <a href="https://github.com/Dav1dde/glad">glad</a>、<a href="https://github.com/skaslev/gl3w">GL3W</a> などを導入する必要はありません。また <a class="el" href="Window_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.">Window.h</a> には、<a href="https://github.com/ocornut/imgui">Dear ImGui</a> をサポートする機能と、Oculus Rift (DK1, DK2, <a href="https://www.oculus.com/rift/">CV1</a>, <a href="https://www.oculus.com/rift-s/">S</a>) をサポートする機能を組み込んでいます。これを使って、C++ だけで VR アプリケーション () が作れます。</p>
+<p><a href="https://www.glfw.org/">GLFW</a> は <a href="https://www.opengl.org/">OpenGL</a> や、その後継の <a href="https://www.vulkan.org/">Vulkan</a> を使用したアプリケーションを作成するための、非常にコンパクトなフレームワークです。本当はこれだけで簡単にアプリケーションが作れるのですが、授業内容とはあまり関係のない処理を分離するために、屋上屋ながら**この授業専用の**フレームワークを用意しました。なお、gg.h / <a class="el" href="gg_8cpp.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の定義.">gg.cpp</a> には OpenGL の拡張機能を使用可能にする機能を含んでいるので、別に <a href="http://glew.sourceforge.net/">GLEW</a> や <a href="https://github.com/Dav1dde/glad">glad</a>、<a href="https://github.com/skaslev/gl3w">GL3W</a> などを導入する必要はありません。</p>
+<p>また、この <a class="el" href="Window_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.">Window.h</a> には <a href="https://github.com/ocornut/imgui">Dear ImGui</a> をサポートする機能を含んでいます。このプログラム (<a href="https://github.com/tokoik/ggsample01">ggsample01</a>) には、その使い方のサンプルコードを示すために Dear ImGui のソースプログラムも含めています。日本語メニューの表示のために <a href="https://mplusfonts.github.io/">M+ FONTS</a> の <a href="https://github.com/coz-m/MPLUS_FONTS/blob/master/fonts/ttf/Mplus1-Regular.ttf">Mplus1-Regular.ttf</a> もリポジトリに含めています。</p>
+<p>このほか、この <a class="el" href="Window_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.">Window.h</a> には Oculus Rift (DK1, DK2, <a href="https://www.oculus.com/rift/">CV1</a>, <a href="https://www.oculus.com/rift-s/">S</a>) をサポートする機能を組み込んでいます。これを使って、C++ だけで VR アプリケーション () が作れます。</p>
 <h2><a class="anchor" id="autotoc_md5"></a>
 補助プログラムのドキュメント</h2>
 <p>Doxygen で生成したドキュメントの <a href="html/index.html">HTML 版</a>を html フォルダに、<a href="pdf/refman.pdf">PDF 版</a>を pdf フォルダに置いています。</p>
@@ -110,7 +112,7 @@ $(function() {
 <p>補助プログラムを使用するには、最小限、GLFW が使える環境が必要です。ゲームグラフィックス特論 A / B の宿題のリポジトリには Windows 用、macOS 用、および Linux 用にコンパイルしたライブラリファイル一式を含めていますので、宿題のために別に用意する必要はありません。gg.h, <a class="el" href="gg_8cpp.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の定義.">gg.cpp</a>, <a class="el" href="Window_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.">Window.h</a> だけを使うときは、それぞれの環境で GLFW をインストールしておいてください。この補助プログラムを使用した最小のプログラムは、多分こんな感じになります。このソースファイルと同じところに <a class="el" href="gg_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言.">gg.h</a>, <a class="el" href="gg_8cpp.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の定義.">gg.cpp</a>, <a class="el" href="Window_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.">Window.h</a> を置き、gg.cpp と一緒にコンパイルして、GLFW のライブラリファイルをリンクしてください。</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="Window_8h.html">Window.h</a>&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<div class="line"><span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525">main</a>()</div>
 <div class="line">{</div>
 <div class="line">    <a class="code" href="classWindow.html#a5ca61ecd518dc976306b922b1425adc9">Window::init</a>();</div>
 <div class="line"> </div>
@@ -125,8 +127,8 @@ $(function() {
 <div class="line">}</div>
 <div class="ttc" id="aWindow_8h_html"><div class="ttname"><a href="Window_8h.html">Window.h</a></div><div class="ttdoc">ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.</div></div>
 <div class="ttc" id="aclassWindow_html"><div class="ttname"><a href="classWindow.html">Window</a></div><div class="ttdoc">ウィンドウ関連の処理.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00088">Window.h:89</a></div></div>
-<div class="ttc" id="aclassWindow_html_a5ca61ecd518dc976306b922b1425adc9"><div class="ttname"><a href="classWindow.html#a5ca61ecd518dc976306b922b1425adc9">Window::init</a></div><div class="ttdeci">static void init(int major=0, int minor=1)</div><div class="ttdoc">初期化, 最初に一度だけ実行する.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00561">Window.h:561</a></div></div>
-<div class="ttc" id="amain_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00027">main.cpp:27</a></div></div>
+<div class="ttc" id="aclassWindow_html_a5ca61ecd518dc976306b922b1425adc9"><div class="ttname"><a href="classWindow.html#a5ca61ecd518dc976306b922b1425adc9">Window::init</a></div><div class="ttdeci">static void init(int major=0, int minor=1)</div><div class="ttdoc">ゲームグラフィックス特論の宿題用補助プログラムの初期化, 最初に一度だけ実行する.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00387">Window.h:387</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a110745d0e996bc19a8c8e8cacbadd525"><div class="ttname"><a href="main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525">main</a></div><div class="ttdeci">int main(int argc, const char *const *argv)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00023">main.cpp:23</a></div></div>
 </div><!-- fragment --><p>使用する OpenGL のバージョンは、<code>Window::init(major, minor)</code> の <code>major</code> と <code>minor</code> で指定できます。<code>major</code> を 0 にするか省略すると、OpenGL のバージョンの指定を行いません。その場合は、macOS 以外では恐らく OpenGL のハードウェアもしくはドライバで対応可能な最大のバージョンが使用されます。なお、3.2 以降を指定したときは <b>macOS 対応の都合で</b> forward compatible プロファイルと core プロファイルを有効にします。macOS の場合は <code>Window::init(3, 2)</code> もしくは <code>Window::init(4, 1)</code> を指定してください。</p>
 <div class="fragment"><div class="line"><span class="comment">// for macOS</span></div>
 <div class="line"><a class="code" href="classWindow.html#a5ca61ecd518dc976306b922b1425adc9">Window::init</a>(4, 1);</div>
@@ -155,7 +157,7 @@ Dear ImGui を使う場合</h2>
 <div class="line"><span class="preprocessor">#define USE_IMGUI</span></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="Window_8h.html">Window.h</a>&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<div class="line"><span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525">main</a>()</div>
 <div class="line">{</div>
 <div class="line">  <span class="comment">// ウィンドウ関連の初期設定</span></div>
 <div class="line">  <a class="code" href="classWindow.html#a5ca61ecd518dc976306b922b1425adc9">Window::init</a>(4, 1);</div>
@@ -181,6 +183,9 @@ Dear ImGui を使う場合</h2>
 <div class="line">    <span class="keywordflow">if</span> (ImGui::Button(<span class="stringliteral">&quot;Quit&quot;</span>)) window.<a class="code" href="classWindow.html#a7dd6ce09e1d68c8576376179aa54fc79">setClose</a>();</div>
 <div class="line">    ImGui::End();</div>
 <div class="line"> </div>
+<div class="line">    <span class="comment">// ImGui のフレームに描画する</span></div>
+<div class="line">    ImGui::Render();</div>
+<div class="line"> </div>
 <div class="line">    <span class="comment">// ウィンドウを消去する</span></div>
 <div class="line">    glClear(GL_COLOR_BUFFER_BIT);</div>
 <div class="line"> </div>
@@ -188,15 +193,12 @@ Dear ImGui を使う場合</h2>
 <div class="line">    <span class="comment">// ここで OpenGL による描画を行う</span></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line"> </div>
-<div class="line">    <span class="comment">// ImGui のフレームに描画する</span></div>
-<div class="line">    ImGui::Render();</div>
-<div class="line"> </div>
 <div class="line">    <span class="comment">// カラーバッファを入れ替えてイベントを取り出す</span></div>
 <div class="line">    window.<a class="code" href="classWindow.html#af6ffedb8d12d5551bdb4c298de87ed56">swapBuffers</a>();</div>
 <div class="line">  }</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassWindow_html_a7dd6ce09e1d68c8576376179aa54fc79"><div class="ttname"><a href="classWindow.html#a7dd6ce09e1d68c8576376179aa54fc79">Window::setClose</a></div><div class="ttdeci">void setClose(int flag=GLFW_TRUE) const</div><div class="ttdoc">ウィンドウのクローズフラグを設定する.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l01184">Window.h:1184</a></div></div>
-<div class="ttc" id="aclassWindow_html_af6ffedb8d12d5551bdb4c298de87ed56"><div class="ttname"><a href="classWindow.html#af6ffedb8d12d5551bdb4c298de87ed56">Window::swapBuffers</a></div><div class="ttdeci">void swapBuffers()</div><div class="ttdoc">カラーバッファを入れ替える.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l01251">Window.h:1251</a></div></div>
+<div class="ttc" id="aclassWindow_html_a7dd6ce09e1d68c8576376179aa54fc79"><div class="ttname"><a href="classWindow.html#a7dd6ce09e1d68c8576376179aa54fc79">Window::setClose</a></div><div class="ttdeci">void setClose(int flag=GLFW_TRUE) const</div><div class="ttdoc">ウィンドウのクローズフラグを設定する.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00552">Window.h:552</a></div></div>
+<div class="ttc" id="aclassWindow_html_af6ffedb8d12d5551bdb4c298de87ed56"><div class="ttname"><a href="classWindow.html#af6ffedb8d12d5551bdb4c298de87ed56">Window::swapBuffers</a></div><div class="ttdeci">void swapBuffers()</div><div class="ttdoc">カラーバッファを入れ替える.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00619">Window.h:619</a></div></div>
 </div><!-- fragment --><p>このソースファイルと Dear ImGui に含まれる以下のファイル、および <a class="el" href="gg_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言.">gg.h</a>, <a class="el" href="gg_8cpp.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の定義.">gg.cpp</a>, <a class="el" href="Window_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.">Window.h</a> を同じところに置き、gg.cpp と以下のうちの *.cpp ファイルと一緒にコンパイルして、GLFW のライブラリファイルをリンクしてください。</p>
 <blockquote class="doxtable">
 <p>imconfig.h <br  />
@@ -227,7 +229,7 @@ imconfig.h の変更点</h3>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2021年03月23日(火) 14時36分23秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2021年06月20日(日) 00時59分00秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

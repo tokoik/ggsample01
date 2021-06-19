@@ -66,7 +66,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="main_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// メインプログラム</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// ゲームグラフィックス特論宿題アプリケーション</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// MessageBox の準備</span></div>
@@ -81,70 +81,70 @@ $(function() {
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="main_8cpp.html#a9eb08c4f3ad005333d49aa2299e5c7c3">   15</a></span>&#160;<span class="preprocessor">#define HEADER_STR &quot;ゲームグラフィックス特論&quot;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// ウィンドウ関連の処理</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="main_8cpp.html#a39105c39ae1d1593f65cfda47b181814">   18</a></span>&#160;<span class="preprocessor">#define USE_IMGUI</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Window_8h.html">Window.h</a>&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// アプリケーション本体</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="main_8cpp.html#abeb0715aa59f19646ce1bd7851dda276">app</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// メインプログラム</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   27</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() <span class="keyword">try</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="comment">// ウィンドウ関連の初期設定</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="classWindow.html#a5ca61ecd518dc976306b922b1425adc9">Window::init</a>(4, 1);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="comment">// アプリケーションの実行</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="main_8cpp.html#abeb0715aa59f19646ce1bd7851dda276">app</a>();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordflow">catch</span> (<span class="keyword">const</span> std::runtime_error &amp;e)</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="comment">// エラーメッセージを表示する</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#if defined(_MSC_VER)</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  MessageBox(NULL, CString(e.what()), TEXT(<a class="code" href="main_8cpp.html#a9eb08c4f3ad005333d49aa2299e5c7c3">HEADER_STR</a>), MB_ICONERROR);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#elif defined(__APPLE__)</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="comment">// the following code is copied from http://blog.jorgearimany.com/2010/05/messagebox-from-windows-to-mac.html</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="comment">// convert the strings from char* to CFStringRef</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  CFStringRef msg_ref = CFStringCreateWithCString(NULL, e.what(), kCFStringEncodingUTF8);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="comment">// result code from the message box</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  CFOptionFlags result;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="comment">//launch the message box</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  CFUserNotificationDisplayAlert(</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    0,                                 <span class="comment">// no timeout</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    kCFUserNotificationNoteAlertLevel, <span class="comment">// change it depending message_type flags ( MB_ICONASTERISK.... etc.)</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    NULL,                              <span class="comment">// icon url, use default, you can change it depending message_type flags</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    NULL,                              <span class="comment">// not used</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    NULL,                              <span class="comment">// localization of strings</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    CFSTR(<a class="code" href="main_8cpp.html#a9eb08c4f3ad005333d49aa2299e5c7c3">HEADER_STR</a>),                 <span class="comment">// header text</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    msg_ref,                           <span class="comment">// message text</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    NULL,                              <span class="comment">// default &quot;ok&quot; text in button</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    NULL,                              <span class="comment">// alternate button title</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    NULL,                              <span class="comment">// other button title, null--&gt; no other button</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    &amp;result                            <span class="comment">// response flags</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  );</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="comment">// Clean up the strings</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  CFRelease(msg_ref);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  std::cerr &lt;&lt; <a class="code" href="main_8cpp.html#a9eb08c4f3ad005333d49aa2299e5c7c3">HEADER_STR</a> &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; e.what() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="comment">// ブログラムを終了する</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordflow">return</span> EXIT_FAILURE;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
-<div class="ttc" id="aWindow_8h_html"><div class="ttname"><a href="Window_8h.html">Window.h</a></div><div class="ttdoc">ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.</div></div>
-<div class="ttc" id="aclassWindow_html_a5ca61ecd518dc976306b922b1425adc9"><div class="ttname"><a href="classWindow.html#a5ca61ecd518dc976306b922b1425adc9">Window::init</a></div><div class="ttdeci">static void init(int major=0, int minor=1)</div><div class="ttdoc">初期化, 最初に一度だけ実行する.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00561">Window.h:561</a></div></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// ゲームグラフィックス特論宿題アプリケーションクラス</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="GgApp_8h.html">GgApp.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// メインプログラム</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525">   23</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525">main</a>(<span class="keywordtype">int</span> argc, <span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keyword">const</span>* argv) <span class="keyword">try</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="comment">// ウィンドウ関連の初期設定</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="classWindow.html#a5ca61ecd518dc976306b922b1425adc9">Window::init</a>(4, 1);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="comment">// アプリケーションのオブジェクトを生成する</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="classGgApp.html">GgApp</a> app;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="comment">// アプリケーションを実行する</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  app.<a class="code" href="classGgApp.html#a95fad7c12285dedd2d9fbdd9c0a7622a">main</a>(argc, argv);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordflow">catch</span> (<span class="keyword">const</span> std::runtime_error &amp;e)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">// エラーメッセージを表示する</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#if defined(_MSC_VER)</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  MessageBox(NULL, CString(e.what()), TEXT(<a class="code" href="main_8cpp.html#a9eb08c4f3ad005333d49aa2299e5c7c3">HEADER_STR</a>), MB_ICONERROR);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#elif defined(__APPLE__)</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="comment">// the following code is copied from http://blog.jorgearimany.com/2010/05/messagebox-from-windows-to-mac.html</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="comment">// convert the strings from char* to CFStringRef</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  CFStringRef msg_ref = CFStringCreateWithCString(NULL, e.what(), kCFStringEncodingUTF8);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="comment">// result code from the message box</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  CFOptionFlags result;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="comment">//launch the message box</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  CFUserNotificationDisplayAlert(</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    0,                                 <span class="comment">// no timeout</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    kCFUserNotificationNoteAlertLevel, <span class="comment">// change it depending message_type flags ( MB_ICONASTERISK.... etc.)</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    NULL,                              <span class="comment">// icon url, use default, you can change it depending message_type flags</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    NULL,                              <span class="comment">// not used</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    NULL,                              <span class="comment">// localization of strings</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    CFSTR(<a class="code" href="main_8cpp.html#a9eb08c4f3ad005333d49aa2299e5c7c3">HEADER_STR</a>),                 <span class="comment">// header text</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    msg_ref,                           <span class="comment">// message text</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    NULL,                              <span class="comment">// default &quot;ok&quot; text in button</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    NULL,                              <span class="comment">// alternate button title</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    NULL,                              <span class="comment">// other button title, null--&gt; no other button</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    &amp;result                            <span class="comment">// response flags</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  );</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="comment">// Clean up the strings</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  CFRelease(msg_ref);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  std::cerr &lt;&lt; <a class="code" href="main_8cpp.html#a9eb08c4f3ad005333d49aa2299e5c7c3">HEADER_STR</a> &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; e.what() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="comment">// ブログラムを終了する</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordflow">return</span> EXIT_FAILURE;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="ttc" id="aGgApp_8h_html"><div class="ttname"><a href="GgApp_8h.html">GgApp.h</a></div></div>
+<div class="ttc" id="aclassGgApp_html"><div class="ttname"><a href="classGgApp.html">GgApp</a></div><div class="ttdef"><b>Definition:</b> <a href="GgApp_8h_source.html#l00015">GgApp.h:16</a></div></div>
+<div class="ttc" id="aclassGgApp_html_a95fad7c12285dedd2d9fbdd9c0a7622a"><div class="ttname"><a href="classGgApp.html#a95fad7c12285dedd2d9fbdd9c0a7622a">GgApp::main</a></div><div class="ttdeci">void main(int argc, const char *const *argv)</div><div class="ttdef"><b>Definition:</b> <a href="ggsample01_8cpp_source.html#l00021">ggsample01.cpp:21</a></div></div>
+<div class="ttc" id="aclassWindow_html_a5ca61ecd518dc976306b922b1425adc9"><div class="ttname"><a href="classWindow.html#a5ca61ecd518dc976306b922b1425adc9">Window::init</a></div><div class="ttdeci">static void init(int major=0, int minor=1)</div><div class="ttdoc">ゲームグラフィックス特論の宿題用補助プログラムの初期化, 最初に一度だけ実行する.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00387">Window.h:387</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a110745d0e996bc19a8c8e8cacbadd525"><div class="ttname"><a href="main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525">main</a></div><div class="ttdeci">int main(int argc, const char *const *argv)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00023">main.cpp:23</a></div></div>
 <div class="ttc" id="amain_8cpp_html_a9eb08c4f3ad005333d49aa2299e5c7c3"><div class="ttname"><a href="main_8cpp.html#a9eb08c4f3ad005333d49aa2299e5c7c3">HEADER_STR</a></div><div class="ttdeci">#define HEADER_STR</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00015">main.cpp:15</a></div></div>
-<div class="ttc" id="amain_8cpp_html_abeb0715aa59f19646ce1bd7851dda276"><div class="ttname"><a href="main_8cpp.html#abeb0715aa59f19646ce1bd7851dda276">app</a></div><div class="ttdeci">void app()</div><div class="ttdef"><b>Definition:</b> <a href="ggsample01_8cpp_source.html#l00019">ggsample01.cpp:19</a></div></div>
-<div class="ttc" id="amain_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00027">main.cpp:27</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2021年03月23日(火) 14時36分22秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2021年06月20日(日) 00時59分00秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
