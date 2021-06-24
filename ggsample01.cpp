@@ -35,7 +35,7 @@ void GgApp::main(int argc, const char* const* argv)
   // ビュー変換行列を設定する
   const GgMatrix mv{ ggLookat(0.0f, 0.0f, 5.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f) };
 
-#ifdef USE_IMGUI
+#ifdef IMGUI_VERSION
   //
   // ImGui の初期設定
   //
@@ -78,7 +78,7 @@ void GgApp::main(int argc, const char* const* argv)
     // ウィンドウを消去する
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-#ifdef USE_IMGUI
+#ifdef IMGUI_VERSION
     //
     // ImGui によるユーザインタフェース
     //
