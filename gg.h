@@ -3622,6 +3622,20 @@ namespace gg
       getConjugateMatrix(m);
       return m;
     }
+
+    //! \brief 四元数の要素にアクセスする.
+    //!   \return 四元数を格納した GLfloat 型の 4 要素の配列変数 の i 番目の要素の参照.
+    inline const GLfloat &operator[](std::size_t i) const
+    {
+      return quaternion[i];
+    }
+
+    //! \brief 四元数の要素にアクセスする.
+    //!   \return 四元数を格納した GLfloat 型の 4 要素の配列変数 の i 番目の要素の参照.
+    inline GLfloat &operator[](std::size_t i)
+    {
+      return quaternion[i];
+    }
   };
 
   //! \brief 四元数を返す
@@ -3940,6 +3954,20 @@ namespace gg
     inline const GLfloat* get() const
     {
       return rt.get();
+    }
+
+    //! \brief 現在の回転の四元数の要素にアクセスする.
+    //!   \return 現在の回転の四元数を格納した GLfloat 型の 4 要素の配列変数 の i 番目の要素の参照.
+    inline const GLfloat &operator[](std::size_t i) const
+    {
+      return tq[i];
+    }
+
+    //! \brief 現在の回転の四元数の要素にアクセスする
+    //!   \return 現在の回転の四元数を格納した GLfloat 型の 4 要素の配列変数 の i 番目の要素の参照.
+    inline GLfloat &operator[](std::size_t i)
+    {
+      return tq[i];
     }
   };
 
