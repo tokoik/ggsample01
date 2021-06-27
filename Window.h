@@ -208,7 +208,7 @@ class Window
   //
   static void keyboard(GLFWwindow* window, int key, int scancode, int action, int mods)
   {
-#ifdef USE_IMGUI
+#ifdef IMGUI_VERSION
     // ImGui がキーボードを使うときはキーボードの処理を行わない
     if (ImGui::GetIO().WantCaptureKeyboard) return;
 #endif
@@ -297,7 +297,7 @@ class Window
   //
   static void mouse(GLFWwindow* window, int button, int action, int mods)
   {
-#ifdef USE_IMGUI
+#ifdef IMGUI_VERSION
     // ImGui がマウスを使うときは Window クラスのマウス位置を更新しない
     if (ImGui::GetIO().WantCaptureMouse) return;
 #endif
@@ -342,7 +342,7 @@ class Window
   //
   static void wheel(GLFWwindow* window, double x, double y)
   {
-#ifdef USE_IMGUI
+#ifdef IMGUI_VERSION
     // ImGui がマウスを使うときは Window クラスのマウス位置を更新しない
     if (ImGui::GetIO().WantCaptureMouse) return;
 #endif
@@ -424,7 +424,7 @@ public:
     glfwWindowHint(GLFW_SRGB_CAPABLE, GL_TRUE);
 #endif
 
-#ifdef USE_IMGUI
+#ifdef IMGUI_VERSION
     // ImGui のバージョンをチェックする
     IMGUI_CHECKVERSION();
 
@@ -505,7 +505,7 @@ public:
     // ウィンドウのサイズ変更時に呼び出す処理を登録する
     glfwSetFramebufferSizeCallback(window, resize);
 
-#ifdef USE_IMGUI
+#ifdef IMGUI_VERSION
     // Setup Platform/Renderer bindings
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init(nullptr);
@@ -530,7 +530,7 @@ public:
     // ウィンドウが作成されていなければ戻る
     if (!window) return;
 
-#ifdef USE_IMGUI
+#ifdef IMGUI_VERSION
     // Shutdown Platform/Renderer bindings
     ImGui_ImplOpenGL3_Shutdown();
     ImGui_ImplGlfw_Shutdown();
@@ -575,7 +575,7 @@ public:
     // 対象のユーザインタフェース
     auto& current_if{ interfaceData[interfaceNo] };
 
-#ifdef USE_IMGUI
+#ifdef IMGUI_VERSION
 
     // ImGui の新規フレームを作成する
     ImGui_ImplOpenGL3_NewFrame();
@@ -618,7 +618,7 @@ public:
   //! \brief カラーバッファを入れ替える.
   void swapBuffers()
   {
-#ifdef USE_IMGUI
+#ifdef IMGUI_VERSION
     // ImGui のフレームをレンダリングする
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 #endif
@@ -676,7 +676,7 @@ public:
   //!   \return キーが押されていれば true.
   bool getKey(int key)
   {
-#ifdef USE_IMGUI
+#ifdef IMGUI_VERSION
     // ImGui がキーボードを使うときはキーボードの処理を行わない
     if (ImGui::GetIO().WantCaptureKeyboard) return false;
 #endif
