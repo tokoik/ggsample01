@@ -3827,9 +3827,10 @@ namespace gg
   public:
 
     //! \brief コンストラクタ.
-    GgTrackball()
+    //1   \param q トラックボールの回転の初期値の四元数.
+    GgTrackball(const GgQuaternion& q = ggIdentityQuaternion())
     {
-      reset();
+      reset(q);
     }
 
     //! \brief デストラクタ.
@@ -3874,8 +3875,9 @@ namespace gg
     //!   \param y 現在のマウスの y 座標.
     void end(GLfloat x, GLfloat y);
 
-    //! \brief トラックボールをリセットする
-    void reset();
+    //! \brief トラックボールをリセットする.
+    //!   \param トラックボールの回転の初期値の四元数.
+    void reset(const GgQuaternion &q = ggIdentityQuaternion());
 
     //! \brief トラックボール処理の開始位置を取り出す.
     //!   \return トラックボールの開始位置のポインタ.

@@ -4935,13 +4935,13 @@ gg::GgQuaternion& gg::GgQuaternion::loadInvert(const GLfloat* a)
 /*
 ** 簡易トラックボール処理：リセット
 */
-void gg::GgTrackball::reset()
+void gg::GgTrackball::reset(const GgQuaternion &q)
 {
   // ドラッグ中ではない
   drag = false;
 
-  // 単位クォーターニオンで初期化する
-  tq = cq.loadIdentity();
+  // 単位クォーターニオンに初期値を与える
+  tq = cq = q;
 
   // 回転行列を初期化する
   tq.getMatrix(rt);
