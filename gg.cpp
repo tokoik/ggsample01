@@ -3549,33 +3549,24 @@ namespace gg
           std::string s;
           str >> s;
 
-          // 項目の最初の要素は頂点座標番号
-          f.p[i] = atoi(s.c_str());
+          // 文字の位置
+          auto c{ s.begin() };
 
           // テクスチャ座標と法線の番号は未定義を表す 0 にしておく
-          f.t[i] = f.n[i] = 0;
+          f.p[i] = f.t[i] = f.n[i] = 0;
 
-          // 残りの項目を取り出す
-          size_t l(s.find('/', 0));
-          if (l != std::string::npos)
-          {
-            // 二つ目の項目の先頭の位置
-            ++l;
+          // 項目の最初の要素は頂点座標番号
+          while (c != s.end() && isdigit(*c)) f.p[i] = f.p[i] * 10 + *c++ - '0';
+          if (c == s.end()) break;
+          if (*c++ != '/') continue;
 
-            // 二つ目の項目はテクスチャ座標
-            f.t[i] = atoi(s.c_str() + l);
+          // 二つ目の項目はテクスチャ座標
+          while (c != s.end() && isdigit(*c)) f.t[i] = f.t[i] * 10 + *c++ - '0';
+          if (c == s.end()) break;
+          if (*c++ != '/') continue;
 
-            // 三つ目の項目
-            l = s.find('/', l);
-            if (l != std::string::npos)
-            {
-              // 三つ目の項目の先頭の位置
-              ++l;
-
-              // 三つ目の項目は法線番号
-              f.n[i] = atoi(s.c_str() + l);
-            }
-          }
+          // 三つ目の項目は法線番号
+          while (c != s.end() && isdigit(*c)) f.n[i] = f.n[i] * 10 + *c++ - '0';
         }
 
         // 三角形データを登録する
@@ -4197,7 +4188,7 @@ GLuint gg::ggLoadShader(
   if(!status) return 0;
 
   // プログラムオブジェクトを作成する
-  return ggCreateShader(vsrc.c_str(), fsrc.c_str(), gsrc.c_str(), nvarying, varyings, vert, frag, geom);
+  return ggCreateShader(vsrc, fsrc, gsrc, nvarying, varyings, vert, frag, geom);
 }
 
 #if !defined(__APPLE__)

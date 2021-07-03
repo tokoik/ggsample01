@@ -5432,7 +5432,7 @@ namespace gg
       const char* const* varyings = nullptr
     )
     {
-      load(vert.c_str(), frag.c_str(), geom.c_str(), nvarying, varyings);
+      load(vert, frag, geom, nvarying, varyings);
     }
 
     //! \brief コピーコンストラクタ.
