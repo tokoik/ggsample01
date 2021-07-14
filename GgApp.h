@@ -1737,5 +1737,5 @@ public:
   //
   // アプリケーション本体
   //
-  void main(int argc, const char* const* argv);
+  int main(int argc, const char* const* argv);
 };

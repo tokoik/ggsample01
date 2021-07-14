@@ -29,7 +29,7 @@ int main(int argc, const char* const* argv) try
   GgApp app;
 
   // アプリケーションを実行する
-  app.main(argc, argv);
+  return app.main(argc, argv);
 }
 catch (const std::runtime_error &e)
 {
