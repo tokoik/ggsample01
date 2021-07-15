@@ -2881,7 +2881,7 @@ bool gg::ggReadImage(
         // raw packet
         const int count{ (c + 1) * depth };
         if (p + count > size) break;
-        file.read(reinterpret_cast<char*>(image.data()), count);
+        file.read(reinterpret_cast<char*>(image.data() + p), count);
         p += count;
       }
     }
