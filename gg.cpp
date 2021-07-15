@@ -3076,7 +3076,7 @@ void gg::ggCreateNormalMap(
     nmap[i][3] = hmap[i * stride];
 
     // 法線ベクトルを正規化する
-    ggNormalize3(nmap[i].data());
+    ggNormalize3(nmap[i]);
   }
 
   // 内部フォーマットが浮動小数点テクスチャでなければ [0,1] に正規化する
@@ -4255,26 +4255,6 @@ GLuint gg::ggLoadComputeShader(const std::string& comp)
 #endif
 
 /*
-** 3 要素の長さ
-**
-**   a GLfloat 型の 3 要素の配列
-*/
-GLfloat gg::ggLength3(const GLfloat* a)
-{
-  return sqrtf(ggDot3(a, a));
-}
-
-/*
-** 4 要素の長さ
-**
-**   a GLfloat 型の 4 要素の配列
-*/
-GLfloat gg::ggLength4(const GLfloat* a)
-{
-  return sqrtf(ggDot4(a, a));
-}
-
-/*
 ** 変換行列：行列とベクトルの積 c ← a × b
 */
 void gg::GgMatrix::projection(GLfloat* c, const GLfloat* a, const GLfloat* b) const
@@ -4880,7 +4860,7 @@ gg::GgQuaternion& gg::GgQuaternion::loadNormalize(const GLfloat* a)
   (*this)[2] = a[2];
   (*this)[3] = a[3];
 
-  ggNormalize4(data());
+  ggNormalize4(*this);
 
   return *this;
 }
@@ -5301,7 +5281,7 @@ gg::GgElements* gg::ggElementsMesh(GLuint slices, GLuint stacks, const GLfloat(*
         tnorm[2] = t[0] * b[1] - t[1] * b[0];
 
         // 法線の正規化
-        ggNormalize3(tnorm.data());
+        ggNormalize3(tnorm);
       }
 
       // 頂点の位置

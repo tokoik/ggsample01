@@ -1589,11 +1589,39 @@ namespace gg
 #endif
 
   /*!
+  ** \brief 3 要素の外積.
+  **
+  **   \param a GLfloat 型の 3 要素の配列変数.
+  **   \param b GLfloat 型の 3 要素の配列変数.
+  **   \param c 結果を格納する GLfloat 型の 3 要素の配列変数.
+  */
+  inline void ggCross(GLfloat* c, const GLfloat* a, const GLfloat* b)
+  {
+    c[0] = a[1] * b[2] - a[2] * b[1];
+    c[1] = a[2] * b[0] - a[0] * b[2];
+    c[2] = a[0] * b[1] - a[1] * b[0];
+  }
+
+  /*!
+  ** \brief 3 要素の内積.
+  **
+  **   \param a GLfloat 型の 3 要素の配列変数.
+  **   \param b GLfloat 型の 3 要素の配列変数.
+  */
+  inline GLfloat ggDot3(const GLfloat* a, const GLfloat* b)
+  {
+    return a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
+  }
+
+  /*!
   ** \brief 3 要素の長さ.
   **
   **   \param a GLfloat 型の 3 要素の配列変数.
   */
-  extern GLfloat ggLength3(const GLfloat* a);
+  inline GLfloat ggLength3(const GLfloat* a)
+  {
+    return sqrtf(ggDot3(a, a));
+  }
 
   /*!
   ** \brief 3 要素の正規化.
@@ -1612,28 +1640,14 @@ namespace gg
   }
 
   /*!
-  ** \brief 3 要素の内積.
+  ** \brief 4 要素の内積
   **
-  **   \param a GLfloat 型の 3 要素の配列変数.
-  **   \param b GLfloat 型の 3 要素の配列変数.
+  **   \param a GLfloat 型の 4 要素の配列変数.
+  **   \param b GLfloat 型の 4 要素の配列変数.
   */
-  inline GLfloat ggDot3(const GLfloat* a, const GLfloat* b)
+  inline GLfloat ggDot4(const GLfloat* a, const GLfloat* b)
   {
-    return a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
-  }
-
-  /*!
-  ** \brief 3 要素の外積.
-  **
-  **   \param a GLfloat 型の 3 要素の配列変数.
-  **   \param b GLfloat 型の 3 要素の配列変数.
-  **   \param c 結果を格納する GLfloat 型の 3 要素の配列変数.
-  */
-  inline void ggCross(GLfloat* c, const GLfloat* a, const GLfloat* b)
-  {
-    c[0] = a[1] * b[2] - a[2] * b[1];
-    c[1] = a[2] * b[0] - a[0] * b[2];
-    c[2] = a[0] * b[1] - a[1] * b[0];
+    return a[0] * b[0] + a[1] * b[1] + a[2] * b[2] + a[3] * b[3];
   }
 
   /*!
@@ -1641,16 +1655,9 @@ namespace gg
   **
   **   \param a GLfloat 型の 4 要素の配列変数.
   */
-  extern GLfloat ggLength4(const GLfloat* a);
-
-  /*!
-  ** \brief GgVector 型の長さ.
-  **
-  **   \param a GgVector 型の変数.
-  */
-  inline GLfloat ggLength4(const GgVector& a)
+  inline GLfloat ggLength4(const GLfloat* a)
   {
-    return ggLength4(a.data());
+    return sqrtf(ggDot4(a, a));
   }
 
   /*!
@@ -1671,42 +1678,448 @@ namespace gg
   }
 
   /*!
-  ** \brief GgVector 型の正規化.
-  **
-  **   \param a GgVector 型の変数
-  */
-  inline void ggNormalize4(GgVector& a)
-  {
-    const GLfloat l{ ggLength4(a) };
-    if (l > 0.0f)
-    {
-      a[0] /= l;
-      a[1] /= l;
-      a[2] /= l;
-      a[3] /= l;
-    }
-  }
-
-  /*!
-  ** \brief 4 要素の内積
-  **
-  **   \param a GLfloat 型の 4 要素の配列変数.
-  **   \param b GLfloat 型の 4 要素の配列変数.
-  */
-  inline GLfloat ggDot4(const GLfloat* a, const GLfloat* b)
-  {
-    return a[0] * b[0] + a[1] * b[1] + a[2] * b[2] + a[3] * b[3];
-  }
-
-  /*!
-  ** \brief GgVector 型の内積
+  ** \brief GgVector 型の和を返す.
   **
   **   \param a GgVector 型の変数.
   **   \param b GgVector 型の変数.
+  **   \return a の各要素と b の各要素の要素ごとの和.
+  */
+  inline GgVector operator+(const GgVector& a, const GgVector& b)
+  {
+    return GgVector{ a[0] + b[0], a[1] + b[1], a[2] + b[2], a[3] + b[3] };
+  }
+
+  /*!
+  ** \brief GgVector 型を加算する.
+  **
+  **   \param a GgVector 型の変数.
+  **   \param b GgVector 型の変数.
+  **   \return a の各要素に b の各要素をそれぞれ加算した a の参照.
+  */
+  inline GgVector& operator+=(GgVector& a, const GgVector& b)
+  {
+    a[0] += b[0];
+    a[1] += b[1];
+    a[2] += b[2];
+    a[3] += b[3];
+
+    return a;
+  }
+
+  /*!
+  ** \brief GgVector 型の差を返す.
+  **
+  **   \param a GgVector 型の変数.
+  **   \param b GgVector 型の変数.
+  **   \return a の各要素から b の各要素を要素ごとに引いた結果.
+  */
+  inline GgVector operator-(const GgVector& a, const GgVector& b)
+  {
+    return GgVector{ a[0] - b[0], a[1] - b[1], a[2] - b[2], a[3] - b[3] };
+  }
+
+  /*!
+  ** \brief GgVector 型を減算する.
+  **
+  **   \param a GgVector 型の変数.
+  **   \param b GgVector 型の変数.
+  **   \return a の各要素から b の各要素をそれぞれ減算した a の参照.
+  */
+  inline GgVector& operator-=(GgVector& a, const GgVector& b)
+  {
+    a[0] -= b[0];
+    a[1] -= b[1];
+    a[2] -= b[2];
+    a[3] -= b[3];
+
+    return a;
+  }
+
+  /*!
+  ** \brief GgVector 型の積を返す.
+  **
+  **   \param a GgVector 型の変数.
+  **   \param b GgVector 型の変数.
+  **   \return a の各要素と b の各要素の要素ごとの積.
+  */
+  inline GgVector operator*(const GgVector& a, const GgVector& b)
+  {
+    return GgVector{ a[0] * b[0], a[1] * b[1], a[2] * b[2], a[3] * b[3] };
+  }
+
+  /*!
+  ** \brief GgVector 型を乗算する.
+  **
+  **   \param a GgVector 型の変数.
+  **   \param b GgVector 型の変数.
+  **   \return a の各要素に b の各要素をそれぞれ乗算した a の参照.
+  */
+  inline GgVector& operator*=(GgVector& a, const GgVector& b)
+  {
+    a[0] *= b[0];
+    a[1] *= b[1];
+    a[2] *= b[2];
+    a[3] *= b[3];
+
+    return a;
+  }
+
+  /*!
+  ** \brief GgVector 型の商を返す.
+  **
+  **   \param a GgVector 型の変数.
+  **   \param b GgVector 型の変数.
+  **   \return a の各要素を b の各要素で要素ごとに割った結果.
+  */
+  inline GgVector operator/(const GgVector& a, const GgVector& b)
+  {
+    return GgVector{ a[0] / b[0], a[1] / b[1], a[2] / b[2], a[3] / b[3] };
+  }
+
+  /*!
+  ** \brief GgVector 型を除算する.
+  **
+  **   \param a GgVector 型の変数.
+  **   \param b GgVector 型の変数.
+  **   \return a の各要素を b の各要素でそれぞれ割った a の参照.
+  */
+  inline GgVector& operator/=(GgVector& a, const GgVector& b)
+  {
+    a[0] /= b[0];
+    a[1] /= b[1];
+    a[2] /= b[2];
+    a[3] /= b[3];
+
+    return a;
+  }
+
+  /*!
+  ** \brief GgVector 型の各要素にスカラーを足した和を返す.
+  **
+  **   \param a GgVector 型の変数.
+  **   \param b GLfloat 型の変数.
+  **   \return a の各要素に b を足した和.
+  */
+  inline GgVector operator+(const GgVector& a, GLfloat b)
+  {
+    return GgVector{ a[0] + b, a[1] + b, a[2] + b, a[3] + b };
+  }
+
+  /*!
+  ** \brief GgVector 型の各要素にスカラーを足した和を返す.
+  **
+  **   \param b GLfloat 型の変数.
+  **   \param a GgVector 型の変数.
+  **   \return a に b の各要素を足した和.
+  */
+  inline GgVector operator+(GLfloat a, const GgVector& b)
+  {
+    return GgVector{ a + b[0], a + b[1], a + b[2], a + b[3] };
+  }
+
+  /*!
+  ** \brief GgVector 型の各要素にスカラーを足す.
+  **
+  **   \param a GgVector 型の変数.
+  **   \param b GLfloat 型の変数.
+  **   \return a の各要素に b を足した a の参照.
+  */
+  inline GgVector& operator+=(GgVector& a, GLfloat b)
+  {
+    a[0] += b;
+    a[1] += b;
+    a[2] += b;
+    a[3] += b;
+
+    return a;
+  }
+
+  /*!
+  ** \brief GgVector 型の各要素からスカラーを引いた差を返す.
+  **
+  **   \param a GgVector 型の変数.
+  **   \param b GLfloat 型の変数.
+  **   \return a の各要素から b を引いた差.
+  */
+  inline GgVector operator-(const GgVector& a, GLfloat b)
+  {
+    return GgVector{ a[0] - b, a[1] - b, a[2] - b, a[3] - b };
+  }
+
+  /*!
+  ** \brief スカラーから GgVector 型の各要素を引いた差を返す.
+  **
+  **   \param b GLfloat 型の変数.
+  **   \param a GgVector 型の変数.
+  **   \return a から b の各要素を引いた差.
+  */
+  inline GgVector operator-(GLfloat a, const GgVector& b)
+  {
+    return GgVector{ a - b[0], a - b[1], a - b[2], a - b[3] };
+  }
+
+  /*!
+  ** \brief GgVector 型の各要素からスカラーを引く.
+  **
+  **   \param a GgVector 型の変数.
+  **   \param b GLfloat 型の変数.
+  **   \return a の各要素から b を引いた a の参照.
+  */
+  inline GgVector& operator-=(GgVector& a, GLfloat b)
+  {
+    a[0] -= b;
+    a[1] -= b;
+    a[2] -= b;
+    a[3] -= b;
+
+    return a;
+  }
+
+  /*!
+  ** \brief GgVector 型の各要素にスカラーを乗じた積を返す.
+  **
+  **   \param a GgVector 型の変数.
+  **   \param b GLfloat 型の変数.
+  **   \return a の各要素に b を乗じた積.
+  */
+  inline GgVector operator*(const GgVector& a, GLfloat b)
+  {
+    return GgVector{ a[0] * b, a[1] * b, a[2] * b, a[3] * b };
+  }
+
+  /*!
+  ** \brief GgVector 型の各要素にスカラーを乗じた積を返す.
+  **
+  **   \param b GLfloat 型の変数.
+  **   \param a GgVector 型の変数.
+  **   \return a に b の各要素を乗じた積.
+  */
+  inline GgVector operator*(GLfloat a, const GgVector& b)
+  {
+    return GgVector{ a * b[0], a * b[1], a * b[2], a * b[3] };
+  }
+
+  /*!
+  ** \brief GgVector 型の各要素にスカラーを乗じる.
+  **
+  **   \param a GgVector 型の変数.
+  **   \param b GLfloat 型の変数.
+  **   \return a の各要素に b を乗じた a の参照.
+  */
+  inline GgVector& operator*=(GgVector& a, GLfloat b)
+  {
+    a[0] *= b;
+    a[1] *= b;
+    a[2] *= b;
+    a[3] *= b;
+
+    return a;
+  }
+
+  /*!
+  ** \brief GgVector 型の各要素をスカラーで割った商を返す.
+  **
+  **   \param a GgVector 型の変数.
+  **   \param b GLfloat 型の変数.
+  **   \return a の各要素を b で割った商.
+  */
+  inline GgVector operator/(const GgVector& a, GLfloat b)
+  {
+    return GgVector{ a[0] / b, a[1] / b, a[2] / b, a[3] / b };
+  }
+
+  /*!
+  ** \brief スカラーを GgVector 型の各要素で割った商を返す.
+  **
+  **   \param b GLfloat 型の変数.
+  **   \param a GgVector 型の変数.
+  **   \return a を b の各要素で割った商.
+  */
+  inline GgVector operator/(GLfloat a, const GgVector& b)
+  {
+    return GgVector{ a / b[0], a / b[1], a / b[2], a / b[3] };
+  }
+
+  /*!
+  ** \brief GgVector 型の各要素をスカラーで割る.
+  **
+  **   \param a GgVector 型の変数.
+  **   \param b GLfloat 型の変数.
+  **   \return a の各要素を b で割った a の参照.
+  */
+  inline GgVector& operator/=(GgVector& a, GLfloat b)
+  {
+    a[0] /= b;
+    a[1] /= b;
+    a[2] /= b;
+    a[3] /= b;
+
+    return a;
+  }
+
+  /*!
+  ** \brief GgVector 型の 3 要素の内積.
+  **
+  **   \param a GgVector 型の変数.
+  **   \param b GgVector 型の変数.
+  **   \return a と b のそれぞれの 3 要素の内積.
+  */
+  inline GLfloat ggDot3(const GgVector& a, const GgVector& b)
+  {
+    return a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
+  }
+
+  /*!
+  ** \brief GgVector 型の 3 要素の外積.
+  **
+  **   \param a GgVector 型の変数.
+  **   \param b GgVector 型の変数.
+  **   \return a と b の外積.
+  **   \note 戻り値の w (第4) 要素は 0.
+  */
+  inline GgVector ggCross(const GgVector& a, const GgVector& b)
+  {
+    const GgVector c
+    {
+      a[1] * b[2] - a[2] * b[1],
+      a[2] * b[0] - a[0] * b[2],
+      a[0] * b[1] - a[1] * b[0],
+      0.0f
+    };
+
+    return c;
+  }
+
+  /*!
+  ** \brief GgVector 型の 3 要素の長さ.
+  **
+  **   \param a GgVector 型の変数.
+  **   \return a の長さ.
+  */
+  inline GLfloat ggLength3(const GgVector& a)
+  {
+    return sqrtf(ggDot3(a, a));
+  }
+
+  /*!
+  ** \brief GgVector 型の 3 要素の距離.
+  **
+  **   \param a GgVector 型の変数.
+  **   \param b GgVector 型の変数.
+  **   \return 2 つの GgVector a, b の 3 要素の距離.
+  */
+  inline GLfloat ggDistance3(const GgVector& a, const GgVector& b)
+  {
+    return ggLength3(a - b);
+  }
+
+  /*!
+  ** \brief GgVector 型の 3 要素の正規化.
+  **
+  **   \param a GgVector 型の変数のポインタ.
+  **   \return 正規化できなかったら false.
+  **   \note a の w (第4) 要素は 0 になる.
+  */
+  inline bool ggNormalize3(GgVector* a)
+  {
+    const GLfloat l{ ggLength3(*a) };
+
+    if (l > 0.0f)
+    {
+      (*a)[0] /= l;
+      (*a)[1] /= l;
+      (*a)[2] /= l;
+      (*a)[3] = 0.0f;
+
+      return true;
+    }
+
+    return false;
+  }
+
+  /*!
+  ** \brief GgVector 型の 3 要素の正規化.
+  **
+  **   \param a GgVector 型の変数.
+  **   \return a の 3 要素を正規化したもの.
+  **   \note 戻り値の w (第4) 要素は 0 になる. 正規化できなければ元の値を返す.
+  */
+  inline GgVector ggNormalize3(const GgVector& a)
+  {
+    GgVector b{ a };
+    ggNormalize3(&b);
+    return b;
+  }
+
+  /*!
+  ** \brief GgVector の 4 要素の内積.
+  **
+  **   \param a GgVector 型の変数.
+  **   \param b GgVector 型の変数.
+  **   \return a と b のそれぞれの 4 要素の内積.
   */
   inline GLfloat ggDot4(const GgVector& a, const GgVector& b)
   {
     return a[0] * b[0] + a[1] * b[1] + a[2] * b[2] + a[3] * b[3];
+  }
+
+  /*!
+  ** \brief GgVector 型の長さ.
+  **
+  **   \param a GgVector 型の変数.
+  **   \return a の長さ.
+  */
+  inline GLfloat ggLength4(const GgVector& a)
+  {
+    return sqrtf(ggDot4(a, a));
+  }
+
+  /*!
+  ** \brief GgVector 型の距離.
+  **
+  **   \param a GgVector 型の変数.
+  **   \param b GgVector 型の変数.
+  **   \return 2 つの GgVector a, b の距離.
+  */
+  inline GLfloat ggDistance4(const GgVector& a, const GgVector& b)
+  {
+    return ggLength4(a - b);
+  }
+
+  /*!
+  ** \brief GgVector 型の正規化.
+  **
+  **   \param a GgVector 型の変数のポインタ.
+  **   \return 正規化できなかったら false.
+  */
+  inline bool ggNormalize4(GgVector* a)
+  {
+    const GLfloat l{ ggLength4(*a) };
+
+    if (l > 0.0f)
+    {
+      (*a)[0] /= l;
+      (*a)[1] /= l;
+      (*a)[2] /= l;
+      (*a)[3] /= l;
+
+      return true;
+    }
+
+    return false;
+  }
+
+  /*!
+  ** \brief GgVector 型の正規化.
+  **
+  **   \param a GgVector 型の変数.
+  **   \return a の 4 要素を正規化したもの.
+  */
+  inline GgVector ggNormalize4(const GgVector& a)
+  {
+    GgVector b{ a };
+    ggNormalize4(&b);
+    return b;
   }
 
   /*!
@@ -2827,7 +3240,7 @@ namespace gg
     //!   \return 四元数のノルム.
     inline GLfloat norm() const
     {
-      return ggLength4(data());
+      return ggLength4(*this);
     }
 
     //! \brief 四元数を格納する.
@@ -6146,7 +6559,7 @@ namespace gg
 
     //! \brief 形状データの取り出し.
     //!   \return GgTriangles 型の形状データのポインタ.
-    const GgTriangles* get() const
+    inline const GgTriangles* get() const
     {
       return data.get();
     }
