@@ -3,6 +3,11 @@
 //
 #include "GgApp.h"
 
+// プロジェクト名
+#ifndef PROJECT_NAME
+#  define PROJECT_NAME "ggsample01"
+#endif
+
 // 形状データ
 static std::string model{ "logo.obj" };
 
@@ -21,7 +26,7 @@ static GgSimpleShader::Light light
 int GgApp::main(int argc, const char* const* argv)
 {
   // ウィンドウを作成する (この行は変更しないでください)
-  Window window{ argc > 1 ? argv[1] : "ggsample01" };
+  Window window{ argc > 1 ? argv[1] : PROJECT_NAME };
 
   // 図形データを読み込む (大きさを正規化する)
   GgSimpleObj object{ model, true };

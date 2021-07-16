@@ -2902,7 +2902,7 @@ bool gg::ggReadImage(
   // ファイルを閉じる
   file.close();
 
-  // ファイルの書き込みに成功した
+  // ファイルの読み込みに成功した
   return true;
 }
 
