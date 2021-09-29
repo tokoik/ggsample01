@@ -1,6 +1,5 @@
 <map id="gg::GgTrackball::motion" name="gg::GgTrackball::motion">
-<area shape="rect" id="node1" title="回転の変換行列を計算する." alt="" coords="5,31,165,57"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a605ed85eaa2a82e0d3e2097002d5c583" title="四元数が表す回転の変換行列を a に求める." alt="" coords="213,5,400,32"/>
-<area shape="rect" id="node3" href="$namespacegg.html#a65baca1998bd9ea2b31a3fc1648d53dd" title="(x, y, z) を軸として角度 a 回転する四元数を返す." alt="" coords="227,56,386,83"/>
-<area shape="rect" id="node4" href="$classgg_1_1GgQuaternion.html#a82d0620de0f023642b08d7e0f23e0687" title="(x, y, z) を軸として角度 a 回転する四元数を格納する." alt="" coords="448,56,643,83"/>
+<area shape="rect" id="node1" title="回転の変換行列を計算する." alt="" coords="5,5,165,32"/>
+<area shape="rect" id="node2" href="$namespacegg.html#a65baca1998bd9ea2b31a3fc1648d53dd" title="(x, y, z) を軸として角度 a 回転する四元数を返す." alt="" coords="213,5,372,32"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgQuaternion.html#a82d0620de0f023642b08d7e0f23e0687" title="(x, y, z) を軸として角度 a 回転する四元数を格納する." alt="" coords="420,5,615,32"/>
 </map>

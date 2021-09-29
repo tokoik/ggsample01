@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ggbufferalignment_540',['ggBufferAlignment',['../namespacegg.html#a3760bb8490c7d6103a5f186b705b313e',1,'gg']]]
+  ['normal_546',['normal',['../structgg_1_1GgVertex.html#a33f0042dbe503f3d31dddd2dd5af50f9',1,'gg::GgVertex']]]
 ];

@@ -1,5 +1,5 @@
 <map id="gg::ggQuaternion" name="gg::ggQuaternion">
-<area shape="rect" id="node1" title="四元数を返す" alt="" coords="5,5,127,32"/>
-<area shape="rect" id="node2" href="$namespacegg.html#a6c6e29eda69894e9d1256fe894cb6fbe" title="四元数を返す" alt="" coords="175,5,296,32"/>
+<area shape="rect" id="node1" title="四元数を返す." alt="" coords="5,5,127,32"/>
+<area shape="rect" id="node2" href="$namespacegg.html#a6c6e29eda69894e9d1256fe894cb6fbe" title="四元数を返す." alt="" coords="175,5,296,32"/>
 <area shape="rect" id="node3" href="$classgg_1_1GgQuaternion.html#a0cf33af7bb0da8bb93bbbf1693da4e63" title="四元数を格納する." alt="" coords="344,5,500,32"/>
 </map>

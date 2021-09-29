@@ -126,8 +126,8 @@ $(function() {
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="ttc" id="aWindow_8h_html"><div class="ttname"><a href="Window_8h.html">Window.h</a></div><div class="ttdoc">ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.</div></div>
-<div class="ttc" id="aclassWindow_html"><div class="ttname"><a href="classWindow.html">Window</a></div><div class="ttdoc">ウィンドウ関連の処理.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00088">Window.h:89</a></div></div>
-<div class="ttc" id="aclassWindow_html_a5ca61ecd518dc976306b922b1425adc9"><div class="ttname"><a href="classWindow.html#a5ca61ecd518dc976306b922b1425adc9">Window::init</a></div><div class="ttdeci">static void init(int major=0, int minor=1)</div><div class="ttdoc">ゲームグラフィックス特論の宿題用補助プログラムの初期化, 最初に一度だけ実行する.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00387">Window.h:387</a></div></div>
+<div class="ttc" id="aclassWindow_html"><div class="ttname"><a href="classWindow.html">Window</a></div><div class="ttdoc">ウィンドウ関連の処理.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00092">Window.h:93</a></div></div>
+<div class="ttc" id="aclassWindow_html_a5ca61ecd518dc976306b922b1425adc9"><div class="ttname"><a href="classWindow.html#a5ca61ecd518dc976306b922b1425adc9">Window::init</a></div><div class="ttdeci">static void init(int major=0, int minor=1)</div><div class="ttdoc">ゲームグラフィックス特論の宿題用補助プログラムの初期化, 最初に一度だけ実行する.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00391">Window.h:391</a></div></div>
 <div class="ttc" id="amain_8cpp_html_a110745d0e996bc19a8c8e8cacbadd525"><div class="ttname"><a href="main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525">main</a></div><div class="ttdeci">int main(int argc, const char *const *argv)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00023">main.cpp:23</a></div></div>
 </div><!-- fragment --><p>使用する OpenGL のバージョンは、<code>Window::init(major, minor)</code> の <code>major</code> と <code>minor</code> で指定できます。<code>major</code> を 0 にするか省略すると、OpenGL のバージョンの指定を行いません。その場合は、macOS 以外では恐らく OpenGL のハードウェアもしくはドライバで対応可能な最大のバージョンが使用されます。なお、3.2 以降を指定したときは <b>macOS 対応の都合で</b> forward compatible プロファイルと core プロファイルを有効にします。macOS の場合は <code>Window::init(3, 2)</code> もしくは <code>Window::init(4, 1)</code> を指定してください。</p>
 <div class="fragment"><div class="line"><span class="comment">// for macOS</span></div>
@@ -152,7 +152,7 @@ Dear ImGui を使う場合</h2>
 <div class="fragment"><div class="line"><span class="comment">// Dear ImGui を使うなら</span></div>
 <div class="line"><span class="preprocessor">#define USE_IMGUI</span></div>
 </div><!-- fragment --><p>そして、OpenGL の描画ループの中で <code>ImGui::NewFrame();</code> と <code>ImGui::Render();</code> の間に Dear ImGui の API を置いてください。Dear ImGui のウィンドウの実際のレンダリング (<code>ImGui_ImplOpenGL3_RenderDrawData();</code> の呼び出し) は <code>window.swapbuffers()</code> の中で行っているので、Dear ImGui の API と OpenGL の API は描画ループの中で混在していても構いません。</p>
-<p>なお、Dear ImGui を有効にした場合は、マウスカーソルが Dear ImGui のウィンドウ上にあるとき (<code>IsAnyWindowHovered() == true</code>) に、Window クラスが保持しているマウスカーソルの位置を更新しないようにしています。また、Dear ImGui のいずれかのウィンドウが選択されているとき (<code>IsAnyWindowFocused() == true</code>) には、Window クラスはキーボードのイベントを処理しないようにしています。</p>
+<p>なお、Dear ImGui を有効にした場合は、Dear ImGui がマウスを使っているとき (<code>io.WantCaptureMouse == true</code>) に、Window クラスが保持しているマウスカーソルの位置を更新しないようにしています。また、Dear ImGui がキーボードを使っているとき (<code>io.WantCaptureKeyboard == true</code>) には、Window クラスはキーボードのイベントを処理しないようにしています。</p>
 <div class="fragment"><div class="line"><span class="comment">// ウィンドウ関連の処理</span></div>
 <div class="line"><span class="preprocessor">#define USE_IMGUI</span></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="Window_8h.html">Window.h</a>&quot;</span></div>
@@ -197,8 +197,8 @@ Dear ImGui を使う場合</h2>
 <div class="line">    window.<a class="code" href="classWindow.html#af6ffedb8d12d5551bdb4c298de87ed56">swapBuffers</a>();</div>
 <div class="line">  }</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassWindow_html_a7dd6ce09e1d68c8576376179aa54fc79"><div class="ttname"><a href="classWindow.html#a7dd6ce09e1d68c8576376179aa54fc79">Window::setClose</a></div><div class="ttdeci">void setClose(int flag=GLFW_TRUE) const</div><div class="ttdoc">ウィンドウのクローズフラグを設定する.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00552">Window.h:552</a></div></div>
-<div class="ttc" id="aclassWindow_html_af6ffedb8d12d5551bdb4c298de87ed56"><div class="ttname"><a href="classWindow.html#af6ffedb8d12d5551bdb4c298de87ed56">Window::swapBuffers</a></div><div class="ttdeci">void swapBuffers()</div><div class="ttdoc">カラーバッファを入れ替える.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00619">Window.h:619</a></div></div>
+<div class="ttc" id="aclassWindow_html_a7dd6ce09e1d68c8576376179aa54fc79"><div class="ttname"><a href="classWindow.html#a7dd6ce09e1d68c8576376179aa54fc79">Window::setClose</a></div><div class="ttdeci">void setClose(int flag=GLFW_TRUE) const</div><div class="ttdoc">ウィンドウのクローズフラグを設定する.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00556">Window.h:556</a></div></div>
+<div class="ttc" id="aclassWindow_html_af6ffedb8d12d5551bdb4c298de87ed56"><div class="ttname"><a href="classWindow.html#af6ffedb8d12d5551bdb4c298de87ed56">Window::swapBuffers</a></div><div class="ttdeci">void swapBuffers()</div><div class="ttdoc">カラーバッファを入れ替える.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00623">Window.h:623</a></div></div>
 </div><!-- fragment --><p>このソースファイルと Dear ImGui に含まれる以下のファイル、および <a class="el" href="gg_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言.">gg.h</a>, <a class="el" href="gg_8cpp.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の定義.">gg.cpp</a>, <a class="el" href="Window_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.">Window.h</a> を同じところに置き、gg.cpp と以下のうちの *.cpp ファイルと一緒にコンパイルして、GLFW のライブラリファイルをリンクしてください。</p>
 <blockquote class="doxtable">
 <p>imconfig.h <br  />
@@ -229,7 +229,7 @@ imconfig.h の変更点</h3>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2021年06月20日(日) 00時59分00秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2021年09月29日(水) 17時31分47秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

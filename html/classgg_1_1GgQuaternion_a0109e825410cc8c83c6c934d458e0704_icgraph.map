@@ -1,6 +1,11 @@
 <map id="gg::GgQuaternion::loadAdd" name="gg::GgQuaternion::loadAdd">
-<area shape="rect" id="node1" title="四元数に別の四元数を加算した結果を格納する." alt="" coords="491,31,669,57"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#afd26b63ad63a836277e17178d410590d" title="四元数に別の四元数を加算した結果を格納する." alt="" coords="256,5,435,32"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgQuaternion.html#a07067e1af47174e48cdeb2751c3cd3ac" title=" " alt="" coords="248,56,443,83"/>
-<area shape="rect" id="node4" href="$classgg_1_1GgQuaternion.html#a639e4783e536717d63e2e9a8e4225bd7" title=" " alt="" coords="5,56,200,83"/>
+<area shape="rect" id="node1" title="四元数に別の四元数を加算した結果を格納する." alt="" coords="717,107,896,133"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a5c776b116c954194ba457324c36b16b2" title="四元数に別の四元数を加算した結果を返す." alt="" coords="495,56,649,83"/>
+<area shape="rect" id="node8" href="$classgg_1_1GgQuaternion.html#a9fc078bf2cb61fea59192331555c2686" title="四元数に別の四元数を加算した結果を格納する." alt="" coords="483,107,661,133"/>
+<area shape="rect" id="node9" href="$classgg_1_1GgQuaternion.html#a07067e1af47174e48cdeb2751c3cd3ac" title=" " alt="" coords="475,157,669,184"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgQuaternion.html#a2a80ad1641502997b6cec18590bbb830" title="四元数に別の四元数を加算した結果を返す." alt="" coords="257,5,410,32"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgQuaternion.html#a4f536343e54923de7d58507a86edcde0" title=" " alt="" coords="240,56,427,83"/>
+<area shape="rect" id="node6" href="$classgg_1_1GgQuaternion.html#ab7f35213532d8d0d57fd2667388626f8" title=" " alt="" coords="242,107,425,133"/>
+<area shape="rect" id="node5" href="$classgg_1_1GgQuaternion.html#ac3c2cbeb20d1ab86e8900cef918718b3" title=" " alt="" coords="5,56,192,83"/>
+<area shape="rect" id="node7" href="$classgg_1_1GgQuaternion.html#a6f252e4145c521b3203c5aa55efad565" title=" " alt="" coords="7,107,190,133"/>
 </map>

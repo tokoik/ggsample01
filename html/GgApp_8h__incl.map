@@ -1,10 +1,10 @@
 <map id="GgApp.h" name="GgApp.h">
-<area shape="rect" id="node1" title=" " alt="" coords="217,5,290,32"/>
-<area shape="rect" id="node2" href="$Window_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理." alt="" coords="214,80,293,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,155,64,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="89,155,149,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="173,155,238,181"/>
-<area shape="rect" id="node6" title=" " alt="" coords="262,155,341,181"/>
-<area shape="rect" id="node7" title=" " alt="" coords="365,155,437,181"/>
-<area shape="rect" id="node8" href="$gg_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言." alt="" coords="462,155,509,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="196,5,269,32"/>
+<area shape="rect" id="node2" href="$Window_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理." alt="" coords="193,80,272,107"/>
+<area shape="rect" id="node3" href="$gg_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言." alt="" coords="5,155,52,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="77,155,135,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="160,155,220,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="244,155,309,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="333,155,412,181"/>
+<area shape="rect" id="node8" title=" " alt="" coords="437,155,509,181"/>
 </map>

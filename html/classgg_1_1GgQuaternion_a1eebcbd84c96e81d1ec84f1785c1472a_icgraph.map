@@ -1,6 +1,8 @@
 <map id="gg::GgQuaternion::loadSubtract" name="gg::GgQuaternion::loadSubtract">
-<area shape="rect" id="node1" title="四元数から別の四元数を減算した結果を格納する." alt="" coords="497,31,703,57"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a46b6a13dc7d5481f2d19868324288a2e" title="四元数から別の四元数を減算した結果を格納する." alt="" coords="244,5,449,32"/>
+<area shape="rect" id="node1" title="四元数から別の四元数を減算した結果を格納する." alt="" coords="497,56,703,83"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a9f1692b40daa565d9a308443cee79876" title="四元数から別の四元数を減算した結果を格納する." alt="" coords="244,5,449,32"/>
 <area shape="rect" id="node3" href="$classgg_1_1GgQuaternion.html#ab87b9d50a22c828781720ed7e752bddf" title=" " alt="" coords="251,56,442,83"/>
+<area shape="rect" id="node5" href="$classgg_1_1GgQuaternion.html#a41eeb50036f7346680b862956a4d4116" title="四元数から別の四元数を減算した結果を返す." alt="" coords="257,107,436,133"/>
 <area shape="rect" id="node4" href="$classgg_1_1GgQuaternion.html#a0c7b10799e51e76047abb3bdd0128e9c" title=" " alt="" coords="5,56,196,83"/>
+<area shape="rect" id="node6" href="$classgg_1_1GgQuaternion.html#a5240a31507b906e03592a4f6a6ca8f7a" title="四元数から別の四元数を減算した結果を返す." alt="" coords="11,107,190,133"/>
 </map>

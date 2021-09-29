@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['use_5fimgui_552',['USE_IMGUI',['../GgApp_8h.html#a39105c39ae1d1593f65cfda47b181814',1,'GgApp.h']]]
+  ['header_5fstr_558',['HEADER_STR',['../main_8cpp.html#a9eb08c4f3ad005333d49aa2299e5c7c3',1,'main.cpp']]]
 ];

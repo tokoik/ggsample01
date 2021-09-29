@@ -1,4 +1,5 @@
 <map id="gg::GgQuaternion::subtract" name="gg::GgQuaternion::subtract">
 <area shape="rect" id="node1" title="四元数から別の四元数を減算した結果を返す." alt="" coords="5,5,184,32"/>
 <area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a41eeb50036f7346680b862956a4d4116" title="四元数から別の四元数を減算した結果を返す." alt="" coords="232,5,411,32"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgQuaternion.html#a1eebcbd84c96e81d1ec84f1785c1472a" title="四元数から別の四元数を減算した結果を格納する." alt="" coords="459,5,664,32"/>
 </map>
