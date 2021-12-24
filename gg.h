@@ -1309,12 +1309,12 @@ extern PFNGLWINDOWRECTANGLESEXTPROC glWindowRectanglesEXT;
 //! \endcond
 
 // 標準ライブラリ
+#include <cmath>
 #include <array>
 #include <vector>
 #include <string>
 #include <memory>
 #include <cstddef>
-#include <cmath>
 
 /*!
 ** \brief ゲームグラフィックス特論の宿題用補助プログラムの名前空間

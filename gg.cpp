@@ -34,16 +34,12 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
 // 標準ライブラリ
-#include <cmath>
 #include <cfloat>
 #include <cstdlib>
-#include <cstddef>
 #include <stdexcept>
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include <string>
-#include <memory>
 #include <map>
 
 //! \def Alias OBJ ファイルからテクスチャ座標も読み込むなら 1.
