@@ -3,7 +3,7 @@ SOURCES	= $(wildcard *.cpp) $(wildcard lib/*.cpp)
 HEADERS	= $(wildcard *.h) $(wildcard lib/*.h)
 OBJECTS	= $(patsubst %.cpp,%.o,$(SOURCES))
 CXXFLAGS	= --std=c++17 -g -Wall -DDEBUG -DX11 -Iinclude
-LDLIBS	= `pkg-config glfw3 --libs`
+LDLIBS	= -ldl `pkg-config glfw3 --libs`
 
 .PHONY: clean
 
