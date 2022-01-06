@@ -121,6 +121,8 @@ namespace ImGui
     void MyFunction(const char* name, const MyMatrix44& v);
 }
 */
+
+// The Raspberry Pi needs to explicitly define the symbolic constant IMGUI_IMPL_OPENGL_ES3. 
 #if defined(__RASPBERRY_PI__)
 #  define IMGUI_IMPL_OPENGL_ES3
 #endif

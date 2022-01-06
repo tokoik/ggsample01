@@ -10,9 +10,10 @@ OpenGL の開発環境を整備してください。
 
 ## 宿題プログラムの作成に必要な環境
 
-* Linux Mint 18.3 / Windows 10 (Visual Studio 2017) / macOS 10.15 (Xcode 11) 以降に対応しています。
+* Linux Mint 20.2 / Windows 10 (Visual Studio 2019) / macOS 12.1 (Xcode 13) 以降に対応しています。
 * OpenGL 4.1 以降が実行できる環境 (対応した GPU を搭載したビデオカード や CPU) が必要です。
 * macOS では M1 Mac (Apple Silicon) に対応した Universal Binary を作成するようにしています。
+* Raspberry Pi 4B にも対応しました。`make -f Makefile.rpi` でビルドしてください。
 
 ## 補足
 
@@ -45,7 +46,7 @@ Doxygen で生成したドキュメントの [HTML 版](html/index.html)を html
 
 ### 補助プログラムの使い方
 
-補助プログラムを使用するには、最小限、GLFW が使える環境が必要です。ゲームグラフィックス特論 A / B の宿題のリポジトリには Windows 用、macOS 用、および Linux 用にコンパイルしたライブラリファイル一式を含めていますので、宿題のために別に用意する必要はありません。gg.h, gg.cpp, Window.h だけを使うときは、それぞれの環境で GLFW をインストールしておいてください。この補助プログラムを使用した最小のプログラムは、多分こんな感じになります。このソースファイルと同じところに gg.h, gg.cpp, Window.h を置き、gg.cpp と一緒にコンパイルして、GLFW のライブラリファイルをリンクしてください。
+補助プログラムを使用するには、最小限、GLFW が使える環境が必要です。ゲームグラフィックス特論 A / B の宿題のリポジトリには Windows 用および macOS 用にコンパイルしたライブラリファイル一式を含めていますので、これらについては宿題のために別に用意する必要はありません。Linux (および Raspberry Pi) では libglfw3-dev パッケージをインストールしておいてください (`% sudo apt-get install libglfw3-dev`)。gg.h, gg.cpp, Window.h だけを使うときは、それぞれの環境で GLFW をインストールしておいてください。この補助プログラムを使用した最小のプログラムは、多分こんな感じになります。このソースファイルと同じところに gg.h, gg.cpp, Window.h を置き、gg.cpp と一緒にコンパイルして、GLFW のライブラリファイルをリンクしてください。
 
 ```cpp
 #include "Window.h"
@@ -166,6 +167,7 @@ int main()
 > imgui.h  
 > imgui_impl_glfw.h  
 > imgui_impl_opengl3.h  
+> imgui_impl_opengl3_loader.h  
 > imgui_internal.h  
 > imstb_rectpack.h  
 > imstb_textedit.h  
@@ -180,9 +182,11 @@ int main()
 
 #### imconfig.h の変更点
 
-Dear ImGui は使用している OpenGL のローダを自動判別するのですが、この授業オリジナルの gg.h / gg.cpp は見つけてくれません。そこで、この中の imconfig.h の**最後**に、以下の定義を追加しています。
+Dear ImGui はバージョン 1.86 から独自のローダを使用するようになったので、`IMGUI_IMPL_OPENGL_LOADER_CUSTOM` にこの授業オリジナルのローダ `gg.h` / `gg.cpp` を指定する必要はありません。ただし、Raspberry Pi では imconfig.h の**最後**で記号定数 `IMGUI_IMPL_OPENGL_ES3` を明示的に定義する必要があります。
 
 ```cpp
-// My custum OpenGL loader
-#define IMGUI_IMPL_OPENGL_LOADER_CUSTOM "../gg.h"
+// The Raspberry Pi needs to explicitly define the symbolic constant IMGUI_IMPL_OPENGL_ES3. 
+#if defined(__RASPBERRY_PI__)
+#  define IMGUI_IMPL_OPENGL_ES3
+#endif
 ```
