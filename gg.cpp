@@ -56,7 +56,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #endif
 
 // OpenGL 3.2 の API のエントリポイント
-#if !defined(GL3_PROTOTYPES)
+#if !defined(GL3_PROTOTYPES) && !defined(GL_GLES_PROTOTYPES)
 PFNGLACTIVEPROGRAMEXTPROC glActiveProgramEXT;
 PFNGLACTIVESHADERPROGRAMPROC glActiveShaderProgram;
 PFNGLACTIVETEXTUREPROC glActiveTexture;
@@ -1308,7 +1308,7 @@ void gg::ggInit()
   if (ggBufferAlignment) return;
 
   // macOS 以外で OpenGL 3.2 以降の API を取得する
-#if !defined(GL3_PROTOTYPES)
+#if !defined(GL3_PROTOTYPES) && !defined(GL_GLES_PROTOTYPES)
   glActiveProgramEXT = PFNGLACTIVEPROGRAMEXTPROC(glfwGetProcAddress("glActiveProgramEXT"));
   glActiveShaderProgram = PFNGLACTIVESHADERPROGRAMPROC(glfwGetProcAddress("glActiveShaderProgram"));
   glActiveTexture = PFNGLACTIVETEXTUREPROC(glfwGetProcAddress("glActiveTexture"));
@@ -2616,21 +2616,37 @@ void gg::_ggFBOError(const std::string& name, unsigned int line)
 
     switch (status)
     {
-    case GL_FRAMEBUFFER_UNSUPPORTED:
-      std::cerr << "Unsupported framebuffer internal" << std::endl;
-      break;
-    case GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT:
-      std::cerr << "Framebuffer incomplete, missing attachment" << std::endl;
+    case GL_FRAMEBUFFER_UNDEFINED:
+      std::cerr << "the default framebuffer does not exist" << std::endl;
       break;
     case GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT:
       std::cerr << "Framebuffer incomplete, duplicate attachment" << std::endl;
       break;
+    case GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT:
+      std::cerr << "Framebuffer incomplete, missing attachment" << std::endl;
+      break;
+    case GL_FRAMEBUFFER_UNSUPPORTED:
+      std::cerr << "Unsupported framebuffer internal" << std::endl;
+      break;
+    case GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE:
+      std::cerr << "The value of GL_RENDERBUFFER_SAMPLES is not"
+      " the same for all attached renderbuffers or,"
+      " if the attached images are a mix of renderbuffers and textures,"
+      " the value of GL_RENDERBUFFER_SAMPLES is not zero" << std::endl;
+      break;
+#if !defined(GL_GLES_PROTOTYPES)
+    case GL_FRAMEBUFFER_INCOMPLETE_LAYER_TARGETS:
+      std::cerr << "Any framebuffer attachment is layered,"
+      " and any populated attachment is not layered,"
+      " or if all populated color attachments are not from textures"
+      " of the same target" << std::endl;
     case GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER:
       std::cerr << "Framebuffer incomplete, missing draw buffer" << std::endl;
       break;
     case GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER:
       std::cerr << "Framebuffer incomplete, missing read buffer" << std::endl;
       break;
+#endif
     default:
       std::cerr << "Programming error; will fail on all hardware: " << std::hex << std::showbase << status << std::endl;
       break;
@@ -2982,12 +2998,16 @@ GLuint gg::ggLoadImage(
   {
     switch (format)
     {
+#if GL_BGR != GL_RGB
     case GL_BGR:
       internal = GL_RGB;
       break;
+#endif
+#if GL_BGRA != GL_RGBA
     case GL_BGRA:
       internal = GL_RGBA;
       break;
+#endif
     default:
       internal = format;
       break;
@@ -3043,11 +3063,15 @@ void gg::ggCreateNormalMap(
     stride = 2;
     break;
   case GL_RGB:
+#if GL_BGR != GL_RGB
   case GL_BGR:
+#endif
     stride = 3;
     break;
   case GL_RGBA:
+#if GL_BGRA != GL_RGBA
   case GL_BGRA:
+#endif
     stride = 4;
     break;
   default:
@@ -3170,12 +3194,16 @@ void gg::GgColorTexture::load(
   {
     switch (format)
     {
+#if GL_BGR != GL_RGB
     case GL_BGR:
       internal = GL_RGB;
       break;
+#endif
+#if GL_BGRA != GL_RGBA
     case GL_BGRA:
       internal = GL_RGBA;
       break;
+#endif
     default:
       internal = format;
       break;
@@ -4074,6 +4102,12 @@ GLuint gg::ggCreateShader(
 
     if (!gsrc.empty())
     {
+#if defined(GL_GLES_PROTOTYPES)
+#  if defined(DEBUG)
+      std::cerr << gtext << ": The geometry is not supported." << std::endl;
+      status = false;
+#  endif
+#else
       // ジオメトリシェーダのシェーダオブジェクトを作成する
       const GLuint geomShader{ glCreateShader(GL_GEOMETRY_SHADER) };
       const GLchar* gsrcp{ gsrc.c_str() };
@@ -4086,15 +4120,16 @@ GLuint gg::ggCreateShader(
       else
         status = false;
       glDeleteShader(geomShader);
+#endif
     }
-
-    // feedback に使う varying 変数を指定する
-    if (nvarying > 0)
-      glTransformFeedbackVaryings(program, nvarying, varyings, GL_SEPARATE_ATTRIBS);
 
     // 全てのシェーダオブジェクトのコンパイルに成功したら
     if (status)
     {
+      // feedback に使う varying 変数を指定する
+      if (nvarying > 0)
+        glTransformFeedbackVaryings(program, nvarying, varyings, GL_SEPARATE_ATTRIBS);
+
       // シェーダプログラムをリンクする
       glLinkProgram(program);
 
@@ -4187,7 +4222,7 @@ GLuint gg::ggLoadShader(
   return ggCreateShader(vsrc, fsrc, gsrc, nvarying, varyings, vert, frag, geom);
 }
 
-#if !defined(__APPLE__)
+#if !defined(__APPLE__) && !defined(GL_GLES_PROTOTYPES)
 /*
 ** コンピュートシェーダのソースプログラムの文字列を読み込んでプログラムオブジェクトを作成する
 **

@@ -4,7 +4,7 @@
 #include "GgApp.h"
 
 // プロジェクト名
-#ifndef PROJECT_NAME
+#if !defined(PROJECT_NAME)
 #  define PROJECT_NAME "ggsample01"
 #endif
 
@@ -32,7 +32,11 @@ int GgApp::main(int argc, const char* const* argv)
   GgSimpleObj object{ model, true };
 
   // シェーダを作成する
+#if defined(GL_GLES_PROTOTYPES)
+  const GgSimpleShader simple{ "simple_es3.vert", "simple_es3.frag" };
+#else
   const GgSimpleShader simple{ "simple.vert", "simple.frag" };
+#endif
 
   // 光源データから光源のバッファオブジェクトを作成する
   GgSimpleShader::LightBuffer lightBuffer{ light };
@@ -40,7 +44,7 @@ int GgApp::main(int argc, const char* const* argv)
   // ビュー変換行列を設定する
   const GgMatrix mv{ ggLookat(0.0f, 0.0f, 5.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f) };
 
-#ifdef IMGUI_VERSION
+#if defined(IMGUI_VERSION)
   //
   // ImGui の初期設定
   //
@@ -83,7 +87,7 @@ int GgApp::main(int argc, const char* const* argv)
     // ウィンドウを消去する
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-#ifdef IMGUI_VERSION
+#if defined(IMGUI_VERSION)
     //
     // ImGui によるユーザインタフェース
     //

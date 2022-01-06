@@ -39,7 +39,13 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #endif
 
 // フレームワークに GLFW 3 を使う
-#define GLFW_INCLUDE_GLCOREARB
+#if defined(IMGUI_IMPL_OPENGL_ES2)
+#  define GLFW_INCLUDE_ES2
+#elif defined(IMGUI_IMPL_OPENGL_ES3)
+#  define GLFW_INCLUDE_ES3
+#else
+#  define GLFW_INCLUDE_GLCOREARB
+#endif
 #include <GLFW/glfw3.h>
 
 // Windows (Visual Studio) 用の設定
@@ -68,7 +74,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #endif
 
 // OpenGL 3.2 の API のエントリポイント
-#if !defined(GL3_PROTOTYPES)
+#if !defined(GL3_PROTOTYPES) && !defined(GL_GLES_PROTOTYPES)
 extern PFNGLACTIVEPROGRAMEXTPROC glActiveProgramEXT;
 extern PFNGLACTIVESHADERPROGRAMPROC glActiveShaderProgram;
 extern PFNGLACTIVETEXTUREPROC glActiveTexture;
@@ -1428,6 +1434,12 @@ namespace gg
   **   \return 保存に成功すれば true, 失敗すれば false.
   */
   extern bool ggSaveDepth(const std::string& name);
+
+// OpenGL ES では GL_BGR/GL_BGRA が使えない
+#if defined(GL_GLES_PROTOTYPES)
+#  define GL_BGR GL_RGB
+#  define GL_BGRA GL_RGBA
+#endif
 
   /*!
   ** \brief TGA ファイル (8/16/24/32bit) をメモリに読み込む.
@@ -4734,7 +4746,11 @@ namespace gg
     inline void* map() const
     {
       glBindBuffer(target, buffer);
+#if defined(GL_GLES_PROTOTYPES)
+      return glMapBufferRange(target, 0, getStride() * count, GL_MAP_WRITE_BIT);
+#else
       return glMapBuffer(target, GL_WRITE_ONLY);
+#endif
     }
 
     //! \brief バッファオブジェクトの指定した範囲をマップする.
@@ -4784,7 +4800,15 @@ namespace gg
 
       // データをバッファオブジェクトから抽出する
       glBindBuffer(target, buffer);
+#if defined(GL_GLES_PROTOTYPES)
+      const GLsizeiptr begin{ getStride() * first };
+      const GLsizeiptr range{ getStride() * count };
+      T *const source{ glMapBufferRange(target, begin, range, GL_MAP_READ_BIT) };
+      std::copy(source, source + count, data);
+      glUnmapBuffer(target);
+#else
       glGetBufferSubData(target, getStride() * first, getStride() * count, data);
+#endif
     }
 
     //! \brief 別のバッファオブジェクトからデータを複写する.
@@ -5042,10 +5066,21 @@ namespace gg
 
       // データをユニフォームバッファオブジェクトから抽出する
       bind();
+#if defined(GL_GLES_PROTOTYPES)
+      const char *const source{ glMapBufferRange(target, stride * first, stride * count, GL_MAP_READ_BIT) };
       for (GLsizei i = 0; i < count; ++i)
       {
-        glGetBufferSubData(target, stride * (first + i) + offset, sizeof(T), destination + size * i);
+        const char *const begin{ source + stride * i + offset };
+        const char *const end{ begin + size };
+        std::copy(begin, end, destination + sizeof(T) * i);
       }
+      glUnmapBuffer(target);
+#else
+      for (GLsizei i = 0; i < count; ++i)
+      {
+        glGetBufferSubData(target, stride * (first + i) + offset, size, destination + sizeof(T) * i);
+      }
+#endif
     }
 
     //! \brief 別のバッファオブジェクトからデータを複写する.
