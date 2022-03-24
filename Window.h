@@ -443,6 +443,11 @@ public:
   //! \brief ゲームグラフィックス特論の宿題用補助プログラムの終了時に一度だけ実行する.
   static void terminate()
   {
+#if defined(GG_USE_OCULUS_RIFT)
+    // プログラムの終了時に LibOVR を停止する
+    ovr_Shutdown();
+#endif
+
 #if defined(IMGUI_VERSION)
     // プログラム終了時に ImGui のコンテキストを破棄する
     ImGui::DestroyContext();
@@ -1198,9 +1203,6 @@ public:
       ovrInitParams initParams{ ovrInit_RequestVersion, OVR_MINOR_VERSION, NULL, 0, 0 };
       if (OVR_FAILURE(ovr_Initialize(&initParams)))
         throw std::runtime_error("Can't initialize LibOVR");
-
-      // アプリケーションの終了時に LibOVR を終了する
-      atexit(ovr_Shutdown);
 
       // 実行済みであることを記録する
       firstTime = false;
