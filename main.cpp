@@ -29,13 +29,7 @@ int main(int argc, const char* const* argv) try
   GgApp app;
 
   // アプリケーションを実行する
-  const int status{ app.main(argc, argv) };
-
-  // ウィンドウ関連の修了処理
-  Window::terminate();
-
-  // 終了ステータスを返す
-  return status;
+  return app.main(argc, argv);
 }
 catch (const std::runtime_error &e)
 {

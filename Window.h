@@ -234,6 +234,7 @@ class Window
 
         // トラックボールをリセットする
         instance->resetRotation();
+        [[fallthrough]];
 
       case GLFW_KEY_END:
 
@@ -399,10 +400,14 @@ public:
     // 初期化済みの印をつける
     firstTime = false;
 
-    // GLFW を初期化する
+    // GLFW のエラー処理関数を登録する
     glfwSetErrorCallback(glfwErrorCallback);
-    if (glfwInit() == GL_FALSE)
-      throw std::runtime_error("Can't initialize GLFW");
+
+    // GLFW を初期化する
+    if (glfwInit() == GL_FALSE) throw std::runtime_error("Can't initialize GLFW");
+
+    // プログラム終了時に GLFW を終了する
+    atexit(glfwTerminate);
 
     // OpenGL の major 番号が指定されていれば
     if (major > 0)
@@ -437,24 +442,10 @@ public:
 
     // ImGui のコンテキストを作成する
     ImGui::CreateContext();
-#endif
-  }
 
-  //! \brief ゲームグラフィックス特論の宿題用補助プログラムの終了時に一度だけ実行する.
-  static void terminate()
-  {
-#if defined(GG_USE_OCULUS_RIFT)
-    // プログラムの終了時に LibOVR を停止する
-    ovr_Shutdown();
-#endif
-
-#if defined(IMGUI_VERSION)
     // プログラム終了時に ImGui のコンテキストを破棄する
-    ImGui::DestroyContext();
+    atexit([] { ImGui::DestroyContext(); });
 #endif
-
-    // プログラム終了時に GLFW を終了する
-    glfwTerminate();
   }
 
   //! \brief コンストラクタ.
@@ -1203,6 +1194,9 @@ public:
       ovrInitParams initParams{ ovrInit_RequestVersion, OVR_MINOR_VERSION, NULL, 0, 0 };
       if (OVR_FAILURE(ovr_Initialize(&initParams)))
         throw std::runtime_error("Can't initialize LibOVR");
+
+      // アプリケーションの終了時に LibOVR を終了する
+      atexit(ovr_Shutdown);
 
       // 実行済みであることを記録する
       firstTime = false;
