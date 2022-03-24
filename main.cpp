@@ -23,13 +23,19 @@
 int main(int argc, const char* const* argv) try
 {
   // ウィンドウ関連の初期設定
-  Window::init(4, 1);
+  Window::initialize(4, 1);
 
   // アプリケーションのオブジェクトを生成する
   GgApp app;
 
   // アプリケーションを実行する
-  return app.main(argc, argv);
+  const int status{ app.main(argc, argv) };
+
+  // ウィンドウ関連の修了処理
+  Window::terminate();
+
+  // 終了ステータスを返す
+  return status;
 }
 catch (const std::runtime_error &e)
 {
@@ -64,6 +70,9 @@ catch (const std::runtime_error &e)
 #else
   std::cerr << HEADER_STR << ": " << e.what() << '\n';
 #endif
+
+  // GLFW の修了処理
+  glfwTerminate();
 
   // ブログラムを終了する
   return EXIT_FAILURE;

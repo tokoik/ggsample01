@@ -388,7 +388,7 @@ public:
   //! \brief ゲームグラフィックス特論の宿題用補助プログラムの初期化, 最初に一度だけ実行する.
   //!   \param major 使用する OpenGL の major 番号, 0 なら無指定.
   //!   \param minor 使用する OpenGL の minor 番号, major 番号が 0 なら無視.
-  static void init(int major = 0, int minor = 1)
+  static void initialize(int major = 0, int minor = 1)
   {
     // 最初に実行するときだけ true
     static bool firstTime{ true };
@@ -404,15 +404,6 @@ public:
     if (glfwInit() == GL_FALSE)
       throw std::runtime_error("Can't initialize GLFW");
 
-    // 後始末を登録する
-    atexit(glfwTerminate);
-
-#if defined(GL_GLES_PROTOTYPES)
-    glfwWindowHint(GLFW_CLIENT_API, GLFW_OPENGL_ES_API);
-    glfwWindowHint(GLFW_CONTEXT_CREATION_API, GLFW_EGL_CONTEXT_API);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
-#else
     // OpenGL の major 番号が指定されていれば
     if (major > 0)
     {
@@ -420,6 +411,11 @@ public:
       glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, major);
       glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, minor);
 
+#if defined(GL_GLES_PROTOTYPES)
+      // OpenGL ES 3 のコンテキストを指定する
+      glfwWindowHint(GLFW_CLIENT_API, GLFW_OPENGL_ES_API);
+      glfwWindowHint(GLFW_CONTEXT_CREATION_API, GLFW_EGL_CONTEXT_API);
+#else
       // OpenGL Version 3.2 以降なら
       if (major * 10 + minor >= 32)
       {
@@ -427,8 +423,8 @@ public:
         glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
         glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
       }
-    }
 #endif
+    }
 
 #if defined(GG_USE_OCULUS_RIFT)
     // Oculus Rift では SRGB でレンダリングする
@@ -441,10 +437,19 @@ public:
 
     // ImGui のコンテキストを作成する
     ImGui::CreateContext();
-
-    // プログラム終了時には ImGui のコンテキストを破棄する
-    atexit([] { ImGui::DestroyContext(); });
 #endif
+  }
+
+  //! \brief ゲームグラフィックス特論の宿題用補助プログラムの終了時に一度だけ実行する.
+  static void terminate()
+  {
+#if defined(IMGUI_VERSION)
+    // プログラム終了時に ImGui のコンテキストを破棄する
+    ImGui::DestroyContext();
+#endif
+
+    // プログラム終了時に GLFW を終了する
+    glfwTerminate();
   }
 
   //! \brief コンストラクタ.
@@ -524,6 +529,9 @@ public:
 
     // 垂直同期タイミングに合わせる
     glfwSwapInterval(1);
+
+    // 実際のフレームバッファのサイズを取得する
+    glfwGetFramebufferSize(window, &width, &height);
 
     // ビューポートと投影変換行列を初期化する
     resize(window, width, height);
@@ -643,14 +651,14 @@ public:
 
   //! \brief ウィンドウの横幅を得る.
   //!   \return ウィンドウの横幅.
-  GLsizei getWidth() const
+  const GLsizei& getWidth() const
   {
     return size[0];
   }
 
   //! \brief ウィンドウの高さを得る.
   //!   \return ウィンドウの高さ.
-  GLsizei getHeight() const
+  const GLsizei& getHeight() const
   {
     return size[1];
   }
@@ -672,7 +680,7 @@ public:
 
   //! \brief ウィンドウのアスペクト比を得る.
   //!   \return ウィンドウの縦横比.
-  GLfloat getAspect() const
+  const GLfloat& getAspect() const
   {
     return aspect;
   }
