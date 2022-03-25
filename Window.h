@@ -122,18 +122,32 @@ class Window
     std::array<GLfloat, 2> wheel;
 
     // 平行移動量[ボタン][直前/更新][X/Y/Z]
-    std::array<std::array<std::array<GLfloat, 3>, 2>, GG_BUTTON_COUNT> translation;
+    std::array<std::array<GgVector, 2>, GG_BUTTON_COUNT> translation;
 
     // トラックボール
     std::array<GgTrackball, GG_BUTTON_COUNT> rotation;
 
     // コンストラクタ
     HumanInterface()
-      : arrow{}
-      , mouse{}
-      , wheel{}
-      , translation{}
+      : mouse{}
     {
+      resetTranslation();
+    }
+
+    // マウスや矢印キーによる平行移動量を初期化する
+    void resetTranslation()
+    {
+      // 平行移動量を初期化する
+      for (auto& t : translation)
+      {
+        std::fill(t.begin(), t.end(), GgVector{ 0.0f, 0.0f, 0.0f, 1.0f });
+      }
+
+      // 矢印キーの設定値を初期化する
+      std::fill(arrow.begin(), arrow.end(), std::array<int, 2>{ 0, 0 });
+
+      // マウスホイールの回転量を初期化する
+      std::fill(wheel.begin(), wheel.end(), 0.0f);
     }
 
     // 平行移動量と回転量を更新する (X, Y のみ, Z は wheel() で計算する)
@@ -232,13 +246,13 @@ class Window
       {
       case GLFW_KEY_HOME:
 
-        // トラックボールをリセットする
+        // トラックボールを初期化する
         instance->resetRotation();
         [[fallthrough]];
 
       case GLFW_KEY_END:
 
-        // 現在位置と平行移動量をリセットする
+        // 平行移動量を初期化する
         instance->resetTranslation();
         break;
 
@@ -901,11 +915,11 @@ public:
   //! \brief トラックボール処理を考慮したマウスによるスクロールの変換行列を得る.
   //!   \param button 平行移動量を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]).
   //!   \return 平行移動量を格納した GLfloat[3] の配列のポインタ.
-  const GLfloat* getTranslation(int button = GLFW_MOUSE_BUTTON_1) const
+  const GgVector& getTranslation(int button = GLFW_MOUSE_BUTTON_1) const
   {
     const auto& current_if{ interfaceData[interfaceNo] };
     assert(button >= GLFW_MOUSE_BUTTON_1 && button < GLFW_MOUSE_BUTTON_1 + GG_BUTTON_COUNT);
-    return current_if.translation[button][1].data();
+    return current_if.translation[button][1];
   }
 
   //! \brief マウスによって視点の平行移動の変換行列を得る.
@@ -962,39 +976,27 @@ public:
     return current_if.rotation[button].getMatrix();
   }
 
-  //! \brief トラックボール処理をリセットする
+  //! \brief トラックボール処理を初期化する.
   void resetRotation()
   {
-    // トラックボールをリセットする
+    // トラックボールを初期化する
     for (auto& tb : interfaceData[interfaceNo].rotation) tb.reset();
   }
 
-  //! 現在位置と平行移動量をリセットする
+  //! 平行移動量を初期化する.
   void resetTranslation()
   {
-    // 現在のインターフェース
-    auto& current_if{ interfaceData[interfaceNo] };
-
-    // 平行移動量をリセットする
-    for (auto& t : current_if.translation)
-    {
-      std::fill(t.begin(), t.end(), std::array<GLfloat, 3>{ 0.0f, 0.0f, 0.0f });
-    }
-
-    // 矢印キーの設定値をリセットする
-    std::fill(current_if.arrow.begin(), current_if.arrow.end(), std::array<int, 2>{ 0, 0 });
-
-    // マウスホイールの回転量をリセットする
-    std::fill(current_if.wheel.begin(), current_if.wheel.end(), 0.0f);
+    // 現在のインターフェースの平行移動量を初期化する
+    interfaceData[interfaceNo].resetTranslation();
   }
 
-  //! \brief トラックボール・マウスホイール・矢印キーの値を初期化する
+  //! \brief トラックボール・マウスホイール・矢印キーの値を初期化する.
   void reset()
   {
-    // トラックボール処理をリセットする
+    // トラックボール処理を初期化する
     resetRotation();
 
-    // 平行移動量をリセットする
+    // 平行移動量を初期化する
     resetTranslation();
   }
 
