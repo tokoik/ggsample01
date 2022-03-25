@@ -65,9 +65,6 @@ catch (const std::runtime_error &e)
   std::cerr << HEADER_STR << ": " << e.what() << '\n';
 #endif
 
-  // GLFW の修了処理
-  glfwTerminate();
-
   // ブログラムを終了する
   return EXIT_FAILURE;
 }
