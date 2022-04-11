@@ -1,6 +1,4 @@
-﻿#include "gg.h"
-
-/*
+﻿/*
 ** ゲームグラフィックス特論用補助プログラム GLFW3 版
 **
 
@@ -24,6 +22,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 **
 */
+#include "gg.h"
 
 /*!
 ** \file gg.cpp
@@ -2655,6 +2654,765 @@ void gg::_ggFBOError(const std::string& name, unsigned int line)
 }
 
 /*
+** 変換行列：行列とベクトルの積 c ← a × b
+*/
+void gg::GgMatrix::projection(GLfloat* c, const GLfloat* a, const GLfloat* b) const
+{
+  for (int i = 0; i < 4; ++i)
+  {
+    c[i] = a[0 + i] * b[0] + a[4 + i] * b[1] + a[8 + i] * b[2] + a[12 + i] * b[3];
+  }
+}
+
+/*
+** 変換行列：行列と行列の積 c ← a × b
+*/
+void gg::GgMatrix::multiply(GLfloat* c, const GLfloat* a, const GLfloat* b) const
+{
+  for (int i = 0; i < 16; ++i)
+  {
+    int j = i & 3, k = i & ~3;
+
+    c[i] = a[0 + j] * b[k + 0] + a[4 + j] * b[k + 1] + a[8 + j] * b[k + 2] + a[12 + j] * b[k + 3];
+  }
+}
+
+/*
+** 変換行列：単位行列を設定する
+*/
+gg::GgMatrix& gg::GgMatrix::loadIdentity()
+{
+  (*this)[ 1] = (*this)[ 2] = (*this)[ 3] = (*this)[ 4] =
+  (*this)[ 6] = (*this)[ 7] = (*this)[ 8] = (*this)[ 9] =
+  (*this)[11] = (*this)[12] = (*this)[13] = (*this)[14] = 0.0f;
+  (*this)[ 0] = (*this)[ 5] = (*this)[10] = (*this)[15] = 1.0f;
+
+  return *this;
+}
+
+/*
+** 変換行列：平行移動変換行列を設定する
+*/
+gg::GgMatrix& gg::GgMatrix::loadTranslate(GLfloat x, GLfloat y, GLfloat z, GLfloat w)
+{
+  (*this)[12] = x;
+  (*this)[13] = y;
+  (*this)[14] = z;
+  (*this)[ 0] = (*this)[ 5] = (*this)[10] = (*this)[15] = w;
+  (*this)[ 1] = (*this)[ 2] = (*this)[ 3] = (*this)[ 4] =
+  (*this)[ 6] = (*this)[ 7] = (*this)[ 8] = (*this)[ 9] =
+  (*this)[11] = 0.0f;
+
+  return *this;
+}
+
+/*
+** 変換行列：拡大縮小変換行列を設定する
+*/
+gg::GgMatrix& gg::GgMatrix::loadScale(GLfloat x, GLfloat y, GLfloat z, GLfloat w)
+{
+  (*this)[ 0] = x;
+  (*this)[ 5] = y;
+  (*this)[10] = z;
+  (*this)[15] = w;
+  (*this)[ 1] = (*this)[ 2] = (*this)[ 3] = (*this)[ 4] =
+  (*this)[ 6] = (*this)[ 7] = (*this)[ 8] = (*this)[ 9] =
+  (*this)[11] = (*this)[12] = (*this)[13] = (*this)[14] = 0.0f;
+
+  return *this;
+}
+
+/*
+** 変換行列：x 軸中心の回転変換行列を設定する
+*/
+gg::GgMatrix& gg::GgMatrix::loadRotateX(GLfloat a)
+{
+  const GLfloat c{ cosf(a) };
+  const GLfloat s{ sinf(a) };
+
+  (*this)[ 0] = 1.0f; (*this)[ 1] = 0.0f; (*this)[ 2] = 0.0f; (*this)[ 3] = 0.0f;
+  (*this)[ 4] = 0.0f; (*this)[ 5] = c;    (*this)[ 6] = s;    (*this)[ 7] = 0.0f;
+  (*this)[ 8] = 0.0f; (*this)[ 9] = -s;   (*this)[10] = c;    (*this)[11] = 0.0f;
+  (*this)[12] = 0.0f; (*this)[13] = 0.0f; (*this)[14] = 0.0f; (*this)[15] = 1.0f;
+
+  return *this;
+}
+
+/*
+** 変換行列：y 軸中心の回転変換行列を設定する
+*/
+gg::GgMatrix& gg::GgMatrix::loadRotateY(GLfloat a)
+{
+  const GLfloat c{ cosf(a) };
+  const GLfloat s{ sinf(a) };
+
+  (*this)[ 0] = c;    (*this)[ 1] = 0.0f; (*this)[ 2] = -s;   (*this)[ 3] = 0.0f;
+  (*this)[ 4] = 0.0f; (*this)[ 5] = 1.0f; (*this)[ 6] = 0.0f; (*this)[ 7] = 0.0f;
+  (*this)[ 8] = s;    (*this)[ 9] = 0.0f; (*this)[10] = c;    (*this)[11] = 0.0f;
+  (*this)[12] = 0.0f; (*this)[13] = 0.0f; (*this)[14] = 0.0f; (*this)[15] = 1.0f;
+
+  return *this;
+}
+
+/*
+** 変換行列：z 軸中心の回転変換行列を設定する
+*/
+gg::GgMatrix& gg::GgMatrix::loadRotateZ(GLfloat a)
+{
+  const GLfloat c{ cosf(a) };
+  const GLfloat s{ sinf(a) };
+
+  (*this)[ 0] = c;    (*this)[ 1] = s;    (*this)[ 2] = 0.0f; (*this)[ 3] = 0.0f;
+  (*this)[ 4] = -s;   (*this)[ 5] = c;    (*this)[ 6] = 0.0f; (*this)[ 7] = 0.0f;
+  (*this)[ 8] = 0.0f; (*this)[ 9] = 0.0f; (*this)[10] = 1.0f; (*this)[11] = 0.0f;
+  (*this)[12] = 0.0f; (*this)[13] = 0.0f; (*this)[14] = 0.0f; (*this)[15] = 1.0f;
+
+  return *this;
+}
+
+/*
+** 変換行列：任意軸中心の回転変換行列を設定する
+*/
+gg::GgMatrix& gg::GgMatrix::loadRotate(GLfloat x, GLfloat y, GLfloat z, GLfloat a)
+{
+  const GLfloat d{ sqrtf(x * x + y * y + z * z) };
+
+  if (d > 0.0f)
+  {
+    const GLfloat l(x / d), m(y / d), n(z / d);
+    const GLfloat l2(l * l), m2(m * m), n2(n * n);
+    const GLfloat lm(l * m), mn(m * n), nl(n * l);
+    const GLfloat c(cosf(a)), c1(1.0f - c);
+    const GLfloat s(sinf(a));
+
+    (*this)[ 0] = (1.0f - l2) * c + l2;
+    (*this)[ 1] = lm * c1 + n * s;
+    (*this)[ 2] = nl * c1 - m * s;
+    (*this)[ 3] = 0.0f;
+
+    (*this)[ 4] = lm * c1 - n * s;
+    (*this)[ 5] = (1.0f - m2) * c + m2;
+    (*this)[ 6] = mn * c1 + l * s;
+    (*this)[ 7] = 0.0f;
+
+    (*this)[ 8] = nl * c1 + m * s;
+    (*this)[ 9] = mn * c1 - l * s;
+    (*this)[10] = (1.0f - n2) * c + n2;
+    (*this)[11] = 0.0f;
+
+    (*this)[12] = 0.0f;
+    (*this)[13] = 0.0f;
+    (*this)[14] = 0.0f;
+    (*this)[15] = 1.0f;
+  }
+
+  return *this;
+}
+
+/*
+** 変換行列：転置行列を設定する
+*/
+gg::GgMatrix& gg::GgMatrix::loadTranspose(const GLfloat* marray)
+{
+  (*this)[ 0] = marray[ 0];
+  (*this)[ 1] = marray[ 4];
+  (*this)[ 2] = marray[ 8];
+  (*this)[ 3] = marray[12];
+  (*this)[ 4] = marray[ 1];
+  (*this)[ 5] = marray[ 5];
+  (*this)[ 6] = marray[ 9];
+  (*this)[ 7] = marray[13];
+  (*this)[ 8] = marray[ 2];
+  (*this)[ 9] = marray[ 6];
+  (*this)[10] = marray[10];
+  (*this)[11] = marray[14];
+  (*this)[12] = marray[ 3];
+  (*this)[13] = marray[ 7];
+  (*this)[14] = marray[11];
+  (*this)[15] = marray[15];
+
+  return *this;
+}
+
+/*
+** 変換行列：逆行列を設定する
+*/
+gg::GgMatrix& gg::GgMatrix::loadInvert(const GLfloat* marray)
+{
+  GLfloat lu[20], * plu[4];
+
+  // j 行の要素の値の絶対値の最大値を plu[j][4] に求める
+  for (int j = 0; j < 4; ++j)
+  {
+    GLfloat max{ fabsf(*(plu[j] = lu + 5 * j) = *(marray++)) };
+
+    for (int i = 0; ++i < 4;)
+    {
+      GLfloat a{ fabsf(plu[j][i] = *(marray++)) };
+      if (a > max) max = a;
+    }
+    if (max == 0.0f) return *this;
+    plu[j][4] = 1.0f / max;
+  }
+
+  // ピボットを考慮した LU 分解
+  for (int j = 0; j < 4; ++j)
+  {
+    GLfloat max{ fabsf(plu[j][j] * plu[j][4]) };
+    int i = j;
+
+    for (int k = j; ++k < 4;)
+    {
+      GLfloat a{ fabsf(plu[k][j] * plu[k][4]) };
+      if (a > max)
+      {
+        max = a;
+        i = k;
+      }
+    }
+    if (i > j)
+    {
+      GLfloat* t{ plu[j] };
+      plu[j] = plu[i];
+      plu[i] = t;
+    }
+    if (plu[j][j] == 0.0f) return *this;
+    for (int k = j; ++k < 4;)
+    {
+      plu[k][j] /= plu[j][j];
+      for (int i = j; ++i < 4;)
+      {
+        plu[k][i] -= plu[j][i] * plu[k][j];
+      }
+    }
+  }
+
+  // LU 分解から逆行列を求める
+  for (int k = 0; k < 4; ++k)
+  {
+    // array に単位行列を設定する
+    for (int i = 0; i < 4; ++i)
+    {
+      (*this)[i * 4 + k] = (plu[i] == lu + k * 5) ? 1.0f : 0.0f;
+    }
+    // lu から逆行列を求める
+    for (int i = 0; i < 4; ++i)
+    {
+      for (int j = i; ++j < 4;)
+      {
+        (*this)[j * 4 + k] -= (*this)[i * 4 + k] * plu[j][i];
+      }
+    }
+    for (int i = 4; --i >= 0;)
+    {
+      for (int j = i; ++j < 4;)
+      {
+        (*this)[i * 4 + k] -= plu[i][j] * (*this)[j * 4 + k];
+      }
+      (*this)[i * 4 + k] /= plu[i][i];
+    }
+  }
+
+  return *this;
+}
+
+/*
+** 変換行列：法線変換行列を設定する
+*/
+gg::GgMatrix& gg::GgMatrix::loadNormal(const GLfloat* marray)
+{
+  (*this)[ 0] = marray[ 5] * marray[10] - marray[ 6] * marray[ 9];
+  (*this)[ 1] = marray[ 6] * marray[ 8] - marray[ 4] * marray[10];
+  (*this)[ 2] = marray[ 4] * marray[ 9] - marray[ 5] * marray[ 8];
+  (*this)[ 4] = marray[ 9] * marray[ 2] - marray[10] * marray[ 1];
+  (*this)[ 5] = marray[10] * marray[ 0] - marray[ 8] * marray[ 2];
+  (*this)[ 6] = marray[ 8] * marray[ 1] - marray[ 9] * marray[ 0];
+  (*this)[ 8] = marray[ 1] * marray[ 6] - marray[ 2] * marray[ 5];
+  (*this)[ 9] = marray[ 2] * marray[ 4] - marray[ 0] * marray[ 6];
+  (*this)[10] = marray[ 0] * marray[ 5] - marray[ 1] * marray[ 4];
+  (*this)[ 3] = (*this)[ 7] = (*this)[11] = (*this)[12] = (*this)[13] = (*this)[14] = 0.0f;
+  (*this)[15] = 1.0f;
+
+  return *this;
+}
+
+/*
+** 変換行列：ビュー変換行列を設定する
+*/
+gg::GgMatrix& gg::GgMatrix::loadLookat(
+  GLfloat ex, GLfloat ey, GLfloat ez,
+  GLfloat tx, GLfloat ty, GLfloat tz,
+  GLfloat ux, GLfloat uy, GLfloat uz
+)
+{
+  // z 軸 = e - t
+  const GLfloat zx{ ex - tx };
+  const GLfloat zy{ ey - ty };
+  const GLfloat zz{ ez - tz };
+
+  // x 軸 = u x z 軸
+  const GLfloat xx{ uy * zz - uz * zy };
+  const GLfloat xy{ uz * zx - ux * zz };
+  const GLfloat xz{ ux * zy - uy * zx };
+
+  // y 軸 = z 軸 x x 軸
+  const GLfloat yx{ zy * xz - zz * xy };
+  const GLfloat yy{ zz * xx - zx * xz };
+  const GLfloat yz{ zx * xy - zy * xx };
+
+  // y 軸の長さをチェック
+  GLfloat y{ yx * yx + yy * yy + yz * yz };
+  if (y == 0.0f) return *this;
+
+  // x 軸の正規化
+  const GLfloat x{ sqrtf(xx * xx + xy * xy + xz * xz) };
+  (*this)[ 0] = xx / x;
+  (*this)[ 4] = xy / x;
+  (*this)[ 8] = xz / x;
+
+  // y 軸の正規化
+  y = sqrtf(y);
+  (*this)[ 1] = yx / y;
+  (*this)[ 5] = yy / y;
+  (*this)[ 9] = yz / y;
+
+  // z 軸の正規化
+  const GLfloat z{ sqrtf(zx * zx + zy * zy + zz * zz) };
+  (*this)[ 2] = zx / z;
+  (*this)[ 6] = zy / z;
+  (*this)[10] = zz / z;
+
+  // 平行移動
+  (*this)[12] = -(ex * (*this)[ 0] + ey * (*this)[ 4] + ez * (*this)[ 8]);
+  (*this)[13] = -(ex * (*this)[ 1] + ey * (*this)[ 5] + ez * (*this)[ 9]);
+  (*this)[14] = -(ex * (*this)[ 2] + ey * (*this)[ 6] + ez * (*this)[10]);
+
+  // 残り
+  (*this)[ 3] = (*this)[ 7] = (*this)[11] = 0.0f;
+  (*this)[15] = 1.0f;
+
+  return *this;
+}
+
+/*
+** 変換行列：平行投影変換行列を設定する
+*/
+gg::GgMatrix& gg::GgMatrix::loadOrthogonal(
+  GLfloat left, GLfloat right,
+  GLfloat bottom, GLfloat top,
+  GLfloat zNear, GLfloat zFar
+)
+{
+  const GLfloat dx{ right - left };
+  const GLfloat dy{ top - bottom };
+  const GLfloat dz{ zFar - zNear };
+
+  if (dx != 0.0f && dy != 0.0f && dz != 0.0f)
+  {
+    (*this)[ 0] = 2.0f / dx;
+    (*this)[ 5] = 2.0f / dy;
+    (*this)[10] = -2.0f / dz;
+    (*this)[12] = -(right + left) / dx;
+    (*this)[13] = -(top + bottom) / dy;
+    (*this)[14] = -(zFar + zNear) / dz;
+    (*this)[15] = 1.0f;
+    (*this)[ 1] = (*this)[ 2] = (*this)[ 3] = (*this)[ 4] =
+    (*this)[ 6] = (*this)[ 7] = (*this)[ 8] = (*this)[ 9] =
+    (*this)[11] = 0.0f;
+  }
+
+  return *this;
+}
+
+/*
+** 変換行列：透視投影変換行列を設定する
+*/
+gg::GgMatrix& gg::GgMatrix::loadFrustum(
+  GLfloat left, GLfloat right,
+  GLfloat bottom, GLfloat top,
+  GLfloat zNear, GLfloat zFar
+)
+{
+  const GLfloat dx{ right - left };
+  const GLfloat dy{ top - bottom };
+  const GLfloat dz{ zFar - zNear };
+
+  if (dx != 0.0f && dy != 0.0f && dz != 0.0f)
+  {
+    (*this)[ 0] = 2.0f * zNear / dx;
+    (*this)[ 5] = 2.0f * zNear / dy;
+    (*this)[ 8] = (right + left) / dx;
+    (*this)[ 9] = (top + bottom) / dy;
+    (*this)[10] = -(zFar + zNear) / dz;
+    (*this)[11] = -1.0f;
+    (*this)[14] = -2.0f * zFar * zNear / dz;
+    (*this)[ 1] = (*this)[ 2] = (*this)[ 3] = (*this)[ 4] =
+    (*this)[ 6] = (*this)[ 7] = (*this)[12] = (*this)[13] =
+    (*this)[15] = 0.0f;
+  }
+
+  return *this;
+}
+
+/*
+** 変換行列：画角から透視投影変換行列を設定する
+*/
+gg::GgMatrix& gg::GgMatrix::loadPerspective(
+  GLfloat fovy, GLfloat aspect,
+  GLfloat zNear, GLfloat zFar
+)
+{
+  const GLfloat dz{ zFar - zNear };
+
+  if (dz != 0.0f)
+  {
+    (*this)[ 5] = 1.0f / tanf(fovy * 0.5f);
+    (*this)[ 0] = (*this)[ 5] / aspect;
+    (*this)[10] = -(zFar + zNear) / dz;
+    (*this)[11] = -1.0f;
+    (*this)[14] = -2.0f * zFar * zNear / dz;
+    (*this)[ 1] = (*this)[ 2] = (*this)[ 3] = (*this)[ 4] =
+    (*this)[ 6] = (*this)[ 7] = (*this)[ 8] = (*this)[ 9] =
+    (*this)[12] = (*this)[13] = (*this)[15] = 0.0f;
+  }
+
+  return *this;
+}
+
+/*
+** 四元数：GgQuaternion 型の四元数 p, q の積を r に求める
+*/
+void gg::GgQuaternion::multiply(GLfloat* r, const GLfloat* p, const GLfloat* q) const
+{
+  r[0] = p[1] * q[2] - p[2] * q[1] + p[0] * q[3] + p[3] * q[0];
+  r[1] = p[2] * q[0] - p[0] * q[2] + p[1] * q[3] + p[3] * q[1];
+  r[2] = p[0] * q[1] - p[1] * q[0] + p[2] * q[3] + p[3] * q[2];
+  r[3] = p[3] * q[3] - p[0] * q[0] - p[1] * q[1] - p[2] * q[2];
+}
+
+/*
+** 四元数：GgQuaternion 型の四元数 q が表す変換行列を m に求める
+*/
+void gg::GgQuaternion::toMatrix(GLfloat* m, const GLfloat* q) const
+{
+  const GLfloat xx{ q[0] * q[0] * 2.0f };
+  const GLfloat yy{ q[1] * q[1] * 2.0f };
+  const GLfloat zz{ q[2] * q[2] * 2.0f };
+  const GLfloat xy{ q[0] * q[1] * 2.0f };
+  const GLfloat yz{ q[1] * q[2] * 2.0f };
+  const GLfloat zx{ q[2] * q[0] * 2.0f };
+  const GLfloat xw{ q[0] * q[3] * 2.0f };
+  const GLfloat yw{ q[1] * q[3] * 2.0f };
+  const GLfloat zw{ q[2] * q[3] * 2.0f };
+
+  m[ 0] = 1.0f - yy - zz;
+  m[ 1] = xy + zw;
+  m[ 2] = zx - yw;
+  m[ 4] = xy - zw;
+  m[ 5] = 1.0f - zz - xx;
+  m[ 6] = yz + xw;
+  m[ 8] = zx + yw;
+  m[ 9] = yz - xw;
+  m[10] = 1.0f - xx - yy;
+  m[ 3] = m[ 7] = m[11] = m[12] = m[13] = m[14] = 0.0f;
+  m[15] = 1.0f;
+}
+
+/*
+** 四元数：回転変換行列 a が表す四元数を q に求める
+*/
+void gg::GgQuaternion::toQuaternion(GLfloat* q, const GLfloat* a) const
+{
+  const GLfloat tr{ a[0] + a[5] + a[10] + a[15] };
+
+  if (tr > 0.0f)
+  {
+    q[3] = sqrtf(tr) * 0.5f;
+    q[0] = (a[6] - a[9]) * 0.25f / q[3];
+    q[1] = (a[8] - a[2]) * 0.25f / q[3];
+    q[2] = (a[1] - a[4]) * 0.25f / q[3];
+  }
+}
+
+/*
+** 四元数：球面線形補間 p に q と r を t で補間した四元数を求める
+*/
+void gg::GgQuaternion::slerp(GLfloat* p, const GLfloat* q, const GLfloat* r, GLfloat t) const
+{
+  const GLfloat qr{ ggDot3(q, r) };
+  const GLfloat ss{ 1.0f - qr * qr };
+
+  if (ss == 0.0f)
+  {
+    if (p != q)
+    {
+      p[0] = q[0];
+      p[1] = q[1];
+      p[2] = q[2];
+      p[3] = q[3];
+    }
+  }
+  else
+  {
+    const GLfloat sp{ sqrtf(ss) };
+    const GLfloat ph{ acosf(qr) };
+    const GLfloat pt{ ph * t };
+    const GLfloat t1{ sinf(pt) / sp };
+    const GLfloat t0{ sinf(ph - pt) / sp };
+
+    p[0] = q[0] * t0 + r[0] * t1;
+    p[1] = q[1] * t0 + r[1] * t1;
+    p[2] = q[2] * t0 + r[2] * t1;
+    p[3] = q[3] * t0 + r[3] * t1;
+  }
+}
+
+/*
+** 四元数：(x, y, z) を軸とし角度 a 回転する四元数を求める
+*/
+gg::GgQuaternion& gg::GgQuaternion::loadRotate(GLfloat x, GLfloat y, GLfloat z, GLfloat a)
+{
+  const GLfloat l(x * x + y * y + z * z);
+
+  if (l != 0.0)
+  {
+    GLfloat s{ sinf(a *= 0.5f) / sqrtf(l) };
+
+    (*this)[0] = x * s;
+    (*this)[1] = y * s;
+    (*this)[2] = z * s;
+  }
+  else
+  {
+    (*this)[0] = (*this)[1] = (*this)[2] = 0.0f;
+  }
+  (*this)[3] = cosf(a);
+
+  return *this;
+}
+
+/*
+** x 軸中心に角度 a 回転する四元数を格納する
+*/
+gg::GgQuaternion& gg::GgQuaternion::loadRotateX(GLfloat a)
+{
+  const GLfloat t{ a * 0.5f };
+
+  (*this)[0] = sinf(t);
+  (*this)[3] = cosf(t);
+  (*this)[1] = (*this)[2] = 0.0f;
+
+  return *this;
+}
+
+/*
+** y 軸中心に角度 a 回転する四元数を格納する
+*/
+gg::GgQuaternion& gg::GgQuaternion::loadRotateY(GLfloat a)
+{
+  const GLfloat t{ a * 0.5f };
+
+  (*this)[1] = sinf(t);
+  (*this)[3] = cosf(t);
+  (*this)[0] = (*this)[2] = 0.0f;
+
+  return *this;
+}
+
+/*
+** z 軸中心に角度 a 回転する四元数を格納する
+*/
+gg::GgQuaternion& gg::GgQuaternion::loadRotateZ(GLfloat a)
+{
+  const GLfloat t{ a * 0.5f };
+
+  (*this)[2] = sinf(t);
+  (*this)[3] = cosf(t);
+  (*this)[0] = (*this)[1] = 0.0f;
+
+  return *this;
+}
+
+/*
+** 四元数：オイラー角 (heading, pitch, roll) にもとづいて四元数を求める
+*/
+gg::GgQuaternion& gg::GgQuaternion::loadEuler(GLfloat heading, GLfloat pitch, GLfloat roll)
+{
+  GgQuaternion h, p, r;
+
+  h.loadRotateY(heading);
+  p.loadRotateX(pitch);
+  r.loadRotateZ(roll);
+
+  *this = h * p * r;
+
+  return *this;
+}
+
+/*
+** 四元数：正規化して格納する
+*/
+gg::GgQuaternion& gg::GgQuaternion::loadNormalize(const GLfloat* a)
+{
+  (*this)[0] = a[0];
+  (*this)[1] = a[1];
+  (*this)[2] = a[2];
+  (*this)[3] = a[3];
+
+  ggNormalize4(data());
+
+  return *this;
+}
+
+/*
+** 四元数：共役四元数を格納する
+*/
+gg::GgQuaternion& gg::GgQuaternion::loadConjugate(const GLfloat* a)
+{
+  // w 要素を反転する
+  (*this)[0] = a[0];
+  (*this)[1] = a[1];
+  (*this)[2] = a[2];
+  (*this)[3] = -a[3];
+
+  return *this;
+}
+
+/*
+** 四元数：逆元を格納する
+*/
+gg::GgQuaternion& gg::GgQuaternion::loadInvert(const GLfloat* a)
+{
+  // ノルムの二乗を求める
+  const GLfloat l(ggDot4(a, a));
+
+  if (l > 0.0f)
+  {
+    // 共役四元数を求める
+    GgQuaternion r;
+    r.loadConjugate(a);
+
+    // ノルムの二乗で割る
+    (*this)[0] = r[0] / l;
+    (*this)[1] = r[1] / l;
+    (*this)[2] = r[2] / l;
+    (*this)[3] = r[3] / l;
+  }
+
+  return *this;
+}
+
+/*
+** 簡易トラックボール処理：リセット
+*/
+void gg::GgTrackball::reset(const GgQuaternion &q)
+{
+  // ドラッグ中ではない
+  drag = false;
+
+  // 単位クォーターニオンに初期値を与える
+  *static_cast<GgQuaternion*>(this) = cq = q;
+
+  // 回転行列を初期化する
+  static_cast<GgQuaternion*>(this)->getMatrix(rt);
+}
+
+/*
+** 簡易トラックボール処理：トラックボールする領域の設定
+**
+**   Reshape コールバック (resize) の中で実行する
+**   (w, h) ウィンドウサイズ
+*/
+void gg::GgTrackball::region(GLfloat w, GLfloat h)
+{
+  // マウスポインタ位置のウィンドウ内の相対的位置への換算用
+  scale[0] = 2.0f / w;
+  scale[1] = 2.0f / h;
+}
+
+/*
+** 簡易トラックボール処理：ドラッグ開始時の処理
+**
+**   マウスボタンを押したときに実行する
+**   (x, y) 現在のマウス位置
+*/
+void gg::GgTrackball::begin(GLfloat x, GLfloat y)
+{
+  // ドラッグ開始
+  drag = true;
+
+  // ドラッグ開始点を記録する
+  start[0] = x;
+  start[1] = y;
+}
+
+/*
+** 簡易トラックボール処理：ドラッグ中の処理
+**
+**   マウスのドラッグ中に実行する
+**   (x, y) 現在のマウス位置
+*/
+void gg::GgTrackball::motion(GLfloat x, GLfloat y)
+{
+  if (drag)
+  {
+    // マウスポインタの位置のドラッグ開始位置からの変位
+    const GLfloat d[]{ (x - start[0]) * scale[0], (y - start[1]) * scale[1] };
+
+    // マウスポインタの位置のドラッグ開始位置からの距離
+    const GLfloat a{ sqrtf(d[0] * d[0] + d[1] * d[1]) };
+
+    if (a != 0.0)
+    {
+      // 現在の回転の四元数に作った四元数を掛けて合成する
+      *static_cast<GgQuaternion*>(this) = ggRotateQuaternion(d[1], d[0], 0.0f, a * 3.1415926536f) * cq;
+
+      // 合成した四元数から回転の変換行列を求める
+      static_cast<GgQuaternion*>(this)->getMatrix(rt);
+    }
+  }
+}
+
+/*
+** 簡易トラックボール処理：回転角の修正
+**
+**   現在の回転角を修正する
+**   q 修正分の回転角を表す四元数
+*/
+void gg::GgTrackball::rotate(const GgQuaternion& q)
+{
+  if (!drag)
+  {
+    // 保存されている四元数に修正分の四元数を掛けて合成する
+    *static_cast<GgQuaternion*>(this) = q * cq;
+
+    // 合成した四元数から回転の変換行列を求める
+    static_cast<GgQuaternion*>(this)->getMatrix(rt);
+
+    // 誤差を吸収するために正規化して保存する
+    cq = normalize();
+  }
+}
+
+/*
+** 簡易トラックボール処理：停止時の処理
+**
+**   マウスボタンを離したときに実行する
+**   (x, y) 現在のマウス位置
+*/
+void gg::GgTrackball::end(GLfloat x, GLfloat y)
+{
+  // ドラッグ終了点における回転を求める
+  motion(x, y);
+
+  // 誤差を吸収するために正規化して保存する
+  cq = normalize();
+
+  // ドラッグ終了
+  drag = false;
+}
+
+/*
 ** 配列に格納された画像の内容を TGA ファイルに保存する
 **
 **   name ファイル名
@@ -4284,765 +5042,6 @@ GLuint gg::ggLoadComputeShader(const std::string& comp)
   return 0;
 }
 #endif
-
-/*
-** 変換行列：行列とベクトルの積 c ← a × b
-*/
-void gg::GgMatrix::projection(GLfloat* c, const GLfloat* a, const GLfloat* b) const
-{
-  for (int i = 0; i < 4; ++i)
-  {
-    c[i] = a[0 + i] * b[0] + a[4 + i] * b[1] + a[8 + i] * b[2] + a[12 + i] * b[3];
-  }
-}
-
-/*
-** 変換行列：行列と行列の積 c ← a × b
-*/
-void gg::GgMatrix::multiply(GLfloat* c, const GLfloat* a, const GLfloat* b) const
-{
-  for (int i = 0; i < 16; ++i)
-  {
-    int j = i & 3, k = i & ~3;
-
-    c[i] = a[0 + j] * b[k + 0] + a[4 + j] * b[k + 1] + a[8 + j] * b[k + 2] + a[12 + j] * b[k + 3];
-  }
-}
-
-/*
-** 変換行列：単位行列を設定する
-*/
-gg::GgMatrix& gg::GgMatrix::loadIdentity()
-{
-  (*this)[ 1] = (*this)[ 2] = (*this)[ 3] = (*this)[ 4] =
-  (*this)[ 6] = (*this)[ 7] = (*this)[ 8] = (*this)[ 9] =
-  (*this)[11] = (*this)[12] = (*this)[13] = (*this)[14] = 0.0f;
-  (*this)[ 0] = (*this)[ 5] = (*this)[10] = (*this)[15] = 1.0f;
-
-  return *this;
-}
-
-/*
-** 変換行列：平行移動変換行列を設定する
-*/
-gg::GgMatrix& gg::GgMatrix::loadTranslate(GLfloat x, GLfloat y, GLfloat z, GLfloat w)
-{
-  (*this)[12] = x;
-  (*this)[13] = y;
-  (*this)[14] = z;
-  (*this)[ 0] = (*this)[ 5] = (*this)[10] = (*this)[15] = w;
-  (*this)[ 1] = (*this)[ 2] = (*this)[ 3] = (*this)[ 4] =
-  (*this)[ 6] = (*this)[ 7] = (*this)[ 8] = (*this)[ 9] =
-  (*this)[11] = 0.0f;
-
-  return *this;
-}
-
-/*
-** 変換行列：拡大縮小変換行列を設定する
-*/
-gg::GgMatrix& gg::GgMatrix::loadScale(GLfloat x, GLfloat y, GLfloat z, GLfloat w)
-{
-  (*this)[ 0] = x;
-  (*this)[ 5] = y;
-  (*this)[10] = z;
-  (*this)[15] = w;
-  (*this)[ 1] = (*this)[ 2] = (*this)[ 3] = (*this)[ 4] =
-  (*this)[ 6] = (*this)[ 7] = (*this)[ 8] = (*this)[ 9] =
-  (*this)[11] = (*this)[12] = (*this)[13] = (*this)[14] = 0.0f;
-
-  return *this;
-}
-
-/*
-** 変換行列：x 軸中心の回転変換行列を設定する
-*/
-gg::GgMatrix& gg::GgMatrix::loadRotateX(GLfloat a)
-{
-  const GLfloat c{ cosf(a) };
-  const GLfloat s{ sinf(a) };
-
-  (*this)[ 0] = 1.0f; (*this)[ 1] = 0.0f; (*this)[ 2] = 0.0f; (*this)[ 3] = 0.0f;
-  (*this)[ 4] = 0.0f; (*this)[ 5] = c;    (*this)[ 6] = s;    (*this)[ 7] = 0.0f;
-  (*this)[ 8] = 0.0f; (*this)[ 9] = -s;   (*this)[10] = c;    (*this)[11] = 0.0f;
-  (*this)[12] = 0.0f; (*this)[13] = 0.0f; (*this)[14] = 0.0f; (*this)[15] = 1.0f;
-
-  return *this;
-}
-
-/*
-** 変換行列：y 軸中心の回転変換行列を設定する
-*/
-gg::GgMatrix& gg::GgMatrix::loadRotateY(GLfloat a)
-{
-  const GLfloat c{ cosf(a) };
-  const GLfloat s{ sinf(a) };
-
-  (*this)[ 0] = c;    (*this)[ 1] = 0.0f; (*this)[ 2] = -s;   (*this)[ 3] = 0.0f;
-  (*this)[ 4] = 0.0f; (*this)[ 5] = 1.0f; (*this)[ 6] = 0.0f; (*this)[ 7] = 0.0f;
-  (*this)[ 8] = s;    (*this)[ 9] = 0.0f; (*this)[10] = c;    (*this)[11] = 0.0f;
-  (*this)[12] = 0.0f; (*this)[13] = 0.0f; (*this)[14] = 0.0f; (*this)[15] = 1.0f;
-
-  return *this;
-}
-
-/*
-** 変換行列：z 軸中心の回転変換行列を設定する
-*/
-gg::GgMatrix& gg::GgMatrix::loadRotateZ(GLfloat a)
-{
-  const GLfloat c{ cosf(a) };
-  const GLfloat s{ sinf(a) };
-
-  (*this)[ 0] = c;    (*this)[ 1] = s;    (*this)[ 2] = 0.0f; (*this)[ 3] = 0.0f;
-  (*this)[ 4] = -s;   (*this)[ 5] = c;    (*this)[ 6] = 0.0f; (*this)[ 7] = 0.0f;
-  (*this)[ 8] = 0.0f; (*this)[ 9] = 0.0f; (*this)[10] = 1.0f; (*this)[11] = 0.0f;
-  (*this)[12] = 0.0f; (*this)[13] = 0.0f; (*this)[14] = 0.0f; (*this)[15] = 1.0f;
-
-  return *this;
-}
-
-/*
-** 変換行列：任意軸中心の回転変換行列を設定する
-*/
-gg::GgMatrix& gg::GgMatrix::loadRotate(GLfloat x, GLfloat y, GLfloat z, GLfloat a)
-{
-  const GLfloat d{ sqrtf(x * x + y * y + z * z) };
-
-  if (d > 0.0f)
-  {
-    const GLfloat l(x / d), m(y / d), n(z / d);
-    const GLfloat l2(l * l), m2(m * m), n2(n * n);
-    const GLfloat lm(l * m), mn(m * n), nl(n * l);
-    const GLfloat c(cosf(a)), c1(1.0f - c);
-    const GLfloat s(sinf(a));
-
-    (*this)[ 0] = (1.0f - l2) * c + l2;
-    (*this)[ 1] = lm * c1 + n * s;
-    (*this)[ 2] = nl * c1 - m * s;
-    (*this)[ 3] = 0.0f;
-
-    (*this)[ 4] = lm * c1 - n * s;
-    (*this)[ 5] = (1.0f - m2) * c + m2;
-    (*this)[ 6] = mn * c1 + l * s;
-    (*this)[ 7] = 0.0f;
-
-    (*this)[ 8] = nl * c1 + m * s;
-    (*this)[ 9] = mn * c1 - l * s;
-    (*this)[10] = (1.0f - n2) * c + n2;
-    (*this)[11] = 0.0f;
-
-    (*this)[12] = 0.0f;
-    (*this)[13] = 0.0f;
-    (*this)[14] = 0.0f;
-    (*this)[15] = 1.0f;
-  }
-
-  return *this;
-}
-
-/*
-** 変換行列：転置行列を設定する
-*/
-gg::GgMatrix& gg::GgMatrix::loadTranspose(const GLfloat* marray)
-{
-  (*this)[ 0] = marray[ 0];
-  (*this)[ 1] = marray[ 4];
-  (*this)[ 2] = marray[ 8];
-  (*this)[ 3] = marray[12];
-  (*this)[ 4] = marray[ 1];
-  (*this)[ 5] = marray[ 5];
-  (*this)[ 6] = marray[ 9];
-  (*this)[ 7] = marray[13];
-  (*this)[ 8] = marray[ 2];
-  (*this)[ 9] = marray[ 6];
-  (*this)[10] = marray[10];
-  (*this)[11] = marray[14];
-  (*this)[12] = marray[ 3];
-  (*this)[13] = marray[ 7];
-  (*this)[14] = marray[11];
-  (*this)[15] = marray[15];
-
-  return *this;
-}
-
-/*
-** 変換行列：逆行列を設定する
-*/
-gg::GgMatrix& gg::GgMatrix::loadInvert(const GLfloat* marray)
-{
-  GLfloat lu[20], * plu[4];
-
-  // j 行の要素の値の絶対値の最大値を plu[j][4] に求める
-  for (int j = 0; j < 4; ++j)
-  {
-    GLfloat max{ fabsf(*(plu[j] = lu + 5 * j) = *(marray++)) };
-
-    for (int i = 0; ++i < 4;)
-    {
-      GLfloat a{ fabsf(plu[j][i] = *(marray++)) };
-      if (a > max) max = a;
-    }
-    if (max == 0.0f) return *this;
-    plu[j][4] = 1.0f / max;
-  }
-
-  // ピボットを考慮した LU 分解
-  for (int j = 0; j < 4; ++j)
-  {
-    GLfloat max{ fabsf(plu[j][j] * plu[j][4]) };
-    int i = j;
-
-    for (int k = j; ++k < 4;)
-    {
-      GLfloat a{ fabsf(plu[k][j] * plu[k][4]) };
-      if (a > max)
-      {
-        max = a;
-        i = k;
-      }
-    }
-    if (i > j)
-    {
-      GLfloat* t{ plu[j] };
-      plu[j] = plu[i];
-      plu[i] = t;
-    }
-    if (plu[j][j] == 0.0f) return *this;
-    for (int k = j; ++k < 4;)
-    {
-      plu[k][j] /= plu[j][j];
-      for (int i = j; ++i < 4;)
-      {
-        plu[k][i] -= plu[j][i] * plu[k][j];
-      }
-    }
-  }
-
-  // LU 分解から逆行列を求める
-  for (int k = 0; k < 4; ++k)
-  {
-    // array に単位行列を設定する
-    for (int i = 0; i < 4; ++i)
-    {
-      (*this)[i * 4 + k] = (plu[i] == lu + k * 5) ? 1.0f : 0.0f;
-    }
-    // lu から逆行列を求める
-    for (int i = 0; i < 4; ++i)
-    {
-      for (int j = i; ++j < 4;)
-      {
-        (*this)[j * 4 + k] -= (*this)[i * 4 + k] * plu[j][i];
-      }
-    }
-    for (int i = 4; --i >= 0;)
-    {
-      for (int j = i; ++j < 4;)
-      {
-        (*this)[i * 4 + k] -= plu[i][j] * (*this)[j * 4 + k];
-      }
-      (*this)[i * 4 + k] /= plu[i][i];
-    }
-  }
-
-  return *this;
-}
-
-/*
-** 変換行列：法線変換行列を設定する
-*/
-gg::GgMatrix& gg::GgMatrix::loadNormal(const GLfloat* marray)
-{
-  (*this)[ 0] = marray[ 5] * marray[10] - marray[ 6] * marray[ 9];
-  (*this)[ 1] = marray[ 6] * marray[ 8] - marray[ 4] * marray[10];
-  (*this)[ 2] = marray[ 4] * marray[ 9] - marray[ 5] * marray[ 8];
-  (*this)[ 4] = marray[ 9] * marray[ 2] - marray[10] * marray[ 1];
-  (*this)[ 5] = marray[10] * marray[ 0] - marray[ 8] * marray[ 2];
-  (*this)[ 6] = marray[ 8] * marray[ 1] - marray[ 9] * marray[ 0];
-  (*this)[ 8] = marray[ 1] * marray[ 6] - marray[ 2] * marray[ 5];
-  (*this)[ 9] = marray[ 2] * marray[ 4] - marray[ 0] * marray[ 6];
-  (*this)[10] = marray[ 0] * marray[ 5] - marray[ 1] * marray[ 4];
-  (*this)[ 3] = (*this)[ 7] = (*this)[11] = (*this)[12] = (*this)[13] = (*this)[14] = 0.0f;
-  (*this)[15] = 1.0f;
-
-  return *this;
-}
-
-/*
-** 変換行列：ビュー変換行列を設定する
-*/
-gg::GgMatrix& gg::GgMatrix::loadLookat(
-  GLfloat ex, GLfloat ey, GLfloat ez,
-  GLfloat tx, GLfloat ty, GLfloat tz,
-  GLfloat ux, GLfloat uy, GLfloat uz
-)
-{
-  // z 軸 = e - t
-  const GLfloat zx{ ex - tx };
-  const GLfloat zy{ ey - ty };
-  const GLfloat zz{ ez - tz };
-
-  // x 軸 = u x z 軸
-  const GLfloat xx{ uy * zz - uz * zy };
-  const GLfloat xy{ uz * zx - ux * zz };
-  const GLfloat xz{ ux * zy - uy * zx };
-
-  // y 軸 = z 軸 x x 軸
-  const GLfloat yx{ zy * xz - zz * xy };
-  const GLfloat yy{ zz * xx - zx * xz };
-  const GLfloat yz{ zx * xy - zy * xx };
-
-  // y 軸の長さをチェック
-  GLfloat y{ yx * yx + yy * yy + yz * yz };
-  if (y == 0.0f) return *this;
-
-  // x 軸の正規化
-  const GLfloat x{ sqrtf(xx * xx + xy * xy + xz * xz) };
-  (*this)[ 0] = xx / x;
-  (*this)[ 4] = xy / x;
-  (*this)[ 8] = xz / x;
-
-  // y 軸の正規化
-  y = sqrtf(y);
-  (*this)[ 1] = yx / y;
-  (*this)[ 5] = yy / y;
-  (*this)[ 9] = yz / y;
-
-  // z 軸の正規化
-  const GLfloat z{ sqrtf(zx * zx + zy * zy + zz * zz) };
-  (*this)[ 2] = zx / z;
-  (*this)[ 6] = zy / z;
-  (*this)[10] = zz / z;
-
-  // 平行移動
-  (*this)[12] = -(ex * (*this)[ 0] + ey * (*this)[ 4] + ez * (*this)[ 8]);
-  (*this)[13] = -(ex * (*this)[ 1] + ey * (*this)[ 5] + ez * (*this)[ 9]);
-  (*this)[14] = -(ex * (*this)[ 2] + ey * (*this)[ 6] + ez * (*this)[10]);
-
-  // 残り
-  (*this)[ 3] = (*this)[ 7] = (*this)[11] = 0.0f;
-  (*this)[15] = 1.0f;
-
-  return *this;
-}
-
-/*
-** 変換行列：平行投影変換行列を設定する
-*/
-gg::GgMatrix& gg::GgMatrix::loadOrthogonal(
-  GLfloat left, GLfloat right,
-  GLfloat bottom, GLfloat top,
-  GLfloat zNear, GLfloat zFar
-)
-{
-  const GLfloat dx{ right - left };
-  const GLfloat dy{ top - bottom };
-  const GLfloat dz{ zFar - zNear };
-
-  if (dx != 0.0f && dy != 0.0f && dz != 0.0f)
-  {
-    (*this)[ 0] = 2.0f / dx;
-    (*this)[ 5] = 2.0f / dy;
-    (*this)[10] = -2.0f / dz;
-    (*this)[12] = -(right + left) / dx;
-    (*this)[13] = -(top + bottom) / dy;
-    (*this)[14] = -(zFar + zNear) / dz;
-    (*this)[15] = 1.0f;
-    (*this)[ 1] = (*this)[ 2] = (*this)[ 3] = (*this)[ 4] =
-    (*this)[ 6] = (*this)[ 7] = (*this)[ 8] = (*this)[ 9] =
-    (*this)[11] = 0.0f;
-  }
-
-  return *this;
-}
-
-/*
-** 変換行列：透視投影変換行列を設定する
-*/
-gg::GgMatrix& gg::GgMatrix::loadFrustum(
-  GLfloat left, GLfloat right,
-  GLfloat bottom, GLfloat top,
-  GLfloat zNear, GLfloat zFar
-)
-{
-  const GLfloat dx{ right - left };
-  const GLfloat dy{ top - bottom };
-  const GLfloat dz{ zFar - zNear };
-
-  if (dx != 0.0f && dy != 0.0f && dz != 0.0f)
-  {
-    (*this)[ 0] = 2.0f * zNear / dx;
-    (*this)[ 5] = 2.0f * zNear / dy;
-    (*this)[ 8] = (right + left) / dx;
-    (*this)[ 9] = (top + bottom) / dy;
-    (*this)[10] = -(zFar + zNear) / dz;
-    (*this)[11] = -1.0f;
-    (*this)[14] = -2.0f * zFar * zNear / dz;
-    (*this)[ 1] = (*this)[ 2] = (*this)[ 3] = (*this)[ 4] =
-    (*this)[ 6] = (*this)[ 7] = (*this)[12] = (*this)[13] =
-    (*this)[15] = 0.0f;
-  }
-
-  return *this;
-}
-
-/*
-** 変換行列：画角から透視投影変換行列を設定する
-*/
-gg::GgMatrix& gg::GgMatrix::loadPerspective(
-  GLfloat fovy, GLfloat aspect,
-  GLfloat zNear, GLfloat zFar
-)
-{
-  const GLfloat dz{ zFar - zNear };
-
-  if (dz != 0.0f)
-  {
-    (*this)[ 5] = 1.0f / tanf(fovy * 0.5f);
-    (*this)[ 0] = (*this)[ 5] / aspect;
-    (*this)[10] = -(zFar + zNear) / dz;
-    (*this)[11] = -1.0f;
-    (*this)[14] = -2.0f * zFar * zNear / dz;
-    (*this)[ 1] = (*this)[ 2] = (*this)[ 3] = (*this)[ 4] =
-    (*this)[ 6] = (*this)[ 7] = (*this)[ 8] = (*this)[ 9] =
-    (*this)[12] = (*this)[13] = (*this)[15] = 0.0f;
-  }
-
-  return *this;
-}
-
-/*
-** 四元数：GgQuaternion 型の四元数 p, q の積を r に求める
-*/
-void gg::GgQuaternion::multiply(GLfloat* r, const GLfloat* p, const GLfloat* q) const
-{
-  r[0] = p[1] * q[2] - p[2] * q[1] + p[0] * q[3] + p[3] * q[0];
-  r[1] = p[2] * q[0] - p[0] * q[2] + p[1] * q[3] + p[3] * q[1];
-  r[2] = p[0] * q[1] - p[1] * q[0] + p[2] * q[3] + p[3] * q[2];
-  r[3] = p[3] * q[3] - p[0] * q[0] - p[1] * q[1] - p[2] * q[2];
-}
-
-/*
-** 四元数：GgQuaternion 型の四元数 q が表す変換行列を m に求める
-*/
-void gg::GgQuaternion::toMatrix(GLfloat* m, const GLfloat* q) const
-{
-  const GLfloat xx{ q[0] * q[0] * 2.0f };
-  const GLfloat yy{ q[1] * q[1] * 2.0f };
-  const GLfloat zz{ q[2] * q[2] * 2.0f };
-  const GLfloat xy{ q[0] * q[1] * 2.0f };
-  const GLfloat yz{ q[1] * q[2] * 2.0f };
-  const GLfloat zx{ q[2] * q[0] * 2.0f };
-  const GLfloat xw{ q[0] * q[3] * 2.0f };
-  const GLfloat yw{ q[1] * q[3] * 2.0f };
-  const GLfloat zw{ q[2] * q[3] * 2.0f };
-
-  m[ 0] = 1.0f - yy - zz;
-  m[ 1] = xy + zw;
-  m[ 2] = zx - yw;
-  m[ 4] = xy - zw;
-  m[ 5] = 1.0f - zz - xx;
-  m[ 6] = yz + xw;
-  m[ 8] = zx + yw;
-  m[ 9] = yz - xw;
-  m[10] = 1.0f - xx - yy;
-  m[ 3] = m[ 7] = m[11] = m[12] = m[13] = m[14] = 0.0f;
-  m[15] = 1.0f;
-}
-
-/*
-** 四元数：回転変換行列 a が表す四元数を q に求める
-*/
-void gg::GgQuaternion::toQuaternion(GLfloat* q, const GLfloat* a) const
-{
-  const GLfloat tr{ a[0] + a[5] + a[10] + a[15] };
-
-  if (tr > 0.0f)
-  {
-    q[3] = sqrtf(tr) * 0.5f;
-    q[0] = (a[6] - a[9]) * 0.25f / q[3];
-    q[1] = (a[8] - a[2]) * 0.25f / q[3];
-    q[2] = (a[1] - a[4]) * 0.25f / q[3];
-  }
-}
-
-/*
-** 四元数：球面線形補間 p に q と r を t で補間した四元数を求める
-*/
-void gg::GgQuaternion::slerp(GLfloat* p, const GLfloat* q, const GLfloat* r, GLfloat t) const
-{
-  const GLfloat qr{ ggDot3(q, r) };
-  const GLfloat ss{ 1.0f - qr * qr };
-
-  if (ss == 0.0f)
-  {
-    if (p != q)
-    {
-      p[0] = q[0];
-      p[1] = q[1];
-      p[2] = q[2];
-      p[3] = q[3];
-    }
-  }
-  else
-  {
-    const GLfloat sp{ sqrtf(ss) };
-    const GLfloat ph{ acosf(qr) };
-    const GLfloat pt{ ph * t };
-    const GLfloat t1{ sinf(pt) / sp };
-    const GLfloat t0{ sinf(ph - pt) / sp };
-
-    p[0] = q[0] * t0 + r[0] * t1;
-    p[1] = q[1] * t0 + r[1] * t1;
-    p[2] = q[2] * t0 + r[2] * t1;
-    p[3] = q[3] * t0 + r[3] * t1;
-  }
-}
-
-/*
-** 四元数：(x, y, z) を軸とし角度 a 回転する四元数を求める
-*/
-gg::GgQuaternion& gg::GgQuaternion::loadRotate(GLfloat x, GLfloat y, GLfloat z, GLfloat a)
-{
-  const GLfloat l(x * x + y * y + z * z);
-
-  if (l != 0.0)
-  {
-    GLfloat s{ sinf(a *= 0.5f) / sqrtf(l) };
-
-    (*this)[0] = x * s;
-    (*this)[1] = y * s;
-    (*this)[2] = z * s;
-  }
-  else
-  {
-    (*this)[0] = (*this)[1] = (*this)[2] = 0.0f;
-  }
-  (*this)[3] = cosf(a);
-
-  return *this;
-}
-
-/*
-** x 軸中心に角度 a 回転する四元数を格納する
-*/
-gg::GgQuaternion& gg::GgQuaternion::loadRotateX(GLfloat a)
-{
-  const GLfloat t{ a * 0.5f };
-
-  (*this)[0] = sinf(t);
-  (*this)[3] = cosf(t);
-  (*this)[1] = (*this)[2] = 0.0f;
-
-  return *this;
-}
-
-/*
-** y 軸中心に角度 a 回転する四元数を格納する
-*/
-gg::GgQuaternion& gg::GgQuaternion::loadRotateY(GLfloat a)
-{
-  const GLfloat t{ a * 0.5f };
-
-  (*this)[1] = sinf(t);
-  (*this)[3] = cosf(t);
-  (*this)[0] = (*this)[2] = 0.0f;
-
-  return *this;
-}
-
-/*
-** z 軸中心に角度 a 回転する四元数を格納する
-*/
-gg::GgQuaternion& gg::GgQuaternion::loadRotateZ(GLfloat a)
-{
-  const GLfloat t{ a * 0.5f };
-
-  (*this)[2] = sinf(t);
-  (*this)[3] = cosf(t);
-  (*this)[0] = (*this)[1] = 0.0f;
-
-  return *this;
-}
-
-/*
-** 四元数：オイラー角 (heading, pitch, roll) にもとづいて四元数を求める
-*/
-gg::GgQuaternion& gg::GgQuaternion::loadEuler(GLfloat heading, GLfloat pitch, GLfloat roll)
-{
-  GgQuaternion h, p, r;
-
-  h.loadRotateY(heading);
-  p.loadRotateX(pitch);
-  r.loadRotateZ(roll);
-
-  *this = h * p * r;
-
-  return *this;
-}
-
-/*
-** 四元数：正規化して格納する
-*/
-gg::GgQuaternion& gg::GgQuaternion::loadNormalize(const GLfloat* a)
-{
-  (*this)[0] = a[0];
-  (*this)[1] = a[1];
-  (*this)[2] = a[2];
-  (*this)[3] = a[3];
-
-  ggNormalize4(*this);
-
-  return *this;
-}
-
-/*
-** 四元数：共役四元数を格納する
-*/
-gg::GgQuaternion& gg::GgQuaternion::loadConjugate(const GLfloat* a)
-{
-  // w 要素を反転する
-  (*this)[0] = a[0];
-  (*this)[1] = a[1];
-  (*this)[2] = a[2];
-  (*this)[3] = -a[3];
-
-  return *this;
-}
-
-/*
-** 四元数：逆元を格納する
-*/
-gg::GgQuaternion& gg::GgQuaternion::loadInvert(const GLfloat* a)
-{
-  // ノルムの二乗を求める
-  const GLfloat l(ggDot4(a, a));
-
-  if (l > 0.0f)
-  {
-    // 共役四元数を求める
-    GgQuaternion r;
-    r.loadConjugate(a);
-
-    // ノルムの二乗で割る
-    (*this)[0] = r[0] / l;
-    (*this)[1] = r[1] / l;
-    (*this)[2] = r[2] / l;
-    (*this)[3] = r[3] / l;
-  }
-
-  return *this;
-}
-
-/*
-** 簡易トラックボール処理：リセット
-*/
-void gg::GgTrackball::reset(const GgQuaternion &q)
-{
-  // ドラッグ中ではない
-  drag = false;
-
-  // 単位クォーターニオンに初期値を与える
-  *static_cast<GgQuaternion*>(this) = cq = q;
-
-  // 回転行列を初期化する
-  static_cast<GgQuaternion*>(this)->getMatrix(rt);
-}
-
-/*
-** 簡易トラックボール処理：トラックボールする領域の設定
-**
-**   Reshape コールバック (resize) の中で実行する
-**   (w, h) ウィンドウサイズ
-*/
-void gg::GgTrackball::region(GLfloat w, GLfloat h)
-{
-  // マウスポインタ位置のウィンドウ内の相対的位置への換算用
-  scale[0] = 2.0f / w;
-  scale[1] = 2.0f / h;
-}
-
-/*
-** 簡易トラックボール処理：ドラッグ開始時の処理
-**
-**   マウスボタンを押したときに実行する
-**   (x, y) 現在のマウス位置
-*/
-void gg::GgTrackball::begin(GLfloat x, GLfloat y)
-{
-  // ドラッグ開始
-  drag = true;
-
-  // ドラッグ開始点を記録する
-  start[0] = x;
-  start[1] = y;
-}
-
-/*
-** 簡易トラックボール処理：ドラッグ中の処理
-**
-**   マウスのドラッグ中に実行する
-**   (x, y) 現在のマウス位置
-*/
-void gg::GgTrackball::motion(GLfloat x, GLfloat y)
-{
-  if (drag)
-  {
-    // マウスポインタの位置のドラッグ開始位置からの変位
-    const GLfloat d[]{ (x - start[0]) * scale[0], (y - start[1]) * scale[1] };
-
-    // マウスポインタの位置のドラッグ開始位置からの距離
-    const GLfloat a{ sqrtf(d[0] * d[0] + d[1] * d[1]) };
-
-    if (a != 0.0)
-    {
-      // 現在の回転の四元数に作った四元数を掛けて合成する
-      *static_cast<GgQuaternion*>(this) = ggRotateQuaternion(d[1], d[0], 0.0f, a * 3.1415926536f) * cq;
-
-      // 合成した四元数から回転の変換行列を求める
-      static_cast<GgQuaternion*>(this)->getMatrix(rt);
-    }
-  }
-}
-
-/*
-** 簡易トラックボール処理：回転角の修正
-**
-**   現在の回転角を修正する
-**   q 修正分の回転角を表す四元数
-*/
-void gg::GgTrackball::rotate(const GgQuaternion& q)
-{
-  if (!drag)
-  {
-    // 保存されている四元数に修正分の四元数を掛けて合成する
-    *static_cast<GgQuaternion*>(this) = q * cq;
-
-    // 合成した四元数から回転の変換行列を求める
-    static_cast<GgQuaternion*>(this)->getMatrix(rt);
-
-    // 誤差を吸収するために正規化して保存する
-    cq = normalize();
-  }
-}
-
-/*
-** 簡易トラックボール処理：停止時の処理
-**
-**   マウスボタンを離したときに実行する
-**   (x, y) 現在のマウス位置
-*/
-void gg::GgTrackball::end(GLfloat x, GLfloat y)
-{
-  // ドラッグ終了点における回転を求める
-  motion(x, y);
-
-  // 誤差を吸収するために正規化して保存する
-  cq = normalize();
-
-  // ドラッグ終了
-  drag = false;
-}
 
 /*
 ** 点：データ作成

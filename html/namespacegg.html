@@ -154,42 +154,6 @@ $(function() {
 <tr class="memitem:a759d331f8d381524c40a2307dedb608a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a759d331f8d381524c40a2307dedb608a">_ggFBOError</a> (const std::string &amp;name=&quot;&quot;, unsigned int line=0)</td></tr>
 <tr class="memdesc:a759d331f8d381524c40a2307dedb608a"><td class="mdescLeft">&#160;</td><td class="mdescRight">FBO のエラーをチェックする.  <a href="namespacegg.html#a759d331f8d381524c40a2307dedb608a">[詳解]</a><br /></td></tr>
 <tr class="separator:a759d331f8d381524c40a2307dedb608a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae450600cc658bd7d6b0f7ecb62156fe8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ae450600cc658bd7d6b0f7ecb62156fe8">ggSaveTga</a> (const std::string &amp;name, const void *buffer, unsigned int width, unsigned int height, unsigned int depth)</td></tr>
-<tr class="memdesc:ae450600cc658bd7d6b0f7ecb62156fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">配列の内容を TGA ファイルに保存する.  <a href="namespacegg.html#ae450600cc658bd7d6b0f7ecb62156fe8">[詳解]</a><br /></td></tr>
-<tr class="separator:ae450600cc658bd7d6b0f7ecb62156fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dc1ef6d0e78a6694ae8aca973b1b9ae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a6dc1ef6d0e78a6694ae8aca973b1b9ae">ggSaveColor</a> (const std::string &amp;name)</td></tr>
-<tr class="memdesc:a6dc1ef6d0e78a6694ae8aca973b1b9ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">カラーバッファの内容を TGA ファイルに保存する.  <a href="namespacegg.html#a6dc1ef6d0e78a6694ae8aca973b1b9ae">[詳解]</a><br /></td></tr>
-<tr class="separator:a6dc1ef6d0e78a6694ae8aca973b1b9ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a236701485bbc8278654781a810bf2880"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a236701485bbc8278654781a810bf2880">ggSaveDepth</a> (const std::string &amp;name)</td></tr>
-<tr class="memdesc:a236701485bbc8278654781a810bf2880"><td class="mdescLeft">&#160;</td><td class="mdescRight">デプスバッファの内容を TGA ファイルに保存する.  <a href="namespacegg.html#a236701485bbc8278654781a810bf2880">[詳解]</a><br /></td></tr>
-<tr class="separator:a236701485bbc8278654781a810bf2880"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acce00f35f4b755cda72ec9f61b726c8f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#acce00f35f4b755cda72ec9f61b726c8f">ggReadImage</a> (const std::string &amp;name, std::vector&lt; GLubyte &gt; &amp;image, GLsizei *pWidth, GLsizei *pHeight, GLenum *pFormat)</td></tr>
-<tr class="memdesc:acce00f35f4b755cda72ec9f61b726c8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">TGA ファイル (8/16/24/32bit) をメモリに読み込む.  <a href="namespacegg.html#acce00f35f4b755cda72ec9f61b726c8f">[詳解]</a><br /></td></tr>
-<tr class="separator:acce00f35f4b755cda72ec9f61b726c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96dc90db9d9e5ea5ee727662753d0ca5"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a96dc90db9d9e5ea5ee727662753d0ca5">ggLoadTexture</a> (const GLvoid *image, GLsizei width, GLsizei height, GLenum format=GL_BGR, GLenum type=GL_UNSIGNED_BYTE, GLenum internal=GL_RGB, GLenum wrap=GL_CLAMP_TO_EDGE)</td></tr>
-<tr class="memdesc:a96dc90db9d9e5ea5ee727662753d0ca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャメモリを確保して画像データをテクスチャとして読み込む.  <a href="namespacegg.html#a96dc90db9d9e5ea5ee727662753d0ca5">[詳解]</a><br /></td></tr>
-<tr class="separator:a96dc90db9d9e5ea5ee727662753d0ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ba6c60b5240e74a801a7f33e09bce87"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a6ba6c60b5240e74a801a7f33e09bce87">ggLoadImage</a> (const std::string &amp;name, GLsizei *pWidth=nullptr, GLsizei *pHeight=nullptr, GLenum internal=0, GLenum wrap=GL_CLAMP_TO_EDGE)</td></tr>
-<tr class="memdesc:a6ba6c60b5240e74a801a7f33e09bce87"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャメモリを確保して TGA 画像ファイルを読み込む.  <a href="namespacegg.html#a6ba6c60b5240e74a801a7f33e09bce87">[詳解]</a><br /></td></tr>
-<tr class="separator:a6ba6c60b5240e74a801a7f33e09bce87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cd46afb53daa13fa8bb2de14baf4e7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a2cd46afb53daa13fa8bb2de14baf4e7b">ggCreateNormalMap</a> (const GLubyte *hmap, GLsizei width, GLsizei height, GLenum format, GLfloat nz, GLenum internal, std::vector&lt; <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &gt; &amp;nmap)</td></tr>
-<tr class="memdesc:a2cd46afb53daa13fa8bb2de14baf4e7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">グレースケール画像 (8bit) から法線マップのデータを作成する.  <a href="namespacegg.html#a2cd46afb53daa13fa8bb2de14baf4e7b">[詳解]</a><br /></td></tr>
-<tr class="separator:a2cd46afb53daa13fa8bb2de14baf4e7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53453ed6229bbd109c279a3765648d01"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a53453ed6229bbd109c279a3765648d01">ggLoadHeight</a> (const std::string &amp;name, GLfloat nz, GLsizei *pWidth=nullptr, GLsizei *pHeight=nullptr, GLenum internal=GL_RGBA)</td></tr>
-<tr class="memdesc:a53453ed6229bbd109c279a3765648d01"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャメモリを確保して TGA 画像ファイルを読み込み法線マップを作成する.  <a href="namespacegg.html#a53453ed6229bbd109c279a3765648d01">[詳解]</a><br /></td></tr>
-<tr class="separator:a53453ed6229bbd109c279a3765648d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a047058f8d45e31ce77232ef66796e6b0"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a047058f8d45e31ce77232ef66796e6b0">ggCreateShader</a> (const std::string &amp;vsrc, const std::string &amp;fsrc=&quot;&quot;, const std::string &amp;gsrc=&quot;&quot;, GLint nvarying=0, const char *const *varyings=nullptr, const std::string &amp;vtext=&quot;vertex shader&quot;, const std::string &amp;ftext=&quot;fragment shader&quot;, const std::string &amp;gtext=&quot;geometry shader&quot;)</td></tr>
-<tr class="memdesc:a047058f8d45e31ce77232ef66796e6b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダのソースプログラムの文字列を読み込んでプログラムオブジェクトを作成する.  <a href="namespacegg.html#a047058f8d45e31ce77232ef66796e6b0">[詳解]</a><br /></td></tr>
-<tr class="separator:a047058f8d45e31ce77232ef66796e6b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbe6e5044fcf43f001242937e14b6b43"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#acbe6e5044fcf43f001242937e14b6b43">ggLoadShader</a> (const std::string &amp;vert, const std::string &amp;frag=&quot;&quot;, const std::string &amp;geom=&quot;&quot;, GLint nvarying=0, const char *const *varyings=nullptr)</td></tr>
-<tr class="memdesc:acbe6e5044fcf43f001242937e14b6b43"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダのソースファイルを読み込んでプログラムオブジェクトを作成する.  <a href="namespacegg.html#acbe6e5044fcf43f001242937e14b6b43">[詳解]</a><br /></td></tr>
-<tr class="separator:acbe6e5044fcf43f001242937e14b6b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adda35bc52f044dc237a3632553ad9d9c"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#adda35bc52f044dc237a3632553ad9d9c">ggCreateComputeShader</a> (const std::string &amp;csrc, const std::string &amp;ctext=&quot;compute shader&quot;)</td></tr>
-<tr class="memdesc:adda35bc52f044dc237a3632553ad9d9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンピュートシェーダのソースプログラムの文字列を読み込んでプログラムオブジェクトを作成する.  <a href="namespacegg.html#adda35bc52f044dc237a3632553ad9d9c">[詳解]</a><br /></td></tr>
-<tr class="separator:adda35bc52f044dc237a3632553ad9d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abca7443a911bd290af4be190f1835cf0"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#abca7443a911bd290af4be190f1835cf0">ggLoadComputeShader</a> (const std::string &amp;comp)</td></tr>
-<tr class="memdesc:abca7443a911bd290af4be190f1835cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンピュートシェーダのソースファイルを読み込んでプログラムオブジェクトを作成する.  <a href="namespacegg.html#abca7443a911bd290af4be190f1835cf0">[詳解]</a><br /></td></tr>
-<tr class="separator:abca7443a911bd290af4be190f1835cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bc5278bea931898a436bc4cd611a108"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a3bc5278bea931898a436bc4cd611a108">ggCross</a> (GLfloat *c, const GLfloat *a, const GLfloat *b)</td></tr>
 <tr class="memdesc:a3bc5278bea931898a436bc4cd611a108"><td class="mdescLeft">&#160;</td><td class="mdescRight">3 要素の外積.  <a href="namespacegg.html#a3bc5278bea931898a436bc4cd611a108">[詳解]</a><br /></td></tr>
 <tr class="separator:a3bc5278bea931898a436bc4cd611a108"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -199,24 +163,54 @@ $(function() {
 <tr class="memitem:a837850150a8293353ade7900452955b2"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a837850150a8293353ade7900452955b2">ggLength3</a> (const GLfloat *a)</td></tr>
 <tr class="memdesc:a837850150a8293353ade7900452955b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">3 要素の長さ.  <a href="namespacegg.html#a837850150a8293353ade7900452955b2">[詳解]</a><br /></td></tr>
 <tr class="separator:a837850150a8293353ade7900452955b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c20fea9c5d29d82ceabb41c12b2a831"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a1c20fea9c5d29d82ceabb41c12b2a831">ggDistance3</a> (const GLfloat *a, const GLfloat *b)</td></tr>
+<tr class="memdesc:a1c20fea9c5d29d82ceabb41c12b2a831"><td class="mdescLeft">&#160;</td><td class="mdescRight">3 要素の距離.  <a href="namespacegg.html#a1c20fea9c5d29d82ceabb41c12b2a831">[詳解]</a><br /></td></tr>
+<tr class="separator:a1c20fea9c5d29d82ceabb41c12b2a831"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6a03a10f9a4d01016db6dceb0cc338d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#af6a03a10f9a4d01016db6dceb0cc338d">ggNormalize3</a> (GLfloat *a)</td></tr>
 <tr class="memdesc:af6a03a10f9a4d01016db6dceb0cc338d"><td class="mdescLeft">&#160;</td><td class="mdescRight">3 要素の正規化.  <a href="namespacegg.html#af6a03a10f9a4d01016db6dceb0cc338d">[詳解]</a><br /></td></tr>
 <tr class="separator:af6a03a10f9a4d01016db6dceb0cc338d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34aa472e3f12dd5a976c090da6c1bc51"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51">ggDot4</a> (const GLfloat *a, const GLfloat *b)</td></tr>
-<tr class="memdesc:a34aa472e3f12dd5a976c090da6c1bc51"><td class="mdescLeft">&#160;</td><td class="mdescRight">4 要素の内積  <a href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a34aa472e3f12dd5a976c090da6c1bc51"><td class="mdescLeft">&#160;</td><td class="mdescRight">GLfloat 型の 4 要素の内積  <a href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51">[詳解]</a><br /></td></tr>
 <tr class="separator:a34aa472e3f12dd5a976c090da6c1bc51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f383a711d58b805ebaf26bc004986ab"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a2f383a711d58b805ebaf26bc004986ab">ggLength4</a> (const GLfloat *a)</td></tr>
-<tr class="memdesc:a2f383a711d58b805ebaf26bc004986ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">4 要素の長さ.  <a href="namespacegg.html#a2f383a711d58b805ebaf26bc004986ab">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a2f383a711d58b805ebaf26bc004986ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">GLfloat 型の 4 要素の長さ.  <a href="namespacegg.html#a2f383a711d58b805ebaf26bc004986ab">[詳解]</a><br /></td></tr>
 <tr class="separator:a2f383a711d58b805ebaf26bc004986ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d84278231c4a950b533d6d90c510ec6"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a9d84278231c4a950b533d6d90c510ec6">ggDistance4</a> (const GLfloat *a, const GLfloat *b)</td></tr>
+<tr class="memdesc:a9d84278231c4a950b533d6d90c510ec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">GLfloat 型の 4 要素の距離.  <a href="namespacegg.html#a9d84278231c4a950b533d6d90c510ec6">[詳解]</a><br /></td></tr>
+<tr class="separator:a9d84278231c4a950b533d6d90c510ec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2f149e2a719574c966ff6ad0fdc17cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ab2f149e2a719574c966ff6ad0fdc17cf">ggNormalize4</a> (GLfloat *a)</td></tr>
-<tr class="memdesc:ab2f149e2a719574c966ff6ad0fdc17cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">4 要素の正規化.  <a href="namespacegg.html#ab2f149e2a719574c966ff6ad0fdc17cf">[詳解]</a><br /></td></tr>
+<tr class="memdesc:ab2f149e2a719574c966ff6ad0fdc17cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">GLfloat 型の 4 要素の正規化.  <a href="namespacegg.html#ab2f149e2a719574c966ff6ad0fdc17cf">[詳解]</a><br /></td></tr>
 <tr class="separator:ab2f149e2a719574c966ff6ad0fdc17cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e4152d613985419556992a591628dc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a3e4152d613985419556992a591628dc2">ggCross</a> (const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;a, const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;b)</td></tr>
+<tr class="memdesc:a3e4152d613985419556992a591628dc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 3 要素の外積.  <a href="namespacegg.html#a3e4152d613985419556992a591628dc2">[詳解]</a><br /></td></tr>
+<tr class="separator:a3e4152d613985419556992a591628dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a884a700a6f3d5367f0d7a7fb43bd61e0"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a884a700a6f3d5367f0d7a7fb43bd61e0">ggDot3</a> (const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;a, const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;b)</td></tr>
+<tr class="memdesc:a884a700a6f3d5367f0d7a7fb43bd61e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 3 要素の内積.  <a href="namespacegg.html#a884a700a6f3d5367f0d7a7fb43bd61e0">[詳解]</a><br /></td></tr>
+<tr class="separator:a884a700a6f3d5367f0d7a7fb43bd61e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01ccb3648bdfe2d689034136304a7ac5"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a01ccb3648bdfe2d689034136304a7ac5">ggLength3</a> (const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;a)</td></tr>
+<tr class="memdesc:a01ccb3648bdfe2d689034136304a7ac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 3 要素の長さ.  <a href="namespacegg.html#a01ccb3648bdfe2d689034136304a7ac5">[詳解]</a><br /></td></tr>
+<tr class="separator:a01ccb3648bdfe2d689034136304a7ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3a225df6ac13de39d971cb22ee8f46e"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#aa3a225df6ac13de39d971cb22ee8f46e">ggDistance3</a> (const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;a, const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;b)</td></tr>
+<tr class="memdesc:aa3a225df6ac13de39d971cb22ee8f46e"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 3 要素の距離.  <a href="namespacegg.html#aa3a225df6ac13de39d971cb22ee8f46e">[詳解]</a><br /></td></tr>
+<tr class="separator:aa3a225df6ac13de39d971cb22ee8f46e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d602aa5fe6f7037d0180852e26811a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a1d602aa5fe6f7037d0180852e26811a2">ggNormalize3</a> (<a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> *a)</td></tr>
+<tr class="memdesc:a1d602aa5fe6f7037d0180852e26811a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 3 要素の正規化.  <a href="namespacegg.html#a1d602aa5fe6f7037d0180852e26811a2">[詳解]</a><br /></td></tr>
+<tr class="separator:a1d602aa5fe6f7037d0180852e26811a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a010fafe70a15a0aaa10ca2cceab23305"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a010fafe70a15a0aaa10ca2cceab23305">ggNormalize3</a> (const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;a)</td></tr>
+<tr class="memdesc:a010fafe70a15a0aaa10ca2cceab23305"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 3 要素の正規化.  <a href="namespacegg.html#a010fafe70a15a0aaa10ca2cceab23305">[詳解]</a><br /></td></tr>
+<tr class="separator:a010fafe70a15a0aaa10ca2cceab23305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3bd07674d292ebd94bc75bb566febb6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ac3bd07674d292ebd94bc75bb566febb6">operator+</a> (const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;a)</td></tr>
+<tr class="memdesc:ac3bd07674d292ebd94bc75bb566febb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">何もしない.  <a href="namespacegg.html#ac3bd07674d292ebd94bc75bb566febb6">[詳解]</a><br /></td></tr>
+<tr class="separator:ac3bd07674d292ebd94bc75bb566febb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe9271f9e8a841f09f08889d609e0ae3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#abe9271f9e8a841f09f08889d609e0ae3">operator+</a> (const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;a, const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;b)</td></tr>
 <tr class="memdesc:abe9271f9e8a841f09f08889d609e0ae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の和を返す.  <a href="namespacegg.html#abe9271f9e8a841f09f08889d609e0ae3">[詳解]</a><br /></td></tr>
 <tr class="separator:abe9271f9e8a841f09f08889d609e0ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a807c5033b4be9cdf480ad2d066290b2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a807c5033b4be9cdf480ad2d066290b2c">operator+=</a> (<a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;a, const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;b)</td></tr>
 <tr class="memdesc:a807c5033b4be9cdf480ad2d066290b2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型を加算する.  <a href="namespacegg.html#a807c5033b4be9cdf480ad2d066290b2c">[詳解]</a><br /></td></tr>
 <tr class="separator:a807c5033b4be9cdf480ad2d066290b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadf890eacba9559f8636393149f115da"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#aadf890eacba9559f8636393149f115da">operator-</a> (const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;a)</td></tr>
+<tr class="memdesc:aadf890eacba9559f8636393149f115da"><td class="mdescLeft">&#160;</td><td class="mdescRight">符号の反転.  <a href="namespacegg.html#aadf890eacba9559f8636393149f115da">[詳解]</a><br /></td></tr>
+<tr class="separator:aadf890eacba9559f8636393149f115da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2389be6fd1af2efa649379ce8879ede6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a2389be6fd1af2efa649379ce8879ede6">operator-</a> (const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;a, const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;b)</td></tr>
 <tr class="memdesc:a2389be6fd1af2efa649379ce8879ede6"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の差を返す.  <a href="namespacegg.html#a2389be6fd1af2efa649379ce8879ede6">[詳解]</a><br /></td></tr>
 <tr class="separator:a2389be6fd1af2efa649379ce8879ede6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -271,38 +265,20 @@ $(function() {
 <tr class="memitem:a7cb7f5ade5a6cf22914c012450c33573"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a7cb7f5ade5a6cf22914c012450c33573">operator/=</a> (<a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;a, GLfloat b)</td></tr>
 <tr class="memdesc:a7cb7f5ade5a6cf22914c012450c33573"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の各要素をスカラーで割る.  <a href="namespacegg.html#a7cb7f5ade5a6cf22914c012450c33573">[詳解]</a><br /></td></tr>
 <tr class="separator:a7cb7f5ade5a6cf22914c012450c33573"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a884a700a6f3d5367f0d7a7fb43bd61e0"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a884a700a6f3d5367f0d7a7fb43bd61e0">ggDot3</a> (const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;a, const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;b)</td></tr>
-<tr class="memdesc:a884a700a6f3d5367f0d7a7fb43bd61e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 3 要素の内積.  <a href="namespacegg.html#a884a700a6f3d5367f0d7a7fb43bd61e0">[詳解]</a><br /></td></tr>
-<tr class="separator:a884a700a6f3d5367f0d7a7fb43bd61e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e4152d613985419556992a591628dc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a3e4152d613985419556992a591628dc2">ggCross</a> (const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;a, const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;b)</td></tr>
-<tr class="memdesc:a3e4152d613985419556992a591628dc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 3 要素の外積.  <a href="namespacegg.html#a3e4152d613985419556992a591628dc2">[詳解]</a><br /></td></tr>
-<tr class="separator:a3e4152d613985419556992a591628dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01ccb3648bdfe2d689034136304a7ac5"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a01ccb3648bdfe2d689034136304a7ac5">ggLength3</a> (const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;a)</td></tr>
-<tr class="memdesc:a01ccb3648bdfe2d689034136304a7ac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 3 要素の長さ.  <a href="namespacegg.html#a01ccb3648bdfe2d689034136304a7ac5">[詳解]</a><br /></td></tr>
-<tr class="separator:a01ccb3648bdfe2d689034136304a7ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3a225df6ac13de39d971cb22ee8f46e"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#aa3a225df6ac13de39d971cb22ee8f46e">ggDistance3</a> (const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;a, const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;b)</td></tr>
-<tr class="memdesc:aa3a225df6ac13de39d971cb22ee8f46e"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 3 要素の距離.  <a href="namespacegg.html#aa3a225df6ac13de39d971cb22ee8f46e">[詳解]</a><br /></td></tr>
-<tr class="separator:aa3a225df6ac13de39d971cb22ee8f46e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaea1b34313a48337f7255223fc65dab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#afaea1b34313a48337f7255223fc65dab">ggNormalize3</a> (<a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> *a)</td></tr>
-<tr class="memdesc:afaea1b34313a48337f7255223fc65dab"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 3 要素の正規化.  <a href="namespacegg.html#afaea1b34313a48337f7255223fc65dab">[詳解]</a><br /></td></tr>
-<tr class="separator:afaea1b34313a48337f7255223fc65dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a010fafe70a15a0aaa10ca2cceab23305"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a010fafe70a15a0aaa10ca2cceab23305">ggNormalize3</a> (const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;a)</td></tr>
-<tr class="memdesc:a010fafe70a15a0aaa10ca2cceab23305"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 3 要素の正規化.  <a href="namespacegg.html#a010fafe70a15a0aaa10ca2cceab23305">[詳解]</a><br /></td></tr>
-<tr class="separator:a010fafe70a15a0aaa10ca2cceab23305"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f4640ffabc40dc38457d4b33ab21b87"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a1f4640ffabc40dc38457d4b33ab21b87">ggDot4</a> (const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;a, const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;b)</td></tr>
-<tr class="memdesc:a1f4640ffabc40dc38457d4b33ab21b87"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector の 4 要素の内積.  <a href="namespacegg.html#a1f4640ffabc40dc38457d4b33ab21b87">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a1f4640ffabc40dc38457d4b33ab21b87"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 4 要素の内積.  <a href="namespacegg.html#a1f4640ffabc40dc38457d4b33ab21b87">[詳解]</a><br /></td></tr>
 <tr class="separator:a1f4640ffabc40dc38457d4b33ab21b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c5a85961402558c05dc869a1329f12d"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a2c5a85961402558c05dc869a1329f12d">ggLength4</a> (const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;a)</td></tr>
-<tr class="memdesc:a2c5a85961402558c05dc869a1329f12d"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の長さ.  <a href="namespacegg.html#a2c5a85961402558c05dc869a1329f12d">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a2c5a85961402558c05dc869a1329f12d"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 4 要素の長さ.  <a href="namespacegg.html#a2c5a85961402558c05dc869a1329f12d">[詳解]</a><br /></td></tr>
 <tr class="separator:a2c5a85961402558c05dc869a1329f12d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ababa9df1e37a168855d97d4db90b990b"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ababa9df1e37a168855d97d4db90b990b">ggDistance4</a> (const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;a, const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;b)</td></tr>
-<tr class="memdesc:ababa9df1e37a168855d97d4db90b990b"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の距離.  <a href="namespacegg.html#ababa9df1e37a168855d97d4db90b990b">[詳解]</a><br /></td></tr>
+<tr class="memdesc:ababa9df1e37a168855d97d4db90b990b"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 4 要素の距離.  <a href="namespacegg.html#ababa9df1e37a168855d97d4db90b990b">[詳解]</a><br /></td></tr>
 <tr class="separator:ababa9df1e37a168855d97d4db90b990b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95d826138abfe2a9e46826d619612b2c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a95d826138abfe2a9e46826d619612b2c">ggNormalize4</a> (<a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> *a)</td></tr>
-<tr class="memdesc:a95d826138abfe2a9e46826d619612b2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の正規化.  <a href="namespacegg.html#a95d826138abfe2a9e46826d619612b2c">[詳解]</a><br /></td></tr>
-<tr class="separator:a95d826138abfe2a9e46826d619612b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8f809ed8f45e79d9054534d2f86f370"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ab8f809ed8f45e79d9054534d2f86f370">ggNormalize4</a> (<a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> *a)</td></tr>
+<tr class="memdesc:ab8f809ed8f45e79d9054534d2f86f370"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 4 要素の正規化.  <a href="namespacegg.html#ab8f809ed8f45e79d9054534d2f86f370">[詳解]</a><br /></td></tr>
+<tr class="separator:ab8f809ed8f45e79d9054534d2f86f370"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a873c34e94fe830ecf23c12a747b3c8ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a873c34e94fe830ecf23c12a747b3c8ce">ggNormalize4</a> (const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;a)</td></tr>
-<tr class="memdesc:a873c34e94fe830ecf23c12a747b3c8ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の正規化.  <a href="namespacegg.html#a873c34e94fe830ecf23c12a747b3c8ce">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a873c34e94fe830ecf23c12a747b3c8ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 4 要素の正規化.  <a href="namespacegg.html#a873c34e94fe830ecf23c12a747b3c8ce">[詳解]</a><br /></td></tr>
 <tr class="separator:a873c34e94fe830ecf23c12a747b3c8ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afca3af3d6f73db24e8309a0f83592356"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#afca3af3d6f73db24e8309a0f83592356">ggIdentity</a> ()</td></tr>
 <tr class="memdesc:afca3af3d6f73db24e8309a0f83592356"><td class="mdescLeft">&#160;</td><td class="mdescRight">単位行列を返す.  <a href="namespacegg.html#afca3af3d6f73db24e8309a0f83592356">[詳解]</a><br /></td></tr>
@@ -436,6 +412,42 @@ $(function() {
 <tr class="memitem:ac834686c8605553fbe7c2709c685ba4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ac834686c8605553fbe7c2709c685ba4e">ggInvert</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
 <tr class="memdesc:ac834686c8605553fbe7c2709c685ba4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">四元数の逆元を求める.  <a href="namespacegg.html#ac834686c8605553fbe7c2709c685ba4e">[詳解]</a><br /></td></tr>
 <tr class="separator:ac834686c8605553fbe7c2709c685ba4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae450600cc658bd7d6b0f7ecb62156fe8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ae450600cc658bd7d6b0f7ecb62156fe8">ggSaveTga</a> (const std::string &amp;name, const void *buffer, unsigned int width, unsigned int height, unsigned int depth)</td></tr>
+<tr class="memdesc:ae450600cc658bd7d6b0f7ecb62156fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">配列の内容を TGA ファイルに保存する.  <a href="namespacegg.html#ae450600cc658bd7d6b0f7ecb62156fe8">[詳解]</a><br /></td></tr>
+<tr class="separator:ae450600cc658bd7d6b0f7ecb62156fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dc1ef6d0e78a6694ae8aca973b1b9ae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a6dc1ef6d0e78a6694ae8aca973b1b9ae">ggSaveColor</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a6dc1ef6d0e78a6694ae8aca973b1b9ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">カラーバッファの内容を TGA ファイルに保存する.  <a href="namespacegg.html#a6dc1ef6d0e78a6694ae8aca973b1b9ae">[詳解]</a><br /></td></tr>
+<tr class="separator:a6dc1ef6d0e78a6694ae8aca973b1b9ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a236701485bbc8278654781a810bf2880"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a236701485bbc8278654781a810bf2880">ggSaveDepth</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a236701485bbc8278654781a810bf2880"><td class="mdescLeft">&#160;</td><td class="mdescRight">デプスバッファの内容を TGA ファイルに保存する.  <a href="namespacegg.html#a236701485bbc8278654781a810bf2880">[詳解]</a><br /></td></tr>
+<tr class="separator:a236701485bbc8278654781a810bf2880"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acce00f35f4b755cda72ec9f61b726c8f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#acce00f35f4b755cda72ec9f61b726c8f">ggReadImage</a> (const std::string &amp;name, std::vector&lt; GLubyte &gt; &amp;image, GLsizei *pWidth, GLsizei *pHeight, GLenum *pFormat)</td></tr>
+<tr class="memdesc:acce00f35f4b755cda72ec9f61b726c8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">TGA ファイル (8/16/24/32bit) をメモリに読み込む.  <a href="namespacegg.html#acce00f35f4b755cda72ec9f61b726c8f">[詳解]</a><br /></td></tr>
+<tr class="separator:acce00f35f4b755cda72ec9f61b726c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96dc90db9d9e5ea5ee727662753d0ca5"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a96dc90db9d9e5ea5ee727662753d0ca5">ggLoadTexture</a> (const GLvoid *image, GLsizei width, GLsizei height, GLenum format=GL_BGR, GLenum type=GL_UNSIGNED_BYTE, GLenum internal=GL_RGB, GLenum wrap=GL_CLAMP_TO_EDGE)</td></tr>
+<tr class="memdesc:a96dc90db9d9e5ea5ee727662753d0ca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャメモリを確保して画像データをテクスチャとして読み込む.  <a href="namespacegg.html#a96dc90db9d9e5ea5ee727662753d0ca5">[詳解]</a><br /></td></tr>
+<tr class="separator:a96dc90db9d9e5ea5ee727662753d0ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ba6c60b5240e74a801a7f33e09bce87"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a6ba6c60b5240e74a801a7f33e09bce87">ggLoadImage</a> (const std::string &amp;name, GLsizei *pWidth=nullptr, GLsizei *pHeight=nullptr, GLenum internal=0, GLenum wrap=GL_CLAMP_TO_EDGE)</td></tr>
+<tr class="memdesc:a6ba6c60b5240e74a801a7f33e09bce87"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャメモリを確保して TGA 画像ファイルを読み込む.  <a href="namespacegg.html#a6ba6c60b5240e74a801a7f33e09bce87">[詳解]</a><br /></td></tr>
+<tr class="separator:a6ba6c60b5240e74a801a7f33e09bce87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cd46afb53daa13fa8bb2de14baf4e7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a2cd46afb53daa13fa8bb2de14baf4e7b">ggCreateNormalMap</a> (const GLubyte *hmap, GLsizei width, GLsizei height, GLenum format, GLfloat nz, GLenum internal, std::vector&lt; <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &gt; &amp;nmap)</td></tr>
+<tr class="memdesc:a2cd46afb53daa13fa8bb2de14baf4e7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">グレースケール画像 (8bit) から法線マップのデータを作成する.  <a href="namespacegg.html#a2cd46afb53daa13fa8bb2de14baf4e7b">[詳解]</a><br /></td></tr>
+<tr class="separator:a2cd46afb53daa13fa8bb2de14baf4e7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53453ed6229bbd109c279a3765648d01"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a53453ed6229bbd109c279a3765648d01">ggLoadHeight</a> (const std::string &amp;name, GLfloat nz, GLsizei *pWidth=nullptr, GLsizei *pHeight=nullptr, GLenum internal=GL_RGBA)</td></tr>
+<tr class="memdesc:a53453ed6229bbd109c279a3765648d01"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャメモリを確保して TGA 画像ファイルを読み込み法線マップを作成する.  <a href="namespacegg.html#a53453ed6229bbd109c279a3765648d01">[詳解]</a><br /></td></tr>
+<tr class="separator:a53453ed6229bbd109c279a3765648d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a047058f8d45e31ce77232ef66796e6b0"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a047058f8d45e31ce77232ef66796e6b0">ggCreateShader</a> (const std::string &amp;vsrc, const std::string &amp;fsrc=&quot;&quot;, const std::string &amp;gsrc=&quot;&quot;, GLint nvarying=0, const char *const *varyings=nullptr, const std::string &amp;vtext=&quot;vertex shader&quot;, const std::string &amp;ftext=&quot;fragment shader&quot;, const std::string &amp;gtext=&quot;geometry shader&quot;)</td></tr>
+<tr class="memdesc:a047058f8d45e31ce77232ef66796e6b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダのソースプログラムの文字列を読み込んでプログラムオブジェクトを作成する.  <a href="namespacegg.html#a047058f8d45e31ce77232ef66796e6b0">[詳解]</a><br /></td></tr>
+<tr class="separator:a047058f8d45e31ce77232ef66796e6b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbe6e5044fcf43f001242937e14b6b43"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#acbe6e5044fcf43f001242937e14b6b43">ggLoadShader</a> (const std::string &amp;vert, const std::string &amp;frag=&quot;&quot;, const std::string &amp;geom=&quot;&quot;, GLint nvarying=0, const char *const *varyings=nullptr)</td></tr>
+<tr class="memdesc:acbe6e5044fcf43f001242937e14b6b43"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダのソースファイルを読み込んでプログラムオブジェクトを作成する.  <a href="namespacegg.html#acbe6e5044fcf43f001242937e14b6b43">[詳解]</a><br /></td></tr>
+<tr class="separator:acbe6e5044fcf43f001242937e14b6b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adda35bc52f044dc237a3632553ad9d9c"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#adda35bc52f044dc237a3632553ad9d9c">ggCreateComputeShader</a> (const std::string &amp;csrc, const std::string &amp;ctext=&quot;compute shader&quot;)</td></tr>
+<tr class="memdesc:adda35bc52f044dc237a3632553ad9d9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンピュートシェーダのソースプログラムの文字列を読み込んでプログラムオブジェクトを作成する.  <a href="namespacegg.html#adda35bc52f044dc237a3632553ad9d9c">[詳解]</a><br /></td></tr>
+<tr class="separator:adda35bc52f044dc237a3632553ad9d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abca7443a911bd290af4be190f1835cf0"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#abca7443a911bd290af4be190f1835cf0">ggLoadComputeShader</a> (const std::string &amp;comp)</td></tr>
+<tr class="memdesc:abca7443a911bd290af4be190f1835cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンピュートシェーダのソースファイルを読み込んでプログラムオブジェクトを作成する.  <a href="namespacegg.html#abca7443a911bd290af4be190f1835cf0">[詳解]</a><br /></td></tr>
+<tr class="separator:abca7443a911bd290af4be190f1835cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa76d45e8c861b0c0059964eb7016c259"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgPoints.html">GgPoints</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#aa76d45e8c861b0c0059964eb7016c259">ggPointsCube</a> (GLsizei countv, GLfloat length=1.0f, GLfloat cx=0.0f, GLfloat cy=0.0f, GLfloat cz=0.0f)</td></tr>
 <tr class="memdesc:aa76d45e8c861b0c0059964eb7016c259"><td class="mdescLeft">&#160;</td><td class="mdescRight">点群を立方体状に生成する.  <a href="namespacegg.html#aa76d45e8c861b0c0059964eb7016c259">[詳解]</a><br /></td></tr>
 <tr class="separator:aa76d45e8c861b0c0059964eb7016c259"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -489,7 +501,7 @@ $(function() {
 
 <p>4 要素の単精度実数の配列. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01341">1341</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01515">1515</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -514,7 +526,7 @@ $(function() {
 </td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01327">1327</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01334">1334</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -555,7 +567,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l02564">2564</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l02560">2560</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -595,7 +607,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l02608">2608</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l02604">2604</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -635,7 +647,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05196">5196</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05227">5227</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -681,7 +693,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>四元数 q の共役四元数. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04207">4207</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04034">4034</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -731,7 +743,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>プログラムオブジェクトのプログラム名 (作成できなければ 0). </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l04201">4201</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l04991">4991</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -805,7 +817,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03023">3023</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03798">3798</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -908,7 +920,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>プログラムオブジェクトのプログラム名 (作成できなければ 0). </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l04030">4030</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l04813">4813</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -957,7 +969,16 @@ $(function() {
 <dl class="section return"><dt>戻り値</dt><dd>a と b の外積. </dd></dl>
 <dl class="section note"><dt>覚え書き</dt><dd>戻り値の w (第4) 要素は 0. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01981">1981</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01525">1525</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacegg_a3e4152d613985419556992a591628dc2_cgraph.png" border="0" usemap="#anamespacegg_a3e4152d613985419556992a591628dc2_cgraph" alt=""/></div>
+<map name="anamespacegg_a3e4152d613985419556992a591628dc2_cgraph" id="anamespacegg_a3e4152d613985419556992a591628dc2_cgraph">
+<area shape="rect" title="GgVector 型の 3 要素の外積." alt="" coords="5,5,97,32"/>
+<area shape="rect" href="namespacegg.html#a3bc5278bea931898a436bc4cd611a108" title="3 要素の外積." alt="" coords="145,5,237,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -1011,12 +1032,21 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01599">1599</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01407">1407</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacegg_a3bc5278bea931898a436bc4cd611a108_icgraph.png" border="0" usemap="#anamespacegg_a3bc5278bea931898a436bc4cd611a108_icgraph" alt=""/></div>
+<map name="anamespacegg_a3bc5278bea931898a436bc4cd611a108_icgraph" id="anamespacegg_a3bc5278bea931898a436bc4cd611a108_icgraph">
+<area shape="rect" title="3 要素の外積." alt="" coords="145,5,237,32"/>
+<area shape="rect" href="namespacegg.html#a3e4152d613985419556992a591628dc2" title="GgVector 型の 3 要素の外積." alt="" coords="5,5,97,32"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="aa3a225df6ac13de39d971cb22ee8f46e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3a225df6ac13de39d971cb22ee8f46e">&#9670;&nbsp;</a></span>ggDistance3()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3a225df6ac13de39d971cb22ee8f46e">&#9670;&nbsp;</a></span>ggDistance3() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1057,24 +1087,92 @@ $(function() {
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>2 つの GgVector a, b の 3 要素の距離. </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>a と b の距離. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02012">2012</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01562">1562</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacegg_aa3a225df6ac13de39d971cb22ee8f46e_cgraph.png" border="0" usemap="#anamespacegg_aa3a225df6ac13de39d971cb22ee8f46e_cgraph" alt=""/></div>
 <map name="anamespacegg_aa3a225df6ac13de39d971cb22ee8f46e_cgraph" id="anamespacegg_aa3a225df6ac13de39d971cb22ee8f46e_cgraph">
 <area shape="rect" title="GgVector 型の 3 要素の距離." alt="" coords="5,5,121,32"/>
+<area shape="rect" href="namespacegg.html#a1c20fea9c5d29d82ceabb41c12b2a831" title="3 要素の距離." alt="" coords="169,5,285,32"/>
+<area shape="rect" href="namespacegg.html#a837850150a8293353ade7900452955b2" title="3 要素の長さ." alt="" coords="333,5,437,32"/>
+<area shape="rect" href="namespacegg.html#a4e49aff9138ef05a803f1ee703d0f67f" title="3 要素の内積." alt="" coords="485,5,571,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1c20fea9c5d29d82ceabb41c12b2a831"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c20fea9c5d29d82ceabb41c12b2a831">&#9670;&nbsp;</a></span>ggDistance3() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLfloat gg::ggDistance3 </td>
+          <td>(</td>
+          <td class="paramtype">const GLfloat *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const GLfloat *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>3 要素の距離. </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>GLfloat 型の 3 要素の配列変数. </td></tr>
+    <tr><td class="paramname">b</td><td>GLfloat 型の 3 要素の配列変数. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>a と b の距離. </dd></dl>
+
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01442">1442</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacegg_a1c20fea9c5d29d82ceabb41c12b2a831_cgraph.png" border="0" usemap="#anamespacegg_a1c20fea9c5d29d82ceabb41c12b2a831_cgraph" alt=""/></div>
+<map name="anamespacegg_a1c20fea9c5d29d82ceabb41c12b2a831_cgraph" id="anamespacegg_a1c20fea9c5d29d82ceabb41c12b2a831_cgraph">
+<area shape="rect" title="3 要素の距離." alt="" coords="5,5,121,32"/>
 <area shape="rect" href="namespacegg.html#a837850150a8293353ade7900452955b2" title="3 要素の長さ." alt="" coords="169,5,273,32"/>
 <area shape="rect" href="namespacegg.html#a4e49aff9138ef05a803f1ee703d0f67f" title="3 要素の内積." alt="" coords="321,5,407,32"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacegg_a1c20fea9c5d29d82ceabb41c12b2a831_icgraph.png" border="0" usemap="#anamespacegg_a1c20fea9c5d29d82ceabb41c12b2a831_icgraph" alt=""/></div>
+<map name="anamespacegg_a1c20fea9c5d29d82ceabb41c12b2a831_icgraph" id="anamespacegg_a1c20fea9c5d29d82ceabb41c12b2a831_icgraph">
+<area shape="rect" title="3 要素の距離." alt="" coords="169,5,285,32"/>
+<area shape="rect" href="namespacegg.html#aa3a225df6ac13de39d971cb22ee8f46e" title="GgVector 型の 3 要素の距離." alt="" coords="5,5,121,32"/>
 </map>
 </div>
 
 </div>
 </div>
 <a id="ababa9df1e37a168855d97d4db90b990b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ababa9df1e37a168855d97d4db90b990b">&#9670;&nbsp;</a></span>ggDistance4()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ababa9df1e37a168855d97d4db90b990b">&#9670;&nbsp;</a></span>ggDistance4() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1107,7 +1205,7 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p>GgVector 型の距離. </p>
+<p>GgVector 型の 4 要素の距離. </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>GgVector 型の変数. </td></tr>
@@ -1117,15 +1215,83 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>2 つの GgVector a, b の距離. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02085">2085</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01925">1925</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacegg_ababa9df1e37a168855d97d4db90b990b_cgraph.png" border="0" usemap="#anamespacegg_ababa9df1e37a168855d97d4db90b990b_cgraph" alt=""/></div>
 <map name="anamespacegg_ababa9df1e37a168855d97d4db90b990b_cgraph" id="anamespacegg_ababa9df1e37a168855d97d4db90b990b_cgraph">
-<area shape="rect" title="GgVector 型の距離." alt="" coords="5,5,121,32"/>
-<area shape="rect" href="namespacegg.html#a2f383a711d58b805ebaf26bc004986ab" title="4 要素の長さ." alt="" coords="169,5,273,32"/>
-<area shape="rect" href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title="4 要素の内積" alt="" coords="321,5,407,32"/>
+<area shape="rect" title="GgVector 型の 4 要素の距離." alt="" coords="5,5,121,32"/>
+<area shape="rect" href="namespacegg.html#a9d84278231c4a950b533d6d90c510ec6" title="GLfloat 型の 4 要素の距離." alt="" coords="169,5,285,32"/>
+<area shape="rect" href="namespacegg.html#a2f383a711d58b805ebaf26bc004986ab" title="GLfloat 型の 4 要素の長さ." alt="" coords="333,5,437,32"/>
+<area shape="rect" href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title="GLfloat 型の 4 要素の内積" alt="" coords="485,5,571,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9d84278231c4a950b533d6d90c510ec6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d84278231c4a950b533d6d90c510ec6">&#9670;&nbsp;</a></span>ggDistance4() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLfloat gg::ggDistance4 </td>
+          <td>(</td>
+          <td class="paramtype">const GLfloat *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const GLfloat *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>GLfloat 型の 4 要素の距離. </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>GLfloat 型の 4 要素の配列変数. </td></tr>
+    <tr><td class="paramname">b</td><td>GLfloat 型の 4 要素の配列変数. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>a と b のそれぞれの 4 要素の距離. </dd></dl>
+
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01491">1491</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacegg_a9d84278231c4a950b533d6d90c510ec6_cgraph.png" border="0" usemap="#anamespacegg_a9d84278231c4a950b533d6d90c510ec6_cgraph" alt=""/></div>
+<map name="anamespacegg_a9d84278231c4a950b533d6d90c510ec6_cgraph" id="anamespacegg_a9d84278231c4a950b533d6d90c510ec6_cgraph">
+<area shape="rect" title="GLfloat 型の 4 要素の距離." alt="" coords="5,5,121,32"/>
+<area shape="rect" href="namespacegg.html#a2f383a711d58b805ebaf26bc004986ab" title="GLfloat 型の 4 要素の長さ." alt="" coords="169,5,273,32"/>
+<area shape="rect" href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title="GLfloat 型の 4 要素の内積" alt="" coords="321,5,407,32"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacegg_a9d84278231c4a950b533d6d90c510ec6_icgraph.png" border="0" usemap="#anamespacegg_a9d84278231c4a950b533d6d90c510ec6_icgraph" alt=""/></div>
+<map name="anamespacegg_a9d84278231c4a950b533d6d90c510ec6_icgraph" id="anamespacegg_a9d84278231c4a950b533d6d90c510ec6_icgraph">
+<area shape="rect" title="GLfloat 型の 4 要素の距離." alt="" coords="169,5,285,32"/>
+<area shape="rect" href="namespacegg.html#ababa9df1e37a168855d97d4db90b990b" title="GgVector 型の 4 要素の距離." alt="" coords="5,5,121,32"/>
 </map>
 </div>
 
@@ -1175,7 +1341,16 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a と b のそれぞれの 3 要素の内積. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01968">1968</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01539">1539</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacegg_a884a700a6f3d5367f0d7a7fb43bd61e0_cgraph.png" border="0" usemap="#anamespacegg_a884a700a6f3d5367f0d7a7fb43bd61e0_cgraph" alt=""/></div>
+<map name="anamespacegg_a884a700a6f3d5367f0d7a7fb43bd61e0_cgraph" id="anamespacegg_a884a700a6f3d5367f0d7a7fb43bd61e0_cgraph">
+<area shape="rect" title="GgVector 型の 3 要素の内積." alt="" coords="5,5,91,32"/>
+<area shape="rect" href="namespacegg.html#a4e49aff9138ef05a803f1ee703d0f67f" title="3 要素の内積." alt="" coords="139,5,224,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -1222,19 +1397,22 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01612">1612</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01420">1420</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacegg_a4e49aff9138ef05a803f1ee703d0f67f_icgraph.png" border="0" usemap="#anamespacegg_a4e49aff9138ef05a803f1ee703d0f67f_icgraph" alt=""/></div>
 <map name="anamespacegg_a4e49aff9138ef05a803f1ee703d0f67f_icgraph" id="anamespacegg_a4e49aff9138ef05a803f1ee703d0f67f_icgraph">
-<area shape="rect" title="3 要素の内積." alt="" coords="741,93,827,120"/>
-<area shape="rect" href="namespacegg.html#a837850150a8293353ade7900452955b2" title="3 要素の長さ." alt="" coords="589,93,693,120"/>
-<area shape="rect" href="namespacegg.html#aa3a225df6ac13de39d971cb22ee8f46e" title="GgVector 型の 3 要素の距離." alt="" coords="422,68,538,95"/>
-<area shape="rect" href="namespacegg.html#af6a03a10f9a4d01016db6dceb0cc338d" title="3 要素の正規化." alt="" coords="419,119,541,145"/>
+<area shape="rect" title="3 要素の内積." alt="" coords="741,39,827,65"/>
+<area shape="rect" href="namespacegg.html#a884a700a6f3d5367f0d7a7fb43bd61e0" title="GgVector 型の 3 要素の内積." alt="" coords="599,13,684,40"/>
+<area shape="rect" href="namespacegg.html#a837850150a8293353ade7900452955b2" title="3 要素の長さ." alt="" coords="589,64,693,91"/>
+<area shape="rect" href="namespacegg.html#a1c20fea9c5d29d82ceabb41c12b2a831" title="3 要素の距離." alt="" coords="422,13,538,40"/>
+<area shape="rect" href="namespacegg.html#a01ccb3648bdfe2d689034136304a7ac5" title="GgVector 型の 3 要素の長さ." alt="" coords="428,64,532,91"/>
+<area shape="rect" href="namespacegg.html#af6a03a10f9a4d01016db6dceb0cc338d" title="3 要素の正規化." alt="" coords="419,115,541,141"/>
+<area shape="rect" href="namespacegg.html#aa3a225df6ac13de39d971cb22ee8f46e" title="GgVector 型の 3 要素の距離." alt="" coords="231,13,347,40"/>
 <area shape="rect" href="namespacegg.html#a2cd46afb53daa13fa8bb2de14baf4e7b" title="グレースケール画像 (8bit) から法線マップのデータを作成する." alt="" coords="208,64,371,91"/>
-<area shape="rect" href="namespacegg.html#a0d3c6911e6aff821d2dc3778b400ba1f" title="メッシュ形状を作成する (Elements 形式)." alt="" coords="217,119,362,145"/>
-<area shape="rect" href="namespacegg.html#a010fafe70a15a0aaa10ca2cceab23305" title="GgVector 型の 3 要素の正規化." alt="" coords="228,169,351,196"/>
+<area shape="rect" href="namespacegg.html#a0d3c6911e6aff821d2dc3778b400ba1f" title="メッシュ形状を作成する (Elements 形式)." alt="" coords="217,115,362,141"/>
+<area shape="rect" href="namespacegg.html#a1d602aa5fe6f7037d0180852e26811a2" title="GgVector 型の 3 要素の正規化." alt="" coords="228,165,351,192"/>
 <area shape="rect" href="namespacegg.html#a53453ed6229bbd109c279a3765648d01" title="テクスチャメモリを確保して TGA 画像ファイルを読み込み法線マップを作成する." alt="" coords="21,5,144,32"/>
 <area shape="rect" href="classgg_1_1GgNormalTexture.html#adca09b7af04c1a58703fbafcea758671" title="ファイルからデータを読み込んで法線マップのテクスチャを作成する." alt="" coords="10,57,155,98"/>
 <area shape="rect" href="namespacegg.html#ad4a21673782499741c37fe2efd693697" title=" " alt="" coords="5,123,160,149"/>
@@ -1277,7 +1455,7 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p>GgVector の 4 要素の内積. </p>
+<p>GgVector 型の 4 要素の内積. </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>GgVector 型の変数. </td></tr>
@@ -1287,7 +1465,16 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a と b のそれぞれの 4 要素の内積. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02062">2062</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01902">1902</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacegg_a1f4640ffabc40dc38457d4b33ab21b87_cgraph.png" border="0" usemap="#anamespacegg_a1f4640ffabc40dc38457d4b33ab21b87_cgraph" alt=""/></div>
+<map name="anamespacegg_a1f4640ffabc40dc38457d4b33ab21b87_cgraph" id="anamespacegg_a1f4640ffabc40dc38457d4b33ab21b87_cgraph">
+<area shape="rect" title="GgVector 型の 4 要素の内積." alt="" coords="5,5,91,32"/>
+<area shape="rect" href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title="GLfloat 型の 4 要素の内積" alt="" coords="139,5,224,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -1325,7 +1512,7 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p>4 要素の内積 </p>
+<p>GLfloat 型の 4 要素の内積 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>GLfloat 型の 4 要素の配列変数. </td></tr>
@@ -1334,28 +1521,31 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01649">1649</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01468">1468</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacegg_a34aa472e3f12dd5a976c090da6c1bc51_icgraph.png" border="0" usemap="#anamespacegg_a34aa472e3f12dd5a976c090da6c1bc51_icgraph" alt=""/></div>
 <map name="anamespacegg_a34aa472e3f12dd5a976c090da6c1bc51_icgraph" id="anamespacegg_a34aa472e3f12dd5a976c090da6c1bc51_icgraph">
-<area shape="rect" title="4 要素の内積" alt="" coords="1164,145,1249,172"/>
-<area shape="rect" href="namespacegg.html#a2f383a711d58b805ebaf26bc004986ab" title="4 要素の長さ." alt="" coords="971,95,1075,121"/>
-<area shape="rect" href="classgg_1_1GgQuaternion.html#a46f9d1612fdd1fc39db6c8ba7e574a86" title="引数に指定した四元数の逆元を格納する." alt="" coords="929,171,1116,197"/>
-<area shape="rect" href="namespacegg.html#ababa9df1e37a168855d97d4db90b990b" title="GgVector 型の距離." alt="" coords="730,5,846,32"/>
-<area shape="rect" href="namespacegg.html#ab2f149e2a719574c966ff6ad0fdc17cf" title="4 要素の正規化." alt="" coords="727,56,849,83"/>
-<area shape="rect" href="classgg_1_1GgQuaternion.html#a7948622a1020c4b8cff6a699cbea8696" title="四元数のノルムを求める." alt="" coords="707,107,869,133"/>
-<area shape="rect" href="namespacegg.html#a873c34e94fe830ecf23c12a747b3c8ce" title="GgVector 型の正規化." alt="" coords="478,5,601,32"/>
-<area shape="rect" href="classgg_1_1GgQuaternion.html#af529d76bbf4048ad56625575c7af3668" title="引数に指定した四元数を正規化して格納する." alt="" coords="432,56,647,83"/>
-<area shape="rect" href="classgg_1_1GgQuaternion.html#a2b6ba23dc4182f8e711defc9a0f33436" title="引数に指定した四元数を正規化して格納する." alt="" coords="169,31,384,57"/>
-<area shape="rect" href="classgg_1_1GgQuaternion.html#a8667e065b18d857126f5481d0be8d527" title="正規化する." alt="" coords="183,81,371,108"/>
-<area shape="rect" href="namespacegg.html#aab31210c17598a7d14ecb3c9f461040c" title="正規化した四元数を返す." alt="" coords="5,81,121,108"/>
-<area shape="rect" href="namespacegg.html#aca5935d7314e7ba3f7d8043b56e04931" title="四元数のノルムを返す." alt="" coords="495,107,584,133"/>
-<area shape="rect" href="classgg_1_1GgQuaternion.html#a0d70c27c7840e8bcb1031e12669a9405" title="四元数を別の四元数で除算した結果を返す." alt="" coords="706,157,870,184"/>
-<area shape="rect" href="classgg_1_1GgQuaternion.html#ae76a0626497b4b3c203be499169a49af" title="逆元に変換する." alt="" coords="707,208,869,235"/>
-<area shape="rect" href="classgg_1_1GgQuaternion.html#a938136b65190b0cb6b232d9311b043f2" title="引数に指定した四元数の逆元を格納する." alt="" coords="695,259,881,285"/>
-<area shape="rect" href="namespacegg.html#ac834686c8605553fbe7c2709c685ba4e" title="四元数の逆元を求める." alt="" coords="495,208,583,235"/>
+<area shape="rect" title="GLfloat 型の 4 要素の内積" alt="" coords="1164,107,1249,133"/>
+<area shape="rect" href="namespacegg.html#a1f4640ffabc40dc38457d4b33ab21b87" title="GgVector 型の 4 要素の内積." alt="" coords="980,56,1065,83"/>
+<area shape="rect" href="namespacegg.html#a2f383a711d58b805ebaf26bc004986ab" title="GLfloat 型の 4 要素の長さ." alt="" coords="971,107,1075,133"/>
+<area shape="rect" href="classgg_1_1GgQuaternion.html#a46f9d1612fdd1fc39db6c8ba7e574a86" title="引数に指定した四元数の逆元を格納する." alt="" coords="929,233,1116,260"/>
+<area shape="rect" href="namespacegg.html#a9d84278231c4a950b533d6d90c510ec6" title="GLfloat 型の 4 要素の距離." alt="" coords="730,5,846,32"/>
+<area shape="rect" href="namespacegg.html#a2c5a85961402558c05dc869a1329f12d" title="GgVector 型の 4 要素の長さ." alt="" coords="736,56,840,83"/>
+<area shape="rect" href="namespacegg.html#ab2f149e2a719574c966ff6ad0fdc17cf" title="GLfloat 型の 4 要素の正規化." alt="" coords="727,107,849,133"/>
+<area shape="rect" href="classgg_1_1GgQuaternion.html#a7948622a1020c4b8cff6a699cbea8696" title="四元数のノルムを求める." alt="" coords="707,157,869,184"/>
+<area shape="rect" href="namespacegg.html#ababa9df1e37a168855d97d4db90b990b" title="GgVector 型の 4 要素の距離." alt="" coords="481,5,597,32"/>
+<area shape="rect" href="namespacegg.html#ab8f809ed8f45e79d9054534d2f86f370" title="GgVector 型の 4 要素の正規化." alt="" coords="478,56,601,83"/>
+<area shape="rect" href="classgg_1_1GgQuaternion.html#af529d76bbf4048ad56625575c7af3668" title="引数に指定した四元数を正規化して格納する." alt="" coords="432,107,647,133"/>
+<area shape="rect" href="classgg_1_1GgQuaternion.html#a2b6ba23dc4182f8e711defc9a0f33436" title="引数に指定した四元数を正規化して格納する." alt="" coords="169,81,384,108"/>
+<area shape="rect" href="classgg_1_1GgQuaternion.html#a8667e065b18d857126f5481d0be8d527" title="正規化する." alt="" coords="183,132,371,159"/>
+<area shape="rect" href="namespacegg.html#aab31210c17598a7d14ecb3c9f461040c" title="正規化した四元数を返す." alt="" coords="5,132,121,159"/>
+<area shape="rect" href="namespacegg.html#aca5935d7314e7ba3f7d8043b56e04931" title="四元数のノルムを返す." alt="" coords="495,157,584,184"/>
+<area shape="rect" href="classgg_1_1GgQuaternion.html#a0d70c27c7840e8bcb1031e12669a9405" title="四元数を別の四元数で除算した結果を返す." alt="" coords="706,208,870,235"/>
+<area shape="rect" href="classgg_1_1GgQuaternion.html#ae76a0626497b4b3c203be499169a49af" title="逆元に変換する." alt="" coords="707,259,869,285"/>
+<area shape="rect" href="classgg_1_1GgQuaternion.html#a938136b65190b0cb6b232d9311b043f2" title="引数に指定した四元数の逆元を格納する." alt="" coords="695,309,881,336"/>
+<area shape="rect" href="namespacegg.html#ac834686c8605553fbe7c2709c685ba4e" title="四元数の逆元を求める." alt="" coords="495,259,583,285"/>
 </map>
 </div>
 
@@ -1411,7 +1601,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05230">5230</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05261">5261</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1471,7 +1661,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05212">5212</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05243">5243</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1526,7 +1716,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05326">5326</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05357">5357</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1584,7 +1774,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05170">5170</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05201">5201</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1621,7 +1811,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>回転を表す四元数. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04142">4142</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03969">3969</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1689,7 +1879,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>回転を表す四元数. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04133">4133</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03960">3960</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1786,7 +1976,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>求めた透視投影変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03131">3131</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02958">2958</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1825,7 +2015,7 @@ $(function() {
 <p>単位行列を返す. </p>
 <dl class="section return"><dt>戻り値</dt><dd>単位行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02913">2913</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02740">2740</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1864,7 +2054,7 @@ $(function() {
 <p>単位四元数を返す. </p>
 <dl class="section return"><dt>戻り値</dt><dd>単位四元数. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04054">4054</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03881">3881</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1896,7 +2086,7 @@ $(function() {
 <p>ゲームグラフィックス特論の都合にもとづく初期化を行う. </p>
 <p>Windows において OpenGL 1.2 以降の API を有効化する. </p>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l01309">1309</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l01305">1305</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1942,7 +2132,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>m の逆行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03167">3167</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02994">2994</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1989,7 +2179,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>四元数 q の逆元. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04215">4215</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04042">4042</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1998,7 +2188,7 @@ $(function() {
 <area shape="rect" title="四元数の逆元を求める." alt="" coords="5,31,93,57"/>
 <area shape="rect" href="classgg_1_1GgQuaternion.html#ae76a0626497b4b3c203be499169a49af" title="逆元に変換する." alt="" coords="141,31,304,57"/>
 <area shape="rect" href="classgg_1_1GgQuaternion.html#a46f9d1612fdd1fc39db6c8ba7e574a86" title="引数に指定した四元数の逆元を格納する." alt="" coords="352,31,539,57"/>
-<area shape="rect" href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title="4 要素の内積" alt="" coords="651,5,737,32"/>
+<area shape="rect" href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title="GLfloat 型の 4 要素の内積" alt="" coords="651,5,737,32"/>
 <area shape="rect" href="classgg_1_1GgQuaternion.html#af9a9577581a5f9bbebd675998f741215" title="引数に指定した四元数の共役四元数を格納する." alt="" coords="587,56,801,83"/>
 </map>
 </div>
@@ -2038,14 +2228,15 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a の長さ. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02000">2000</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01550">1550</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacegg_a01ccb3648bdfe2d689034136304a7ac5_cgraph.png" border="0" usemap="#anamespacegg_a01ccb3648bdfe2d689034136304a7ac5_cgraph" alt=""/></div>
 <map name="anamespacegg_a01ccb3648bdfe2d689034136304a7ac5_cgraph" id="anamespacegg_a01ccb3648bdfe2d689034136304a7ac5_cgraph">
 <area shape="rect" title="GgVector 型の 3 要素の長さ." alt="" coords="5,5,109,32"/>
-<area shape="rect" href="namespacegg.html#a4e49aff9138ef05a803f1ee703d0f67f" title="3 要素の内積." alt="" coords="157,5,243,32"/>
+<area shape="rect" href="namespacegg.html#a837850150a8293353ade7900452955b2" title="3 要素の長さ." alt="" coords="157,5,261,32"/>
+<area shape="rect" href="namespacegg.html#a4e49aff9138ef05a803f1ee703d0f67f" title="3 要素の内積." alt="" coords="309,5,395,32"/>
 </map>
 </div>
 
@@ -2083,7 +2274,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01622">1622</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01430">1430</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2098,12 +2289,14 @@ $(function() {
 <div class="dyncontent">
 <div class="center"><img src="namespacegg_a837850150a8293353ade7900452955b2_icgraph.png" border="0" usemap="#anamespacegg_a837850150a8293353ade7900452955b2_icgraph" alt=""/></div>
 <map name="anamespacegg_a837850150a8293353ade7900452955b2_icgraph" id="anamespacegg_a837850150a8293353ade7900452955b2_icgraph">
-<area shape="rect" title="3 要素の長さ." alt="" coords="589,93,693,120"/>
-<area shape="rect" href="namespacegg.html#aa3a225df6ac13de39d971cb22ee8f46e" title="GgVector 型の 3 要素の距離." alt="" coords="422,68,538,95"/>
-<area shape="rect" href="namespacegg.html#af6a03a10f9a4d01016db6dceb0cc338d" title="3 要素の正規化." alt="" coords="419,119,541,145"/>
+<area shape="rect" title="3 要素の長さ." alt="" coords="589,64,693,91"/>
+<area shape="rect" href="namespacegg.html#a1c20fea9c5d29d82ceabb41c12b2a831" title="3 要素の距離." alt="" coords="422,13,538,40"/>
+<area shape="rect" href="namespacegg.html#a01ccb3648bdfe2d689034136304a7ac5" title="GgVector 型の 3 要素の長さ." alt="" coords="428,64,532,91"/>
+<area shape="rect" href="namespacegg.html#af6a03a10f9a4d01016db6dceb0cc338d" title="3 要素の正規化." alt="" coords="419,115,541,141"/>
+<area shape="rect" href="namespacegg.html#aa3a225df6ac13de39d971cb22ee8f46e" title="GgVector 型の 3 要素の距離." alt="" coords="231,13,347,40"/>
 <area shape="rect" href="namespacegg.html#a2cd46afb53daa13fa8bb2de14baf4e7b" title="グレースケール画像 (8bit) から法線マップのデータを作成する." alt="" coords="208,64,371,91"/>
-<area shape="rect" href="namespacegg.html#a0d3c6911e6aff821d2dc3778b400ba1f" title="メッシュ形状を作成する (Elements 形式)." alt="" coords="217,119,362,145"/>
-<area shape="rect" href="namespacegg.html#a010fafe70a15a0aaa10ca2cceab23305" title="GgVector 型の 3 要素の正規化." alt="" coords="228,169,351,196"/>
+<area shape="rect" href="namespacegg.html#a0d3c6911e6aff821d2dc3778b400ba1f" title="メッシュ形状を作成する (Elements 形式)." alt="" coords="217,115,362,141"/>
+<area shape="rect" href="namespacegg.html#a1d602aa5fe6f7037d0180852e26811a2" title="GgVector 型の 3 要素の正規化." alt="" coords="228,165,351,192"/>
 <area shape="rect" href="namespacegg.html#a53453ed6229bbd109c279a3765648d01" title="テクスチャメモリを確保して TGA 画像ファイルを読み込み法線マップを作成する." alt="" coords="21,5,144,32"/>
 <area shape="rect" href="classgg_1_1GgNormalTexture.html#adca09b7af04c1a58703fbafcea758671" title="ファイルからデータを読み込んで法線マップのテクスチャを作成する." alt="" coords="10,57,155,98"/>
 <area shape="rect" href="namespacegg.html#ad4a21673782499741c37fe2efd693697" title=" " alt="" coords="5,123,160,149"/>
@@ -2136,7 +2329,7 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p>GgVector 型の長さ. </p>
+<p>GgVector 型の 4 要素の長さ. </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>GgVector 型の変数. </td></tr>
@@ -2145,14 +2338,15 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a の長さ. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02073">2073</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01913">1913</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacegg_a2c5a85961402558c05dc869a1329f12d_cgraph.png" border="0" usemap="#anamespacegg_a2c5a85961402558c05dc869a1329f12d_cgraph" alt=""/></div>
 <map name="anamespacegg_a2c5a85961402558c05dc869a1329f12d_cgraph" id="anamespacegg_a2c5a85961402558c05dc869a1329f12d_cgraph">
-<area shape="rect" title="GgVector 型の長さ." alt="" coords="5,5,109,32"/>
-<area shape="rect" href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title="4 要素の内積" alt="" coords="157,5,243,32"/>
+<area shape="rect" title="GgVector 型の 4 要素の長さ." alt="" coords="5,5,109,32"/>
+<area shape="rect" href="namespacegg.html#a2f383a711d58b805ebaf26bc004986ab" title="GLfloat 型の 4 要素の長さ." alt="" coords="157,5,261,32"/>
+<area shape="rect" href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title="GLfloat 型の 4 要素の内積" alt="" coords="309,5,395,32"/>
 </map>
 </div>
 
@@ -2182,22 +2376,23 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p>4 要素の長さ. </p>
+<p>GLfloat 型の 4 要素の長さ. </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>GLfloat 型の 4 要素の配列変数. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>戻り値</dt><dd>a と b のそれぞれの 4 要素の長さ. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01659">1659</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01479">1479</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacegg_a2f383a711d58b805ebaf26bc004986ab_cgraph.png" border="0" usemap="#anamespacegg_a2f383a711d58b805ebaf26bc004986ab_cgraph" alt=""/></div>
 <map name="anamespacegg_a2f383a711d58b805ebaf26bc004986ab_cgraph" id="anamespacegg_a2f383a711d58b805ebaf26bc004986ab_cgraph">
-<area shape="rect" title="4 要素の長さ." alt="" coords="5,5,109,32"/>
-<area shape="rect" href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title="4 要素の内積" alt="" coords="157,5,243,32"/>
+<area shape="rect" title="GLfloat 型の 4 要素の長さ." alt="" coords="5,5,109,32"/>
+<area shape="rect" href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title="GLfloat 型の 4 要素の内積" alt="" coords="157,5,243,32"/>
 </map>
 </div>
 <div class="dynheader">
@@ -2205,16 +2400,18 @@ $(function() {
 <div class="dyncontent">
 <div class="center"><img src="namespacegg_a2f383a711d58b805ebaf26bc004986ab_icgraph.png" border="0" usemap="#anamespacegg_a2f383a711d58b805ebaf26bc004986ab_icgraph" alt=""/></div>
 <map name="anamespacegg_a2f383a711d58b805ebaf26bc004986ab_icgraph" id="anamespacegg_a2f383a711d58b805ebaf26bc004986ab_icgraph">
-<area shape="rect" title="4 要素の長さ." alt="" coords="904,56,1008,83"/>
-<area shape="rect" href="namespacegg.html#ababa9df1e37a168855d97d4db90b990b" title="GgVector 型の距離." alt="" coords="717,5,833,32"/>
-<area shape="rect" href="namespacegg.html#ab2f149e2a719574c966ff6ad0fdc17cf" title="4 要素の正規化." alt="" coords="714,56,837,83"/>
-<area shape="rect" href="classgg_1_1GgQuaternion.html#a7948622a1020c4b8cff6a699cbea8696" title="四元数のノルムを求める." alt="" coords="695,107,856,133"/>
-<area shape="rect" href="namespacegg.html#a873c34e94fe830ecf23c12a747b3c8ce" title="GgVector 型の正規化." alt="" coords="478,5,601,32"/>
-<area shape="rect" href="classgg_1_1GgQuaternion.html#af529d76bbf4048ad56625575c7af3668" title="引数に指定した四元数を正規化して格納する." alt="" coords="432,56,647,83"/>
-<area shape="rect" href="classgg_1_1GgQuaternion.html#a2b6ba23dc4182f8e711defc9a0f33436" title="引数に指定した四元数を正規化して格納する." alt="" coords="169,31,384,57"/>
-<area shape="rect" href="classgg_1_1GgQuaternion.html#a8667e065b18d857126f5481d0be8d527" title="正規化する." alt="" coords="183,81,371,108"/>
-<area shape="rect" href="namespacegg.html#aab31210c17598a7d14ecb3c9f461040c" title="正規化した四元数を返す." alt="" coords="5,81,121,108"/>
-<area shape="rect" href="namespacegg.html#aca5935d7314e7ba3f7d8043b56e04931" title="四元数のノルムを返す." alt="" coords="495,107,584,133"/>
+<area shape="rect" title="GLfloat 型の 4 要素の長さ." alt="" coords="904,81,1008,108"/>
+<area shape="rect" href="namespacegg.html#a9d84278231c4a950b533d6d90c510ec6" title="GLfloat 型の 4 要素の距離." alt="" coords="717,5,833,32"/>
+<area shape="rect" href="namespacegg.html#a2c5a85961402558c05dc869a1329f12d" title="GgVector 型の 4 要素の長さ." alt="" coords="723,56,827,83"/>
+<area shape="rect" href="namespacegg.html#ab2f149e2a719574c966ff6ad0fdc17cf" title="GLfloat 型の 4 要素の正規化." alt="" coords="714,107,837,133"/>
+<area shape="rect" href="classgg_1_1GgQuaternion.html#a7948622a1020c4b8cff6a699cbea8696" title="四元数のノルムを求める." alt="" coords="695,157,856,184"/>
+<area shape="rect" href="namespacegg.html#ababa9df1e37a168855d97d4db90b990b" title="GgVector 型の 4 要素の距離." alt="" coords="481,5,597,32"/>
+<area shape="rect" href="namespacegg.html#ab8f809ed8f45e79d9054534d2f86f370" title="GgVector 型の 4 要素の正規化." alt="" coords="478,56,601,83"/>
+<area shape="rect" href="classgg_1_1GgQuaternion.html#af529d76bbf4048ad56625575c7af3668" title="引数に指定した四元数を正規化して格納する." alt="" coords="432,107,647,133"/>
+<area shape="rect" href="classgg_1_1GgQuaternion.html#a2b6ba23dc4182f8e711defc9a0f33436" title="引数に指定した四元数を正規化して格納する." alt="" coords="169,81,384,108"/>
+<area shape="rect" href="classgg_1_1GgQuaternion.html#a8667e065b18d857126f5481d0be8d527" title="正規化する." alt="" coords="183,132,371,159"/>
+<area shape="rect" href="namespacegg.html#aab31210c17598a7d14ecb3c9f461040c" title="正規化した四元数を返す." alt="" coords="5,132,121,159"/>
+<area shape="rect" href="namespacegg.html#aca5935d7314e7ba3f7d8043b56e04931" title="四元数のノルムを返す." alt="" coords="495,157,584,184"/>
 </map>
 </div>
 
@@ -2245,7 +2442,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>プログラムオブジェクトのプログラム名 (作成できなければ 0). </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l04242">4242</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05032">5032</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2306,7 +2503,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>テクスチャの作成に成功すればテクスチャ名, 失敗すれば 0. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03110">3110</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03889">3889</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2381,7 +2578,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>テクスチャの作成に成功すればテクスチャ名, 失敗すれば 0. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l02961">2961</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03732">3732</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2452,7 +2649,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>プログラムオブジェクトのプログラム名 (作成できなければ 0). </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l04168">4168</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l04958">4958</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2513,7 +2710,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>ファイルの読み込みに成功したら true. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03782">3782</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l04565">4565</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2592,7 +2789,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>ファイルの読み込みに成功したら true. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03871">3871</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l04654">4654</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2667,7 +2864,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>テクスチャの作成に成功すればテクスチャ名, 失敗すれば 0. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l02921">2921</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03692">3692</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2732,7 +2929,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>求めたビュー変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03097">3097</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02924">2924</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2796,7 +2993,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>求めたビュー変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03082">3082</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02909">2909</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2902,7 +3099,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>求めたビュー変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03067">3067</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02894">2894</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2948,7 +3145,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>m による回転の変換に相当する四元数. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04072">4072</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03899">3899</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2996,7 +3193,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a による回転の変換に相当する四元数. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04063">4063</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03890">3890</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -3051,7 +3248,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>四元数 q のノルム. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04191">4191</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04018">4018</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -3059,8 +3256,8 @@ $(function() {
 <map name="anamespacegg_aca5935d7314e7ba3f7d8043b56e04931_cgraph" id="anamespacegg_aca5935d7314e7ba3f7d8043b56e04931_cgraph">
 <area shape="rect" title="四元数のノルムを返す." alt="" coords="5,5,95,32"/>
 <area shape="rect" href="classgg_1_1GgQuaternion.html#a7948622a1020c4b8cff6a699cbea8696" title="四元数のノルムを求める." alt="" coords="143,5,304,32"/>
-<area shape="rect" href="namespacegg.html#a2f383a711d58b805ebaf26bc004986ab" title="4 要素の長さ." alt="" coords="352,5,456,32"/>
-<area shape="rect" href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title="4 要素の内積" alt="" coords="504,5,589,32"/>
+<area shape="rect" href="namespacegg.html#a2f383a711d58b805ebaf26bc004986ab" title="GLfloat 型の 4 要素の長さ." alt="" coords="352,5,456,32"/>
+<area shape="rect" href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title="GLfloat 型の 4 要素の内積" alt="" coords="504,5,589,32"/>
 </map>
 </div>
 
@@ -3099,7 +3296,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>m の法線変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03175">3175</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03002">3002</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -3146,7 +3343,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>四元数 q を正規化した四元数. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04199">4199</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04026">4026</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -3155,9 +3352,9 @@ $(function() {
 <area shape="rect" title="正規化した四元数を返す." alt="" coords="5,5,121,32"/>
 <area shape="rect" href="classgg_1_1GgQuaternion.html#a8667e065b18d857126f5481d0be8d527" title="正規化する." alt="" coords="169,5,357,32"/>
 <area shape="rect" href="classgg_1_1GgQuaternion.html#af529d76bbf4048ad56625575c7af3668" title="引数に指定した四元数を正規化して格納する." alt="" coords="405,5,620,32"/>
-<area shape="rect" href="namespacegg.html#ab2f149e2a719574c966ff6ad0fdc17cf" title="4 要素の正規化." alt="" coords="668,5,791,32"/>
-<area shape="rect" href="namespacegg.html#a2f383a711d58b805ebaf26bc004986ab" title="4 要素の長さ." alt="" coords="839,5,943,32"/>
-<area shape="rect" href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title="4 要素の内積" alt="" coords="991,5,1076,32"/>
+<area shape="rect" href="namespacegg.html#ab2f149e2a719574c966ff6ad0fdc17cf" title="GLfloat 型の 4 要素の正規化." alt="" coords="668,5,791,32"/>
+<area shape="rect" href="namespacegg.html#a2f383a711d58b805ebaf26bc004986ab" title="GLfloat 型の 4 要素の長さ." alt="" coords="839,5,943,32"/>
+<area shape="rect" href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title="GLfloat 型の 4 要素の内積" alt="" coords="991,5,1076,32"/>
 </map>
 </div>
 
@@ -3195,9 +3392,9 @@ $(function() {
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a の 3 要素を正規化したもの. </dd></dl>
-<dl class="section note"><dt>覚え書き</dt><dd>戻り値の w (第4) 要素は 0 になる. 正規化できなければ元の値を返す. </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd>戻り値の w (第4) 要素は 0 になる. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02048">2048</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01586">1586</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -3212,8 +3409,8 @@ $(function() {
 
 </div>
 </div>
-<a id="afaea1b34313a48337f7255223fc65dab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afaea1b34313a48337f7255223fc65dab">&#9670;&nbsp;</a></span>ggNormalize3() <span class="overload">[2/3]</span></h2>
+<a id="a1d602aa5fe6f7037d0180852e26811a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d602aa5fe6f7037d0180852e26811a2">&#9670;&nbsp;</a></span>ggNormalize3() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3222,7 +3419,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool gg::ggNormalize3 </td>
+          <td class="memname">void gg::ggNormalize3 </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> *&#160;</td>
           <td class="paramname"><em>a</em></td><td>)</td>
@@ -3243,18 +3440,18 @@ $(function() {
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>正規化できなかったら false. </dd></dl>
 <dl class="section note"><dt>覚え書き</dt><dd>a の w (第4) 要素は 0 になる. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02024">2024</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01573">1573</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacegg_afaea1b34313a48337f7255223fc65dab_cgraph.png" border="0" usemap="#anamespacegg_afaea1b34313a48337f7255223fc65dab_cgraph" alt=""/></div>
-<map name="anamespacegg_afaea1b34313a48337f7255223fc65dab_cgraph" id="anamespacegg_afaea1b34313a48337f7255223fc65dab_cgraph">
+<div class="center"><img src="namespacegg_a1d602aa5fe6f7037d0180852e26811a2_cgraph.png" border="0" usemap="#anamespacegg_a1d602aa5fe6f7037d0180852e26811a2_cgraph" alt=""/></div>
+<map name="anamespacegg_a1d602aa5fe6f7037d0180852e26811a2_cgraph" id="anamespacegg_a1d602aa5fe6f7037d0180852e26811a2_cgraph">
 <area shape="rect" title="GgVector 型の 3 要素の正規化." alt="" coords="5,5,128,32"/>
-<area shape="rect" href="namespacegg.html#a837850150a8293353ade7900452955b2" title="3 要素の長さ." alt="" coords="176,5,280,32"/>
-<area shape="rect" href="namespacegg.html#a4e49aff9138ef05a803f1ee703d0f67f" title="3 要素の内積." alt="" coords="328,5,413,32"/>
+<area shape="rect" href="namespacegg.html#af6a03a10f9a4d01016db6dceb0cc338d" title="3 要素の正規化." alt="" coords="176,5,299,32"/>
+<area shape="rect" href="namespacegg.html#a837850150a8293353ade7900452955b2" title="3 要素の長さ." alt="" coords="347,5,451,32"/>
+<area shape="rect" href="namespacegg.html#a4e49aff9138ef05a803f1ee703d0f67f" title="3 要素の内積." alt="" coords="499,5,584,32"/>
 </map>
 </div>
 
@@ -3292,7 +3489,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01632">1632</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01453">1453</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -3311,7 +3508,7 @@ $(function() {
 <area shape="rect" title="3 要素の正規化." alt="" coords="419,119,541,145"/>
 <area shape="rect" href="namespacegg.html#a2cd46afb53daa13fa8bb2de14baf4e7b" title="グレースケール画像 (8bit) から法線マップのデータを作成する." alt="" coords="208,64,371,91"/>
 <area shape="rect" href="namespacegg.html#a0d3c6911e6aff821d2dc3778b400ba1f" title="メッシュ形状を作成する (Elements 形式)." alt="" coords="217,119,362,145"/>
-<area shape="rect" href="namespacegg.html#a010fafe70a15a0aaa10ca2cceab23305" title="GgVector 型の 3 要素の正規化." alt="" coords="228,169,351,196"/>
+<area shape="rect" href="namespacegg.html#a1d602aa5fe6f7037d0180852e26811a2" title="GgVector 型の 3 要素の正規化." alt="" coords="228,169,351,196"/>
 <area shape="rect" href="namespacegg.html#a53453ed6229bbd109c279a3765648d01" title="テクスチャメモリを確保して TGA 画像ファイルを読み込み法線マップを作成する." alt="" coords="21,5,144,32"/>
 <area shape="rect" href="classgg_1_1GgNormalTexture.html#adca09b7af04c1a58703fbafcea758671" title="ファイルからデータを読み込んで法線マップのテクスチャを作成する." alt="" coords="10,57,155,98"/>
 <area shape="rect" href="namespacegg.html#ad4a21673782499741c37fe2efd693697" title=" " alt="" coords="5,123,160,149"/>
@@ -3344,32 +3541,32 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p>GgVector 型の正規化. </p>
+<p>GgVector 型の 4 要素の正規化. </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>GgVector 型の変数. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>a の 4 要素を正規化したもの. </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>a の 4 要素を正規化した結果. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02119">2119</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01946">1946</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacegg_a873c34e94fe830ecf23c12a747b3c8ce_cgraph.png" border="0" usemap="#anamespacegg_a873c34e94fe830ecf23c12a747b3c8ce_cgraph" alt=""/></div>
 <map name="anamespacegg_a873c34e94fe830ecf23c12a747b3c8ce_cgraph" id="anamespacegg_a873c34e94fe830ecf23c12a747b3c8ce_cgraph">
-<area shape="rect" title="GgVector 型の正規化." alt="" coords="5,5,128,32"/>
-<area shape="rect" href="namespacegg.html#ab2f149e2a719574c966ff6ad0fdc17cf" title="4 要素の正規化." alt="" coords="176,5,299,32"/>
-<area shape="rect" href="namespacegg.html#a2f383a711d58b805ebaf26bc004986ab" title="4 要素の長さ." alt="" coords="347,5,451,32"/>
-<area shape="rect" href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title="4 要素の内積" alt="" coords="499,5,584,32"/>
+<area shape="rect" title="GgVector 型の 4 要素の正規化." alt="" coords="5,5,128,32"/>
+<area shape="rect" href="namespacegg.html#ab2f149e2a719574c966ff6ad0fdc17cf" title="GLfloat 型の 4 要素の正規化." alt="" coords="176,5,299,32"/>
+<area shape="rect" href="namespacegg.html#a2f383a711d58b805ebaf26bc004986ab" title="GLfloat 型の 4 要素の長さ." alt="" coords="347,5,451,32"/>
+<area shape="rect" href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title="GLfloat 型の 4 要素の内積" alt="" coords="499,5,584,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a95d826138abfe2a9e46826d619612b2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95d826138abfe2a9e46826d619612b2c">&#9670;&nbsp;</a></span>ggNormalize4() <span class="overload">[2/3]</span></h2>
+<a id="ab8f809ed8f45e79d9054534d2f86f370"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8f809ed8f45e79d9054534d2f86f370">&#9670;&nbsp;</a></span>ggNormalize4() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3378,7 +3575,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool gg::ggNormalize4 </td>
+          <td class="memname">void gg::ggNormalize4 </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> *&#160;</td>
           <td class="paramname"><em>a</em></td><td>)</td>
@@ -3392,24 +3589,24 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p>GgVector 型の正規化. </p>
+<p>GgVector 型の 4 要素の正規化. </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>GgVector 型の変数のポインタ. </td></tr>
+    <tr><td class="paramname">a</td><td>GLfloat 型の 4 要素の配列変数. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>正規化できなかったら false. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02096">2096</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01935">1935</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacegg_a95d826138abfe2a9e46826d619612b2c_cgraph.png" border="0" usemap="#anamespacegg_a95d826138abfe2a9e46826d619612b2c_cgraph" alt=""/></div>
-<map name="anamespacegg_a95d826138abfe2a9e46826d619612b2c_cgraph" id="anamespacegg_a95d826138abfe2a9e46826d619612b2c_cgraph">
-<area shape="rect" title="GgVector 型の正規化." alt="" coords="5,5,128,32"/>
-<area shape="rect" href="namespacegg.html#a2f383a711d58b805ebaf26bc004986ab" title="4 要素の長さ." alt="" coords="176,5,280,32"/>
-<area shape="rect" href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title="4 要素の内積" alt="" coords="328,5,413,32"/>
+<div class="center"><img src="namespacegg_ab8f809ed8f45e79d9054534d2f86f370_cgraph.png" border="0" usemap="#anamespacegg_ab8f809ed8f45e79d9054534d2f86f370_cgraph" alt=""/></div>
+<map name="anamespacegg_ab8f809ed8f45e79d9054534d2f86f370_cgraph" id="anamespacegg_ab8f809ed8f45e79d9054534d2f86f370_cgraph">
+<area shape="rect" title="GgVector 型の 4 要素の正規化." alt="" coords="5,5,128,32"/>
+<area shape="rect" href="namespacegg.html#ab2f149e2a719574c966ff6ad0fdc17cf" title="GLfloat 型の 4 要素の正規化." alt="" coords="176,5,299,32"/>
+<area shape="rect" href="namespacegg.html#a2f383a711d58b805ebaf26bc004986ab" title="GLfloat 型の 4 要素の長さ." alt="" coords="347,5,451,32"/>
+<area shape="rect" href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title="GLfloat 型の 4 要素の内積" alt="" coords="499,5,584,32"/>
 </map>
 </div>
 
@@ -3439,7 +3636,7 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p>4 要素の正規化. </p>
+<p>GLfloat 型の 4 要素の正規化. </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>GLfloat 型の 4 要素の配列変数. </td></tr>
@@ -3447,15 +3644,15 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01669">1669</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01502">1502</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacegg_ab2f149e2a719574c966ff6ad0fdc17cf_cgraph.png" border="0" usemap="#anamespacegg_ab2f149e2a719574c966ff6ad0fdc17cf_cgraph" alt=""/></div>
 <map name="anamespacegg_ab2f149e2a719574c966ff6ad0fdc17cf_cgraph" id="anamespacegg_ab2f149e2a719574c966ff6ad0fdc17cf_cgraph">
-<area shape="rect" title="4 要素の正規化." alt="" coords="5,5,128,32"/>
-<area shape="rect" href="namespacegg.html#a2f383a711d58b805ebaf26bc004986ab" title="4 要素の長さ." alt="" coords="176,5,280,32"/>
-<area shape="rect" href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title="4 要素の内積" alt="" coords="328,5,413,32"/>
+<area shape="rect" title="GLfloat 型の 4 要素の正規化." alt="" coords="5,5,128,32"/>
+<area shape="rect" href="namespacegg.html#a2f383a711d58b805ebaf26bc004986ab" title="GLfloat 型の 4 要素の長さ." alt="" coords="176,5,280,32"/>
+<area shape="rect" href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title="GLfloat 型の 4 要素の内積" alt="" coords="328,5,413,32"/>
 </map>
 </div>
 <div class="dynheader">
@@ -3463,8 +3660,8 @@ $(function() {
 <div class="dyncontent">
 <div class="center"><img src="namespacegg_ab2f149e2a719574c966ff6ad0fdc17cf_icgraph.png" border="0" usemap="#anamespacegg_ab2f149e2a719574c966ff6ad0fdc17cf_icgraph" alt=""/></div>
 <map name="anamespacegg_ab2f149e2a719574c966ff6ad0fdc17cf_icgraph" id="anamespacegg_ab2f149e2a719574c966ff6ad0fdc17cf_icgraph">
-<area shape="rect" title="4 要素の正規化." alt="" coords="695,31,817,57"/>
-<area shape="rect" href="namespacegg.html#a873c34e94fe830ecf23c12a747b3c8ce" title="GgVector 型の正規化." alt="" coords="478,5,601,32"/>
+<area shape="rect" title="GLfloat 型の 4 要素の正規化." alt="" coords="695,31,817,57"/>
+<area shape="rect" href="namespacegg.html#ab8f809ed8f45e79d9054534d2f86f370" title="GgVector 型の 4 要素の正規化." alt="" coords="478,5,601,32"/>
 <area shape="rect" href="classgg_1_1GgQuaternion.html#af529d76bbf4048ad56625575c7af3668" title="引数に指定した四元数を正規化して格納する." alt="" coords="432,56,647,83"/>
 <area shape="rect" href="classgg_1_1GgQuaternion.html#a2b6ba23dc4182f8e711defc9a0f33436" title="引数に指定した四元数を正規化して格納する." alt="" coords="169,31,384,57"/>
 <area shape="rect" href="classgg_1_1GgQuaternion.html#a8667e065b18d857126f5481d0be8d527" title="正規化する." alt="" coords="183,81,371,108"/>
@@ -3546,7 +3743,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>求めた直交投影変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03115">3115</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02942">2942</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -3617,7 +3814,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>求めた透視投影変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03147">3147</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02974">2974</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -3686,7 +3883,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05088">5088</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05119">5119</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -3746,7 +3943,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05118">5118</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05149">5149</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -3783,7 +3980,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>四元数. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04047">4047</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03874">3874</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -3855,7 +4052,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>四元数. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04038">4038</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03865">3865</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -3910,7 +4107,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>四元数 q が表す回転に相当する <a class="el" href="classgg_1_1GgMatrix.html" title="変換行列.">GgMatrix</a> 型の変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04080">4080</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03907">3907</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -3957,7 +4154,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>四元数 q が表す回転に相当する転置した <a class="el" href="classgg_1_1GgMatrix.html" title="変換行列.">GgMatrix</a> 型の変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04091">4091</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03918">3918</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -4028,7 +4225,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>読み込みに成功すれば true, 失敗すれば false. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l02801">2801</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03572">3572</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -4079,7 +4276,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05149">5149</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05180">5180</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -4116,7 +4313,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>(r[0], r[1], r[2]) を軸に r[3] だけ回転する変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03050">3050</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02877">2877</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -4173,7 +4370,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>r を軸に a だけ回転する変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03032">3032</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02859">2859</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -4219,7 +4416,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>(r[0], r[1], r[2]) を軸に r[3] だけ回転する変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03041">3041</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02868">2868</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -4276,7 +4473,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>r を軸に a だけ回転する変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03022">3022</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02849">2849</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -4347,7 +4544,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>(x, y, z) を軸にさらに a 回転する変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03012">3012</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02839">2839</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -4393,7 +4590,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>回転を表す四元数. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04123">4123</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03950">3950</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -4451,7 +4648,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>回転を表す四元数. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04115">4115</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03942">3942</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -4523,7 +4720,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>回転を表す四元数. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04105">4105</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03932">3932</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -4579,7 +4776,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>x 軸中心に a だけ回転する変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02982">2982</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02809">2809</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -4625,7 +4822,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>y 軸中心に a だけ回転する変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02991">2991</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02818">2818</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -4671,7 +4868,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>z 軸中心に a だけ回転する変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03000">3000</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02827">2827</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -4709,7 +4906,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>保存に成功すれば true, 失敗すれば false. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l02745">2745</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03516">3516</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -4747,7 +4944,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>保存に成功すれば true, 失敗すれば false. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l02771">2771</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03542">3542</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -4817,7 +5014,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>保存に成功すれば true, 失敗すれば false. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l02655">2655</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03426">3426</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -4864,7 +5061,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>拡大縮小の変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02973">2973</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02800">2800</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -4910,7 +5107,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>拡大縮小の変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02964">2964</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02791">2791</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -4981,7 +5178,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>拡大縮小の変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02955">2955</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02782">2782</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -5045,7 +5242,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>q, r を t で内分した四元数. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04163">4163</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03990">3990</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -5110,7 +5307,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>q, a を t で内分した四元数. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04173">4173</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04000">4000</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -5175,7 +5372,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a, q を t で内分した四元数. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04183">4183</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04010">4010</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -5240,7 +5437,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a, b を t で内分した四元数. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04152">4152</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03979">3979</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -5295,7 +5492,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>平行移動の変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02943">2943</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02770">2770</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -5341,7 +5538,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>平行移動の変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02934">2934</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02761">2761</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -5412,7 +5609,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>平行移動の変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02925">2925</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02752">2752</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -5458,7 +5655,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>m の転置行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l03159">3159</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l02986">2986</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -5516,7 +5713,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a の各要素と b の各要素の要素ごとの積. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01746">1746</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01680">1680</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -5564,7 +5761,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a の各要素に b を乗じた積. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01886">1886</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01820">1820</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -5612,7 +5809,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a に b の各要素を乗じた積. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01898">1898</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01832">1832</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -5660,7 +5857,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a の各要素に b の各要素をそれぞれ乗算した a の参照. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01758">1758</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01692">1692</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -5708,12 +5905,49 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a の各要素に b を乗じた a の参照. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01910">1910</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01844">1844</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac3bd07674d292ebd94bc75bb566febb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3bd07674d292ebd94bc75bb566febb6">&#9670;&nbsp;</a></span>operator+() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a>&amp; gg::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>何もしない. </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>GgVector 型の変数. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>a の値. </dd></dl>
+
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01599">1599</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <a id="abe9271f9e8a841f09f08889d609e0ae3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe9271f9e8a841f09f08889d609e0ae3">&#9670;&nbsp;</a></span>operator+() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abe9271f9e8a841f09f08889d609e0ae3">&#9670;&nbsp;</a></span>operator+() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5756,12 +5990,12 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a の各要素と b の各要素の要素ごとの和. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01688">1688</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01611">1611</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <a id="a253d7d5f46597b05469639da2cb54a85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a253d7d5f46597b05469639da2cb54a85">&#9670;&nbsp;</a></span>operator+() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a253d7d5f46597b05469639da2cb54a85">&#9670;&nbsp;</a></span>operator+() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5804,12 +6038,12 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a の各要素に b を足した和. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01804">1804</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01738">1738</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <a id="a81d4595fb49bfc30c3b77c34a86b90f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81d4595fb49bfc30c3b77c34a86b90f2">&#9670;&nbsp;</a></span>operator+() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a81d4595fb49bfc30c3b77c34a86b90f2">&#9670;&nbsp;</a></span>operator+() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5852,7 +6086,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a に b の各要素を足した和. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01816">1816</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01750">1750</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -5900,7 +6134,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a の各要素に b の各要素をそれぞれ加算した a の参照. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01700">1700</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01623">1623</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -5948,12 +6182,49 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a の各要素に b を足した a の参照. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01828">1828</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01762">1762</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aadf890eacba9559f8636393149f115da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadf890eacba9559f8636393149f115da">&#9670;&nbsp;</a></span>operator-() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> gg::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>符号の反転. </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>GgVector 型の変数. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>a の値の符号を反転した結果. </dd></dl>
+
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01639">1639</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <a id="a2389be6fd1af2efa649379ce8879ede6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2389be6fd1af2efa649379ce8879ede6">&#9670;&nbsp;</a></span>operator-() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2389be6fd1af2efa649379ce8879ede6">&#9670;&nbsp;</a></span>operator-() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5996,12 +6267,12 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a の各要素から b の各要素を要素ごとに引いた結果. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01717">1717</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01651">1651</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <a id="ab86eef5da99d0f24016950f5c8c56086"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab86eef5da99d0f24016950f5c8c56086">&#9670;&nbsp;</a></span>operator-() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab86eef5da99d0f24016950f5c8c56086">&#9670;&nbsp;</a></span>operator-() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6044,12 +6315,12 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a の各要素から b を引いた差. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01845">1845</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01779">1779</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <a id="a9049da1fd7b42bebbec6de7604d4dc90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9049da1fd7b42bebbec6de7604d4dc90">&#9670;&nbsp;</a></span>operator-() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9049da1fd7b42bebbec6de7604d4dc90">&#9670;&nbsp;</a></span>operator-() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6092,7 +6363,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a から b の各要素を引いた差. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01857">1857</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01791">1791</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -6140,7 +6411,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a の各要素から b の各要素をそれぞれ減算した a の参照. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01729">1729</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01663">1663</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -6188,7 +6459,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a の各要素から b を引いた a の参照. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01869">1869</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01803">1803</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -6236,7 +6507,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a の各要素を b の各要素で要素ごとに割った結果. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01775">1775</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01709">1709</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -6284,7 +6555,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a の各要素を b で割った商. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01927">1927</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01861">1861</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -6332,7 +6603,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a を b の各要素で割った商. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01939">1939</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01873">1873</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -6380,7 +6651,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a の各要素を b の各要素でそれぞれ割った a の参照. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01787">1787</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01721">1721</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -6428,7 +6699,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>a の各要素を b で割った a の参照. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01951">1951</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01885">1885</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -6461,7 +6732,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2021年09月29日(水) 17時31分47秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2022年04月11日(月) 09時40分41秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -75,9 +75,10 @@ $(function() {
 <h1><a class="anchor" id="autotoc_md2"></a>
 宿題プログラムの作成に必要な環境</h1>
 <ul>
-<li>Linux Mint 18.3 / Windows 10 (Visual Studio 2017) / macOS 10.15 (Xcode 11) 以降に対応しています。</li>
+<li>Linux Mint 20.2 / Windows 10 (Visual Studio 2019) / macOS 12.1 (Xcode 13) 以降に対応しています。</li>
 <li>OpenGL 4.1 以降が実行できる環境 (対応した GPU を搭載したビデオカード や CPU) が必要です。</li>
 <li>macOS では M1 Mac (Apple Silicon) に対応した Universal Binary を作成するようにしています。</li>
+<li>Raspberry Pi 4B にも対応しました。<code>make -f Makefile.rpi</code> でビルドしてください。</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md3"></a>
 補足</h1>
@@ -109,12 +110,12 @@ $(function() {
 <p>Doxygen で生成したドキュメントの <a href="html/index.html">HTML 版</a>を html フォルダに、<a href="pdf/refman.pdf">PDF 版</a>を pdf フォルダに置いています。</p>
 <h2><a class="anchor" id="autotoc_md6"></a>
 補助プログラムの使い方</h2>
-<p>補助プログラムを使用するには、最小限、GLFW が使える環境が必要です。ゲームグラフィックス特論 A / B の宿題のリポジトリには Windows 用、macOS 用、および Linux 用にコンパイルしたライブラリファイル一式を含めていますので、宿題のために別に用意する必要はありません。gg.h, <a class="el" href="gg_8cpp.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の定義.">gg.cpp</a>, <a class="el" href="Window_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.">Window.h</a> だけを使うときは、それぞれの環境で GLFW をインストールしておいてください。この補助プログラムを使用した最小のプログラムは、多分こんな感じになります。このソースファイルと同じところに <a class="el" href="gg_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言.">gg.h</a>, <a class="el" href="gg_8cpp.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の定義.">gg.cpp</a>, <a class="el" href="Window_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.">Window.h</a> を置き、gg.cpp と一緒にコンパイルして、GLFW のライブラリファイルをリンクしてください。</p>
+<p>補助プログラムを使用するには、最小限、GLFW が使える環境が必要です。ゲームグラフィックス特論 A / B の宿題のリポジトリには Windows 用および macOS 用にコンパイルしたライブラリファイル一式を含めていますので、これらについては宿題のために別に用意する必要はありません。Linux (および Raspberry Pi) では libglfw3-dev パッケージをインストールしておいてください (<code>% sudo apt-get install libglfw3-dev</code>)。gg.h, <a class="el" href="gg_8cpp.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の定義.">gg.cpp</a>, <a class="el" href="Window_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.">Window.h</a> だけを使うときは、それぞれの環境で GLFW をインストールしておいてください。この補助プログラムを使用した最小のプログラムは、多分こんな感じになります。このソースファイルと同じところに <a class="el" href="gg_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言.">gg.h</a>, <a class="el" href="gg_8cpp.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の定義.">gg.cpp</a>, <a class="el" href="Window_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.">Window.h</a> を置き、gg.cpp と一緒にコンパイルして、GLFW のライブラリファイルをリンクしてください。</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="Window_8h.html">Window.h</a>&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525">main</a>()</div>
 <div class="line">{</div>
-<div class="line">    <a class="code" href="classWindow.html#a5ca61ecd518dc976306b922b1425adc9">Window::init</a>();</div>
+<div class="line">    Window::init();</div>
 <div class="line"> </div>
 <div class="line">    <a class="code" href="classWindow.html">Window</a> window;</div>
 <div class="line"> </div>
@@ -127,11 +128,10 @@ $(function() {
 <div class="line">}</div>
 <div class="ttc" id="aWindow_8h_html"><div class="ttname"><a href="Window_8h.html">Window.h</a></div><div class="ttdoc">ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.</div></div>
 <div class="ttc" id="aclassWindow_html"><div class="ttname"><a href="classWindow.html">Window</a></div><div class="ttdoc">ウィンドウ関連の処理.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00092">Window.h:93</a></div></div>
-<div class="ttc" id="aclassWindow_html_a5ca61ecd518dc976306b922b1425adc9"><div class="ttname"><a href="classWindow.html#a5ca61ecd518dc976306b922b1425adc9">Window::init</a></div><div class="ttdeci">static void init(int major=0, int minor=1)</div><div class="ttdoc">ゲームグラフィックス特論の宿題用補助プログラムの初期化, 最初に一度だけ実行する.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00391">Window.h:391</a></div></div>
 <div class="ttc" id="amain_8cpp_html_a110745d0e996bc19a8c8e8cacbadd525"><div class="ttname"><a href="main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525">main</a></div><div class="ttdeci">int main(int argc, const char *const *argv)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00023">main.cpp:23</a></div></div>
 </div><!-- fragment --><p>使用する OpenGL のバージョンは、<code>Window::init(major, minor)</code> の <code>major</code> と <code>minor</code> で指定できます。<code>major</code> を 0 にするか省略すると、OpenGL のバージョンの指定を行いません。その場合は、macOS 以外では恐らく OpenGL のハードウェアもしくはドライバで対応可能な最大のバージョンが使用されます。なお、3.2 以降を指定したときは <b>macOS 対応の都合で</b> forward compatible プロファイルと core プロファイルを有効にします。macOS の場合は <code>Window::init(3, 2)</code> もしくは <code>Window::init(4, 1)</code> を指定してください。</p>
 <div class="fragment"><div class="line"><span class="comment">// for macOS</span></div>
-<div class="line"><a class="code" href="classWindow.html#a5ca61ecd518dc976306b922b1425adc9">Window::init</a>(4, 1);</div>
+<div class="line">Window::init(4, 1);</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md7"></a>
 Oculus Rift を使う場合</h2>
 <p><code>#include "Window.h"</code> の前に <code>#define USE_OCULUS_RIFT</code> を置いてください。DK1 / DK2 用か CV1 / S 用かは、使用する LibOVR のバージョンが 1.0 以前か以降かで判断しています。ただし DK1 / DK2 用 (LibOVR 0.8) のサポートは、今後は継続しない可能性があります。</p>
@@ -160,7 +160,7 @@ Dear ImGui を使う場合</h2>
 <div class="line"><span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525">main</a>()</div>
 <div class="line">{</div>
 <div class="line">  <span class="comment">// ウィンドウ関連の初期設定</span></div>
-<div class="line">  <a class="code" href="classWindow.html#a5ca61ecd518dc976306b922b1425adc9">Window::init</a>(4, 1);</div>
+<div class="line">  Window::init(4, 1);</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// ウィンドウを作成する</span></div>
 <div class="line">  <a class="code" href="classWindow.html">Window</a> window(<span class="stringliteral">&quot;Window Title&quot;</span>, 1280, 720);</div>
@@ -197,14 +197,15 @@ Dear ImGui を使う場合</h2>
 <div class="line">    window.<a class="code" href="classWindow.html#af6ffedb8d12d5551bdb4c298de87ed56">swapBuffers</a>();</div>
 <div class="line">  }</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassWindow_html_a7dd6ce09e1d68c8576376179aa54fc79"><div class="ttname"><a href="classWindow.html#a7dd6ce09e1d68c8576376179aa54fc79">Window::setClose</a></div><div class="ttdeci">void setClose(int flag=GLFW_TRUE) const</div><div class="ttdoc">ウィンドウのクローズフラグを設定する.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00556">Window.h:556</a></div></div>
-<div class="ttc" id="aclassWindow_html_af6ffedb8d12d5551bdb4c298de87ed56"><div class="ttname"><a href="classWindow.html#af6ffedb8d12d5551bdb4c298de87ed56">Window::swapBuffers</a></div><div class="ttdeci">void swapBuffers()</div><div class="ttdoc">カラーバッファを入れ替える.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00623">Window.h:623</a></div></div>
+<div class="ttc" id="aclassWindow_html_a7dd6ce09e1d68c8576376179aa54fc79"><div class="ttname"><a href="classWindow.html#a7dd6ce09e1d68c8576376179aa54fc79">Window::setClose</a></div><div class="ttdeci">void setClose(int flag=GLFW_TRUE) const</div><div class="ttdoc">ウィンドウのクローズフラグを設定する.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00581">Window.h:581</a></div></div>
+<div class="ttc" id="aclassWindow_html_af6ffedb8d12d5551bdb4c298de87ed56"><div class="ttname"><a href="classWindow.html#af6ffedb8d12d5551bdb4c298de87ed56">Window::swapBuffers</a></div><div class="ttdeci">void swapBuffers()</div><div class="ttdoc">カラーバッファを入れ替える.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00648">Window.h:648</a></div></div>
 </div><!-- fragment --><p>このソースファイルと Dear ImGui に含まれる以下のファイル、および <a class="el" href="gg_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言.">gg.h</a>, <a class="el" href="gg_8cpp.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の定義.">gg.cpp</a>, <a class="el" href="Window_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.">Window.h</a> を同じところに置き、gg.cpp と以下のうちの *.cpp ファイルと一緒にコンパイルして、GLFW のライブラリファイルをリンクしてください。</p>
 <blockquote class="doxtable">
 <p>imconfig.h <br  />
  imgui.h <br  />
  imgui_impl_glfw.h <br  />
  imgui_impl_opengl3.h <br  />
+ imgui_impl_opengl3_loader.h <br  />
  imgui_internal.h <br  />
  imstb_rectpack.h <br  />
  imstb_textedit.h <br  />
@@ -222,14 +223,16 @@ Dear ImGui を使う場合</h2>
 </blockquote>
 <h3><a class="anchor" id="autotoc_md9"></a>
 imconfig.h の変更点</h3>
-<p>Dear ImGui は使用している OpenGL のローダを自動判別するのですが、この授業オリジナルの <a class="el" href="gg_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言.">gg.h</a> / <a class="el" href="gg_8cpp.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の定義.">gg.cpp</a> は見つけてくれません。そこで、この中の imconfig.h の**最後**に、以下の定義を追加しています。</p>
-<div class="fragment"><div class="line"><span class="comment">// My custum OpenGL loader</span></div>
-<div class="line"><span class="preprocessor">#define IMGUI_IMPL_OPENGL_LOADER_CUSTOM &quot;../gg.h&quot;</span></div>
+<p>Dear ImGui はバージョン 1.86 から独自のローダを使用するようになったので、<code>IMGUI_IMPL_OPENGL_LOADER_CUSTOM</code> にこの授業オリジナルのローダ <code><a class="el" href="gg_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言.">gg.h</a></code> / <code><a class="el" href="gg_8cpp.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の定義.">gg.cpp</a></code> を指定する必要はありません。ただし、Raspberry Pi では imconfig.h の**最後**で記号定数 <code>IMGUI_IMPL_OPENGL_ES3</code> を明示的に定義する必要があります。</p>
+<div class="fragment"><div class="line"><span class="comment">// The Raspberry Pi needs to explicitly define the symbolic constant IMGUI_IMPL_OPENGL_ES3. </span></div>
+<div class="line"><span class="preprocessor">#if defined(__RASPBERRY_PI__)</span></div>
+<div class="line"><span class="preprocessor">#  define IMGUI_IMPL_OPENGL_ES3</span></div>
+<div class="line"><span class="preprocessor">#endif</span></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2021年09月29日(水) 17時31分47秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2022年04月11日(月) 09時40分39秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -94,6 +94,11 @@ class Window
   // ウィンドウの識別子
   GLFWwindow* window;
 
+#if defined(IMGUI_VERSION)
+  // 生成したウィンドウの数
+  static int count;
+#endif
+
   // ビューポートの横幅と高さ
   std::array<GLsizei, 2> size;
 
@@ -532,9 +537,13 @@ public:
     glfwSetFramebufferSizeCallback(window, resize);
 
 #if defined(IMGUI_VERSION)
-    // Setup Platform/Renderer bindings
-    ImGui_ImplGlfw_InitForOpenGL(window, true);
-    ImGui_ImplOpenGL3_Init(nullptr);
+    // 最初のウィンドウを開いたときは
+    if (count++ == 0)
+    {
+      // Setup Platform/Renderer bindings
+      ImGui_ImplGlfw_InitForOpenGL(window, true);
+      ImGui_ImplOpenGL3_Init(nullptr);
+    }
 #endif
 
     // 垂直同期タイミングに合わせる
@@ -560,9 +569,13 @@ public:
     if (!window) return;
 
 #if defined(IMGUI_VERSION)
-    // Shutdown Platform/Renderer bindings
-    ImGui_ImplOpenGL3_Shutdown();
-    ImGui_ImplGlfw_Shutdown();
+    // 最後のウィンドウを閉じたときは
+    if (--count == 0)
+    {
+      // Shutdown Platform/Renderer bindings
+      ImGui_ImplOpenGL3_Shutdown();
+      ImGui_ImplGlfw_Shutdown();
+    }
 #endif
 
     // ウィンドウを破棄する
@@ -607,8 +620,8 @@ public:
 #if defined(IMGUI_VERSION)
 
     // ImGui の新規フレームを作成する
-    ImGui_ImplOpenGL3_NewFrame();
     ImGui_ImplGlfw_NewFrame();
+    ImGui_ImplOpenGL3_NewFrame();
 
     // ImGui の状態を取り出す
     const ImGuiIO& io{ ImGui::GetIO() };
@@ -648,8 +661,9 @@ public:
   void swapBuffers()
   {
 #if defined(IMGUI_VERSION)
-    // ImGui のフレームをレンダリングする
-    ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+    // ImGui の描画データがあればフレームをレンダリングする
+    ImDrawData* data{ ImGui::GetDrawData() };
+    if (data) ImGui_ImplOpenGL3_RenderDrawData(data);
 #endif
 
     // エラーチェック

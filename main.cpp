@@ -68,3 +68,8 @@ catch (const std::runtime_error &e)
   // ブログラムを終了する
   return EXIT_FAILURE;
 }
+
+#if defined(IMGUI_VERSION)
+// 生成したウィンドウの数
+int Window::count{ 0 };
+#endif
