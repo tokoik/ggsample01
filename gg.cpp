@@ -2639,6 +2639,7 @@ void gg::_ggFBOError(const std::string& name, unsigned int line)
       " and any populated attachment is not layered,"
       " or if all populated color attachments are not from textures"
       " of the same target" << std::endl;
+      break;
     case GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER:
       std::cerr << "Framebuffer incomplete, missing draw buffer" << std::endl;
       break;
@@ -2682,10 +2683,10 @@ void gg::GgMatrix::multiply(GLfloat* c, const GLfloat* a, const GLfloat* b) cons
 */
 gg::GgMatrix& gg::GgMatrix::loadIdentity()
 {
-  (*this)[ 1] = (*this)[ 2] = (*this)[ 3] = (*this)[ 4] =
-  (*this)[ 6] = (*this)[ 7] = (*this)[ 8] = (*this)[ 9] =
-  (*this)[11] = (*this)[12] = (*this)[13] = (*this)[14] = 0.0f;
-  (*this)[ 0] = (*this)[ 5] = (*this)[10] = (*this)[15] = 1.0f;
+  data()[ 1] = data()[ 2] = data()[ 3] = data()[ 4] =
+  data()[ 6] = data()[ 7] = data()[ 8] = data()[ 9] =
+  data()[11] = data()[12] = data()[13] = data()[14] = 0.0f;
+  data()[ 0] = data()[ 5] = data()[10] = data()[15] = 1.0f;
 
   return *this;
 }
@@ -2695,13 +2696,13 @@ gg::GgMatrix& gg::GgMatrix::loadIdentity()
 */
 gg::GgMatrix& gg::GgMatrix::loadTranslate(GLfloat x, GLfloat y, GLfloat z, GLfloat w)
 {
-  (*this)[12] = x;
-  (*this)[13] = y;
-  (*this)[14] = z;
-  (*this)[ 0] = (*this)[ 5] = (*this)[10] = (*this)[15] = w;
-  (*this)[ 1] = (*this)[ 2] = (*this)[ 3] = (*this)[ 4] =
-  (*this)[ 6] = (*this)[ 7] = (*this)[ 8] = (*this)[ 9] =
-  (*this)[11] = 0.0f;
+  data()[12] = x;
+  data()[13] = y;
+  data()[14] = z;
+  data()[ 0] = data()[ 5] = data()[10] = data()[15] = w;
+  data()[ 1] = data()[ 2] = data()[ 3] = data()[ 4] =
+  data()[ 6] = data()[ 7] = data()[ 8] = data()[ 9] =
+  data()[11] = 0.0f;
 
   return *this;
 }
@@ -2711,13 +2712,13 @@ gg::GgMatrix& gg::GgMatrix::loadTranslate(GLfloat x, GLfloat y, GLfloat z, GLflo
 */
 gg::GgMatrix& gg::GgMatrix::loadScale(GLfloat x, GLfloat y, GLfloat z, GLfloat w)
 {
-  (*this)[ 0] = x;
-  (*this)[ 5] = y;
-  (*this)[10] = z;
-  (*this)[15] = w;
-  (*this)[ 1] = (*this)[ 2] = (*this)[ 3] = (*this)[ 4] =
-  (*this)[ 6] = (*this)[ 7] = (*this)[ 8] = (*this)[ 9] =
-  (*this)[11] = (*this)[12] = (*this)[13] = (*this)[14] = 0.0f;
+  data()[ 0] = x;
+  data()[ 5] = y;
+  data()[10] = z;
+  data()[15] = w;
+  data()[ 1] = data()[ 2] = data()[ 3] = data()[ 4] =
+  data()[ 6] = data()[ 7] = data()[ 8] = data()[ 9] =
+  data()[11] = data()[12] = data()[13] = data()[14] = 0.0f;
 
   return *this;
 }
@@ -2730,10 +2731,10 @@ gg::GgMatrix& gg::GgMatrix::loadRotateX(GLfloat a)
   const GLfloat c{ cosf(a) };
   const GLfloat s{ sinf(a) };
 
-  (*this)[ 0] = 1.0f; (*this)[ 1] = 0.0f; (*this)[ 2] = 0.0f; (*this)[ 3] = 0.0f;
-  (*this)[ 4] = 0.0f; (*this)[ 5] = c;    (*this)[ 6] = s;    (*this)[ 7] = 0.0f;
-  (*this)[ 8] = 0.0f; (*this)[ 9] = -s;   (*this)[10] = c;    (*this)[11] = 0.0f;
-  (*this)[12] = 0.0f; (*this)[13] = 0.0f; (*this)[14] = 0.0f; (*this)[15] = 1.0f;
+  data()[ 0] = 1.0f; data()[ 1] = 0.0f; data()[ 2] = 0.0f; data()[ 3] = 0.0f;
+  data()[ 4] = 0.0f; data()[ 5] = c;    data()[ 6] = s;    data()[ 7] = 0.0f;
+  data()[ 8] = 0.0f; data()[ 9] = -s;   data()[10] = c;    data()[11] = 0.0f;
+  data()[12] = 0.0f; data()[13] = 0.0f; data()[14] = 0.0f; data()[15] = 1.0f;
 
   return *this;
 }
@@ -2746,10 +2747,10 @@ gg::GgMatrix& gg::GgMatrix::loadRotateY(GLfloat a)
   const GLfloat c{ cosf(a) };
   const GLfloat s{ sinf(a) };
 
-  (*this)[ 0] = c;    (*this)[ 1] = 0.0f; (*this)[ 2] = -s;   (*this)[ 3] = 0.0f;
-  (*this)[ 4] = 0.0f; (*this)[ 5] = 1.0f; (*this)[ 6] = 0.0f; (*this)[ 7] = 0.0f;
-  (*this)[ 8] = s;    (*this)[ 9] = 0.0f; (*this)[10] = c;    (*this)[11] = 0.0f;
-  (*this)[12] = 0.0f; (*this)[13] = 0.0f; (*this)[14] = 0.0f; (*this)[15] = 1.0f;
+  data()[ 0] = c;    data()[ 1] = 0.0f; data()[ 2] = -s;   data()[ 3] = 0.0f;
+  data()[ 4] = 0.0f; data()[ 5] = 1.0f; data()[ 6] = 0.0f; data()[ 7] = 0.0f;
+  data()[ 8] = s;    data()[ 9] = 0.0f; data()[10] = c;    data()[11] = 0.0f;
+  data()[12] = 0.0f; data()[13] = 0.0f; data()[14] = 0.0f; data()[15] = 1.0f;
 
   return *this;
 }
@@ -2762,10 +2763,10 @@ gg::GgMatrix& gg::GgMatrix::loadRotateZ(GLfloat a)
   const GLfloat c{ cosf(a) };
   const GLfloat s{ sinf(a) };
 
-  (*this)[ 0] = c;    (*this)[ 1] = s;    (*this)[ 2] = 0.0f; (*this)[ 3] = 0.0f;
-  (*this)[ 4] = -s;   (*this)[ 5] = c;    (*this)[ 6] = 0.0f; (*this)[ 7] = 0.0f;
-  (*this)[ 8] = 0.0f; (*this)[ 9] = 0.0f; (*this)[10] = 1.0f; (*this)[11] = 0.0f;
-  (*this)[12] = 0.0f; (*this)[13] = 0.0f; (*this)[14] = 0.0f; (*this)[15] = 1.0f;
+  data()[ 0] = c;    data()[ 1] = s;    data()[ 2] = 0.0f; data()[ 3] = 0.0f;
+  data()[ 4] = -s;   data()[ 5] = c;    data()[ 6] = 0.0f; data()[ 7] = 0.0f;
+  data()[ 8] = 0.0f; data()[ 9] = 0.0f; data()[10] = 1.0f; data()[11] = 0.0f;
+  data()[12] = 0.0f; data()[13] = 0.0f; data()[14] = 0.0f; data()[15] = 1.0f;
 
   return *this;
 }
@@ -2779,31 +2780,31 @@ gg::GgMatrix& gg::GgMatrix::loadRotate(GLfloat x, GLfloat y, GLfloat z, GLfloat 
 
   if (d > 0.0f)
   {
-    const GLfloat l(x / d), m(y / d), n(z / d);
-    const GLfloat l2(l * l), m2(m * m), n2(n * n);
-    const GLfloat lm(l * m), mn(m * n), nl(n * l);
-    const GLfloat c(cosf(a)), c1(1.0f - c);
-    const GLfloat s(sinf(a));
+    const GLfloat l{ x / d }, m{ y / d }, n{ z / d };
+    const GLfloat l2{ l * l }, m2{ m * m }, n2{ n * n };
+    const GLfloat lm{ l * m }, mn{ m * n }, nl{ n * l };
+    const GLfloat c{ cosf(a) }, c1{ 1.0f - c };
+    const GLfloat s{ sinf(a) };
 
-    (*this)[ 0] = (1.0f - l2) * c + l2;
-    (*this)[ 1] = lm * c1 + n * s;
-    (*this)[ 2] = nl * c1 - m * s;
-    (*this)[ 3] = 0.0f;
+    data()[ 0] = (1.0f - l2) * c + l2;
+    data()[ 1] = lm * c1 + n * s;
+    data()[ 2] = nl * c1 - m * s;
+    data()[ 3] = 0.0f;
 
-    (*this)[ 4] = lm * c1 - n * s;
-    (*this)[ 5] = (1.0f - m2) * c + m2;
-    (*this)[ 6] = mn * c1 + l * s;
-    (*this)[ 7] = 0.0f;
+    data()[ 4] = lm * c1 - n * s;
+    data()[ 5] = (1.0f - m2) * c + m2;
+    data()[ 6] = mn * c1 + l * s;
+    data()[ 7] = 0.0f;
 
-    (*this)[ 8] = nl * c1 + m * s;
-    (*this)[ 9] = mn * c1 - l * s;
-    (*this)[10] = (1.0f - n2) * c + n2;
-    (*this)[11] = 0.0f;
+    data()[ 8] = nl * c1 + m * s;
+    data()[ 9] = mn * c1 - l * s;
+    data()[10] = (1.0f - n2) * c + n2;
+    data()[11] = 0.0f;
 
-    (*this)[12] = 0.0f;
-    (*this)[13] = 0.0f;
-    (*this)[14] = 0.0f;
-    (*this)[15] = 1.0f;
+    data()[12] = 0.0f;
+    data()[13] = 0.0f;
+    data()[14] = 0.0f;
+    data()[15] = 1.0f;
   }
 
   return *this;
@@ -2814,22 +2815,22 @@ gg::GgMatrix& gg::GgMatrix::loadRotate(GLfloat x, GLfloat y, GLfloat z, GLfloat 
 */
 gg::GgMatrix& gg::GgMatrix::loadTranspose(const GLfloat* marray)
 {
-  (*this)[ 0] = marray[ 0];
-  (*this)[ 1] = marray[ 4];
-  (*this)[ 2] = marray[ 8];
-  (*this)[ 3] = marray[12];
-  (*this)[ 4] = marray[ 1];
-  (*this)[ 5] = marray[ 5];
-  (*this)[ 6] = marray[ 9];
-  (*this)[ 7] = marray[13];
-  (*this)[ 8] = marray[ 2];
-  (*this)[ 9] = marray[ 6];
-  (*this)[10] = marray[10];
-  (*this)[11] = marray[14];
-  (*this)[12] = marray[ 3];
-  (*this)[13] = marray[ 7];
-  (*this)[14] = marray[11];
-  (*this)[15] = marray[15];
+  data()[ 0] = marray[ 0];
+  data()[ 1] = marray[ 4];
+  data()[ 2] = marray[ 8];
+  data()[ 3] = marray[12];
+  data()[ 4] = marray[ 1];
+  data()[ 5] = marray[ 5];
+  data()[ 6] = marray[ 9];
+  data()[ 7] = marray[13];
+  data()[ 8] = marray[ 2];
+  data()[ 9] = marray[ 6];
+  data()[10] = marray[10];
+  data()[11] = marray[14];
+  data()[12] = marray[ 3];
+  data()[13] = marray[ 7];
+  data()[14] = marray[11];
+  data()[15] = marray[15];
 
   return *this;
 }
@@ -2893,23 +2894,23 @@ gg::GgMatrix& gg::GgMatrix::loadInvert(const GLfloat* marray)
     // array に単位行列を設定する
     for (int i = 0; i < 4; ++i)
     {
-      (*this)[i * 4 + k] = (plu[i] == lu + k * 5) ? 1.0f : 0.0f;
+      data()[i * 4 + k] = (plu[i] == lu + k * 5) ? 1.0f : 0.0f;
     }
     // lu から逆行列を求める
     for (int i = 0; i < 4; ++i)
     {
       for (int j = i; ++j < 4;)
       {
-        (*this)[j * 4 + k] -= (*this)[i * 4 + k] * plu[j][i];
+        data()[j * 4 + k] -= data()[i * 4 + k] * plu[j][i];
       }
     }
     for (int i = 4; --i >= 0;)
     {
       for (int j = i; ++j < 4;)
       {
-        (*this)[i * 4 + k] -= plu[i][j] * (*this)[j * 4 + k];
+        data()[i * 4 + k] -= plu[i][j] * data()[j * 4 + k];
       }
-      (*this)[i * 4 + k] /= plu[i][i];
+      data()[i * 4 + k] /= plu[i][i];
     }
   }
 
@@ -2921,17 +2922,17 @@ gg::GgMatrix& gg::GgMatrix::loadInvert(const GLfloat* marray)
 */
 gg::GgMatrix& gg::GgMatrix::loadNormal(const GLfloat* marray)
 {
-  (*this)[ 0] = marray[ 5] * marray[10] - marray[ 6] * marray[ 9];
-  (*this)[ 1] = marray[ 6] * marray[ 8] - marray[ 4] * marray[10];
-  (*this)[ 2] = marray[ 4] * marray[ 9] - marray[ 5] * marray[ 8];
-  (*this)[ 4] = marray[ 9] * marray[ 2] - marray[10] * marray[ 1];
-  (*this)[ 5] = marray[10] * marray[ 0] - marray[ 8] * marray[ 2];
-  (*this)[ 6] = marray[ 8] * marray[ 1] - marray[ 9] * marray[ 0];
-  (*this)[ 8] = marray[ 1] * marray[ 6] - marray[ 2] * marray[ 5];
-  (*this)[ 9] = marray[ 2] * marray[ 4] - marray[ 0] * marray[ 6];
-  (*this)[10] = marray[ 0] * marray[ 5] - marray[ 1] * marray[ 4];
-  (*this)[ 3] = (*this)[ 7] = (*this)[11] = (*this)[12] = (*this)[13] = (*this)[14] = 0.0f;
-  (*this)[15] = 1.0f;
+  data()[ 0] = marray[ 5] * marray[10] - marray[ 6] * marray[ 9];
+  data()[ 1] = marray[ 6] * marray[ 8] - marray[ 4] * marray[10];
+  data()[ 2] = marray[ 4] * marray[ 9] - marray[ 5] * marray[ 8];
+  data()[ 4] = marray[ 9] * marray[ 2] - marray[10] * marray[ 1];
+  data()[ 5] = marray[10] * marray[ 0] - marray[ 8] * marray[ 2];
+  data()[ 6] = marray[ 8] * marray[ 1] - marray[ 9] * marray[ 0];
+  data()[ 8] = marray[ 1] * marray[ 6] - marray[ 2] * marray[ 5];
+  data()[ 9] = marray[ 2] * marray[ 4] - marray[ 0] * marray[ 6];
+  data()[10] = marray[ 0] * marray[ 5] - marray[ 1] * marray[ 4];
+  data()[ 3] = data()[ 7] = data()[11] = data()[12] = data()[13] = data()[14] = 0.0f;
+  data()[15] = 1.0f;
 
   return *this;
 }
@@ -2966,30 +2967,30 @@ gg::GgMatrix& gg::GgMatrix::loadLookat(
 
   // x 軸の正規化
   const GLfloat x{ sqrtf(xx * xx + xy * xy + xz * xz) };
-  (*this)[ 0] = xx / x;
-  (*this)[ 4] = xy / x;
-  (*this)[ 8] = xz / x;
+  data()[ 0] = xx / x;
+  data()[ 4] = xy / x;
+  data()[ 8] = xz / x;
 
   // y 軸の正規化
   y = sqrtf(y);
-  (*this)[ 1] = yx / y;
-  (*this)[ 5] = yy / y;
-  (*this)[ 9] = yz / y;
+  data()[ 1] = yx / y;
+  data()[ 5] = yy / y;
+  data()[ 9] = yz / y;
 
   // z 軸の正規化
   const GLfloat z{ sqrtf(zx * zx + zy * zy + zz * zz) };
-  (*this)[ 2] = zx / z;
-  (*this)[ 6] = zy / z;
-  (*this)[10] = zz / z;
+  data()[ 2] = zx / z;
+  data()[ 6] = zy / z;
+  data()[10] = zz / z;
 
   // 平行移動
-  (*this)[12] = -(ex * (*this)[ 0] + ey * (*this)[ 4] + ez * (*this)[ 8]);
-  (*this)[13] = -(ex * (*this)[ 1] + ey * (*this)[ 5] + ez * (*this)[ 9]);
-  (*this)[14] = -(ex * (*this)[ 2] + ey * (*this)[ 6] + ez * (*this)[10]);
+  data()[12] = -(ex * data()[ 0] + ey * data()[ 4] + ez * data()[ 8]);
+  data()[13] = -(ex * data()[ 1] + ey * data()[ 5] + ez * data()[ 9]);
+  data()[14] = -(ex * data()[ 2] + ey * data()[ 6] + ez * data()[10]);
 
   // 残り
-  (*this)[ 3] = (*this)[ 7] = (*this)[11] = 0.0f;
-  (*this)[15] = 1.0f;
+  data()[ 3] = data()[ 7] = data()[11] = 0.0f;
+  data()[15] = 1.0f;
 
   return *this;
 }
@@ -3009,16 +3010,16 @@ gg::GgMatrix& gg::GgMatrix::loadOrthogonal(
 
   if (dx != 0.0f && dy != 0.0f && dz != 0.0f)
   {
-    (*this)[ 0] = 2.0f / dx;
-    (*this)[ 5] = 2.0f / dy;
-    (*this)[10] = -2.0f / dz;
-    (*this)[12] = -(right + left) / dx;
-    (*this)[13] = -(top + bottom) / dy;
-    (*this)[14] = -(zFar + zNear) / dz;
-    (*this)[15] = 1.0f;
-    (*this)[ 1] = (*this)[ 2] = (*this)[ 3] = (*this)[ 4] =
-    (*this)[ 6] = (*this)[ 7] = (*this)[ 8] = (*this)[ 9] =
-    (*this)[11] = 0.0f;
+    data()[ 0] = 2.0f / dx;
+    data()[ 5] = 2.0f / dy;
+    data()[10] = -2.0f / dz;
+    data()[12] = -(right + left) / dx;
+    data()[13] = -(top + bottom) / dy;
+    data()[14] = -(zFar + zNear) / dz;
+    data()[15] = 1.0f;
+    data()[ 1] = data()[ 2] = data()[ 3] = data()[ 4] =
+    data()[ 6] = data()[ 7] = data()[ 8] = data()[ 9] =
+    data()[11] = 0.0f;
   }
 
   return *this;
@@ -3039,16 +3040,16 @@ gg::GgMatrix& gg::GgMatrix::loadFrustum(
 
   if (dx != 0.0f && dy != 0.0f && dz != 0.0f)
   {
-    (*this)[ 0] = 2.0f * zNear / dx;
-    (*this)[ 5] = 2.0f * zNear / dy;
-    (*this)[ 8] = (right + left) / dx;
-    (*this)[ 9] = (top + bottom) / dy;
-    (*this)[10] = -(zFar + zNear) / dz;
-    (*this)[11] = -1.0f;
-    (*this)[14] = -2.0f * zFar * zNear / dz;
-    (*this)[ 1] = (*this)[ 2] = (*this)[ 3] = (*this)[ 4] =
-    (*this)[ 6] = (*this)[ 7] = (*this)[12] = (*this)[13] =
-    (*this)[15] = 0.0f;
+    data()[ 0] = 2.0f * zNear / dx;
+    data()[ 5] = 2.0f * zNear / dy;
+    data()[ 8] = (right + left) / dx;
+    data()[ 9] = (top + bottom) / dy;
+    data()[10] = -(zFar + zNear) / dz;
+    data()[11] = -1.0f;
+    data()[14] = -2.0f * zFar * zNear / dz;
+    data()[ 1] = data()[ 2] = data()[ 3] = data()[ 4] =
+    data()[ 6] = data()[ 7] = data()[12] = data()[13] =
+    data()[15] = 0.0f;
   }
 
   return *this;
@@ -3066,14 +3067,14 @@ gg::GgMatrix& gg::GgMatrix::loadPerspective(
 
   if (dz != 0.0f)
   {
-    (*this)[ 5] = 1.0f / tanf(fovy * 0.5f);
-    (*this)[ 0] = (*this)[ 5] / aspect;
-    (*this)[10] = -(zFar + zNear) / dz;
-    (*this)[11] = -1.0f;
-    (*this)[14] = -2.0f * zFar * zNear / dz;
-    (*this)[ 1] = (*this)[ 2] = (*this)[ 3] = (*this)[ 4] =
-    (*this)[ 6] = (*this)[ 7] = (*this)[ 8] = (*this)[ 9] =
-    (*this)[12] = (*this)[13] = (*this)[15] = 0.0f;
+    data()[ 5] = 1.0f / tanf(fovy * 0.5f);
+    data()[ 0] = data()[ 5] / aspect;
+    data()[10] = -(zFar + zNear) / dz;
+    data()[11] = -1.0f;
+    data()[14] = -2.0f * zFar * zNear / dz;
+    data()[ 1] = data()[ 2] = data()[ 3] = data()[ 4] =
+    data()[ 6] = data()[ 7] = data()[ 8] = data()[ 9] =
+    data()[12] = data()[13] = data()[15] = 0.0f;
   }
 
   return *this;
@@ -3178,15 +3179,15 @@ gg::GgQuaternion& gg::GgQuaternion::loadRotate(GLfloat x, GLfloat y, GLfloat z, 
   {
     GLfloat s{ sinf(a *= 0.5f) / sqrtf(l) };
 
-    (*this)[0] = x * s;
-    (*this)[1] = y * s;
-    (*this)[2] = z * s;
+    data()[0] = x * s;
+    data()[1] = y * s;
+    data()[2] = z * s;
   }
   else
   {
-    (*this)[0] = (*this)[1] = (*this)[2] = 0.0f;
+    data()[0] = data()[1] = data()[2] = 0.0f;
   }
-  (*this)[3] = cosf(a);
+  data()[3] = cosf(a);
 
   return *this;
 }
@@ -3198,9 +3199,9 @@ gg::GgQuaternion& gg::GgQuaternion::loadRotateX(GLfloat a)
 {
   const GLfloat t{ a * 0.5f };
 
-  (*this)[0] = sinf(t);
-  (*this)[3] = cosf(t);
-  (*this)[1] = (*this)[2] = 0.0f;
+  data()[0] = sinf(t);
+  data()[3] = cosf(t);
+  data()[1] = data()[2] = 0.0f;
 
   return *this;
 }
@@ -3212,9 +3213,9 @@ gg::GgQuaternion& gg::GgQuaternion::loadRotateY(GLfloat a)
 {
   const GLfloat t{ a * 0.5f };
 
-  (*this)[1] = sinf(t);
-  (*this)[3] = cosf(t);
-  (*this)[0] = (*this)[2] = 0.0f;
+  data()[1] = sinf(t);
+  data()[3] = cosf(t);
+  data()[0] = data()[2] = 0.0f;
 
   return *this;
 }
@@ -3226,9 +3227,9 @@ gg::GgQuaternion& gg::GgQuaternion::loadRotateZ(GLfloat a)
 {
   const GLfloat t{ a * 0.5f };
 
-  (*this)[2] = sinf(t);
-  (*this)[3] = cosf(t);
-  (*this)[0] = (*this)[1] = 0.0f;
+  data()[2] = sinf(t);
+  data()[3] = cosf(t);
+  data()[0] = data()[1] = 0.0f;
 
   return *this;
 }
@@ -3254,10 +3255,10 @@ gg::GgQuaternion& gg::GgQuaternion::loadEuler(GLfloat heading, GLfloat pitch, GL
 */
 gg::GgQuaternion& gg::GgQuaternion::loadNormalize(const GLfloat* a)
 {
-  (*this)[0] = a[0];
-  (*this)[1] = a[1];
-  (*this)[2] = a[2];
-  (*this)[3] = a[3];
+  data()[0] = a[0];
+  data()[1] = a[1];
+  data()[2] = a[2];
+  data()[3] = a[3];
 
   ggNormalize4(data());
 
@@ -3270,10 +3271,10 @@ gg::GgQuaternion& gg::GgQuaternion::loadNormalize(const GLfloat* a)
 gg::GgQuaternion& gg::GgQuaternion::loadConjugate(const GLfloat* a)
 {
   // w 要素を反転する
-  (*this)[0] = a[0];
-  (*this)[1] = a[1];
-  (*this)[2] = a[2];
-  (*this)[3] = -a[3];
+  data()[0] = a[0];
+  data()[1] = a[1];
+  data()[2] = a[2];
+  data()[3] = -a[3];
 
   return *this;
 }
@@ -3293,10 +3294,10 @@ gg::GgQuaternion& gg::GgQuaternion::loadInvert(const GLfloat* a)
     r.loadConjugate(a);
 
     // ノルムの二乗で割る
-    (*this)[0] = r[0] / l;
-    (*this)[1] = r[1] / l;
-    (*this)[2] = r[2] / l;
-    (*this)[3] = r[3] / l;
+    data()[0] = r[0] / l;
+    data()[1] = r[1] / l;
+    data()[2] = r[2] / l;
+    data()[3] = r[3] / l;
   }
 
   return *this;
@@ -3311,7 +3312,7 @@ void gg::GgTrackball::reset(const GgQuaternion &q)
   drag = false;
 
   // 単位クォーターニオンに初期値を与える
-  *static_cast<GgQuaternion*>(this) = cq = q;
+  this->load(cq = q);
 
   // 回転行列を初期化する
   static_cast<GgQuaternion*>(this)->getMatrix(rt);
@@ -3354,22 +3355,23 @@ void gg::GgTrackball::begin(GLfloat x, GLfloat y)
 */
 void gg::GgTrackball::motion(GLfloat x, GLfloat y)
 {
-  if (drag)
+  // ドラッグ中でなければ何もしない
+  if (!drag) return;
+
+  // マウスポインタの位置のドラッグ開始位置からの変位
+  const GLfloat d[]{ (x - start[0]) * scale[0], (y - start[1]) * scale[1] };
+
+  // マウスポインタの位置のドラッグ開始位置からの距離
+  const GLfloat a{ hypotf(d[0], d[1]) };
+
+  // マウスポインタの位置がドラッグ開始位置から移動していれば
+  if (a > 0.0)
   {
-    // マウスポインタの位置のドラッグ開始位置からの変位
-    const GLfloat d[]{ (x - start[0]) * scale[0], (y - start[1]) * scale[1] };
+    // 現在の回転の四元数に作った四元数を掛けて合成する
+    this->load(ggRotateQuaternion(d[1], d[0], 0.0f, a * 3.1415926536f) * cq);
 
-    // マウスポインタの位置のドラッグ開始位置からの距離
-    const GLfloat a{ sqrtf(d[0] * d[0] + d[1] * d[1]) };
-
-    if (a != 0.0)
-    {
-      // 現在の回転の四元数に作った四元数を掛けて合成する
-      *static_cast<GgQuaternion*>(this) = ggRotateQuaternion(d[1], d[0], 0.0f, a * 3.1415926536f) * cq;
-
-      // 合成した四元数から回転の変換行列を求める
-      static_cast<GgQuaternion*>(this)->getMatrix(rt);
-    }
+    // 合成した四元数から回転の変換行列を求める
+    static_cast<GgQuaternion*>(this)->getMatrix(rt);
   }
 }
 
@@ -3381,17 +3383,17 @@ void gg::GgTrackball::motion(GLfloat x, GLfloat y)
 */
 void gg::GgTrackball::rotate(const GgQuaternion& q)
 {
-  if (!drag)
-  {
-    // 保存されている四元数に修正分の四元数を掛けて合成する
-    *static_cast<GgQuaternion*>(this) = q * cq;
+  // ドラッグ中なら何もしない
+  if (drag) return;
 
-    // 合成した四元数から回転の変換行列を求める
-    static_cast<GgQuaternion*>(this)->getMatrix(rt);
+  // 保存されている四元数に修正分の四元数を掛けて合成する
+  this->load(q * cq);
 
-    // 誤差を吸収するために正規化して保存する
-    cq = normalize();
-  }
+  // 合成した四元数から回転の変換行列を求める
+  static_cast<GgQuaternion*>(this)->getMatrix(rt);
+
+  // 誤差を吸収するために正規化して保存する
+  cq = normalize();
 }
 
 /*
@@ -3525,8 +3527,17 @@ bool gg::ggSaveColor(const std::string& name)
   glFinish();
 
   // カラーバッファを読み込む
+#if defined(GL_GLES_PROTOTYPES)
+  glReadPixels(viewport[0], viewport[1], viewport[2], viewport[3],
+    GL_RGB, GL_UNSIGNED_BYTE, buffer.data());
+
+  // R と B を入れ替える
+  const int count{ viewport[2] * viewport[3] * 3 };
+  for (int i = 0; i < count; i += 3) std::swap(buffer.data()[i], buffer.data()[i + 2]);
+#else
   glReadPixels(viewport[0], viewport[1], viewport[2], viewport[3],
     GL_BGR, GL_UNSIGNED_BYTE, buffer.data());
+#endif
 
   // 読み込んだデータをファイルに書き込む
   return ggSaveTga(name, buffer.data(), viewport[2], viewport[3], 3);
@@ -3714,6 +3725,19 @@ GLuint gg::ggLoadTexture(
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, wrap);
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, wrap);
 
+#if defined(GL_GLES_PROTOTYPES)
+  // OpenGL ES3 では GL_BGR/GL_BGRA が使えない
+  if (format == GL_BGR || format == GL_BGRA)
+  {
+    // テクスチャのサンプリング時に R と B を入れ替える
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_SWIZZLE_R, GL_BLUE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_SWIZZLE_B, GL_RED);
+
+    // テクスチャの外部フォーマットを内部フォーマットと同じにする
+    format = internal;
+}
+#endif
+
   // テクスチャ名を返す
   return tex;
 }
@@ -3756,16 +3780,12 @@ GLuint gg::ggLoadImage(
   {
     switch (format)
     {
-#if GL_BGR != GL_RGB
     case GL_BGR:
       internal = GL_RGB;
       break;
-#endif
-#if GL_BGRA != GL_RGBA
     case GL_BGRA:
       internal = GL_RGBA;
       break;
-#endif
     default:
       internal = format;
       break;
@@ -3821,15 +3841,13 @@ void gg::ggCreateNormalMap(
     stride = 2;
     break;
   case GL_RGB:
-#if GL_BGR != GL_RGB
+    [[fallthrough]];
   case GL_BGR:
-#endif
     stride = 3;
     break;
   case GL_RGBA:
-#if GL_BGRA != GL_RGBA
+    [[fallthrough]];
   case GL_BGRA:
-#endif
     stride = 4;
     break;
   default:
@@ -3952,16 +3970,12 @@ void gg::GgColorTexture::load(
   {
     switch (format)
     {
-#if GL_BGR != GL_RGB
     case GL_BGR:
       internal = GL_RGB;
       break;
-#endif
-#if GL_BGRA != GL_RGBA
     case GL_BGRA:
       internal = GL_RGBA;
       break;
-#endif
     default:
       internal = format;
       break;

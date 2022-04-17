@@ -94,11 +94,6 @@ class Window
   // ウィンドウの識別子
   GLFWwindow* window;
 
-#if defined(IMGUI_VERSION)
-  // 生成したウィンドウの数
-  static int count;
-#endif
-
   // ビューポートの横幅と高さ
   std::array<GLsizei, 2> size;
 
@@ -410,15 +405,6 @@ public:
   //!   \param minor 使用する OpenGL の minor 番号, major 番号が 0 なら無視.
   static void initialize(int major = 0, int minor = 1)
   {
-    // 最初に実行するときだけ true
-    static bool firstTime{ true };
-
-    // 既に実行されていたら何もしない
-    if (!firstTime) return;
-
-    // 初期化済みの印をつける
-    firstTime = false;
-
     // GLFW のエラー処理関数を登録する
     glfwSetErrorCallback(glfwErrorCallback);
 
@@ -536,16 +522,6 @@ public:
     // ウィンドウのサイズ変更時に呼び出す処理を登録する
     glfwSetFramebufferSizeCallback(window, resize);
 
-#if defined(IMGUI_VERSION)
-    // 最初のウィンドウを開いたときは
-    if (count++ == 0)
-    {
-      // Setup Platform/Renderer bindings
-      ImGui_ImplGlfw_InitForOpenGL(window, true);
-      ImGui_ImplOpenGL3_Init(nullptr);
-    }
-#endif
-
     // 垂直同期タイミングに合わせる
     glfwSwapInterval(1);
 
@@ -554,6 +530,28 @@ public:
 
     // ビューポートと投影変換行列を初期化する
     resize(window, width, height);
+
+#if defined(IMGUI_VERSION)
+    // 最初のウィンドウを開いたとき
+    static bool firstTime{ true };
+    if (firstTime)
+    {
+      // Setup Platform/Renderer bindings
+      ImGui_ImplGlfw_InitForOpenGL(window, true);
+      ImGui_ImplOpenGL3_Init(nullptr);
+
+      // アプリケーションを終了するとき
+      atexit([]
+        {
+          // Shutdown Platform/Renderer bindings
+          ImGui_ImplOpenGL3_Shutdown();
+          ImGui_ImplGlfw_Shutdown();
+        });
+
+      // 実行済みであることを記録する
+      firstTime = false;
+    }
+#endif
   }
 
   //! \brief コピーコンストラクタは使用禁止.
@@ -567,16 +565,6 @@ public:
   {
     // ウィンドウが作成されていなければ戻る
     if (!window) return;
-
-#if defined(IMGUI_VERSION)
-    // 最後のウィンドウを閉じたときは
-    if (--count == 0)
-    {
-      // Shutdown Platform/Renderer bindings
-      ImGui_ImplOpenGL3_Shutdown();
-      ImGui_ImplGlfw_Shutdown();
-    }
-#endif
 
     // ウィンドウを破棄する
     glfwDestroyWindow(window);
