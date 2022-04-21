@@ -2629,16 +2629,16 @@ void gg::_ggFBOError(const std::string& name, unsigned int line)
       break;
     case GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE:
       std::cerr << "The value of GL_RENDERBUFFER_SAMPLES is not"
-      " the same for all attached renderbuffers or,"
-      " if the attached images are a mix of renderbuffers and textures,"
-      " the value of GL_RENDERBUFFER_SAMPLES is not zero" << std::endl;
+        " the same for all attached renderbuffers or,"
+        " if the attached images are a mix of renderbuffers and textures,"
+        " the value of GL_RENDERBUFFER_SAMPLES is not zero" << std::endl;
       break;
 #if !defined(GL_GLES_PROTOTYPES)
     case GL_FRAMEBUFFER_INCOMPLETE_LAYER_TARGETS:
       std::cerr << "Any framebuffer attachment is layered,"
-      " and any populated attachment is not layered,"
-      " or if all populated color attachments are not from textures"
-      " of the same target" << std::endl;
+        " and any populated attachment is not layered,"
+        " or if all populated color attachments are not from textures"
+        " of the same target" << std::endl;
       break;
     case GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER:
       std::cerr << "Framebuffer incomplete, missing draw buffer" << std::endl;

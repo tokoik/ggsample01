@@ -23,7 +23,11 @@
 int main(int argc, const char* const* argv) try
 {
   // ウィンドウ関連の初期設定
+#if !defined(GL_GLES_PROTOTYPES)
+  Window::initialize(3, 1);
+#else
   Window::initialize(4, 1);
+#endif
 
   // アプリケーションのオブジェクトを生成する
   GgApp app;
