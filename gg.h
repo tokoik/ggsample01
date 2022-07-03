@@ -4666,23 +4666,13 @@ namespace gg
   ///
   extern bool ggSaveDepth(const std::string& name);
 
-// OpenGL ES では GL_BGR/GL_BGRA が使えない
-#if defined(GL_GLES_PROTOTYPES)
-#  if !defined(GL_BGR)
-#    define GL_BGR 0x80E0
-#  endif
-#  if !defined(GL_BGRA)
-#    define GL_BGRA 0x80E1
-#  endif
-#endif
-
   /// @brief TGA ファイル (8/16/24/32bit) をメモリに読み込む.
   ///
   ///   @param name 読み込むファイル名.
   ///   @param image 読み込んだデータを格納する vector.
   ///   @param pWidth 読み込んだ画像の横の画素数の格納先のポインタ, nullptr なら格納しない.
   ///   @param pHeight 読み込んだ画像の縦の画素数の格納先のポインタ, nullptr なら格納しない.
-  ///   @param pFormat 読み込んだファイルの書式 (GL_RED, G_RG, GL_BGR, G_BGRA) の格納先のポインタ, nullptr なら格納しない.
+  ///   @param pFormat 読み込んだファイルの書式 (GL_RED, G_RG, GL_RGB, G_RGBA) の格納先のポインタ, nullptr なら格納しない.
   ///   @return 読み込みに成功すれば true, 失敗すれば false.
   ///
   extern bool ggReadImage(
@@ -4708,7 +4698,7 @@ namespace gg
     const GLvoid* image,
     GLsizei width,
     GLsizei height,
-    GLenum format = GL_BGR,
+    GLenum format = GL_RGB,
     GLenum type = GL_UNSIGNED_BYTE,
     GLenum internal = GL_RGB,
     GLenum wrap = GL_CLAMP_TO_EDGE
@@ -4736,7 +4726,7 @@ namespace gg
   ///   @param hmap グレースケール画像のデータ.
   ///   @param width 高さマップのグレースケール画像 hmap の横の画素数.
   ///   @param height 高さマップのグレースケール画像 hmap の縦の画素数.
-  ///   @param format データの書式 (GL_RED, GL_RG, GL_RGB, GL_BGR, GL_RGBA, GL_BGRA).
+  ///   @param format データの書式 (GL_RED, GL_RG, GL_RGB, GL_RGBA).
   ///   @param nz 法線の z 成分の割合.
   ///   @param internal 法線マップを格納するテクスチャの内部フォーマット.
   ///   @param nmap 法線マップを格納する vector.
@@ -4853,7 +4843,7 @@ namespace gg
       const GLvoid* image,
       GLsizei width,
       GLsizei height,
-      GLenum format = GL_BGR,
+      GLenum format = GL_RGB,
       GLenum type = GL_UNSIGNED_BYTE,
       GLenum internal = GL_RGBA,
       GLenum wrap = GL_CLAMP_TO_EDGE
@@ -4953,7 +4943,7 @@ namespace gg
       const GLvoid* image,
       GLsizei width,
       GLsizei height,
-      GLenum format = GL_BGR,
+      GLenum format = GL_RGB,
       GLenum type = GL_UNSIGNED_BYTE,
       GLenum internal = GL_RGB,
       GLenum wrap = GL_CLAMP_TO_EDGE
@@ -4988,7 +4978,7 @@ namespace gg
       const GLvoid* image,
       GLsizei width,
       GLsizei height,
-      GLenum format = GL_BGR,
+      GLenum format = GL_RGB,
       GLenum type = GL_UNSIGNED_BYTE,
       GLenum internal = GL_RGB,
       GLenum wrap = GL_CLAMP_TO_EDGE

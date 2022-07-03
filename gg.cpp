@@ -3527,17 +3527,8 @@ bool gg::ggSaveColor(const std::string& name)
   glFinish();
 
   // カラーバッファを読み込む
-#if defined(GL_GLES_PROTOTYPES)
   glReadPixels(viewport[0], viewport[1], viewport[2], viewport[3],
     GL_RGB, GL_UNSIGNED_BYTE, buffer.data());
-
-  // R と B を入れ替える
-  const int count{ viewport[2] * viewport[3] * 3 };
-  for (int i = 0; i < count; i += 3) std::swap(buffer.data()[i], buffer.data()[i + 2]);
-#else
-  glReadPixels(viewport[0], viewport[1], viewport[2], viewport[3],
-    GL_BGR, GL_UNSIGNED_BYTE, buffer.data());
-#endif
 
   // 読み込んだデータをファイルに書き込む
   return ggSaveTga(name, buffer.data(), viewport[2], viewport[3], 3);
@@ -3615,10 +3606,10 @@ bool gg::ggReadImage(
     *pFormat = GL_RG;
     break;
   case 3:
-    *pFormat = GL_BGR;
+    *pFormat = GL_RGB;
     break;
   case 4:
-    *pFormat = GL_BGRA;
+    *pFormat = GL_RGBA;
     break;
   default:
     // 取り扱えないフォーマットだったら戻る
@@ -3714,7 +3705,7 @@ GLuint gg::ggLoadTexture(
   glBindTexture(GL_TEXTURE_2D, tex);
 
   // アルファチャンネルがついていれば 4 バイト境界に設定する
-  glPixelStorei(GL_UNPACK_ALIGNMENT, (format == GL_BGRA || format == GL_RGBA) ? 4 : 1);
+  glPixelStorei(GL_UNPACK_ALIGNMENT, format == GL_RGBA ? 4 : 1);
 
   // テクスチャを割り当てる
   glTexImage2D(GL_TEXTURE_2D, 0, internal, width, height, 0, format, type, image);
@@ -3725,18 +3716,9 @@ GLuint gg::ggLoadTexture(
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, wrap);
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, wrap);
 
-#if defined(GL_GLES_PROTOTYPES)
-  // OpenGL ES3 では GL_BGR/GL_BGRA が使えない
-  if (format == GL_BGR || format == GL_BGRA)
-  {
-    // テクスチャのサンプリング時に R と B を入れ替える
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_SWIZZLE_R, GL_BLUE);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_SWIZZLE_B, GL_RED);
-
-    // テクスチャの外部フォーマットを内部フォーマットと同じにする
-    format = internal;
-}
-#endif
+  // テクスチャのサンプリング時に R と B を入れ替える
+  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_SWIZZLE_R, GL_BLUE);
+  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_SWIZZLE_B, GL_RED);
 
   // テクスチャ名を返す
   return tex;
@@ -3776,21 +3758,7 @@ GLuint gg::ggLoadImage(
   if (image.empty()) return 0;
 
   // internal == 0 なら内部フォーマットを読み込んだファイルに合わせる
-  if (internal == 0)
-  {
-    switch (format)
-    {
-    case GL_BGR:
-      internal = GL_RGB;
-      break;
-    case GL_BGRA:
-      internal = GL_RGBA;
-      break;
-    default:
-      internal = format;
-      break;
-    }
-  }
+  if (internal == 0) internal = format;
 
   // テクスチャメモリに読み込む
   const GLuint tex(ggLoadTexture(image.data(), width, height, format, GL_UNSIGNED_BYTE, internal, wrap));
@@ -3841,13 +3809,9 @@ void gg::ggCreateNormalMap(
     stride = 2;
     break;
   case GL_RGB:
-    [[fallthrough]];
-  case GL_BGR:
     stride = 3;
     break;
   case GL_RGBA:
-    [[fallthrough]];
-  case GL_BGRA:
     stride = 4;
     break;
   default:
@@ -3966,21 +3930,7 @@ void gg::GgColorTexture::load(
   ggReadImage(name, image, &width, &height, &format);
 
   // internal == 0 なら内部フォーマットを読み込んだファイルに合わせる
-  if (internal == 0)
-  {
-    switch (format)
-    {
-    case GL_BGR:
-      internal = GL_RGB;
-      break;
-    case GL_BGRA:
-      internal = GL_RGBA;
-      break;
-    default:
-      internal = format;
-      break;
-    }
-  }
+  if (internal == 0) internal = format;
 
   // テクスチャを作成する
   texture.reset(new GgTexture(image.data(), width, height, format, GL_UNSIGNED_BYTE, internal, wrap));

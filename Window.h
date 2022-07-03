@@ -455,8 +455,8 @@ public:
 
   //! \brief コンストラクタ.
   //!   \param title ウィンドウタイトルの文字列.
-  //!   \param width 開くウィンドウの幅.
-  //!   \param height 開くウィンドウの高さ.
+  //!   \param width 開くウィンドウの幅, フルスクリーン時は無視され実際のディスプレイの幅が使われる.
+  //!   \param height 開くウィンドウの高さ, フルスクリーン時は無視され実際のディスプレイの高さが使われる.
   //!   \param fullscreen フルスクリーン表示を行うディスプレイ番号, 0 ならフルスクリーン表示を行わない.
   //!   \param share 共有するコンテキスト, nullptr ならコンテキストを共有しない.
   Window(const std::string& title = "GLFW Window", int width = 640, int height = 480,
@@ -546,7 +546,8 @@ public:
           // Shutdown Platform/Renderer bindings
           ImGui_ImplOpenGL3_Shutdown();
           ImGui_ImplGlfw_Shutdown();
-        });
+        }
+      );
 
       // 実行済みであることを記録する
       firstTime = false;
@@ -646,7 +647,7 @@ public:
   }
 
   //! \brief カラーバッファを入れ替える.
-  void swapBuffers()
+  void swapBuffers() const
   {
 #if defined(IMGUI_VERSION)
     // ImGui の描画データがあればフレームをレンダリングする
