@@ -699,14 +699,14 @@ public:
   }
 
   //! ビューポートをウィンドウ全体に設定する.
-  void restoreViewport()
+  void restoreViewport() const
   {
     glViewport(0, 0, fboSize[0], fboSize[1]);
   }
 
   //! \brief キーが押されているかどうかを判定する.
   //!   \return キーが押されていれば true.
-  bool getKey(int key)
+  bool getKey(int key) const
   {
 #if defined(IMGUI_VERSION)
     // ImGui がキーボードを使うときはキーボードの処理を行わない
