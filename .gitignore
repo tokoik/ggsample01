@@ -54,6 +54,7 @@ xcuserdata
 *.bak
 *.tmp
 *.swp
+*.aps
 imgui.ini
 /pdf/*
 !/pdf/refman.pdf
