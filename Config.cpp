@@ -56,7 +56,7 @@ Config::~Config()
 bool Config::load(const std::string& filename)
 {
   // 構成ファイルを開く
-  std::ifstream json{ filename };
+  std::ifstream json{ Utf8ToTChar(filename) };
 
   // 開けなかったらエラー
   if (!json) return false;
@@ -97,7 +97,7 @@ bool Config::load(const std::string& filename)
 bool Config::save(const std::string& filename) const
 {
   // 構成ファイルを開く
-  std::ofstream preference{ filename };
+  std::ofstream preference{ Utf8ToTChar(filename) };
 
   // 開けなかったらエラー
   if (!preference) return false;
@@ -128,3 +128,85 @@ bool Config::save(const std::string& filename) const
 
   return true;
 }
+
+// Visual C++ の場合
+#if defined(_MSC_VER)
+
+//
+// For VC++ MFC Convert UTF-8 to TCHAR, or Convert TCHAR to UTF-8. VC++ MFC用 UTF-8⇔TCHARの変換処理
+//
+//   Refer to the following web page.
+//     https://gist.github.com/mt-u/6878251
+//
+
+// ----------------------------------------
+// Convert UTF-8 to TCHAR(MBCS or Unicode).
+// UTF-8文字列をTCHAR文字列に変換する
+// (プロジェクトの設定に応じてMBCSかUnicodeになる)
+// Author mt-u
+// Copyright (c) 2013 mt-u
+// ----------------------------------------
+CString Utf8ToTChar(const std::string& utf8)
+{
+  // ----------------------------------------
+  // Convert UTF-8 to Unicode(UTF-16).
+  // UTF-8をUnicode(UTF-16)に変換する
+  // ----------------------------------------
+  // First, get the size of the buffer to store Unicode chars.
+  // まず、Unicode文字列を格納するバッファサイズを取得する
+  INT bufsize = ::MultiByteToWideChar(CP_UTF8, 0, utf8.c_str(), -1, NULL, 0);
+  WCHAR* utf16 = new WCHAR[bufsize];
+
+  // Then, convert UTF-8 to Unicode.
+  // UTF-8をUnicodeに変換する
+  ::MultiByteToWideChar(CP_UTF8, 0, utf8.c_str(), -1, utf16, bufsize);
+
+  // ----------------------------------------
+  // Convert Unicode(UTF-16) to TCHAR
+  // Unicode(UTF-16)をTCHARに変換する
+  // ----------------------------------------
+  // Convert Unicode(WCHAR) to TCHAR(MBCS or Unicode).
+  // WCHARからCStringWまたはCStringAに変換する(プロジェクトの設定による)
+  CString ret(utf16, static_cast<int>(::wcslen(utf16)));
+  delete[] utf16;
+
+  return ret;
+}
+
+// ----------------------------------------
+// Convert TCHAR(MBCS or Unicode) to UTF-8.
+// TCHAR文字列をUTF-8文字列に変換する
+// Author mt-u
+// Copyright (c) 2013 mt-u
+// ----------------------------------------
+std::string TCharToUtf8(const CString& tchar)
+{
+  // ----------------------------------------
+  // Convert TCHAR to Unicode(UTF-16).
+  // TCHARをUnicode(UTF-16)に変換する
+  // ----------------------------------------
+  // Convert TCHAR to Unicode.
+  // TCHARをUniocodeに変換する
+  CStringW utf16(tchar);
+
+  // ----------------------------------------
+  // Convert Unicode(UTF-16) to UTF-8.
+  // Unicode(UTF-16)をUTF-8に変換する
+  // ----------------------------------------
+  // First, get the size of the buffer to store UTF-8 chars.
+  // まず、UTF-8文字列を格納するバッファサイズを取得する
+  INT bufsize = ::WideCharToMultiByte(CP_UTF8, 0, utf16, -1, NULL, 0, NULL, NULL);
+  CHAR* utf8 = new CHAR[bufsize];
+
+  // Then, convert Unicode to UTF-8.
+  // 次にUTF-8をUnicodeに変換する
+  ::WideCharToMultiByte(CP_UTF8, 0, utf16, -1, utf8, bufsize, NULL, NULL);
+
+  // At the end, create the std::string that contains the UTF-8 chars.
+  // std::stringにいれて返す
+  std::string ret(utf8, ::strlen(utf8));
+  delete[] utf8;
+
+  return ret;
+}
+#endif

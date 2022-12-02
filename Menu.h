@@ -11,6 +11,9 @@
 // 構成データ
 #include "Config.h"
 
+// ファイルダイアログ
+#include "nfd.h"
+
 ///
 /// メニューの描画
 ///
@@ -33,6 +36,9 @@ class Menu
 
   // シェーダ
   std::unique_ptr<GgSimpleShader> shader;
+
+  // ファイルパスを取得する
+  bool getFilePath(std::string& path, const nfdfilteritem_t* filter);
 
 public:
 

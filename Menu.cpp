@@ -7,9 +7,6 @@
 ///
 #include "Menu.h"
 
-// ファイルダイアログ
-#include "nfd.h"
-
 // メニューフォント
 constexpr char menuFont[]{ "Mplus1-Regular.ttf" };
 
@@ -60,6 +57,24 @@ Menu::~Menu()
 }
 
 //
+// ファイルパスを取得する
+//
+bool Menu::getFilePath(std::string& path, const nfdfilteritem_t* filter)
+{
+  // ファイルダイアログから得るパス
+  nfdchar_t* filepath{ nullptr };
+
+  // ファイルダイアログを開く
+  if (NFD_OpenDialog(&filepath, filter, 1, nullptr) == NFD_OKAY)
+  {
+    path = TCharToUtf8(filepath);
+    return true;
+  }
+
+  return false;
+}
+
+//
 // 描画する
 //
 void Menu::draw()
@@ -72,14 +87,20 @@ void Menu::draw()
   // ImGui のフレームを準備する
   ImGui::NewFrame();
 
-  // 光源位置を決定する
+  // メニューの表示位置を決定する
   ImGui::SetNextWindowPos(ImVec2(4, 4), ImGuiCond_Once);
   ImGui::SetNextWindowSize(ImVec2(320, 98), ImGuiCond_Once);
+
+  // メニュー表示開始
   ImGui::Begin(u8"コントロールパネル");
+
+  // 光源
   if (ImGui::SliderFloat3(u8"光源位置", settings.light.position.data(), -10.0f, 10.0f, "%.2f"))
     light->loadPosition(settings.light.position);
   if (ImGui::ColorEdit3(u8"光源色", settings.light.diffuse.data(), ImGuiColorEditFlags_Float))
     light->loadDiffuse(settings.light.diffuse);
+
+  // メニュー表示終了
   ImGui::End();
 
   // ImGui のフレームに描画する
