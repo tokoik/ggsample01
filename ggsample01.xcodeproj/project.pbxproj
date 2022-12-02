@@ -16,6 +16,10 @@
 		7DAF9073240F5D2D001E5CE2 /* logo.obj in Resources */ = {isa = PBXBuildFile; fileRef = 7DAF9071240F5D2D001E5CE2 /* logo.obj */; };
 		7DAF9074240F5D2D001E5CE2 /* logo.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 7DAF9072240F5D2D001E5CE2 /* logo.mtl */; };
 		7DD33CCC246A757600E99D6A /* ggsample01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DD33CCB246A757600E99D6A /* ggsample01.cpp */; };
+		7DF4BEA229397C1100676197 /* Draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DF4BE9C29397C1100676197 /* Draw.cpp */; };
+		7DF4BEA329397C1100676197 /* Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DF4BEA029397C1100676197 /* Config.cpp */; };
+		7DF4BEA429397C1100676197 /* Menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DF4BEA129397C1100676197 /* Menu.cpp */; };
+		7DF4BEA629397C9700676197 /* nfd_cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF4BEA529397C9700676197 /* nfd_cocoa.m */; };
 		7DF4DDD223EF0E40005D4BCB /* imgui_impl_opengl3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DF4DDCD23EF0E40005D4BCB /* imgui_impl_opengl3.cpp */; };
 		7DF4DDD323EF0E40005D4BCB /* imgui_impl_glfw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DF4DDCE23EF0E40005D4BCB /* imgui_impl_glfw.cpp */; };
 		7DF4DDD423EF0E40005D4BCB /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DF4DDCF23EF0E40005D4BCB /* imgui_widgets.cpp */; };
@@ -39,6 +43,14 @@
 		7DAF9072240F5D2D001E5CE2 /* logo.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = logo.mtl; sourceTree = "<group>"; };
 		7DD33CCB246A757600E99D6A /* ggsample01.cpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = ggsample01.cpp; sourceTree = "<group>"; tabWidth = 2; };
 		7DDCB0F723EDA73D007C2AD3 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Window.h; sourceTree = "<group>"; tabWidth = 2; };
+		7DF4BE9B29397C1100676197 /* parseconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parseconfig.h; sourceTree = "<group>"; };
+		7DF4BE9C29397C1100676197 /* Draw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Draw.cpp; sourceTree = "<group>"; };
+		7DF4BE9D29397C1100676197 /* Draw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Draw.h; sourceTree = "<group>"; };
+		7DF4BE9E29397C1100676197 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		7DF4BE9F29397C1100676197 /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
+		7DF4BEA029397C1100676197 /* Config.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Config.cpp; sourceTree = "<group>"; };
+		7DF4BEA129397C1100676197 /* Menu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Menu.cpp; sourceTree = "<group>"; };
+		7DF4BEA529397C9700676197 /* nfd_cocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = nfd_cocoa.m; path = lib/nfd_cocoa.m; sourceTree = "<group>"; };
 		7DF4DDCD23EF0E40005D4BCB /* imgui_impl_opengl3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; name = imgui_impl_opengl3.cpp; path = lib/imgui_impl_opengl3.cpp; sourceTree = "<group>"; tabWidth = 2; };
 		7DF4DDCE23EF0E40005D4BCB /* imgui_impl_glfw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; name = imgui_impl_glfw.cpp; path = lib/imgui_impl_glfw.cpp; sourceTree = "<group>"; tabWidth = 2; };
 		7DF4DDCF23EF0E40005D4BCB /* imgui_widgets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; name = imgui_widgets.cpp; path = lib/imgui_widgets.cpp; sourceTree = "<group>"; tabWidth = 2; };
@@ -63,16 +75,24 @@
 			children = (
 				7DD33CCB246A757600E99D6A /* ggsample01.cpp */,
 				7DF9CC4420047E4E009E3F96 /* main.cpp */,
+				7DF4BE9F29397C1100676197 /* Menu.h */,
+				7DF4BEA129397C1100676197 /* Menu.cpp */,
+				7DF4BE9E29397C1100676197 /* Config.h */,
+				7DF4BEA029397C1100676197 /* Config.cpp */,
+				7DF4BE9D29397C1100676197 /* Draw.h */,
+				7DF4BE9C29397C1100676197 /* Draw.cpp */,
+				7DF4DDD023EF0E40005D4BCB /* imgui.cpp */,
 				7DF4DDD123EF0E40005D4BCB /* imgui_draw.cpp */,
-				7DF4DDCE23EF0E40005D4BCB /* imgui_impl_glfw.cpp */,
-				7DF4DDCD23EF0E40005D4BCB /* imgui_impl_opengl3.cpp */,
 				7DF4DDCF23EF0E40005D4BCB /* imgui_widgets.cpp */,
 				7D1C251025D0BF8E000BE395 /* imgui_tables.cpp */,
-				7DF4DDD023EF0E40005D4BCB /* imgui.cpp */,
+				7DF4DDCE23EF0E40005D4BCB /* imgui_impl_glfw.cpp */,
+				7DF4DDCD23EF0E40005D4BCB /* imgui_impl_opengl3.cpp */,
+				7DF4BEA529397C9700676197 /* nfd_cocoa.m */,
 				7D779F232678BFDE0001FF6B /* GgApp.h */,
 				7DDCB0F723EDA73D007C2AD3 /* Window.h */,
 				7D24C83714F8F3A700C23BB6 /* gg.h */,
 				7D24C83614F8F3A700C23BB6 /* gg.cpp */,
+				7DF4BE9B29397C1100676197 /* parseconfig.h */,
 				7D61778323F3FEAE00A4B1A4 /* simple.vert */,
 				7D61778223F3FEAE00A4B1A4 /* simple.frag */,
 				7DAF9071240F5D2D001E5CE2 /* logo.obj */,
@@ -168,9 +188,13 @@
 				7DF4DDD223EF0E40005D4BCB /* imgui_impl_opengl3.cpp in Sources */,
 				7D1C251125D0BF8E000BE395 /* imgui_tables.cpp in Sources */,
 				7DF4DDD323EF0E40005D4BCB /* imgui_impl_glfw.cpp in Sources */,
+				7DF4BEA429397C1100676197 /* Menu.cpp in Sources */,
 				7DF4DDD523EF0E40005D4BCB /* imgui.cpp in Sources */,
 				7DF9CC4520047E4E009E3F96 /* main.cpp in Sources */,
+				7DF4BEA329397C1100676197 /* Config.cpp in Sources */,
 				7DF4DDD623EF0E40005D4BCB /* imgui_draw.cpp in Sources */,
+				7DF4BEA229397C1100676197 /* Draw.cpp in Sources */,
+				7DF4BEA629397C9700676197 /* nfd_cocoa.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
