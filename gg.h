@@ -49,7 +49,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #endif
 #include <GLFW/glfw3.h>
 
-// Windows (Visual Studio) 用の設定
+// Windows (Visual Studio) のとき
 #if defined(_MSC_VER)
 // 非推奨の警告を出さない
 #  pragma warning(disable:4996)
@@ -59,9 +59,11 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #  define NOMINMAX
 // APIENTRY マクロは使わない
 #  undef APIENTRY
-// デバッグビルドの時
+// デバッグビルドかどうか調べる
 #  if defined(_DEBUG)
-#    define DEBUG
+#    if !defined(DEBUG)
+#      define DEBUG
+#    endif
 #    define GLFW3_CONFIGURATION "Debug"
 #  else
 #    define GLFW3_CONFIGURATION "Release"

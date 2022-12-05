@@ -107,7 +107,7 @@ bool Config::save(const std::string& filename) const
 
   //
   // 構成データの書き出し
-  // 
+  //
 
   // 光源
   setVector(object, "ambient", light.ambient);
@@ -136,7 +136,7 @@ bool Config::save(const std::string& filename) const
 //   Original author: mt-u
 //   Copyright (c) 2013 mt-u
 //   https://gist.github.com/mt-u/6878251
-// 
+//
 //   Modified by: Kohe Tokoi
 //
 

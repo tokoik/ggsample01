@@ -31,7 +31,7 @@ extern std::string TCharToUtf8(const CString& cstring);
 using pathString = std::string;
 using pathChar = char;
 #define Utf8ToTChar(string) (string)
-#define TCharToUtf8(string) (cstring)
+#define TCharToUtf8(cstring) (cstring)
 #endif
 
 ///

@@ -43,13 +43,14 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <sstream>
 #include <map>
 
-//! \def Alias OBJ ファイルからテクスチャ座標も読み込むなら 1.
+/// Alias OBJ ファイルからテクスチャ座標も読み込むなら 1.
 #define READ_TEXTURE_COORDINATE_FROM_OBJ 0
 
-// Windows のとき
+// Windows (Visual Studio) のとき
 #if defined(_MSC_VER)
 // Visual Studio のリリースビルドではコンソールを出さない
 #  if !defined(_DEBUG)
+// リリースビルドではコンソールにメッセージを出さない
 #    pragma comment(linker, "/subsystem:\"windows\" /entry:\"mainCRTStartup\"")
 #  endif
 // リンクするライブラリ

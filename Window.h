@@ -643,8 +643,8 @@ public:
 #if defined(IMGUI_VERSION)
 
     // ImGui の新規フレームを作成する
-    ImGui_ImplGlfw_NewFrame();
     ImGui_ImplOpenGL3_NewFrame();
+    ImGui_ImplGlfw_NewFrame();
 
     // ImGui の状態を取り出す
     const ImGuiIO& io{ ImGui::GetIO() };
