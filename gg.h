@@ -1357,7 +1357,7 @@ namespace gg
   ///
   /// @param name エラー発生時に標準エラー出力に出力する文字列, nullptr なら何も出力しない.
   /// @param line エラー発生時に標準エラー出力に出力する数値, 0 なら何も出力しない.
-  /// 
+  ///
   /// @note
   /// OpenGL の API を呼び出し直後に実行すればエラーのあるときにメッセージを表示する.
   ///
@@ -1367,7 +1367,7 @@ namespace gg
   /// OpenGL のエラーの発生を検知したときにソースファイル名と行番号を表示する.
   ///
   /// @def ggError()
-  /// 
+  ///
   /// @note
   /// このマクロを置いた場所（より前）で OpenGL のエラーが発生していた時に,
   /// このマクロを置いたソースファイル名と行番号を出力する.
@@ -1384,7 +1384,7 @@ namespace gg
   ///
   /// @param name エラー発生時に標準エラー出力に出力する文字列, nullptr なら何も出力しない.
   /// @param line エラー発生時に標準エラー出力に出力する数値, 0 なら何も出力しない.
-  /// 
+  ///
   /// @note
   /// FBO の API を呼び出し直後に実行すればエラーのあるときにメッセージを表示する.
   ///
@@ -1394,7 +1394,7 @@ namespace gg
   /// FBO のエラーの発生を検知したときにソースファイル名と行番号を表示する.
   ///
   /// @def ggFBOError()
-  /// 
+  ///
   /// @note
   /// このマクロを置いた場所（より前）で FBO のエラーが発生していた時に,
   /// このマクロを置いたソースファイル名と行番号を出力する.
@@ -1968,7 +1968,7 @@ namespace gg
   /// @param a GgVector 型のベクトル.
   /// @param b GgVector 型のベクトル.
   /// @return a と b の外積.
-  /// 
+  ///
   /// @note
   /// 戻り値の w (第4) 要素は 0.
   ///
@@ -2019,7 +2019,7 @@ namespace gg
   ///
   /// @param a GgVector 型のベクトル.
   /// @return a の 3 要素を正規化したもの.
-  /// 
+  ///
   /// @note
   /// 戻り値の w (第4) 要素は 0 になる.
   ///
@@ -2035,7 +2035,7 @@ namespace gg
   /// GgVector 型の 3 要素の正規化.
   ///
   /// @param a GgVector 型の変数のポインタ.
-  /// 
+  ///
   /// @note
   /// a の w (第4) 要素は 0 になる.
   ///
@@ -4790,7 +4790,7 @@ namespace gg
     ///
     /// @param w 領域の横幅.
     /// @param h 領域の高さ.
-    /// 
+    ///
     /// @note
     /// ウィンドウのリサイズ時に呼び出す.
     ///
@@ -4801,7 +4801,7 @@ namespace gg
     ///
     /// @param w 領域の横幅.
     /// @param h 領域の高さ.
-    /// 
+    ///
     /// @note
     /// ウィンドウのリサイズ時に呼び出す.
     ///
@@ -4815,7 +4815,7 @@ namespace gg
     ///
     /// @param x 現在のマウスの x 座標.
     /// @param y 現在のマウスの y 座標.
-    /// 
+    ///
     /// @note
     /// マウスのドラッグ開始時 (マウスボタンを押したとき) に呼び出す.
     ///
@@ -4826,7 +4826,7 @@ namespace gg
     ///
     /// @param x 現在のマウスの x 座標.
     /// @param y 現在のマウスの y 座標.
-    /// 
+    ///
     /// @note
     /// マウスのドラッグ中に呼び出す.
     ///
@@ -4844,7 +4844,7 @@ namespace gg
     ///
     /// @param x 現在のマウスの x 座標.
     /// @param y 現在のマウスの y 座標.
-    /// 
+    ///
     /// @note
     /// マウスのドラッグ終了時 (マウスボタンを離したとき) に呼び出す.
     ///
@@ -5083,8 +5083,8 @@ namespace gg
   /// シェーダのソースプログラムの文字列を読み込んでプログラムオブジェクトを作成する.
   ///
   /// @param vsrc バーテックスシェーダのソースプログラムの文字列.
-  /// @param fsrc フラグメントシェーダのソースプログラムの文字列 (nullptr なら不使用).
-  /// @param gsrc ジオメトリシェーダのソースプログラムの文字列 (nullptr なら不使用).
+  /// @param fsrc フラグメントシェーダのソースプログラムの文字列 (空文字列なら不使用).
+  /// @param gsrc ジオメトリシェーダのソースプログラムの文字列 (空文字列なら不使用).
   /// @param nvarying フィードバックする varying 変数の数 (0 なら不使用).
   /// @param varyings フィードバックする varying 変数のリスト (nullptr なら不使用).
   /// @param vtext バーテックスシェーダのコンパイル時のメッセージに追加する文字列.
@@ -5106,8 +5106,8 @@ namespace gg
   /// シェーダのソースファイルを読み込んでプログラムオブジェクトを作成する.
   ///
   /// @param vert バーテックスシェーダのソースファイル名.
-  /// @param frag フラグメントシェーダのソースファイル名 (nullptr なら不使用).
-  /// @param geom ジオメトリシェーダのソースファイル名 (nullptr なら不使用).
+  /// @param frag フラグメントシェーダのソースファイル名 (空文字列なら不使用).
+  /// @param geom ジオメトリシェーダのソースファイル名 (空文字列なら不使用).
   /// @param nvarying フィードバックする varying 変数の数 (0 なら不使用).
   /// @param varyings フィードバックする varying 変数のリスト (nullptr なら不使用).
   /// @return プログラムオブジェクトのプログラム名 (作成できなければ 0).
@@ -5119,6 +5119,23 @@ namespace gg
     GLint nvarying = 0,
     const char* const* varyings = nullptr
   );
+
+  ///
+  /// シェーダのソースファイルを読み込んでプログラムオブジェクトを作成する.
+  ///
+  /// @param files バーテックスシェーダのソースファイル名の配列.
+  /// @param nvarying フィードバックする varying 変数の数 (0 なら不使用).
+  /// @param varyings フィードバックする varying 変数のリスト (nullptr なら不使用).
+  /// @return プログラムオブジェクトのプログラム名 (作成できなければ 0).
+  ///
+  inline GLuint ggLoadShader(
+    const std::array<std::string, 3>& files,
+    GLint nvarying = 0,
+    const char* const* varyings = nullptr
+  )
+  {
+    return ggLoadShader(files[0], files[1], files[2], nvarying, varyings);
+  }
 
 #if !defined(__APPLE__)
   ///
@@ -5355,7 +5372,7 @@ namespace gg
     )
     {
       // テクスチャを作成する
-      texture.reset(new GgTexture(image, width, height, format, type, internal, wrap));
+      texture = std::make_shared<GgTexture>(image, width, height, format, type, internal, wrap);
     }
 
     ///
@@ -5461,7 +5478,7 @@ namespace gg
       ggCreateNormalMap(hmap, width, height, format, nz, internal, nmap);
 
       // テクスチャを作成する
-      texture.reset(new GgTexture(nmap.data(), width, height, GL_RGBA, GL_FLOAT, internal, GL_REPEAT));
+      texture = std::make_shared<GgTexture>(nmap.data(), width, height, GL_RGBA, GL_FLOAT, internal, GL_REPEAT);
     }
 
     ///
@@ -5864,7 +5881,7 @@ namespace gg
       const GLsizei stride{ (((static_cast<GLint>(sizeof(T)) - 1) / ggBufferAlignment) + 1) * ggBufferAlignment };
 
       // ユニフォームバッファオブジェクトを確保する
-      uniform.reset(new GgBuffer<T>(GL_UNIFORM_BUFFER, nullptr, stride, count, usage));
+      uniform = std::make_shared<GgBuffer<T>>(GL_UNIFORM_BUFFER, nullptr, stride, count, usage);
 
       // 確保したユニフォームバッファオブジェクトにデータを転送する
       if (data) send(data, 0, sizeof(T), 0, count);
@@ -5883,7 +5900,7 @@ namespace gg
       const GLsizei stride{ (((static_cast<GLint>(sizeof(T)) - 1) / ggBufferAlignment) + 1) * ggBufferAlignment };
 
       // ユニフォームバッファオブジェクトを確保する
-      uniform.reset(new GgBuffer<T>(GL_UNIFORM_BUFFER, nullptr, stride, count, usage));
+      uniform = std::make_shared<GgBuffer<T>>(GL_UNIFORM_BUFFER, nullptr, stride, count, usage);
 
       // 確保したユニフォームバッファオブジェクトにデータを転送する
       fill(&data, 0, sizeof(T), 0, count);
@@ -6503,7 +6520,7 @@ namespace gg
       GgTriangles::load(vert, countv, usage);
 
       // インデックスの頂点バッファオブジェクトを作成する
-      index.reset(new GgBuffer<GLuint>(GL_ELEMENT_ARRAY_BUFFER, face, sizeof(GLuint), countf, usage));
+      index = std::make_unique<GgBuffer<GLuint>>(GL_ELEMENT_ARRAY_BUFFER, face, sizeof(GLuint), countf, usage);
     }
 
     ///
@@ -6523,8 +6540,9 @@ namespace gg
   /// @param cx 点群の中心の x 座標.
   /// @param cy 点群の中心の y 座標.
   /// @param cz 点群の中心の z 座標.
+  /// @return GgPoints 型の shared_ptr.
   ///
-  extern GgPoints* ggPointsCube(
+  extern std::shared_ptr<GgPoints> ggPointsCube(
     GLsizei countv,
     GLfloat length = 1.0f,
     GLfloat cx = 0.0f,
@@ -6540,8 +6558,9 @@ namespace gg
   /// @param cx 点群の中心の x 座標.
   /// @param cy 点群の中心の y 座標.
   /// @param cz 点群の中心の z 座標.
+  /// @return GgPoints 型の shared_ptr.
   ///
-  extern GgPoints* ggPointsSphere(
+  extern std::shared_ptr<GgPoints> ggPointsSphere(
     GLsizei countv,
     GLfloat radius = 0.5f,
     GLfloat cx = 0.0f,
@@ -6554,8 +6573,9 @@ namespace gg
   ///
   /// @param width 矩形の横幅.
   /// @param height 矩形の高さ.
+  /// @return GgTriangles 型の shared_ptr.
   ///
-  extern GgTriangles* ggRectangle(
+  extern std::shared_ptr<GgTriangles> ggRectangle(
     GLfloat width = 1.0f,
     GLfloat height = 1.0f
   );
@@ -6566,8 +6586,9 @@ namespace gg
   /// @param width 楕円の横幅.
   /// @param height 楕円の高さ.
   /// @param slices 楕円の分割数.
+  /// @return GgTriangles 型の shared_ptr.
   ///
-  extern GgTriangles* ggEllipse(
+  extern std::shared_ptr<GgTriangles> ggEllipse(
     GLfloat width = 1.0f,
     GLfloat height = 1.0f,
     GLuint slices = 16
@@ -6578,12 +6599,13 @@ namespace gg
   ///
   /// @param name ファイル名.
   /// @param normalize true なら大きさを正規化.
+  /// @return GgTriangles 型の shared_ptr.
   ///
   /// @note
   /// 三角形分割された Wavefront OBJ ファイルを読み込んで
   /// GgArrays 形式の三角形データを生成する.
   ///
-  extern GgTriangles* ggArraysObj(
+  extern std::shared_ptr<GgTriangles> ggArraysObj(
     const std::string& name,
     bool normalize = false
   );
@@ -6593,12 +6615,13 @@ namespace gg
   ///
   /// @param name ファイル名.
   /// @param normalize true なら大きさを正規化.
+  /// @return GgElements 型の shared_ptr.
   ///
   /// @note
   /// 三角形分割された Wavefront OBJ ファイル を読み込んで
   /// GgElements 形式の三角形データを生成する.
   ///
-  extern GgElements* ggElementsObj(
+  extern std::shared_ptr<GgElements> ggElementsObj(
     const std::string& name,
     bool normalize = false
   );
@@ -6610,11 +6633,12 @@ namespace gg
   /// @param stacks メッシュの縦方向の分割数.
   /// @param pos メッシュの頂点の位置.
   /// @param norm メッシュの頂点の法線, nullptr なら頂点の位置から算出する.
+  /// @return GgElements 型の shared_ptr.
   ///
   /// @note
   /// メッシュ状に GgElements 形式の三角形データを生成する.
   ///
-  extern GgElements* ggElementsMesh(
+  extern std::shared_ptr<GgElements> ggElementsMesh(
     GLuint slices,
     GLuint stacks,
     const GLfloat(*pos)[3],
@@ -6626,11 +6650,12 @@ namespace gg
   /// @param radius 球の半径.
   /// @param slices 球の経度方向の分割数.
   /// @param stacks 球の緯度方向の分割数.
+  /// @return GgElements 型の shared_ptr.
   ///
   /// @note
   /// 球状に GgElements 形式の三角形データを生成する.
   ///
-  extern GgElements* ggElementsSphere(
+  extern std::shared_ptr<GgElements> ggElementsSphere(
     GLfloat radius = 1.0f,
     int slices = 16,
     int stacks = 8
@@ -6653,8 +6678,8 @@ namespace gg
     /// コンストラクタ.
     ///
     /// @param vert バーテックスシェーダのソースファイル名.
-    /// @param frag フラグメントシェーダのソースファイル名 (0 なら不使用).
-    /// @param geom ジオメトリシェーダのソースファイル名 (0 なら不使用).
+    /// @param frag フラグメントシェーダのソースファイル名 (空文字列なら不使用).
+    /// @param geom ジオメトリシェーダのソースファイル名 (空文字列なら不使用).
     /// @param nvarying フィードバックする varying 変数の数 (0 なら不使用).
     /// @param varyings フィードバックする varying 変数のリスト.
     ///
@@ -6670,6 +6695,27 @@ namespace gg
     }
 
     ///
+    /// コンストラクタ.
+    ///
+    /// @param files バーテックスシェーダのソースファイル名の配列.
+    /// @param nvarying フィードバックする varying 変数の数 (0 なら不使用).
+    /// @param varyings フィードバックする varying 変数のリスト (nullptr なら不使用).
+    ///
+    GgShader(
+      const std::array<std::string, 3>& files,
+      int nvarying = 0,
+      const char* const* varyings = nullptr
+    ) :
+      GgShader(files[0], files[1], files[2], nvarying, varyings)
+    {
+    }
+
+    ///
+    /// コピーコンストラクタは使用禁止.
+    ///
+    GgShader(const GgShader& o) = delete;
+
+    ///
     /// デストラクタ.
     ///
     virtual ~GgShader()
@@ -6678,11 +6724,6 @@ namespace gg
       glUseProgram(0);
       glDeleteProgram(program);
     }
-
-    ///
-    /// コピーコンストラクタは使用禁止.
-    ///
-    GgShader(const GgShader& o) = delete;
 
     ///
     /// 代入演算子は使用禁止.
@@ -6745,8 +6786,8 @@ namespace gg
     /// コンストラクタ.
     ///
     /// @param vert バーテックスシェーダのソースファイル名.
-    /// @param frag フラグメントシェーダのソースファイル名 (0 なら不使用).
-    /// @param geom ジオメトリシェーダのソースファイル名 (0 なら不使用).
+    /// @param frag フラグメントシェーダのソースファイル名 (空文字列なら不使用).
+    /// @param geom ジオメトリシェーダのソースファイル名 (空文字列なら不使用).
     /// @param nvarying フィードバックする varying 変数の数 (0 なら不使用).
     /// @param varyings フィードバックする varying 変数のリスト.
     ///
@@ -6763,6 +6804,22 @@ namespace gg
     }
 
     ///
+    /// コンストラクタ.
+    ///
+    /// @param files バーテックスシェーダのソースファイル名の配列.
+    /// @param nvarying フィードバックする varying 変数の数 (0 なら不使用).
+    /// @param varyings フィードバックする varying 変数のリスト (nullptr なら不使用).
+    ///
+    GgPointShader(
+      const std::array<std::string, 3>& files,
+      int nvarying = 0,
+      const char* const* varyings = nullptr
+    ) :
+      GgPointShader(files[0], files[1], files[2], nvarying, varyings)
+    {
+    }
+
+    ///
     /// デストラクタ.
     ///
     virtual ~GgPointShader()
@@ -6773,8 +6830,8 @@ namespace gg
     /// シェーダのソースファイルを読み込む.
     ///
     /// @param vert バーテックスシェーダのソースファイル名.
-    /// @param frag フラグメントシェーダのソースファイル名 (0 なら不使用).
-    /// @param geom ジオメトリシェーダのソースファイル名 (0 なら不使用).
+    /// @param frag フラグメントシェーダのソースファイル名 (空文字列なら不使用).
+    /// @param geom ジオメトリシェーダのソースファイル名 (空文字列なら不使用).
     /// @param nvarying フィードバックする varying 変数の数 (0 なら不使用).
     /// @param varyings フィードバックする varying 変数のリスト.
     ///
@@ -6788,7 +6845,7 @@ namespace gg
     )
     {
       // シェーダを作成する
-      shader.reset(new GgShader(vert, frag, geom, nvarying, varyings));
+      shader = std::make_shared<GgShader>(vert, frag, geom, nvarying, varyings);
 
       // プログラム名を取り出す
       const GLuint program(shader->get());
@@ -6802,6 +6859,23 @@ namespace gg
 
       // プログラムオブジェクトの作成に成功した
       return true;
+    }
+
+    ///
+    /// シェーダのソースファイルを読み込んでプログラムオブジェクトを作成する.
+    ///
+    /// @param files バーテックスシェーダのソースファイル名の配列.
+    /// @param nvarying フィードバックする varying 変数の数 (0 なら不使用).
+    /// @param varyings フィードバックする varying 変数のリスト (nullptr なら不使用).
+    /// @return プログラムオブジェクトの作成に成功したら true.
+    ///
+    bool load(
+      const std::array<std::string, 3>& files,
+      GLint nvarying = 0,
+      const char* const* varyings = nullptr
+    )
+    {
+      return load(files[0], files[1], files[2], nvarying, varyings);
     }
 
     ///
@@ -6970,8 +7044,8 @@ namespace gg
     /// コンストラクタ.
     ///
     /// @param vert バーテックスシェーダのソースファイル名.
-    /// @param frag フラグメントシェーダのソースファイル名 (0 なら不使用).
-    /// @param geom ジオメトリシェーダのソースファイル名 (0 なら不使用).
+    /// @param frag フラグメントシェーダのソースファイル名 (空文字列なら不使用).
+    /// @param geom ジオメトリシェーダのソースファイル名 (空文字列なら不使用).
     /// @param nvarying フィードバックする varying 変数の数 (0 なら不使用).
     /// @param varyings フィードバックする varying 変数のリスト.
     ///
@@ -6984,6 +7058,22 @@ namespace gg
     )
     {
       load(vert, frag, geom, nvarying, varyings);
+    }
+
+    ///
+    /// コンストラクタ.
+    ///
+    /// @param files バーテックスシェーダのソースファイル名の配列.
+    /// @param nvarying フィードバックする varying 変数の数 (0 なら不使用).
+    /// @param varyings フィードバックする varying 変数のリスト (nullptr なら不使用).
+    ///
+    GgSimpleShader(
+      const std::array<std::string, 3>& files,
+      GLint nvarying = 0,
+      const char* const* varyings = nullptr
+    ) :
+      GgSimpleShader(files[0], files[1], files[2], nvarying, varyings)
+    {
     }
 
     ///
@@ -7024,10 +7114,10 @@ namespace gg
     /// シェーダのソースプログラムの文字列からプログラムオブジェクトを作成する.
     ///
     /// @param vert バーテックスシェーダのソースプログラムの文字列.
-    /// @param frag フラグメントシェーダのソースプログラムの文字列.
-    /// @param geom ジオメトリシェーダのソースプログラムの文字列.
-    /// @param nvarying Transform Feedback に使う varying 変数の数.
-    /// @param varyings Transform Feedback に使う varying 変数の変数名の文字列の配列.
+    /// @param frag フラグメントシェーダのソースプログラムの文字列（空文字列なら不使用）.
+    /// @param geom ジオメトリシェーダのソースプログラムの文字列（空文字列なら不使用）.
+    /// @param nvarying フィードバックする varying 変数の数 (0 なら不使用).
+    /// @param varyings フィードバックする varying 変数のリスト (nullptr なら不使用).
     /// @return プログラムオブジェクトの作成に成功したら true.
     ///
     bool load(
@@ -7037,6 +7127,23 @@ namespace gg
       GLint nvarying = 0,
       const char* const* varyings = nullptr
     );
+
+    ///
+    /// シェーダのソースファイルを読み込んでプログラムオブジェクトを作成する.
+    ///
+    /// @param files バーテックスシェーダのソースファイル名の配列.
+    /// @param nvarying フィードバックする varying 変数の数 (0 なら不使用).
+    /// @param varyings フィードバックする varying 変数のリスト (nullptr なら不使用).
+    /// @return プログラムオブジェクトの作成に成功したら true.
+    ///
+    bool load(
+      const std::array<std::string, 3>& files,
+      GLint nvarying = 0,
+      const char* const* varyings = nullptr
+    )
+    {
+      return load(files[0], files[1], files[2], nvarying, varyings);
+    }
 
     ///
     /// モデルビュー変換行列と法線変換行列を設定する.
