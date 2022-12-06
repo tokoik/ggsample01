@@ -1,6 +1,12 @@
 <map id="Window.h" name="Window.h">
-<area shape="rect" id="node1" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理." alt="" coords="85,5,163,32"/>
-<area shape="rect" id="node2" href="$GgApp_8h.html" title=" " alt="" coords="87,80,161,107"/>
-<area shape="rect" id="node3" href="$ggsample01_8cpp.html" title=" " alt="" coords="5,155,123,181"/>
-<area shape="rect" id="node4" href="$main_8cpp.html" title=" " alt="" coords="147,155,221,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="31,5,109,32"/>
+<area shape="rect" id="node2" href="$GgApp_8h.html" title=" " alt="" coords="33,80,107,107"/>
+<area shape="rect" id="node3" href="$Config_8h.html" title=" " alt="" coords="35,155,105,181"/>
+<area shape="rect" id="node5" href="$ggsample01_8cpp.html" title=" " alt="" coords="14,379,131,405"/>
+<area shape="rect" id="node10" href="$main_8cpp.html" title=" " alt="" coords="129,155,203,181"/>
+<area shape="rect" id="node4" href="$Config_8cpp.html" title=" " alt="" coords="58,229,141,256"/>
+<area shape="rect" id="node6" href="$Menu_8h.html" title=" " alt="" coords="165,229,231,256"/>
+<area shape="rect" id="node7" href="$Draw_8h.html" title=" " alt="" coords="213,304,276,331"/>
+<area shape="rect" id="node9" href="$Menu_8cpp.html" title=" " alt="" coords="59,304,137,331"/>
+<area shape="rect" id="node8" href="$Draw_8cpp.html" title=" " alt="" coords="207,379,283,405"/>
 </map>

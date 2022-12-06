@@ -1,5 +1,4 @@
 <map id="gg::GgSimpleShader::use" name="gg::GgSimpleShader::use">
-<area shape="rect" id="node1" title="光源を指定してシェーダプログラムの使用を開始する." alt="" coords="5,5,176,32"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgSimpleShader.html#aaa721d9ae49296194f949d6ba2f927db" title="シェーダプログラムの使用を開始する." alt="" coords="224,5,395,32"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgPointShader.html#a6809087ef5e8a563310c3fc396246e78" title="シェーダプログラムの使用を開始する." alt="" coords="443,5,604,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,13,176,39"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgSimpleShader_1_1LightBuffer.html#a21c8fad77cffc831e18d9413a253788a" title=" " alt="" coords="224,5,367,47"/>
 </map>

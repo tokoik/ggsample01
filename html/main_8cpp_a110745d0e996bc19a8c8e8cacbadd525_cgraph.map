@@ -1,5 +1,9 @@
 <map id="main" name="main">
 <area shape="rect" id="node1" title=" " alt="" coords="5,31,56,57"/>
-<area shape="rect" id="node2" href="$classWindow.html#a0d067da19dc2649f7cb91f2b5c235908" title="ゲームグラフィックス特論の宿題用補助プログラムの初期化, 最初に一度だけ実行する." alt="" coords="104,5,227,32"/>
+<area shape="rect" id="node2" href="$classWindow.html#a0d067da19dc2649f7cb91f2b5c235908" title=" " alt="" coords="104,5,227,32"/>
 <area shape="rect" id="node3" href="$classGgApp.html#ad2e50a5e84d4fd6162e03039ac00c7ae" title=" " alt="" coords="116,56,215,83"/>
+<area shape="rect" id="node4" href="$namespacegg.html#a2924895ad284e08b08a2cfd115c5a7bf" title=" " alt="" coords="289,31,386,57"/>
+<area shape="rect" id="node6" href="$namespacegg.html#a7dcbaa73755efd46f1f19b0b3a39b473" title=" " alt="" coords="275,81,400,108"/>
+<area shape="rect" id="node5" href="$classgg_1_1GgMatrix.html#a753d56545359ba6efc11aa9b5b3ade11" title=" " alt="" coords="462,31,630,57"/>
+<area shape="rect" id="node7" href="$classgg_1_1GgMatrix.html#a2455429beaf82954d49fa3ca25143177" title=" " alt="" coords="448,81,644,108"/>
 </map>

@@ -1,15 +1,19 @@
 <map id="gg::ggDot3" name="gg::ggDot3">
-<area shape="rect" id="node1" title="3 要素の内積." alt="" coords="741,39,827,65"/>
-<area shape="rect" id="node2" href="$namespacegg.html#a884a700a6f3d5367f0d7a7fb43bd61e0" title="GgVector 型の 3 要素の内積." alt="" coords="599,13,684,40"/>
-<area shape="rect" id="node3" href="$namespacegg.html#a837850150a8293353ade7900452955b2" title="3 要素の長さ." alt="" coords="589,64,693,91"/>
-<area shape="rect" id="node4" href="$namespacegg.html#a1c20fea9c5d29d82ceabb41c12b2a831" title="3 要素の距離." alt="" coords="422,13,538,40"/>
-<area shape="rect" id="node6" href="$namespacegg.html#a01ccb3648bdfe2d689034136304a7ac5" title="GgVector 型の 3 要素の長さ." alt="" coords="428,64,532,91"/>
-<area shape="rect" id="node7" href="$namespacegg.html#af6a03a10f9a4d01016db6dceb0cc338d" title="3 要素の正規化." alt="" coords="419,115,541,141"/>
-<area shape="rect" id="node5" href="$namespacegg.html#aa3a225df6ac13de39d971cb22ee8f46e" title="GgVector 型の 3 要素の距離." alt="" coords="231,13,347,40"/>
-<area shape="rect" id="node8" href="$namespacegg.html#a2cd46afb53daa13fa8bb2de14baf4e7b" title="グレースケール画像 (8bit) から法線マップのデータを作成する." alt="" coords="208,64,371,91"/>
-<area shape="rect" id="node11" href="$namespacegg.html#a0d3c6911e6aff821d2dc3778b400ba1f" title="メッシュ形状を作成する (Elements 形式)." alt="" coords="217,115,362,141"/>
-<area shape="rect" id="node13" href="$namespacegg.html#a1d602aa5fe6f7037d0180852e26811a2" title="GgVector 型の 3 要素の正規化." alt="" coords="228,165,351,192"/>
-<area shape="rect" id="node9" href="$namespacegg.html#a53453ed6229bbd109c279a3765648d01" title="テクスチャメモリを確保して TGA 画像ファイルを読み込み法線マップを作成する." alt="" coords="21,5,144,32"/>
-<area shape="rect" id="node10" href="$classgg_1_1GgNormalTexture.html#adca09b7af04c1a58703fbafcea758671" title="ファイルからデータを読み込んで法線マップのテクスチャを作成する." alt="" coords="10,57,155,98"/>
-<area shape="rect" id="node12" href="$namespacegg.html#ad4a21673782499741c37fe2efd693697" title=" " alt="" coords="5,123,160,149"/>
+<area shape="rect" id="node1" title=" " alt="" coords="804,81,889,108"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgVector.html#a82f2282affb26a02e7251a012e26f5fd" title=" " alt="" coords="624,31,756,57"/>
+<area shape="rect" id="node3" href="$namespacegg.html#a884a700a6f3d5367f0d7a7fb43bd61e0" title=" " alt="" coords="647,81,733,108"/>
+<area shape="rect" id="node4" href="$namespacegg.html#a837850150a8293353ade7900452955b2" title=" " alt="" coords="638,132,742,159"/>
+<area shape="rect" id="node5" href="$namespacegg.html#a1c20fea9c5d29d82ceabb41c12b2a831" title=" " alt="" coords="443,56,559,83"/>
+<area shape="rect" id="node8" href="$namespacegg.html#a01ccb3648bdfe2d689034136304a7ac5" title=" " alt="" coords="449,107,553,133"/>
+<area shape="rect" id="node9" href="$namespacegg.html#accd75f02070ef57b1da0dccdec3fdd66" title=" " alt="" coords="440,157,563,184"/>
+<area shape="rect" id="node17" href="$classgg_1_1GgVector.html#a00aad8dbf2cd33361e2b0e495f7f4b0d" title=" " alt="" coords="427,208,576,235"/>
+<area shape="rect" id="node6" href="$classgg_1_1GgVector.html#a784cd4bc882511beb2953014de7ba573" title=" " alt="" coords="212,5,375,32"/>
+<area shape="rect" id="node7" href="$namespacegg.html#aa3a225df6ac13de39d971cb22ee8f46e" title=" " alt="" coords="235,56,351,83"/>
+<area shape="rect" id="node10" href="$namespacegg.html#a2cd46afb53daa13fa8bb2de14baf4e7b" title=" " alt="" coords="212,107,375,133"/>
+<area shape="rect" id="node13" href="$namespacegg.html#afe1fcb205a0f34a31eda2d2eb4012084" title=" " alt="" coords="221,157,366,184"/>
+<area shape="rect" id="node15" href="$namespacegg.html#a010fafe70a15a0aaa10ca2cceab23305" title=" " alt="" coords="232,208,355,235"/>
+<area shape="rect" id="node16" href="$classgg_1_1GgVector.html#a5bac9976a7fe4be4a0e69c974153d745" title=" " alt="" coords="208,259,379,285"/>
+<area shape="rect" id="node11" href="$namespacegg.html#a53453ed6229bbd109c279a3765648d01" title=" " alt="" coords="21,48,144,75"/>
+<area shape="rect" id="node12" href="$classgg_1_1GgNormalTexture.html#adca09b7af04c1a58703fbafcea758671" title=" " alt="" coords="10,99,155,141"/>
+<area shape="rect" id="node14" href="$namespacegg.html#a04c512ca7268233b59fc61573dedcf80" title=" " alt="" coords="5,165,160,192"/>
 </map>

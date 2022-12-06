@@ -71,193 +71,143 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>ウィンドウ関連の処理.  
- <a href="classWindow.html#details">[詳解]</a></p>
-
 <p><code>#include &lt;<a class="el" href="Window_8h_source.html">Window.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:ae7c87ca45f27accaf4aa15fc36bafbb1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#ae7c87ca45f27accaf4aa15fc36bafbb1">Window</a> (const std::string &amp;title=&quot;GLFW <a class="el" href="classWindow.html">Window</a>&quot;, int width=640, int height=480, int fullscreen=0, GLFWwindow *share=nullptr)</td></tr>
-<tr class="memdesc:ae7c87ca45f27accaf4aa15fc36bafbb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ.  <a href="classWindow.html#ae7c87ca45f27accaf4aa15fc36bafbb1">[詳解]</a><br /></td></tr>
 <tr class="separator:ae7c87ca45f27accaf4aa15fc36bafbb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ce0353fc6ae2a98054a92fae433e624"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a0ce0353fc6ae2a98054a92fae433e624">Window</a> (const <a class="el" href="classWindow.html">Window</a> &amp;w)=delete</td></tr>
-<tr class="memdesc:a0ce0353fc6ae2a98054a92fae433e624"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピーコンストラクタは使用禁止.  <a href="classWindow.html#a0ce0353fc6ae2a98054a92fae433e624">[詳解]</a><br /></td></tr>
 <tr class="separator:a0ce0353fc6ae2a98054a92fae433e624"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bc373985b2c8f707730ac05c6a07145"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classWindow.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a5bc373985b2c8f707730ac05c6a07145">operator=</a> (const <a class="el" href="classWindow.html">Window</a> &amp;w)=delete</td></tr>
-<tr class="memdesc:a5bc373985b2c8f707730ac05c6a07145"><td class="mdescLeft">&#160;</td><td class="mdescRight">代入演算子は使用禁止.  <a href="classWindow.html#a5bc373985b2c8f707730ac05c6a07145">[詳解]</a><br /></td></tr>
 <tr class="separator:a5bc373985b2c8f707730ac05c6a07145"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62b4a97b3c2e492f1d9a46092011e2d9"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a62b4a97b3c2e492f1d9a46092011e2d9">~Window</a> ()</td></tr>
-<tr class="memdesc:a62b4a97b3c2e492f1d9a46092011e2d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ.  <a href="classWindow.html#a62b4a97b3c2e492f1d9a46092011e2d9">[詳解]</a><br /></td></tr>
 <tr class="separator:a62b4a97b3c2e492f1d9a46092011e2d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26d7a60886e84f537bdf05a66ea3d19b"><td class="memItemLeft" align="right" valign="top">GLFWwindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a26d7a60886e84f537bdf05a66ea3d19b">get</a> () const</td></tr>
-<tr class="memdesc:a26d7a60886e84f537bdf05a66ea3d19b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウの識別子のポインタを取得する.  <a href="classWindow.html#a26d7a60886e84f537bdf05a66ea3d19b">[詳解]</a><br /></td></tr>
-<tr class="separator:a26d7a60886e84f537bdf05a66ea3d19b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab858144797a3d5668b26fae77491cf3d"><td class="memItemLeft" align="right" valign="top">auto *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#ab858144797a3d5668b26fae77491cf3d">get</a> () const</td></tr>
+<tr class="separator:ab858144797a3d5668b26fae77491cf3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dd6ce09e1d68c8576376179aa54fc79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a7dd6ce09e1d68c8576376179aa54fc79">setClose</a> (int flag=GLFW_TRUE) const</td></tr>
-<tr class="memdesc:a7dd6ce09e1d68c8576376179aa54fc79"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウのクローズフラグを設定する.  <a href="classWindow.html#a7dd6ce09e1d68c8576376179aa54fc79">[詳解]</a><br /></td></tr>
 <tr class="separator:a7dd6ce09e1d68c8576376179aa54fc79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1caaf150558c0c35a8811f19ccac817d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a1caaf150558c0c35a8811f19ccac817d">shouldClose</a> () const</td></tr>
-<tr class="memdesc:a1caaf150558c0c35a8811f19ccac817d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウを閉じるべきかどうか調べる.  <a href="classWindow.html#a1caaf150558c0c35a8811f19ccac817d">[詳解]</a><br /></td></tr>
 <tr class="separator:a1caaf150558c0c35a8811f19ccac817d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa948dc12020c54ffd0cd1ebdfbfe65f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#aa948dc12020c54ffd0cd1ebdfbfe65f1">operator bool</a> ()</td></tr>
-<tr class="memdesc:aa948dc12020c54ffd0cd1ebdfbfe65f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントを取得してループを継続すべきかどうか調べる.  <a href="classWindow.html#aa948dc12020c54ffd0cd1ebdfbfe65f1">[詳解]</a><br /></td></tr>
 <tr class="separator:aa948dc12020c54ffd0cd1ebdfbfe65f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6ffedb8d12d5551bdb4c298de87ed56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#af6ffedb8d12d5551bdb4c298de87ed56">swapBuffers</a> ()</td></tr>
-<tr class="memdesc:af6ffedb8d12d5551bdb4c298de87ed56"><td class="mdescLeft">&#160;</td><td class="mdescRight">カラーバッファを入れ替える.  <a href="classWindow.html#af6ffedb8d12d5551bdb4c298de87ed56">[詳解]</a><br /></td></tr>
-<tr class="separator:af6ffedb8d12d5551bdb4c298de87ed56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e955e7d13b4a1fd96a863b9b3277371"><td class="memItemLeft" align="right" valign="top">const GLsizei &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a5e955e7d13b4a1fd96a863b9b3277371">getWidth</a> () const</td></tr>
-<tr class="memdesc:a5e955e7d13b4a1fd96a863b9b3277371"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウの横幅を得る.  <a href="classWindow.html#a5e955e7d13b4a1fd96a863b9b3277371">[詳解]</a><br /></td></tr>
-<tr class="separator:a5e955e7d13b4a1fd96a863b9b3277371"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34c16cc46e59077316e662388a88f2ae"><td class="memItemLeft" align="right" valign="top">const GLsizei &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a34c16cc46e59077316e662388a88f2ae">getHeight</a> () const</td></tr>
-<tr class="memdesc:a34c16cc46e59077316e662388a88f2ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウの高さを得る.  <a href="classWindow.html#a34c16cc46e59077316e662388a88f2ae">[詳解]</a><br /></td></tr>
-<tr class="separator:a34c16cc46e59077316e662388a88f2ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cc6da256582c0789a1c346116540ace"><td class="memItemLeft" align="right" valign="top">const GLsizei *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a2cc6da256582c0789a1c346116540ace">getSize</a> () const</td></tr>
-<tr class="memdesc:a2cc6da256582c0789a1c346116540ace"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウのサイズを得る.  <a href="classWindow.html#a2cc6da256582c0789a1c346116540ace">[詳解]</a><br /></td></tr>
-<tr class="separator:a2cc6da256582c0789a1c346116540ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04ab8fcdfcc749a5f5f2c0441528b5b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a04ab8fcdfcc749a5f5f2c0441528b5b0">swapBuffers</a> () const</td></tr>
+<tr class="separator:a04ab8fcdfcc749a5f5f2c0441528b5b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42130ff81c66dd73718276bb8dbbcee9"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a42130ff81c66dd73718276bb8dbbcee9">getWidth</a> () const</td></tr>
+<tr class="separator:a42130ff81c66dd73718276bb8dbbcee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a948c47dbce4e9b4e496f60d1105ac8db"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a948c47dbce4e9b4e496f60d1105ac8db">getHeight</a> () const</td></tr>
+<tr class="separator:a948c47dbce4e9b4e496f60d1105ac8db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6afd0c99e57427e37248a2dc7229743b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a6afd0c99e57427e37248a2dc7229743b">getFboWidth</a> () const</td></tr>
+<tr class="separator:a6afd0c99e57427e37248a2dc7229743b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d60c77d4531dc088172372599863f00"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a4d60c77d4531dc088172372599863f00">getFboHeight</a> () const</td></tr>
+<tr class="separator:a4d60c77d4531dc088172372599863f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e5968cb3ef21277666d5e81ef9a04a9"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a5e5968cb3ef21277666d5e81ef9a04a9">getSize</a> () const</td></tr>
+<tr class="separator:a5e5968cb3ef21277666d5e81ef9a04a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a073fca10f74c8f0e60d457df0b431bf0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a073fca10f74c8f0e60d457df0b431bf0">getSize</a> (GLsizei *size) const</td></tr>
-<tr class="memdesc:a073fca10f74c8f0e60d457df0b431bf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウのサイズを得る.  <a href="classWindow.html#a073fca10f74c8f0e60d457df0b431bf0">[詳解]</a><br /></td></tr>
 <tr class="separator:a073fca10f74c8f0e60d457df0b431bf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b6ec08ba7a6dbe9fe53aa6c89668dcb"><td class="memItemLeft" align="right" valign="top">const GLfloat &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a1b6ec08ba7a6dbe9fe53aa6c89668dcb">getAspect</a> () const</td></tr>
-<tr class="memdesc:a1b6ec08ba7a6dbe9fe53aa6c89668dcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウのアスペクト比を得る.  <a href="classWindow.html#a1b6ec08ba7a6dbe9fe53aa6c89668dcb">[詳解]</a><br /></td></tr>
-<tr class="separator:a1b6ec08ba7a6dbe9fe53aa6c89668dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d10cba1a3c7884765f6e34dcb59a2fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a8d10cba1a3c7884765f6e34dcb59a2fa">restoreViewport</a> ()</td></tr>
-<tr class="memdesc:a8d10cba1a3c7884765f6e34dcb59a2fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビューポートをウィンドウ全体に設定する.  <a href="classWindow.html#a8d10cba1a3c7884765f6e34dcb59a2fa">[詳解]</a><br /></td></tr>
-<tr class="separator:a8d10cba1a3c7884765f6e34dcb59a2fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa94a481e993249d24b858f1310734e9e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#aa94a481e993249d24b858f1310734e9e">getKey</a> (int key)</td></tr>
-<tr class="memdesc:aa94a481e993249d24b858f1310734e9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">キーが押されているかどうかを判定する.  <a href="classWindow.html#aa94a481e993249d24b858f1310734e9e">[詳解]</a><br /></td></tr>
-<tr class="separator:aa94a481e993249d24b858f1310734e9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e62c3bdae9ed0f1dba9ea22e372f44c"><td class="memItemLeft" align="right" valign="top">const auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a0e62c3bdae9ed0f1dba9ea22e372f44c">getFboSize</a> () const</td></tr>
+<tr class="separator:a0e62c3bdae9ed0f1dba9ea22e372f44c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39f08cf7c25585a5db74f649c75eadc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a39f08cf7c25585a5db74f649c75eadc7">getFboSize</a> (GLsizei *fboSize) const</td></tr>
+<tr class="separator:a39f08cf7c25585a5db74f649c75eadc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83f802499a60169c03ba8d925c4d6946"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a83f802499a60169c03ba8d925c4d6946">getAspect</a> () const</td></tr>
+<tr class="separator:a83f802499a60169c03ba8d925c4d6946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeca0feb7ef8d75031d31b2815b9fa0ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#aeca0feb7ef8d75031d31b2815b9fa0ad">restoreViewport</a> () const</td></tr>
+<tr class="separator:aeca0feb7ef8d75031d31b2815b9fa0ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaa0c7f0b28ef71ad5f43e1db9e794e0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#aaaa0c7f0b28ef71ad5f43e1db9e794e0">getKey</a> (int key) const</td></tr>
+<tr class="separator:aaaa0c7f0b28ef71ad5f43e1db9e794e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbc1f060541189f00a0518b499217f1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#adbc1f060541189f00a0518b499217f1a">selectInterface</a> (int no)</td></tr>
-<tr class="memdesc:adbc1f060541189f00a0518b499217f1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">インタフェースを選択する  <a href="classWindow.html#adbc1f060541189f00a0518b499217f1a">[詳解]</a><br /></td></tr>
 <tr class="separator:adbc1f060541189f00a0518b499217f1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fd44a07a4a1cd39eeb85911fa6b308d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a5fd44a07a4a1cd39eeb85911fa6b308d">setVelocity</a> (GLfloat vx, GLfloat vy, GLfloat vz=0.1f)</td></tr>
-<tr class="memdesc:a5fd44a07a4a1cd39eeb85911fa6b308d"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスの移動速度を設定する  <a href="classWindow.html#a5fd44a07a4a1cd39eeb85911fa6b308d">[詳解]</a><br /></td></tr>
 <tr class="separator:a5fd44a07a4a1cd39eeb85911fa6b308d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac91bc4516ae6b3b09ef1ef5990ac433"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#aac91bc4516ae6b3b09ef1ef5990ac433">getArrow</a> (int direction=0, int mods=0) const</td></tr>
-<tr class="memdesc:aac91bc4516ae6b3b09ef1ef5990ac433"><td class="mdescLeft">&#160;</td><td class="mdescRight">矢印キーの現在の値を得る.  <a href="classWindow.html#aac91bc4516ae6b3b09ef1ef5990ac433">[詳解]</a><br /></td></tr>
-<tr class="separator:aac91bc4516ae6b3b09ef1ef5990ac433"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7a1c86a677d0c09197d47daa102d0ed"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#aa7a1c86a677d0c09197d47daa102d0ed">getArrowX</a> (int mods=0) const</td></tr>
-<tr class="memdesc:aa7a1c86a677d0c09197d47daa102d0ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">矢印キーの現在の X 値を得る.  <a href="classWindow.html#aa7a1c86a677d0c09197d47daa102d0ed">[詳解]</a><br /></td></tr>
-<tr class="separator:aa7a1c86a677d0c09197d47daa102d0ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d8f615ab47e8e22e95270de51f5c317"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a6d8f615ab47e8e22e95270de51f5c317">getArrowY</a> (int mods=0) const</td></tr>
-<tr class="memdesc:a6d8f615ab47e8e22e95270de51f5c317"><td class="mdescLeft">&#160;</td><td class="mdescRight">矢印キーの現在の Y 値を得る.  <a href="classWindow.html#a6d8f615ab47e8e22e95270de51f5c317">[詳解]</a><br /></td></tr>
-<tr class="separator:a6d8f615ab47e8e22e95270de51f5c317"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a111999067dce97014429cc9edd0ec45a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a111999067dce97014429cc9edd0ec45a">getLastKey</a> ()</td></tr>
+<tr class="separator:a111999067dce97014429cc9edd0ec45a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69674409ad0385b293da5deef0e4a0b0"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a69674409ad0385b293da5deef0e4a0b0">getArrow</a> (int direction=0, int mods=0) const</td></tr>
+<tr class="separator:a69674409ad0385b293da5deef0e4a0b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a986970275f44ec491ca43e9b48073618"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a986970275f44ec491ca43e9b48073618">getArrowX</a> (int mods=0) const</td></tr>
+<tr class="separator:a986970275f44ec491ca43e9b48073618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e9b4cd2afd0ac82380db0f52ff116cd"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a9e9b4cd2afd0ac82380db0f52ff116cd">getArrowY</a> (int mods=0) const</td></tr>
+<tr class="separator:a9e9b4cd2afd0ac82380db0f52ff116cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a8181226d8dda724c38db4541216679"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a4a8181226d8dda724c38db4541216679">getArrow</a> (GLfloat *arrow, int mods=0) const</td></tr>
-<tr class="memdesc:a4a8181226d8dda724c38db4541216679"><td class="mdescLeft">&#160;</td><td class="mdescRight">矢印キーの現在の値を得る.  <a href="classWindow.html#a4a8181226d8dda724c38db4541216679">[詳解]</a><br /></td></tr>
 <tr class="separator:a4a8181226d8dda724c38db4541216679"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05fb8c9aa65e77f72e8701bb19babd87"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a05fb8c9aa65e77f72e8701bb19babd87">getShiftArrowX</a> () const</td></tr>
-<tr class="memdesc:a05fb8c9aa65e77f72e8701bb19babd87"><td class="mdescLeft">&#160;</td><td class="mdescRight">SHIFT キーを押しながら矢印キーを押したときの現在の X 値を得る.  <a href="classWindow.html#a05fb8c9aa65e77f72e8701bb19babd87">[詳解]</a><br /></td></tr>
-<tr class="separator:a05fb8c9aa65e77f72e8701bb19babd87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cd3fd0861a2ebdaba6ab5e4005edbd5"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a5cd3fd0861a2ebdaba6ab5e4005edbd5">getShiftArrowY</a> () const</td></tr>
-<tr class="memdesc:a5cd3fd0861a2ebdaba6ab5e4005edbd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">SHIFT キーを押しながら矢印キーを押したときの現在の Y 値を得る.  <a href="classWindow.html#a5cd3fd0861a2ebdaba6ab5e4005edbd5">[詳解]</a><br /></td></tr>
-<tr class="separator:a5cd3fd0861a2ebdaba6ab5e4005edbd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ab700a3d16efa5cd3e68991d6ddda27"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a0ab700a3d16efa5cd3e68991d6ddda27">getShiftArrowX</a> () const</td></tr>
+<tr class="separator:a0ab700a3d16efa5cd3e68991d6ddda27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47c90c017cc98ec21c6c71c7ab623ad0"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a47c90c017cc98ec21c6c71c7ab623ad0">getShiftArrowY</a> () const</td></tr>
+<tr class="separator:a47c90c017cc98ec21c6c71c7ab623ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a234c451b5546f428db0b58bdc854e245"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a234c451b5546f428db0b58bdc854e245">getShiftArrow</a> (GLfloat *shift_arrow) const</td></tr>
-<tr class="memdesc:a234c451b5546f428db0b58bdc854e245"><td class="mdescLeft">&#160;</td><td class="mdescRight">SHIFT キーを押しながら矢印キーを押したときの現在の値を得る.  <a href="classWindow.html#a234c451b5546f428db0b58bdc854e245">[詳解]</a><br /></td></tr>
 <tr class="separator:a234c451b5546f428db0b58bdc854e245"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb0c43b2ffcd80441d8496295cb09545"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#acb0c43b2ffcd80441d8496295cb09545">getControlArrowX</a> () const</td></tr>
-<tr class="memdesc:acb0c43b2ffcd80441d8496295cb09545"><td class="mdescLeft">&#160;</td><td class="mdescRight">CTRL キーを押しながら矢印キーを押したときの現在の X 値を得る.  <a href="classWindow.html#acb0c43b2ffcd80441d8496295cb09545">[詳解]</a><br /></td></tr>
-<tr class="separator:acb0c43b2ffcd80441d8496295cb09545"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ff2dbdb6000a32df43b4c5ef578ef42"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a6ff2dbdb6000a32df43b4c5ef578ef42">getControlArrowY</a> () const</td></tr>
-<tr class="memdesc:a6ff2dbdb6000a32df43b4c5ef578ef42"><td class="mdescLeft">&#160;</td><td class="mdescRight">CTRL キーを押しながら矢印キーを押したときの現在の Y 値を得る.  <a href="classWindow.html#a6ff2dbdb6000a32df43b4c5ef578ef42">[詳解]</a><br /></td></tr>
-<tr class="separator:a6ff2dbdb6000a32df43b4c5ef578ef42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac623a387a5c8477126f41080fd842ae1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#ac623a387a5c8477126f41080fd842ae1">getControlArrowX</a> () const</td></tr>
+<tr class="separator:ac623a387a5c8477126f41080fd842ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a485a1a6aca82ed74939d1486c2479f5e"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a485a1a6aca82ed74939d1486c2479f5e">getControlArrowY</a> () const</td></tr>
+<tr class="separator:a485a1a6aca82ed74939d1486c2479f5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86000b312e1ed706e4612345ecb768a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a86000b312e1ed706e4612345ecb768a8">getControlArrow</a> (GLfloat *control_arrow) const</td></tr>
-<tr class="memdesc:a86000b312e1ed706e4612345ecb768a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">CTRL キーを押しながら矢印キーを押したときの現在の値を得る.  <a href="classWindow.html#a86000b312e1ed706e4612345ecb768a8">[詳解]</a><br /></td></tr>
 <tr class="separator:a86000b312e1ed706e4612345ecb768a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeeb814f906b4f47219f4e8a2fb34b2ab"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#aeeb814f906b4f47219f4e8a2fb34b2ab">getAltArrowX</a> () const</td></tr>
-<tr class="memdesc:aeeb814f906b4f47219f4e8a2fb34b2ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">ALT キーを押しながら矢印キーを押したときの現在の X 値を得る.  <a href="classWindow.html#aeeb814f906b4f47219f4e8a2fb34b2ab">[詳解]</a><br /></td></tr>
-<tr class="separator:aeeb814f906b4f47219f4e8a2fb34b2ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab0e7fab98c98784dfe9e577540e9d53"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#aab0e7fab98c98784dfe9e577540e9d53">getAltArrowY</a> () const</td></tr>
-<tr class="memdesc:aab0e7fab98c98784dfe9e577540e9d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">ALT キーを押しながら矢印キーを押したときの現在の Y 値を得る.  <a href="classWindow.html#aab0e7fab98c98784dfe9e577540e9d53">[詳解]</a><br /></td></tr>
-<tr class="separator:aab0e7fab98c98784dfe9e577540e9d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a8b195af0bbdca39b324db72ef509b4"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a7a8b195af0bbdca39b324db72ef509b4">getAltArrowX</a> () const</td></tr>
+<tr class="separator:a7a8b195af0bbdca39b324db72ef509b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21fbd58367d5718fb3822f64d9df108a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a21fbd58367d5718fb3822f64d9df108a">getAltArrowY</a> () const</td></tr>
+<tr class="separator:a21fbd58367d5718fb3822f64d9df108a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85f6c9846533398d20b2e273c14f2b06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a85f6c9846533398d20b2e273c14f2b06">getAltlArrow</a> (GLfloat *alt_arrow) const</td></tr>
-<tr class="memdesc:a85f6c9846533398d20b2e273c14f2b06"><td class="mdescLeft">&#160;</td><td class="mdescRight">ALT キーを押しながら矢印キーを押したときの現在の値を得る.  <a href="classWindow.html#a85f6c9846533398d20b2e273c14f2b06">[詳解]</a><br /></td></tr>
 <tr class="separator:a85f6c9846533398d20b2e273c14f2b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5584a8a7d5901adf78def614f1eae77d"><td class="memItemLeft" align="right" valign="top">const GLfloat *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a5584a8a7d5901adf78def614f1eae77d">getMouse</a> () const</td></tr>
-<tr class="memdesc:a5584a8a7d5901adf78def614f1eae77d"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスカーソルの現在位置を得る.  <a href="classWindow.html#a5584a8a7d5901adf78def614f1eae77d">[詳解]</a><br /></td></tr>
-<tr class="separator:a5584a8a7d5901adf78def614f1eae77d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade85e45bb2c4a92dc6dee9d89b2f573c"><td class="memItemLeft" align="right" valign="top">const auto *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#ade85e45bb2c4a92dc6dee9d89b2f573c">getMouse</a> () const</td></tr>
+<tr class="separator:ade85e45bb2c4a92dc6dee9d89b2f573c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a184e511e2cdf86bb519d7b901236e13e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a184e511e2cdf86bb519d7b901236e13e">getMouse</a> (GLfloat *position) const</td></tr>
-<tr class="memdesc:a184e511e2cdf86bb519d7b901236e13e"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスカーソルの現在位置を得る.  <a href="classWindow.html#a184e511e2cdf86bb519d7b901236e13e">[詳解]</a><br /></td></tr>
 <tr class="separator:a184e511e2cdf86bb519d7b901236e13e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42049b522611299ae98edb6d51ae943d"><td class="memItemLeft" align="right" valign="top">const GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a42049b522611299ae98edb6d51ae943d">getMouse</a> (int direction) const</td></tr>
-<tr class="memdesc:a42049b522611299ae98edb6d51ae943d"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスカーソルの現在位置を得る.  <a href="classWindow.html#a42049b522611299ae98edb6d51ae943d">[詳解]</a><br /></td></tr>
-<tr class="separator:a42049b522611299ae98edb6d51ae943d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81cb212dc1db6e826c40ad33c4ccda74"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a81cb212dc1db6e826c40ad33c4ccda74">getMouseX</a> () const</td></tr>
-<tr class="memdesc:a81cb212dc1db6e826c40ad33c4ccda74"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスカーソルの現在位置の X 座標を得る.  <a href="classWindow.html#a81cb212dc1db6e826c40ad33c4ccda74">[詳解]</a><br /></td></tr>
-<tr class="separator:a81cb212dc1db6e826c40ad33c4ccda74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92d225ad83966c1e7762c9430be48c51"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a92d225ad83966c1e7762c9430be48c51">getMouseY</a> () const</td></tr>
-<tr class="memdesc:a92d225ad83966c1e7762c9430be48c51"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスカーソルの現在位置の Y 座標を得る.  <a href="classWindow.html#a92d225ad83966c1e7762c9430be48c51">[詳解]</a><br /></td></tr>
-<tr class="separator:a92d225ad83966c1e7762c9430be48c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42e37954367983db3c7b9f84a928cca5"><td class="memItemLeft" align="right" valign="top">const GLfloat *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a42e37954367983db3c7b9f84a928cca5">getWheel</a> () const</td></tr>
-<tr class="memdesc:a42e37954367983db3c7b9f84a928cca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスホイールの回転量を得る.  <a href="classWindow.html#a42e37954367983db3c7b9f84a928cca5">[詳解]</a><br /></td></tr>
-<tr class="separator:a42e37954367983db3c7b9f84a928cca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace583f098d1114a77cd614b1c6d56d67"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#ace583f098d1114a77cd614b1c6d56d67">getMouse</a> (int direction) const</td></tr>
+<tr class="separator:ace583f098d1114a77cd614b1c6d56d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25098eb70ef0ded8018d2152ce611d82"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a25098eb70ef0ded8018d2152ce611d82">getMouseX</a> () const</td></tr>
+<tr class="separator:a25098eb70ef0ded8018d2152ce611d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d9877124be054bcb6180dfe132ba8b8"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a2d9877124be054bcb6180dfe132ba8b8">getMouseY</a> () const</td></tr>
+<tr class="separator:a2d9877124be054bcb6180dfe132ba8b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e950080053fade332adbbf86687ee12"><td class="memItemLeft" align="right" valign="top">const auto *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a8e950080053fade332adbbf86687ee12">getWheel</a> () const</td></tr>
+<tr class="separator:a8e950080053fade332adbbf86687ee12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46b218ddb1c60d1f076d5ec24ab0a2bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a46b218ddb1c60d1f076d5ec24ab0a2bd">getWheel</a> (GLfloat *rotation) const</td></tr>
-<tr class="memdesc:a46b218ddb1c60d1f076d5ec24ab0a2bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスホイールの回転量を得る.  <a href="classWindow.html#a46b218ddb1c60d1f076d5ec24ab0a2bd">[詳解]</a><br /></td></tr>
 <tr class="separator:a46b218ddb1c60d1f076d5ec24ab0a2bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74554fd779099e58e165e1045026841f"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a74554fd779099e58e165e1045026841f">getWheel</a> (int direction) const</td></tr>
-<tr class="memdesc:a74554fd779099e58e165e1045026841f"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスホイールの回転量を得る.  <a href="classWindow.html#a74554fd779099e58e165e1045026841f">[詳解]</a><br /></td></tr>
-<tr class="separator:a74554fd779099e58e165e1045026841f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdc72d37bfb4aef58bedf2db7174c4ec"><td class="memItemLeft" align="right" valign="top">const GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#abdc72d37bfb4aef58bedf2db7174c4ec">getWheelX</a> () const</td></tr>
-<tr class="memdesc:abdc72d37bfb4aef58bedf2db7174c4ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスホイールの X 方向の回転量を得る.  <a href="classWindow.html#abdc72d37bfb4aef58bedf2db7174c4ec">[詳解]</a><br /></td></tr>
-<tr class="separator:abdc72d37bfb4aef58bedf2db7174c4ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe2d6a9ad52372c170df2e2aa021441b"><td class="memItemLeft" align="right" valign="top">const GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#abe2d6a9ad52372c170df2e2aa021441b">getWheelY</a> () const</td></tr>
-<tr class="memdesc:abe2d6a9ad52372c170df2e2aa021441b"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスホイールの Y 方向の回転量を得る.  <a href="classWindow.html#abe2d6a9ad52372c170df2e2aa021441b">[詳解]</a><br /></td></tr>
-<tr class="separator:abe2d6a9ad52372c170df2e2aa021441b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25cd6dd6bc3ca5bc759aab808307bf56"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a25cd6dd6bc3ca5bc759aab808307bf56">getTranslation</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
-<tr class="memdesc:a25cd6dd6bc3ca5bc759aab808307bf56"><td class="mdescLeft">&#160;</td><td class="mdescRight">トラックボール処理を考慮したマウスによるスクロールの変換行列を得る.  <a href="classWindow.html#a25cd6dd6bc3ca5bc759aab808307bf56">[詳解]</a><br /></td></tr>
-<tr class="separator:a25cd6dd6bc3ca5bc759aab808307bf56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac677470c87cc7f59f0d89d9e784b202"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#aac677470c87cc7f59f0d89d9e784b202">getTranslationMatrix</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
-<tr class="memdesc:aac677470c87cc7f59f0d89d9e784b202"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスによって視点の平行移動の変換行列を得る.  <a href="classWindow.html#aac677470c87cc7f59f0d89d9e784b202">[詳解]</a><br /></td></tr>
-<tr class="separator:aac677470c87cc7f59f0d89d9e784b202"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ec0a228d7e37a081e8f3af8175b9185"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a5ec0a228d7e37a081e8f3af8175b9185">getScrollMatrix</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
-<tr class="memdesc:a5ec0a228d7e37a081e8f3af8175b9185"><td class="mdescLeft">&#160;</td><td class="mdescRight">マウスによってオブジェクトの平行移動の変換行列を得る.  <a href="classWindow.html#a5ec0a228d7e37a081e8f3af8175b9185">[詳解]</a><br /></td></tr>
-<tr class="separator:a5ec0a228d7e37a081e8f3af8175b9185"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40def3d340c3924680515d666ead8313"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a40def3d340c3924680515d666ead8313">getRotation</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
-<tr class="memdesc:a40def3d340c3924680515d666ead8313"><td class="mdescLeft">&#160;</td><td class="mdescRight">トラックボールの回転変換行列を得る.  <a href="classWindow.html#a40def3d340c3924680515d666ead8313">[詳解]</a><br /></td></tr>
-<tr class="separator:a40def3d340c3924680515d666ead8313"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43c6828e3302df47a9781710fc21f609"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a43c6828e3302df47a9781710fc21f609">getRotationMatrix</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
-<tr class="memdesc:a43c6828e3302df47a9781710fc21f609"><td class="mdescLeft">&#160;</td><td class="mdescRight">トラックボールの回転変換行列を得る.  <a href="classWindow.html#a43c6828e3302df47a9781710fc21f609">[詳解]</a><br /></td></tr>
-<tr class="separator:a43c6828e3302df47a9781710fc21f609"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45435a32a37a4ce1aeac9f742c776ede"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a45435a32a37a4ce1aeac9f742c776ede">getWheel</a> (int direction) const</td></tr>
+<tr class="separator:a45435a32a37a4ce1aeac9f742c776ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08954269a9d484b7747e8b5d06a75bd3"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a08954269a9d484b7747e8b5d06a75bd3">getWheelX</a> () const</td></tr>
+<tr class="separator:a08954269a9d484b7747e8b5d06a75bd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af80b52e3992bf09cf4d692202444a6dd"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#af80b52e3992bf09cf4d692202444a6dd">getWheelY</a> () const</td></tr>
+<tr class="separator:af80b52e3992bf09cf4d692202444a6dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91cde2c45c80418c26e7f58704a88323"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a91cde2c45c80418c26e7f58704a88323">getTranslation</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
+<tr class="separator:a91cde2c45c80418c26e7f58704a88323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0db4a582ee6f38e20935efda45054c7d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a0db4a582ee6f38e20935efda45054c7d">getTranslationMatrix</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
+<tr class="separator:a0db4a582ee6f38e20935efda45054c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc43e1c72abfb85188eceee1bdfdc2d5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#adc43e1c72abfb85188eceee1bdfdc2d5">getScrollMatrix</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
+<tr class="separator:adc43e1c72abfb85188eceee1bdfdc2d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee8fd1e1ef1188ac1fa6bf22be83155b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#aee8fd1e1ef1188ac1fa6bf22be83155b">getRotation</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
+<tr class="separator:aee8fd1e1ef1188ac1fa6bf22be83155b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a742e7d18917090b15a45dbf8a3963be7"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a742e7d18917090b15a45dbf8a3963be7">getRotationMatrix</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
+<tr class="separator:a742e7d18917090b15a45dbf8a3963be7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a559dbd55871ac1440c07531d96afe9a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a559dbd55871ac1440c07531d96afe9a3">resetRotation</a> ()</td></tr>
-<tr class="memdesc:a559dbd55871ac1440c07531d96afe9a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">トラックボール処理を初期化する.  <a href="classWindow.html#a559dbd55871ac1440c07531d96afe9a3">[詳解]</a><br /></td></tr>
 <tr class="separator:a559dbd55871ac1440c07531d96afe9a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac11eb1ee22d693d46b32d60ac755d0aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#ac11eb1ee22d693d46b32d60ac755d0aa">resetTranslation</a> ()</td></tr>
-<tr class="memdesc:ac11eb1ee22d693d46b32d60ac755d0aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">平行移動量を初期化する.  <a href="classWindow.html#ac11eb1ee22d693d46b32d60ac755d0aa">[詳解]</a><br /></td></tr>
 <tr class="separator:ac11eb1ee22d693d46b32d60ac755d0aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00a00d153d98b446ec8b5b5ca870081d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a00a00d153d98b446ec8b5b5ca870081d">reset</a> ()</td></tr>
-<tr class="memdesc:a00a00d153d98b446ec8b5b5ca870081d"><td class="mdescLeft">&#160;</td><td class="mdescRight">トラックボール・マウスホイール・矢印キーの値を初期化する.  <a href="classWindow.html#a00a00d153d98b446ec8b5b5ca870081d">[詳解]</a><br /></td></tr>
 <tr class="separator:a00a00d153d98b446ec8b5b5ca870081d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a050a555a415732a867d8f490d4fcb4c6"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a050a555a415732a867d8f490d4fcb4c6">getUserPointer</a> () const</td></tr>
-<tr class="memdesc:a050a555a415732a867d8f490d4fcb4c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">ユーザーポインタを取り出す.  <a href="classWindow.html#a050a555a415732a867d8f490d4fcb4c6">[詳解]</a><br /></td></tr>
 <tr class="separator:a050a555a415732a867d8f490d4fcb4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf319c45dfbe5bdc3e2ad04b8a9f7fa1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#adf319c45dfbe5bdc3e2ad04b8a9f7fa1">setUserPointer</a> (void *pointer)</td></tr>
-<tr class="memdesc:adf319c45dfbe5bdc3e2ad04b8a9f7fa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">任意のユーザポインタを保存する.  <a href="classWindow.html#adf319c45dfbe5bdc3e2ad04b8a9f7fa1">[詳解]</a><br /></td></tr>
 <tr class="separator:adf319c45dfbe5bdc3e2ad04b8a9f7fa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49c5c2961b448d71f87b0e5fd2a595c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a49c5c2961b448d71f87b0e5fd2a595c6">setResizeFunc</a> (void(*func)(const <a class="el" href="classWindow.html">Window</a> *window, int width, int height))</td></tr>
-<tr class="memdesc:a49c5c2961b448d71f87b0e5fd2a595c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">ユーザ定義の resize 関数を設定する.  <a href="classWindow.html#a49c5c2961b448d71f87b0e5fd2a595c6">[詳解]</a><br /></td></tr>
 <tr class="separator:a49c5c2961b448d71f87b0e5fd2a595c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add753b74c5868eeff32f3fe8d122f2d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#add753b74c5868eeff32f3fe8d122f2d6">setKeyboardFunc</a> (void(*func)(const <a class="el" href="classWindow.html">Window</a> *window, int key, int scancode, int action, int mods))</td></tr>
-<tr class="memdesc:add753b74c5868eeff32f3fe8d122f2d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">ユーザ定義の keyboard 関数を設定する.  <a href="classWindow.html#add753b74c5868eeff32f3fe8d122f2d6">[詳解]</a><br /></td></tr>
 <tr class="separator:add753b74c5868eeff32f3fe8d122f2d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb09f22aed8453ec749d4c8e0d82d830"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#aeb09f22aed8453ec749d4c8e0d82d830">setMouseFunc</a> (void(*func)(const <a class="el" href="classWindow.html">Window</a> *window, int button, int action, int mods))</td></tr>
-<tr class="memdesc:aeb09f22aed8453ec749d4c8e0d82d830"><td class="mdescLeft">&#160;</td><td class="mdescRight">ユーザ定義の mouse 関数を設定する.  <a href="classWindow.html#aeb09f22aed8453ec749d4c8e0d82d830">[詳解]</a><br /></td></tr>
 <tr class="separator:aeb09f22aed8453ec749d4c8e0d82d830"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa740f5ecfeec133d29f95fae566c7778"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#aa740f5ecfeec133d29f95fae566c7778">setWheelFunc</a> (void(*func)(const <a class="el" href="classWindow.html">Window</a> *window, double x, double y))</td></tr>
-<tr class="memdesc:aa740f5ecfeec133d29f95fae566c7778"><td class="mdescLeft">&#160;</td><td class="mdescRight">ユーザ定義の wheel 関数を設定する.  <a href="classWindow.html#aa740f5ecfeec133d29f95fae566c7778">[詳解]</a><br /></td></tr>
 <tr class="separator:aa740f5ecfeec133d29f95fae566c7778"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcc727222965f3df5eea3856bf5701d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#adcc727222965f3df5eea3856bf5701d5">setMenubarHeight</a> (float menubarheight)</td></tr>
-<tr class="memdesc:adcc727222965f3df5eea3856bf5701d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">表示領域をメニューバーの高さだけ減らす.  <a href="classWindow.html#adcc727222965f3df5eea3856bf5701d5">[詳解]</a><br /></td></tr>
 <tr class="separator:adcc727222965f3df5eea3856bf5701d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静的公開メンバ関数</h2></td></tr>
 <tr class="memitem:a0d067da19dc2649f7cb91f2b5c235908"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html#a0d067da19dc2649f7cb91f2b5c235908">initialize</a> (int major=0, int minor=1)</td></tr>
-<tr class="memdesc:a0d067da19dc2649f7cb91f2b5c235908"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームグラフィックス特論の宿題用補助プログラムの初期化, 最初に一度だけ実行する.  <a href="classWindow.html#a0d067da19dc2649f7cb91f2b5c235908">[詳解]</a><br /></td></tr>
 <tr class="separator:a0d067da19dc2649f7cb91f2b5c235908"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>ウィンドウ関連の処理. </p>
-<p>GLFW を使って OpenGL のウィンドウを操作するラッパークラス. </p>
+<div class="textblock"><p>ウィンドウ関連の処理.</p>
+<dl class="section note"><dt>覚え書き</dt><dd>GLFW を使って OpenGL のウィンドウを操作するラッパークラス. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00092">92</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00094">94</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
 <a id="ae7c87ca45f27accaf4aa15fc36bafbb1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae7c87ca45f27accaf4aa15fc36bafbb1">&#9670;&nbsp;</a></span>Window() <span class="overload">[1/2]</span></h2>
@@ -310,27 +260,26 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>コンストラクタ. </p>
+<p>コンストラクタ.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">title</td><td>ウィンドウタイトルの文字列. </td></tr>
-    <tr><td class="paramname">width</td><td>開くウィンドウの幅. </td></tr>
-    <tr><td class="paramname">height</td><td>開くウィンドウの高さ. </td></tr>
+    <tr><td class="paramname">width</td><td>開くウィンドウの幅, フルスクリーン時は無視され実際のディスプレイの幅が使われる. </td></tr>
+    <tr><td class="paramname">height</td><td>開くウィンドウの高さ, フルスクリーン時は無視され実際のディスプレイの高さが使われる. </td></tr>
     <tr><td class="paramname">fullscreen</td><td>フルスクリーン表示を行うディスプレイ番号, 0 ならフルスクリーン表示を行わない. </td></tr>
     <tr><td class="paramname">share</td><td>共有するコンテキスト, nullptr ならコンテキストを共有しない. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00471">471</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00478">478</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classWindow_ae7c87ca45f27accaf4aa15fc36bafbb1_cgraph.png" border="0" usemap="#aclassWindow_ae7c87ca45f27accaf4aa15fc36bafbb1_cgraph" alt=""/></div>
 <map name="aclassWindow_ae7c87ca45f27accaf4aa15fc36bafbb1_cgraph" id="aclassWindow_ae7c87ca45f27accaf4aa15fc36bafbb1_cgraph">
-<area shape="rect" title="コンストラクタ." alt="" coords="5,5,128,32"/>
-<area shape="rect" href="namespacegg.html#af7ab5857e56acfcf3e806f587f3737a0" title="ゲームグラフィックス特論の都合にもとづく初期化を行う." alt="" coords="176,5,251,32"/>
+<area shape="rect" title=" " alt="" coords="5,5,128,32"/>
+<area shape="rect" href="namespacegg.html#af7ab5857e56acfcf3e806f587f3737a0" title=" " alt="" coords="176,5,251,32"/>
 </map>
 </div>
 
@@ -360,8 +309,6 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p>コピーコンストラクタは使用禁止. </p>
-
 </div>
 </div>
 <a id="a62b4a97b3c2e492f1d9a46092011e2d9"></a>
@@ -386,16 +333,15 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
 <p>デストラクタ. </p>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00557">557</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00587">587</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="a26d7a60886e84f537bdf05a66ea3d19b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26d7a60886e84f537bdf05a66ea3d19b">&#9670;&nbsp;</a></span>get()</h2>
+<a id="ab858144797a3d5668b26fae77491cf3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab858144797a3d5668b26fae77491cf3d">&#9670;&nbsp;</a></span>get()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -404,7 +350,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">GLFWwindow* Window::get </td>
+          <td class="memname">auto* Window::get </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -416,16 +362,15 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>ウィンドウの識別子のポインタを取得する. </p>
+<p>ウィンドウの識別子のポインタを取得する.</p>
 <dl class="section return"><dt>戻り値</dt><dd>GLFWwindow 型のウィンドウ識別子のポインタ. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00574">574</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00601">601</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="aeeb814f906b4f47219f4e8a2fb34b2ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeeb814f906b4f47219f4e8a2fb34b2ab">&#9670;&nbsp;</a></span>getAltArrowX()</h2>
+<a id="a7a8b195af0bbdca39b324db72ef509b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a8b195af0bbdca39b324db72ef509b4">&#9670;&nbsp;</a></span>getAltArrowX()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -434,7 +379,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">GLfloat Window::getAltArrowX </td>
+          <td class="memname">auto Window::getAltArrowX </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -446,16 +391,15 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>ALT キーを押しながら矢印キーを押したときの現在の X 値を得る. </p>
+<p>ALT キーを押しながら矢印キーを押したときの現在の X 値を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>ALT キーを押しながら矢印キーを押したときの現在の X 値. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00813">813</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00965">965</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="aab0e7fab98c98784dfe9e577540e9d53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab0e7fab98c98784dfe9e577540e9d53">&#9670;&nbsp;</a></span>getAltArrowY()</h2>
+<a id="a21fbd58367d5718fb3822f64d9df108a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21fbd58367d5718fb3822f64d9df108a">&#9670;&nbsp;</a></span>getAltArrowY()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -464,7 +408,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">GLfloat Window::getAltArrowY </td>
+          <td class="memname">auto Window::getAltArrowY </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -476,11 +420,10 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>ALT キーを押しながら矢印キーを押したときの現在の Y 値を得る. </p>
+<p>ALT キーを押しながら矢印キーを押したときの現在の Y 値を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>ALT キーを押しながら矢印キーを押したときの現在の Y 値. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00820">820</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00975">975</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -507,8 +450,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>ALT キーを押しながら矢印キーを押したときの現在の値を得る. </p>
+<p>ALT キーを押しながら矢印キーを押したときの現在の値を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">alt_arrow</td><td>ALT キーを押しながら矢印キーを押したときの値を格納する GLfloat 型の 2 要素の配列. </td></tr>
@@ -516,7 +458,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00827">827</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00985">985</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -553,8 +495,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>矢印キーの現在の値を得る. </p>
+<p>矢印キーの現在の値を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">arrow</td><td>矢印キーの値を格納する GLfloat[2] の配列. </td></tr>
@@ -563,12 +504,12 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00761">761</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00892">892</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="aac91bc4516ae6b3b09ef1ef5990ac433"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac91bc4516ae6b3b09ef1ef5990ac433">&#9670;&nbsp;</a></span>getArrow() <span class="overload">[2/2]</span></h2>
+<a id="a69674409ad0385b293da5deef0e4a0b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69674409ad0385b293da5deef0e4a0b0">&#9670;&nbsp;</a></span>getArrow() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -577,7 +518,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">GLfloat Window::getArrow </td>
+          <td class="memname">auto Window::getArrow </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>direction</em> = <code>0</code>, </td>
@@ -600,8 +541,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>矢印キーの現在の値を得る. </p>
+<p>矢印キーの現在の値を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">direction</td><td>方向 (0: X, 1:Y). </td></tr>
@@ -611,12 +551,12 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>矢印キーの値. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00736">736</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00858">858</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="aa7a1c86a677d0c09197d47daa102d0ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7a1c86a677d0c09197d47daa102d0ed">&#9670;&nbsp;</a></span>getArrowX()</h2>
+<a id="a986970275f44ec491ca43e9b48073618"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a986970275f44ec491ca43e9b48073618">&#9670;&nbsp;</a></span>getArrowX()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -625,7 +565,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">GLfloat Window::getArrowX </td>
+          <td class="memname">auto Window::getArrowX </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>mods</em> = <code>0</code></td><td>)</td>
@@ -638,8 +578,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>矢印キーの現在の X 値を得る. </p>
+<p>矢印キーの現在の X 値を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">mods</td><td>修飾キーの状態 (0:なし, 1, SHIFT, 2: CTRL, 3: ALT). </td></tr>
@@ -648,12 +587,12 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>矢印キーの X 値. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00745">745</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00870">870</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a6d8f615ab47e8e22e95270de51f5c317"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d8f615ab47e8e22e95270de51f5c317">&#9670;&nbsp;</a></span>getArrowY()</h2>
+<a id="a9e9b4cd2afd0ac82380db0f52ff116cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e9b4cd2afd0ac82380db0f52ff116cd">&#9670;&nbsp;</a></span>getArrowY()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -662,7 +601,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">GLfloat Window::getArrowY </td>
+          <td class="memname">auto Window::getArrowY </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>mods</em> = <code>0</code></td><td>)</td>
@@ -675,8 +614,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>矢印キーの現在の Y 値を得る. </p>
+<p>矢印キーの現在の Y 値を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">mods</td><td>修飾キーの状態 (0:なし, 1, SHIFT, 2: CTRL, 3: ALT). </td></tr>
@@ -685,12 +623,12 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>矢印キーの Y 値. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00753">753</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00881">881</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a1b6ec08ba7a6dbe9fe53aa6c89668dcb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b6ec08ba7a6dbe9fe53aa6c89668dcb">&#9670;&nbsp;</a></span>getAspect()</h2>
+<a id="a83f802499a60169c03ba8d925c4d6946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83f802499a60169c03ba8d925c4d6946">&#9670;&nbsp;</a></span>getAspect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -699,7 +637,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const GLfloat&amp; Window::getAspect </td>
+          <td class="memname">auto Window::getAspect </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -711,11 +649,10 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>ウィンドウのアスペクト比を得る. </p>
+<p>ウィンドウのアスペクト比を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>ウィンドウの縦横比. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00693">693</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00788">788</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -742,8 +679,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>CTRL キーを押しながら矢印キーを押したときの現在の値を得る. </p>
+<p>CTRL キーを押しながら矢印キーを押したときの現在の値を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">control_arrow</td><td>CTRL キーを押しながら矢印キーを押したときの値を格納する GLfloat 型の 2 要素の配列. </td></tr>
@@ -751,12 +687,12 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00805">805</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00954">954</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="acb0c43b2ffcd80441d8496295cb09545"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb0c43b2ffcd80441d8496295cb09545">&#9670;&nbsp;</a></span>getControlArrowX()</h2>
+<a id="ac623a387a5c8477126f41080fd842ae1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac623a387a5c8477126f41080fd842ae1">&#9670;&nbsp;</a></span>getControlArrowX()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -765,7 +701,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">GLfloat Window::getControlArrowX </td>
+          <td class="memname">auto Window::getControlArrowX </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -777,16 +713,15 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>CTRL キーを押しながら矢印キーを押したときの現在の X 値を得る. </p>
+<p>CTRL キーを押しながら矢印キーを押したときの現在の X 値を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>CTRL キーを押しながら矢印キーを押したときの現在の X 値. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00791">791</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00934">934</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a6ff2dbdb6000a32df43b4c5ef578ef42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ff2dbdb6000a32df43b4c5ef578ef42">&#9670;&nbsp;</a></span>getControlArrowY()</h2>
+<a id="a485a1a6aca82ed74939d1486c2479f5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a485a1a6aca82ed74939d1486c2479f5e">&#9670;&nbsp;</a></span>getControlArrowY()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -795,7 +730,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">GLfloat Window::getControlArrowY </td>
+          <td class="memname">auto Window::getControlArrowY </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -807,16 +742,15 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>CTRL キーを押しながら矢印キーを押したときの現在の Y 値を得る. </p>
+<p>CTRL キーを押しながら矢印キーを押したときの現在の Y 値を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>CTRL キーを押しながら矢印キーを押したときの現在の Y 値. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00798">798</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00944">944</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a34c16cc46e59077316e662388a88f2ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34c16cc46e59077316e662388a88f2ae">&#9670;&nbsp;</a></span>getHeight()</h2>
+<a id="a4d60c77d4531dc088172372599863f00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d60c77d4531dc088172372599863f00">&#9670;&nbsp;</a></span>getFboHeight()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -825,7 +759,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const GLsizei&amp; Window::getHeight </td>
+          <td class="memname">auto Window::getFboHeight </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -837,16 +771,137 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
+<p>FBO の高さを得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>FBO の高さ. </dd></dl>
 
-<p>ウィンドウの高さを得る. </p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00736">736</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0e62c3bdae9ed0f1dba9ea22e372f44c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e62c3bdae9ed0f1dba9ea22e372f44c">&#9670;&nbsp;</a></span>getFboSize() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const auto Window::getFboSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>FBO のサイズを得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>FBO の幅と高さを格納した GLsizei 型の 2 要素の配列. </dd></dl>
+
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00767">767</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a39f08cf7c25585a5db74f649c75eadc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39f08cf7c25585a5db74f649c75eadc7">&#9670;&nbsp;</a></span>getFboSize() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Window::getFboSize </td>
+          <td>(</td>
+          <td class="paramtype">GLsizei *&#160;</td>
+          <td class="paramname"><em>fboSize</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>FBO のサイズを得る.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>FBO の幅と高さを格納した GLsizei 型の 2 要素の配列. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00777">777</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6afd0c99e57427e37248a2dc7229743b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6afd0c99e57427e37248a2dc7229743b">&#9670;&nbsp;</a></span>getFboWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto Window::getFboWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>FBO の横幅を得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>FBO の横幅. </dd></dl>
+
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00726">726</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a948c47dbce4e9b4e496f60d1105ac8db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a948c47dbce4e9b4e496f60d1105ac8db">&#9670;&nbsp;</a></span>getHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto Window::getHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>ウィンドウの高さを得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>ウィンドウの高さ. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00671">671</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00716">716</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="aa94a481e993249d24b858f1310734e9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa94a481e993249d24b858f1310734e9e">&#9670;&nbsp;</a></span>getKey()</h2>
+<a id="aaaa0c7f0b28ef71ad5f43e1db9e794e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaa0c7f0b28ef71ad5f43e1db9e794e0">&#9670;&nbsp;</a></span>getKey()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -859,6 +914,35 @@ $(function() {
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>キーが押されているかどうかを判定する.</p>
+<dl class="section return"><dt>戻り値</dt><dd>キーが押されていれば true. </dd></dl>
+
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00806">806</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a111999067dce97014429cc9edd0ec45a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a111999067dce97014429cc9edd0ec45a">&#9670;&nbsp;</a></span>getLastKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Window::getLastKey </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -868,16 +952,15 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
+<p>最後にタイプしたキーを得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>最後にタイプしたキーの文字. </dd></dl>
 
-<p>キーが押されているかどうかを判定する. </p>
-<dl class="section return"><dt>戻り値</dt><dd>キーが押されていれば true. </dd></dl>
-
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00706">706</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00843">843</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a5584a8a7d5901adf78def614f1eae77d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5584a8a7d5901adf78def614f1eae77d">&#9670;&nbsp;</a></span>getMouse() <span class="overload">[1/3]</span></h2>
+<a id="ade85e45bb2c4a92dc6dee9d89b2f573c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade85e45bb2c4a92dc6dee9d89b2f573c">&#9670;&nbsp;</a></span>getMouse() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -886,7 +969,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const GLfloat* Window::getMouse </td>
+          <td class="memname">const auto* Window::getMouse </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -898,11 +981,10 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>マウスカーソルの現在位置を得る. </p>
+<p>マウスカーソルの現在位置を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>マウスカーソルの現在位置を格納した GLfloat 型の 2 要素の配列. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00835">835</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00996">996</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -929,8 +1011,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>マウスカーソルの現在位置を得る. </p>
+<p>マウスカーソルの現在位置を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">position</td><td>マウスカーソルの現在位置を格納した GLfloat 型の 2 要素の配列. </td></tr>
@@ -938,12 +1019,12 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00843">843</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01007">1007</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a42049b522611299ae98edb6d51ae943d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42049b522611299ae98edb6d51ae943d">&#9670;&nbsp;</a></span>getMouse() <span class="overload">[3/3]</span></h2>
+<a id="ace583f098d1114a77cd614b1c6d56d67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace583f098d1114a77cd614b1c6d56d67">&#9670;&nbsp;</a></span>getMouse() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -952,7 +1033,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const GLfloat Window::getMouse </td>
+          <td class="memname">auto Window::getMouse </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>direction</em></td><td>)</td>
@@ -965,8 +1046,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>マウスカーソルの現在位置を得る. </p>
+<p>マウスカーソルの現在位置を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">direction</td><td>方向 (0:X, 1:Y). </td></tr>
@@ -975,12 +1055,12 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>direction 方向のマウスカーソルの現在位置. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00853">853</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01020">1020</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a81cb212dc1db6e826c40ad33c4ccda74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81cb212dc1db6e826c40ad33c4ccda74">&#9670;&nbsp;</a></span>getMouseX()</h2>
+<a id="a25098eb70ef0ded8018d2152ce611d82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25098eb70ef0ded8018d2152ce611d82">&#9670;&nbsp;</a></span>getMouseX()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -989,7 +1069,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">GLfloat Window::getMouseX </td>
+          <td class="memname">auto Window::getMouseX </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1001,16 +1081,15 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>マウスカーソルの現在位置の X 座標を得る. </p>
+<p>マウスカーソルの現在位置の X 座標を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>direction 方向のマウスカーソルの X 方向の現在位置. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00861">861</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01031">1031</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a92d225ad83966c1e7762c9430be48c51"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92d225ad83966c1e7762c9430be48c51">&#9670;&nbsp;</a></span>getMouseY()</h2>
+<a id="a2d9877124be054bcb6180dfe132ba8b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d9877124be054bcb6180dfe132ba8b8">&#9670;&nbsp;</a></span>getMouseY()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1019,7 +1098,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">GLfloat Window::getMouseY </td>
+          <td class="memname">auto Window::getMouseY </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1031,16 +1110,15 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>マウスカーソルの現在位置の Y 座標を得る. </p>
+<p>マウスカーソルの現在位置の Y 座標を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>direction 方向のマウスカーソルの Y 方向の現在位置. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00869">869</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01042">1042</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a40def3d340c3924680515d666ead8313"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40def3d340c3924680515d666ead8313">&#9670;&nbsp;</a></span>getRotation()</h2>
+<a id="aee8fd1e1ef1188ac1fa6bf22be83155b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee8fd1e1ef1188ac1fa6bf22be83155b">&#9670;&nbsp;</a></span>getRotation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1049,7 +1127,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> Window::getRotation </td>
+          <td class="memname">auto Window::getRotation </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>button</em> = <code>GLFW_MOUSE_BUTTON_1</code></td><td>)</td>
@@ -1062,8 +1140,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>トラックボールの回転変換行列を得る. </p>
+<p>トラックボールの回転変換行列を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">button</td><td>回転変換行列を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]). </td></tr>
@@ -1072,12 +1149,12 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>回転を行う GgQuaternion 型の四元数. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00962">962</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01164">1164</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a43c6828e3302df47a9781710fc21f609"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43c6828e3302df47a9781710fc21f609">&#9670;&nbsp;</a></span>getRotationMatrix()</h2>
+<a id="a742e7d18917090b15a45dbf8a3963be7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a742e7d18917090b15a45dbf8a3963be7">&#9670;&nbsp;</a></span>getRotationMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1086,7 +1163,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> Window::getRotationMatrix </td>
+          <td class="memname">auto Window::getRotationMatrix </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>button</em> = <code>GLFW_MOUSE_BUTTON_1</code></td><td>)</td>
@@ -1099,8 +1176,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>トラックボールの回転変換行列を得る. </p>
+<p>トラックボールの回転変換行列を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">button</td><td>回転変換行列を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]). </td></tr>
@@ -1109,12 +1185,12 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>回転を行う GgMarix 型の変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00972">972</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01177">1177</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a5ec0a228d7e37a081e8f3af8175b9185"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ec0a228d7e37a081e8f3af8175b9185">&#9670;&nbsp;</a></span>getScrollMatrix()</h2>
+<a id="adc43e1c72abfb85188eceee1bdfdc2d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc43e1c72abfb85188eceee1bdfdc2d5">&#9670;&nbsp;</a></span>getScrollMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1123,7 +1199,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> Window::getScrollMatrix </td>
+          <td class="memname">auto Window::getScrollMatrix </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>button</em> = <code>GLFW_MOUSE_BUTTON_1</code></td><td>)</td>
@@ -1136,8 +1212,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>マウスによってオブジェクトの平行移動の変換行列を得る. </p>
+<p>マウスによってオブジェクトの平行移動の変換行列を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">button</td><td>平行移動量を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]). </td></tr>
@@ -1146,7 +1221,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>クリッピング座標系で平行移動を行う GgMatrix 型の変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00945">945</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01144">1144</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1173,8 +1248,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>SHIFT キーを押しながら矢印キーを押したときの現在の値を得る. </p>
+<p>SHIFT キーを押しながら矢印キーを押したときの現在の値を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">shift_arrow</td><td>SHIFT キーを押しながら矢印キーを押したときの値を格納する GLfloat 型の 2 要素の配列. </td></tr>
@@ -1182,12 +1256,12 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00783">783</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00923">923</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a05fb8c9aa65e77f72e8701bb19babd87"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05fb8c9aa65e77f72e8701bb19babd87">&#9670;&nbsp;</a></span>getShiftArrowX()</h2>
+<a id="a0ab700a3d16efa5cd3e68991d6ddda27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ab700a3d16efa5cd3e68991d6ddda27">&#9670;&nbsp;</a></span>getShiftArrowX()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1196,7 +1270,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">GLfloat Window::getShiftArrowX </td>
+          <td class="memname">auto Window::getShiftArrowX </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1208,16 +1282,15 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>SHIFT キーを押しながら矢印キーを押したときの現在の X 値を得る. </p>
+<p>SHIFT キーを押しながら矢印キーを押したときの現在の X 値を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>SHIFT キーを押しながら矢印キーを押したときの現在の X 値. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00769">769</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00903">903</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a5cd3fd0861a2ebdaba6ab5e4005edbd5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5cd3fd0861a2ebdaba6ab5e4005edbd5">&#9670;&nbsp;</a></span>getShiftArrowY()</h2>
+<a id="a47c90c017cc98ec21c6c71c7ab623ad0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47c90c017cc98ec21c6c71c7ab623ad0">&#9670;&nbsp;</a></span>getShiftArrowY()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1226,7 +1299,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">GLfloat Window::getShiftArrowY </td>
+          <td class="memname">auto Window::getShiftArrowY </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1238,16 +1311,15 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>SHIFT キーを押しながら矢印キーを押したときの現在の Y 値を得る. </p>
+<p>SHIFT キーを押しながら矢印キーを押したときの現在の Y 値を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>SHIFT キーを押しながら矢印キーを押したときの現在の Y 値. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00776">776</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00913">913</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a2cc6da256582c0789a1c346116540ace"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cc6da256582c0789a1c346116540ace">&#9670;&nbsp;</a></span>getSize() <span class="overload">[1/2]</span></h2>
+<a id="a5e5968cb3ef21277666d5e81ef9a04a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e5968cb3ef21277666d5e81ef9a04a9">&#9670;&nbsp;</a></span>getSize() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1256,7 +1328,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const GLsizei* Window::getSize </td>
+          <td class="memname">const auto&amp; Window::getSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1268,11 +1340,10 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
+<p>ウィンドウのサイズを得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>ウィンドウの幅と高さを格納した GLsizei 型の 2 要素の配列の参照. </dd></dl>
 
-<p>ウィンドウのサイズを得る. </p>
-<dl class="section return"><dt>戻り値</dt><dd>ウィンドウの幅と高さを格納した GLsizei 型の 2 要素の配列. </dd></dl>
-
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00678">678</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00746">746</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1299,8 +1370,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>ウィンドウのサイズを得る. </p>
+<p>ウィンドウのサイズを得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">size</td><td>ウィンドウの幅と高さを格納した GLsizei 型の 2 要素の配列. </td></tr>
@@ -1308,12 +1378,12 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00685">685</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00756">756</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a25cd6dd6bc3ca5bc759aab808307bf56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25cd6dd6bc3ca5bc759aab808307bf56">&#9670;&nbsp;</a></span>getTranslation()</h2>
+<a id="a91cde2c45c80418c26e7f58704a88323"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91cde2c45c80418c26e7f58704a88323">&#9670;&nbsp;</a></span>getTranslation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1322,7 +1392,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">GgVector</a>&amp; Window::getTranslation </td>
+          <td class="memname">const auto&amp; Window::getTranslation </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>button</em> = <code>GLFW_MOUSE_BUTTON_1</code></td><td>)</td>
@@ -1335,8 +1405,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>トラックボール処理を考慮したマウスによるスクロールの変換行列を得る. </p>
+<p>トラックボール処理を考慮したマウスによるスクロールの変換行列を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">button</td><td>平行移動量を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]). </td></tr>
@@ -1345,12 +1414,12 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>平行移動量を格納した GLfloat[3] の配列のポインタ. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00918">918</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01111">1111</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="aac677470c87cc7f59f0d89d9e784b202"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac677470c87cc7f59f0d89d9e784b202">&#9670;&nbsp;</a></span>getTranslationMatrix()</h2>
+<a id="a0db4a582ee6f38e20935efda45054c7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0db4a582ee6f38e20935efda45054c7d">&#9670;&nbsp;</a></span>getTranslationMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1359,7 +1428,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> Window::getTranslationMatrix </td>
+          <td class="memname">auto Window::getTranslationMatrix </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>button</em> = <code>GLFW_MOUSE_BUTTON_1</code></td><td>)</td>
@@ -1372,8 +1441,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>マウスによって視点の平行移動の変換行列を得る. </p>
+<p>マウスによって視点の平行移動の変換行列を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">button</td><td>平行移動量を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]). </td></tr>
@@ -1382,7 +1450,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>視点座標系で平行移動を行う GgMatrix 型の変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00928">928</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01124">1124</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1408,16 +1476,15 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>ユーザーポインタを取り出す. </p>
+<p>ユーザーポインタを取り出す.</p>
 <dl class="section return"><dt>戻り値</dt><dd>保存されているユーザポインタ. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01005">1005</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01219">1219</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a42e37954367983db3c7b9f84a928cca5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42e37954367983db3c7b9f84a928cca5">&#9670;&nbsp;</a></span>getWheel() <span class="overload">[1/3]</span></h2>
+<a id="a8e950080053fade332adbbf86687ee12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e950080053fade332adbbf86687ee12">&#9670;&nbsp;</a></span>getWheel() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1426,7 +1493,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const GLfloat* Window::getWheel </td>
+          <td class="memname">const auto* Window::getWheel </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1438,11 +1505,10 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>マウスホイールの回転量を得る. </p>
+<p>マウスホイールの回転量を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>マウスホイールの回転量を格納した GLfloat 型の 2 要素の配列. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00877">877</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01053">1053</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1469,8 +1535,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>マウスホイールの回転量を得る. </p>
+<p>マウスホイールの回転量を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">rotation</td><td>マウスホイールの回転量を格納した GLfloat 型の 2 要素の配列. </td></tr>
@@ -1478,12 +1543,12 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00885">885</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01064">1064</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a74554fd779099e58e165e1045026841f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74554fd779099e58e165e1045026841f">&#9670;&nbsp;</a></span>getWheel() <span class="overload">[3/3]</span></h2>
+<a id="a45435a32a37a4ce1aeac9f742c776ede"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45435a32a37a4ce1aeac9f742c776ede">&#9670;&nbsp;</a></span>getWheel() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1492,7 +1557,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">GLfloat Window::getWheel </td>
+          <td class="memname">auto Window::getWheel </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>direction</em></td><td>)</td>
@@ -1505,8 +1570,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>マウスホイールの回転量を得る. </p>
+<p>マウスホイールの回転量を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">direction</td><td>方向 (0:X, 1:Y). </td></tr>
@@ -1515,12 +1579,12 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>direction 方向のマウスホイールの回転量. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00895">895</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01077">1077</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="abdc72d37bfb4aef58bedf2db7174c4ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdc72d37bfb4aef58bedf2db7174c4ec">&#9670;&nbsp;</a></span>getWheelX()</h2>
+<a id="a08954269a9d484b7747e8b5d06a75bd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08954269a9d484b7747e8b5d06a75bd3">&#9670;&nbsp;</a></span>getWheelX()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1529,7 +1593,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const GLfloat Window::getWheelX </td>
+          <td class="memname">auto Window::getWheelX </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1541,15 +1605,15 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
+<p>マウスホイールの X 方向の回転量を得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>マウスホイールの X 方向の回転量. </dd></dl>
 
-<p>マウスホイールの X 方向の回転量を得る. </p>
-
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00902">902</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01088">1088</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="abe2d6a9ad52372c170df2e2aa021441b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe2d6a9ad52372c170df2e2aa021441b">&#9670;&nbsp;</a></span>getWheelY()</h2>
+<a id="af80b52e3992bf09cf4d692202444a6dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af80b52e3992bf09cf4d692202444a6dd">&#9670;&nbsp;</a></span>getWheelY()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1558,7 +1622,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const GLfloat Window::getWheelY </td>
+          <td class="memname">auto Window::getWheelY </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1570,15 +1634,15 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
+<p>マウスホイールの Y 方向の回転量を得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>マウスホイールの Y 方向の回転量. </dd></dl>
 
-<p>マウスホイールの Y 方向の回転量を得る. </p>
-
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00909">909</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01099">1099</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a5e955e7d13b4a1fd96a863b9b3277371"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e955e7d13b4a1fd96a863b9b3277371">&#9670;&nbsp;</a></span>getWidth()</h2>
+<a id="a42130ff81c66dd73718276bb8dbbcee9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42130ff81c66dd73718276bb8dbbcee9">&#9670;&nbsp;</a></span>getWidth()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1587,7 +1651,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const GLsizei&amp; Window::getWidth </td>
+          <td class="memname">auto Window::getWidth </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1599,11 +1663,10 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>ウィンドウの横幅を得る. </p>
+<p>ウィンドウの横幅を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>ウィンドウの横幅. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00664">664</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00706">706</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1640,8 +1703,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>ゲームグラフィックス特論の宿題用補助プログラムの初期化, 最初に一度だけ実行する. </p>
+<p>ゲームグラフィックス特論の宿題用補助プログラムの初期化, 最初に一度だけ実行する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">major</td><td>使用する OpenGL の major 番号, 0 なら無指定. </td></tr>
@@ -1650,13 +1712,13 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00406">406</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00419">419</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classWindow_a0d067da19dc2649f7cb91f2b5c235908_icgraph.png" border="0" usemap="#aclassWindow_a0d067da19dc2649f7cb91f2b5c235908_icgraph" alt=""/></div>
 <map name="aclassWindow_a0d067da19dc2649f7cb91f2b5c235908_icgraph" id="aclassWindow_a0d067da19dc2649f7cb91f2b5c235908_icgraph">
-<area shape="rect" title="ゲームグラフィックス特論の宿題用補助プログラムの初期化, 最初に一度だけ実行する." alt="" coords="104,5,227,32"/>
+<area shape="rect" title=" " alt="" coords="104,5,227,32"/>
 <area shape="rect" href="main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>
@@ -1685,11 +1747,10 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>イベントを取得してループを継続すべきかどうか調べる. </p>
+<p>イベントを取得してループを継続すべきかどうか調べる.</p>
 <dl class="section return"><dt>戻り値</dt><dd>ループを継続すべきなら true. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00596">596</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00632">632</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1717,8 +1778,6 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p>代入演算子は使用禁止. </p>
-
 </div>
 </div>
 <a id="a00a00d153d98b446ec8b5b5ca870081d"></a>
@@ -1743,10 +1802,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
 <p>トラックボール・マウスホイール・矢印キーの値を初期化する. </p>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00994">994</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01205">1205</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1772,10 +1830,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
 <p>トラックボール処理を初期化する. </p>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00980">980</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01187">1187</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1801,15 +1858,14 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
 <p>平行移動量を初期化する. </p>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00987">987</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01196">1196</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a8d10cba1a3c7884765f6e34dcb59a2fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d10cba1a3c7884765f6e34dcb59a2fa">&#9670;&nbsp;</a></span>restoreViewport()</h2>
+<a id="aeca0feb7ef8d75031d31b2815b9fa0ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeca0feb7ef8d75031d31b2815b9fa0ad">&#9670;&nbsp;</a></span>restoreViewport()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1821,7 +1877,7 @@ $(function() {
           <td class="memname">void Window::restoreViewport </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -1830,10 +1886,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
 <p>ビューポートをウィンドウ全体に設定する. </p>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00699">699</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00796">796</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1860,16 +1915,15 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>インタフェースを選択する </p>
+<p>インタフェースを選択する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">no</td><td>インターフェース番号 </td></tr>
+    <tr><td class="paramname">no</td><td>インターフェース番号. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00718">718</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00821">821</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1896,8 +1950,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>ウィンドウのクローズフラグを設定する. </p>
+<p>ウィンドウのクローズフラグを設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">flag</td><td>クローズフラグ, 0 (GLFW_FALSE) 以外ならウィンドウを閉じる. </td></tr>
@@ -1905,7 +1958,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00581">581</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00611">611</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1932,8 +1985,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>ユーザ定義の keyboard 関数を設定する. </p>
+<p>ユーザ定義の keyboard 関数を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">func</td><td>ユーザ定義の keyboard 関数, キーボードの操作時に呼び出される. </td></tr>
@@ -1941,7 +1993,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01026">1026</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01249">1249</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1968,16 +2020,15 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>表示領域をメニューバーの高さだけ減らす. </p>
+<p>表示領域をメニューバーの高さだけ減らす.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">メニューバーの高さ</td><td></td></tr>
+    <tr><td class="paramname">メニューバーの高さ.</td><td></td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01047">1047</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01279">1279</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2004,8 +2055,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>ユーザ定義の mouse 関数を設定する. </p>
+<p>ユーザ定義の mouse 関数を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">func</td><td>ユーザ定義の mouse 関数, マウスボタンの操作時に呼び出される. </td></tr>
@@ -2013,7 +2063,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01033">1033</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01259">1259</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2040,8 +2090,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>ユーザ定義の resize 関数を設定する. </p>
+<p>ユーザ定義の resize 関数を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">func</td><td>ユーザ定義の resize 関数, ウィンドウのサイズ変更時に呼び出される. </td></tr>
@@ -2049,7 +2098,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01019">1019</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01239">1239</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2076,8 +2125,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>任意のユーザポインタを保存する. </p>
+<p>任意のユーザポインタを保存する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">pointer</td><td>保存するユーザポインタ. </td></tr>
@@ -2085,7 +2133,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01012">1012</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01229">1229</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2128,8 +2176,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>マウスの移動速度を設定する </p>
+<p>マウスの移動速度を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">vx</td><td>x 方向の移動速度. </td></tr>
@@ -2138,7 +2185,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00727">727</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00833">833</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2165,8 +2212,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>ユーザ定義の wheel 関数を設定する. </p>
+<p>ユーザ定義の wheel 関数を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">func</td><td>ユーザ定義の wheel 関数, マウスホイールの操作時に呼び出される. </td></tr>
@@ -2174,7 +2220,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01040">1040</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l01269">1269</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2200,16 +2246,15 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>ウィンドウを閉じるべきかどうか調べる. </p>
+<p>ウィンドウを閉じるべきかどうか調べる.</p>
 <dl class="section return"><dt>戻り値</dt><dd>ウィンドウを閉じるべきなら true. </dd></dl>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00588">588</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00621">621</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="af6ffedb8d12d5551bdb4c298de87ed56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6ffedb8d12d5551bdb4c298de87ed56">&#9670;&nbsp;</a></span>swapBuffers()</h2>
+<a id="a04ab8fcdfcc749a5f5f2c0441528b5b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04ab8fcdfcc749a5f5f2c0441528b5b0">&#9670;&nbsp;</a></span>swapBuffers()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2221,7 +2266,7 @@ $(function() {
           <td class="memname">void Window::swapBuffers </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -2230,10 +2275,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-
 <p>カラーバッファを入れ替える. </p>
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00648">648</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00686">686</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2243,7 +2287,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2022年04月11日(月) 09時40分40秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2022年12月06日(火) 23時01分17秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

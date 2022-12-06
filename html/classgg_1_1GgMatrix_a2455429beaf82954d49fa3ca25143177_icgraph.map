@@ -1,5 +1,7 @@
 <map id="gg::GgMatrix::loadPerspective" name="gg::GgMatrix::loadPerspective">
-<area shape="rect" id="node1" title="画角を指定して透視投影変換行列を格納する." alt="" coords="224,31,420,57"/>
-<area shape="rect" id="node2" href="$namespacegg.html#a7dcbaa73755efd46f1f19b0b3a39b473" title="画角を指定して透視投影変換行列を返す." alt="" coords="28,5,153,32"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgMatrix.html#afcd829d6ee34cf494c96e9d6ca1e6192" title="画角を指定して透視投影変換を乗じた結果を返す." alt="" coords="5,56,176,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="469,31,665,57"/>
+<area shape="rect" id="node2" href="$namespacegg.html#a7dcbaa73755efd46f1f19b0b3a39b473" title=" " alt="" coords="273,5,399,32"/>
+<area shape="rect" id="node5" href="$classgg_1_1GgMatrix.html#afcd829d6ee34cf494c96e9d6ca1e6192" title=" " alt="" coords="251,56,421,83"/>
+<area shape="rect" id="node3" href="$classGgApp.html#ad2e50a5e84d4fd6162e03039ac00c7ae" title=" " alt="" coords="104,5,203,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525" title=" " alt="" coords="5,5,56,32"/>
 </map>

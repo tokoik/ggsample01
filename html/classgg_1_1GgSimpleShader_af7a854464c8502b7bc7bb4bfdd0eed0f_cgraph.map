@@ -1,6 +1,4 @@
 <map id="gg::GgSimpleShader::use" name="gg::GgSimpleShader::use">
-<area shape="rect" id="node1" title="光源を指定し投影変換行列を設定してシェーダプログラムの使用を開始する." alt="" coords="5,31,176,57"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgMatrix.html#aa5b928ad41aa3ea57c0d1e8b4fc50614" title="変換行列を取り出す." alt="" coords="248,5,371,32"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgSimpleShader.html#aaa721d9ae49296194f949d6ba2f927db" title="シェーダプログラムの使用を開始する." alt="" coords="224,56,395,83"/>
-<area shape="rect" id="node4" href="$classgg_1_1GgPointShader.html#a6809087ef5e8a563310c3fc396246e78" title="シェーダプログラムの使用を開始する." alt="" coords="443,56,604,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,176,32"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgMatrix.html#aa5b928ad41aa3ea57c0d1e8b4fc50614" title=" " alt="" coords="224,5,347,32"/>
 </map>

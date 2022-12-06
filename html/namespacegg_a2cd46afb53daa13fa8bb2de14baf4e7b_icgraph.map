@@ -1,5 +1,5 @@
 <map id="gg::ggCreateNormalMap" name="gg::ggCreateNormalMap">
-<area shape="rect" id="node1" title="グレースケール画像 (8bit) から法線マップのデータを作成する." alt="" coords="199,35,361,61"/>
-<area shape="rect" id="node2" href="$namespacegg.html#a53453ed6229bbd109c279a3765648d01" title="テクスチャメモリを確保して TGA 画像ファイルを読み込み法線マップを作成する." alt="" coords="17,5,139,32"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgNormalTexture.html#adca09b7af04c1a58703fbafcea758671" title="ファイルからデータを読み込んで法線マップのテクスチャを作成する." alt="" coords="5,57,151,98"/>
+<area shape="rect" id="node1" title=" " alt="" coords="199,35,361,61"/>
+<area shape="rect" id="node2" href="$namespacegg.html#a53453ed6229bbd109c279a3765648d01" title=" " alt="" coords="17,5,139,32"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgNormalTexture.html#adca09b7af04c1a58703fbafcea758671" title=" " alt="" coords="5,57,151,98"/>
 </map>

@@ -1,6 +1,6 @@
 <map id="gg::GgQuaternion::loadDivide" name="gg::GgQuaternion::loadDivide">
-<area shape="rect" id="node1" title="四元を別の四元数で除算した結果を格納する." alt="" coords="483,31,673,57"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a70fb3693676c81da920748be2ac1f716" title="四元を別の四元数で除算した結果を格納する." alt="" coords="244,5,435,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="483,31,673,57"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a70fb3693676c81da920748be2ac1f716" title=" " alt="" coords="244,5,435,32"/>
 <area shape="rect" id="node3" href="$classgg_1_1GgQuaternion.html#ac0eee64c48beb9dd5b04ee1705243b03" title=" " alt="" coords="244,56,435,83"/>
 <area shape="rect" id="node4" href="$classgg_1_1GgQuaternion.html#a28ab06a86f3b1812af71523758df944d" title=" " alt="" coords="5,56,196,83"/>
 </map>

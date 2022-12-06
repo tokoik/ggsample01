@@ -102,15 +102,15 @@ $(function() {
 </ul>
 </li>
 </ul>
-<p><a href="https://www.glfw.org/">GLFW</a> は <a href="https://www.opengl.org/">OpenGL</a> や、その後継の <a href="https://www.vulkan.org/">Vulkan</a> を使用したアプリケーションを作成するための、非常にコンパクトなフレームワークです。本当はこれだけで簡単にアプリケーションが作れるのですが、授業内容とはあまり関係のない処理を分離するために、屋上屋ながら**この授業専用の**フレームワークを用意しました。なお、gg.h / <a class="el" href="gg_8cpp.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の定義.">gg.cpp</a> には OpenGL の拡張機能を使用可能にする機能を含んでいるので、別に <a href="http://glew.sourceforge.net/">GLEW</a> や <a href="https://github.com/Dav1dde/glad">glad</a>、<a href="https://github.com/skaslev/gl3w">GL3W</a> などを導入する必要はありません。</p>
-<p>また、この <a class="el" href="Window_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.">Window.h</a> には <a href="https://github.com/ocornut/imgui">Dear ImGui</a> をサポートする機能を含んでいます。このプログラム (<a href="https://github.com/tokoik/ggsample01">ggsample01</a>) には、その使い方のサンプルコードを示すために Dear ImGui のソースプログラムも含めています。日本語メニューの表示のために <a href="https://mplusfonts.github.io/">M+ FONTS</a> の <a href="https://github.com/coz-m/MPLUS_FONTS/blob/master/fonts/ttf/Mplus1-Regular.ttf">Mplus1-Regular.ttf</a> もリポジトリに含めています。</p>
-<p>このほか、この <a class="el" href="Window_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.">Window.h</a> には Oculus Rift (DK1, DK2, <a href="https://www.oculus.com/rift/">CV1</a>, <a href="https://www.oculus.com/rift-s/">S</a>) をサポートする機能を組み込んでいます。これを使って、C++ だけで VR アプリケーション () が作れます。</p>
+<p><a href="https://www.glfw.org/">GLFW</a> は <a href="https://www.opengl.org/">OpenGL</a> や、その後継の <a href="https://www.vulkan.org/">Vulkan</a> を使用したアプリケーションを作成するための、非常にコンパクトなフレームワークです。本当はこれだけで簡単にアプリケーションが作れるのですが、授業内容とはあまり関係のない処理を分離するために、屋上屋ながら**この授業専用の**フレームワークを用意しました。なお、gg.h / <a class="el" href="gg_8cpp.html">gg.cpp</a> には OpenGL の拡張機能を使用可能にする機能を含んでいるので、別に <a href="http://glew.sourceforge.net/">GLEW</a> や <a href="https://github.com/Dav1dde/glad">glad</a>、<a href="https://github.com/skaslev/gl3w">GL3W</a> などを導入する必要はありません。</p>
+<p>また、この <a class="el" href="Window_8h.html">Window.h</a> には <a href="https://github.com/ocornut/imgui">Dear ImGui</a> をサポートする機能を含んでいます。このプログラム (<a href="https://github.com/tokoik/ggsample01">ggsample01</a>) には、その使い方のサンプルコードを示すために Dear ImGui のソースプログラムも含めています。日本語メニューの表示のために <a href="https://mplusfonts.github.io/">M+ FONTS</a> の <a href="https://github.com/coz-m/MPLUS_FONTS/blob/master/fonts/ttf/Mplus1-Regular.ttf">Mplus1-Regular.ttf</a> もリポジトリに含めています。</p>
+<p>このほか、この <a class="el" href="Window_8h.html">Window.h</a> には Oculus Rift (DK1, DK2, <a href="https://www.oculus.com/rift/">CV1</a>, <a href="https://www.oculus.com/rift-s/">S</a>) をサポートする機能を組み込んでいます。これを使って、C++ だけで VR アプリケーション () が作れます。</p>
 <h2><a class="anchor" id="autotoc_md5"></a>
 補助プログラムのドキュメント</h2>
 <p>Doxygen で生成したドキュメントの <a href="html/index.html">HTML 版</a>を html フォルダに、<a href="pdf/refman.pdf">PDF 版</a>を pdf フォルダに置いています。</p>
 <h2><a class="anchor" id="autotoc_md6"></a>
 補助プログラムの使い方</h2>
-<p>補助プログラムを使用するには、最小限、GLFW が使える環境が必要です。ゲームグラフィックス特論 A / B の宿題のリポジトリには Windows 用および macOS 用にコンパイルしたライブラリファイル一式を含めていますので、これらについては宿題のために別に用意する必要はありません。Linux (および Raspberry Pi) では libglfw3-dev パッケージをインストールしておいてください (<code>% sudo apt-get install libglfw3-dev</code>)。gg.h, <a class="el" href="gg_8cpp.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の定義.">gg.cpp</a>, <a class="el" href="Window_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.">Window.h</a> だけを使うときは、それぞれの環境で GLFW をインストールしておいてください。この補助プログラムを使用した最小のプログラムは、多分こんな感じになります。このソースファイルと同じところに <a class="el" href="gg_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言.">gg.h</a>, <a class="el" href="gg_8cpp.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の定義.">gg.cpp</a>, <a class="el" href="Window_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.">Window.h</a> を置き、gg.cpp と一緒にコンパイルして、GLFW のライブラリファイルをリンクしてください。</p>
+<p>補助プログラムを使用するには、最小限、GLFW が使える環境が必要です。ゲームグラフィックス特論 A / B の宿題のリポジトリには Windows 用および macOS 用にコンパイルしたライブラリファイル一式を含めていますので、これらについては宿題のために別に用意する必要はありません。Linux (および Raspberry Pi) では libglfw3-dev パッケージをインストールしておいてください (<code>% sudo apt-get install libglfw3-dev</code>)。gg.h, <a class="el" href="gg_8cpp.html">gg.cpp</a>, <a class="el" href="Window_8h.html">Window.h</a> だけを使うときは、それぞれの環境で GLFW をインストールしておいてください。この補助プログラムを使用した最小のプログラムは、多分こんな感じになります。このソースファイルと同じところに <a class="el" href="gg_8h.html">gg.h</a>, <a class="el" href="gg_8cpp.html">gg.cpp</a>, <a class="el" href="Window_8h.html">Window.h</a> を置き、gg.cpp と一緒にコンパイルして、GLFW のライブラリファイルをリンクしてください。</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="Window_8h.html">Window.h</a>&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525">main</a>()</div>
@@ -126,8 +126,8 @@ $(function() {
 <div class="line">        <span class="comment">//</span></div>
 <div class="line">    }</div>
 <div class="line">}</div>
-<div class="ttc" id="aWindow_8h_html"><div class="ttname"><a href="Window_8h.html">Window.h</a></div><div class="ttdoc">ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.</div></div>
-<div class="ttc" id="aclassWindow_html"><div class="ttname"><a href="classWindow.html">Window</a></div><div class="ttdoc">ウィンドウ関連の処理.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00092">Window.h:93</a></div></div>
+<div class="ttc" id="aWindow_8h_html"><div class="ttname"><a href="Window_8h.html">Window.h</a></div></div>
+<div class="ttc" id="aclassWindow_html"><div class="ttname"><a href="classWindow.html">Window</a></div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00094">Window.h:95</a></div></div>
 <div class="ttc" id="amain_8cpp_html_a110745d0e996bc19a8c8e8cacbadd525"><div class="ttname"><a href="main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525">main</a></div><div class="ttdeci">int main(int argc, const char *const *argv)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00023">main.cpp:23</a></div></div>
 </div><!-- fragment --><p>使用する OpenGL のバージョンは、<code>Window::init(major, minor)</code> の <code>major</code> と <code>minor</code> で指定できます。<code>major</code> を 0 にするか省略すると、OpenGL のバージョンの指定を行いません。その場合は、macOS 以外では恐らく OpenGL のハードウェアもしくはドライバで対応可能な最大のバージョンが使用されます。なお、3.2 以降を指定したときは <b>macOS 対応の都合で</b> forward compatible プロファイルと core プロファイルを有効にします。macOS の場合は <code>Window::init(3, 2)</code> もしくは <code>Window::init(4, 1)</code> を指定してください。</p>
 <div class="fragment"><div class="line"><span class="comment">// for macOS</span></div>
@@ -194,12 +194,12 @@ Dear ImGui を使う場合</h2>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// カラーバッファを入れ替えてイベントを取り出す</span></div>
-<div class="line">    window.<a class="code" href="classWindow.html#af6ffedb8d12d5551bdb4c298de87ed56">swapBuffers</a>();</div>
+<div class="line">    window.<a class="code" href="classWindow.html#a04ab8fcdfcc749a5f5f2c0441528b5b0">swapBuffers</a>();</div>
 <div class="line">  }</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassWindow_html_a7dd6ce09e1d68c8576376179aa54fc79"><div class="ttname"><a href="classWindow.html#a7dd6ce09e1d68c8576376179aa54fc79">Window::setClose</a></div><div class="ttdeci">void setClose(int flag=GLFW_TRUE) const</div><div class="ttdoc">ウィンドウのクローズフラグを設定する.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00581">Window.h:581</a></div></div>
-<div class="ttc" id="aclassWindow_html_af6ffedb8d12d5551bdb4c298de87ed56"><div class="ttname"><a href="classWindow.html#af6ffedb8d12d5551bdb4c298de87ed56">Window::swapBuffers</a></div><div class="ttdeci">void swapBuffers()</div><div class="ttdoc">カラーバッファを入れ替える.</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00648">Window.h:648</a></div></div>
-</div><!-- fragment --><p>このソースファイルと Dear ImGui に含まれる以下のファイル、および <a class="el" href="gg_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言.">gg.h</a>, <a class="el" href="gg_8cpp.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の定義.">gg.cpp</a>, <a class="el" href="Window_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.">Window.h</a> を同じところに置き、gg.cpp と以下のうちの *.cpp ファイルと一緒にコンパイルして、GLFW のライブラリファイルをリンクしてください。</p>
+<div class="ttc" id="aclassWindow_html_a04ab8fcdfcc749a5f5f2c0441528b5b0"><div class="ttname"><a href="classWindow.html#a04ab8fcdfcc749a5f5f2c0441528b5b0">Window::swapBuffers</a></div><div class="ttdeci">void swapBuffers() const</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00686">Window.h:686</a></div></div>
+<div class="ttc" id="aclassWindow_html_a7dd6ce09e1d68c8576376179aa54fc79"><div class="ttname"><a href="classWindow.html#a7dd6ce09e1d68c8576376179aa54fc79">Window::setClose</a></div><div class="ttdeci">void setClose(int flag=GLFW_TRUE) const</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00611">Window.h:611</a></div></div>
+</div><!-- fragment --><p>このソースファイルと Dear ImGui に含まれる以下のファイル、および <a class="el" href="gg_8h.html">gg.h</a>, <a class="el" href="gg_8cpp.html">gg.cpp</a>, <a class="el" href="Window_8h.html">Window.h</a> を同じところに置き、gg.cpp と以下のうちの *.cpp ファイルと一緒にコンパイルして、GLFW のライブラリファイルをリンクしてください。</p>
 <blockquote class="doxtable">
 <p>imconfig.h <br  />
  imgui.h <br  />
@@ -223,7 +223,7 @@ Dear ImGui を使う場合</h2>
 </blockquote>
 <h3><a class="anchor" id="autotoc_md9"></a>
 imconfig.h の変更点</h3>
-<p>Dear ImGui はバージョン 1.86 から独自のローダを使用するようになったので、<code>IMGUI_IMPL_OPENGL_LOADER_CUSTOM</code> にこの授業オリジナルのローダ <code><a class="el" href="gg_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言.">gg.h</a></code> / <code><a class="el" href="gg_8cpp.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の定義.">gg.cpp</a></code> を指定する必要はありません。ただし、Raspberry Pi では imconfig.h の**最後**で記号定数 <code>IMGUI_IMPL_OPENGL_ES3</code> を明示的に定義する必要があります。</p>
+<p>Dear ImGui はバージョン 1.86 から独自のローダを使用するようになったので、<code>IMGUI_IMPL_OPENGL_LOADER_CUSTOM</code> にこの授業オリジナルのローダ <code><a class="el" href="gg_8h.html">gg.h</a></code> / <code><a class="el" href="gg_8cpp.html">gg.cpp</a></code> を指定する必要はありません。ただし、Raspberry Pi では imconfig.h の**最後**で記号定数 <code>IMGUI_IMPL_OPENGL_ES3</code> を明示的に定義する必要があります。</p>
 <div class="fragment"><div class="line"><span class="comment">// The Raspberry Pi needs to explicitly define the symbolic constant IMGUI_IMPL_OPENGL_ES3. </span></div>
 <div class="line"><span class="preprocessor">#if defined(__RASPBERRY_PI__)</span></div>
 <div class="line"><span class="preprocessor">#  define IMGUI_IMPL_OPENGL_ES3</span></div>
@@ -232,7 +232,7 @@ imconfig.h の変更点</h3>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2022年04月11日(月) 09時40分39秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2022年12月06日(火) 23時01分17秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

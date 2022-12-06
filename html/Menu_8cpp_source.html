@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ゲームグラフィックス特論: Menu.cpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ゲームグラフィックス特論
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Menu.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Menu_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Menu_8h.html">Menu.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// メニューフォント</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="Menu_8cpp.html#a26fb4a0edd8477f8d6d5c591a085a4b4">   11</a></span>&#160;constexpr <span class="keywordtype">char</span> <a class="code" href="Menu_8cpp.html#a26fb4a0edd8477f8d6d5c591a085a4b4">menuFont</a>[]{ <span class="stringliteral">&quot;Mplus1-Regular.ttf&quot;</span> };</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// メニューフォントサイズ</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="Menu_8cpp.html#a95056af958ee64d6bb4ad588704beeba">   14</a></span>&#160;constexpr <span class="keywordtype">float</span> <a class="code" href="Menu_8cpp.html#a95056af958ee64d6bb4ad588704beeba">menuFontSize</a>{ 20.0f };</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// コンストラクタ</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classMenu.html#af68aba17029de91b02b05f102ca63f37">   19</a></span>&#160;<a class="code" href="classMenu.html#af68aba17029de91b02b05f102ca63f37">Menu::Menu</a>(<span class="keyword">const</span> <a class="code" href="classConfig.html">Config</a>&amp; config) :</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  defaults{ config },</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  settings{ config },</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  model{ std::make_unique&lt;<a class="code" href="classgg_1_1GgSimpleObj.html">GgSimpleObj</a>&gt;(config.model, true) },</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  light{ std::make_unique&lt;<a class="code" href="classgg_1_1GgSimpleShader.html">GgSimpleShader</a>::LightBuffer&gt;(config.light) },</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  shader{ std::make_unique &lt;<a class="code" href="classgg_1_1GgSimpleShader.html">GgSimpleShader</a>&gt;(config.shader) }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#if defined(IMGUI_VERSION)</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="comment">// ImGui の初期設定</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; <span class="comment">// ファイルダイアログ (Native File Dialog Extended) を初期化する</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  NFD_Init();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="comment">// Dear ImGui の入力デバイス</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="comment">//io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // キーボードコントロールを使う</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">//io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // ゲームパッドを使う</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="comment">// Dear ImGui のスタイル</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="comment">//ImGui::StyleColorsDark();                                 // 暗めのスタイル</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="comment">//ImGui::StyleColorsClassic();                              // 以前のスタイル</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="comment">// 日本語を表示できるメニューフォントを読み込む</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordflow">if</span> (!ImGui::GetIO().Fonts-&gt;AddFontFromFileTTF(<a class="code" href="Menu_8cpp.html#a26fb4a0edd8477f8d6d5c591a085a4b4">menuFont</a>, <a class="code" href="Menu_8cpp.html#a95056af958ee64d6bb4ad588704beeba">menuFontSize</a>, <span class="keyword">nullptr</span>,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    ImGui::GetIO().Fonts-&gt;GetGlyphRangesJapanese()))</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// メニューフォントが読み込めなかったらエラーにする</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Cannot find any menu fonts.&quot;</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">// デストラクタ</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classMenu.html#a831387f51358cfb88cd018e1777bc980">   55</a></span>&#160;<a class="code" href="classMenu.html#a831387f51358cfb88cd018e1777bc980">Menu::~Menu</a>()</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">// ファイルパスを取得する</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordtype">bool</span> Menu::getFilePath(std::string&amp; path, <span class="keyword">const</span> nfdfilteritem_t* filter)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="comment">// ファイルダイアログから得るパス</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  nfdchar_t* filepath{ <span class="keyword">nullptr</span> };</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="comment">// ファイルダイアログを開く</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordflow">if</span> (NFD_OpenDialog(&amp;filepath, filter, 1, <span class="keyword">nullptr</span>) == NFD_OKAY)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    path = <a class="code" href="Config_8h.html#a1037f274e1dfbd5a08c84db205e7b7a2">TCharToUtf8</a>(filepath);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">// 描画する</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classMenu.html#a2cd7ab9901a8f42a3ae977d0774398a6">   80</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classMenu.html#a2cd7ab9901a8f42a3ae977d0774398a6">Menu::draw</a>()</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#if defined(IMGUI_VERSION)</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="comment">// ImGui によるユーザインタフェース</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="comment">// ImGui のフレームを準備する</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  ImGui::NewFrame();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="comment">// メニューの表示位置を決定する</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  ImGui::SetNextWindowPos(ImVec2(4, 4), ImGuiCond_Once);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  ImGui::SetNextWindowSize(ImVec2(320, 98), ImGuiCond_Once);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="comment">// メニュー表示開始</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  ImGui::Begin(u8<span class="stringliteral">&quot;コントロールパネル&quot;</span>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="comment">// 光源</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordflow">if</span> (ImGui::SliderFloat3(u8<span class="stringliteral">&quot;光源位置&quot;</span>, settings.light.<a class="code" href="structgg_1_1GgSimpleShader_1_1Light.html#a5f6b1744a8c35121c8e27a6a01c8aceb">position</a>.data(), -10.0f, 10.0f, <span class="stringliteral">&quot;%.2f&quot;</span>))</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    light-&gt;loadPosition(settings.light.<a class="code" href="structgg_1_1GgSimpleShader_1_1Light.html#a5f6b1744a8c35121c8e27a6a01c8aceb">position</a>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordflow">if</span> (ImGui::ColorEdit3(u8<span class="stringliteral">&quot;光源色&quot;</span>, settings.light.<a class="code" href="structgg_1_1GgSimpleShader_1_1Light.html#abf0f33bcdf0da82a52c2f814ce8b71fa">diffuse</a>.data(), ImGuiColorEditFlags_Float))</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    light-&gt;loadDiffuse(settings.light.<a class="code" href="structgg_1_1GgSimpleShader_1_1Light.html#abf0f33bcdf0da82a52c2f814ce8b71fa">diffuse</a>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="comment">// メニュー表示終了</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  ImGui::End();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="comment">// ImGui のフレームに描画する</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  ImGui::Render();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="ttc" id="aConfig_8h_html_a1037f274e1dfbd5a08c84db205e7b7a2"><div class="ttname"><a href="Config_8h.html#a1037f274e1dfbd5a08c84db205e7b7a2">TCharToUtf8</a></div><div class="ttdeci">#define TCharToUtf8(cstring)</div><div class="ttdef"><b>Definition:</b> <a href="Config_8h_source.html#l00034">Config.h:34</a></div></div>
+<div class="ttc" id="aMenu_8cpp_html_a26fb4a0edd8477f8d6d5c591a085a4b4"><div class="ttname"><a href="Menu_8cpp.html#a26fb4a0edd8477f8d6d5c591a085a4b4">menuFont</a></div><div class="ttdeci">constexpr char menuFont[]</div><div class="ttdef"><b>Definition:</b> <a href="Menu_8cpp_source.html#l00011">Menu.cpp:11</a></div></div>
+<div class="ttc" id="aMenu_8cpp_html_a95056af958ee64d6bb4ad588704beeba"><div class="ttname"><a href="Menu_8cpp.html#a95056af958ee64d6bb4ad588704beeba">menuFontSize</a></div><div class="ttdeci">constexpr float menuFontSize</div><div class="ttdef"><b>Definition:</b> <a href="Menu_8cpp_source.html#l00014">Menu.cpp:14</a></div></div>
+<div class="ttc" id="aMenu_8h_html"><div class="ttname"><a href="Menu_8h.html">Menu.h</a></div></div>
+<div class="ttc" id="aclassConfig_html"><div class="ttname"><a href="classConfig.html">Config</a></div><div class="ttdef"><b>Definition:</b> <a href="Config_8h_source.html#l00040">Config.h:41</a></div></div>
+<div class="ttc" id="aclassMenu_html_a2cd7ab9901a8f42a3ae977d0774398a6"><div class="ttname"><a href="classMenu.html#a2cd7ab9901a8f42a3ae977d0774398a6">Menu::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdef"><b>Definition:</b> <a href="Menu_8cpp_source.html#l00080">Menu.cpp:80</a></div></div>
+<div class="ttc" id="aclassMenu_html_a831387f51358cfb88cd018e1777bc980"><div class="ttname"><a href="classMenu.html#a831387f51358cfb88cd018e1777bc980">Menu::~Menu</a></div><div class="ttdeci">virtual ~Menu()</div><div class="ttdef"><b>Definition:</b> <a href="Menu_8cpp_source.html#l00055">Menu.cpp:55</a></div></div>
+<div class="ttc" id="aclassMenu_html_af68aba17029de91b02b05f102ca63f37"><div class="ttname"><a href="classMenu.html#af68aba17029de91b02b05f102ca63f37">Menu::Menu</a></div><div class="ttdeci">Menu(const Config &amp;config)</div><div class="ttdef"><b>Definition:</b> <a href="Menu_8cpp_source.html#l00019">Menu.cpp:19</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgSimpleObj_html"><div class="ttname"><a href="classgg_1_1GgSimpleObj.html">gg::GgSimpleObj</a></div><div class="ttdef"><b>Definition:</b> <a href="gg_8h_source.html#l07959">gg.h:7960</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgSimpleShader_html"><div class="ttname"><a href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></div><div class="ttdef"><b>Definition:</b> <a href="gg_8h_source.html#l07018">gg.h:7020</a></div></div>
+<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Light_html_a5f6b1744a8c35121c8e27a6a01c8aceb"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Light.html#a5f6b1744a8c35121c8e27a6a01c8aceb">gg::GgSimpleShader::Light::position</a></div><div class="ttdeci">GgVector position</div><div class="ttdoc">光源の位置.</div><div class="ttdef"><b>Definition:</b> <a href="gg_8h_source.html#l07246">gg.h:7246</a></div></div>
+<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Light_html_abf0f33bcdf0da82a52c2f814ce8b71fa"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Light.html#abf0f33bcdf0da82a52c2f814ce8b71fa">gg::GgSimpleShader::Light::diffuse</a></div><div class="ttdeci">GgVector diffuse</div><div class="ttdoc">光源強度の拡散反射光成分.</div><div class="ttdef"><b>Definition:</b> <a href="gg_8h_source.html#l07244">gg.h:7244</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2022年12月06日(火) 23時01分17秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,5 +1,5 @@
 <map id="gg::ggLoadImage" name="gg::ggLoadImage">
-<area shape="rect" id="node1" title="テクスチャメモリを確保して TGA 画像ファイルを読み込む." alt="" coords="5,31,127,57"/>
-<area shape="rect" id="node2" href="$namespacegg.html#a96dc90db9d9e5ea5ee727662753d0ca5" title="テクスチャメモリを確保して画像データをテクスチャとして読み込む." alt="" coords="175,5,304,32"/>
-<area shape="rect" id="node3" href="$namespacegg.html#acce00f35f4b755cda72ec9f61b726c8f" title="TGA ファイル (8/16/24/32bit) をメモリに読み込む." alt="" coords="178,56,301,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,127,57"/>
+<area shape="rect" id="node2" href="$namespacegg.html#a9b09e55a394271b6f383d01f37b0f18f" title=" " alt="" coords="175,5,304,32"/>
+<area shape="rect" id="node3" href="$namespacegg.html#acce00f35f4b755cda72ec9f61b726c8f" title=" " alt="" coords="178,56,301,83"/>
 </map>

@@ -1,4 +1,4 @@
 <map id="gg::GgElements::draw" name="gg::GgElements::draw">
-<area shape="rect" id="node1" title="インデックスを使った三角形の描画." alt="" coords="5,5,156,32"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgShape.html#adf1b1da86a75b4c74dddf6194e615f6d" title="図形の描画, 派生クラスでこの手続きをオーバーライドする." alt="" coords="204,5,337,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,156,32"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgShape.html#adf1b1da86a75b4c74dddf6194e615f6d" title=" " alt="" coords="204,5,337,32"/>
 </map>

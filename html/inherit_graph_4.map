@@ -1,4 +1,7 @@
 <map id="クラス階層図" name="クラス階層図">
-<area shape="rect" id="node1" href="$classgg_1_1GgPointShader.html" title="点のシェーダ." alt="" coords="5,5,137,32"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgSimpleShader.html" title="三角形に単純な陰影付けを行うシェーダ." alt="" coords="185,5,328,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,83,57"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgMatrix.html" title=" " alt="" coords="131,5,229,32"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgVector.html" title=" " alt="" coords="131,56,229,83"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgQuaternion.html" title=" " alt="" coords="277,56,401,83"/>
+<area shape="rect" id="node5" href="$classgg_1_1GgTrackball.html" title=" " alt="" coords="449,56,563,83"/>
 </map>

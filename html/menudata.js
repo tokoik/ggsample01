@@ -45,8 +45,7 @@ var menudata={children:[
 {text:"q",url:"namespacemembers.html#index_q"},
 {text:"r",url:"namespacemembers.html#index_r"},
 {text:"s",url:"namespacemembers.html#index_s"},
-{text:"t",url:"namespacemembers.html#index_t"},
-{text:"v",url:"namespacemembers.html#index_v"}]},
+{text:"t",url:"namespacemembers.html#index_t"}]},
 {text:"関数",url:"namespacemembers_func.html",children:[
 {text:"_",url:"namespacemembers_func.html#index__5F"},
 {text:"a",url:"namespacemembers_func.html#index_a"},
@@ -65,7 +64,6 @@ var menudata={children:[
 {text:"s",url:"namespacemembers_func.html#index_s"},
 {text:"t",url:"namespacemembers_func.html#index_t"}]},
 {text:"変数",url:"namespacemembers_vars.html"},
-{text:"型定義",url:"namespacemembers_type.html"},
 {text:"列挙型",url:"namespacemembers_enum.html"},
 {text:"列挙値",url:"namespacemembers_eval.html"}]}]},
 {text:"クラス",url:"annotated.html",children:[
@@ -124,4 +122,6 @@ var menudata={children:[
 {text:"ファイルメンバ",url:"globals.html",children:[
 {text:"全て",url:"globals.html"},
 {text:"関数",url:"globals_func.html"},
+{text:"変数",url:"globals_vars.html"},
+{text:"型定義",url:"globals_type.html"},
 {text:"マクロ定義",url:"globals_defs.html"}]}]}]}

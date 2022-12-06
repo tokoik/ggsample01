@@ -1,4 +1,4 @@
 <map id="gg::GgQuaternion::rotate" name="gg::GgQuaternion::rotate">
-<area shape="rect" id="node1" title="四元数を (x, y, z) を軸として角度 a 回転した四元数を返す." alt="" coords="5,5,171,32"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a82d0620de0f023642b08d7e0f23e0687" title="(x, y, z) を軸として角度 a 回転する四元数を格納する." alt="" coords="219,5,413,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,171,32"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a82d0620de0f023642b08d7e0f23e0687" title=" " alt="" coords="219,5,413,32"/>
 </map>

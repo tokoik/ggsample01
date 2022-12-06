@@ -1,5 +1,5 @@
 <map id="gg::GgTexture::getSize" name="gg::GgTexture::getSize">
-<area shape="rect" id="node1" title="使用しているテクスチャのサイズを取り出す." alt="" coords="5,31,161,57"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgTexture.html#a0bffd61372848e54e8773ee5386787ec" title="使用しているテクスチャの縦の画素数を取り出す." alt="" coords="209,5,376,32"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgTexture.html#a37f45d2ce33bcd69e82b266d8b902937" title="使用しているテクスチャの横の画素数を取り出す." alt="" coords="211,56,375,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,161,57"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgTexture.html#a0bffd61372848e54e8773ee5386787ec" title=" " alt="" coords="209,5,376,32"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgTexture.html#a37f45d2ce33bcd69e82b266d8b902937" title=" " alt="" coords="211,56,375,83"/>
 </map>

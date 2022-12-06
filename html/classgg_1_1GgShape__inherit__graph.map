@@ -1,6 +1,6 @@
 <map id="gg::GgShape" name="gg::GgShape">
-<area shape="rect" id="node1" title="形状データの基底クラス." alt="" coords="71,5,169,32"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgPoints.html" title="点." alt="" coords="5,80,104,107"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgTriangles.html" title="三角形で表した形状データ (Arrays 形式)." alt="" coords="129,80,242,107"/>
-<area shape="rect" id="node4" href="$classgg_1_1GgElements.html" title="三角形で表した形状データ (Elements 形式)." alt="" coords="127,155,243,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="71,5,169,32"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgPoints.html" title=" " alt="" coords="5,80,104,107"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgTriangles.html" title=" " alt="" coords="129,80,242,107"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgElements.html" title=" " alt="" coords="127,155,243,181"/>
 </map>

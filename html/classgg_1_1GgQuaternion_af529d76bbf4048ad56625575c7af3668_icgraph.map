@@ -1,6 +1,6 @@
 <map id="gg::GgQuaternion::loadNormalize" name="gg::GgQuaternion::loadNormalize">
-<area shape="rect" id="node1" title="引数に指定した四元数を正規化して格納する." alt="" coords="432,31,647,57"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a2b6ba23dc4182f8e711defc9a0f33436" title="引数に指定した四元数を正規化して格納する." alt="" coords="169,5,384,32"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgQuaternion.html#a8667e065b18d857126f5481d0be8d527" title="正規化する." alt="" coords="183,56,371,83"/>
-<area shape="rect" id="node4" href="$namespacegg.html#aab31210c17598a7d14ecb3c9f461040c" title="正規化した四元数を返す." alt="" coords="5,56,121,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="432,31,647,57"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a2b6ba23dc4182f8e711defc9a0f33436" title=" " alt="" coords="169,5,384,32"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgQuaternion.html#a8667e065b18d857126f5481d0be8d527" title=" " alt="" coords="183,56,371,83"/>
+<area shape="rect" id="node4" href="$namespacegg.html#aab31210c17598a7d14ecb3c9f461040c" title=" " alt="" coords="5,56,121,83"/>
 </map>

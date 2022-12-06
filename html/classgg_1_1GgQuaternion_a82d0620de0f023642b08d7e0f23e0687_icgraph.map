@@ -1,12 +1,12 @@
 <map id="gg::GgQuaternion::loadRotate" name="gg::GgQuaternion::loadRotate">
-<area shape="rect" id="node1" title="(x, y, z) を軸として角度 a 回転する四元数を格納する." alt="" coords="471,107,665,133"/>
-<area shape="rect" id="node2" href="$namespacegg.html#a65baca1998bd9ea2b31a3fc1648d53dd" title="(x, y, z) を軸として角度 a 回転する四元数を返す." alt="" coords="246,56,405,83"/>
-<area shape="rect" id="node5" href="$classgg_1_1GgQuaternion.html#a397071db0143f0a54e0229698b9a081d" title="(v[0], v[1], v[2]) を軸として角度 a 回転する四元数を格納する." alt="" coords="228,107,423,133"/>
-<area shape="rect" id="node6" href="$classgg_1_1GgQuaternion.html#ab0bf5792aa2d8f141e90a0f37ea2ff2a" title="四元数を (x, y, z) を軸として角度 a 回転した四元数を返す." alt="" coords="243,157,408,184"/>
-<area shape="rect" id="node3" href="$namespacegg.html#a4e721a0a9a903540b11921447ecac772" title="(v[0], v[1], v[2]) を軸として角度 a 回転する四元数を返す." alt="" coords="13,5,172,32"/>
-<area shape="rect" id="node4" href="$classgg_1_1GgTrackball.html#a9613e5e3f4e41561938f8372ac8f55f2" title="回転の変換行列を計算する." alt="" coords="13,56,173,83"/>
-<area shape="rect" id="node7" href="$classgg_1_1GgQuaternion.html#a76e923f92644fa559d24040ff994ea08" title="四元数を (v[0], v[1], v[2]) を軸として角度 a 回転した四元数を返す." alt="" coords="10,107,175,133"/>
-<area shape="rect" id="node8" href="$classgg_1_1GgQuaternion.html#ab9eaade499ecbc3a8de7dea494f3b7c6" title="四元数を x 軸中心に角度 a 回転した四元数を返す." alt="" coords="7,157,179,184"/>
-<area shape="rect" id="node9" href="$classgg_1_1GgQuaternion.html#a014d3ef2b47e5981860388ef3119077a" title="四元数を y 軸中心に角度 a 回転した四元数を返す." alt="" coords="5,208,180,235"/>
-<area shape="rect" id="node10" href="$classgg_1_1GgQuaternion.html#a5640308c334e9de115adc573ac33f3ce" title="四元数を z 軸中心に角度 a 回転した四元数を返す." alt="" coords="7,259,179,285"/>
+<area shape="rect" id="node1" title=" " alt="" coords="471,107,665,133"/>
+<area shape="rect" id="node2" href="$namespacegg.html#a65baca1998bd9ea2b31a3fc1648d53dd" title=" " alt="" coords="246,56,405,83"/>
+<area shape="rect" id="node5" href="$classgg_1_1GgQuaternion.html#a397071db0143f0a54e0229698b9a081d" title=" " alt="" coords="228,107,423,133"/>
+<area shape="rect" id="node6" href="$classgg_1_1GgQuaternion.html#ab0bf5792aa2d8f141e90a0f37ea2ff2a" title=" " alt="" coords="243,157,408,184"/>
+<area shape="rect" id="node3" href="$namespacegg.html#a4e721a0a9a903540b11921447ecac772" title=" " alt="" coords="13,5,172,32"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgTrackball.html#a9613e5e3f4e41561938f8372ac8f55f2" title=" " alt="" coords="13,56,173,83"/>
+<area shape="rect" id="node7" href="$classgg_1_1GgQuaternion.html#a76e923f92644fa559d24040ff994ea08" title=" " alt="" coords="10,107,175,133"/>
+<area shape="rect" id="node8" href="$classgg_1_1GgQuaternion.html#ab9eaade499ecbc3a8de7dea494f3b7c6" title=" " alt="" coords="7,157,179,184"/>
+<area shape="rect" id="node9" href="$classgg_1_1GgQuaternion.html#a014d3ef2b47e5981860388ef3119077a" title=" " alt="" coords="5,208,180,235"/>
+<area shape="rect" id="node10" href="$classgg_1_1GgQuaternion.html#a5640308c334e9de115adc573ac33f3ce" title=" " alt="" coords="7,259,179,285"/>
 </map>

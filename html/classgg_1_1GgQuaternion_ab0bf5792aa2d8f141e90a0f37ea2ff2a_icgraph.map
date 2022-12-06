@@ -1,7 +1,7 @@
 <map id="gg::GgQuaternion::rotate" name="gg::GgQuaternion::rotate">
-<area shape="rect" id="node1" title="四元数を (x, y, z) を軸として角度 a 回転した四元数を返す." alt="" coords="228,81,393,108"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a76e923f92644fa559d24040ff994ea08" title="四元数を (v[0], v[1], v[2]) を軸として角度 a 回転した四元数を返す." alt="" coords="10,5,175,32"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgQuaternion.html#ab9eaade499ecbc3a8de7dea494f3b7c6" title="四元数を x 軸中心に角度 a 回転した四元数を返す." alt="" coords="7,56,179,83"/>
-<area shape="rect" id="node4" href="$classgg_1_1GgQuaternion.html#a014d3ef2b47e5981860388ef3119077a" title="四元数を y 軸中心に角度 a 回転した四元数を返す." alt="" coords="5,107,180,133"/>
-<area shape="rect" id="node5" href="$classgg_1_1GgQuaternion.html#a5640308c334e9de115adc573ac33f3ce" title="四元数を z 軸中心に角度 a 回転した四元数を返す." alt="" coords="7,157,179,184"/>
+<area shape="rect" id="node1" title=" " alt="" coords="228,81,393,108"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a76e923f92644fa559d24040ff994ea08" title=" " alt="" coords="10,5,175,32"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgQuaternion.html#ab9eaade499ecbc3a8de7dea494f3b7c6" title=" " alt="" coords="7,56,179,83"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgQuaternion.html#a014d3ef2b47e5981860388ef3119077a" title=" " alt="" coords="5,107,180,133"/>
+<area shape="rect" id="node5" href="$classgg_1_1GgQuaternion.html#a5640308c334e9de115adc573ac33f3ce" title=" " alt="" coords="7,157,179,184"/>
 </map>

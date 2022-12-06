@@ -1,8 +1,8 @@
 <map id="gg::GgQuaternion::euler" name="gg::GgQuaternion::euler">
-<area shape="rect" id="node1" title="四元数をオイラー角 (e[0], e[1], e[2]) で回転した四元数を返す." alt="" coords="5,56,165,83"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#abdbd693a6cd020ed36293d3aec1b528c" title="四元数をオイラー角 (heading, pitch, roll) で回転した四元数を返す." alt="" coords="213,56,373,83"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgQuaternion.html#a3a1be65570aae13d963e894f02c88beb" title="オイラー角 (heading, pitch, roll) で与えられた回転を表す四元数を格納する." alt="" coords="421,56,608,83"/>
-<area shape="rect" id="node4" href="$classgg_1_1GgQuaternion.html#a6f9cd8893b1adbbaf17588b1ba5ee9c3" title="x 軸中心に角度 a 回転する四元数を格納する." alt="" coords="657,5,858,32"/>
-<area shape="rect" id="node5" href="$classgg_1_1GgQuaternion.html#a308e08f78d2dfeadc2efbcd7a470d6bd" title="y 軸中心に角度 a 回転する四元数を格納する." alt="" coords="656,56,859,83"/>
-<area shape="rect" id="node6" href="$classgg_1_1GgQuaternion.html#a345f63c1d1278daece7b1a09d279d74a" title="z 軸中心に角度 a 回転する四元数を格納する." alt="" coords="657,107,858,133"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,165,83"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#abdbd693a6cd020ed36293d3aec1b528c" title=" " alt="" coords="213,56,373,83"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgQuaternion.html#a3a1be65570aae13d963e894f02c88beb" title=" " alt="" coords="421,56,608,83"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgQuaternion.html#a6f9cd8893b1adbbaf17588b1ba5ee9c3" title=" " alt="" coords="657,5,858,32"/>
+<area shape="rect" id="node5" href="$classgg_1_1GgQuaternion.html#a308e08f78d2dfeadc2efbcd7a470d6bd" title=" " alt="" coords="656,56,859,83"/>
+<area shape="rect" id="node6" href="$classgg_1_1GgQuaternion.html#a345f63c1d1278daece7b1a09d279d74a" title=" " alt="" coords="657,107,858,133"/>
 </map>

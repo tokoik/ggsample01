@@ -1,7 +1,7 @@
 <map id="gg::GgMatrix::loadTranslate" name="gg::GgMatrix::loadTranslate">
-<area shape="rect" id="node1" title="平行移動の変換行列を格納する." alt="" coords="439,56,621,83"/>
-<area shape="rect" id="node2" href="$namespacegg.html#a1c44cf87582b032f9eeac980ed17f73b" title="平行移動の変換行列を返す." alt="" coords="244,5,355,32"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgMatrix.html#a09a6669afc37d942f01f69ac6302c8f4" title="平行移動の変換行列を格納する." alt="" coords="208,56,391,83"/>
-<area shape="rect" id="node4" href="$classgg_1_1GgMatrix.html#a687adb8979ae8af7b2cc842782145eb3" title="平行移動変換を乗じた結果を返す." alt="" coords="222,107,377,133"/>
-<area shape="rect" id="node5" href="$classgg_1_1GgMatrix.html#a00b38f04088224a02c6ebf393e355f0e" title="平行移動変換を乗じた結果を返す." alt="" coords="5,107,160,133"/>
+<area shape="rect" id="node1" title=" " alt="" coords="439,56,621,83"/>
+<area shape="rect" id="node2" href="$namespacegg.html#a1c44cf87582b032f9eeac980ed17f73b" title=" " alt="" coords="244,5,355,32"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgMatrix.html#a09a6669afc37d942f01f69ac6302c8f4" title=" " alt="" coords="208,56,391,83"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgMatrix.html#a687adb8979ae8af7b2cc842782145eb3" title=" " alt="" coords="222,107,377,133"/>
+<area shape="rect" id="node5" href="$classgg_1_1GgMatrix.html#a00b38f04088224a02c6ebf393e355f0e" title=" " alt="" coords="5,107,160,133"/>
 </map>

@@ -1,4 +1,4 @@
 <map id="gg::GgQuaternion::loadRotate" name="gg::GgQuaternion::loadRotate">
-<area shape="rect" id="node1" title="(v[0], v[1], v[2]) を軸として角度 v[3] 回転する四元数を格納する." alt="" coords="5,5,200,32"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a82d0620de0f023642b08d7e0f23e0687" title="(x, y, z) を軸として角度 a 回転する四元数を格納する." alt="" coords="248,5,443,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,200,32"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a82d0620de0f023642b08d7e0f23e0687" title=" " alt="" coords="248,5,443,32"/>
 </map>

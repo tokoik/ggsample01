@@ -68,27 +68,35 @@ $(function() {
 <div class="title">Window.h ファイル</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.  
-<a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="gg_8h_source.html">gg.h</a>&quot;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;cstdlib&gt;</code><br />
 <code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;stdexcept&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
+<code>#include &quot;imgui.h&quot;</code><br />
+<code>#include &quot;imgui_impl_glfw.h&quot;</code><br />
+<code>#include &quot;imgui_impl_opengl3.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Window.h の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="Window_8h__incl.png" border="0" usemap="#aWindow_8h" alt=""/></div>
 <map name="aWindow_8h" id="aWindow_8h">
-<area shape="rect" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理." alt="" coords="193,5,272,32"/>
-<area shape="rect" href="gg_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言." alt="" coords="5,80,52,107"/>
-<area shape="rect" title=" " alt="" coords="77,80,135,107"/>
-<area shape="rect" title=" " alt="" coords="160,80,220,107"/>
-<area shape="rect" title=" " alt="" coords="244,80,309,107"/>
-<area shape="rect" title=" " alt="" coords="333,80,412,107"/>
-<area shape="rect" title=" " alt="" coords="437,80,509,107"/>
+<area shape="rect" title=" " alt="" coords="411,5,490,32"/>
+<area shape="rect" href="gg_8h.html" title=" " alt="" coords="167,80,214,107"/>
+<area shape="rect" title=" " alt="" coords="5,155,64,181"/>
+<area shape="rect" title=" " alt="" coords="238,80,298,107"/>
+<area shape="rect" title=" " alt="" coords="322,80,387,107"/>
+<area shape="rect" title=" " alt="" coords="411,80,490,107"/>
+<area shape="rect" title=" " alt="" coords="515,80,587,107"/>
+<area shape="rect" title=" " alt="" coords="611,80,675,107"/>
+<area shape="rect" title=" " alt="" coords="699,80,823,107"/>
+<area shape="rect" title=" " alt="" coords="848,80,995,107"/>
+<area shape="rect" title=" " alt="" coords="88,155,139,181"/>
+<area shape="rect" title=" " alt="" coords="163,155,219,181"/>
+<area shape="rect" title=" " alt="" coords="243,155,298,181"/>
+<area shape="rect" title=" " alt="" coords="323,155,392,181"/>
+<area shape="rect" title=" " alt="" coords="416,155,480,181"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -96,10 +104,16 @@ Window.h の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="Window_8h__dep__incl.png" border="0" usemap="#aWindow_8hdep" alt=""/></div>
 <map name="aWindow_8hdep" id="aWindow_8hdep">
-<area shape="rect" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理." alt="" coords="85,5,163,32"/>
-<area shape="rect" href="GgApp_8h.html" title=" " alt="" coords="87,80,161,107"/>
-<area shape="rect" href="ggsample01_8cpp.html" title=" " alt="" coords="5,155,123,181"/>
-<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="147,155,221,181"/>
+<area shape="rect" title=" " alt="" coords="31,5,109,32"/>
+<area shape="rect" href="GgApp_8h.html" title=" " alt="" coords="33,80,107,107"/>
+<area shape="rect" href="Config_8h.html" title=" " alt="" coords="35,155,105,181"/>
+<area shape="rect" href="ggsample01_8cpp.html" title=" " alt="" coords="14,379,131,405"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="129,155,203,181"/>
+<area shape="rect" href="Config_8cpp.html" title=" " alt="" coords="58,229,141,256"/>
+<area shape="rect" href="Menu_8h.html" title=" " alt="" coords="165,229,231,256"/>
+<area shape="rect" href="Draw_8h.html" title=" " alt="" coords="213,304,276,331"/>
+<area shape="rect" href="Menu_8cpp.html" title=" " alt="" coords="59,304,137,331"/>
+<area shape="rect" href="Draw_8cpp.html" title=" " alt="" coords="207,379,283,405"/>
 </map>
 </div>
 </div>
@@ -108,7 +122,6 @@ Window.h の依存先関係図:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 クラス</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWindow.html">Window</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウィンドウ関連の処理.  <a href="classWindow.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -119,7 +132,7 @@ Window.h の依存先関係図:</div>
 <tr class="separator:a65e9ad0c9a623761c24f44a8fbdf6d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理. </p>
+<div class="textblock"><p>ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理.</p>
 <dl class="section author"><dt>著者</dt><dd>Kohe Tokoi </dd></dl>
 <dl class="section date"><dt>日付</dt><dd>March 31, 2021 </dd></dl>
 
@@ -137,7 +150,7 @@ Window.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00043">43</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00044">44</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -153,14 +166,14 @@ Window.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00048">48</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Window_8h_source.html">Window.h</a> の <a class="el" href="Window_8h_source.html#l00049">49</a> 行目に定義があります。</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2022年04月11日(月) 09時40分39秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2022年12月06日(火) 23時01分17秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

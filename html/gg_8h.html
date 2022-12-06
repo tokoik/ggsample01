@@ -64,7 +64,7 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">クラス</a> &#124;
 <a href="#namespaces">名前空間</a> &#124;
-<a href="#typedef-members">型定義</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
 <a href="#enum-members">列挙型</a> &#124;
 <a href="#func-members">関数</a> &#124;
 <a href="#var-members">変数</a>  </div>
@@ -72,20 +72,43 @@ $(function() {
 <div class="title">gg.h ファイル</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言.  
-<a href="#details">[詳解]</a></p>
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;array&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;cstddef&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+gg.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="gg_8h__incl.png" border="0" usemap="#agg_8h" alt=""/></div>
+<map name="agg_8h" id="agg_8h">
+<area shape="rect" title=" " alt="" coords="207,5,254,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,64,107"/>
+<area shape="rect" title=" " alt="" coords="88,80,139,107"/>
+<area shape="rect" title=" " alt="" coords="163,80,219,107"/>
+<area shape="rect" title=" " alt="" coords="243,80,298,107"/>
+<area shape="rect" title=" " alt="" coords="323,80,392,107"/>
+<area shape="rect" title=" " alt="" coords="416,80,480,107"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
 被依存関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="gg_8h__dep__incl.png" border="0" usemap="#agg_8hdep" alt=""/></div>
 <map name="agg_8hdep" id="agg_8hdep">
-<area shape="rect" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言." alt="" coords="59,5,106,32"/>
-<area shape="rect" href="gg_8cpp.html" title="ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の定義." alt="" coords="5,80,67,107"/>
-<area shape="rect" href="Window_8h.html" title="ゲームグラフィックス特論の宿題用補助プログラムのウィンドウ関連の処理." alt="" coords="91,80,170,107"/>
+<area shape="rect" title=" " alt="" coords="59,5,106,32"/>
+<area shape="rect" href="gg_8cpp.html" title=" " alt="" coords="5,80,67,107"/>
+<area shape="rect" href="Window_8h.html" title=" " alt="" coords="91,80,170,107"/>
 <area shape="rect" href="GgApp_8h.html" title=" " alt="" coords="94,155,167,181"/>
-<area shape="rect" href="ggsample01_8cpp.html" title=" " alt="" coords="12,229,129,256"/>
-<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="153,229,228,256"/>
+<area shape="rect" href="Config_8h.html" title=" " alt="" coords="96,229,165,256"/>
+<area shape="rect" href="ggsample01_8cpp.html" title=" " alt="" coords="75,453,192,480"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="189,229,264,256"/>
+<area shape="rect" href="Config_8cpp.html" title=" " alt="" coords="119,304,201,331"/>
+<area shape="rect" href="Menu_8h.html" title=" " alt="" coords="226,304,291,331"/>
+<area shape="rect" href="Draw_8h.html" title=" " alt="" coords="274,379,337,405"/>
+<area shape="rect" href="Menu_8cpp.html" title=" " alt="" coords="119,379,198,405"/>
+<area shape="rect" href="Draw_8cpp.html" title=" " alt="" coords="267,453,343,480"/>
 </map>
 </div>
 </div>
@@ -93,441 +116,328 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html">gg::GgVector</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">変換行列.  <a href="classgg_1_1GgMatrix.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html">gg::GgQuaternion</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">四元数.  <a href="classgg_1_1GgQuaternion.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTrackball.html">gg::GgTrackball</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">簡易トラックボール処理.  <a href="classgg_1_1GgTrackball.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTexture.html">gg::GgTexture</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャ.  <a href="classgg_1_1GgTexture.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgColorTexture.html">gg::GgColorTexture</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">カラーマップ.  <a href="classgg_1_1GgColorTexture.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgNormalTexture.html">gg::GgNormalTexture</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">法線マップ.  <a href="classgg_1_1GgNormalTexture.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgBuffer.html">gg::GgBuffer&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファオブジェクト.  <a href="classgg_1_1GgBuffer.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html">gg::GgUniformBuffer&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ユニフォームバッファオブジェクト.  <a href="classgg_1_1GgUniformBuffer.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgShape.html">gg::GgShape</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">形状データの基底クラス.  <a href="classgg_1_1GgShape.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgPoints.html">gg::GgPoints</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">点.  <a href="classgg_1_1GgPoints.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgg_1_1GgVertex.html">gg::GgVertex</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">三角形の頂点データ.  <a href="structgg_1_1GgVertex.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTriangles.html">gg::GgTriangles</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">三角形で表した形状データ (Arrays 形式).  <a href="classgg_1_1GgTriangles.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgElements.html">gg::GgElements</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">三角形で表した形状データ (Elements 形式).  <a href="classgg_1_1GgElements.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgShader.html">gg::GgShader</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダの基底クラス.  <a href="classgg_1_1GgShader.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgPointShader.html">gg::GgPointShader</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">点のシェーダ.  <a href="classgg_1_1GgPointShader.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">三角形に単純な陰影付けを行うシェーダ.  <a href="classgg_1_1GgSimpleShader.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">gg::GgSimpleShader::Light</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">三角形に単純な陰影付けを行うシェーダが参照する光源データ.  <a href="structgg_1_1GgSimpleShader_1_1Light.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgSimpleShader_1_1LightBuffer.html">gg::GgSimpleShader::LightBuffer</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">三角形に単純な陰影付けを行うシェーダが参照する光源データのユニフォームバッファオブジェクト.  <a href="classgg_1_1GgSimpleShader_1_1LightBuffer.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgg_1_1GgSimpleShader_1_1Material.html">gg::GgSimpleShader::Material</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">三角形に単純な陰影付けを行うシェーダが参照する材質データ.  <a href="structgg_1_1GgSimpleShader_1_1Material.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html">gg::GgSimpleShader::MaterialBuffer</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">三角形に単純な陰影付けを行うシェーダが参照する材質データのユニフォームバッファオブジェクト.  <a href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgSimpleObj.html">gg::GgSimpleObj</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wavefront OBJ 形式のファイル (Arrays 形式).  <a href="classgg_1_1GgSimpleObj.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 名前空間</h2></td></tr>
 <tr class="memitem:namespacegg"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html">gg</a></td></tr>
-<tr class="memdesc:namespacegg"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームグラフィックス特論の宿題用補助プログラムの名前空間 <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-型定義</h2></td></tr>
-<tr class="memitem:a686bdd049e83786c661ebc6d940e6af4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">gg::GgVector</a> = std::array&lt; GLfloat, 4 &gt;</td></tr>
-<tr class="memdesc:a686bdd049e83786c661ebc6d940e6af4"><td class="mdescLeft">&#160;</td><td class="mdescRight">4 要素の単精度実数の配列.  <a href="namespacegg.html#a686bdd049e83786c661ebc6d940e6af4">[詳解]</a><br /></td></tr>
-<tr class="separator:a686bdd049e83786c661ebc6d940e6af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a0c4972fb66e9d9e2ca5682621e5bde85"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gg_8h.html#a0c4972fb66e9d9e2ca5682621e5bde85">ggError</a>()</td></tr>
+<tr class="separator:a0c4972fb66e9d9e2ca5682621e5bde85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bf8b0b52d88e682da02e818adb4d16a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gg_8h.html#a0bf8b0b52d88e682da02e818adb4d16a">ggFBOError</a>()</td></tr>
+<tr class="separator:a0bf8b0b52d88e682da02e818adb4d16a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 列挙型</h2></td></tr>
 <tr class="memitem:ae6e185ba7876df656b8d0b02819b5e49"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ae6e185ba7876df656b8d0b02819b5e49">gg::BindingPoints</a> { <a class="el" href="namespacegg.html#ae6e185ba7876df656b8d0b02819b5e49a64b69a47d95d955aed16b608baf1f68c">gg::LightBindingPoint</a> = 0
 , <a class="el" href="namespacegg.html#ae6e185ba7876df656b8d0b02819b5e49a3ba0d83d74aed68d92082c2621fa2348">gg::MaterialBindingPoint</a>
  }</td></tr>
-<tr class="memdesc:ae6e185ba7876df656b8d0b02819b5e49"><td class="mdescLeft">&#160;</td><td class="mdescRight">光源と材質の uniform buffer object の結合ポイント.  <a href="namespacegg.html#ae6e185ba7876df656b8d0b02819b5e49">[詳解]</a><br /></td></tr>
 <tr class="separator:ae6e185ba7876df656b8d0b02819b5e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
 <tr class="memitem:af7ab5857e56acfcf3e806f587f3737a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#af7ab5857e56acfcf3e806f587f3737a0">gg::ggInit</a> ()</td></tr>
-<tr class="memdesc:af7ab5857e56acfcf3e806f587f3737a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲームグラフィックス特論の都合にもとづく初期化を行う.  <a href="namespacegg.html#af7ab5857e56acfcf3e806f587f3737a0">[詳解]</a><br /></td></tr>
 <tr class="separator:af7ab5857e56acfcf3e806f587f3737a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a483abe26cc773c9c62731d911f1a1909"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a483abe26cc773c9c62731d911f1a1909">gg::_ggError</a> (const std::string &amp;name=&quot;&quot;, unsigned int line=0)</td></tr>
-<tr class="memdesc:a483abe26cc773c9c62731d911f1a1909"><td class="mdescLeft">&#160;</td><td class="mdescRight">OpenGL のエラーをチェックする.  <a href="namespacegg.html#a483abe26cc773c9c62731d911f1a1909">[詳解]</a><br /></td></tr>
 <tr class="separator:a483abe26cc773c9c62731d911f1a1909"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a759d331f8d381524c40a2307dedb608a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a759d331f8d381524c40a2307dedb608a">gg::_ggFBOError</a> (const std::string &amp;name=&quot;&quot;, unsigned int line=0)</td></tr>
-<tr class="memdesc:a759d331f8d381524c40a2307dedb608a"><td class="mdescLeft">&#160;</td><td class="mdescRight">FBO のエラーをチェックする.  <a href="namespacegg.html#a759d331f8d381524c40a2307dedb608a">[詳解]</a><br /></td></tr>
 <tr class="separator:a759d331f8d381524c40a2307dedb608a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bc5278bea931898a436bc4cd611a108"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a3bc5278bea931898a436bc4cd611a108">gg::ggCross</a> (GLfloat *c, const GLfloat *a, const GLfloat *b)</td></tr>
-<tr class="memdesc:a3bc5278bea931898a436bc4cd611a108"><td class="mdescLeft">&#160;</td><td class="mdescRight">3 要素の外積.  <a href="namespacegg.html#a3bc5278bea931898a436bc4cd611a108">[詳解]</a><br /></td></tr>
 <tr class="separator:a3bc5278bea931898a436bc4cd611a108"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e49aff9138ef05a803f1ee703d0f67f"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a4e49aff9138ef05a803f1ee703d0f67f">gg::ggDot3</a> (const GLfloat *a, const GLfloat *b)</td></tr>
-<tr class="memdesc:a4e49aff9138ef05a803f1ee703d0f67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">3 要素の内積.  <a href="namespacegg.html#a4e49aff9138ef05a803f1ee703d0f67f">[詳解]</a><br /></td></tr>
 <tr class="separator:a4e49aff9138ef05a803f1ee703d0f67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a837850150a8293353ade7900452955b2"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a837850150a8293353ade7900452955b2">gg::ggLength3</a> (const GLfloat *a)</td></tr>
-<tr class="memdesc:a837850150a8293353ade7900452955b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">3 要素の長さ.  <a href="namespacegg.html#a837850150a8293353ade7900452955b2">[詳解]</a><br /></td></tr>
 <tr class="separator:a837850150a8293353ade7900452955b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c20fea9c5d29d82ceabb41c12b2a831"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a1c20fea9c5d29d82ceabb41c12b2a831">gg::ggDistance3</a> (const GLfloat *a, const GLfloat *b)</td></tr>
-<tr class="memdesc:a1c20fea9c5d29d82ceabb41c12b2a831"><td class="mdescLeft">&#160;</td><td class="mdescRight">3 要素の距離.  <a href="namespacegg.html#a1c20fea9c5d29d82ceabb41c12b2a831">[詳解]</a><br /></td></tr>
 <tr class="separator:a1c20fea9c5d29d82ceabb41c12b2a831"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accd75f02070ef57b1da0dccdec3fdd66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#accd75f02070ef57b1da0dccdec3fdd66">gg::ggNormalize3</a> (const GLfloat *a, GLfloat *b)</td></tr>
+<tr class="separator:accd75f02070ef57b1da0dccdec3fdd66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6a03a10f9a4d01016db6dceb0cc338d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#af6a03a10f9a4d01016db6dceb0cc338d">gg::ggNormalize3</a> (GLfloat *a)</td></tr>
-<tr class="memdesc:af6a03a10f9a4d01016db6dceb0cc338d"><td class="mdescLeft">&#160;</td><td class="mdescRight">3 要素の正規化.  <a href="namespacegg.html#af6a03a10f9a4d01016db6dceb0cc338d">[詳解]</a><br /></td></tr>
 <tr class="separator:af6a03a10f9a4d01016db6dceb0cc338d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34aa472e3f12dd5a976c090da6c1bc51"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51">gg::ggDot4</a> (const GLfloat *a, const GLfloat *b)</td></tr>
-<tr class="memdesc:a34aa472e3f12dd5a976c090da6c1bc51"><td class="mdescLeft">&#160;</td><td class="mdescRight">GLfloat 型の 4 要素の内積  <a href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51">[詳解]</a><br /></td></tr>
 <tr class="separator:a34aa472e3f12dd5a976c090da6c1bc51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f383a711d58b805ebaf26bc004986ab"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a2f383a711d58b805ebaf26bc004986ab">gg::ggLength4</a> (const GLfloat *a)</td></tr>
-<tr class="memdesc:a2f383a711d58b805ebaf26bc004986ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">GLfloat 型の 4 要素の長さ.  <a href="namespacegg.html#a2f383a711d58b805ebaf26bc004986ab">[詳解]</a><br /></td></tr>
 <tr class="separator:a2f383a711d58b805ebaf26bc004986ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d84278231c4a950b533d6d90c510ec6"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a9d84278231c4a950b533d6d90c510ec6">gg::ggDistance4</a> (const GLfloat *a, const GLfloat *b)</td></tr>
-<tr class="memdesc:a9d84278231c4a950b533d6d90c510ec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">GLfloat 型の 4 要素の距離.  <a href="namespacegg.html#a9d84278231c4a950b533d6d90c510ec6">[詳解]</a><br /></td></tr>
 <tr class="separator:a9d84278231c4a950b533d6d90c510ec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53de42a63451f28a4dc644143285b581"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a53de42a63451f28a4dc644143285b581">gg::ggNormalize4</a> (const GLfloat *a, GLfloat *b)</td></tr>
+<tr class="separator:a53de42a63451f28a4dc644143285b581"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2f149e2a719574c966ff6ad0fdc17cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ab2f149e2a719574c966ff6ad0fdc17cf">gg::ggNormalize4</a> (GLfloat *a)</td></tr>
-<tr class="memdesc:ab2f149e2a719574c966ff6ad0fdc17cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">GLfloat 型の 4 要素の正規化.  <a href="namespacegg.html#ab2f149e2a719574c966ff6ad0fdc17cf">[詳解]</a><br /></td></tr>
 <tr class="separator:ab2f149e2a719574c966ff6ad0fdc17cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1863bdf2837f612529353f5f590a0fe4"><td class="memItemLeft" align="right" valign="top">const GgVector &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a1863bdf2837f612529353f5f590a0fe4">gg::operator+</a> (const GgVector &amp;v)</td></tr>
+<tr class="separator:a1863bdf2837f612529353f5f590a0fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81d4595fb49bfc30c3b77c34a86b90f2"><td class="memItemLeft" align="right" valign="top">GgVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a81d4595fb49bfc30c3b77c34a86b90f2">gg::operator+</a> (GLfloat a, const GgVector &amp;b)</td></tr>
+<tr class="separator:a81d4595fb49bfc30c3b77c34a86b90f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a267dcc250c978b60d746840361d7b205"><td class="memItemLeft" align="right" valign="top">const GgVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a267dcc250c978b60d746840361d7b205">gg::operator-</a> (const GgVector &amp;v)</td></tr>
+<tr class="separator:a267dcc250c978b60d746840361d7b205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9049da1fd7b42bebbec6de7604d4dc90"><td class="memItemLeft" align="right" valign="top">GgVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a9049da1fd7b42bebbec6de7604d4dc90">gg::operator-</a> (GLfloat a, const GgVector &amp;b)</td></tr>
+<tr class="separator:a9049da1fd7b42bebbec6de7604d4dc90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7881bf9a01cd9bab5e968cab900e460f"><td class="memItemLeft" align="right" valign="top">GgVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a7881bf9a01cd9bab5e968cab900e460f">gg::operator*</a> (GLfloat a, const GgVector &amp;b)</td></tr>
+<tr class="separator:a7881bf9a01cd9bab5e968cab900e460f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44b3450fcea999d7b015384a94c30b47"><td class="memItemLeft" align="right" valign="top">GgVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a44b3450fcea999d7b015384a94c30b47">gg::operator/</a> (GLfloat a, const GgVector &amp;b)</td></tr>
+<tr class="separator:a44b3450fcea999d7b015384a94c30b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e4152d613985419556992a591628dc2"><td class="memItemLeft" align="right" valign="top">GgVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a3e4152d613985419556992a591628dc2">gg::ggCross</a> (const GgVector &amp;a, const GgVector &amp;b)</td></tr>
-<tr class="memdesc:a3e4152d613985419556992a591628dc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 3 要素の外積.  <a href="namespacegg.html#a3e4152d613985419556992a591628dc2">[詳解]</a><br /></td></tr>
 <tr class="separator:a3e4152d613985419556992a591628dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a884a700a6f3d5367f0d7a7fb43bd61e0"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a884a700a6f3d5367f0d7a7fb43bd61e0">gg::ggDot3</a> (const GgVector &amp;a, const GgVector &amp;b)</td></tr>
-<tr class="memdesc:a884a700a6f3d5367f0d7a7fb43bd61e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 3 要素の内積.  <a href="namespacegg.html#a884a700a6f3d5367f0d7a7fb43bd61e0">[詳解]</a><br /></td></tr>
 <tr class="separator:a884a700a6f3d5367f0d7a7fb43bd61e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01ccb3648bdfe2d689034136304a7ac5"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a01ccb3648bdfe2d689034136304a7ac5">gg::ggLength3</a> (const GgVector &amp;a)</td></tr>
-<tr class="memdesc:a01ccb3648bdfe2d689034136304a7ac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 3 要素の長さ.  <a href="namespacegg.html#a01ccb3648bdfe2d689034136304a7ac5">[詳解]</a><br /></td></tr>
 <tr class="separator:a01ccb3648bdfe2d689034136304a7ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3a225df6ac13de39d971cb22ee8f46e"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#aa3a225df6ac13de39d971cb22ee8f46e">gg::ggDistance3</a> (const GgVector &amp;a, const GgVector &amp;b)</td></tr>
-<tr class="memdesc:aa3a225df6ac13de39d971cb22ee8f46e"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 3 要素の距離.  <a href="namespacegg.html#aa3a225df6ac13de39d971cb22ee8f46e">[詳解]</a><br /></td></tr>
 <tr class="separator:aa3a225df6ac13de39d971cb22ee8f46e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d602aa5fe6f7037d0180852e26811a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a1d602aa5fe6f7037d0180852e26811a2">gg::ggNormalize3</a> (GgVector *a)</td></tr>
-<tr class="memdesc:a1d602aa5fe6f7037d0180852e26811a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 3 要素の正規化.  <a href="namespacegg.html#a1d602aa5fe6f7037d0180852e26811a2">[詳解]</a><br /></td></tr>
-<tr class="separator:a1d602aa5fe6f7037d0180852e26811a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a010fafe70a15a0aaa10ca2cceab23305"><td class="memItemLeft" align="right" valign="top">GgVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a010fafe70a15a0aaa10ca2cceab23305">gg::ggNormalize3</a> (const GgVector &amp;a)</td></tr>
-<tr class="memdesc:a010fafe70a15a0aaa10ca2cceab23305"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 3 要素の正規化.  <a href="namespacegg.html#a010fafe70a15a0aaa10ca2cceab23305">[詳解]</a><br /></td></tr>
 <tr class="separator:a010fafe70a15a0aaa10ca2cceab23305"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3bd07674d292ebd94bc75bb566febb6"><td class="memItemLeft" align="right" valign="top">const GgVector &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ac3bd07674d292ebd94bc75bb566febb6">gg::operator+</a> (const GgVector &amp;a)</td></tr>
-<tr class="memdesc:ac3bd07674d292ebd94bc75bb566febb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">何もしない.  <a href="namespacegg.html#ac3bd07674d292ebd94bc75bb566febb6">[詳解]</a><br /></td></tr>
-<tr class="separator:ac3bd07674d292ebd94bc75bb566febb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe9271f9e8a841f09f08889d609e0ae3"><td class="memItemLeft" align="right" valign="top">GgVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#abe9271f9e8a841f09f08889d609e0ae3">gg::operator+</a> (const GgVector &amp;a, const GgVector &amp;b)</td></tr>
-<tr class="memdesc:abe9271f9e8a841f09f08889d609e0ae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の和を返す.  <a href="namespacegg.html#abe9271f9e8a841f09f08889d609e0ae3">[詳解]</a><br /></td></tr>
-<tr class="separator:abe9271f9e8a841f09f08889d609e0ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a807c5033b4be9cdf480ad2d066290b2c"><td class="memItemLeft" align="right" valign="top">GgVector &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a807c5033b4be9cdf480ad2d066290b2c">gg::operator+=</a> (GgVector &amp;a, const GgVector &amp;b)</td></tr>
-<tr class="memdesc:a807c5033b4be9cdf480ad2d066290b2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型を加算する.  <a href="namespacegg.html#a807c5033b4be9cdf480ad2d066290b2c">[詳解]</a><br /></td></tr>
-<tr class="separator:a807c5033b4be9cdf480ad2d066290b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadf890eacba9559f8636393149f115da"><td class="memItemLeft" align="right" valign="top">const GgVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#aadf890eacba9559f8636393149f115da">gg::operator-</a> (const GgVector &amp;a)</td></tr>
-<tr class="memdesc:aadf890eacba9559f8636393149f115da"><td class="mdescLeft">&#160;</td><td class="mdescRight">符号の反転.  <a href="namespacegg.html#aadf890eacba9559f8636393149f115da">[詳解]</a><br /></td></tr>
-<tr class="separator:aadf890eacba9559f8636393149f115da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2389be6fd1af2efa649379ce8879ede6"><td class="memItemLeft" align="right" valign="top">GgVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a2389be6fd1af2efa649379ce8879ede6">gg::operator-</a> (const GgVector &amp;a, const GgVector &amp;b)</td></tr>
-<tr class="memdesc:a2389be6fd1af2efa649379ce8879ede6"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の差を返す.  <a href="namespacegg.html#a2389be6fd1af2efa649379ce8879ede6">[詳解]</a><br /></td></tr>
-<tr class="separator:a2389be6fd1af2efa649379ce8879ede6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d5dfb32d64602d083def5b7b820cdcb"><td class="memItemLeft" align="right" valign="top">GgVector &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a4d5dfb32d64602d083def5b7b820cdcb">gg::operator-=</a> (GgVector &amp;a, const GgVector &amp;b)</td></tr>
-<tr class="memdesc:a4d5dfb32d64602d083def5b7b820cdcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型を減算する.  <a href="namespacegg.html#a4d5dfb32d64602d083def5b7b820cdcb">[詳解]</a><br /></td></tr>
-<tr class="separator:a4d5dfb32d64602d083def5b7b820cdcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9597894f198c9e22749c45e0fc834b4"><td class="memItemLeft" align="right" valign="top">GgVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ad9597894f198c9e22749c45e0fc834b4">gg::operator*</a> (const GgVector &amp;a, const GgVector &amp;b)</td></tr>
-<tr class="memdesc:ad9597894f198c9e22749c45e0fc834b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の積を返す.  <a href="namespacegg.html#ad9597894f198c9e22749c45e0fc834b4">[詳解]</a><br /></td></tr>
-<tr class="separator:ad9597894f198c9e22749c45e0fc834b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff1bc134d24bcd5f21a403e7438b2320"><td class="memItemLeft" align="right" valign="top">GgVector &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#aff1bc134d24bcd5f21a403e7438b2320">gg::operator*=</a> (GgVector &amp;a, const GgVector &amp;b)</td></tr>
-<tr class="memdesc:aff1bc134d24bcd5f21a403e7438b2320"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型を乗算する.  <a href="namespacegg.html#aff1bc134d24bcd5f21a403e7438b2320">[詳解]</a><br /></td></tr>
-<tr class="separator:aff1bc134d24bcd5f21a403e7438b2320"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacadcb015b3c2f1151de72dcc652004c"><td class="memItemLeft" align="right" valign="top">GgVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#aacadcb015b3c2f1151de72dcc652004c">gg::operator/</a> (const GgVector &amp;a, const GgVector &amp;b)</td></tr>
-<tr class="memdesc:aacadcb015b3c2f1151de72dcc652004c"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の商を返す.  <a href="namespacegg.html#aacadcb015b3c2f1151de72dcc652004c">[詳解]</a><br /></td></tr>
-<tr class="separator:aacadcb015b3c2f1151de72dcc652004c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b7abe80a1d8d5bd7cfab652473ca0ab"><td class="memItemLeft" align="right" valign="top">GgVector &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a5b7abe80a1d8d5bd7cfab652473ca0ab">gg::operator/=</a> (GgVector &amp;a, const GgVector &amp;b)</td></tr>
-<tr class="memdesc:a5b7abe80a1d8d5bd7cfab652473ca0ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型を除算する.  <a href="namespacegg.html#a5b7abe80a1d8d5bd7cfab652473ca0ab">[詳解]</a><br /></td></tr>
-<tr class="separator:a5b7abe80a1d8d5bd7cfab652473ca0ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a253d7d5f46597b05469639da2cb54a85"><td class="memItemLeft" align="right" valign="top">GgVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a253d7d5f46597b05469639da2cb54a85">gg::operator+</a> (const GgVector &amp;a, GLfloat b)</td></tr>
-<tr class="memdesc:a253d7d5f46597b05469639da2cb54a85"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の各要素にスカラーを足した和を返す.  <a href="namespacegg.html#a253d7d5f46597b05469639da2cb54a85">[詳解]</a><br /></td></tr>
-<tr class="separator:a253d7d5f46597b05469639da2cb54a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81d4595fb49bfc30c3b77c34a86b90f2"><td class="memItemLeft" align="right" valign="top">GgVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a81d4595fb49bfc30c3b77c34a86b90f2">gg::operator+</a> (GLfloat a, const GgVector &amp;b)</td></tr>
-<tr class="memdesc:a81d4595fb49bfc30c3b77c34a86b90f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の各要素にスカラーを足した和を返す.  <a href="namespacegg.html#a81d4595fb49bfc30c3b77c34a86b90f2">[詳解]</a><br /></td></tr>
-<tr class="separator:a81d4595fb49bfc30c3b77c34a86b90f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0d6f4305b4aa278129bc77d73d5cb09"><td class="memItemLeft" align="right" valign="top">GgVector &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ab0d6f4305b4aa278129bc77d73d5cb09">gg::operator+=</a> (GgVector &amp;a, GLfloat b)</td></tr>
-<tr class="memdesc:ab0d6f4305b4aa278129bc77d73d5cb09"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の各要素にスカラーを足す.  <a href="namespacegg.html#ab0d6f4305b4aa278129bc77d73d5cb09">[詳解]</a><br /></td></tr>
-<tr class="separator:ab0d6f4305b4aa278129bc77d73d5cb09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab86eef5da99d0f24016950f5c8c56086"><td class="memItemLeft" align="right" valign="top">GgVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ab86eef5da99d0f24016950f5c8c56086">gg::operator-</a> (const GgVector &amp;a, GLfloat b)</td></tr>
-<tr class="memdesc:ab86eef5da99d0f24016950f5c8c56086"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の各要素からスカラーを引いた差を返す.  <a href="namespacegg.html#ab86eef5da99d0f24016950f5c8c56086">[詳解]</a><br /></td></tr>
-<tr class="separator:ab86eef5da99d0f24016950f5c8c56086"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9049da1fd7b42bebbec6de7604d4dc90"><td class="memItemLeft" align="right" valign="top">GgVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a9049da1fd7b42bebbec6de7604d4dc90">gg::operator-</a> (GLfloat a, const GgVector &amp;b)</td></tr>
-<tr class="memdesc:a9049da1fd7b42bebbec6de7604d4dc90"><td class="mdescLeft">&#160;</td><td class="mdescRight">スカラーから GgVector 型の各要素を引いた差を返す.  <a href="namespacegg.html#a9049da1fd7b42bebbec6de7604d4dc90">[詳解]</a><br /></td></tr>
-<tr class="separator:a9049da1fd7b42bebbec6de7604d4dc90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa97af1bc07ef0f5735f29b951928a5d8"><td class="memItemLeft" align="right" valign="top">GgVector &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#aa97af1bc07ef0f5735f29b951928a5d8">gg::operator-=</a> (GgVector &amp;a, GLfloat b)</td></tr>
-<tr class="memdesc:aa97af1bc07ef0f5735f29b951928a5d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の各要素からスカラーを引く.  <a href="namespacegg.html#aa97af1bc07ef0f5735f29b951928a5d8">[詳解]</a><br /></td></tr>
-<tr class="separator:aa97af1bc07ef0f5735f29b951928a5d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cc36d06a14d2816d3c999f752085296"><td class="memItemLeft" align="right" valign="top">GgVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a7cc36d06a14d2816d3c999f752085296">gg::operator*</a> (const GgVector &amp;a, GLfloat b)</td></tr>
-<tr class="memdesc:a7cc36d06a14d2816d3c999f752085296"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の各要素にスカラーを乗じた積を返す.  <a href="namespacegg.html#a7cc36d06a14d2816d3c999f752085296">[詳解]</a><br /></td></tr>
-<tr class="separator:a7cc36d06a14d2816d3c999f752085296"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7881bf9a01cd9bab5e968cab900e460f"><td class="memItemLeft" align="right" valign="top">GgVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a7881bf9a01cd9bab5e968cab900e460f">gg::operator*</a> (GLfloat a, const GgVector &amp;b)</td></tr>
-<tr class="memdesc:a7881bf9a01cd9bab5e968cab900e460f"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の各要素にスカラーを乗じた積を返す.  <a href="namespacegg.html#a7881bf9a01cd9bab5e968cab900e460f">[詳解]</a><br /></td></tr>
-<tr class="separator:a7881bf9a01cd9bab5e968cab900e460f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07d1dca321b74872dfdf212e12ed4739"><td class="memItemLeft" align="right" valign="top">GgVector &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a07d1dca321b74872dfdf212e12ed4739">gg::operator*=</a> (GgVector &amp;a, GLfloat b)</td></tr>
-<tr class="memdesc:a07d1dca321b74872dfdf212e12ed4739"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の各要素にスカラーを乗じる.  <a href="namespacegg.html#a07d1dca321b74872dfdf212e12ed4739">[詳解]</a><br /></td></tr>
-<tr class="separator:a07d1dca321b74872dfdf212e12ed4739"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a605678cbf43d9a5fa6a5597a1102a4c7"><td class="memItemLeft" align="right" valign="top">GgVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a605678cbf43d9a5fa6a5597a1102a4c7">gg::operator/</a> (const GgVector &amp;a, GLfloat b)</td></tr>
-<tr class="memdesc:a605678cbf43d9a5fa6a5597a1102a4c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の各要素をスカラーで割った商を返す.  <a href="namespacegg.html#a605678cbf43d9a5fa6a5597a1102a4c7">[詳解]</a><br /></td></tr>
-<tr class="separator:a605678cbf43d9a5fa6a5597a1102a4c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44b3450fcea999d7b015384a94c30b47"><td class="memItemLeft" align="right" valign="top">GgVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a44b3450fcea999d7b015384a94c30b47">gg::operator/</a> (GLfloat a, const GgVector &amp;b)</td></tr>
-<tr class="memdesc:a44b3450fcea999d7b015384a94c30b47"><td class="mdescLeft">&#160;</td><td class="mdescRight">スカラーを GgVector 型の各要素で割った商を返す.  <a href="namespacegg.html#a44b3450fcea999d7b015384a94c30b47">[詳解]</a><br /></td></tr>
-<tr class="separator:a44b3450fcea999d7b015384a94c30b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cb7f5ade5a6cf22914c012450c33573"><td class="memItemLeft" align="right" valign="top">GgVector &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a7cb7f5ade5a6cf22914c012450c33573">gg::operator/=</a> (GgVector &amp;a, GLfloat b)</td></tr>
-<tr class="memdesc:a7cb7f5ade5a6cf22914c012450c33573"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の各要素をスカラーで割る.  <a href="namespacegg.html#a7cb7f5ade5a6cf22914c012450c33573">[詳解]</a><br /></td></tr>
-<tr class="separator:a7cb7f5ade5a6cf22914c012450c33573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d602aa5fe6f7037d0180852e26811a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a1d602aa5fe6f7037d0180852e26811a2">gg::ggNormalize3</a> (GgVector *a)</td></tr>
+<tr class="separator:a1d602aa5fe6f7037d0180852e26811a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f4640ffabc40dc38457d4b33ab21b87"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a1f4640ffabc40dc38457d4b33ab21b87">gg::ggDot4</a> (const GgVector &amp;a, const GgVector &amp;b)</td></tr>
-<tr class="memdesc:a1f4640ffabc40dc38457d4b33ab21b87"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 4 要素の内積.  <a href="namespacegg.html#a1f4640ffabc40dc38457d4b33ab21b87">[詳解]</a><br /></td></tr>
 <tr class="separator:a1f4640ffabc40dc38457d4b33ab21b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c5a85961402558c05dc869a1329f12d"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a2c5a85961402558c05dc869a1329f12d">gg::ggLength4</a> (const GgVector &amp;a)</td></tr>
-<tr class="memdesc:a2c5a85961402558c05dc869a1329f12d"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 4 要素の長さ.  <a href="namespacegg.html#a2c5a85961402558c05dc869a1329f12d">[詳解]</a><br /></td></tr>
 <tr class="separator:a2c5a85961402558c05dc869a1329f12d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ababa9df1e37a168855d97d4db90b990b"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ababa9df1e37a168855d97d4db90b990b">gg::ggDistance4</a> (const GgVector &amp;a, const GgVector &amp;b)</td></tr>
-<tr class="memdesc:ababa9df1e37a168855d97d4db90b990b"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 4 要素の距離.  <a href="namespacegg.html#ababa9df1e37a168855d97d4db90b990b">[詳解]</a><br /></td></tr>
 <tr class="separator:ababa9df1e37a168855d97d4db90b990b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8f809ed8f45e79d9054534d2f86f370"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ab8f809ed8f45e79d9054534d2f86f370">gg::ggNormalize4</a> (GgVector *a)</td></tr>
-<tr class="memdesc:ab8f809ed8f45e79d9054534d2f86f370"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 4 要素の正規化.  <a href="namespacegg.html#ab8f809ed8f45e79d9054534d2f86f370">[詳解]</a><br /></td></tr>
-<tr class="separator:ab8f809ed8f45e79d9054534d2f86f370"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a873c34e94fe830ecf23c12a747b3c8ce"><td class="memItemLeft" align="right" valign="top">GgVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a873c34e94fe830ecf23c12a747b3c8ce">gg::ggNormalize4</a> (const GgVector &amp;a)</td></tr>
-<tr class="memdesc:a873c34e94fe830ecf23c12a747b3c8ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">GgVector 型の 4 要素の正規化.  <a href="namespacegg.html#a873c34e94fe830ecf23c12a747b3c8ce">[詳解]</a><br /></td></tr>
 <tr class="separator:a873c34e94fe830ecf23c12a747b3c8ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8f809ed8f45e79d9054534d2f86f370"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ab8f809ed8f45e79d9054534d2f86f370">gg::ggNormalize4</a> (GgVector *a)</td></tr>
+<tr class="separator:ab8f809ed8f45e79d9054534d2f86f370"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afca3af3d6f73db24e8309a0f83592356"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#afca3af3d6f73db24e8309a0f83592356">gg::ggIdentity</a> ()</td></tr>
-<tr class="memdesc:afca3af3d6f73db24e8309a0f83592356"><td class="mdescLeft">&#160;</td><td class="mdescRight">単位行列を返す.  <a href="namespacegg.html#afca3af3d6f73db24e8309a0f83592356">[詳解]</a><br /></td></tr>
 <tr class="separator:afca3af3d6f73db24e8309a0f83592356"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c44cf87582b032f9eeac980ed17f73b"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a1c44cf87582b032f9eeac980ed17f73b">gg::ggTranslate</a> (GLfloat x, GLfloat y, GLfloat z, GLfloat w=1.0f)</td></tr>
-<tr class="memdesc:a1c44cf87582b032f9eeac980ed17f73b"><td class="mdescLeft">&#160;</td><td class="mdescRight">平行移動の変換行列を返す.  <a href="namespacegg.html#a1c44cf87582b032f9eeac980ed17f73b">[詳解]</a><br /></td></tr>
 <tr class="separator:a1c44cf87582b032f9eeac980ed17f73b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0ac085839830ea37ad906e7b7b84241"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ac0ac085839830ea37ad906e7b7b84241">gg::ggTranslate</a> (const GLfloat *t)</td></tr>
-<tr class="memdesc:ac0ac085839830ea37ad906e7b7b84241"><td class="mdescLeft">&#160;</td><td class="mdescRight">平行移動の変換行列を返す.  <a href="namespacegg.html#ac0ac085839830ea37ad906e7b7b84241">[詳解]</a><br /></td></tr>
 <tr class="separator:ac0ac085839830ea37ad906e7b7b84241"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affd8bb35ddcc19b1dec8e059b2ae6061"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#affd8bb35ddcc19b1dec8e059b2ae6061">gg::ggTranslate</a> (const GgVector &amp;t)</td></tr>
-<tr class="memdesc:affd8bb35ddcc19b1dec8e059b2ae6061"><td class="mdescLeft">&#160;</td><td class="mdescRight">平行移動の変換行列を返す.  <a href="namespacegg.html#affd8bb35ddcc19b1dec8e059b2ae6061">[詳解]</a><br /></td></tr>
 <tr class="separator:affd8bb35ddcc19b1dec8e059b2ae6061"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0335a1458ae067bb59bc657dd7523c39"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a0335a1458ae067bb59bc657dd7523c39">gg::ggScale</a> (GLfloat x, GLfloat y, GLfloat z, GLfloat w=1.0f)</td></tr>
-<tr class="memdesc:a0335a1458ae067bb59bc657dd7523c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡大縮小の変換行列を返す.  <a href="namespacegg.html#a0335a1458ae067bb59bc657dd7523c39">[詳解]</a><br /></td></tr>
 <tr class="separator:a0335a1458ae067bb59bc657dd7523c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad55cce9930ee50df35028ffa90b4eac6"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ad55cce9930ee50df35028ffa90b4eac6">gg::ggScale</a> (const GLfloat *s)</td></tr>
-<tr class="memdesc:ad55cce9930ee50df35028ffa90b4eac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡大縮小の変換行列を返す.  <a href="namespacegg.html#ad55cce9930ee50df35028ffa90b4eac6">[詳解]</a><br /></td></tr>
 <tr class="separator:ad55cce9930ee50df35028ffa90b4eac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab12cdc8afc2f0d47c66dfcf87f110356"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ab12cdc8afc2f0d47c66dfcf87f110356">gg::ggScale</a> (const GgVector &amp;s)</td></tr>
-<tr class="memdesc:ab12cdc8afc2f0d47c66dfcf87f110356"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡大縮小の変換行列を返す.  <a href="namespacegg.html#ab12cdc8afc2f0d47c66dfcf87f110356">[詳解]</a><br /></td></tr>
 <tr class="separator:ab12cdc8afc2f0d47c66dfcf87f110356"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acaf06b5bfe66fc430155ae3d4410d854"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#acaf06b5bfe66fc430155ae3d4410d854">gg::ggRotateX</a> (GLfloat a)</td></tr>
-<tr class="memdesc:acaf06b5bfe66fc430155ae3d4410d854"><td class="mdescLeft">&#160;</td><td class="mdescRight">x 軸中心の回転の変換行列を返す.  <a href="namespacegg.html#acaf06b5bfe66fc430155ae3d4410d854">[詳解]</a><br /></td></tr>
 <tr class="separator:acaf06b5bfe66fc430155ae3d4410d854"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca81032319d49c6a3565c40928413360"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#aca81032319d49c6a3565c40928413360">gg::ggRotateY</a> (GLfloat a)</td></tr>
-<tr class="memdesc:aca81032319d49c6a3565c40928413360"><td class="mdescLeft">&#160;</td><td class="mdescRight">y 軸中心の回転の変換行列を返す.  <a href="namespacegg.html#aca81032319d49c6a3565c40928413360">[詳解]</a><br /></td></tr>
 <tr class="separator:aca81032319d49c6a3565c40928413360"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15b8b49e0ab9fe3bde8eee67bcdb7e81"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a15b8b49e0ab9fe3bde8eee67bcdb7e81">gg::ggRotateZ</a> (GLfloat a)</td></tr>
-<tr class="memdesc:a15b8b49e0ab9fe3bde8eee67bcdb7e81"><td class="mdescLeft">&#160;</td><td class="mdescRight">z 軸中心の回転の変換行列を返す.  <a href="namespacegg.html#a15b8b49e0ab9fe3bde8eee67bcdb7e81">[詳解]</a><br /></td></tr>
 <tr class="separator:a15b8b49e0ab9fe3bde8eee67bcdb7e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36b3a41ab6b33b6f0198e2b762263987"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a36b3a41ab6b33b6f0198e2b762263987">gg::ggRotate</a> (GLfloat x, GLfloat y, GLfloat z, GLfloat a)</td></tr>
-<tr class="memdesc:a36b3a41ab6b33b6f0198e2b762263987"><td class="mdescLeft">&#160;</td><td class="mdescRight">(x, y, z) 方向のベクトルを軸とする回転の変換行列を乗じた結果を返す.  <a href="namespacegg.html#a36b3a41ab6b33b6f0198e2b762263987">[詳解]</a><br /></td></tr>
 <tr class="separator:a36b3a41ab6b33b6f0198e2b762263987"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb4636af6589498fd33cda7617df62f7"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#adb4636af6589498fd33cda7617df62f7">gg::ggRotate</a> (const GLfloat *r, GLfloat a)</td></tr>
-<tr class="memdesc:adb4636af6589498fd33cda7617df62f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">r 方向のベクトルを軸とする回転の変換行列を乗じた結果を返す.  <a href="namespacegg.html#adb4636af6589498fd33cda7617df62f7">[詳解]</a><br /></td></tr>
 <tr class="separator:adb4636af6589498fd33cda7617df62f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a753b36dbd5df5ba68b073ece2632bf53"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a753b36dbd5df5ba68b073ece2632bf53">gg::ggRotate</a> (const GgVector &amp;r, GLfloat a)</td></tr>
-<tr class="memdesc:a753b36dbd5df5ba68b073ece2632bf53"><td class="mdescLeft">&#160;</td><td class="mdescRight">r 方向のベクトルを軸とする回転の変換行列を乗じた結果を返す.  <a href="namespacegg.html#a753b36dbd5df5ba68b073ece2632bf53">[詳解]</a><br /></td></tr>
 <tr class="separator:a753b36dbd5df5ba68b073ece2632bf53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a642ba614e059326830b70210d4f31b4f"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a642ba614e059326830b70210d4f31b4f">gg::ggRotate</a> (const GLfloat *r)</td></tr>
-<tr class="memdesc:a642ba614e059326830b70210d4f31b4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">r 方向のベクトルを軸とする回転の変換行列を乗じた結果を返す.  <a href="namespacegg.html#a642ba614e059326830b70210d4f31b4f">[詳解]</a><br /></td></tr>
 <tr class="separator:a642ba614e059326830b70210d4f31b4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ef4c60ab8a1afaf9ec8f4b44b83dbee"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a9ef4c60ab8a1afaf9ec8f4b44b83dbee">gg::ggRotate</a> (const GgVector &amp;r)</td></tr>
-<tr class="memdesc:a9ef4c60ab8a1afaf9ec8f4b44b83dbee"><td class="mdescLeft">&#160;</td><td class="mdescRight">r 方向のベクトルを軸とする回転の変換行列を乗じた結果を返す.  <a href="namespacegg.html#a9ef4c60ab8a1afaf9ec8f4b44b83dbee">[詳解]</a><br /></td></tr>
 <tr class="separator:a9ef4c60ab8a1afaf9ec8f4b44b83dbee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2924895ad284e08b08a2cfd115c5a7bf"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a2924895ad284e08b08a2cfd115c5a7bf">gg::ggLookat</a> (GLfloat ex, GLfloat ey, GLfloat ez, GLfloat tx, GLfloat ty, GLfloat tz, GLfloat ux, GLfloat uy, GLfloat uz)</td></tr>
-<tr class="memdesc:a2924895ad284e08b08a2cfd115c5a7bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビュー変換行列を返す.  <a href="namespacegg.html#a2924895ad284e08b08a2cfd115c5a7bf">[詳解]</a><br /></td></tr>
 <tr class="separator:a2924895ad284e08b08a2cfd115c5a7bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1cdaece765c03e31eed78d124bf7313"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ac1cdaece765c03e31eed78d124bf7313">gg::ggLookat</a> (const GLfloat *e, const GLfloat *t, const GLfloat *u)</td></tr>
-<tr class="memdesc:ac1cdaece765c03e31eed78d124bf7313"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビュー変換行列を返す.  <a href="namespacegg.html#ac1cdaece765c03e31eed78d124bf7313">[詳解]</a><br /></td></tr>
 <tr class="separator:ac1cdaece765c03e31eed78d124bf7313"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8daeffd9150b585dd699dfe9307c9527"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a8daeffd9150b585dd699dfe9307c9527">gg::ggLookat</a> (const GgVector &amp;e, const GgVector &amp;t, const GgVector &amp;u)</td></tr>
-<tr class="memdesc:a8daeffd9150b585dd699dfe9307c9527"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビュー変換行列を返す.  <a href="namespacegg.html#a8daeffd9150b585dd699dfe9307c9527">[詳解]</a><br /></td></tr>
 <tr class="separator:a8daeffd9150b585dd699dfe9307c9527"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0d21209e3184a0e423ec8c902a5d4d6"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ab0d21209e3184a0e423ec8c902a5d4d6">gg::ggOrthogonal</a> (GLfloat left, GLfloat right, GLfloat bottom, GLfloat top, GLfloat zNear, GLfloat zFar)</td></tr>
-<tr class="memdesc:ab0d21209e3184a0e423ec8c902a5d4d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">直交投影変換行列を返す.  <a href="namespacegg.html#ab0d21209e3184a0e423ec8c902a5d4d6">[詳解]</a><br /></td></tr>
 <tr class="separator:ab0d21209e3184a0e423ec8c902a5d4d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6045dfb6776b306492ac593db94be7ab"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a6045dfb6776b306492ac593db94be7ab">gg::ggFrustum</a> (GLfloat left, GLfloat right, GLfloat bottom, GLfloat top, GLfloat zNear, GLfloat zFar)</td></tr>
-<tr class="memdesc:a6045dfb6776b306492ac593db94be7ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">透視透視投影変換行列を返す.  <a href="namespacegg.html#a6045dfb6776b306492ac593db94be7ab">[詳解]</a><br /></td></tr>
 <tr class="separator:a6045dfb6776b306492ac593db94be7ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dcbaa73755efd46f1f19b0b3a39b473"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a7dcbaa73755efd46f1f19b0b3a39b473">gg::ggPerspective</a> (GLfloat fovy, GLfloat aspect, GLfloat zNear, GLfloat zFar)</td></tr>
-<tr class="memdesc:a7dcbaa73755efd46f1f19b0b3a39b473"><td class="mdescLeft">&#160;</td><td class="mdescRight">画角を指定して透視投影変換行列を返す.  <a href="namespacegg.html#a7dcbaa73755efd46f1f19b0b3a39b473">[詳解]</a><br /></td></tr>
 <tr class="separator:a7dcbaa73755efd46f1f19b0b3a39b473"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a883c792de89aa42cacf270381b5d31da"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a883c792de89aa42cacf270381b5d31da">gg::ggTranspose</a> (const GgMatrix &amp;m)</td></tr>
-<tr class="memdesc:a883c792de89aa42cacf270381b5d31da"><td class="mdescLeft">&#160;</td><td class="mdescRight">転置行列を返す.  <a href="namespacegg.html#a883c792de89aa42cacf270381b5d31da">[詳解]</a><br /></td></tr>
 <tr class="separator:a883c792de89aa42cacf270381b5d31da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3d4cc9af9b0b96137c762b0400d6c3b"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#af3d4cc9af9b0b96137c762b0400d6c3b">gg::ggInvert</a> (const GgMatrix &amp;m)</td></tr>
-<tr class="memdesc:af3d4cc9af9b0b96137c762b0400d6c3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆行列を返す.  <a href="namespacegg.html#af3d4cc9af9b0b96137c762b0400d6c3b">[詳解]</a><br /></td></tr>
 <tr class="separator:af3d4cc9af9b0b96137c762b0400d6c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a350b2d7c3e52ba2fe973c9aff0ba76c3"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a350b2d7c3e52ba2fe973c9aff0ba76c3">gg::ggNormal</a> (const GgMatrix &amp;m)</td></tr>
-<tr class="memdesc:a350b2d7c3e52ba2fe973c9aff0ba76c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">法線変換行列を返す.  <a href="namespacegg.html#a350b2d7c3e52ba2fe973c9aff0ba76c3">[詳解]</a><br /></td></tr>
 <tr class="separator:a350b2d7c3e52ba2fe973c9aff0ba76c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c6e29eda69894e9d1256fe894cb6fbe"><td class="memItemLeft" align="right" valign="top">GgQuaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a6c6e29eda69894e9d1256fe894cb6fbe">gg::ggQuaternion</a> (GLfloat x, GLfloat y, GLfloat z, GLfloat w)</td></tr>
-<tr class="memdesc:a6c6e29eda69894e9d1256fe894cb6fbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">四元数を返す.  <a href="namespacegg.html#a6c6e29eda69894e9d1256fe894cb6fbe">[詳解]</a><br /></td></tr>
 <tr class="separator:a6c6e29eda69894e9d1256fe894cb6fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a138b418833b7e848e88422f7348e81df"><td class="memItemLeft" align="right" valign="top">GgQuaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a138b418833b7e848e88422f7348e81df">gg::ggQuaternion</a> (const GLfloat *a)</td></tr>
-<tr class="memdesc:a138b418833b7e848e88422f7348e81df"><td class="mdescLeft">&#160;</td><td class="mdescRight">四元数を返す.  <a href="namespacegg.html#a138b418833b7e848e88422f7348e81df">[詳解]</a><br /></td></tr>
 <tr class="separator:a138b418833b7e848e88422f7348e81df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af887bffaeaee67620ed2f7e020cb6a6a"><td class="memItemLeft" align="right" valign="top">GgQuaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#af887bffaeaee67620ed2f7e020cb6a6a">gg::ggIdentityQuaternion</a> ()</td></tr>
-<tr class="memdesc:af887bffaeaee67620ed2f7e020cb6a6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">単位四元数を返す.  <a href="namespacegg.html#af887bffaeaee67620ed2f7e020cb6a6a">[詳解]</a><br /></td></tr>
 <tr class="separator:af887bffaeaee67620ed2f7e020cb6a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abda2bc7b53d21f5a64e00377888dc25f"><td class="memItemLeft" align="right" valign="top">GgQuaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#abda2bc7b53d21f5a64e00377888dc25f">gg::ggMatrixQuaternion</a> (const GLfloat *a)</td></tr>
-<tr class="memdesc:abda2bc7b53d21f5a64e00377888dc25f"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転の変換行列 m を表す四元数を返す.  <a href="namespacegg.html#abda2bc7b53d21f5a64e00377888dc25f">[詳解]</a><br /></td></tr>
 <tr class="separator:abda2bc7b53d21f5a64e00377888dc25f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53f2c3e5f7d5b444b27b7e5e1d849e98"><td class="memItemLeft" align="right" valign="top">GgQuaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a53f2c3e5f7d5b444b27b7e5e1d849e98">gg::ggMatrixQuaternion</a> (const GgMatrix &amp;m)</td></tr>
-<tr class="memdesc:a53f2c3e5f7d5b444b27b7e5e1d849e98"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転の変換行列 m を表す四元数を返す.  <a href="namespacegg.html#a53f2c3e5f7d5b444b27b7e5e1d849e98">[詳解]</a><br /></td></tr>
 <tr class="separator:a53f2c3e5f7d5b444b27b7e5e1d849e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaebe1f427ad451c6768aaee18da84c66"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#aaebe1f427ad451c6768aaee18da84c66">gg::ggQuaternionMatrix</a> (const GgQuaternion &amp;q)</td></tr>
-<tr class="memdesc:aaebe1f427ad451c6768aaee18da84c66"><td class="mdescLeft">&#160;</td><td class="mdescRight">四元数 q の回転の変換行列を返す.  <a href="namespacegg.html#aaebe1f427ad451c6768aaee18da84c66">[詳解]</a><br /></td></tr>
 <tr class="separator:aaebe1f427ad451c6768aaee18da84c66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01f9b60e48e923f40f5a183a3e54d94e"><td class="memItemLeft" align="right" valign="top">GgMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a01f9b60e48e923f40f5a183a3e54d94e">gg::ggQuaternionTransposeMatrix</a> (const GgQuaternion &amp;q)</td></tr>
-<tr class="memdesc:a01f9b60e48e923f40f5a183a3e54d94e"><td class="mdescLeft">&#160;</td><td class="mdescRight">四元数 q の回転の転置した変換行列を返す.  <a href="namespacegg.html#a01f9b60e48e923f40f5a183a3e54d94e">[詳解]</a><br /></td></tr>
 <tr class="separator:a01f9b60e48e923f40f5a183a3e54d94e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65baca1998bd9ea2b31a3fc1648d53dd"><td class="memItemLeft" align="right" valign="top">GgQuaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a65baca1998bd9ea2b31a3fc1648d53dd">gg::ggRotateQuaternion</a> (GLfloat x, GLfloat y, GLfloat z, GLfloat a)</td></tr>
-<tr class="memdesc:a65baca1998bd9ea2b31a3fc1648d53dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">(x, y, z) を軸として角度 a 回転する四元数を返す.  <a href="namespacegg.html#a65baca1998bd9ea2b31a3fc1648d53dd">[詳解]</a><br /></td></tr>
 <tr class="separator:a65baca1998bd9ea2b31a3fc1648d53dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e721a0a9a903540b11921447ecac772"><td class="memItemLeft" align="right" valign="top">GgQuaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a4e721a0a9a903540b11921447ecac772">gg::ggRotateQuaternion</a> (const GLfloat *v, GLfloat a)</td></tr>
-<tr class="memdesc:a4e721a0a9a903540b11921447ecac772"><td class="mdescLeft">&#160;</td><td class="mdescRight">(v[0], v[1], v[2]) を軸として角度 a 回転する四元数を返す.  <a href="namespacegg.html#a4e721a0a9a903540b11921447ecac772">[詳解]</a><br /></td></tr>
 <tr class="separator:a4e721a0a9a903540b11921447ecac772"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c5e5c6a1d6926d8911cc74865cc0fbb"><td class="memItemLeft" align="right" valign="top">GgQuaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a0c5e5c6a1d6926d8911cc74865cc0fbb">gg::ggRotateQuaternion</a> (const GLfloat *v)</td></tr>
-<tr class="memdesc:a0c5e5c6a1d6926d8911cc74865cc0fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">(v[0], v[1], v[2]) を軸として角度 v[3] 回転する四元数を返す.  <a href="namespacegg.html#a0c5e5c6a1d6926d8911cc74865cc0fbb">[詳解]</a><br /></td></tr>
 <tr class="separator:a0c5e5c6a1d6926d8911cc74865cc0fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacfb5aa2cd001a0ad0fc8c7831576860"><td class="memItemLeft" align="right" valign="top">GgQuaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#aacfb5aa2cd001a0ad0fc8c7831576860">gg::ggEulerQuaternion</a> (GLfloat heading, GLfloat pitch, GLfloat roll)</td></tr>
-<tr class="memdesc:aacfb5aa2cd001a0ad0fc8c7831576860"><td class="mdescLeft">&#160;</td><td class="mdescRight">オイラー角 (heading, pitch, roll) で与えられた回転を表す四元数を返す.  <a href="namespacegg.html#aacfb5aa2cd001a0ad0fc8c7831576860">[詳解]</a><br /></td></tr>
 <tr class="separator:aacfb5aa2cd001a0ad0fc8c7831576860"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ac6682d2eb32fa126445a1df1e934b6"><td class="memItemLeft" align="right" valign="top">GgQuaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a3ac6682d2eb32fa126445a1df1e934b6">gg::ggEulerQuaternion</a> (const GLfloat *e)</td></tr>
-<tr class="memdesc:a3ac6682d2eb32fa126445a1df1e934b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">オイラー角 (e[0], e[1], e[2]) で与えられた回転を表す四元数を返す.  <a href="namespacegg.html#a3ac6682d2eb32fa126445a1df1e934b6">[詳解]</a><br /></td></tr>
 <tr class="separator:a3ac6682d2eb32fa126445a1df1e934b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a191d7b15d7374dfc6fa5243e3b667537"><td class="memItemLeft" align="right" valign="top">GgQuaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a191d7b15d7374dfc6fa5243e3b667537">gg::ggSlerp</a> (const GLfloat *a, const GLfloat *b, GLfloat t)</td></tr>
-<tr class="memdesc:a191d7b15d7374dfc6fa5243e3b667537"><td class="mdescLeft">&#160;</td><td class="mdescRight">二つの四元数の球面線形補間の結果を返す.  <a href="namespacegg.html#a191d7b15d7374dfc6fa5243e3b667537">[詳解]</a><br /></td></tr>
 <tr class="separator:a191d7b15d7374dfc6fa5243e3b667537"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af14e01e111b4a4b141c268038e69809e"><td class="memItemLeft" align="right" valign="top">GgQuaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#af14e01e111b4a4b141c268038e69809e">gg::ggSlerp</a> (const GgQuaternion &amp;q, const GgQuaternion &amp;r, GLfloat t)</td></tr>
-<tr class="memdesc:af14e01e111b4a4b141c268038e69809e"><td class="mdescLeft">&#160;</td><td class="mdescRight">二つの四元数の球面線形補間の結果を返す.  <a href="namespacegg.html#af14e01e111b4a4b141c268038e69809e">[詳解]</a><br /></td></tr>
 <tr class="separator:af14e01e111b4a4b141c268038e69809e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0df14e92a8460428403c7f82d32cf19b"><td class="memItemLeft" align="right" valign="top">GgQuaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a0df14e92a8460428403c7f82d32cf19b">gg::ggSlerp</a> (const GgQuaternion &amp;q, const GLfloat *a, GLfloat t)</td></tr>
-<tr class="memdesc:a0df14e92a8460428403c7f82d32cf19b"><td class="mdescLeft">&#160;</td><td class="mdescRight">二つの四元数の球面線形補間の結果を返す.  <a href="namespacegg.html#a0df14e92a8460428403c7f82d32cf19b">[詳解]</a><br /></td></tr>
 <tr class="separator:a0df14e92a8460428403c7f82d32cf19b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6485d9c8b7bda82d43bc8cc59158f1ba"><td class="memItemLeft" align="right" valign="top">GgQuaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a6485d9c8b7bda82d43bc8cc59158f1ba">gg::ggSlerp</a> (const GLfloat *a, const GgQuaternion &amp;q, GLfloat t)</td></tr>
-<tr class="memdesc:a6485d9c8b7bda82d43bc8cc59158f1ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">二つの四元数の球面線形補間の結果を返す.  <a href="namespacegg.html#a6485d9c8b7bda82d43bc8cc59158f1ba">[詳解]</a><br /></td></tr>
 <tr class="separator:a6485d9c8b7bda82d43bc8cc59158f1ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca5935d7314e7ba3f7d8043b56e04931"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#aca5935d7314e7ba3f7d8043b56e04931">gg::ggNorm</a> (const GgQuaternion &amp;q)</td></tr>
-<tr class="memdesc:aca5935d7314e7ba3f7d8043b56e04931"><td class="mdescLeft">&#160;</td><td class="mdescRight">四元数のノルムを返す.  <a href="namespacegg.html#aca5935d7314e7ba3f7d8043b56e04931">[詳解]</a><br /></td></tr>
 <tr class="separator:aca5935d7314e7ba3f7d8043b56e04931"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab31210c17598a7d14ecb3c9f461040c"><td class="memItemLeft" align="right" valign="top">GgQuaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#aab31210c17598a7d14ecb3c9f461040c">gg::ggNormalize</a> (const GgQuaternion &amp;q)</td></tr>
-<tr class="memdesc:aab31210c17598a7d14ecb3c9f461040c"><td class="mdescLeft">&#160;</td><td class="mdescRight">正規化した四元数を返す.  <a href="namespacegg.html#aab31210c17598a7d14ecb3c9f461040c">[詳解]</a><br /></td></tr>
 <tr class="separator:aab31210c17598a7d14ecb3c9f461040c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78e95511358dff0e43d4c4a3606bde0a"><td class="memItemLeft" align="right" valign="top">GgQuaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a78e95511358dff0e43d4c4a3606bde0a">gg::ggConjugate</a> (const GgQuaternion &amp;q)</td></tr>
-<tr class="memdesc:a78e95511358dff0e43d4c4a3606bde0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">共役四元数を返す.  <a href="namespacegg.html#a78e95511358dff0e43d4c4a3606bde0a">[詳解]</a><br /></td></tr>
 <tr class="separator:a78e95511358dff0e43d4c4a3606bde0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac834686c8605553fbe7c2709c685ba4e"><td class="memItemLeft" align="right" valign="top">GgQuaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ac834686c8605553fbe7c2709c685ba4e">gg::ggInvert</a> (const GgQuaternion &amp;q)</td></tr>
-<tr class="memdesc:ac834686c8605553fbe7c2709c685ba4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">四元数の逆元を求める.  <a href="namespacegg.html#ac834686c8605553fbe7c2709c685ba4e">[詳解]</a><br /></td></tr>
 <tr class="separator:ac834686c8605553fbe7c2709c685ba4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae450600cc658bd7d6b0f7ecb62156fe8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ae450600cc658bd7d6b0f7ecb62156fe8">gg::ggSaveTga</a> (const std::string &amp;name, const void *buffer, unsigned int width, unsigned int height, unsigned int depth)</td></tr>
-<tr class="memdesc:ae450600cc658bd7d6b0f7ecb62156fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">配列の内容を TGA ファイルに保存する.  <a href="namespacegg.html#ae450600cc658bd7d6b0f7ecb62156fe8">[詳解]</a><br /></td></tr>
 <tr class="separator:ae450600cc658bd7d6b0f7ecb62156fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dc1ef6d0e78a6694ae8aca973b1b9ae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a6dc1ef6d0e78a6694ae8aca973b1b9ae">gg::ggSaveColor</a> (const std::string &amp;name)</td></tr>
-<tr class="memdesc:a6dc1ef6d0e78a6694ae8aca973b1b9ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">カラーバッファの内容を TGA ファイルに保存する.  <a href="namespacegg.html#a6dc1ef6d0e78a6694ae8aca973b1b9ae">[詳解]</a><br /></td></tr>
 <tr class="separator:a6dc1ef6d0e78a6694ae8aca973b1b9ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a236701485bbc8278654781a810bf2880"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a236701485bbc8278654781a810bf2880">gg::ggSaveDepth</a> (const std::string &amp;name)</td></tr>
-<tr class="memdesc:a236701485bbc8278654781a810bf2880"><td class="mdescLeft">&#160;</td><td class="mdescRight">デプスバッファの内容を TGA ファイルに保存する.  <a href="namespacegg.html#a236701485bbc8278654781a810bf2880">[詳解]</a><br /></td></tr>
 <tr class="separator:a236701485bbc8278654781a810bf2880"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acce00f35f4b755cda72ec9f61b726c8f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#acce00f35f4b755cda72ec9f61b726c8f">gg::ggReadImage</a> (const std::string &amp;name, std::vector&lt; GLubyte &gt; &amp;image, GLsizei *pWidth, GLsizei *pHeight, GLenum *pFormat)</td></tr>
-<tr class="memdesc:acce00f35f4b755cda72ec9f61b726c8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">TGA ファイル (8/16/24/32bit) をメモリに読み込む.  <a href="namespacegg.html#acce00f35f4b755cda72ec9f61b726c8f">[詳解]</a><br /></td></tr>
 <tr class="separator:acce00f35f4b755cda72ec9f61b726c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96dc90db9d9e5ea5ee727662753d0ca5"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a96dc90db9d9e5ea5ee727662753d0ca5">gg::ggLoadTexture</a> (const GLvoid *image, GLsizei width, GLsizei height, GLenum format=GL_BGR, GLenum type=GL_UNSIGNED_BYTE, GLenum internal=GL_RGB, GLenum wrap=GL_CLAMP_TO_EDGE)</td></tr>
-<tr class="memdesc:a96dc90db9d9e5ea5ee727662753d0ca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャメモリを確保して画像データをテクスチャとして読み込む.  <a href="namespacegg.html#a96dc90db9d9e5ea5ee727662753d0ca5">[詳解]</a><br /></td></tr>
-<tr class="separator:a96dc90db9d9e5ea5ee727662753d0ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b09e55a394271b6f383d01f37b0f18f"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a9b09e55a394271b6f383d01f37b0f18f">gg::ggLoadTexture</a> (const GLvoid *image, GLsizei width, GLsizei height, GLenum format=GL_RGB, GLenum type=GL_UNSIGNED_BYTE, GLenum internal=GL_RGB, GLenum wrap=GL_CLAMP_TO_EDGE)</td></tr>
+<tr class="separator:a9b09e55a394271b6f383d01f37b0f18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ba6c60b5240e74a801a7f33e09bce87"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a6ba6c60b5240e74a801a7f33e09bce87">gg::ggLoadImage</a> (const std::string &amp;name, GLsizei *pWidth=nullptr, GLsizei *pHeight=nullptr, GLenum internal=0, GLenum wrap=GL_CLAMP_TO_EDGE)</td></tr>
-<tr class="memdesc:a6ba6c60b5240e74a801a7f33e09bce87"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャメモリを確保して TGA 画像ファイルを読み込む.  <a href="namespacegg.html#a6ba6c60b5240e74a801a7f33e09bce87">[詳解]</a><br /></td></tr>
 <tr class="separator:a6ba6c60b5240e74a801a7f33e09bce87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cd46afb53daa13fa8bb2de14baf4e7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a2cd46afb53daa13fa8bb2de14baf4e7b">gg::ggCreateNormalMap</a> (const GLubyte *hmap, GLsizei width, GLsizei height, GLenum format, GLfloat nz, GLenum internal, std::vector&lt; GgVector &gt; &amp;nmap)</td></tr>
-<tr class="memdesc:a2cd46afb53daa13fa8bb2de14baf4e7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">グレースケール画像 (8bit) から法線マップのデータを作成する.  <a href="namespacegg.html#a2cd46afb53daa13fa8bb2de14baf4e7b">[詳解]</a><br /></td></tr>
 <tr class="separator:a2cd46afb53daa13fa8bb2de14baf4e7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53453ed6229bbd109c279a3765648d01"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a53453ed6229bbd109c279a3765648d01">gg::ggLoadHeight</a> (const std::string &amp;name, GLfloat nz, GLsizei *pWidth=nullptr, GLsizei *pHeight=nullptr, GLenum internal=GL_RGBA)</td></tr>
-<tr class="memdesc:a53453ed6229bbd109c279a3765648d01"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャメモリを確保して TGA 画像ファイルを読み込み法線マップを作成する.  <a href="namespacegg.html#a53453ed6229bbd109c279a3765648d01">[詳解]</a><br /></td></tr>
 <tr class="separator:a53453ed6229bbd109c279a3765648d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a047058f8d45e31ce77232ef66796e6b0"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a047058f8d45e31ce77232ef66796e6b0">gg::ggCreateShader</a> (const std::string &amp;vsrc, const std::string &amp;fsrc=&quot;&quot;, const std::string &amp;gsrc=&quot;&quot;, GLint nvarying=0, const char *const *varyings=nullptr, const std::string &amp;vtext=&quot;vertex shader&quot;, const std::string &amp;ftext=&quot;fragment shader&quot;, const std::string &amp;gtext=&quot;geometry shader&quot;)</td></tr>
-<tr class="memdesc:a047058f8d45e31ce77232ef66796e6b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダのソースプログラムの文字列を読み込んでプログラムオブジェクトを作成する.  <a href="namespacegg.html#a047058f8d45e31ce77232ef66796e6b0">[詳解]</a><br /></td></tr>
 <tr class="separator:a047058f8d45e31ce77232ef66796e6b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbe6e5044fcf43f001242937e14b6b43"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#acbe6e5044fcf43f001242937e14b6b43">gg::ggLoadShader</a> (const std::string &amp;vert, const std::string &amp;frag=&quot;&quot;, const std::string &amp;geom=&quot;&quot;, GLint nvarying=0, const char *const *varyings=nullptr)</td></tr>
-<tr class="memdesc:acbe6e5044fcf43f001242937e14b6b43"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダのソースファイルを読み込んでプログラムオブジェクトを作成する.  <a href="namespacegg.html#acbe6e5044fcf43f001242937e14b6b43">[詳解]</a><br /></td></tr>
 <tr class="separator:acbe6e5044fcf43f001242937e14b6b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f177dd70c52afa2a155cc94ce429cfa"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a9f177dd70c52afa2a155cc94ce429cfa">gg::ggLoadShader</a> (const std::array&lt; std::string, 3 &gt; &amp;files, GLint nvarying=0, const char *const *varyings=nullptr)</td></tr>
+<tr class="separator:a9f177dd70c52afa2a155cc94ce429cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adda35bc52f044dc237a3632553ad9d9c"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#adda35bc52f044dc237a3632553ad9d9c">gg::ggCreateComputeShader</a> (const std::string &amp;csrc, const std::string &amp;ctext=&quot;compute shader&quot;)</td></tr>
-<tr class="memdesc:adda35bc52f044dc237a3632553ad9d9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンピュートシェーダのソースプログラムの文字列を読み込んでプログラムオブジェクトを作成する.  <a href="namespacegg.html#adda35bc52f044dc237a3632553ad9d9c">[詳解]</a><br /></td></tr>
 <tr class="separator:adda35bc52f044dc237a3632553ad9d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abca7443a911bd290af4be190f1835cf0"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#abca7443a911bd290af4be190f1835cf0">gg::ggLoadComputeShader</a> (const std::string &amp;comp)</td></tr>
-<tr class="memdesc:abca7443a911bd290af4be190f1835cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンピュートシェーダのソースファイルを読み込んでプログラムオブジェクトを作成する.  <a href="namespacegg.html#abca7443a911bd290af4be190f1835cf0">[詳解]</a><br /></td></tr>
 <tr class="separator:abca7443a911bd290af4be190f1835cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa76d45e8c861b0c0059964eb7016c259"><td class="memItemLeft" align="right" valign="top">GgPoints *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#aa76d45e8c861b0c0059964eb7016c259">gg::ggPointsCube</a> (GLsizei countv, GLfloat length=1.0f, GLfloat cx=0.0f, GLfloat cy=0.0f, GLfloat cz=0.0f)</td></tr>
-<tr class="memdesc:aa76d45e8c861b0c0059964eb7016c259"><td class="mdescLeft">&#160;</td><td class="mdescRight">点群を立方体状に生成する.  <a href="namespacegg.html#aa76d45e8c861b0c0059964eb7016c259">[詳解]</a><br /></td></tr>
-<tr class="separator:aa76d45e8c861b0c0059964eb7016c259"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab120c19867ca2b00e72a700fe7df2577"><td class="memItemLeft" align="right" valign="top">GgPoints *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ab120c19867ca2b00e72a700fe7df2577">gg::ggPointsSphere</a> (GLsizei countv, GLfloat radius=0.5f, GLfloat cx=0.0f, GLfloat cy=0.0f, GLfloat cz=0.0f)</td></tr>
-<tr class="memdesc:ab120c19867ca2b00e72a700fe7df2577"><td class="mdescLeft">&#160;</td><td class="mdescRight">点群を球状に生成する.  <a href="namespacegg.html#ab120c19867ca2b00e72a700fe7df2577">[詳解]</a><br /></td></tr>
-<tr class="separator:ab120c19867ca2b00e72a700fe7df2577"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f6011901d5537ee16c410f9cfb54dbb"><td class="memItemLeft" align="right" valign="top">GgTriangles *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a0f6011901d5537ee16c410f9cfb54dbb">gg::ggRectangle</a> (GLfloat width=1.0f, GLfloat height=1.0f)</td></tr>
-<tr class="memdesc:a0f6011901d5537ee16c410f9cfb54dbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">矩形状に 2 枚の三角形を生成する.  <a href="namespacegg.html#a0f6011901d5537ee16c410f9cfb54dbb">[詳解]</a><br /></td></tr>
-<tr class="separator:a0f6011901d5537ee16c410f9cfb54dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9693cbd9743570d4e486ea7b2abb92da"><td class="memItemLeft" align="right" valign="top">GgTriangles *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a9693cbd9743570d4e486ea7b2abb92da">gg::ggEllipse</a> (GLfloat width=1.0f, GLfloat height=1.0f, GLuint slices=16)</td></tr>
-<tr class="memdesc:a9693cbd9743570d4e486ea7b2abb92da"><td class="mdescLeft">&#160;</td><td class="mdescRight">楕円状に三角形を生成する.  <a href="namespacegg.html#a9693cbd9743570d4e486ea7b2abb92da">[詳解]</a><br /></td></tr>
-<tr class="separator:a9693cbd9743570d4e486ea7b2abb92da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ed94211f298e4b0965dc438dc6e35bf"><td class="memItemLeft" align="right" valign="top">GgTriangles *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a1ed94211f298e4b0965dc438dc6e35bf">gg::ggArraysObj</a> (const std::string &amp;name, bool normalize=false)</td></tr>
-<tr class="memdesc:a1ed94211f298e4b0965dc438dc6e35bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wavefront OBJ ファイルを読み込む (Arrays 形式)  <a href="namespacegg.html#a1ed94211f298e4b0965dc438dc6e35bf">[詳解]</a><br /></td></tr>
-<tr class="separator:a1ed94211f298e4b0965dc438dc6e35bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37f5ca80d6084493ac9a3a040f6c0e85"><td class="memItemLeft" align="right" valign="top">GgElements *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a37f5ca80d6084493ac9a3a040f6c0e85">gg::ggElementsObj</a> (const std::string &amp;name, bool normalize=false)</td></tr>
-<tr class="memdesc:a37f5ca80d6084493ac9a3a040f6c0e85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wavefront OBJ ファイル を読み込む (Elements 形式).  <a href="namespacegg.html#a37f5ca80d6084493ac9a3a040f6c0e85">[詳解]</a><br /></td></tr>
-<tr class="separator:a37f5ca80d6084493ac9a3a040f6c0e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d3c6911e6aff821d2dc3778b400ba1f"><td class="memItemLeft" align="right" valign="top">GgElements *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a0d3c6911e6aff821d2dc3778b400ba1f">gg::ggElementsMesh</a> (GLuint slices, GLuint stacks, const GLfloat(*pos)[3], const GLfloat(*norm)[3]=nullptr)</td></tr>
-<tr class="memdesc:a0d3c6911e6aff821d2dc3778b400ba1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">メッシュ形状を作成する (Elements 形式).  <a href="namespacegg.html#a0d3c6911e6aff821d2dc3778b400ba1f">[詳解]</a><br /></td></tr>
-<tr class="separator:a0d3c6911e6aff821d2dc3778b400ba1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4a21673782499741c37fe2efd693697"><td class="memItemLeft" align="right" valign="top">GgElements *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ad4a21673782499741c37fe2efd693697">gg::ggElementsSphere</a> (GLfloat radius=1.0f, int slices=16, int stacks=8)</td></tr>
-<tr class="separator:ad4a21673782499741c37fe2efd693697"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63f9b914f19cd1e877ae22730aa9581d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; GgPoints &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a63f9b914f19cd1e877ae22730aa9581d">gg::ggPointsCube</a> (GLsizei countv, GLfloat length=1.0f, GLfloat cx=0.0f, GLfloat cy=0.0f, GLfloat cz=0.0f)</td></tr>
+<tr class="separator:a63f9b914f19cd1e877ae22730aa9581d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33e667c9e5de5a1185077d9858375716"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; GgPoints &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a33e667c9e5de5a1185077d9858375716">gg::ggPointsSphere</a> (GLsizei countv, GLfloat radius=0.5f, GLfloat cx=0.0f, GLfloat cy=0.0f, GLfloat cz=0.0f)</td></tr>
+<tr class="separator:a33e667c9e5de5a1185077d9858375716"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23a2386c47f07cd53de2958985783c2d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; GgTriangles &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a23a2386c47f07cd53de2958985783c2d">gg::ggRectangle</a> (GLfloat width=1.0f, GLfloat height=1.0f)</td></tr>
+<tr class="separator:a23a2386c47f07cd53de2958985783c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f5a44c7c7ee2c1095d3a659db0f530f"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; GgTriangles &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a2f5a44c7c7ee2c1095d3a659db0f530f">gg::ggEllipse</a> (GLfloat width=1.0f, GLfloat height=1.0f, GLuint slices=16)</td></tr>
+<tr class="separator:a2f5a44c7c7ee2c1095d3a659db0f530f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27430d60881b68061b8a8093cfac74ce"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; GgTriangles &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a27430d60881b68061b8a8093cfac74ce">gg::ggArraysObj</a> (const std::string &amp;name, bool normalize=false)</td></tr>
+<tr class="separator:a27430d60881b68061b8a8093cfac74ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b3f7b9af6577d60e0a6702fa7c1b3f7"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; GgElements &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a6b3f7b9af6577d60e0a6702fa7c1b3f7">gg::ggElementsObj</a> (const std::string &amp;name, bool normalize=false)</td></tr>
+<tr class="separator:a6b3f7b9af6577d60e0a6702fa7c1b3f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe1fcb205a0f34a31eda2d2eb4012084"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; GgElements &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#afe1fcb205a0f34a31eda2d2eb4012084">gg::ggElementsMesh</a> (GLuint slices, GLuint stacks, const GLfloat(*pos)[3], const GLfloat(*norm)[3]=nullptr)</td></tr>
+<tr class="separator:afe1fcb205a0f34a31eda2d2eb4012084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04c512ca7268233b59fc61573dedcf80"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; GgElements &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a04c512ca7268233b59fc61573dedcf80">gg::ggElementsSphere</a> (GLfloat radius=1.0f, int slices=16, int stacks=8)</td></tr>
+<tr class="separator:a04c512ca7268233b59fc61573dedcf80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a619241f5e989d78b1cd92f9c12f80460"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a619241f5e989d78b1cd92f9c12f80460">gg::ggLoadSimpleObj</a> (const std::string &amp;name, std::vector&lt; std::array&lt; GLuint, 3 &gt;&gt; &amp;group, std::vector&lt; GgSimpleShader::Material &gt; &amp;material, std::vector&lt; GgVertex &gt; &amp;vert, bool normalize=false)</td></tr>
-<tr class="memdesc:a619241f5e989d78b1cd92f9c12f80460"><td class="mdescLeft">&#160;</td><td class="mdescRight">三角形分割された OBJ ファイルと MTL ファイルを読み込む (Arrays 形式)  <a href="namespacegg.html#a619241f5e989d78b1cd92f9c12f80460">[詳解]</a><br /></td></tr>
 <tr class="separator:a619241f5e989d78b1cd92f9c12f80460"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b304802078c6d28b9d75718af84d102"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a6b304802078c6d28b9d75718af84d102">gg::ggLoadSimpleObj</a> (const std::string &amp;name, std::vector&lt; std::array&lt; GLuint, 3 &gt;&gt; &amp;group, std::vector&lt; GgSimpleShader::Material &gt; &amp;material, std::vector&lt; GgVertex &gt; &amp;vert, std::vector&lt; GLuint &gt; &amp;face, bool normalize=false)</td></tr>
-<tr class="memdesc:a6b304802078c6d28b9d75718af84d102"><td class="mdescLeft">&#160;</td><td class="mdescRight">三角形分割された OBJ ファイルを読み込む (Elements 形式).  <a href="namespacegg.html#a6b304802078c6d28b9d75718af84d102">[詳解]</a><br /></td></tr>
 <tr class="separator:a6b304802078c6d28b9d75718af84d102"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 変数</h2></td></tr>
 <tr class="memitem:a3760bb8490c7d6103a5f186b705b313e"><td class="memItemLeft" align="right" valign="top">GLint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a3760bb8490c7d6103a5f186b705b313e">gg::ggBufferAlignment</a></td></tr>
-<tr class="memdesc:a3760bb8490c7d6103a5f186b705b313e"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用している GPU のバッファオブジェクトのアライメント, 初期化に取得される.  <a href="namespacegg.html#a3760bb8490c7d6103a5f186b705b313e">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a3760bb8490c7d6103a5f186b705b313e"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用している GPU のバッファアライメント.  <a href="namespacegg.html#a3760bb8490c7d6103a5f186b705b313e">[詳解]</a><br /></td></tr>
 <tr class="separator:a3760bb8490c7d6103a5f186b705b313e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言. </p>
+<div class="textblock"><p>ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言.</p>
 <dl class="section author"><dt>著者</dt><dd>Kohe Tokoi </dd></dl>
 <dl class="section date"><dt>日付</dt><dd>March 31, 2021 </dd></dl>
 
 <p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> に定義があります。</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a0c4972fb66e9d9e2ca5682621e5bde85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c4972fb66e9d9e2ca5682621e5bde85">&#9670;&nbsp;</a></span>ggError</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ggError</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>OpenGL のエラーの発生を検知したときにソースファイル名と行番号を表示する.</p>
+<dl class="section note"><dt>覚え書き</dt><dd>このマクロを置いた場所（より前）で OpenGL のエラーが発生していた時に, このマクロを置いたソースファイル名と行番号を出力する. リリースビルド時には無視される. </dd></dl>
+
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01379">1379</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0bf8b0b52d88e682da02e818adb4d16a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bf8b0b52d88e682da02e818adb4d16a">&#9670;&nbsp;</a></span>ggFBOError</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ggFBOError</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>FBO のエラーの発生を検知したときにソースファイル名と行番号を表示する.</p>
+<dl class="section note"><dt>覚え書き</dt><dd>このマクロを置いた場所（より前）で FBO のエラーが発生していた時に, このマクロを置いたソースファイル名と行番号を出力する. リリースビルド時には無視される. </dd></dl>
+
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01406">1406</a> 行目に定義があります。</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2022年04月11日(月) 09時40分39秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2022年12月06日(火) 23時01分17秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

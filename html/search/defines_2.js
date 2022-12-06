@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['project_5fname_559',['PROJECT_NAME',['../ggsample01_8cpp.html#ae73053051efbb45c3a39751f5ce9fb36',1,'ggsample01.cpp']]]
+  ['header_5fstr_644',['HEADER_STR',['../main_8cpp.html#a9eb08c4f3ad005333d49aa2299e5c7c3',1,'main.cpp']]]
 ];
