@@ -23,6 +23,9 @@ constexpr GgSimpleShader::Light defaultLight
 // コンストラクタ
 //
 Config::Config() :
+  winSize{ 960, 540 },
+  menuFont{ "Mplus1-Regular.ttf" },
+  menuFontSize{ 20.0f },
   light{ defaultLight },
   model{ "logo.obj" },
 #if defined(GL_GLES_PROTOTYPES)
@@ -56,15 +59,15 @@ Config::~Config()
 bool Config::load(const std::string& filename)
 {
   // 構成ファイルを開く
-  std::ifstream json{ Utf8ToTChar(filename) };
+  std::ifstream file{ Utf8ToTChar(filename) };
 
   // 開けなかったらエラー
-  if (!json) return false;
+  if (!file) return false;
 
   // JSON の読み込み
   picojson::value value;
-  json >> value;
-  json.close();
+  file >> value;
+  file.close();
 
   // 構成データの取り出し
   const auto& object{ value.get<picojson::object>() };
@@ -72,6 +75,15 @@ bool Config::load(const std::string& filename)
   //
   // 構成データの読み込み
   //
+
+  // ウィンドウサイズ
+  getValue(object, "window_size", winSize);
+
+  // メニューフォント
+  getString(object, "menu_font", menuFont);
+
+  // メニューフォントサイズ
+  getValue(object, "menu_font_size", menuFontSize);
 
   // 光源
   getVector(object, "ambient", light.ambient);
@@ -97,10 +109,10 @@ bool Config::load(const std::string& filename)
 bool Config::save(const std::string& filename) const
 {
   // 構成ファイルを開く
-  std::ofstream preference{ Utf8ToTChar(filename) };
+  std::ofstream file{ Utf8ToTChar(filename) };
 
   // 開けなかったらエラー
-  if (!preference) return false;
+  if (!file) return false;
 
   // 構成データの書き出しに使うオブジェクト
   picojson::object object;
@@ -108,6 +120,15 @@ bool Config::save(const std::string& filename) const
   //
   // 構成データの書き出し
   //
+
+  // ウィンドウサイズ
+  setValue(object, "window_size", winSize);
+
+  // メニューフォント
+  setString(object, "menu_font", menuFont);
+
+  // メニューフォントサイズ
+  setValue(object, "menu_font_size", menuFontSize);
 
   // 光源
   setVector(object, "ambient", light.ambient);
@@ -123,8 +144,8 @@ bool Config::save(const std::string& filename) const
 
   // 構成出データをシリアライズして JSON で保存
   picojson::value v{ object };
-  preference << v.serialize(true);
-  preference.close();
+  file << v.serialize(true);
+  file.close();
 
   return true;
 }

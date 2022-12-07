@@ -29,13 +29,13 @@ class Menu
   Config settings;
 
   // CAD データ
-  std::unique_ptr<GgSimpleObj> model;
+  std::unique_ptr<const GgSimpleObj> model;
 
   // 光源データ
-  std::unique_ptr<GgSimpleShader::LightBuffer> light;
+  std::unique_ptr<const GgSimpleShader::LightBuffer> light;
 
   // シェーダ
-  std::unique_ptr<GgSimpleShader> shader;
+  std::unique_ptr<const GgSimpleShader> shader;
 
   // ファイルパスを取得する
   bool getFilePath(std::string& path, const nfdfilteritem_t* filter);

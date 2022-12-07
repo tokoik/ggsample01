@@ -179,6 +179,7 @@
     <Image Include="gg.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ggsample01_config.json" />
     <None Include="simple.frag" />
     <None Include="simple.vert" />
   </ItemGroup>

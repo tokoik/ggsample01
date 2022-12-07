@@ -31,7 +31,7 @@ int GgApp::main(int argc, const char* const* argv)
   const Config config{ CONFIG_FILE };
 
   // ウィンドウを作成する
-  Window window{ argc > 1 ? argv[1] : PROJECT_NAME };
+  Window window{ argc > 1 ? argv[1] : PROJECT_NAME, config.getWidth(), config.getHeight() };
 
   // メニューを初期化する
   Menu menu{ config };

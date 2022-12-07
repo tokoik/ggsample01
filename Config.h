@@ -42,6 +42,15 @@ class Config
   // メニュークラスから参照する
   friend class Menu;
 
+  // ウィンドウサイズ
+  std::array<GLsizei, 2> winSize;
+
+  // メニューフォント名
+  std::string menuFont;
+
+  // メニューフォントサイズ
+  float menuFontSize;
+
   // 光源
   GgSimpleShader::Light light;
 
@@ -67,6 +76,22 @@ public:
   /// デストラクタ
   ///
   virtual ~Config();
+
+  ///
+  /// ウィンドウの横幅を得る
+  /// 
+  auto getWidth() const
+  {
+    return winSize[0];
+  }
+
+  ///
+  /// ウィンドウの横幅を得る
+  /// 
+  auto getHeight() const
+  {
+    return winSize[1];
+  }
 
   ///
   /// 設定ファイルを読み込む

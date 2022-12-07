@@ -7,12 +7,6 @@
 ///
 #include "Menu.h"
 
-// メニューフォント
-constexpr char menuFont[]{ "Mplus1-Regular.ttf" };
-
-// メニューフォントサイズ
-constexpr float menuFontSize{ 20.0f };
-
 //
 // コンストラクタ
 //
@@ -21,7 +15,7 @@ Menu::Menu(const Config& config) :
   settings{ config },
   model{ std::make_unique<GgSimpleObj>(config.model, true) },
   light{ std::make_unique<GgSimpleShader::LightBuffer>(config.light) },
-  shader{ std::make_unique <GgSimpleShader>(config.shader) }
+  shader{ std::make_unique<GgSimpleShader>(config.shader) }
 {
 #if defined(IMGUI_VERSION)
   //
@@ -40,7 +34,7 @@ Menu::Menu(const Config& config) :
   //ImGui::StyleColorsClassic();                              // 以前のスタイル
 
   // 日本語を表示できるメニューフォントを読み込む
-  if (!ImGui::GetIO().Fonts->AddFontFromFileTTF(menuFont, menuFontSize, nullptr,
+  if (!ImGui::GetIO().Fonts->AddFontFromFileTTF(config.menuFont.c_str(), config.menuFontSize, nullptr,
     ImGui::GetIO().Fonts->GetGlyphRangesJapanese()))
   {
     // メニューフォントが読み込めなかったらエラーにする

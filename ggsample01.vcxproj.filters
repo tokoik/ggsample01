@@ -104,5 +104,6 @@
     <None Include="simple.frag">
       <Filter>シェーダ― ファイル</Filter>
     </None>
+    <None Include="ggsample01_config.json" />
   </ItemGroup>
 </Project>
