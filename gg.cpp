@@ -5017,7 +5017,7 @@ GLuint gg::ggLoadComputeShader(const std::string& comp)
 void gg::GgPoints::load(const GgVector* pos, GLsizei count, GLenum usage)
 {
   // 頂点バッファオブジェクトを作成する
-  position = std::make_shared<GgBuffer<GgVector>>(GL_ARRAY_BUFFER, pos, sizeof(GgVector), count, usage);
+  position = std::make_shared<GgBuffer<GgVector>>(GL_ARRAY_BUFFER, pos, static_cast<GLsizei>(sizeof(GgVector)), count, usage);
 
   // このバッファオブジェクトは index == 0 の in 変数から入力する
   glVertexAttribPointer(0, static_cast<GLint>(pos->size()), GL_FLOAT, GL_FALSE, 0, 0);
@@ -5042,7 +5042,7 @@ void gg::GgPoints::draw(GLint first, GLsizei count) const
 void gg::GgTriangles::load(const GgVertex* vert, GLsizei count, GLenum usage)
 {
   // 頂点バッファオブジェクトを作成する
-  vertex = std::make_unique<GgBuffer<GgVertex>>(GL_ARRAY_BUFFER, vert, sizeof(GgVertex), count, usage);
+  vertex = std::make_unique<GgBuffer<GgVertex>>(GL_ARRAY_BUFFER, vert, static_cast<GLsizei>(sizeof(GgVertex)), count, usage);
 
   // 頂点の位置は index == 0 の in 変数から入力する
   glVertexAttribPointer(0, static_cast<GLint>(vert->position.size()), GL_FLOAT, GL_FALSE,

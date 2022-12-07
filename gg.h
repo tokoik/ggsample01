@@ -6520,7 +6520,7 @@ namespace gg
       GgTriangles::load(vert, countv, usage);
 
       // インデックスの頂点バッファオブジェクトを作成する
-      index = std::make_unique<GgBuffer<GLuint>>(GL_ELEMENT_ARRAY_BUFFER, face, sizeof(GLuint), countf, usage);
+      index = std::make_unique<GgBuffer<GLuint>>(GL_ELEMENT_ARRAY_BUFFER, face, static_cast<GLsizei>(sizeof(GLuint)), countf, usage);
     }
 
     ///
