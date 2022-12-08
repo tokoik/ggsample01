@@ -48,9 +48,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 // Windows (Visual Studio) のとき
 #if defined(_MSC_VER)
-// Visual Studio のリリースビルドではコンソールを出さない
+// リリースビルドではコンソールを出さない
 #  if !defined(_DEBUG)
-// リリースビルドではコンソールにメッセージを出さない
 #    pragma comment(linker, "/subsystem:\"windows\" /entry:\"mainCRTStartup\"")
 #  endif
 // リンクするライブラリ
