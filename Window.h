@@ -102,6 +102,9 @@ class Window
   // フレームバッファの横幅と高さ
   std::array<GLsizei, 2> fboSize;
 
+  // メニューバーの高さ
+  GLsizei menubarHeight;
+
   // ビューポートのアスペクト比
   GLfloat aspect;
 
@@ -217,13 +220,8 @@ class Window
         }
       }
 
-      // ウィンドウのアスペクト比を保存する
-      instance->aspect = static_cast<GLfloat>(width) / static_cast<GLfloat>(height);
-
-      // ウィンドウ全体に描画する
-      glfwGetFramebufferSize(window, &width, &height);
-      glViewport(0, 0, width, height);
-      instance->fboSize = std::array<GLsizei, 2>{ width, height };
+      // ビューポートを更新する
+      instance->updateViewport();
 
       // ユーザー定義のコールバック関数の呼び出し
       if (instance->resizeFunc) (*instance->resizeFunc)(instance, width, height);
@@ -479,6 +477,8 @@ public:
     int fullscreen = 0, GLFWwindow* share = nullptr) :
     window{ nullptr },
     size{ width, height },
+    fboSize{ width, height },
+    menubarHeight{ 0 },
     aspect{ 1.0f },
     velocity{ 1.0f, 1.0f, 0.1f },
     status{ false },
@@ -629,7 +629,7 @@ public:
   ///
   /// @return ループを継続すべきなら true.
   ///
-  operator bool()
+  explicit operator bool()
   {
     // イベントを取り出す
     glfwPollEvents();
@@ -696,6 +696,46 @@ public:
 
     // カラーバッファを入れ替える
     glfwSwapBuffers(window);
+  }
+
+  ///
+  /// ビューポートを元のサイズに復帰する.
+  ///
+  void restoreViewport() const
+  {
+    glViewport(0, 0, fboSize[0], fboSize[1]);
+  }
+
+  ///
+  /// ビューポートのサイズを更新する.
+  ///
+  void updateViewport()
+  {
+    // フレームバッファの大きさを求める
+    glfwGetFramebufferSize(window, &fboSize[0], &fboSize[1]);
+
+    // フレームバッファの高さからメニューバーの高さを減じる
+    fboSize[1] -= menubarHeight;
+
+    // ウィンドウのアスペクト比を保存する
+    aspect = static_cast<GLfloat>(fboSize[0]) / static_cast<GLfloat>(fboSize[1]);
+
+    // ビューポートを設定する
+    restoreViewport();
+  }
+
+  ///
+  /// 表示領域をメニューバーの高さだけ減らす.
+  ///
+  /// @param メニューバーの高さ.
+  ///
+  void setMenubarHeight(GLsizei height)
+  {
+    // メニューバーの高さを保存する
+    menubarHeight = height;
+
+    // ビューポートを復帰する
+    updateViewport();
   }
 
   ///
@@ -788,14 +828,6 @@ public:
   auto getAspect() const
   {
     return aspect;
-  }
-
-  ///
-  /// ビューポートをウィンドウ全体に設定する.
-  ///
-  void restoreViewport() const
-  {
-    glViewport(0, 0, fboSize[0], fboSize[1]);
   }
 
   ///
@@ -1269,21 +1301,6 @@ public:
   void setWheelFunc(void (*func)(const Window* window, double x, double y))
   {
     wheelFunc = func;
-  }
-
-  ///
-  /// 表示領域をメニューバーの高さだけ減らす.
-  ///
-  /// @param メニューバーの高さ.
-  ///
-  void setMenubarHeight(float menubarheight)
-  {
-    // メニューバーより下に描画する
-    int width, height;
-    glfwGetFramebufferSize(window, &width, &height);
-    height -= static_cast<int>(menubarheight);
-    glViewport(0, 0, width, height);
-    fboSize = std::array<GLsizei, 2>{ width, height };
   }
 };
 

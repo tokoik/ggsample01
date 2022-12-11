@@ -3681,7 +3681,7 @@ bool gg::ggReadImage(
 }
 
 //
-// テクスチャメモリを確保して画像を読み込む
+// テクスチャを作成して画像を読み込む
 //
 //   image 画像データ, nullptr ならメモリの確保だけを行う
 //   width 画像の横の画素数
@@ -3690,6 +3690,7 @@ bool gg::ggReadImage(
 //   type 画像のデータ型
 //   internal テクスチャの内部フォーマット
 //   wrap テクスチャのラッピングモード, デフォルトは GL_CLAMP_TO_EDGE
+//   swizzle true ならテクスチャの赤と青を入れ替える, デフォルトは true
 //   戻り値 テクスチャ名
 //
 GLuint gg::ggLoadTexture(
@@ -3699,7 +3700,8 @@ GLuint gg::ggLoadTexture(
   GLenum format,
   GLenum type,
   GLenum internal,
-  GLenum wrap
+  GLenum wrap,
+  bool swizzle
 )
 {
   // テクスチャオブジェクト
@@ -3718,16 +3720,19 @@ GLuint gg::ggLoadTexture(
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, wrap);
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, wrap);
 
-  // テクスチャのサンプリング時に R と B を入れ替える
-  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_SWIZZLE_R, GL_BLUE);
-  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_SWIZZLE_B, GL_RED);
+  if (swizzle)
+  {
+    // テクスチャのサンプリング時に赤とと青を入れ替える
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_SWIZZLE_R, GL_BLUE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_SWIZZLE_B, GL_RED);
+  }
 
   // テクスチャ名を返す
   return tex;
 }
 
 //
-// TGA ファイルをテクスチャメモリに読み込む
+// テクスチャを作成して TGA フォーマットの画像ファイルを読み込む
 //
 //   name TGA ファイル名
 //   pWidth 読みだした画像ファイルの横の画素数の格納先のポインタ (nullptr なら格納しない)
@@ -3762,8 +3767,9 @@ GLuint gg::ggLoadImage(
   // internal == 0 なら内部フォーマットを読み込んだファイルに合わせる
   if (internal == 0) internal = format;
 
-  // テクスチャメモリに読み込む
-  const GLuint tex(ggLoadTexture(image.data(), width, height, format, GL_UNSIGNED_BYTE, internal, wrap));
+  // テクスチャに読み込む
+  const GLuint tex(ggLoadTexture(image.data(), width, height,
+    format, GL_UNSIGNED_BYTE, internal, wrap, true));
 
   // 画像サイズを返す
   if (pWidth) *pWidth = width;
@@ -3860,7 +3866,7 @@ void gg::ggCreateNormalMap(
 }
 
 //
-// TGA 画像ファイルの高さマップ読み込んでテクスチャメモリに法線マップを作成する
+// TGA 画像ファイルの高さマップ読み込んで法線マップのテクスチャを作成する
 //
 //   name TGA ファイル名
 //   nz 作成した法線の z 成分の割合
@@ -3907,7 +3913,25 @@ GLuint gg::ggLoadHeight(
 }
 
 //
-// テクスチャを作成してファイルからデータを読み込む
+// テクスチャの赤と青を交換する
+//
+void gg::GgTexture::swapRandB(bool swap) const
+{
+  const auto swizzle
+  {
+    swap ?
+    std::pair<GLint, GLint>{ GL_BLUE, GL_RED } :
+    std::pair<GLint, GLint>{ GL_RED, GL_BLUE }
+  };
+
+  glBindTexture(GL_TEXTURE_2D, texture);
+  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_SWIZZLE_R, swizzle.first);
+  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_SWIZZLE_B, swizzle.second);
+  glBindTexture(GL_TEXTURE_2D, 0);
+}
+
+//
+// TGA フォーマットの画像ファイルを読み込んでカラーのテクスチャを作成する
 //
 //   name 読み込むファイル名
 //   internal glTexImage2D() に指定するテクスチャの内部フォーマット. 0 なら外部フォーマットに合わせる
@@ -3935,11 +3959,12 @@ void gg::GgColorTexture::load(
   if (internal == 0) internal = format;
 
   // テクスチャを作成する
-  texture = std::make_shared<GgTexture>(image.data(), width, height, format, GL_UNSIGNED_BYTE, internal, wrap);
+  texture = std::make_shared<GgTexture>(image.data(), width, height,
+    format, GL_UNSIGNED_BYTE, internal, wrap, true);
 }
 
 //
-// ファイルからデータを読み込んで法線マップのテクスチャを作成する
+// TGA フォーマットの画像ファイルから高さマップ読み込んで法線マップのテクスチャを作成する
 //
 //   name 画像ファイル名
 //   width テクスチャとして用いる画像データの横幅
@@ -5082,7 +5107,7 @@ void gg::GgElements::draw(GLint first, GLsizei count) const
 //
 // 点群を立方体状に生成する
 //
-std::shared_ptr<gg::GgPoints> gg::ggPointsCube(GLsizei count, GLfloat length, GLfloat cx, GLfloat cy, GLfloat cz)
+gg::GgPoints* gg::ggPointsCube(GLsizei count, GLfloat length, GLfloat cx, GLfloat cy, GLfloat cz)
 {
   // メモリを確保する
   std::vector<GgVector> pos(count);
@@ -5102,13 +5127,13 @@ std::shared_ptr<gg::GgPoints> gg::ggPointsCube(GLsizei count, GLfloat length, GL
   }
 
   // 点データの GgPoints オブジェクトを作成して返す
-  return std::make_shared<GgPoints>(pos.data(), static_cast<GLuint>(pos.size()), GL_POINTS);
+  return new gg::GgPoints{ pos.data(), static_cast<GLsizei>(pos.size()), GL_POINTS };
 }
 
 //
 // 点群を球状に生成する
 //
-std::shared_ptr<gg::GgPoints> gg::ggPointsSphere(GLsizei count, GLfloat radius,
+gg::GgPoints* gg::ggPointsSphere(GLsizei count, GLfloat radius,
   GLfloat cx, GLfloat cy, GLfloat cz)
 {
   // メモリを確保する
@@ -5129,16 +5154,16 @@ std::shared_ptr<gg::GgPoints> gg::ggPointsSphere(GLsizei count, GLfloat radius,
   }
 
   // 点データの GgPoints オブジェクトを作成して返す
-  return std::make_shared<GgPoints>(pos.data(), static_cast<GLsizei>(pos.size()), GL_POINTS);
+  return new gg::GgPoints{ pos.data(), static_cast<GLsizei>(pos.size()), GL_POINTS };
 }
 
 //
 // 矩形状に 2 枚の三角形を生成する
 //
-std::shared_ptr<gg::GgTriangles> gg::ggRectangle(GLfloat width, GLfloat height)
+gg::GgTriangles* gg::ggRectangle(GLfloat width, GLfloat height)
 {
   // 頂点属性
-  std::array<GgVertex, 4> vert;
+  std::array<gg::GgVertex, 4> vert;
 
   // 頂点位置と法線を求める
   for (int v = 0; v < 4; ++v)
@@ -5146,23 +5171,23 @@ std::shared_ptr<gg::GgTriangles> gg::ggRectangle(GLfloat width, GLfloat height)
     const GLfloat x{ ((v & 1) * 2 - 1) * width };
     const GLfloat y{ ((v & 2) - 1) * height };
 
-    vert[v] = GgVertex(x, y, 0.0f, 0.0f, 0.0f, 1.0f);
+    vert[v] = gg::GgVertex{ x, y, 0.0f, 0.0f, 0.0f, 1.0f };
   }
 
   // 矩形の GgTrianges オブジェクトを作成する
-  return std::make_shared<GgTriangles>(vert.data(), static_cast<GLsizei>(vert.size()), GL_TRIANGLE_STRIP);
+  return new gg::GgTriangles{ vert.data(), static_cast<GLsizei>(vert.size()), GL_TRIANGLE_STRIP };
 }
 
 //
 // 楕円状に三角形を生成する
 //
-std::shared_ptr<gg::GgTriangles> gg::ggEllipse(GLfloat width, GLfloat height, GLuint slices)
+gg::GgTriangles* gg::ggEllipse(GLfloat width, GLfloat height, GLuint slices)
 {
   // 楕円のスケール
   constexpr GLfloat scale{ 0.5f };
 
   // 作業用のメモリ
-  std::vector<GgVertex> vert(slices);
+  std::vector<gg::GgVertex> vert(slices);
 
   // 頂点位置と法線を求める
   for (GLuint v = 0; v < slices; ++v)
@@ -5175,50 +5200,50 @@ std::shared_ptr<gg::GgTriangles> gg::ggEllipse(GLfloat width, GLfloat height, GL
   }
 
   // GgTriangles オブジェクトを作成する
-  return std::make_shared<GgTriangles>(vert.data(), static_cast<GLsizei>(vert.size()), GL_TRIANGLE_FAN);
+  return new gg::GgTriangles{ vert.data(), static_cast<GLsizei>(vert.size()), GL_TRIANGLE_FAN };
 }
 
 //
 // Wavefront OBJ ファイルを読み込む (Arrays 形式)
 //
-std::shared_ptr<gg::GgTriangles> gg::ggArraysObj(const std::string& name, bool normalize)
+gg::GgTriangles* gg::ggArraysObj(const std::string& name, bool normalize)
 {
   std::vector<std::array<GLuint, 3>> group;
-  std::vector<GgSimpleShader::Material> material;
-  std::vector<GgVertex> vert;
+  std::vector<gg::GgSimpleShader::Material> material;
+  std::vector<gg::GgVertex> vert;
 
   // ファイルを読み込む
   if (!ggLoadSimpleObj(name, group, material, vert, normalize)) return nullptr;
 
   // GgTriangles オブジェクトを作成する
-  return std::make_shared<GgTriangles>(vert.data(), static_cast<GLsizei>(vert.size()), GL_TRIANGLES);
+  return new gg::GgTriangles{ vert.data(), static_cast<GLsizei>(vert.size()), GL_TRIANGLES };
 }
 
 //
 // Wavefront OBJ ファイル を読み込む (Elements 形式)
 //
-std::shared_ptr<gg::GgElements> gg::ggElementsObj(const std::string& name, bool normalize)
+gg::GgElements* gg::ggElementsObj(const std::string& name, bool normalize)
 {
   std::vector<std::array<GLuint, 3>> group;
-  std::vector<GgSimpleShader::Material> material;
-  std::vector<GgVertex> vert;
+  std::vector<gg::GgSimpleShader::Material> material;
+  std::vector<gg::GgVertex> vert;
   std::vector<GLuint> face;
 
   // ファイルを読み込む
   if (!ggLoadSimpleObj(name, group, material, vert, face, normalize)) return nullptr;
 
   // GgElements オブジェクトを作成する
-  return std::make_shared<GgElements>(vert.data(), static_cast<GLsizei>(vert.size()),
-    face.data(), static_cast<GLsizei>(face.size()), GL_TRIANGLES);
+  return new gg::GgElements{ vert.data(), static_cast<GLsizei>(vert.size()),
+    face.data(), static_cast<GLsizei>(face.size()), GL_TRIANGLES };
 }
 
 //
 // メッシュ形状を作成する (Elements 形式)
 //
-std::shared_ptr<gg::GgElements> gg::ggElementsMesh(GLuint slices, GLuint stacks, const GLfloat(*pos)[3], const GLfloat(*norm)[3])
+gg::GgElements* gg::ggElementsMesh(GLuint slices, GLuint stacks, const GLfloat(*pos)[3], const GLfloat(*norm)[3])
 {
   // 頂点属性
-  std::vector<GgVertex> vert((slices + 1) * (stacks + 1));
+  std::vector<gg::GgVertex> vert((slices + 1) * (stacks + 1));
 
   // 頂点の法線を求める
   for (GLuint j = 0; j <= stacks; ++j)
@@ -5229,7 +5254,7 @@ std::shared_ptr<gg::GgElements> gg::ggElementsMesh(GLuint slices, GLuint stacks,
       const GLuint k{ j * (slices + 1) + i };
 
       // 頂点の法線
-      GgVector tnorm;
+      gg::GgVector tnorm;
       tnorm[3] = 0.0f;
 
       if (norm)
@@ -5272,7 +5297,7 @@ std::shared_ptr<gg::GgElements> gg::ggElementsMesh(GLuint slices, GLuint stacks,
       }
 
       // 頂点の位置
-      const GgVector tpos{ pos[k][0], pos[k][1], pos[k][2], 1.0f };
+      const gg::GgVector tpos{ pos[k][0], pos[k][1], pos[k][2], 1.0f };
 
       // 頂点属性の保存
       vert.emplace_back(tpos, tnorm);
@@ -5303,14 +5328,14 @@ std::shared_ptr<gg::GgElements> gg::ggElementsMesh(GLuint slices, GLuint stacks,
   }
 
   // GgElements オブジェクトを作成する
-  return std::make_shared<GgElements>(vert.data(), static_cast<GLsizei>(vert.size()),
-    face.data(), static_cast<GLsizei>(face.size()), GL_TRIANGLES);
+  return new GgElements{ vert.data(), static_cast<GLsizei>(vert.size()),
+    face.data(), static_cast<GLsizei>(face.size()), GL_TRIANGLES };
 }
 
 //
 // 球状に三角形データを生成する (Elements 形式)
 //
-std::shared_ptr<gg::GgElements> gg::ggElementsSphere(GLfloat radius, int slices, int stacks)
+gg::GgElements* gg::ggElementsSphere(GLfloat radius, int slices, int stacks)
 {
   // 頂点の位置と法線
   std::vector<GLfloat> p, n;

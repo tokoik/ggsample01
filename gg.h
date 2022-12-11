@@ -5001,15 +5001,16 @@ namespace gg
   );
 
   ///
-  /// テクスチャメモリを確保して画像データをテクスチャとして読み込む.
+  /// テクスチャを作成して確保して画像データをテクスチャとして読み込む.
   ///
-  /// @param image テクスチャとして読み込むデータ, nullptr ならテクスチャメモリの確保のみを行う.
+  /// @param image テクスチャとして読み込むデータ, nullptr ならテクスチャの作成のみを行う.
   /// @param width テクスチャとして読み込むデータ image の横の画素数.
   /// @param height テクスチャとして読み込むデータ image の縦の画素数.
   /// @param format image のフォーマット.
   /// @param type image のデータ型.
   /// @param internal テクスチャの内部フォーマット.
   /// @param wrap テクスチャのラッピングモード, デフォルトは GL_CLAMP_TO_EDGE.
+  /// @param swizzle true ならテクスチャの赤と青を入れ替える, デフォルトは true.
   /// @return テクスチャの作成に成功すればテクスチャ名, 失敗すれば 0.
   ///
   extern GLuint ggLoadTexture(
@@ -5019,11 +5020,12 @@ namespace gg
     GLenum format = GL_RGB,
     GLenum type = GL_UNSIGNED_BYTE,
     GLenum internal = GL_RGB,
-    GLenum wrap = GL_CLAMP_TO_EDGE
+    GLenum wrap = GL_CLAMP_TO_EDGE,
+    bool swizzle = true
   );
 
   ///
-  /// テクスチャメモリを確保して TGA 画像ファイルを読み込む.
+  /// テクスチャを作成して TGA フォーマットの画像ファイルを読み込む.
   ///
   /// @param name 読み込むファイル名.
   /// @param pWidth 読みだした画像ファイルの横の画素数の格納先のポインタ (nullptr なら格納しない).
@@ -5062,7 +5064,7 @@ namespace gg
   );
 
   ///
-  /// テクスチャメモリを確保して TGA 画像ファイルを読み込み法線マップを作成する.
+  /// TGA 画像ファイルの高さマップ読み込んで法線マップのテクスチャを作成する.
   ///
   /// @param name 読み込むファイル名.
   /// @param nz 法線の z 成分の割合.
@@ -5185,6 +5187,7 @@ namespace gg
     /// @param type 画像のデータ型.
     /// @param internal テクスチャの内部フォーマット.
     /// @param wrap テクスチャのラッピングモード, デフォルトは GL_CLAMP_TO_EDGE.
+    /// @param swizzle true ならテクスチャの赤と青を入れ替える, デフォルトは true.
     ///
     GgTexture(
       const GLvoid* image,
@@ -5193,9 +5196,10 @@ namespace gg
       GLenum format = GL_RGB,
       GLenum type = GL_UNSIGNED_BYTE,
       GLenum internal = GL_RGBA,
-      GLenum wrap = GL_CLAMP_TO_EDGE
+      GLenum wrap = GL_CLAMP_TO_EDGE,
+      bool swizzle = true
     ) :
-      texture{ ggLoadTexture(image, width, height, format, type, internal, wrap) },
+      texture{ ggLoadTexture(image, width, height, format, type, internal, wrap, swizzle) },
       size{ width, height }
     {
     }
@@ -5234,6 +5238,13 @@ namespace gg
     {
       glBindTexture(GL_TEXTURE_2D, 0);
     }
+
+    ///
+    /// テクスチャの赤と青を交換する
+    ///
+    /// @param swizzle 赤と青を交換するなら true
+    ///
+    void swapRandB(bool swizzle) const;
 
     ///
     /// 使用しているテクスチャの横の画素数を取り出す.
@@ -5308,7 +5319,7 @@ namespace gg
     }
 
     ///
-    /// メモリ上のデータからテクスチャを作成するコンストラクタ.
+    /// メモリ上のデータからカラーのテクスチャを作成するコンストラクタ.
     ///
     /// @param image テクスチャとして用いる画像データ, nullptr ならデータを読み込まない.
     /// @param width 読み込む画像の横の画素数.
@@ -5317,6 +5328,7 @@ namespace gg
     /// @param type 読み込む画像のデータ型.
     /// @param internal テクスチャの内部フォーマット.
     /// @param wrap テクスチャのラッピングモード.
+    /// @param swizzle true ならテクスチャの赤と青を入れ替える, デフォルトは true.
     ///
     GgColorTexture(
       const GLvoid* image,
@@ -5325,20 +5337,25 @@ namespace gg
       GLenum format = GL_RGB,
       GLenum type = GL_UNSIGNED_BYTE,
       GLenum internal = GL_RGB,
-      GLenum wrap = GL_CLAMP_TO_EDGE
+      GLenum wrap = GL_CLAMP_TO_EDGE,
+      bool swizzle = true
     )
     {
-      load(image, width, height, format, type, internal, wrap);
+      load(image, width, height, format, type, internal, wrap, swizzle);
     }
 
     ///
-    /// ファイルからデータを読み込んでテクスチャを作成するコンストラクタ.
+    /// TGA フォーマットの画像ファイルを読み込んでカラーのテクスチャを作成するコンストラクタ.
     ///
     /// @param name 読み込むファイル名.
     /// @param internal glTexImage2D() に指定するテクスチャの内部フォーマット, 0 なら外部フォーマットに合わせる.
     /// @param wrap テクスチャのラッピングモード, GL_TEXTURE_WRAP_S および GL_TEXTURE_WRAP_T に設定する値.
     ///
-    GgColorTexture(const std::string& name, GLenum internal = 0, GLenum wrap = GL_CLAMP_TO_EDGE)
+    GgColorTexture(
+      const std::string& name,
+      GLenum internal = 0,
+      GLenum wrap = GL_CLAMP_TO_EDGE
+    )
     {
       load(name, internal, wrap);
     }
@@ -5351,7 +5368,7 @@ namespace gg
     }
 
     ///
-    /// テクスチャを作成してメモリ上のデータを読み込む.
+    /// メモリ上のデータを読み込んでテクスチャを作成する.
     ///
     /// @param image テクスチャとして用いる画像データ, nullptr ならデータを読み込まない.
     /// @param width テクスチャの横の画素数.
@@ -5360,6 +5377,7 @@ namespace gg
     /// @param type 読み込む画像のデータ型.
     /// @param internal glTexImage2D() に指定するテクスチャの内部フォーマット.
     /// @param wrap テクスチャのラッピングモード (GL_CLAMP_TO_EDGE, GL_CLAMP_TO_BORDER, GL_REPEAT, GL_MIRRORED_REPEAT).
+    /// @param swizzle true ならテクスチャの赤と青を入れ替える, デフォルトは true.
     ///
     void load(
       const GLvoid* image,
@@ -5368,21 +5386,26 @@ namespace gg
       GLenum format = GL_RGB,
       GLenum type = GL_UNSIGNED_BYTE,
       GLenum internal = GL_RGB,
-      GLenum wrap = GL_CLAMP_TO_EDGE
+      GLenum wrap = GL_CLAMP_TO_EDGE,
+      bool swizzle = true
     )
     {
       // テクスチャを作成する
-      texture = std::make_shared<GgTexture>(image, width, height, format, type, internal, wrap);
+      texture = std::make_shared<GgTexture>(image, width, height, format, type, internal, wrap, swizzle);
     }
 
     ///
-    /// テクスチャを作成してファイルからデータを読み込む.
+    /// TGA フォーマットの画像ファイルを読み込んでカラーのテクスチャを作成する.
     ///
     /// @param name 読み込むファイル名.
     /// @param internal glTexImage2D() に指定するテクスチャの内部フォーマット, 0 ならファイルの画像フォーマットに合わせる.
     /// @param wrap テクスチャのラッピングモード (GL_CLAMP_TO_EDGE, GL_CLAMP_TO_BORDER, GL_REPEAT, GL_MIRRORED_REPEAT).
     ///
-    void load(const std::string& name, GLenum internal = 0, GLenum wrap = GL_CLAMP_TO_EDGE);
+    void load(
+      const std::string& name,
+      GLenum internal = 0,
+      GLenum wrap = GL_CLAMP_TO_EDGE
+    );
   };
 
   ///
@@ -5482,11 +5505,12 @@ namespace gg
     }
 
     ///
-    /// ファイルからデータを読み込んで法線マップのテクスチャを作成する.
+    /// TGA フォーマットの画像ファイルから高さマップ読み込んで法線マップのテクスチャを作成する.
     ///
     /// @param name 画像ファイル名 (1 チャネルの TGA 画像).
     /// @param nz 法線マップの z 成分の値.
     /// @param internal テクスチャの内部フォーマット.
+    ///
     void load(
       const std::string& name,
       GLfloat nz = 1.0f,
@@ -6540,9 +6564,9 @@ namespace gg
   /// @param cx 点群の中心の x 座標.
   /// @param cy 点群の中心の y 座標.
   /// @param cz 点群の中心の z 座標.
-  /// @return GgPoints 型の shared_ptr.
+  /// @return GgPoints 型の ポインタ.
   ///
-  extern std::shared_ptr<GgPoints> ggPointsCube(
+  extern GgPoints* ggPointsCube(
     GLsizei countv,
     GLfloat length = 1.0f,
     GLfloat cx = 0.0f,
@@ -6558,9 +6582,9 @@ namespace gg
   /// @param cx 点群の中心の x 座標.
   /// @param cy 点群の中心の y 座標.
   /// @param cz 点群の中心の z 座標.
-  /// @return GgPoints 型の shared_ptr.
+  /// @return GgPoints 型のポインタ.
   ///
-  extern std::shared_ptr<GgPoints> ggPointsSphere(
+  extern GgPoints* ggPointsSphere(
     GLsizei countv,
     GLfloat radius = 0.5f,
     GLfloat cx = 0.0f,
@@ -6573,9 +6597,9 @@ namespace gg
   ///
   /// @param width 矩形の横幅.
   /// @param height 矩形の高さ.
-  /// @return GgTriangles 型の shared_ptr.
+  /// @return GgTriangles 型のポインタ.
   ///
-  extern std::shared_ptr<GgTriangles> ggRectangle(
+  extern GgTriangles* ggRectangle(
     GLfloat width = 1.0f,
     GLfloat height = 1.0f
   );
@@ -6586,9 +6610,9 @@ namespace gg
   /// @param width 楕円の横幅.
   /// @param height 楕円の高さ.
   /// @param slices 楕円の分割数.
-  /// @return GgTriangles 型の shared_ptr.
+  /// @return GgTriangles 型のポインタ.
   ///
-  extern std::shared_ptr<GgTriangles> ggEllipse(
+  extern GgTriangles* ggEllipse(
     GLfloat width = 1.0f,
     GLfloat height = 1.0f,
     GLuint slices = 16
@@ -6599,13 +6623,13 @@ namespace gg
   ///
   /// @param name ファイル名.
   /// @param normalize true なら大きさを正規化.
-  /// @return GgTriangles 型の shared_ptr.
+  /// @return GgTriangles 型のポインタ.
   ///
   /// @note
   /// 三角形分割された Wavefront OBJ ファイルを読み込んで
   /// GgArrays 形式の三角形データを生成する.
   ///
-  extern std::shared_ptr<GgTriangles> ggArraysObj(
+  extern GgTriangles* ggArraysObj(
     const std::string& name,
     bool normalize = false
   );
@@ -6615,13 +6639,13 @@ namespace gg
   ///
   /// @param name ファイル名.
   /// @param normalize true なら大きさを正規化.
-  /// @return GgElements 型の shared_ptr.
+  /// @return GgElements 型のポインタ.
   ///
   /// @note
   /// 三角形分割された Wavefront OBJ ファイル を読み込んで
   /// GgElements 形式の三角形データを生成する.
   ///
-  extern std::shared_ptr<GgElements> ggElementsObj(
+  extern GgElements* ggElementsObj(
     const std::string& name,
     bool normalize = false
   );
@@ -6633,12 +6657,12 @@ namespace gg
   /// @param stacks メッシュの縦方向の分割数.
   /// @param pos メッシュの頂点の位置.
   /// @param norm メッシュの頂点の法線, nullptr なら頂点の位置から算出する.
-  /// @return GgElements 型の shared_ptr.
+  /// @return GgElements 型のポインタ.
   ///
   /// @note
   /// メッシュ状に GgElements 形式の三角形データを生成する.
   ///
-  extern std::shared_ptr<GgElements> ggElementsMesh(
+  extern GgElements* ggElementsMesh(
     GLuint slices,
     GLuint stacks,
     const GLfloat(*pos)[3],
@@ -6650,12 +6674,12 @@ namespace gg
   /// @param radius 球の半径.
   /// @param slices 球の経度方向の分割数.
   /// @param stacks 球の緯度方向の分割数.
-  /// @return GgElements 型の shared_ptr.
+  /// @return GgElements 型のポインタ.
   ///
   /// @note
   /// 球状に GgElements 形式の三角形データを生成する.
   ///
-  extern std::shared_ptr<GgElements> ggElementsSphere(
+  extern GgElements* ggElementsSphere(
     GLfloat radius = 1.0f,
     int slices = 16,
     int stacks = 8
