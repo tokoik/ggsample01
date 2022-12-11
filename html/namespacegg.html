@@ -277,8 +277,8 @@ $(function() {
 <tr class="separator:a236701485bbc8278654781a810bf2880"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acce00f35f4b755cda72ec9f61b726c8f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#acce00f35f4b755cda72ec9f61b726c8f">ggReadImage</a> (const std::string &amp;name, std::vector&lt; GLubyte &gt; &amp;image, GLsizei *pWidth, GLsizei *pHeight, GLenum *pFormat)</td></tr>
 <tr class="separator:acce00f35f4b755cda72ec9f61b726c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b09e55a394271b6f383d01f37b0f18f"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a9b09e55a394271b6f383d01f37b0f18f">ggLoadTexture</a> (const GLvoid *image, GLsizei width, GLsizei height, GLenum format=GL_RGB, GLenum type=GL_UNSIGNED_BYTE, GLenum internal=GL_RGB, GLenum wrap=GL_CLAMP_TO_EDGE)</td></tr>
-<tr class="separator:a9b09e55a394271b6f383d01f37b0f18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c7814fec8a87f48c57a367567c422d6"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a4c7814fec8a87f48c57a367567c422d6">ggLoadTexture</a> (const GLvoid *image, GLsizei width, GLsizei height, GLenum format=GL_RGB, GLenum type=GL_UNSIGNED_BYTE, GLenum internal=GL_RGB, GLenum wrap=GL_CLAMP_TO_EDGE, bool swizzle=true)</td></tr>
+<tr class="separator:a4c7814fec8a87f48c57a367567c422d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ba6c60b5240e74a801a7f33e09bce87"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a6ba6c60b5240e74a801a7f33e09bce87">ggLoadImage</a> (const std::string &amp;name, GLsizei *pWidth=nullptr, GLsizei *pHeight=nullptr, GLenum internal=0, GLenum wrap=GL_CLAMP_TO_EDGE)</td></tr>
 <tr class="separator:a6ba6c60b5240e74a801a7f33e09bce87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cd46afb53daa13fa8bb2de14baf4e7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a2cd46afb53daa13fa8bb2de14baf4e7b">ggCreateNormalMap</a> (const GLubyte *hmap, GLsizei width, GLsizei height, GLenum format, GLfloat nz, GLenum internal, std::vector&lt; <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &gt; &amp;nmap)</td></tr>
@@ -295,22 +295,22 @@ $(function() {
 <tr class="separator:adda35bc52f044dc237a3632553ad9d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abca7443a911bd290af4be190f1835cf0"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#abca7443a911bd290af4be190f1835cf0">ggLoadComputeShader</a> (const std::string &amp;comp)</td></tr>
 <tr class="separator:abca7443a911bd290af4be190f1835cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63f9b914f19cd1e877ae22730aa9581d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgg_1_1GgPoints.html">GgPoints</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a63f9b914f19cd1e877ae22730aa9581d">ggPointsCube</a> (GLsizei countv, GLfloat length=1.0f, GLfloat cx=0.0f, GLfloat cy=0.0f, GLfloat cz=0.0f)</td></tr>
-<tr class="separator:a63f9b914f19cd1e877ae22730aa9581d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33e667c9e5de5a1185077d9858375716"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgg_1_1GgPoints.html">GgPoints</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a33e667c9e5de5a1185077d9858375716">ggPointsSphere</a> (GLsizei countv, GLfloat radius=0.5f, GLfloat cx=0.0f, GLfloat cy=0.0f, GLfloat cz=0.0f)</td></tr>
-<tr class="separator:a33e667c9e5de5a1185077d9858375716"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23a2386c47f07cd53de2958985783c2d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgg_1_1GgTriangles.html">GgTriangles</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a23a2386c47f07cd53de2958985783c2d">ggRectangle</a> (GLfloat width=1.0f, GLfloat height=1.0f)</td></tr>
-<tr class="separator:a23a2386c47f07cd53de2958985783c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f5a44c7c7ee2c1095d3a659db0f530f"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgg_1_1GgTriangles.html">GgTriangles</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a2f5a44c7c7ee2c1095d3a659db0f530f">ggEllipse</a> (GLfloat width=1.0f, GLfloat height=1.0f, GLuint slices=16)</td></tr>
-<tr class="separator:a2f5a44c7c7ee2c1095d3a659db0f530f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27430d60881b68061b8a8093cfac74ce"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgg_1_1GgTriangles.html">GgTriangles</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a27430d60881b68061b8a8093cfac74ce">ggArraysObj</a> (const std::string &amp;name, bool normalize=false)</td></tr>
-<tr class="separator:a27430d60881b68061b8a8093cfac74ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b3f7b9af6577d60e0a6702fa7c1b3f7"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgg_1_1GgElements.html">GgElements</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a6b3f7b9af6577d60e0a6702fa7c1b3f7">ggElementsObj</a> (const std::string &amp;name, bool normalize=false)</td></tr>
-<tr class="separator:a6b3f7b9af6577d60e0a6702fa7c1b3f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe1fcb205a0f34a31eda2d2eb4012084"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgg_1_1GgElements.html">GgElements</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#afe1fcb205a0f34a31eda2d2eb4012084">ggElementsMesh</a> (GLuint slices, GLuint stacks, const GLfloat(*pos)[3], const GLfloat(*norm)[3]=nullptr)</td></tr>
-<tr class="separator:afe1fcb205a0f34a31eda2d2eb4012084"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04c512ca7268233b59fc61573dedcf80"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classgg_1_1GgElements.html">GgElements</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a04c512ca7268233b59fc61573dedcf80">ggElementsSphere</a> (GLfloat radius=1.0f, int slices=16, int stacks=8)</td></tr>
-<tr class="separator:a04c512ca7268233b59fc61573dedcf80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa76d45e8c861b0c0059964eb7016c259"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgPoints.html">GgPoints</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#aa76d45e8c861b0c0059964eb7016c259">ggPointsCube</a> (GLsizei countv, GLfloat length=1.0f, GLfloat cx=0.0f, GLfloat cy=0.0f, GLfloat cz=0.0f)</td></tr>
+<tr class="separator:aa76d45e8c861b0c0059964eb7016c259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab120c19867ca2b00e72a700fe7df2577"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgPoints.html">GgPoints</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ab120c19867ca2b00e72a700fe7df2577">ggPointsSphere</a> (GLsizei countv, GLfloat radius=0.5f, GLfloat cx=0.0f, GLfloat cy=0.0f, GLfloat cz=0.0f)</td></tr>
+<tr class="separator:ab120c19867ca2b00e72a700fe7df2577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f6011901d5537ee16c410f9cfb54dbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgTriangles.html">GgTriangles</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a0f6011901d5537ee16c410f9cfb54dbb">ggRectangle</a> (GLfloat width=1.0f, GLfloat height=1.0f)</td></tr>
+<tr class="separator:a0f6011901d5537ee16c410f9cfb54dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9693cbd9743570d4e486ea7b2abb92da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgTriangles.html">GgTriangles</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a9693cbd9743570d4e486ea7b2abb92da">ggEllipse</a> (GLfloat width=1.0f, GLfloat height=1.0f, GLuint slices=16)</td></tr>
+<tr class="separator:a9693cbd9743570d4e486ea7b2abb92da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ed94211f298e4b0965dc438dc6e35bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgTriangles.html">GgTriangles</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a1ed94211f298e4b0965dc438dc6e35bf">ggArraysObj</a> (const std::string &amp;name, bool normalize=false)</td></tr>
+<tr class="separator:a1ed94211f298e4b0965dc438dc6e35bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37f5ca80d6084493ac9a3a040f6c0e85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgElements.html">GgElements</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a37f5ca80d6084493ac9a3a040f6c0e85">ggElementsObj</a> (const std::string &amp;name, bool normalize=false)</td></tr>
+<tr class="separator:a37f5ca80d6084493ac9a3a040f6c0e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d3c6911e6aff821d2dc3778b400ba1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgElements.html">GgElements</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a0d3c6911e6aff821d2dc3778b400ba1f">ggElementsMesh</a> (GLuint slices, GLuint stacks, const GLfloat(*pos)[3], const GLfloat(*norm)[3]=nullptr)</td></tr>
+<tr class="separator:a0d3c6911e6aff821d2dc3778b400ba1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4a21673782499741c37fe2efd693697"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgElements.html">GgElements</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ad4a21673782499741c37fe2efd693697">ggElementsSphere</a> (GLfloat radius=1.0f, int slices=16, int stacks=8)</td></tr>
+<tr class="separator:ad4a21673782499741c37fe2efd693697"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a619241f5e989d78b1cd92f9c12f80460"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a619241f5e989d78b1cd92f9c12f80460">ggLoadSimpleObj</a> (const std::string &amp;name, std::vector&lt; std::array&lt; GLuint, 3 &gt;&gt; &amp;group, std::vector&lt; <a class="el" href="structgg_1_1GgSimpleShader_1_1Material.html">GgSimpleShader::Material</a> &gt; &amp;material, std::vector&lt; <a class="el" href="structgg_1_1GgVertex.html">GgVertex</a> &gt; &amp;vert, bool normalize=false)</td></tr>
 <tr class="separator:a619241f5e989d78b1cd92f9c12f80460"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b304802078c6d28b9d75718af84d102"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a6b304802078c6d28b9d75718af84d102">ggLoadSimpleObj</a> (const std::string &amp;name, std::vector&lt; std::array&lt; GLuint, 3 &gt;&gt; &amp;group, std::vector&lt; <a class="el" href="structgg_1_1GgSimpleShader_1_1Material.html">GgSimpleShader::Material</a> &gt; &amp;material, std::vector&lt; <a class="el" href="structgg_1_1GgVertex.html">GgVertex</a> &gt; &amp;vert, std::vector&lt; GLuint &gt; &amp;face, bool normalize=false)</td></tr>
@@ -384,7 +384,7 @@ $(function() {
 </dl>
 <dl class="section note"><dt>覚え書き</dt><dd>OpenGL の API を呼び出し直後に実行すればエラーのあるときにメッセージを表示する. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l02562">2562</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l02561">2561</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -423,18 +423,18 @@ $(function() {
 </dl>
 <dl class="section note"><dt>覚え書き</dt><dd>FBO の API を呼び出し直後に実行すればエラーのあるときにメッセージを表示する. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l02606">2606</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l02605">2605</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a27430d60881b68061b8a8093cfac74ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27430d60881b68061b8a8093cfac74ce">&#9670;&nbsp;</a></span>ggArraysObj()</h2>
+<a id="a1ed94211f298e4b0965dc438dc6e35bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ed94211f298e4b0965dc438dc6e35bf">&#9670;&nbsp;</a></span>ggArraysObj()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="classgg_1_1GgTriangles.html">gg::GgTriangles</a> &gt; gg::ggArraysObj </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgTriangles.html">gg::GgTriangles</a> * gg::ggArraysObj </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
@@ -460,15 +460,15 @@ $(function() {
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="classgg_1_1GgTriangles.html">GgTriangles</a> 型の shared_ptr.</dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="classgg_1_1GgTriangles.html">GgTriangles</a> 型のポインタ.</dd></dl>
 <dl class="section note"><dt>覚え書き</dt><dd>三角形分割された Wavefront OBJ ファイルを読み込んで GgArrays 形式の三角形データを生成する. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05185">5185</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05209">5209</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacegg_a27430d60881b68061b8a8093cfac74ce_cgraph.png" border="0" usemap="#anamespacegg_a27430d60881b68061b8a8093cfac74ce_cgraph" alt=""/></div>
-<map name="anamespacegg_a27430d60881b68061b8a8093cfac74ce_cgraph" id="anamespacegg_a27430d60881b68061b8a8093cfac74ce_cgraph">
+<div class="center"><img src="namespacegg_a1ed94211f298e4b0965dc438dc6e35bf_cgraph.png" border="0" usemap="#anamespacegg_a1ed94211f298e4b0965dc438dc6e35bf_cgraph" alt=""/></div>
+<map name="anamespacegg_a1ed94211f298e4b0965dc438dc6e35bf_cgraph" id="anamespacegg_a1ed94211f298e4b0965dc438dc6e35bf_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,121,32"/>
 <area shape="rect" href="namespacegg.html#a619241f5e989d78b1cd92f9c12f80460" title=" " alt="" coords="169,5,316,32"/>
 </map>
@@ -557,7 +557,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>プログラムオブジェクトのプログラム名 (作成できなければ 0). </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l04958">4958</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l04982">4982</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -630,7 +630,7 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03788">3788</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03793">3793</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -732,7 +732,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>プログラムオブジェクトのプログラム名 (作成できなければ 0). </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l04780">4780</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l04804">4804</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1221,12 +1221,12 @@ $(function() {
 <area shape="rect" href="classgg_1_1GgVector.html#a784cd4bc882511beb2953014de7ba573" title=" " alt="" coords="212,5,375,32"/>
 <area shape="rect" href="namespacegg.html#aa3a225df6ac13de39d971cb22ee8f46e" title=" " alt="" coords="235,56,351,83"/>
 <area shape="rect" href="namespacegg.html#a2cd46afb53daa13fa8bb2de14baf4e7b" title=" " alt="" coords="212,107,375,133"/>
-<area shape="rect" href="namespacegg.html#afe1fcb205a0f34a31eda2d2eb4012084" title=" " alt="" coords="221,157,366,184"/>
+<area shape="rect" href="namespacegg.html#a0d3c6911e6aff821d2dc3778b400ba1f" title=" " alt="" coords="221,157,366,184"/>
 <area shape="rect" href="namespacegg.html#a010fafe70a15a0aaa10ca2cceab23305" title=" " alt="" coords="232,208,355,235"/>
 <area shape="rect" href="classgg_1_1GgVector.html#a5bac9976a7fe4be4a0e69c974153d745" title=" " alt="" coords="208,259,379,285"/>
 <area shape="rect" href="namespacegg.html#a53453ed6229bbd109c279a3765648d01" title=" " alt="" coords="21,48,144,75"/>
 <area shape="rect" href="classgg_1_1GgNormalTexture.html#adca09b7af04c1a58703fbafcea758671" title=" " alt="" coords="10,99,155,141"/>
-<area shape="rect" href="namespacegg.html#a04c512ca7268233b59fc61573dedcf80" title=" " alt="" coords="5,165,160,192"/>
+<area shape="rect" href="namespacegg.html#ad4a21673782499741c37fe2efd693697" title=" " alt="" coords="5,165,160,192"/>
 </map>
 </div>
 
@@ -1365,14 +1365,14 @@ $(function() {
 
 </div>
 </div>
-<a id="afe1fcb205a0f34a31eda2d2eb4012084"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe1fcb205a0f34a31eda2d2eb4012084">&#9670;&nbsp;</a></span>ggElementsMesh()</h2>
+<a id="a0d3c6911e6aff821d2dc3778b400ba1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d3c6911e6aff821d2dc3778b400ba1f">&#9670;&nbsp;</a></span>ggElementsMesh()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="classgg_1_1GgElements.html">gg::GgElements</a> &gt; gg::ggElementsMesh </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgElements.html">gg::GgElements</a> * gg::ggElementsMesh </td>
           <td>(</td>
           <td class="paramtype">GLuint&#160;</td>
           <td class="paramname"><em>slices</em>, </td>
@@ -1412,15 +1412,15 @@ $(function() {
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="classgg_1_1GgElements.html">GgElements</a> 型の shared_ptr.</dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="classgg_1_1GgElements.html">GgElements</a> 型のポインタ.</dd></dl>
 <dl class="section note"><dt>覚え書き</dt><dd>メッシュ状に <a class="el" href="classgg_1_1GgElements.html">GgElements</a> 形式の三角形データを生成する. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05219">5219</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05243">5243</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacegg_afe1fcb205a0f34a31eda2d2eb4012084_cgraph.png" border="0" usemap="#anamespacegg_afe1fcb205a0f34a31eda2d2eb4012084_cgraph" alt=""/></div>
-<map name="anamespacegg_afe1fcb205a0f34a31eda2d2eb4012084_cgraph" id="anamespacegg_afe1fcb205a0f34a31eda2d2eb4012084_cgraph">
+<div class="center"><img src="namespacegg_a0d3c6911e6aff821d2dc3778b400ba1f_cgraph.png" border="0" usemap="#anamespacegg_a0d3c6911e6aff821d2dc3778b400ba1f_cgraph" alt=""/></div>
+<map name="anamespacegg_a0d3c6911e6aff821d2dc3778b400ba1f_cgraph" id="anamespacegg_a0d3c6911e6aff821d2dc3778b400ba1f_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,151,32"/>
 <area shape="rect" href="namespacegg.html#accd75f02070ef57b1da0dccdec3fdd66" title=" " alt="" coords="199,5,321,32"/>
 <area shape="rect" href="namespacegg.html#a837850150a8293353ade7900452955b2" title=" " alt="" coords="369,5,473,32"/>
@@ -1430,23 +1430,23 @@ $(function() {
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacegg_afe1fcb205a0f34a31eda2d2eb4012084_icgraph.png" border="0" usemap="#anamespacegg_afe1fcb205a0f34a31eda2d2eb4012084_icgraph" alt=""/></div>
-<map name="anamespacegg_afe1fcb205a0f34a31eda2d2eb4012084_icgraph" id="anamespacegg_afe1fcb205a0f34a31eda2d2eb4012084_icgraph">
+<div class="center"><img src="namespacegg_a0d3c6911e6aff821d2dc3778b400ba1f_icgraph.png" border="0" usemap="#anamespacegg_a0d3c6911e6aff821d2dc3778b400ba1f_icgraph" alt=""/></div>
+<map name="anamespacegg_a0d3c6911e6aff821d2dc3778b400ba1f_icgraph" id="anamespacegg_a0d3c6911e6aff821d2dc3778b400ba1f_icgraph">
 <area shape="rect" title=" " alt="" coords="208,5,353,32"/>
-<area shape="rect" href="namespacegg.html#a04c512ca7268233b59fc61573dedcf80" title=" " alt="" coords="5,5,160,32"/>
+<area shape="rect" href="namespacegg.html#ad4a21673782499741c37fe2efd693697" title=" " alt="" coords="5,5,160,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a6b3f7b9af6577d60e0a6702fa7c1b3f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b3f7b9af6577d60e0a6702fa7c1b3f7">&#9670;&nbsp;</a></span>ggElementsObj()</h2>
+<a id="a37f5ca80d6084493ac9a3a040f6c0e85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37f5ca80d6084493ac9a3a040f6c0e85">&#9670;&nbsp;</a></span>ggElementsObj()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="classgg_1_1GgElements.html">gg::GgElements</a> &gt; gg::ggElementsObj </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgElements.html">gg::GgElements</a> * gg::ggElementsObj </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
@@ -1472,15 +1472,15 @@ $(function() {
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="classgg_1_1GgElements.html">GgElements</a> 型の shared_ptr.</dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="classgg_1_1GgElements.html">GgElements</a> 型のポインタ.</dd></dl>
 <dl class="section note"><dt>覚え書き</dt><dd>三角形分割された Wavefront OBJ ファイル を読み込んで <a class="el" href="classgg_1_1GgElements.html">GgElements</a> 形式の三角形データを生成する. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05201">5201</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05225">5225</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacegg_a6b3f7b9af6577d60e0a6702fa7c1b3f7_cgraph.png" border="0" usemap="#anamespacegg_a6b3f7b9af6577d60e0a6702fa7c1b3f7_cgraph" alt=""/></div>
-<map name="anamespacegg_a6b3f7b9af6577d60e0a6702fa7c1b3f7_cgraph" id="anamespacegg_a6b3f7b9af6577d60e0a6702fa7c1b3f7_cgraph">
+<div class="center"><img src="namespacegg_a37f5ca80d6084493ac9a3a040f6c0e85_cgraph.png" border="0" usemap="#anamespacegg_a37f5ca80d6084493ac9a3a040f6c0e85_cgraph" alt=""/></div>
+<map name="anamespacegg_a37f5ca80d6084493ac9a3a040f6c0e85_cgraph" id="anamespacegg_a37f5ca80d6084493ac9a3a040f6c0e85_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,139,32"/>
 <area shape="rect" href="namespacegg.html#a619241f5e989d78b1cd92f9c12f80460" title=" " alt="" coords="187,5,333,32"/>
 </map>
@@ -1488,14 +1488,14 @@ $(function() {
 
 </div>
 </div>
-<a id="a04c512ca7268233b59fc61573dedcf80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04c512ca7268233b59fc61573dedcf80">&#9670;&nbsp;</a></span>ggElementsSphere()</h2>
+<a id="ad4a21673782499741c37fe2efd693697"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4a21673782499741c37fe2efd693697">&#9670;&nbsp;</a></span>ggElementsSphere()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="classgg_1_1GgElements.html">gg::GgElements</a> &gt; gg::ggElementsSphere </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgElements.html">gg::GgElements</a> * gg::ggElementsSphere </td>
           <td>(</td>
           <td class="paramtype">GLfloat&#160;</td>
           <td class="paramname"><em>radius</em> = <code>1.0f</code>, </td>
@@ -1528,17 +1528,17 @@ $(function() {
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="classgg_1_1GgElements.html">GgElements</a> 型の shared_ptr.</dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="classgg_1_1GgElements.html">GgElements</a> 型のポインタ.</dd></dl>
 <dl class="section note"><dt>覚え書き</dt><dd>球状に <a class="el" href="classgg_1_1GgElements.html">GgElements</a> 形式の三角形データを生成する. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05314">5314</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05338">5338</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacegg_a04c512ca7268233b59fc61573dedcf80_cgraph.png" border="0" usemap="#anamespacegg_a04c512ca7268233b59fc61573dedcf80_cgraph" alt=""/></div>
-<map name="anamespacegg_a04c512ca7268233b59fc61573dedcf80_cgraph" id="anamespacegg_a04c512ca7268233b59fc61573dedcf80_cgraph">
+<div class="center"><img src="namespacegg_ad4a21673782499741c37fe2efd693697_cgraph.png" border="0" usemap="#anamespacegg_ad4a21673782499741c37fe2efd693697_cgraph" alt=""/></div>
+<map name="anamespacegg_ad4a21673782499741c37fe2efd693697_cgraph" id="anamespacegg_ad4a21673782499741c37fe2efd693697_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,160,32"/>
-<area shape="rect" href="namespacegg.html#afe1fcb205a0f34a31eda2d2eb4012084" title=" " alt="" coords="208,5,353,32"/>
+<area shape="rect" href="namespacegg.html#a0d3c6911e6aff821d2dc3778b400ba1f" title=" " alt="" coords="208,5,353,32"/>
 <area shape="rect" href="namespacegg.html#accd75f02070ef57b1da0dccdec3fdd66" title=" " alt="" coords="401,5,524,32"/>
 <area shape="rect" href="namespacegg.html#a837850150a8293353ade7900452955b2" title=" " alt="" coords="572,5,676,32"/>
 <area shape="rect" href="namespacegg.html#a4e49aff9138ef05a803f1ee703d0f67f" title=" " alt="" coords="724,5,809,32"/>
@@ -1547,14 +1547,14 @@ $(function() {
 
 </div>
 </div>
-<a id="a2f5a44c7c7ee2c1095d3a659db0f530f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f5a44c7c7ee2c1095d3a659db0f530f">&#9670;&nbsp;</a></span>ggEllipse()</h2>
+<a id="a9693cbd9743570d4e486ea7b2abb92da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9693cbd9743570d4e486ea7b2abb92da">&#9670;&nbsp;</a></span>ggEllipse()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="classgg_1_1GgTriangles.html">gg::GgTriangles</a> &gt; gg::ggEllipse </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgTriangles.html">gg::GgTriangles</a> * gg::ggEllipse </td>
           <td>(</td>
           <td class="paramtype">GLfloat&#160;</td>
           <td class="paramname"><em>width</em> = <code>1.0f</code>, </td>
@@ -1587,9 +1587,9 @@ $(function() {
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="classgg_1_1GgTriangles.html">GgTriangles</a> 型の shared_ptr. </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="classgg_1_1GgTriangles.html">GgTriangles</a> 型のポインタ. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05160">5160</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05184">5184</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1895,7 +1895,7 @@ $(function() {
 <p>ゲームグラフィックス特論の都合にもとづく初期化を行う.</p>
 <dl class="section note"><dt>覚え書き</dt><dd>Windows において OpenGL 1.2 以降の API を有効化する. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l01307">1307</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l01306">1306</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2103,12 +2103,12 @@ $(function() {
 <area shape="rect" href="classgg_1_1GgVector.html#a784cd4bc882511beb2953014de7ba573" title=" " alt="" coords="212,5,375,32"/>
 <area shape="rect" href="namespacegg.html#aa3a225df6ac13de39d971cb22ee8f46e" title=" " alt="" coords="235,56,351,83"/>
 <area shape="rect" href="namespacegg.html#a2cd46afb53daa13fa8bb2de14baf4e7b" title=" " alt="" coords="212,107,375,133"/>
-<area shape="rect" href="namespacegg.html#afe1fcb205a0f34a31eda2d2eb4012084" title=" " alt="" coords="221,157,366,184"/>
+<area shape="rect" href="namespacegg.html#a0d3c6911e6aff821d2dc3778b400ba1f" title=" " alt="" coords="221,157,366,184"/>
 <area shape="rect" href="namespacegg.html#a010fafe70a15a0aaa10ca2cceab23305" title=" " alt="" coords="232,208,355,235"/>
 <area shape="rect" href="classgg_1_1GgVector.html#a5bac9976a7fe4be4a0e69c974153d745" title=" " alt="" coords="208,259,379,285"/>
 <area shape="rect" href="namespacegg.html#a53453ed6229bbd109c279a3765648d01" title=" " alt="" coords="21,48,144,75"/>
 <area shape="rect" href="classgg_1_1GgNormalTexture.html#adca09b7af04c1a58703fbafcea758671" title=" " alt="" coords="10,99,155,141"/>
-<area shape="rect" href="namespacegg.html#a04c512ca7268233b59fc61573dedcf80" title=" " alt="" coords="5,165,160,192"/>
+<area shape="rect" href="namespacegg.html#ad4a21673782499741c37fe2efd693697" title=" " alt="" coords="5,165,160,192"/>
 </map>
 </div>
 
@@ -2251,7 +2251,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>プログラムオブジェクトのプログラム名 (作成できなければ 0). </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l04999">4999</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05023">5023</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2298,7 +2298,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<p>テクスチャメモリを確保して TGA 画像ファイルを読み込み法線マップを作成する.</p>
+<p>TGA 画像ファイルの高さマップ読み込んで法線マップのテクスチャを作成する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>読み込むファイル名. </td></tr>
@@ -2311,7 +2311,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>テクスチャの作成に成功すればテクスチャ名, 失敗すれば 0. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03873">3873</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03878">3878</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2319,7 +2319,7 @@ $(function() {
 <map name="anamespacegg_a53453ed6229bbd109c279a3765648d01_cgraph" id="anamespacegg_a53453ed6229bbd109c279a3765648d01_cgraph">
 <area shape="rect" title=" " alt="" coords="5,56,128,83"/>
 <area shape="rect" href="namespacegg.html#a2cd46afb53daa13fa8bb2de14baf4e7b" title=" " alt="" coords="176,5,339,32"/>
-<area shape="rect" href="namespacegg.html#a9b09e55a394271b6f383d01f37b0f18f" title=" " alt="" coords="193,56,322,83"/>
+<area shape="rect" href="namespacegg.html#a4c7814fec8a87f48c57a367567c422d6" title=" " alt="" coords="193,56,322,83"/>
 <area shape="rect" href="namespacegg.html#acce00f35f4b755cda72ec9f61b726c8f" title=" " alt="" coords="196,107,319,133"/>
 <area shape="rect" href="namespacegg.html#accd75f02070ef57b1da0dccdec3fdd66" title=" " alt="" coords="387,5,509,32"/>
 <area shape="rect" href="namespacegg.html#a837850150a8293353ade7900452955b2" title=" " alt="" coords="557,5,661,32"/>
@@ -2372,7 +2372,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<p>テクスチャメモリを確保して TGA 画像ファイルを読み込む.</p>
+<p>テクスチャを作成して TGA フォーマットの画像ファイルを読み込む.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>読み込むファイル名. </td></tr>
@@ -2385,14 +2385,14 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>テクスチャの作成に成功すればテクスチャ名, 失敗すれば 0. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03740">3740</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03744">3744</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacegg_a6ba6c60b5240e74a801a7f33e09bce87_cgraph.png" border="0" usemap="#anamespacegg_a6ba6c60b5240e74a801a7f33e09bce87_cgraph" alt=""/></div>
 <map name="anamespacegg_a6ba6c60b5240e74a801a7f33e09bce87_cgraph" id="anamespacegg_a6ba6c60b5240e74a801a7f33e09bce87_cgraph">
 <area shape="rect" title=" " alt="" coords="5,31,127,57"/>
-<area shape="rect" href="namespacegg.html#a9b09e55a394271b6f383d01f37b0f18f" title=" " alt="" coords="175,5,304,32"/>
+<area shape="rect" href="namespacegg.html#a4c7814fec8a87f48c57a367567c422d6" title=" " alt="" coords="175,5,304,32"/>
 <area shape="rect" href="namespacegg.html#acce00f35f4b755cda72ec9f61b726c8f" title=" " alt="" coords="178,56,301,83"/>
 </map>
 </div>
@@ -2449,7 +2449,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>プログラムオブジェクトのプログラム名 (作成できなければ 0). </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05131">5131</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05133">5133</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2518,7 +2518,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>プログラムオブジェクトのプログラム名 (作成できなければ 0). </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l04925">4925</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l04949">4949</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -2587,15 +2587,15 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>ファイルの読み込みに成功したら true. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l04532">4532</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l04556">4556</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacegg_a619241f5e989d78b1cd92f9c12f80460_icgraph.png" border="0" usemap="#anamespacegg_a619241f5e989d78b1cd92f9c12f80460_icgraph" alt=""/></div>
 <map name="anamespacegg_a619241f5e989d78b1cd92f9c12f80460_icgraph" id="anamespacegg_a619241f5e989d78b1cd92f9c12f80460_icgraph">
 <area shape="rect" title=" " alt="" coords="260,56,407,83"/>
-<area shape="rect" href="namespacegg.html#a27430d60881b68061b8a8093cfac74ce" title=" " alt="" coords="51,5,167,32"/>
-<area shape="rect" href="namespacegg.html#a6b3f7b9af6577d60e0a6702fa7c1b3f7" title=" " alt="" coords="42,56,175,83"/>
+<area shape="rect" href="namespacegg.html#a1ed94211f298e4b0965dc438dc6e35bf" title=" " alt="" coords="51,5,167,32"/>
+<area shape="rect" href="namespacegg.html#a37f5ca80d6084493ac9a3a040f6c0e85" title=" " alt="" coords="42,56,175,83"/>
 <area shape="rect" href="classgg_1_1GgSimpleObj.html#a1c0520c2ec7c7edb38550aae324c0cd6" title=" " alt="" coords="5,107,212,133"/>
 </map>
 </div>
@@ -2665,12 +2665,12 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>ファイルの読み込みに成功したら true. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l04621">4621</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l04645">4645</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a9b09e55a394271b6f383d01f37b0f18f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b09e55a394271b6f383d01f37b0f18f">&#9670;&nbsp;</a></span>ggLoadTexture()</h2>
+<a id="a4c7814fec8a87f48c57a367567c422d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c7814fec8a87f48c57a367567c422d6">&#9670;&nbsp;</a></span>ggLoadTexture()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2715,7 +2715,13 @@ $(function() {
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">GLenum&#160;</td>
-          <td class="paramname"><em>wrap</em> = <code>GL_CLAMP_TO_EDGE</code>&#160;</td>
+          <td class="paramname"><em>wrap</em> = <code>GL_CLAMP_TO_EDGE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>swizzle</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2724,16 +2730,17 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<p>テクスチャメモリを確保して画像データをテクスチャとして読み込む.</p>
+<p>テクスチャを作成して確保して画像データをテクスチャとして読み込む.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">image</td><td>テクスチャとして読み込むデータ, nullptr ならテクスチャメモリの確保のみを行う. </td></tr>
+    <tr><td class="paramname">image</td><td>テクスチャとして読み込むデータ, nullptr ならテクスチャの作成のみを行う. </td></tr>
     <tr><td class="paramname">width</td><td>テクスチャとして読み込むデータ image の横の画素数. </td></tr>
     <tr><td class="paramname">height</td><td>テクスチャとして読み込むデータ image の縦の画素数. </td></tr>
     <tr><td class="paramname">format</td><td>image のフォーマット. </td></tr>
     <tr><td class="paramname">type</td><td>image のデータ型. </td></tr>
     <tr><td class="paramname">internal</td><td>テクスチャの内部フォーマット. </td></tr>
     <tr><td class="paramname">wrap</td><td>テクスチャのラッピングモード, デフォルトは GL_CLAMP_TO_EDGE. </td></tr>
+    <tr><td class="paramname">swizzle</td><td>true ならテクスチャの赤と青を入れ替える, デフォルトは true. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2743,8 +2750,8 @@ $(function() {
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacegg_a9b09e55a394271b6f383d01f37b0f18f_icgraph.png" border="0" usemap="#anamespacegg_a9b09e55a394271b6f383d01f37b0f18f_icgraph" alt=""/></div>
-<map name="anamespacegg_a9b09e55a394271b6f383d01f37b0f18f_icgraph" id="anamespacegg_a9b09e55a394271b6f383d01f37b0f18f_icgraph">
+<div class="center"><img src="namespacegg_a4c7814fec8a87f48c57a367567c422d6_icgraph.png" border="0" usemap="#anamespacegg_a4c7814fec8a87f48c57a367567c422d6_icgraph" alt=""/></div>
+<map name="anamespacegg_a4c7814fec8a87f48c57a367567c422d6_icgraph" id="anamespacegg_a4c7814fec8a87f48c57a367567c422d6_icgraph">
 <area shape="rect" title=" " alt="" coords="176,31,305,57"/>
 <area shape="rect" href="namespacegg.html#a53453ed6229bbd109c279a3765648d01" title=" " alt="" coords="5,5,128,32"/>
 <area shape="rect" href="namespacegg.html#a6ba6c60b5240e74a801a7f33e09bce87" title=" " alt="" coords="6,56,127,83"/>
@@ -3345,12 +3352,12 @@ $(function() {
 <map name="anamespacegg_accd75f02070ef57b1da0dccdec3fdd66_icgraph" id="anamespacegg_accd75f02070ef57b1da0dccdec3fdd66_icgraph">
 <area shape="rect" title=" " alt="" coords="427,144,549,171"/>
 <area shape="rect" href="namespacegg.html#a2cd46afb53daa13fa8bb2de14baf4e7b" title=" " alt="" coords="212,64,375,91"/>
-<area shape="rect" href="namespacegg.html#afe1fcb205a0f34a31eda2d2eb4012084" title=" " alt="" coords="221,119,366,145"/>
+<area shape="rect" href="namespacegg.html#a0d3c6911e6aff821d2dc3778b400ba1f" title=" " alt="" coords="221,119,366,145"/>
 <area shape="rect" href="namespacegg.html#a010fafe70a15a0aaa10ca2cceab23305" title=" " alt="" coords="232,169,355,196"/>
 <area shape="rect" href="classgg_1_1GgVector.html#a5bac9976a7fe4be4a0e69c974153d745" title=" " alt="" coords="208,220,379,247"/>
 <area shape="rect" href="namespacegg.html#a53453ed6229bbd109c279a3765648d01" title=" " alt="" coords="21,5,144,32"/>
 <area shape="rect" href="classgg_1_1GgNormalTexture.html#adca09b7af04c1a58703fbafcea758671" title=" " alt="" coords="10,57,155,98"/>
-<area shape="rect" href="namespacegg.html#a04c512ca7268233b59fc61573dedcf80" title=" " alt="" coords="5,123,160,149"/>
+<area shape="rect" href="namespacegg.html#ad4a21673782499741c37fe2efd693697" title=" " alt="" coords="5,123,160,149"/>
 </map>
 </div>
 
@@ -3820,14 +3827,14 @@ $(function() {
 
 </div>
 </div>
-<a id="a63f9b914f19cd1e877ae22730aa9581d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63f9b914f19cd1e877ae22730aa9581d">&#9670;&nbsp;</a></span>ggPointsCube()</h2>
+<a id="aa76d45e8c861b0c0059964eb7016c259"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa76d45e8c861b0c0059964eb7016c259">&#9670;&nbsp;</a></span>ggPointsCube()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="classgg_1_1GgPoints.html">gg::GgPoints</a> &gt; gg::ggPointsCube </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgPoints.html">gg::GgPoints</a> * gg::ggPointsCube </td>
           <td>(</td>
           <td class="paramtype">GLsizei&#160;</td>
           <td class="paramname"><em>countv</em>, </td>
@@ -3874,20 +3881,20 @@ $(function() {
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="classgg_1_1GgPoints.html">GgPoints</a> 型の shared_ptr. </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="classgg_1_1GgPoints.html">GgPoints</a> 型の ポインタ. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05086">5086</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05110">5110</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a33e667c9e5de5a1185077d9858375716"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33e667c9e5de5a1185077d9858375716">&#9670;&nbsp;</a></span>ggPointsSphere()</h2>
+<a id="ab120c19867ca2b00e72a700fe7df2577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab120c19867ca2b00e72a700fe7df2577">&#9670;&nbsp;</a></span>ggPointsSphere()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="classgg_1_1GgPoints.html">gg::GgPoints</a> &gt; gg::ggPointsSphere </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgPoints.html">gg::GgPoints</a> * gg::ggPointsSphere </td>
           <td>(</td>
           <td class="paramtype">GLsizei&#160;</td>
           <td class="paramname"><em>countv</em>, </td>
@@ -3934,9 +3941,9 @@ $(function() {
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="classgg_1_1GgPoints.html">GgPoints</a> 型の shared_ptr. </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="classgg_1_1GgPoints.html">GgPoints</a> 型のポインタ. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05112">5112</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05136">5136</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -4212,7 +4219,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>読み込みに成功すれば true, 失敗すれば false. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03576">3576</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03575">3575</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -4228,14 +4235,14 @@ $(function() {
 
 </div>
 </div>
-<a id="a23a2386c47f07cd53de2958985783c2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23a2386c47f07cd53de2958985783c2d">&#9670;&nbsp;</a></span>ggRectangle()</h2>
+<a id="a0f6011901d5537ee16c410f9cfb54dbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f6011901d5537ee16c410f9cfb54dbb">&#9670;&nbsp;</a></span>ggRectangle()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="classgg_1_1GgTriangles.html">gg::GgTriangles</a> &gt; gg::ggRectangle </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgTriangles.html">gg::GgTriangles</a> * gg::ggRectangle </td>
           <td>(</td>
           <td class="paramtype">GLfloat&#160;</td>
           <td class="paramname"><em>width</em> = <code>1.0f</code>, </td>
@@ -4261,9 +4268,9 @@ $(function() {
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="classgg_1_1GgTriangles.html">GgTriangles</a> 型の shared_ptr. </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd><a class="el" href="classgg_1_1GgTriangles.html">GgTriangles</a> 型のポインタ. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05139">5139</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05163">5163</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -4880,7 +4887,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>保存に成功すれば true, 失敗すれば false. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03520">3520</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03519">3519</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -4917,7 +4924,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>保存に成功すれば true, 失敗すれば false. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03546">3546</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03545">3545</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -4986,7 +4993,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>保存に成功すれば true, 失敗すれば false. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03430">3430</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03429">3429</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -5919,7 +5926,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2022年12月06日(火) 23時01分18秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2022年12月11日(日) 23時16分30秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

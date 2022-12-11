@@ -72,7 +72,7 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// プロジェクト名</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#if !defined(PROJECT_NAME)</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="ggsample01_8cpp.html#ae73053051efbb45c3a39751f5ce9fb36">    8</a></span>&#160;<span class="preprocessor">#  define PROJECT_NAME &quot;matching&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="ggsample01_8cpp.html#ae73053051efbb45c3a39751f5ce9fb36">    8</a></span>&#160;<span class="preprocessor">#  define PROJECT_NAME &quot;ggsample01&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// 構成ファイル名</span></div>
@@ -98,7 +98,7 @@ $(function() {
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">const</span> <a class="code" href="classConfig.html">Config</a> config{ <a class="code" href="ggsample01_8cpp.html#a42bf63540ee0039a3a23db1b5ec3202b">CONFIG_FILE</a> };</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="comment">// ウィンドウを作成する</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="classWindow.html">Window</a> window{ argc &gt; 1 ? argv[1] : <a class="code" href="ggsample01_8cpp.html#ae73053051efbb45c3a39751f5ce9fb36">PROJECT_NAME</a> };</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="classWindow.html">Window</a> window{ argc &gt; 1 ? argv[1] : <a class="code" href="ggsample01_8cpp.html#ae73053051efbb45c3a39751f5ce9fb36">PROJECT_NAME</a>, config.getWidth(), config.getHeight() };</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">// メニューを初期化する</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="classMenu.html">Menu</a> menu{ config };</div>
@@ -153,7 +153,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2022年12月06日(火) 23時01分17秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2022年12月11日(日) 23時16分29秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -80,6 +80,10 @@ $(function() {
 <tr class="separator:abc51a2c710c8666d27b53cc03597201d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a543dce59b66475c5108088ee4ce1cdfc"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfig.html#a543dce59b66475c5108088ee4ce1cdfc">~Config</a> ()</td></tr>
 <tr class="separator:a543dce59b66475c5108088ee4ce1cdfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dc0108805ae6c4c8d0ce90853504f1f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfig.html#a3dc0108805ae6c4c8d0ce90853504f1f">getWidth</a> () const</td></tr>
+<tr class="separator:a3dc0108805ae6c4c8d0ce90853504f1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa87cc9fc950c37081b7e26280d159b5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfig.html#aaa87cc9fc950c37081b7e26280d159b5">getHeight</a> () const</td></tr>
+<tr class="separator:aaa87cc9fc950c37081b7e26280d159b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e3336e5f83b8cea516039537861e9e6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfig.html#a5e3336e5f83b8cea516039537861e9e6">load</a> (const std::string &amp;filename)</td></tr>
 <tr class="separator:a5e3336e5f83b8cea516039537861e9e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a817566065d6f1d047c96b94fc596830c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfig.html#a817566065d6f1d047c96b94fc596830c">save</a> (const std::string &amp;filename) const</td></tr>
@@ -132,19 +136,21 @@ $(function() {
 </div><div class="memdoc">
 <p>ファイルから構成データを読み込むコンストラクタ </p>
 
-<p class="definition"> <a class="el" href="Config_8cpp_source.html">Config.cpp</a> の <a class="el" href="Config_8cpp_source.html#l00039">39</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Config_8cpp_source.html">Config.cpp</a> の <a class="el" href="Config_8cpp_source.html#l00042">42</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classConfig_abc51a2c710c8666d27b53cc03597201d_cgraph.png" border="0" usemap="#aclassConfig_abc51a2c710c8666d27b53cc03597201d_cgraph" alt=""/></div>
 <map name="aclassConfig_abc51a2c710c8666d27b53cc03597201d_cgraph" id="aclassConfig_abc51a2c710c8666d27b53cc03597201d_cgraph">
-<area shape="rect" title=" " alt="" coords="5,81,108,108"/>
-<area shape="rect" href="classConfig.html#a5e3336e5f83b8cea516039537861e9e6" title=" " alt="" coords="157,56,247,83"/>
-<area shape="rect" href="classConfig.html#a817566065d6f1d047c96b94fc596830c" title=" " alt="" coords="156,107,248,133"/>
+<area shape="rect" title=" " alt="" coords="5,145,108,172"/>
+<area shape="rect" href="classConfig.html#a5e3336e5f83b8cea516039537861e9e6" title=" " alt="" coords="157,95,247,121"/>
+<area shape="rect" href="classConfig.html#a817566065d6f1d047c96b94fc596830c" title=" " alt="" coords="156,171,248,197"/>
 <area shape="rect" href="parseconfig_8h.html#aa526c0c2f6ac0f2d8e25de0a8a1300ff" title=" " alt="" coords="298,5,373,32"/>
-<area shape="rect" href="parseconfig_8h.html#a4b215c66b6bbfc08f456fd547694f9cc" title=" " alt="" coords="296,56,375,83"/>
-<area shape="rect" href="parseconfig_8h.html#a6d1cf7a5f56fa09883319b5afb48502f" title=" " alt="" coords="298,107,373,133"/>
-<area shape="rect" href="parseconfig_8h.html#a3224acf4e4e2672b6b4d9031f955220c" title=" " alt="" coords="296,157,375,184"/>
+<area shape="rect" href="parseconfig_8h.html#ad7387beefe783ec9f01caa7ee49e60db" title=" " alt="" coords="299,56,372,83"/>
+<area shape="rect" href="parseconfig_8h.html#a4b215c66b6bbfc08f456fd547694f9cc" title=" " alt="" coords="296,107,375,133"/>
+<area shape="rect" href="parseconfig_8h.html#a6d1cf7a5f56fa09883319b5afb48502f" title=" " alt="" coords="298,157,373,184"/>
+<area shape="rect" href="parseconfig_8h.html#ab6753f500daf700e3db65f17b841ce2d" title=" " alt="" coords="299,208,372,235"/>
+<area shape="rect" href="parseconfig_8h.html#a3224acf4e4e2672b6b4d9031f955220c" title=" " alt="" coords="296,259,375,285"/>
 </map>
 </div>
 
@@ -174,11 +180,67 @@ $(function() {
 </div><div class="memdoc">
 <p>デストラクタ </p>
 
-<p class="definition"> <a class="el" href="Config_8cpp_source.html">Config.cpp</a> の <a class="el" href="Config_8cpp_source.html#l00049">49</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Config_8cpp_source.html">Config.cpp</a> の <a class="el" href="Config_8cpp_source.html#l00052">52</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
+<a id="aaa87cc9fc950c37081b7e26280d159b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa87cc9fc950c37081b7e26280d159b5">&#9670;&nbsp;</a></span>getHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto Config::getHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>ウィンドウの横幅を得る </p>
+
+<p class="definition"> <a class="el" href="Config_8h_source.html">Config.h</a> の <a class="el" href="Config_8h_source.html#l00091">91</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3dc0108805ae6c4c8d0ce90853504f1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dc0108805ae6c4c8d0ce90853504f1f">&#9670;&nbsp;</a></span>getWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto Config::getWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>ウィンドウの横幅を得る </p>
+
+<p class="definition"> <a class="el" href="Config_8h_source.html">Config.h</a> の <a class="el" href="Config_8h_source.html#l00083">83</a> 行目に定義があります。</p>
+
+</div>
+</div>
 <a id="a5e3336e5f83b8cea516039537861e9e6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5e3336e5f83b8cea516039537861e9e6">&#9670;&nbsp;</a></span>load()</h2>
 
@@ -196,15 +258,16 @@ $(function() {
 </div><div class="memdoc">
 <p>設定ファイルを読み込む </p>
 
-<p class="definition"> <a class="el" href="Config_8cpp_source.html">Config.cpp</a> の <a class="el" href="Config_8cpp_source.html#l00056">56</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Config_8cpp_source.html">Config.cpp</a> の <a class="el" href="Config_8cpp_source.html#l00059">59</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classConfig_a5e3336e5f83b8cea516039537861e9e6_cgraph.png" border="0" usemap="#aclassConfig_a5e3336e5f83b8cea516039537861e9e6_cgraph" alt=""/></div>
 <map name="aclassConfig_a5e3336e5f83b8cea516039537861e9e6_cgraph" id="aclassConfig_a5e3336e5f83b8cea516039537861e9e6_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,96,57"/>
+<area shape="rect" title=" " alt="" coords="5,56,96,83"/>
 <area shape="rect" href="parseconfig_8h.html#aa526c0c2f6ac0f2d8e25de0a8a1300ff" title=" " alt="" coords="146,5,221,32"/>
-<area shape="rect" href="parseconfig_8h.html#a4b215c66b6bbfc08f456fd547694f9cc" title=" " alt="" coords="144,56,223,83"/>
+<area shape="rect" href="parseconfig_8h.html#ad7387beefe783ec9f01caa7ee49e60db" title=" " alt="" coords="147,56,220,83"/>
+<area shape="rect" href="parseconfig_8h.html#a4b215c66b6bbfc08f456fd547694f9cc" title=" " alt="" coords="144,107,223,133"/>
 </map>
 </div>
 <div class="dynheader">
@@ -236,15 +299,16 @@ $(function() {
 </div><div class="memdoc">
 <p>設定ファイルを書き出す </p>
 
-<p class="definition"> <a class="el" href="Config_8cpp_source.html">Config.cpp</a> の <a class="el" href="Config_8cpp_source.html#l00097">97</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="Config_8cpp_source.html">Config.cpp</a> の <a class="el" href="Config_8cpp_source.html#l00109">109</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classConfig_a817566065d6f1d047c96b94fc596830c_cgraph.png" border="0" usemap="#aclassConfig_a817566065d6f1d047c96b94fc596830c_cgraph" alt=""/></div>
 <map name="aclassConfig_a817566065d6f1d047c96b94fc596830c_cgraph" id="aclassConfig_a817566065d6f1d047c96b94fc596830c_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,97,57"/>
+<area shape="rect" title=" " alt="" coords="5,56,97,83"/>
 <area shape="rect" href="parseconfig_8h.html#a6d1cf7a5f56fa09883319b5afb48502f" title=" " alt="" coords="147,5,222,32"/>
-<area shape="rect" href="parseconfig_8h.html#a3224acf4e4e2672b6b4d9031f955220c" title=" " alt="" coords="145,56,224,83"/>
+<area shape="rect" href="parseconfig_8h.html#ab6753f500daf700e3db65f17b841ce2d" title=" " alt="" coords="148,56,221,83"/>
+<area shape="rect" href="parseconfig_8h.html#a3224acf4e4e2672b6b4d9031f955220c" title=" " alt="" coords="145,107,224,133"/>
 </map>
 </div>
 <div class="dynheader">
@@ -291,7 +355,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2022年12月06日(火) 23時01分17秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2022年12月11日(日) 23時16分29秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
