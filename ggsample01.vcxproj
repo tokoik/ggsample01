@@ -170,7 +170,6 @@
     <ClInclude Include="Menu.h" />
     <ClInclude Include="parseconfig.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ggsample01.rc" />

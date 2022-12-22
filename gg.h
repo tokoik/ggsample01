@@ -66,6 +66,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #    endif
 #    define GLFW3_CONFIGURATION "Debug"
 #  else
+#    if !defined(NDEBUG)
+#      define NDEBUG
+#    endif
 #    define GLFW3_CONFIGURATION "Release"
 #  endif
 // プラットフォームを調べる
