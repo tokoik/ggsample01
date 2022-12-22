@@ -151,6 +151,7 @@
     <ClCompile Include="Config.cpp" />
     <ClCompile Include="Draw.cpp" />
     <ClCompile Include="gg.cpp" />
+    <ClCompile Include="GgApp.cpp" />
     <ClCompile Include="ggsample01.cpp" />
     <ClCompile Include="lib\imgui.cpp" />
     <ClCompile Include="lib\imgui_draw.cpp" />

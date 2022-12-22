@@ -37,7 +37,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // 標準ライブラリ
 #include <cfloat>
 #include <cstdlib>
-#include <stdexcept>
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -5187,7 +5186,7 @@ gg::GgTriangles* gg::ggEllipse(GLfloat width, GLfloat height, GLuint slices)
   constexpr GLfloat scale{ 0.5f };
 
   // 作業用のメモリ
-  std::vector<gg::GgVertex> vert(slices);
+  std::vector<gg::GgVertex> vert;
 
   // 頂点位置と法線を求める
   for (GLuint v = 0; v < slices; ++v)

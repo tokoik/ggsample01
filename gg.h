@@ -1326,7 +1326,6 @@ extern PFNGLWINDOWRECTANGLESEXTPROC glWindowRectanglesEXT;
 #include <vector>
 #include <string>
 #include <memory>
-#include <cstddef>
 
 ///
 /// ゲームグラフィックス特論の宿題用補助プログラムの名前空間
