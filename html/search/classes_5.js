@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['window_340',['Window',['../classWindow.html',1,'']]]
+  ['window_0',['Window',['../classGgApp_1_1Window.html',1,'GgApp']]]
 ];

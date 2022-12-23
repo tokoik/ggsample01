@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: Menu クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
+  <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
   </td>
@@ -29,21 +30,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.1 -->
+<!-- 構築: Doxygen 1.9.5 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -54,9 +56,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
@@ -65,14 +74,13 @@ $(function() {
 <a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="#friends">フレンド</a> &#124;
 <a href="classMenu-members.html">全メンバ一覧</a>  </div>
-  <div class="headertitle">
-<div class="title">Menu クラス</div>  </div>
+  <div class="headertitle"><div class="title">Menu クラス</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Menu_8h_source.html">Menu.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:af68aba17029de91b02b05f102ca63f37"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenu.html#af68aba17029de91b02b05f102ca63f37">Menu</a> (const <a class="el" href="classConfig.html">Config</a> &amp;config)</td></tr>
 <tr class="separator:af68aba17029de91b02b05f102ca63f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -80,23 +88,23 @@ $(function() {
 <tr class="separator:a1fb469a852bcd1eea11afa514aa3fed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a831387f51358cfb88cd018e1777bc980"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenu.html#a831387f51358cfb88cd018e1777bc980">~Menu</a> ()</td></tr>
 <tr class="separator:a831387f51358cfb88cd018e1777bc980"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40296c985eca04af837990c4aeb510f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMenu.html">Menu</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenu.html#a40296c985eca04af837990c4aeb510f1">operator=</a> (const <a class="el" href="classMenu.html">Menu</a> &amp;menu)=delete</td></tr>
-<tr class="separator:a40296c985eca04af837990c4aeb510f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4959822a63a56fc22f664598ff81313a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMenu.html">Menu</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenu.html#a4959822a63a56fc22f664598ff81313a">operator=</a> (const <a class="el" href="classMenu.html">Menu</a> &amp;menu)=delete</td></tr>
+<tr class="separator:a4959822a63a56fc22f664598ff81313a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cd7ab9901a8f42a3ae977d0774398a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenu.html#a2cd7ab9901a8f42a3ae977d0774398a6">draw</a> ()</td></tr>
 <tr class="separator:a2cd7ab9901a8f42a3ae977d0774398a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 フレンド</h2></td></tr>
 <tr class="memitem:aa69241f4ae49fee45f9084302f7cea5a"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenu.html#aa69241f4ae49fee45f9084302f7cea5a">Draw</a></td></tr>
 <tr class="separator:aa69241f4ae49fee45f9084302f7cea5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>メニューの描画 </p>
+<div class="textblock"><p >メニューの描画 </p>
 
 <p class="definition"> <a class="el" href="Menu_8h_source.html">Menu.h</a> の <a class="el" href="Menu_8h_source.html#l00020">20</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
-<a id="af68aba17029de91b02b05f102ca63f37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af68aba17029de91b02b05f102ca63f37">&#9670;&nbsp;</a></span>Menu() <span class="overload">[1/2]</span></h2>
+<a id="af68aba17029de91b02b05f102ca63f37" name="af68aba17029de91b02b05f102ca63f37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af68aba17029de91b02b05f102ca63f37">&#9670;&#160;</a></span>Menu() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -110,14 +118,14 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<p>コンストラクタ </p>
+<p >コンストラクタ </p>
 
 <p class="definition"> <a class="el" href="Menu_8cpp_source.html">Menu.cpp</a> の <a class="el" href="Menu_8cpp_source.html#l00013">13</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a1fb469a852bcd1eea11afa514aa3fed8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fb469a852bcd1eea11afa514aa3fed8">&#9670;&nbsp;</a></span>Menu() <span class="overload">[2/2]</span></h2>
+<a id="a1fb469a852bcd1eea11afa514aa3fed8" name="a1fb469a852bcd1eea11afa514aa3fed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fb469a852bcd1eea11afa514aa3fed8">&#9670;&#160;</a></span>Menu() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -142,8 +150,8 @@ $(function() {
 
 </div>
 </div>
-<a id="a831387f51358cfb88cd018e1777bc980"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a831387f51358cfb88cd018e1777bc980">&#9670;&nbsp;</a></span>~Menu()</h2>
+<a id="a831387f51358cfb88cd018e1777bc980" name="a831387f51358cfb88cd018e1777bc980"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a831387f51358cfb88cd018e1777bc980">&#9670;&#160;</a></span>~Menu()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -164,15 +172,15 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>デストラクタ </p>
+<p >デストラクタ </p>
 
 <p class="definition"> <a class="el" href="Menu_8cpp_source.html">Menu.cpp</a> の <a class="el" href="Menu_8cpp_source.html#l00049">49</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="a2cd7ab9901a8f42a3ae977d0774398a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cd7ab9901a8f42a3ae977d0774398a6">&#9670;&nbsp;</a></span>draw()</h2>
+<a id="a2cd7ab9901a8f42a3ae977d0774398a6" name="a2cd7ab9901a8f42a3ae977d0774398a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cd7ab9901a8f42a3ae977d0774398a6">&#9670;&#160;</a></span>draw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -185,14 +193,14 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<p>描画する </p>
+<p >描画する </p>
 
 <p class="definition"> <a class="el" href="Menu_8cpp_source.html">Menu.cpp</a> の <a class="el" href="Menu_8cpp_source.html#l00074">74</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a40296c985eca04af837990c4aeb510f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40296c985eca04af837990c4aeb510f1">&#9670;&nbsp;</a></span>operator=()</h2>
+<a id="a4959822a63a56fc22f664598ff81313a" name="a4959822a63a56fc22f664598ff81313a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4959822a63a56fc22f664598ff81313a">&#9670;&#160;</a></span>operator=()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -201,7 +209,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classMenu.html">Menu</a>&amp; Menu::operator= </td>
+          <td class="memname"><a class="el" href="classMenu.html">Menu</a> &amp; Menu::operator= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classMenu.html">Menu</a> &amp;&#160;</td>
           <td class="paramname"><em>menu</em></td><td>)</td>
@@ -218,8 +226,8 @@ $(function() {
 </div>
 </div>
 <h2 class="groupheader">フレンドと関連関数の詳解</h2>
-<a id="aa69241f4ae49fee45f9084302f7cea5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa69241f4ae49fee45f9084302f7cea5a">&#9670;&nbsp;</a></span>Draw</h2>
+<a id="aa69241f4ae49fee45f9084302f7cea5a" name="aa69241f4ae49fee45f9084302f7cea5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa69241f4ae49fee45f9084302f7cea5a">&#9670;&#160;</a></span>Draw</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -249,7 +257,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2022年12月11日(日) 23時16分29秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2022年12月23日(金) 09時58分52秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: gg::GgShader クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
+  <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
   </td>
@@ -29,21 +30,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.1 -->
+<!-- 構築: Doxygen 1.9.5 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -54,9 +56,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -68,14 +77,13 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="classgg_1_1GgShader-members.html">全メンバ一覧</a>  </div>
-  <div class="headertitle">
-<div class="title">gg::GgShader クラス</div>  </div>
+  <div class="headertitle"><div class="title">gg::GgShader クラス</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="gg_8h_source.html">gg.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:a7908ddf4209c6b17fdb1846c65f1e384"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgShader.html#a7908ddf4209c6b17fdb1846c65f1e384">GgShader</a> (const std::string &amp;vert, const std::string &amp;frag=&quot;&quot;, const std::string &amp;geom=&quot;&quot;, int nvarying=0, const char *const *varyings=nullptr)</td></tr>
 <tr class="separator:a7908ddf4209c6b17fdb1846c65f1e384"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -85,8 +93,8 @@ $(function() {
 <tr class="separator:abd3ee504e531e1f73e3b15afe0463c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af065218c76d31a9b8d90faf17c65aeb4"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgShader.html#af065218c76d31a9b8d90faf17c65aeb4">~GgShader</a> ()</td></tr>
 <tr class="separator:af065218c76d31a9b8d90faf17c65aeb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64b01b192b881e4f898145b1c3777197"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgShader.html">GgShader</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgShader.html#a64b01b192b881e4f898145b1c3777197">operator=</a> (const <a class="el" href="classgg_1_1GgShader.html">GgShader</a> &amp;o)=delete</td></tr>
-<tr class="separator:a64b01b192b881e4f898145b1c3777197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a654cb59e12d265bb64c094e380898e29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgShader.html">GgShader</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgShader.html#a654cb59e12d265bb64c094e380898e29">operator=</a> (const <a class="el" href="classgg_1_1GgShader.html">GgShader</a> &amp;o)=delete</td></tr>
+<tr class="separator:a654cb59e12d265bb64c094e380898e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3adfac57f672157d521faeeccc3dd3c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgShader.html#a3adfac57f672157d521faeeccc3dd3c5">use</a> () const</td></tr>
 <tr class="separator:a3adfac57f672157d521faeeccc3dd3c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a360553a2c8e550c7b59c478995310163"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgShader.html#a360553a2c8e550c7b59c478995310163">unuse</a> () const</td></tr>
@@ -95,13 +103,13 @@ $(function() {
 <tr class="separator:afb49a96fa6fa7b981013ee783511b292"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>シェーダの基底クラス.</p>
+<div class="textblock"><p >シェーダの基底クラス.</p>
 <dl class="section note"><dt>覚え書き</dt><dd>シェーダのクラスはこのクラスを派生して作る. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06694">6694</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06696">6696</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
-<a id="a7908ddf4209c6b17fdb1846c65f1e384"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7908ddf4209c6b17fdb1846c65f1e384">&#9670;&nbsp;</a></span>GgShader() <span class="overload">[1/3]</span></h2>
+<a id="a7908ddf4209c6b17fdb1846c65f1e384" name="a7908ddf4209c6b17fdb1846c65f1e384"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7908ddf4209c6b17fdb1846c65f1e384">&#9670;&#160;</a></span>GgShader() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -151,7 +159,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>コンストラクタ.</p>
+<p >コンストラクタ.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">vert</td><td>バーテックスシェーダのソースファイル名. </td></tr>
@@ -163,12 +171,22 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06710">6710</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06712">6712</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgShader_a7908ddf4209c6b17fdb1846c65f1e384_cgraph.png" border="0" usemap="#aclassgg_1_1GgShader_a7908ddf4209c6b17fdb1846c65f1e384_cgraph" alt=""/></div>
+<map name="aclassgg_1_1GgShader_a7908ddf4209c6b17fdb1846c65f1e384_cgraph" id="aclassgg_1_1GgShader_a7908ddf4209c6b17fdb1846c65f1e384_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,173,31"/>
+<area shape="rect" href="namespacegg.html#acbe6e5044fcf43f001242937e14b6b43" title=" " alt="" coords="221,5,348,31"/>
+<area shape="rect" href="namespacegg.html#a047058f8d45e31ce77232ef66796e6b0" title=" " alt="" coords="396,5,533,31"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="a4e1c6570fb96bb96f5d693b55d0e0dac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e1c6570fb96bb96f5d693b55d0e0dac">&#9670;&nbsp;</a></span>GgShader() <span class="overload">[2/3]</span></h2>
+<a id="a4e1c6570fb96bb96f5d693b55d0e0dac" name="a4e1c6570fb96bb96f5d693b55d0e0dac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e1c6570fb96bb96f5d693b55d0e0dac">&#9670;&#160;</a></span>GgShader() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -206,7 +224,7 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>コンストラクタ.</p>
+<p >コンストラクタ.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">files</td><td>バーテックスシェーダのソースファイル名の配列. </td></tr>
@@ -216,12 +234,12 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06728">6728</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06730">6730</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="abd3ee504e531e1f73e3b15afe0463c9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd3ee504e531e1f73e3b15afe0463c9b">&#9670;&nbsp;</a></span>GgShader() <span class="overload">[3/3]</span></h2>
+<a id="abd3ee504e531e1f73e3b15afe0463c9b" name="abd3ee504e531e1f73e3b15afe0463c9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd3ee504e531e1f73e3b15afe0463c9b">&#9670;&#160;</a></span>GgShader() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -243,12 +261,12 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>コピーコンストラクタは使用禁止. </p>
+<p >コピーコンストラクタは使用禁止. </p>
 
 </div>
 </div>
-<a id="af065218c76d31a9b8d90faf17c65aeb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af065218c76d31a9b8d90faf17c65aeb4">&#9670;&nbsp;</a></span>~GgShader()</h2>
+<a id="af065218c76d31a9b8d90faf17c65aeb4" name="af065218c76d31a9b8d90faf17c65aeb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af065218c76d31a9b8d90faf17c65aeb4">&#9670;&#160;</a></span>~GgShader()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -269,15 +287,15 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>デストラクタ. </p>
+<p >デストラクタ. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06745">6745</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06747">6747</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="afb49a96fa6fa7b981013ee783511b292"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb49a96fa6fa7b981013ee783511b292">&#9670;&nbsp;</a></span>get()</h2>
+<a id="afb49a96fa6fa7b981013ee783511b292" name="afb49a96fa6fa7b981013ee783511b292"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb49a96fa6fa7b981013ee783511b292">&#9670;&#160;</a></span>get()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -298,15 +316,15 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>シェーダのプログラム名を得る.</p>
+<p >シェーダのプログラム名を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>シェーダのプログラム名. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06778">6778</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06780">6780</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a64b01b192b881e4f898145b1c3777197"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64b01b192b881e4f898145b1c3777197">&#9670;&nbsp;</a></span>operator=()</h2>
+<a id="a654cb59e12d265bb64c094e380898e29" name="a654cb59e12d265bb64c094e380898e29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a654cb59e12d265bb64c094e380898e29">&#9670;&#160;</a></span>operator=()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -315,7 +333,7 @@ $(function() {
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgg_1_1GgShader.html">GgShader</a>&amp; gg::GgShader::operator= </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgShader.html">GgShader</a> &amp; gg::GgShader::operator= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classgg_1_1GgShader.html">GgShader</a> &amp;&#160;</td>
           <td class="paramname"><em>o</em></td><td>)</td>
@@ -328,12 +346,12 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>代入演算子は使用禁止. </p>
+<p >代入演算子は使用禁止. </p>
 
 </div>
 </div>
-<a id="a360553a2c8e550c7b59c478995310163"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a360553a2c8e550c7b59c478995310163">&#9670;&nbsp;</a></span>unuse()</h2>
+<a id="a360553a2c8e550c7b59c478995310163" name="a360553a2c8e550c7b59c478995310163"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a360553a2c8e550c7b59c478995310163">&#9670;&#160;</a></span>unuse()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -354,14 +372,14 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>シェーダプログラムの使用を終了する. </p>
+<p >シェーダプログラムの使用を終了する. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06768">6768</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06770">6770</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a3adfac57f672157d521faeeccc3dd3c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3adfac57f672157d521faeeccc3dd3c5">&#9670;&nbsp;</a></span>use()</h2>
+<a id="a3adfac57f672157d521faeeccc3dd3c5" name="a3adfac57f672157d521faeeccc3dd3c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3adfac57f672157d521faeeccc3dd3c5">&#9670;&#160;</a></span>use()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -382,9 +400,9 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>シェーダプログラムの使用を開始する. </p>
+<p >シェーダプログラムの使用を開始する. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06760">6760</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06762">6762</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -394,7 +412,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2022年12月11日(日) 23時16分34秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2022年12月23日(金) 09時58分56秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

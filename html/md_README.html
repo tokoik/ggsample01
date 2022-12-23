@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: ggsample01</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
+  <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
   </td>
@@ -29,21 +30,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.1 -->
+<!-- 構築: Doxygen 1.9.5 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -54,20 +56,26 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
-<div class="PageDoc"><div class="header">
-  <div class="headertitle">
-<div class="title">ggsample01 </div>  </div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">ggsample01 </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="autotoc_md1"></a>
 ゲームグラフィックス特論A　第１回　宿題</h1>
-<p>OpenGL の開発環境を整備してください。</p>
+<p >OpenGL の開発環境を整備してください。</p>
 <ul>
 <li>宿題のひな形は <a href="https://github.com/tokoik/ggsample01">GitHub</a> にあります (宿題のひな形で使っている<a href="https://tokoik.github.io/gg/html/annotated.html">補助プログラムの解説</a>)。</li>
 <li>詳しくは<a href="https://tokoik.github.io/gg/ggnote01.pdf">講義のスライド</a>を参照してください。</li>
@@ -82,8 +90,8 @@ $(function() {
 </ul>
 <h1><a class="anchor" id="autotoc_md3"></a>
 補足</h1>
-<p>このプログラムを実行すると、次のような図形が表示されます。</p>
-<p><img src="images/ggsample01a.png" alt="このプログラムによる生成画像" title="このプログラムによる生成画像" class="inline"/></p>
+<p >このプログラムを実行すると、次のような図形が表示されます。</p>
+<p ><img src="images/ggsample01a.png" alt="このプログラムによる生成画像" title="このプログラムによる生成画像" class="inline"/></p>
 <ul>
 <li>今回はソースプログラムを修正していないので送る必要はありません。</li>
 <li>ひな形プログラムがコンパイル／実行できなかったら知らせてください。</li>
@@ -91,7 +99,7 @@ $(function() {
 </ul>
 <h1><a class="anchor" id="autotoc_md4"></a>
 宿題プログラム用補助プログラムについて</h1>
-<p>ゲームグラフィックス特論 A / B で課す宿題プログラムでは、専用の補助プログラムを用意しています。これは以下の 3 つのファイルで構成されています。</p>
+<p >ゲームグラフィックス特論 A / B で課す宿題プログラムでは、専用の補助プログラムを用意しています。これは以下の 3 つのファイルで構成されています。</p>
 <ul>
 <li><a href="https://github.com/tokoik/ggsample01/blob/master/gg.h">gg.h</a> / <a href="https://github.com/tokoik/ggsample01/blob/master/gg.cpp">gg.cpp</a><ul>
 <li>GLFW での利用を想定した OpenGL のローダとユーティリティ</li>
@@ -102,22 +110,22 @@ $(function() {
 </ul>
 </li>
 </ul>
-<p><a href="https://www.glfw.org/">GLFW</a> は <a href="https://www.opengl.org/">OpenGL</a> や、その後継の <a href="https://www.vulkan.org/">Vulkan</a> を使用したアプリケーションを作成するための、非常にコンパクトなフレームワークです。本当はこれだけで簡単にアプリケーションが作れるのですが、授業内容とはあまり関係のない処理を分離するために、屋上屋ながら**この授業専用の**フレームワークを用意しました。なお、gg.h / <a class="el" href="gg_8cpp.html">gg.cpp</a> には OpenGL の拡張機能を使用可能にする機能を含んでいるので、別に <a href="http://glew.sourceforge.net/">GLEW</a> や <a href="https://github.com/Dav1dde/glad">glad</a>、<a href="https://github.com/skaslev/gl3w">GL3W</a> などを導入する必要はありません。</p>
-<p>また、この <a class="el" href="Window_8h.html">Window.h</a> には <a href="https://github.com/ocornut/imgui">Dear ImGui</a> をサポートする機能を含んでいます。このプログラム (<a href="https://github.com/tokoik/ggsample01">ggsample01</a>) には、その使い方のサンプルコードを示すために Dear ImGui のソースプログラムも含めています。日本語メニューの表示のために <a href="https://mplusfonts.github.io/">M+ FONTS</a> の <a href="https://github.com/coz-m/MPLUS_FONTS/blob/master/fonts/ttf/Mplus1-Regular.ttf">Mplus1-Regular.ttf</a> もリポジトリに含めています。</p>
-<p>このほか、この <a class="el" href="Window_8h.html">Window.h</a> には Oculus Rift (DK1, DK2, <a href="https://www.oculus.com/rift/">CV1</a>, <a href="https://www.oculus.com/rift-s/">S</a>) をサポートする機能を組み込んでいます。これを使って、C++ だけで VR アプリケーション () が作れます。</p>
+<p ><a href="https://www.glfw.org/">GLFW</a> は <a href="https://www.opengl.org/">OpenGL</a> や、その後継の <a href="https://www.vulkan.org/">Vulkan</a> を使用したアプリケーションを作成するための、非常にコンパクトなフレームワークです。本当はこれだけで簡単にアプリケーションが作れるのですが、授業内容とはあまり関係のない処理を分離するために、屋上屋ながら**この授業専用の**フレームワークを用意しました。なお、gg.h / <a class="el" href="gg_8cpp.html">gg.cpp</a> には OpenGL の拡張機能を使用可能にする機能を含んでいるので、別に <a href="http://glew.sourceforge.net/">GLEW</a> や <a href="https://github.com/Dav1dde/glad">glad</a>、<a href="https://github.com/skaslev/gl3w">GL3W</a> などを導入する必要はありません。</p>
+<p >また、この Window.h には <a href="https://github.com/ocornut/imgui">Dear ImGui</a> をサポートする機能を含んでいます。このプログラム (<a href="https://github.com/tokoik/ggsample01">ggsample01</a>) には、その使い方のサンプルコードを示すために Dear ImGui のソースプログラムも含めています。日本語メニューの表示のために <a href="https://mplusfonts.github.io/">M+ FONTS</a> の <a href="https://github.com/coz-m/MPLUS_FONTS/blob/master/fonts/ttf/Mplus1-Regular.ttf">Mplus1-Regular.ttf</a> もリポジトリに含めています。</p>
+<p >このほか、この Window.h には Oculus Rift (DK1, DK2, <a href="https://www.oculus.com/rift/">CV1</a>, <a href="https://www.oculus.com/rift-s/">S</a>) をサポートする機能を組み込んでいます。これを使って、C++ だけで VR アプリケーション () が作れます。</p>
 <h2><a class="anchor" id="autotoc_md5"></a>
 補助プログラムのドキュメント</h2>
-<p>Doxygen で生成したドキュメントの <a href="html/index.html">HTML 版</a>を html フォルダに、<a href="pdf/refman.pdf">PDF 版</a>を pdf フォルダに置いています。</p>
+<p >Doxygen で生成したドキュメントの <a href="html/index.html">HTML 版</a>を html フォルダに、<a href="pdf/refman.pdf">PDF 版</a>を pdf フォルダに置いています。</p>
 <h2><a class="anchor" id="autotoc_md6"></a>
 補助プログラムの使い方</h2>
-<p>補助プログラムを使用するには、最小限、GLFW が使える環境が必要です。ゲームグラフィックス特論 A / B の宿題のリポジトリには Windows 用および macOS 用にコンパイルしたライブラリファイル一式を含めていますので、これらについては宿題のために別に用意する必要はありません。Linux (および Raspberry Pi) では libglfw3-dev パッケージをインストールしておいてください (<code>% sudo apt-get install libglfw3-dev</code>)。gg.h, <a class="el" href="gg_8cpp.html">gg.cpp</a>, <a class="el" href="Window_8h.html">Window.h</a> だけを使うときは、それぞれの環境で GLFW をインストールしておいてください。この補助プログラムを使用した最小のプログラムは、多分こんな感じになります。このソースファイルと同じところに <a class="el" href="gg_8h.html">gg.h</a>, <a class="el" href="gg_8cpp.html">gg.cpp</a>, <a class="el" href="Window_8h.html">Window.h</a> を置き、gg.cpp と一緒にコンパイルして、GLFW のライブラリファイルをリンクしてください。</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="Window_8h.html">Window.h</a>&quot;</span></div>
+<p >補助プログラムを使用するには、最小限、GLFW が使える環境が必要です。ゲームグラフィックス特論 A / B の宿題のリポジトリには Windows 用および macOS 用にコンパイルしたライブラリファイル一式を含めていますので、これらについては宿題のために別に用意する必要はありません。Linux (および Raspberry Pi) では libglfw3-dev パッケージをインストールしておいてください (<code>% sudo apt-get install libglfw3-dev</code>)。gg.h, <a class="el" href="gg_8cpp.html">gg.cpp</a>, Window.h だけを使うときは、それぞれの環境で GLFW をインストールしておいてください。この補助プログラムを使用した最小のプログラムは、多分こんな感じになります。このソースファイルと同じところに <a class="el" href="gg_8h.html">gg.h</a>, <a class="el" href="gg_8cpp.html">gg.cpp</a>, Window.h を置き、gg.cpp と一緒にコンパイルして、GLFW のライブラリファイルをリンクしてください。</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;Window.h&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525">main</a>()</div>
+<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525">main</a>()</div>
 <div class="line">{</div>
 <div class="line">    Window::init();</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="classWindow.html">Window</a> window;</div>
+<div class="line">    Window window;</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">while</span> (window)</div>
 <div class="line">    {</div>
@@ -126,44 +134,42 @@ $(function() {
 <div class="line">        <span class="comment">//</span></div>
 <div class="line">    }</div>
 <div class="line">}</div>
-<div class="ttc" id="aWindow_8h_html"><div class="ttname"><a href="Window_8h.html">Window.h</a></div></div>
-<div class="ttc" id="aclassWindow_html"><div class="ttname"><a href="classWindow.html">Window</a></div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00094">Window.h:95</a></div></div>
-<div class="ttc" id="amain_8cpp_html_a110745d0e996bc19a8c8e8cacbadd525"><div class="ttname"><a href="main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525">main</a></div><div class="ttdeci">int main(int argc, const char *const *argv)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00023">main.cpp:23</a></div></div>
-</div><!-- fragment --><p>使用する OpenGL のバージョンは、<code>Window::init(major, minor)</code> の <code>major</code> と <code>minor</code> で指定できます。<code>major</code> を 0 にするか省略すると、OpenGL のバージョンの指定を行いません。その場合は、macOS 以外では恐らく OpenGL のハードウェアもしくはドライバで対応可能な最大のバージョンが使用されます。なお、3.2 以降を指定したときは <b>macOS 対応の都合で</b> forward compatible プロファイルと core プロファイルを有効にします。macOS の場合は <code>Window::init(3, 2)</code> もしくは <code>Window::init(4, 1)</code> を指定してください。</p>
+<div class="ttc" id="amain_8cpp_html_a110745d0e996bc19a8c8e8cacbadd525"><div class="ttname"><a href="main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525">main</a></div><div class="ttdeci">int main(int argc, const char *const *argv)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00019">main.cpp:19</a></div></div>
+</div><!-- fragment --><p >使用する OpenGL のバージョンは、<code>Window::init(major, minor)</code> の <code>major</code> と <code>minor</code> で指定できます。<code>major</code> を 0 にするか省略すると、OpenGL のバージョンの指定を行いません。その場合は、macOS 以外では恐らく OpenGL のハードウェアもしくはドライバで対応可能な最大のバージョンが使用されます。なお、3.2 以降を指定したときは <b>macOS 対応の都合で</b> forward compatible プロファイルと core プロファイルを有効にします。macOS の場合は <code>Window::init(3, 2)</code> もしくは <code>Window::init(4, 1)</code> を指定してください。</p>
 <div class="fragment"><div class="line"><span class="comment">// for macOS</span></div>
 <div class="line">Window::init(4, 1);</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md7"></a>
 Oculus Rift を使う場合</h2>
-<p><code>#include "Window.h"</code> の前に <code>#define USE_OCULUS_RIFT</code> を置いてください。DK1 / DK2 用か CV1 / S 用かは、使用する LibOVR のバージョンが 1.0 以前か以降かで判断しています。ただし DK1 / DK2 用 (LibOVR 0.8) のサポートは、今後は継続しない可能性があります。</p>
+<p ><code>#include "Window.h"</code> の前に <code>#define USE_OCULUS_RIFT</code> を置いてください。DK1 / DK2 用か CV1 / S 用かは、使用する LibOVR のバージョンが 1.0 以前か以降かで判断しています。ただし DK1 / DK2 用 (LibOVR 0.8) のサポートは、今後は継続しない可能性があります。</p>
 <div class="fragment"><div class="line"><span class="comment">// ウィンドウ関連の処理</span></div>
 <div class="line"><span class="preprocessor">#define USE_OCULUS_RIFT</span></div>
 <div class="line"><span class="preprocessor">#include &quot;Window.h&quot;</span></div>
-</div><!-- fragment --><p>あるいは、Window.h の中に <code>#define USE_OCULUS_RIFT</code> を置いてください。</p>
+</div><!-- fragment --><p >あるいは、Window.h の中に <code>#define USE_OCULUS_RIFT</code> を置いてください。</p>
 <div class="fragment"><div class="line"><span class="comment">// Oculus Rift を使うなら</span></div>
 <div class="line"><span class="preprocessor">#define USE_OCULUS_RIFT</span></div>
-</div><!-- fragment --><p>実際の使い方は、「<a href="http://marina.sys.wakayama-u.ac.jp/~tokoi/?date=20190602">Oculus Rift に図形を表示するプログラムを C++ で作る</a>」を参考にしてください。この記事では以前の補助プログラムを使って解説していますが、Window クラスの使い方は変わりません (以前の補助プログラムでは GgApplication クラス内に置いていました)。</p>
+</div><!-- fragment --><p >実際の使い方は、「<a href="http://marina.sys.wakayama-u.ac.jp/~tokoi/?date=20190602">Oculus Rift に図形を表示するプログラムを C++ で作る</a>」を参考にしてください。この記事では以前の補助プログラムを使って解説していますが、Window クラスの使い方は変わりません (以前の補助プログラムでは GgApplication クラス内に置いていました)。</p>
 <h2><a class="anchor" id="autotoc_md8"></a>
 Dear ImGui を使う場合</h2>
-<p>すべての <code>#include "Window.h"</code> の前に、<code>#define USE_IMGUI</code> を置いてください。</p>
+<p >すべての <code>#include "Window.h"</code> の前に、<code>#define USE_IMGUI</code> を置いてください。</p>
 <div class="fragment"><div class="line"><span class="comment">// ウィンドウ関連の処理</span></div>
 <div class="line"><span class="preprocessor">#define USE_IMGUI</span></div>
 <div class="line"><span class="preprocessor">#include &quot;Window.h&quot;</span></div>
-</div><!-- fragment --><p>あるいは、Window.h の中に <code>#define USE_IMGUI</code> を置いてください。</p>
+</div><!-- fragment --><p >あるいは、Window.h の中に <code>#define USE_IMGUI</code> を置いてください。</p>
 <div class="fragment"><div class="line"><span class="comment">// Dear ImGui を使うなら</span></div>
 <div class="line"><span class="preprocessor">#define USE_IMGUI</span></div>
-</div><!-- fragment --><p>そして、OpenGL の描画ループの中で <code>ImGui::NewFrame();</code> と <code>ImGui::Render();</code> の間に Dear ImGui の API を置いてください。Dear ImGui のウィンドウの実際のレンダリング (<code>ImGui_ImplOpenGL3_RenderDrawData();</code> の呼び出し) は <code>window.swapbuffers()</code> の中で行っているので、Dear ImGui の API と OpenGL の API は描画ループの中で混在していても構いません。</p>
-<p>なお、Dear ImGui を有効にした場合は、Dear ImGui がマウスを使っているとき (<code>io.WantCaptureMouse == true</code>) に、Window クラスが保持しているマウスカーソルの位置を更新しないようにしています。また、Dear ImGui がキーボードを使っているとき (<code>io.WantCaptureKeyboard == true</code>) には、Window クラスはキーボードのイベントを処理しないようにしています。</p>
+</div><!-- fragment --><p >そして、OpenGL の描画ループの中で <code>ImGui::NewFrame();</code> と <code>ImGui::Render();</code> の間に Dear ImGui の API を置いてください。Dear ImGui のウィンドウの実際のレンダリング (<code>ImGui_ImplOpenGL3_RenderDrawData();</code> の呼び出し) は <code>window.swapbuffers()</code> の中で行っているので、Dear ImGui の API と OpenGL の API は描画ループの中で混在していても構いません。</p>
+<p >なお、Dear ImGui を有効にした場合は、Dear ImGui がマウスを使っているとき (<code>io.WantCaptureMouse == true</code>) に、Window クラスが保持しているマウスカーソルの位置を更新しないようにしています。また、Dear ImGui がキーボードを使っているとき (<code>io.WantCaptureKeyboard == true</code>) には、Window クラスはキーボードのイベントを処理しないようにしています。</p>
 <div class="fragment"><div class="line"><span class="comment">// ウィンドウ関連の処理</span></div>
 <div class="line"><span class="preprocessor">#define USE_IMGUI</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="Window_8h.html">Window.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;Window.h&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525">main</a>()</div>
+<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525">main</a>()</div>
 <div class="line">{</div>
 <div class="line">  <span class="comment">// ウィンドウ関連の初期設定</span></div>
 <div class="line">  Window::init(4, 1);</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// ウィンドウを作成する</span></div>
-<div class="line">  <a class="code" href="classWindow.html">Window</a> window(<span class="stringliteral">&quot;Window Title&quot;</span>, 1280, 720);</div>
+<div class="line">  Window window(<span class="stringliteral">&quot;Window Title&quot;</span>, 1280, 720);</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// ImGui の初期設定</span></div>
 <div class="line">  ImGui::StyleColorsDark();</div>
@@ -180,7 +186,7 @@ Dear ImGui を使う場合</h2>
 <div class="line">    <span class="comment">// ImGui のフレームに一つ目の ImGui のウィンドウを描く</span></div>
 <div class="line">    ImGui::Begin(<span class="stringliteral">&quot;Control panel&quot;</span>);</div>
 <div class="line">    ImGui::Text(<span class="stringliteral">&quot;Frame rate: %6.2f fps&quot;</span>, ImGui::GetIO().Framerate);</div>
-<div class="line">    <span class="keywordflow">if</span> (ImGui::Button(<span class="stringliteral">&quot;Quit&quot;</span>)) window.<a class="code" href="classWindow.html#a7dd6ce09e1d68c8576376179aa54fc79">setClose</a>();</div>
+<div class="line">    <span class="keywordflow">if</span> (ImGui::Button(<span class="stringliteral">&quot;Quit&quot;</span>)) window.setClose();</div>
 <div class="line">    ImGui::End();</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// ImGui のフレームに描画する</span></div>
@@ -194,14 +200,12 @@ Dear ImGui を使う場合</h2>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// カラーバッファを入れ替えてイベントを取り出す</span></div>
-<div class="line">    window.<a class="code" href="classWindow.html#a04ab8fcdfcc749a5f5f2c0441528b5b0">swapBuffers</a>();</div>
+<div class="line">    window.swapBuffers();</div>
 <div class="line">  }</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassWindow_html_a04ab8fcdfcc749a5f5f2c0441528b5b0"><div class="ttname"><a href="classWindow.html#a04ab8fcdfcc749a5f5f2c0441528b5b0">Window::swapBuffers</a></div><div class="ttdeci">void swapBuffers() const</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00686">Window.h:686</a></div></div>
-<div class="ttc" id="aclassWindow_html_a7dd6ce09e1d68c8576376179aa54fc79"><div class="ttname"><a href="classWindow.html#a7dd6ce09e1d68c8576376179aa54fc79">Window::setClose</a></div><div class="ttdeci">void setClose(int flag=GLFW_TRUE) const</div><div class="ttdef"><b>Definition:</b> <a href="Window_8h_source.html#l00611">Window.h:611</a></div></div>
-</div><!-- fragment --><p>このソースファイルと Dear ImGui に含まれる以下のファイル、および <a class="el" href="gg_8h.html">gg.h</a>, <a class="el" href="gg_8cpp.html">gg.cpp</a>, <a class="el" href="Window_8h.html">Window.h</a> を同じところに置き、gg.cpp と以下のうちの *.cpp ファイルと一緒にコンパイルして、GLFW のライブラリファイルをリンクしてください。</p>
+</div><!-- fragment --><p >このソースファイルと Dear ImGui に含まれる以下のファイル、および <a class="el" href="gg_8h.html">gg.h</a>, <a class="el" href="gg_8cpp.html">gg.cpp</a>, Window.h を同じところに置き、gg.cpp と以下のうちの *.cpp ファイルと一緒にコンパイルして、GLFW のライブラリファイルをリンクしてください。</p>
 <blockquote class="doxtable">
-<p>imconfig.h <br  />
+<p >&zwj;imconfig.h <br  />
  imgui.h <br  />
  imgui_impl_glfw.h <br  />
  imgui_impl_opengl3.h <br  />
@@ -213,7 +217,7 @@ Dear ImGui を使う場合</h2>
  </p>
 </blockquote>
 <blockquote class="doxtable">
-<p>imgui.cpp <br  />
+<p >&zwj;imgui.cpp <br  />
  imgui_draw.cpp <br  />
  imgui_impl_glfw.cpp <br  />
  imgui_impl_opengl3.cpp <br  />
@@ -223,7 +227,7 @@ Dear ImGui を使う場合</h2>
 </blockquote>
 <h3><a class="anchor" id="autotoc_md9"></a>
 imconfig.h の変更点</h3>
-<p>Dear ImGui はバージョン 1.86 から独自のローダを使用するようになったので、<code>IMGUI_IMPL_OPENGL_LOADER_CUSTOM</code> にこの授業オリジナルのローダ <code><a class="el" href="gg_8h.html">gg.h</a></code> / <code><a class="el" href="gg_8cpp.html">gg.cpp</a></code> を指定する必要はありません。ただし、Raspberry Pi では imconfig.h の**最後**で記号定数 <code>IMGUI_IMPL_OPENGL_ES3</code> を明示的に定義する必要があります。</p>
+<p >Dear ImGui はバージョン 1.86 から独自のローダを使用するようになったので、<code>IMGUI_IMPL_OPENGL_LOADER_CUSTOM</code> にこの授業オリジナルのローダ <code><a class="el" href="gg_8h.html">gg.h</a></code> / <code><a class="el" href="gg_8cpp.html">gg.cpp</a></code> を指定する必要はありません。ただし、Raspberry Pi では imconfig.h の**最後**で記号定数 <code>IMGUI_IMPL_OPENGL_ES3</code> を明示的に定義する必要があります。</p>
 <div class="fragment"><div class="line"><span class="comment">// The Raspberry Pi needs to explicitly define the symbolic constant IMGUI_IMPL_OPENGL_ES3. </span></div>
 <div class="line"><span class="preprocessor">#if defined(__RASPBERRY_PI__)</span></div>
 <div class="line"><span class="preprocessor">#  define IMGUI_IMPL_OPENGL_ES3</span></div>
@@ -232,7 +236,7 @@ imconfig.h の変更点</h3>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2022年12月11日(日) 23時16分29秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2022年12月23日(金) 09時58分52秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

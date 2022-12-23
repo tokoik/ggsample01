@@ -1,12 +1,12 @@
 <map id="gg::GgQuaternion::loadConjugate" name="gg::GgQuaternion::loadConjugate">
-<area shape="rect" id="node1" title=" " alt="" coords="639,93,853,120"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#aa6149d5fc7b04e147179857ada502d51" title=" " alt="" coords="389,5,577,32"/>
-<area shape="rect" id="node4" href="$classgg_1_1GgQuaternion.html#a1c213182c3dd309dc27b189ff4800603" title=" " alt="" coords="379,57,587,98"/>
-<area shape="rect" id="node5" href="$classgg_1_1GgQuaternion.html#aa6b49c37d9d9b3d2a0e2950a51ba34ac" title=" " alt="" coords="376,123,591,149"/>
-<area shape="rect" id="node6" href="$classgg_1_1GgQuaternion.html#a46f9d1612fdd1fc39db6c8ba7e574a86" title=" " alt="" coords="390,173,577,200"/>
-<area shape="rect" id="node3" href="$namespacegg.html#a78e95511358dff0e43d4c4a3606bde0a" title=" " alt="" coords="177,5,293,32"/>
-<area shape="rect" id="node7" href="$classgg_1_1GgQuaternion.html#a0d70c27c7840e8bcb1031e12669a9405" title=" " alt="" coords="153,123,317,149"/>
-<area shape="rect" id="node8" href="$classgg_1_1GgQuaternion.html#ae76a0626497b4b3c203be499169a49af" title=" " alt="" coords="153,173,316,200"/>
-<area shape="rect" id="node10" href="$classgg_1_1GgQuaternion.html#a938136b65190b0cb6b232d9311b043f2" title=" " alt="" coords="141,224,328,251"/>
-<area shape="rect" id="node9" href="$namespacegg.html#ac834686c8605553fbe7c2709c685ba4e" title=" " alt="" coords="5,173,93,200"/>
+<area shape="rect" id="node1" title=" " alt="" coords="639,92,853,117"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#aa6149d5fc7b04e147179857ada502d51" title=" " alt="" coords="389,5,577,31"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgQuaternion.html#a1c213182c3dd309dc27b189ff4800603" title=" " alt="" coords="379,55,587,95"/>
+<area shape="rect" id="node5" href="$classgg_1_1GgQuaternion.html#a43b85fc04b7be9fa39859ecac808009d" title=" " alt="" coords="376,120,591,145"/>
+<area shape="rect" id="node6" href="$classgg_1_1GgQuaternion.html#a46f9d1612fdd1fc39db6c8ba7e574a86" title=" " alt="" coords="390,169,577,195"/>
+<area shape="rect" id="node3" href="$namespacegg.html#a78e95511358dff0e43d4c4a3606bde0a" title=" " alt="" coords="177,5,293,31"/>
+<area shape="rect" id="node7" href="$classgg_1_1GgQuaternion.html#a0d70c27c7840e8bcb1031e12669a9405" title=" " alt="" coords="153,120,317,145"/>
+<area shape="rect" id="node8" href="$classgg_1_1GgQuaternion.html#ae76a0626497b4b3c203be499169a49af" title=" " alt="" coords="153,169,316,195"/>
+<area shape="rect" id="node10" href="$classgg_1_1GgQuaternion.html#a78779d311b64b91e00bdee479fd490ca" title=" " alt="" coords="141,219,328,244"/>
+<area shape="rect" id="node9" href="$namespacegg.html#ac834686c8605553fbe7c2709c685ba4e" title=" " alt="" coords="5,169,93,195"/>
 </map>

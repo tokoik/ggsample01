@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: gg::GgTriangles クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
+  <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
   </td>
@@ -29,21 +30,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.1 -->
+<!-- 構築: Doxygen 1.9.5 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -54,9 +56,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -68,8 +77,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="classgg_1_1GgTriangles-members.html">全メンバ一覧</a>  </div>
-  <div class="headertitle">
-<div class="title">gg::GgTriangles クラス</div>  </div>
+  <div class="headertitle"><div class="title">gg::GgTriangles クラス</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -79,9 +87,9 @@ gg::GgTriangles の継承関係図</div>
 <div class="dyncontent">
 <div class="center"><img src="classgg_1_1GgTriangles__inherit__graph.png" border="0" usemap="#agg_1_1GgTriangles_inherit__map" alt="Inheritance graph"/></div>
 <map name="agg_1_1GgTriangles_inherit__map" id="agg_1_1GgTriangles_inherit__map">
-<area shape="rect" title=" " alt="" coords="7,80,120,107"/>
-<area shape="rect" href="classgg_1_1GgElements.html" title=" " alt="" coords="5,155,121,181"/>
-<area shape="rect" href="classgg_1_1GgShape.html" title=" " alt="" coords="14,5,113,32"/>
+<area shape="rect" title=" " alt="" coords="7,79,120,104"/>
+<area shape="rect" href="classgg_1_1GgElements.html" title=" " alt="" coords="5,152,121,177"/>
+<area shape="rect" href="classgg_1_1GgShape.html" title=" " alt="" coords="14,5,113,31"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
 <div class="dynheader">
@@ -89,12 +97,12 @@ gg::GgTriangles 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="classgg_1_1GgTriangles__coll__graph.png" border="0" usemap="#agg_1_1GgTriangles_coll__map" alt="Collaboration graph"/></div>
 <map name="agg_1_1GgTriangles_coll__map" id="agg_1_1GgTriangles_coll__map">
-<area shape="rect" title=" " alt="" coords="5,80,119,107"/>
-<area shape="rect" href="classgg_1_1GgShape.html" title=" " alt="" coords="13,5,111,32"/>
+<area shape="rect" title=" " alt="" coords="5,79,119,104"/>
+<area shape="rect" href="classgg_1_1GgShape.html" title=" " alt="" coords="13,5,111,31"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:a5482f2023b35d5937f7a4b6da3501d44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTriangles.html#a5482f2023b35d5937f7a4b6da3501d44">GgTriangles</a> (GLenum mode=GL_TRIANGLES)</td></tr>
 <tr class="separator:a5482f2023b35d5937f7a4b6da3501d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -102,10 +110,10 @@ gg::GgTriangles 連携図</div>
 <tr class="separator:ae7b21f7915cf62a2a6d9089b7d1c5bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43ae036c4906d95a450cda3724cb6062"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTriangles.html#a43ae036c4906d95a450cda3724cb6062">~GgTriangles</a> ()</td></tr>
 <tr class="separator:a43ae036c4906d95a450cda3724cb6062"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5834565d0537ac35fd208072457e7a74"><td class="memItemLeft" align="right" valign="top">const GLsizei &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTriangles.html#a5834565d0537ac35fd208072457e7a74">getCount</a> () const</td></tr>
-<tr class="separator:a5834565d0537ac35fd208072457e7a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e93f3a4d605cb91e22e43c00ade5c88"><td class="memItemLeft" align="right" valign="top">const GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTriangles.html#a0e93f3a4d605cb91e22e43c00ade5c88">getBuffer</a> () const</td></tr>
-<tr class="separator:a0e93f3a4d605cb91e22e43c00ade5c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a175a09c25313d9ae85bc4badf91fbfd6"><td class="memItemLeft" align="right" valign="top">const GLsizei &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTriangles.html#a175a09c25313d9ae85bc4badf91fbfd6">getCount</a> () const</td></tr>
+<tr class="separator:a175a09c25313d9ae85bc4badf91fbfd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1d7136c6e49274ce5063ea096d44a6f"><td class="memItemLeft" align="right" valign="top">const GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTriangles.html#ae1d7136c6e49274ce5063ea096d44a6f">getBuffer</a> () const</td></tr>
+<tr class="separator:ae1d7136c6e49274ce5063ea096d44a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad692daaef1ab57862918178636375328"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTriangles.html#ad692daaef1ab57862918178636375328">send</a> (const <a class="el" href="structgg_1_1GgVertex.html">GgVertex</a> *vert, GLint first=0, GLsizei count=0) const</td></tr>
 <tr class="separator:ad692daaef1ab57862918178636375328"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cfa85c9ee633974e69df68d9ec588f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTriangles.html#a2cfa85c9ee633974e69df68d9ec588f1">load</a> (const <a class="el" href="structgg_1_1GgVertex.html">GgVertex</a> *vert, GLsizei count, GLenum usage=GL_STATIC_DRAW)</td></tr>
@@ -119,22 +127,24 @@ gg::GgTriangles 連携図</div>
 <tr class="separator:a9f879032d9c86b0b9e6cf14f76223162 inherit pub_methods_classgg_1_1GgShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af48c84a89c0729dd131ff9ee962ca4e8 inherit pub_methods_classgg_1_1GgShape"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgShape.html#af48c84a89c0729dd131ff9ee962ca4e8">GgShape</a> (const <a class="el" href="classgg_1_1GgShape.html">GgShape</a> &amp;o)=delete</td></tr>
 <tr class="separator:af48c84a89c0729dd131ff9ee962ca4e8 inherit pub_methods_classgg_1_1GgShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6296a1b01ae353bb80d473cccb004ed inherit pub_methods_classgg_1_1GgShape"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgShape.html">GgShape</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgShape.html#af6296a1b01ae353bb80d473cccb004ed">operator=</a> (const <a class="el" href="classgg_1_1GgShape.html">GgShape</a> &amp;o)=delete</td></tr>
-<tr class="separator:af6296a1b01ae353bb80d473cccb004ed inherit pub_methods_classgg_1_1GgShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab10df92f2fc6fcb17d546ee60ecc3b9c inherit pub_methods_classgg_1_1GgShape"><td class="memItemLeft" align="right" valign="top">const GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgShape.html#ab10df92f2fc6fcb17d546ee60ecc3b9c">get</a> () const</td></tr>
-<tr class="separator:ab10df92f2fc6fcb17d546ee60ecc3b9c inherit pub_methods_classgg_1_1GgShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a174b6ab1a7961caccede957731ef981f inherit pub_methods_classgg_1_1GgShape"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgShape.html">GgShape</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgShape.html#a174b6ab1a7961caccede957731ef981f">operator=</a> (const <a class="el" href="classgg_1_1GgShape.html">GgShape</a> &amp;o)=delete</td></tr>
+<tr class="separator:a174b6ab1a7961caccede957731ef981f inherit pub_methods_classgg_1_1GgShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab49c0caf80cc1154aaa442704abc561d inherit pub_methods_classgg_1_1GgShape"><td class="memItemLeft" align="right" valign="top">const GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgShape.html#ab49c0caf80cc1154aaa442704abc561d">get</a> () const</td></tr>
+<tr class="separator:ab49c0caf80cc1154aaa442704abc561d inherit pub_methods_classgg_1_1GgShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4aa6e7ea313bf3ef47b7a6e5b88ed13d inherit pub_methods_classgg_1_1GgShape"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgShape.html#a4aa6e7ea313bf3ef47b7a6e5b88ed13d">setMode</a> (GLenum mode)</td></tr>
 <tr class="separator:a4aa6e7ea313bf3ef47b7a6e5b88ed13d inherit pub_methods_classgg_1_1GgShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadcd4881369815f8424d9a1d4a17a363 inherit pub_methods_classgg_1_1GgShape"><td class="memItemLeft" align="right" valign="top">const GLenum &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgShape.html#aadcd4881369815f8424d9a1d4a17a363">getMode</a> () const</td></tr>
-<tr class="separator:aadcd4881369815f8424d9a1d4a17a363 inherit pub_methods_classgg_1_1GgShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a860e6671d9d80295599ed2cf9f2449bc inherit pub_methods_classgg_1_1GgShape"><td class="memItemLeft" align="right" valign="top">const GLenum &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgShape.html#a860e6671d9d80295599ed2cf9f2449bc">getMode</a> () const</td></tr>
+<tr class="separator:a860e6671d9d80295599ed2cf9f2449bc inherit pub_methods_classgg_1_1GgShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf1b1da86a75b4c74dddf6194e615f6d inherit pub_methods_classgg_1_1GgShape"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgShape.html#adf1b1da86a75b4c74dddf6194e615f6d">draw</a> (GLint first=0, GLsizei count=0) const</td></tr>
+<tr class="separator:adf1b1da86a75b4c74dddf6194e615f6d inherit pub_methods_classgg_1_1GgShape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>三角形で表した形状データ (Arrays 形式). </p>
+<div class="textblock"><p >三角形で表した形状データ (Arrays 形式). </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06339">6339</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06341">6341</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
-<a id="a5482f2023b35d5937f7a4b6da3501d44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5482f2023b35d5937f7a4b6da3501d44">&#9670;&nbsp;</a></span>GgTriangles() <span class="overload">[1/2]</span></h2>
+<a id="a5482f2023b35d5937f7a4b6da3501d44" name="a5482f2023b35d5937f7a4b6da3501d44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5482f2023b35d5937f7a4b6da3501d44">&#9670;&#160;</a></span>GgTriangles() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -156,7 +166,7 @@ gg::GgTriangles 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>コンストラクタ.</p>
+<p >コンストラクタ.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">mode</td><td>描画する基本図形の種類. </td></tr>
@@ -164,12 +174,12 @@ gg::GgTriangles 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06352">6352</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06354">6354</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="ae7b21f7915cf62a2a6d9089b7d1c5bb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7b21f7915cf62a2a6d9089b7d1c5bb7">&#9670;&nbsp;</a></span>GgTriangles() <span class="overload">[2/2]</span></h2>
+<a id="ae7b21f7915cf62a2a6d9089b7d1c5bb7" name="ae7b21f7915cf62a2a6d9089b7d1c5bb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7b21f7915cf62a2a6d9089b7d1c5bb7">&#9670;&#160;</a></span>GgTriangles() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,7 +223,7 @@ gg::GgTriangles 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>コンストラクタ.</p>
+<p >コンストラクタ.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">vert</td><td>この図形の頂点属性の配列 (nullptr ならデータを転送しない). </td></tr>
@@ -224,12 +234,12 @@ gg::GgTriangles 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06365">6365</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06367">6367</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a43ae036c4906d95a450cda3724cb6062"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43ae036c4906d95a450cda3724cb6062">&#9670;&nbsp;</a></span>~GgTriangles()</h2>
+<a id="a43ae036c4906d95a450cda3724cb6062" name="a43ae036c4906d95a450cda3724cb6062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43ae036c4906d95a450cda3724cb6062">&#9670;&#160;</a></span>~GgTriangles()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -250,15 +260,15 @@ gg::GgTriangles 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>デストラクタ. </p>
+<p >デストラクタ. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06379">6379</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06381">6381</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="ac6af2cf80311f3429271e7cbde302e02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6af2cf80311f3429271e7cbde302e02">&#9670;&nbsp;</a></span>draw()</h2>
+<a id="ac6af2cf80311f3429271e7cbde302e02" name="ac6af2cf80311f3429271e7cbde302e02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6af2cf80311f3429271e7cbde302e02">&#9670;&#160;</a></span>draw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -290,7 +300,7 @@ gg::GgTriangles 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>三角形の描画.</p>
+<p >三角形の描画.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">first</td><td>描画を開始する最初の三角形番号. </td></tr>
@@ -303,21 +313,21 @@ gg::GgTriangles 連携図</div>
 
 <p><a class="el" href="classgg_1_1GgElements.html#a81e0b1de878227acdea4cb4fd450c6db">gg::GgElements</a>で再実装されています。</p>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05085">5085</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05084">5084</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgg_1_1GgTriangles_ac6af2cf80311f3429271e7cbde302e02_cgraph.png" border="0" usemap="#aclassgg_1_1GgTriangles_ac6af2cf80311f3429271e7cbde302e02_cgraph" alt=""/></div>
 <map name="aclassgg_1_1GgTriangles_ac6af2cf80311f3429271e7cbde302e02_cgraph" id="aclassgg_1_1GgTriangles_ac6af2cf80311f3429271e7cbde302e02_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,153,32"/>
-<area shape="rect" href="classgg_1_1GgShape.html#adf1b1da86a75b4c74dddf6194e615f6d" title=" " alt="" coords="201,5,335,32"/>
+<area shape="rect" title=" " alt="" coords="5,5,153,31"/>
+<area shape="rect" href="classgg_1_1GgShape.html#adf1b1da86a75b4c74dddf6194e615f6d" title=" " alt="" coords="201,5,335,31"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a0e93f3a4d605cb91e22e43c00ade5c88"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e93f3a4d605cb91e22e43c00ade5c88">&#9670;&nbsp;</a></span>getBuffer()</h2>
+<a id="ae1d7136c6e49274ce5063ea096d44a6f" name="ae1d7136c6e49274ce5063ea096d44a6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1d7136c6e49274ce5063ea096d44a6f">&#9670;&#160;</a></span>getBuffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -326,7 +336,7 @@ gg::GgTriangles 連携図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const GLuint&amp; gg::GgTriangles::getBuffer </td>
+          <td class="memname">const GLuint &amp; gg::GgTriangles::getBuffer </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -338,15 +348,15 @@ gg::GgTriangles 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>頂点属性を格納した頂点バッファオブジェクト名を取り出す.</p>
+<p >頂点属性を格納した頂点バッファオブジェクト名を取り出す.</p>
 <dl class="section return"><dt>戻り値</dt><dd>この図形の頂点属性を格納した頂点バッファオブジェクト名. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06398">6398</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06400">6400</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a5834565d0537ac35fd208072457e7a74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5834565d0537ac35fd208072457e7a74">&#9670;&nbsp;</a></span>getCount()</h2>
+<a id="a175a09c25313d9ae85bc4badf91fbfd6" name="a175a09c25313d9ae85bc4badf91fbfd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a175a09c25313d9ae85bc4badf91fbfd6">&#9670;&#160;</a></span>getCount()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -355,7 +365,7 @@ gg::GgTriangles 連携図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const GLsizei&amp; gg::GgTriangles::getCount </td>
+          <td class="memname">const GLsizei &amp; gg::GgTriangles::getCount </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -367,15 +377,15 @@ gg::GgTriangles 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>データの数を取り出す.</p>
+<p >データの数を取り出す.</p>
 <dl class="section return"><dt>戻り値</dt><dd>この図形の頂点属性の数 (頂点数). </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06388">6388</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06390">6390</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a2cfa85c9ee633974e69df68d9ec588f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cfa85c9ee633974e69df68d9ec588f1">&#9670;&nbsp;</a></span>load()</h2>
+<a id="a2cfa85c9ee633974e69df68d9ec588f1" name="a2cfa85c9ee633974e69df68d9ec588f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cfa85c9ee633974e69df68d9ec588f1">&#9670;&#160;</a></span>load()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -405,7 +415,7 @@ gg::GgTriangles 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>バッファオブジェクトを確保して頂点属性を格納する.</p>
+<p >バッファオブジェクトを確保して頂点属性を格納する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">vert</td><td>頂点属性が格納されてている領域の先頭のポインタ. </td></tr>
@@ -415,12 +425,12 @@ gg::GgTriangles 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05066">5066</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05065">5065</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="ad692daaef1ab57862918178636375328"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad692daaef1ab57862918178636375328">&#9670;&nbsp;</a></span>send()</h2>
+<a id="ad692daaef1ab57862918178636375328" name="ad692daaef1ab57862918178636375328"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad692daaef1ab57862918178636375328">&#9670;&#160;</a></span>send()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -458,7 +468,7 @@ gg::GgTriangles 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>既存のバッファオブジェクトに頂点属性を転送する.</p>
+<p >既存のバッファオブジェクトに頂点属性を転送する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">vert</td><td>転送元の頂点属性が格納されてている領域の先頭のポインタ. </td></tr>
@@ -468,7 +478,7 @@ gg::GgTriangles 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06410">6410</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06412">6412</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -479,7 +489,7 @@ gg::GgTriangles 連携図</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2022年12月11日(日) 23時16分34秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2022年12月23日(金) 09時58分57秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

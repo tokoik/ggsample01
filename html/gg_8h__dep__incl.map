@@ -1,14 +1,14 @@
 <map id="gg.h" name="gg.h">
-<area shape="rect" id="node1" title=" " alt="" coords="59,5,106,32"/>
-<area shape="rect" id="node2" href="$gg_8cpp.html" title=" " alt="" coords="5,80,67,107"/>
-<area shape="rect" id="node3" href="$Window_8h.html" title=" " alt="" coords="91,80,170,107"/>
-<area shape="rect" id="node4" href="$GgApp_8h.html" title=" " alt="" coords="94,155,167,181"/>
-<area shape="rect" id="node5" href="$Config_8h.html" title=" " alt="" coords="96,229,165,256"/>
-<area shape="rect" id="node7" href="$ggsample01_8cpp.html" title=" " alt="" coords="75,453,192,480"/>
-<area shape="rect" id="node12" href="$main_8cpp.html" title=" " alt="" coords="189,229,264,256"/>
-<area shape="rect" id="node6" href="$Config_8cpp.html" title=" " alt="" coords="119,304,201,331"/>
-<area shape="rect" id="node8" href="$Menu_8h.html" title=" " alt="" coords="226,304,291,331"/>
-<area shape="rect" id="node9" href="$Draw_8h.html" title=" " alt="" coords="274,379,337,405"/>
-<area shape="rect" id="node11" href="$Menu_8cpp.html" title=" " alt="" coords="119,379,198,405"/>
-<area shape="rect" id="node10" href="$Draw_8cpp.html" title=" " alt="" coords="267,453,343,480"/>
+<area shape="rect" id="node1" title=" " alt="" coords="380,5,427,31"/>
+<area shape="rect" id="node2" href="$GgApp_8h.html" title=" " alt="" coords="321,79,395,104"/>
+<area shape="rect" id="node12" href="$gg_8cpp.html" title=" " alt="" coords="419,79,481,104"/>
+<area shape="rect" id="node3" href="$Config_8h.html" title=" " alt="" coords="183,152,253,177"/>
+<area shape="rect" id="node8" href="$ggsample01_8cpp.html" title=" " alt="" coords="157,372,274,397"/>
+<area shape="rect" id="node10" href="$GgApp_8cpp.html" title=" " alt="" coords="356,152,443,177"/>
+<area shape="rect" id="node11" href="$main_8cpp.html" title=" " alt="" coords="467,152,542,177"/>
+<area shape="rect" id="node4" href="$Config_8cpp.html" title=" " alt="" coords="50,225,133,251"/>
+<area shape="rect" id="node5" href="$Menu_8h.html" title=" " alt="" coords="157,225,223,251"/>
+<area shape="rect" id="node6" href="$Draw_8h.html" title=" " alt="" coords="12,299,75,324"/>
+<area shape="rect" id="node9" href="$Menu_8cpp.html" title=" " alt="" coords="151,299,229,324"/>
+<area shape="rect" id="node7" href="$Draw_8cpp.html" title=" " alt="" coords="5,372,81,397"/>
 </map>

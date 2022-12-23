@@ -1,0 +1,2506 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ゲームグラフィックス特論: GgApp::Window クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
+  <td id="projectalign">
+   <div id="projectname">ゲームグラフィックス特論
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="classGgApp.html">GgApp</a></li><li class="navelem"><a class="el" href="classGgApp_1_1Window.html">Window</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="classGgApp_1_1Window-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">GgApp::Window クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="GgApp_8h_source.html">GgApp.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a127c516045e716c271524fa45998cbc0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a127c516045e716c271524fa45998cbc0">Window</a> (const std::string &amp;title=&quot;GLFW Window&quot;, int width=640, int height=480, int fullscreen=0, GLFWwindow *share=nullptr)</td></tr>
+<tr class="separator:a127c516045e716c271524fa45998cbc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5d861cc5384a9345370038451126247"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#ae5d861cc5384a9345370038451126247">Window</a> (const <a class="el" href="classGgApp_1_1Window.html">Window</a> &amp;w)=delete</td></tr>
+<tr class="separator:ae5d861cc5384a9345370038451126247"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94c6ee97910853aafc9dd886e0d44e05"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a94c6ee97910853aafc9dd886e0d44e05">~Window</a> ()</td></tr>
+<tr class="separator:a94c6ee97910853aafc9dd886e0d44e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee308edd9b401ca148f3b28fc7f77774"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGgApp_1_1Window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#aee308edd9b401ca148f3b28fc7f77774">operator=</a> (const <a class="el" href="classGgApp_1_1Window.html">Window</a> &amp;w)=delete</td></tr>
+<tr class="separator:aee308edd9b401ca148f3b28fc7f77774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4d2d5b01b708a68cfbbd694eea14116"><td class="memItemLeft" align="right" valign="top">auto *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#ae4d2d5b01b708a68cfbbd694eea14116">get</a> () const</td></tr>
+<tr class="separator:ae4d2d5b01b708a68cfbbd694eea14116"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c90728cd2fcebd0f3c0d6d48741c5fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a2c90728cd2fcebd0f3c0d6d48741c5fd">setClose</a> (int flag=GLFW_TRUE) const</td></tr>
+<tr class="separator:a2c90728cd2fcebd0f3c0d6d48741c5fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8401b4de974f114d3fb9d1ecac74eb9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#aa8401b4de974f114d3fb9d1ecac74eb9">shouldClose</a> () const</td></tr>
+<tr class="separator:aa8401b4de974f114d3fb9d1ecac74eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab052f671422136d5ff1d45192ba5b632"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#ab052f671422136d5ff1d45192ba5b632">operator bool</a> ()</td></tr>
+<tr class="separator:ab052f671422136d5ff1d45192ba5b632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19ae0ed75fc177b2a0672fc2af3c78a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a19ae0ed75fc177b2a0672fc2af3c78a4">swapBuffers</a> () const</td></tr>
+<tr class="separator:a19ae0ed75fc177b2a0672fc2af3c78a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a515578a995bb8d3e37ce1767f4095efd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a515578a995bb8d3e37ce1767f4095efd">restoreViewport</a> () const</td></tr>
+<tr class="separator:a515578a995bb8d3e37ce1767f4095efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b349c4887749cd9e5c6e655a0eea865"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a6b349c4887749cd9e5c6e655a0eea865">updateViewport</a> ()</td></tr>
+<tr class="separator:a6b349c4887749cd9e5c6e655a0eea865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a579867ae1179b9d946e2a0e34a62e830"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a579867ae1179b9d946e2a0e34a62e830">getWidth</a> () const</td></tr>
+<tr class="separator:a579867ae1179b9d946e2a0e34a62e830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c9fe611549defaacbd77eb1178b63c5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a6c9fe611549defaacbd77eb1178b63c5">getHeight</a> () const</td></tr>
+<tr class="separator:a6c9fe611549defaacbd77eb1178b63c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9584690e81de333b5ede0e10b184212"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#aa9584690e81de333b5ede0e10b184212">getFboWidth</a> () const</td></tr>
+<tr class="separator:aa9584690e81de333b5ede0e10b184212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65f86fe33c40b5ca0f374484df5a2132"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a65f86fe33c40b5ca0f374484df5a2132">getFboHeight</a> () const</td></tr>
+<tr class="separator:a65f86fe33c40b5ca0f374484df5a2132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4601eaeb4c129cfe4080b93a421df484"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a4601eaeb4c129cfe4080b93a421df484">getSize</a> () const</td></tr>
+<tr class="separator:a4601eaeb4c129cfe4080b93a421df484"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5efeec0d33380bc170b768db972a9150"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a5efeec0d33380bc170b768db972a9150">getSize</a> (GLsizei *size) const</td></tr>
+<tr class="separator:a5efeec0d33380bc170b768db972a9150"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0966f984510152cbfa4ac04dec3f0a0"><td class="memItemLeft" align="right" valign="top">const auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#ab0966f984510152cbfa4ac04dec3f0a0">getFboSize</a> () const</td></tr>
+<tr class="separator:ab0966f984510152cbfa4ac04dec3f0a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55b581c4f03c8685f6632b69413aa774"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a55b581c4f03c8685f6632b69413aa774">getFboSize</a> (GLsizei *fboSize) const</td></tr>
+<tr class="separator:a55b581c4f03c8685f6632b69413aa774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac175ec3d297b415120c6cc29b6392fdd"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#ac175ec3d297b415120c6cc29b6392fdd">getAspect</a> () const</td></tr>
+<tr class="separator:ac175ec3d297b415120c6cc29b6392fdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae35ef8daf8ae087a8972923ce7d6d22f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#ae35ef8daf8ae087a8972923ce7d6d22f">getKey</a> (int key) const</td></tr>
+<tr class="separator:ae35ef8daf8ae087a8972923ce7d6d22f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c11756525ab64e276fbf90bff68bbc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a7c11756525ab64e276fbf90bff68bbc9">selectInterface</a> (int no)</td></tr>
+<tr class="separator:a7c11756525ab64e276fbf90bff68bbc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5026c2115f22e214b979655ca9820e13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a5026c2115f22e214b979655ca9820e13">setVelocity</a> (GLfloat vx, GLfloat vy, GLfloat vz=0.1f)</td></tr>
+<tr class="separator:a5026c2115f22e214b979655ca9820e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc88ed5fdc4ad5c6b4c99e1dc73c44e8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#afc88ed5fdc4ad5c6b4c99e1dc73c44e8">getLastKey</a> ()</td></tr>
+<tr class="separator:afc88ed5fdc4ad5c6b4c99e1dc73c44e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affa358bdcc627505e042577790c8444a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a">getArrow</a> (int direction=0, int mods=0) const</td></tr>
+<tr class="separator:affa358bdcc627505e042577790c8444a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78660227f814654a1bc2e886365e0996"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a78660227f814654a1bc2e886365e0996">getArrowX</a> (int mods=0) const</td></tr>
+<tr class="separator:a78660227f814654a1bc2e886365e0996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46411c2f5238715c5347356ba9282dfc"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a46411c2f5238715c5347356ba9282dfc">getArrowY</a> (int mods=0) const</td></tr>
+<tr class="separator:a46411c2f5238715c5347356ba9282dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed83d934df05d6cb8c8a902711a9329c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#aed83d934df05d6cb8c8a902711a9329c">getArrow</a> (GLfloat *arrow, int mods=0) const</td></tr>
+<tr class="separator:aed83d934df05d6cb8c8a902711a9329c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c2238b6a1ad09eaeaf9f268b79bf00d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a0c2238b6a1ad09eaeaf9f268b79bf00d">getShiftArrowX</a> () const</td></tr>
+<tr class="separator:a0c2238b6a1ad09eaeaf9f268b79bf00d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad622962036e9c6dc8210b16a67486862"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#ad622962036e9c6dc8210b16a67486862">getShiftArrowY</a> () const</td></tr>
+<tr class="separator:ad622962036e9c6dc8210b16a67486862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2201654415ccd466ce8c2e25de831e7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a2201654415ccd466ce8c2e25de831e7f">getShiftArrow</a> (GLfloat *shift_arrow) const</td></tr>
+<tr class="separator:a2201654415ccd466ce8c2e25de831e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05de269eb17027de60e41e3776b581b2"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a05de269eb17027de60e41e3776b581b2">getControlArrowX</a> () const</td></tr>
+<tr class="separator:a05de269eb17027de60e41e3776b581b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0707b5143ccc9f5c8df94cce446bdab2"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a0707b5143ccc9f5c8df94cce446bdab2">getControlArrowY</a> () const</td></tr>
+<tr class="separator:a0707b5143ccc9f5c8df94cce446bdab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95461db15ac62a3f5200d9563d245d1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a95461db15ac62a3f5200d9563d245d1d">getControlArrow</a> (GLfloat *control_arrow) const</td></tr>
+<tr class="separator:a95461db15ac62a3f5200d9563d245d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac41a2596b28817ae5f807af75d451121"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#ac41a2596b28817ae5f807af75d451121">getAltArrowX</a> () const</td></tr>
+<tr class="separator:ac41a2596b28817ae5f807af75d451121"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf24b249cfff5f6df4f05e3454ef5822"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#abf24b249cfff5f6df4f05e3454ef5822">getAltArrowY</a> () const</td></tr>
+<tr class="separator:abf24b249cfff5f6df4f05e3454ef5822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e67bb74bd136fe84e5d2d76ef01bf16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a9e67bb74bd136fe84e5d2d76ef01bf16">getAltlArrow</a> (GLfloat *alt_arrow) const</td></tr>
+<tr class="separator:a9e67bb74bd136fe84e5d2d76ef01bf16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a222e4a998fbef8e2e818bb8a3457dd9b"><td class="memItemLeft" align="right" valign="top">const auto *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a222e4a998fbef8e2e818bb8a3457dd9b">getMouse</a> () const</td></tr>
+<tr class="separator:a222e4a998fbef8e2e818bb8a3457dd9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7472df8c6089d4e85c236f16d5981c6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a7472df8c6089d4e85c236f16d5981c6e">getMouse</a> (GLfloat *position) const</td></tr>
+<tr class="separator:a7472df8c6089d4e85c236f16d5981c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4165aa1f7754ebacc0fb0a6dbcecd832"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a4165aa1f7754ebacc0fb0a6dbcecd832">getMouse</a> (int direction) const</td></tr>
+<tr class="separator:a4165aa1f7754ebacc0fb0a6dbcecd832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55666f5d7c3c754090622944b84a04a0"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a55666f5d7c3c754090622944b84a04a0">getMouseX</a> () const</td></tr>
+<tr class="separator:a55666f5d7c3c754090622944b84a04a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e6fb715e92cb734ba644c90916b1360"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a7e6fb715e92cb734ba644c90916b1360">getMouseY</a> () const</td></tr>
+<tr class="separator:a7e6fb715e92cb734ba644c90916b1360"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af12e09dffd442b7b49d5a8386ff253c4"><td class="memItemLeft" align="right" valign="top">const auto *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#af12e09dffd442b7b49d5a8386ff253c4">getWheel</a> () const</td></tr>
+<tr class="separator:af12e09dffd442b7b49d5a8386ff253c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad27764b87b9f7d09ca49de137cfbeb78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#ad27764b87b9f7d09ca49de137cfbeb78">getWheel</a> (GLfloat *rotation) const</td></tr>
+<tr class="separator:ad27764b87b9f7d09ca49de137cfbeb78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37cdade6e1a2fe60049650552ea7505c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a37cdade6e1a2fe60049650552ea7505c">getWheel</a> (int direction) const</td></tr>
+<tr class="separator:a37cdade6e1a2fe60049650552ea7505c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad45195a5efaae1bf44b20ffd1cf0c18d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#ad45195a5efaae1bf44b20ffd1cf0c18d">getWheelX</a> () const</td></tr>
+<tr class="separator:ad45195a5efaae1bf44b20ffd1cf0c18d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0ffc69a289b38b33f137e40a2f4dae5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#af0ffc69a289b38b33f137e40a2f4dae5">getWheelY</a> () const</td></tr>
+<tr class="separator:af0ffc69a289b38b33f137e40a2f4dae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6227b2825a8a7e8481fb5bb27c8c3753"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a6227b2825a8a7e8481fb5bb27c8c3753">getTranslation</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
+<tr class="separator:a6227b2825a8a7e8481fb5bb27c8c3753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a074e392cd47e92946d23308cae934e40"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a074e392cd47e92946d23308cae934e40">getTranslationMatrix</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
+<tr class="separator:a074e392cd47e92946d23308cae934e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a882289de8c5dabb26c1370d036607a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a5a882289de8c5dabb26c1370d036607a">getScrollMatrix</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
+<tr class="separator:a5a882289de8c5dabb26c1370d036607a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9b5b4830a2e6c5491292a83d2b744f5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#aa9b5b4830a2e6c5491292a83d2b744f5">getRotation</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
+<tr class="separator:aa9b5b4830a2e6c5491292a83d2b744f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae072fc515e5a2fc54b8a11a552fc10b0"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#ae072fc515e5a2fc54b8a11a552fc10b0">getRotationMatrix</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
+<tr class="separator:ae072fc515e5a2fc54b8a11a552fc10b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0e5bf92c55529a7ac9b5722528ae2b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#aa0e5bf92c55529a7ac9b5722528ae2b6">resetRotation</a> ()</td></tr>
+<tr class="separator:aa0e5bf92c55529a7ac9b5722528ae2b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fbe5cd9550549cce2eb0c148653ac39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a7fbe5cd9550549cce2eb0c148653ac39">resetTranslation</a> ()</td></tr>
+<tr class="separator:a7fbe5cd9550549cce2eb0c148653ac39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7931a21c03bd1865a90f7b05964f7cdc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a7931a21c03bd1865a90f7b05964f7cdc">reset</a> ()</td></tr>
+<tr class="separator:a7931a21c03bd1865a90f7b05964f7cdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5959f9f57f4b12cab5e729732a0b54e7"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a5959f9f57f4b12cab5e729732a0b54e7">getUserPointer</a> () const</td></tr>
+<tr class="separator:a5959f9f57f4b12cab5e729732a0b54e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e8975f427f140148331b0bc294e931d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a3e8975f427f140148331b0bc294e931d">setUserPointer</a> (void *pointer)</td></tr>
+<tr class="separator:a3e8975f427f140148331b0bc294e931d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad40d89ff090cf184882fab3048a323d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#ad40d89ff090cf184882fab3048a323d0">setResizeFunc</a> (void(*func)(const <a class="el" href="classGgApp_1_1Window.html">Window</a> *window, int width, int height))</td></tr>
+<tr class="separator:ad40d89ff090cf184882fab3048a323d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f03a692bf813089182b2331262265a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a3f03a692bf813089182b2331262265a6">setKeyboardFunc</a> (void(*func)(const <a class="el" href="classGgApp_1_1Window.html">Window</a> *window, int key, int scancode, int action, int mods))</td></tr>
+<tr class="separator:a3f03a692bf813089182b2331262265a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3be62ffb0be6016f7ce531755667730b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a3be62ffb0be6016f7ce531755667730b">setMouseFunc</a> (void(*func)(const <a class="el" href="classGgApp_1_1Window.html">Window</a> *window, int button, int action, int mods))</td></tr>
+<tr class="separator:a3be62ffb0be6016f7ce531755667730b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a658fd07bb623e4e6e0745211d1870e46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a658fd07bb623e4e6e0745211d1870e46">setWheelFunc</a> (void(*func)(const <a class="el" href="classGgApp_1_1Window.html">Window</a> *window, double x, double y))</td></tr>
+<tr class="separator:a658fd07bb623e4e6e0745211d1870e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p >ウィンドウ関連の処理.</p>
+<dl class="section note"><dt>覚え書き</dt><dd>GLFW を使って OpenGL のウィンドウを操作するラッパークラス. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00102">102</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a127c516045e716c271524fa45998cbc0" name="a127c516045e716c271524fa45998cbc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a127c516045e716c271524fa45998cbc0">&#9670;&#160;</a></span>Window() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GgApp::Window::Window </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>title</em> = <code>&quot;GLFW&#160;Window&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em> = <code>640</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em> = <code>480</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fullscreen</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLFWwindow *&#160;</td>
+          <td class="paramname"><em>share</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >コンストラクタ.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>ウィンドウタイトルの文字列. </td></tr>
+    <tr><td class="paramname">width</td><td>開くウィンドウの幅, フルスクリーン時は無視され実際のディスプレイの幅が使われる. </td></tr>
+    <tr><td class="paramname">height</td><td>開くウィンドウの高さ, フルスクリーン時は無視され実際のディスプレイの高さが使われる. </td></tr>
+    <tr><td class="paramname">fullscreen</td><td>フルスクリーン表示を行うディスプレイ番号, 0 ならフルスクリーン表示を行わない. </td></tr>
+    <tr><td class="paramname">share</td><td>共有するコンテキスト, nullptr ならコンテキストを共有しない. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="GgApp_8cpp_source.html">GgApp.cpp</a> の <a class="el" href="GgApp_8cpp_source.html#l00324">324</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_a127c516045e716c271524fa45998cbc0_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a127c516045e716c271524fa45998cbc0_cgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_a127c516045e716c271524fa45998cbc0_cgraph" id="aclassGgApp_1_1Window_a127c516045e716c271524fa45998cbc0_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,176,31"/>
+<area shape="rect" href="namespacegg.html#af7ab5857e56acfcf3e806f587f3737a0" title=" " alt="" coords="224,5,299,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae5d861cc5384a9345370038451126247" name="ae5d861cc5384a9345370038451126247"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5d861cc5384a9345370038451126247">&#9670;&#160;</a></span>Window() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GgApp::Window::Window </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classGgApp_1_1Window.html">Window</a> &amp;&#160;</td>
+          <td class="paramname"><em>w</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94c6ee97910853aafc9dd886e0d44e05" name="a94c6ee97910853aafc9dd886e0d44e05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94c6ee97910853aafc9dd886e0d44e05">&#9670;&#160;</a></span>~Window()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual GgApp::Window::~Window </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >デストラクタ. </p>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00227">227</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ae4d2d5b01b708a68cfbbd694eea14116" name="ae4d2d5b01b708a68cfbbd694eea14116"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4d2d5b01b708a68cfbbd694eea14116">&#9670;&#160;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto * GgApp::Window::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >ウィンドウの識別子のポインタを取得する.</p>
+<dl class="section return"><dt>戻り値</dt><dd>GLFWwindow 型のウィンドウ識別子のポインタ. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00246">246</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac41a2596b28817ae5f807af75d451121" name="ac41a2596b28817ae5f807af75d451121"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac41a2596b28817ae5f807af75d451121">&#9670;&#160;</a></span>getAltArrowX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto GgApp::Window::getAltArrowX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >ALT キーを押しながら矢印キーを押したときの現在の X 値を得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>ALT キーを押しながら矢印キーを押したときの現在の X 値. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00569">569</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_ac41a2596b28817ae5f807af75d451121_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_ac41a2596b28817ae5f807af75d451121_cgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_ac41a2596b28817ae5f807af75d451121_cgraph" id="aclassGgApp_1_1Window_ac41a2596b28817ae5f807af75d451121_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,204,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="252,5,427,31"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_ac41a2596b28817ae5f807af75d451121_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_ac41a2596b28817ae5f807af75d451121_icgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_ac41a2596b28817ae5f807af75d451121_icgraph" id="aclassGgApp_1_1Window_ac41a2596b28817ae5f807af75d451121_icgraph">
+<area shape="rect" title=" " alt="" coords="248,5,447,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a9e67bb74bd136fe84e5d2d76ef01bf16" title=" " alt="" coords="5,5,200,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abf24b249cfff5f6df4f05e3454ef5822" name="abf24b249cfff5f6df4f05e3454ef5822"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf24b249cfff5f6df4f05e3454ef5822">&#9670;&#160;</a></span>getAltArrowY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto GgApp::Window::getAltArrowY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >ALT キーを押しながら矢印キーを押したときの現在の Y 値を得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>ALT キーを押しながら矢印キーを押したときの現在の Y 値. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00579">579</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_abf24b249cfff5f6df4f05e3454ef5822_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_abf24b249cfff5f6df4f05e3454ef5822_cgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_abf24b249cfff5f6df4f05e3454ef5822_cgraph" id="aclassGgApp_1_1Window_abf24b249cfff5f6df4f05e3454ef5822_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,205,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="253,5,428,31"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_abf24b249cfff5f6df4f05e3454ef5822_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_abf24b249cfff5f6df4f05e3454ef5822_icgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_abf24b249cfff5f6df4f05e3454ef5822_icgraph" id="aclassGgApp_1_1Window_abf24b249cfff5f6df4f05e3454ef5822_icgraph">
+<area shape="rect" title=" " alt="" coords="248,5,448,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a9e67bb74bd136fe84e5d2d76ef01bf16" title=" " alt="" coords="5,5,200,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9e67bb74bd136fe84e5d2d76ef01bf16" name="a9e67bb74bd136fe84e5d2d76ef01bf16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e67bb74bd136fe84e5d2d76ef01bf16">&#9670;&#160;</a></span>getAltlArrow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GgApp::Window::getAltlArrow </td>
+          <td>(</td>
+          <td class="paramtype">GLfloat *&#160;</td>
+          <td class="paramname"><em>alt_arrow</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >ALT キーを押しながら矢印キーを押したときの現在の値を得る.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">alt_arrow</td><td>ALT キーを押しながら矢印キーを押したときの値を格納する GLfloat 型の 2 要素の配列. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00589">589</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_a9e67bb74bd136fe84e5d2d76ef01bf16_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a9e67bb74bd136fe84e5d2d76ef01bf16_cgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_a9e67bb74bd136fe84e5d2d76ef01bf16_cgraph" id="aclassGgApp_1_1Window_a9e67bb74bd136fe84e5d2d76ef01bf16_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,200,56"/>
+<area shape="rect" href="classGgApp_1_1Window.html#ac41a2596b28817ae5f807af75d451121" title=" " alt="" coords="249,5,447,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#abf24b249cfff5f6df4f05e3454ef5822" title=" " alt="" coords="248,55,448,80"/>
+<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="496,31,671,56"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aed83d934df05d6cb8c8a902711a9329c" name="aed83d934df05d6cb8c8a902711a9329c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed83d934df05d6cb8c8a902711a9329c">&#9670;&#160;</a></span>getArrow() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GgApp::Window::getArrow </td>
+          <td>(</td>
+          <td class="paramtype">GLfloat *&#160;</td>
+          <td class="paramname"><em>arrow</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mods</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >矢印キーの現在の値を得る.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arrow</td><td>矢印キーの値を格納する GLfloat[2] の配列. </td></tr>
+    <tr><td class="paramname">mods</td><td>修飾キーの状態 (0:なし, 1, SHIFT, 2: CTRL, 3: ALT). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00496">496</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_aed83d934df05d6cb8c8a902711a9329c_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_aed83d934df05d6cb8c8a902711a9329c_cgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_aed83d934df05d6cb8c8a902711a9329c_cgraph" id="aclassGgApp_1_1Window_aed83d934df05d6cb8c8a902711a9329c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,180,56"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a78660227f814654a1bc2e886365e0996" title=" " alt="" coords="229,5,411,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a46411c2f5238715c5347356ba9282dfc" title=" " alt="" coords="228,55,412,80"/>
+<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="460,31,635,56"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="affa358bdcc627505e042577790c8444a" name="affa358bdcc627505e042577790c8444a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affa358bdcc627505e042577790c8444a">&#9670;&#160;</a></span>getArrow() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto GgApp::Window::getArrow </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>direction</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mods</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >矢印キーの現在の値を得る.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>方向 (0: X, 1:Y). </td></tr>
+    <tr><td class="paramname">mods</td><td>修飾キーの状態 (0:なし, 1, SHIFT, 2: CTRL, 3: ALT). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>矢印キーの値. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00462">462</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_affa358bdcc627505e042577790c8444a_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_affa358bdcc627505e042577790c8444a_icgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_affa358bdcc627505e042577790c8444a_icgraph" id="aclassGgApp_1_1Window_affa358bdcc627505e042577790c8444a_icgraph">
+<area shape="rect" title=" " alt="" coords="513,183,688,208"/>
+<area shape="rect" href="classGgApp_1_1Window.html#ac41a2596b28817ae5f807af75d451121" title=" " alt="" coords="261,5,459,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#abf24b249cfff5f6df4f05e3454ef5822" title=" " alt="" coords="260,55,460,80"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a78660227f814654a1bc2e886365e0996" title=" " alt="" coords="269,104,451,129"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a46411c2f5238715c5347356ba9282dfc" title=" " alt="" coords="268,153,452,179"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a05de269eb17027de60e41e3776b581b2" title=" " alt="" coords="269,203,451,243"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a0707b5143ccc9f5c8df94cce446bdab2" title=" " alt="" coords="269,267,451,307"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a0c2238b6a1ad09eaeaf9f268b79bf00d" title=" " alt="" coords="256,332,464,357"/>
+<area shape="rect" href="classGgApp_1_1Window.html#ad622962036e9c6dc8210b16a67486862" title=" " alt="" coords="255,381,465,407"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a9e67bb74bd136fe84e5d2d76ef01bf16" title=" " alt="" coords="9,31,203,56"/>
+<area shape="rect" href="classGgApp_1_1Window.html#aed83d934df05d6cb8c8a902711a9329c" title=" " alt="" coords="19,129,193,155"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a95461db15ac62a3f5200d9563d245d1d" title=" " alt="" coords="15,255,197,295"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a2201654415ccd466ce8c2e25de831e7f" title=" " alt="" coords="5,344,207,369"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a78660227f814654a1bc2e886365e0996" name="a78660227f814654a1bc2e886365e0996"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78660227f814654a1bc2e886365e0996">&#9670;&#160;</a></span>getArrowX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto GgApp::Window::getArrowX </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mods</em> = <code>0</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >矢印キーの現在の X 値を得る.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mods</td><td>修飾キーの状態 (0:なし, 1, SHIFT, 2: CTRL, 3: ALT). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>矢印キーの X 値. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00474">474</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_a78660227f814654a1bc2e886365e0996_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a78660227f814654a1bc2e886365e0996_cgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_a78660227f814654a1bc2e886365e0996_cgraph" id="aclassGgApp_1_1Window_a78660227f814654a1bc2e886365e0996_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,188,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="236,5,411,31"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_a78660227f814654a1bc2e886365e0996_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a78660227f814654a1bc2e886365e0996_icgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_a78660227f814654a1bc2e886365e0996_icgraph" id="aclassGgApp_1_1Window_a78660227f814654a1bc2e886365e0996_icgraph">
+<area shape="rect" title=" " alt="" coords="228,5,411,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#aed83d934df05d6cb8c8a902711a9329c" title=" " alt="" coords="5,5,180,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a46411c2f5238715c5347356ba9282dfc" name="a46411c2f5238715c5347356ba9282dfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46411c2f5238715c5347356ba9282dfc">&#9670;&#160;</a></span>getArrowY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto GgApp::Window::getArrowY </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mods</em> = <code>0</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >矢印キーの現在の Y 値を得る.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mods</td><td>修飾キーの状態 (0:なし, 1, SHIFT, 2: CTRL, 3: ALT). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>矢印キーの Y 値. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00485">485</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_a46411c2f5238715c5347356ba9282dfc_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a46411c2f5238715c5347356ba9282dfc_cgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_a46411c2f5238715c5347356ba9282dfc_cgraph" id="aclassGgApp_1_1Window_a46411c2f5238715c5347356ba9282dfc_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,189,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="237,5,412,31"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_a46411c2f5238715c5347356ba9282dfc_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a46411c2f5238715c5347356ba9282dfc_icgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_a46411c2f5238715c5347356ba9282dfc_icgraph" id="aclassGgApp_1_1Window_a46411c2f5238715c5347356ba9282dfc_icgraph">
+<area shape="rect" title=" " alt="" coords="228,5,412,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#aed83d934df05d6cb8c8a902711a9329c" title=" " alt="" coords="5,5,180,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac175ec3d297b415120c6cc29b6392fdd" name="ac175ec3d297b415120c6cc29b6392fdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac175ec3d297b415120c6cc29b6392fdd">&#9670;&#160;</a></span>getAspect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto GgApp::Window::getAspect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >ウィンドウのアスペクト比を得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>ウィンドウの縦横比. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00400">400</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a95461db15ac62a3f5200d9563d245d1d" name="a95461db15ac62a3f5200d9563d245d1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95461db15ac62a3f5200d9563d245d1d">&#9670;&#160;</a></span>getControlArrow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GgApp::Window::getControlArrow </td>
+          <td>(</td>
+          <td class="paramtype">GLfloat *&#160;</td>
+          <td class="paramname"><em>control_arrow</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >CTRL キーを押しながら矢印キーを押したときの現在の値を得る.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">control_arrow</td><td>CTRL キーを押しながら矢印キーを押したときの値を格納する GLfloat 型の 2 要素の配列. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00558">558</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_a95461db15ac62a3f5200d9563d245d1d_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a95461db15ac62a3f5200d9563d245d1d_cgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_a95461db15ac62a3f5200d9563d245d1d_cgraph" id="aclassGgApp_1_1Window_a95461db15ac62a3f5200d9563d245d1d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,37,188,77"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a05de269eb17027de60e41e3776b581b2" title=" " alt="" coords="236,5,419,45"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a0707b5143ccc9f5c8df94cce446bdab2" title=" " alt="" coords="236,69,419,109"/>
+<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="467,45,641,70"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a05de269eb17027de60e41e3776b581b2" name="a05de269eb17027de60e41e3776b581b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05de269eb17027de60e41e3776b581b2">&#9670;&#160;</a></span>getControlArrowX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto GgApp::Window::getControlArrowX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >CTRL キーを押しながら矢印キーを押したときの現在の X 値を得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>CTRL キーを押しながら矢印キーを押したときの現在の X 値. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00538">538</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_a05de269eb17027de60e41e3776b581b2_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a05de269eb17027de60e41e3776b581b2_cgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_a05de269eb17027de60e41e3776b581b2_cgraph" id="aclassGgApp_1_1Window_a05de269eb17027de60e41e3776b581b2_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,188,45"/>
+<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="236,13,411,38"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_a05de269eb17027de60e41e3776b581b2_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a05de269eb17027de60e41e3776b581b2_icgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_a05de269eb17027de60e41e3776b581b2_icgraph" id="aclassGgApp_1_1Window_a05de269eb17027de60e41e3776b581b2_icgraph">
+<area shape="rect" title=" " alt="" coords="236,5,419,45"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a95461db15ac62a3f5200d9563d245d1d" title=" " alt="" coords="5,5,188,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0707b5143ccc9f5c8df94cce446bdab2" name="a0707b5143ccc9f5c8df94cce446bdab2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0707b5143ccc9f5c8df94cce446bdab2">&#9670;&#160;</a></span>getControlArrowY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto GgApp::Window::getControlArrowY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >CTRL キーを押しながら矢印キーを押したときの現在の Y 値を得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>CTRL キーを押しながら矢印キーを押したときの現在の Y 値. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00548">548</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_a0707b5143ccc9f5c8df94cce446bdab2_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a0707b5143ccc9f5c8df94cce446bdab2_cgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_a0707b5143ccc9f5c8df94cce446bdab2_cgraph" id="aclassGgApp_1_1Window_a0707b5143ccc9f5c8df94cce446bdab2_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,188,45"/>
+<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="236,13,411,38"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_a0707b5143ccc9f5c8df94cce446bdab2_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a0707b5143ccc9f5c8df94cce446bdab2_icgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_a0707b5143ccc9f5c8df94cce446bdab2_icgraph" id="aclassGgApp_1_1Window_a0707b5143ccc9f5c8df94cce446bdab2_icgraph">
+<area shape="rect" title=" " alt="" coords="236,5,419,45"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a95461db15ac62a3f5200d9563d245d1d" title=" " alt="" coords="5,5,188,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a65f86fe33c40b5ca0f374484df5a2132" name="a65f86fe33c40b5ca0f374484df5a2132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65f86fe33c40b5ca0f374484df5a2132">&#9670;&#160;</a></span>getFboHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto GgApp::Window::getFboHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >FBO の高さを得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>FBO の高さ. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00348">348</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_a65f86fe33c40b5ca0f374484df5a2132_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a65f86fe33c40b5ca0f374484df5a2132_icgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_a65f86fe33c40b5ca0f374484df5a2132_icgraph" id="aclassGgApp_1_1Window_a65f86fe33c40b5ca0f374484df5a2132_icgraph">
+<area shape="rect" title=" " alt="" coords="244,5,445,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a55b581c4f03c8685f6632b69413aa774" title=" " alt="" coords="5,5,196,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab0966f984510152cbfa4ac04dec3f0a0" name="ab0966f984510152cbfa4ac04dec3f0a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0966f984510152cbfa4ac04dec3f0a0">&#9670;&#160;</a></span>getFboSize() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const auto GgApp::Window::getFboSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >FBO のサイズを得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>FBO の幅と高さを格納した GLsizei 型の 2 要素の配列. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00379">379</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a55b581c4f03c8685f6632b69413aa774" name="a55b581c4f03c8685f6632b69413aa774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55b581c4f03c8685f6632b69413aa774">&#9670;&#160;</a></span>getFboSize() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GgApp::Window::getFboSize </td>
+          <td>(</td>
+          <td class="paramtype">GLsizei *&#160;</td>
+          <td class="paramname"><em>fboSize</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >FBO のサイズを得る.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>FBO の幅と高さを格納した GLsizei 型の 2 要素の配列. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00389">389</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_a55b581c4f03c8685f6632b69413aa774_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a55b581c4f03c8685f6632b69413aa774_cgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_a55b581c4f03c8685f6632b69413aa774_cgraph" id="aclassGgApp_1_1Window_a55b581c4f03c8685f6632b69413aa774_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,196,56"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a65f86fe33c40b5ca0f374484df5a2132" title=" " alt="" coords="244,5,445,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#aa9584690e81de333b5ede0e10b184212" title=" " alt="" coords="245,55,444,80"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa9584690e81de333b5ede0e10b184212" name="aa9584690e81de333b5ede0e10b184212"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9584690e81de333b5ede0e10b184212">&#9670;&#160;</a></span>getFboWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto GgApp::Window::getFboWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >FBO の横幅を得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>FBO の横幅. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00338">338</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_aa9584690e81de333b5ede0e10b184212_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_aa9584690e81de333b5ede0e10b184212_icgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_aa9584690e81de333b5ede0e10b184212_icgraph" id="aclassGgApp_1_1Window_aa9584690e81de333b5ede0e10b184212_icgraph">
+<area shape="rect" title=" " alt="" coords="244,5,443,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a55b581c4f03c8685f6632b69413aa774" title=" " alt="" coords="5,5,196,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6c9fe611549defaacbd77eb1178b63c5" name="a6c9fe611549defaacbd77eb1178b63c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c9fe611549defaacbd77eb1178b63c5">&#9670;&#160;</a></span>getHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto GgApp::Window::getHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >ウィンドウの高さを得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>ウィンドウの高さ. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00328">328</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_a6c9fe611549defaacbd77eb1178b63c5_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a6c9fe611549defaacbd77eb1178b63c5_icgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_a6c9fe611549defaacbd77eb1178b63c5_icgraph" id="aclassGgApp_1_1Window_a6c9fe611549defaacbd77eb1178b63c5_icgraph">
+<area shape="rect" title=" " alt="" coords="221,5,400,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a5efeec0d33380bc170b768db972a9150" title=" " alt="" coords="5,5,173,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae35ef8daf8ae087a8972923ce7d6d22f" name="ae35ef8daf8ae087a8972923ce7d6d22f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae35ef8daf8ae087a8972923ce7d6d22f">&#9670;&#160;</a></span>getKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GgApp::Window::getKey </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >キーが押されているかどうかを判定する.</p>
+<dl class="section return"><dt>戻り値</dt><dd>キーが押されていれば true. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00410">410</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="afc88ed5fdc4ad5c6b4c99e1dc73c44e8" name="afc88ed5fdc4ad5c6b4c99e1dc73c44e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc88ed5fdc4ad5c6b4c99e1dc73c44e8">&#9670;&#160;</a></span>getLastKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GgApp::Window::getLastKey </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >最後にタイプしたキーを得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>最後にタイプしたキーの文字. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00447">447</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a222e4a998fbef8e2e818bb8a3457dd9b" name="a222e4a998fbef8e2e818bb8a3457dd9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a222e4a998fbef8e2e818bb8a3457dd9b">&#9670;&#160;</a></span>getMouse() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const auto * GgApp::Window::getMouse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >マウスカーソルの現在位置を得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>マウスカーソルの現在位置を格納した GLfloat 型の 2 要素の配列. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00600">600</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7472df8c6089d4e85c236f16d5981c6e" name="a7472df8c6089d4e85c236f16d5981c6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7472df8c6089d4e85c236f16d5981c6e">&#9670;&#160;</a></span>getMouse() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GgApp::Window::getMouse </td>
+          <td>(</td>
+          <td class="paramtype">GLfloat *&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >マウスカーソルの現在位置を得る.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>マウスカーソルの現在位置を格納した GLfloat 型の 2 要素の配列. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00611">611</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4165aa1f7754ebacc0fb0a6dbcecd832" name="a4165aa1f7754ebacc0fb0a6dbcecd832"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4165aa1f7754ebacc0fb0a6dbcecd832">&#9670;&#160;</a></span>getMouse() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto GgApp::Window::getMouse </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>direction</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >マウスカーソルの現在位置を得る.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>方向 (0:X, 1:Y). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>direction 方向のマウスカーソルの現在位置. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00624">624</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a55666f5d7c3c754090622944b84a04a0" name="a55666f5d7c3c754090622944b84a04a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55666f5d7c3c754090622944b84a04a0">&#9670;&#160;</a></span>getMouseX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto GgApp::Window::getMouseX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >マウスカーソルの現在位置の X 座標を得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>direction 方向のマウスカーソルの X 方向の現在位置. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00635">635</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7e6fb715e92cb734ba644c90916b1360" name="a7e6fb715e92cb734ba644c90916b1360"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e6fb715e92cb734ba644c90916b1360">&#9670;&#160;</a></span>getMouseY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto GgApp::Window::getMouseY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >マウスカーソルの現在位置の Y 座標を得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>direction 方向のマウスカーソルの Y 方向の現在位置. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00646">646</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa9b5b4830a2e6c5491292a83d2b744f5" name="aa9b5b4830a2e6c5491292a83d2b744f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9b5b4830a2e6c5491292a83d2b744f5">&#9670;&#160;</a></span>getRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto GgApp::Window::getRotation </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>button</em> = <code>GLFW_MOUSE_BUTTON_1</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >トラックボールの回転変換行列を得る.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>回転変換行列を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>回転を行う GgQuaternion 型の四元数. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00768">768</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae072fc515e5a2fc54b8a11a552fc10b0" name="ae072fc515e5a2fc54b8a11a552fc10b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae072fc515e5a2fc54b8a11a552fc10b0">&#9670;&#160;</a></span>getRotationMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto GgApp::Window::getRotationMatrix </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>button</em> = <code>GLFW_MOUSE_BUTTON_1</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >トラックボールの回転変換行列を得る.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>回転変換行列を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>回転を行う GgMarix 型の変換行列. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00781">781</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5a882289de8c5dabb26c1370d036607a" name="a5a882289de8c5dabb26c1370d036607a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a882289de8c5dabb26c1370d036607a">&#9670;&#160;</a></span>getScrollMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto GgApp::Window::getScrollMatrix </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>button</em> = <code>GLFW_MOUSE_BUTTON_1</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >マウスによってオブジェクトの平行移動の変換行列を得る.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>平行移動量を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>クリッピング座標系で平行移動を行う GgMatrix 型の変換行列. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00748">748</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2201654415ccd466ce8c2e25de831e7f" name="a2201654415ccd466ce8c2e25de831e7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2201654415ccd466ce8c2e25de831e7f">&#9670;&#160;</a></span>getShiftArrow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GgApp::Window::getShiftArrow </td>
+          <td>(</td>
+          <td class="paramtype">GLfloat *&#160;</td>
+          <td class="paramname"><em>shift_arrow</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >SHIFT キーを押しながら矢印キーを押したときの現在の値を得る.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shift_arrow</td><td>SHIFT キーを押しながら矢印キーを押したときの値を格納する GLfloat 型の 2 要素の配列. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00527">527</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_a2201654415ccd466ce8c2e25de831e7f_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a2201654415ccd466ce8c2e25de831e7f_cgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_a2201654415ccd466ce8c2e25de831e7f_cgraph" id="aclassGgApp_1_1Window_a2201654415ccd466ce8c2e25de831e7f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,207,56"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a0c2238b6a1ad09eaeaf9f268b79bf00d" title=" " alt="" coords="256,5,464,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#ad622962036e9c6dc8210b16a67486862" title=" " alt="" coords="255,55,465,80"/>
+<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="513,31,688,56"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0c2238b6a1ad09eaeaf9f268b79bf00d" name="a0c2238b6a1ad09eaeaf9f268b79bf00d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c2238b6a1ad09eaeaf9f268b79bf00d">&#9670;&#160;</a></span>getShiftArrowX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto GgApp::Window::getShiftArrowX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >SHIFT キーを押しながら矢印キーを押したときの現在の X 値を得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>SHIFT キーを押しながら矢印キーを押したときの現在の X 値. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00507">507</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_a0c2238b6a1ad09eaeaf9f268b79bf00d_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a0c2238b6a1ad09eaeaf9f268b79bf00d_cgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_a0c2238b6a1ad09eaeaf9f268b79bf00d_cgraph" id="aclassGgApp_1_1Window_a0c2238b6a1ad09eaeaf9f268b79bf00d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,213,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="261,5,436,31"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_a0c2238b6a1ad09eaeaf9f268b79bf00d_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a0c2238b6a1ad09eaeaf9f268b79bf00d_icgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_a0c2238b6a1ad09eaeaf9f268b79bf00d_icgraph" id="aclassGgApp_1_1Window_a0c2238b6a1ad09eaeaf9f268b79bf00d_icgraph">
+<area shape="rect" title=" " alt="" coords="255,5,463,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a2201654415ccd466ce8c2e25de831e7f" title=" " alt="" coords="5,5,207,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad622962036e9c6dc8210b16a67486862" name="ad622962036e9c6dc8210b16a67486862"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad622962036e9c6dc8210b16a67486862">&#9670;&#160;</a></span>getShiftArrowY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto GgApp::Window::getShiftArrowY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >SHIFT キーを押しながら矢印キーを押したときの現在の Y 値を得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>SHIFT キーを押しながら矢印キーを押したときの現在の Y 値. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00517">517</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_ad622962036e9c6dc8210b16a67486862_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_ad622962036e9c6dc8210b16a67486862_cgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_ad622962036e9c6dc8210b16a67486862_cgraph" id="aclassGgApp_1_1Window_ad622962036e9c6dc8210b16a67486862_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,216,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="264,5,439,31"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_ad622962036e9c6dc8210b16a67486862_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_ad622962036e9c6dc8210b16a67486862_icgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_ad622962036e9c6dc8210b16a67486862_icgraph" id="aclassGgApp_1_1Window_ad622962036e9c6dc8210b16a67486862_icgraph">
+<area shape="rect" title=" " alt="" coords="255,5,465,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a2201654415ccd466ce8c2e25de831e7f" title=" " alt="" coords="5,5,207,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4601eaeb4c129cfe4080b93a421df484" name="a4601eaeb4c129cfe4080b93a421df484"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4601eaeb4c129cfe4080b93a421df484">&#9670;&#160;</a></span>getSize() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const auto &amp; GgApp::Window::getSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >ウィンドウのサイズを得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>ウィンドウの幅と高さを格納した GLsizei 型の 2 要素の配列の参照. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00358">358</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5efeec0d33380bc170b768db972a9150" name="a5efeec0d33380bc170b768db972a9150"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5efeec0d33380bc170b768db972a9150">&#9670;&#160;</a></span>getSize() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GgApp::Window::getSize </td>
+          <td>(</td>
+          <td class="paramtype">GLsizei *&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >ウィンドウのサイズを得る.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>ウィンドウの幅と高さを格納した GLsizei 型の 2 要素の配列. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00368">368</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_a5efeec0d33380bc170b768db972a9150_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a5efeec0d33380bc170b768db972a9150_cgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_a5efeec0d33380bc170b768db972a9150_cgraph" id="aclassGgApp_1_1Window_a5efeec0d33380bc170b768db972a9150_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,173,56"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a6c9fe611549defaacbd77eb1178b63c5" title=" " alt="" coords="221,5,400,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a579867ae1179b9d946e2a0e34a62e830" title=" " alt="" coords="223,55,399,80"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6227b2825a8a7e8481fb5bb27c8c3753" name="a6227b2825a8a7e8481fb5bb27c8c3753"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6227b2825a8a7e8481fb5bb27c8c3753">&#9670;&#160;</a></span>getTranslation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const auto &amp; GgApp::Window::getTranslation </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>button</em> = <code>GLFW_MOUSE_BUTTON_1</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >トラックボール処理を考慮したマウスによるスクロールの変換行列を得る.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>平行移動量を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>平行移動量を格納した GLfloat[3] の配列のポインタ. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00715">715</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a074e392cd47e92946d23308cae934e40" name="a074e392cd47e92946d23308cae934e40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a074e392cd47e92946d23308cae934e40">&#9670;&#160;</a></span>getTranslationMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto GgApp::Window::getTranslationMatrix </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>button</em> = <code>GLFW_MOUSE_BUTTON_1</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >マウスによって視点の平行移動の変換行列を得る.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>平行移動量を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>視点座標系で平行移動を行う GgMatrix 型の変換行列. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00728">728</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5959f9f57f4b12cab5e729732a0b54e7" name="a5959f9f57f4b12cab5e729732a0b54e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5959f9f57f4b12cab5e729732a0b54e7">&#9670;&#160;</a></span>getUserPointer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * GgApp::Window::getUserPointer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >ユーザーポインタを取り出す.</p>
+<dl class="section return"><dt>戻り値</dt><dd>保存されているユーザポインタ. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00823">823</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af12e09dffd442b7b49d5a8386ff253c4" name="af12e09dffd442b7b49d5a8386ff253c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af12e09dffd442b7b49d5a8386ff253c4">&#9670;&#160;</a></span>getWheel() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const auto * GgApp::Window::getWheel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >マウスホイールの回転量を得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>マウスホイールの回転量を格納した GLfloat 型の 2 要素の配列. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00657">657</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad27764b87b9f7d09ca49de137cfbeb78" name="ad27764b87b9f7d09ca49de137cfbeb78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad27764b87b9f7d09ca49de137cfbeb78">&#9670;&#160;</a></span>getWheel() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GgApp::Window::getWheel </td>
+          <td>(</td>
+          <td class="paramtype">GLfloat *&#160;</td>
+          <td class="paramname"><em>rotation</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >マウスホイールの回転量を得る.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rotation</td><td>マウスホイールの回転量を格納した GLfloat 型の 2 要素の配列. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00668">668</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a37cdade6e1a2fe60049650552ea7505c" name="a37cdade6e1a2fe60049650552ea7505c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37cdade6e1a2fe60049650552ea7505c">&#9670;&#160;</a></span>getWheel() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto GgApp::Window::getWheel </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>direction</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >マウスホイールの回転量を得る.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>方向 (0:X, 1:Y). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>direction 方向のマウスホイールの回転量. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00681">681</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad45195a5efaae1bf44b20ffd1cf0c18d" name="ad45195a5efaae1bf44b20ffd1cf0c18d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad45195a5efaae1bf44b20ffd1cf0c18d">&#9670;&#160;</a></span>getWheelX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto GgApp::Window::getWheelX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >マウスホイールの X 方向の回転量を得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>マウスホイールの X 方向の回転量. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00692">692</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af0ffc69a289b38b33f137e40a2f4dae5" name="af0ffc69a289b38b33f137e40a2f4dae5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0ffc69a289b38b33f137e40a2f4dae5">&#9670;&#160;</a></span>getWheelY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto GgApp::Window::getWheelY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >マウスホイールの Y 方向の回転量を得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>マウスホイールの Y 方向の回転量. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00703">703</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a579867ae1179b9d946e2a0e34a62e830" name="a579867ae1179b9d946e2a0e34a62e830"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a579867ae1179b9d946e2a0e34a62e830">&#9670;&#160;</a></span>getWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto GgApp::Window::getWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >ウィンドウの横幅を得る.</p>
+<dl class="section return"><dt>戻り値</dt><dd>ウィンドウの横幅. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00318">318</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_a579867ae1179b9d946e2a0e34a62e830_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a579867ae1179b9d946e2a0e34a62e830_icgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_a579867ae1179b9d946e2a0e34a62e830_icgraph" id="aclassGgApp_1_1Window_a579867ae1179b9d946e2a0e34a62e830_icgraph">
+<area shape="rect" title=" " alt="" coords="221,5,397,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a5efeec0d33380bc170b768db972a9150" title=" " alt="" coords="5,5,173,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab052f671422136d5ff1d45192ba5b632" name="ab052f671422136d5ff1d45192ba5b632"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab052f671422136d5ff1d45192ba5b632">&#9670;&#160;</a></span>operator bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GgApp::Window::operator bool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >イベントを取得してループを継続すべきかどうか調べる.</p>
+<dl class="section return"><dt>戻り値</dt><dd>ループを継続すべきなら true. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8cpp_source.html">GgApp.cpp</a> の <a class="el" href="GgApp_8cpp_source.html#l00417">417</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aee308edd9b401ca148f3b28fc7f77774" name="aee308edd9b401ca148f3b28fc7f77774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee308edd9b401ca148f3b28fc7f77774">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGgApp_1_1Window.html">Window</a> &amp; GgApp::Window::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classGgApp_1_1Window.html">Window</a> &amp;&#160;</td>
+          <td class="paramname"><em>w</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7931a21c03bd1865a90f7b05964f7cdc" name="a7931a21c03bd1865a90f7b05964f7cdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7931a21c03bd1865a90f7b05964f7cdc">&#9670;&#160;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GgApp::Window::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >トラックボール・マウスホイール・矢印キーの値を初期化する. </p>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00809">809</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_a7931a21c03bd1865a90f7b05964f7cdc_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a7931a21c03bd1865a90f7b05964f7cdc_cgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_a7931a21c03bd1865a90f7b05964f7cdc_cgraph" id="aclassGgApp_1_1Window_a7931a21c03bd1865a90f7b05964f7cdc_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,159,56"/>
+<area shape="rect" href="classGgApp_1_1Window.html#aa0e5bf92c55529a7ac9b5722528ae2b6" title=" " alt="" coords="214,5,415,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a7fbe5cd9550549cce2eb0c148653ac39" title=" " alt="" coords="207,55,423,80"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa0e5bf92c55529a7ac9b5722528ae2b6" name="aa0e5bf92c55529a7ac9b5722528ae2b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0e5bf92c55529a7ac9b5722528ae2b6">&#9670;&#160;</a></span>resetRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GgApp::Window::resetRotation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >トラックボール処理を初期化する. </p>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00791">791</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_aa0e5bf92c55529a7ac9b5722528ae2b6_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_aa0e5bf92c55529a7ac9b5722528ae2b6_icgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_aa0e5bf92c55529a7ac9b5722528ae2b6_icgraph" id="aclassGgApp_1_1Window_aa0e5bf92c55529a7ac9b5722528ae2b6_icgraph">
+<area shape="rect" title=" " alt="" coords="207,5,408,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a7931a21c03bd1865a90f7b05964f7cdc" title=" " alt="" coords="5,5,159,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7fbe5cd9550549cce2eb0c148653ac39" name="a7fbe5cd9550549cce2eb0c148653ac39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fbe5cd9550549cce2eb0c148653ac39">&#9670;&#160;</a></span>resetTranslation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GgApp::Window::resetTranslation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >平行移動量を初期化する. </p>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00800">800</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGgApp_1_1Window_a7fbe5cd9550549cce2eb0c148653ac39_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a7fbe5cd9550549cce2eb0c148653ac39_icgraph" alt=""/></div>
+<map name="aclassGgApp_1_1Window_a7fbe5cd9550549cce2eb0c148653ac39_icgraph" id="aclassGgApp_1_1Window_a7fbe5cd9550549cce2eb0c148653ac39_icgraph">
+<area shape="rect" title=" " alt="" coords="207,5,423,31"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a7931a21c03bd1865a90f7b05964f7cdc" title=" " alt="" coords="5,5,159,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a515578a995bb8d3e37ce1767f4095efd" name="a515578a995bb8d3e37ce1767f4095efd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a515578a995bb8d3e37ce1767f4095efd">&#9670;&#160;</a></span>restoreViewport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GgApp::Window::restoreViewport </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >ビューポートを元のサイズに復帰する. </p>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00287">287</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7c11756525ab64e276fbf90bff68bbc9" name="a7c11756525ab64e276fbf90bff68bbc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c11756525ab64e276fbf90bff68bbc9">&#9670;&#160;</a></span>selectInterface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GgApp::Window::selectInterface </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>no</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >インタフェースを選択する.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">no</td><td>インターフェース番号. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00425">425</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2c90728cd2fcebd0f3c0d6d48741c5fd" name="a2c90728cd2fcebd0f3c0d6d48741c5fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c90728cd2fcebd0f3c0d6d48741c5fd">&#9670;&#160;</a></span>setClose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GgApp::Window::setClose </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flag</em> = <code>GLFW_TRUE</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >ウィンドウのクローズフラグを設定する.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flag</td><td>クローズフラグ, 0 (GLFW_FALSE) 以外ならウィンドウを閉じる. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00256">256</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3f03a692bf813089182b2331262265a6" name="a3f03a692bf813089182b2331262265a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f03a692bf813089182b2331262265a6">&#9670;&#160;</a></span>setKeyboardFunc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GgApp::Window::setKeyboardFunc </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(const <a class="el" href="classGgApp_1_1Window.html">Window</a> *window, int key, int scancode, int action, int mods)&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >ユーザ定義の keyboard 関数を設定する.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>ユーザ定義の keyboard 関数, キーボードの操作時に呼び出される. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00853">853</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3be62ffb0be6016f7ce531755667730b" name="a3be62ffb0be6016f7ce531755667730b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3be62ffb0be6016f7ce531755667730b">&#9670;&#160;</a></span>setMouseFunc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GgApp::Window::setMouseFunc </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(const <a class="el" href="classGgApp_1_1Window.html">Window</a> *window, int button, int action, int mods)&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >ユーザ定義の mouse 関数を設定する.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>ユーザ定義の mouse 関数, マウスボタンの操作時に呼び出される. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00863">863</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad40d89ff090cf184882fab3048a323d0" name="ad40d89ff090cf184882fab3048a323d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad40d89ff090cf184882fab3048a323d0">&#9670;&#160;</a></span>setResizeFunc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GgApp::Window::setResizeFunc </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(const <a class="el" href="classGgApp_1_1Window.html">Window</a> *window, int width, int height)&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >ユーザ定義の resize 関数を設定する.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>ユーザ定義の resize 関数, ウィンドウのサイズ変更時に呼び出される. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00843">843</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3e8975f427f140148331b0bc294e931d" name="a3e8975f427f140148331b0bc294e931d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e8975f427f140148331b0bc294e931d">&#9670;&#160;</a></span>setUserPointer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GgApp::Window::setUserPointer </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pointer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >任意のユーザポインタを保存する.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pointer</td><td>保存するユーザポインタ. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00833">833</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5026c2115f22e214b979655ca9820e13" name="a5026c2115f22e214b979655ca9820e13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5026c2115f22e214b979655ca9820e13">&#9670;&#160;</a></span>setVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GgApp::Window::setVelocity </td>
+          <td>(</td>
+          <td class="paramtype">GLfloat&#160;</td>
+          <td class="paramname"><em>vx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&#160;</td>
+          <td class="paramname"><em>vy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GLfloat&#160;</td>
+          <td class="paramname"><em>vz</em> = <code>0.1f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >マウスの移動速度を設定する.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vx</td><td>x 方向の移動速度. </td></tr>
+    <tr><td class="paramname">vy</td><td>y 方向の移動速度. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00437">437</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a658fd07bb623e4e6e0745211d1870e46" name="a658fd07bb623e4e6e0745211d1870e46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a658fd07bb623e4e6e0745211d1870e46">&#9670;&#160;</a></span>setWheelFunc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GgApp::Window::setWheelFunc </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(const <a class="el" href="classGgApp_1_1Window.html">Window</a> *window, double x, double y)&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >ユーザ定義の wheel 関数を設定する.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>ユーザ定義の wheel 関数, マウスホイールの操作時に呼び出される. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00873">873</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa8401b4de974f114d3fb9d1ecac74eb9" name="aa8401b4de974f114d3fb9d1ecac74eb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8401b4de974f114d3fb9d1ecac74eb9">&#9670;&#160;</a></span>shouldClose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GgApp::Window::shouldClose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >ウィンドウを閉じるべきかどうか調べる.</p>
+<dl class="section return"><dt>戻り値</dt><dd>ウィンドウを閉じるべきなら true. </dd></dl>
+
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00266">266</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a19ae0ed75fc177b2a0672fc2af3c78a4" name="a19ae0ed75fc177b2a0672fc2af3c78a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19ae0ed75fc177b2a0672fc2af3c78a4">&#9670;&#160;</a></span>swapBuffers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GgApp::Window::swapBuffers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >カラーバッファを入れ替える. </p>
+
+<p class="definition"> <a class="el" href="GgApp_8cpp_source.html">GgApp.cpp</a> の <a class="el" href="GgApp_8cpp_source.html#l00467">467</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6b349c4887749cd9e5c6e655a0eea865" name="a6b349c4887749cd9e5c6e655a0eea865"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b349c4887749cd9e5c6e655a0eea865">&#9670;&#160;</a></span>updateViewport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GgApp::Window::updateViewport </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >ビューポートのサイズを更新する. </p>
+
+<p class="definition"> <a class="el" href="GgApp_8cpp_source.html">GgApp.cpp</a> の <a class="el" href="GgApp_8cpp_source.html#l00485">485</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="GgApp_8h_source.html">GgApp.h</a></li>
+<li><a class="el" href="GgApp_8cpp_source.html">GgApp.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2022年12月23日(金) 09時58分52秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

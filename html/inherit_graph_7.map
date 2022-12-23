@@ -1,3 +1,6 @@
 <map id="クラス階層図" name="クラス階層図">
-<area shape="rect" id="node1" href="$classgg_1_1GgShader.html" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" id="node1" href="$classgg_1_1GgShape.html" title=" " alt="" coords="5,31,104,56"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgPoints.html" title=" " alt="" coords="159,5,258,31"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgTriangles.html" title=" " alt="" coords="152,55,265,80"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgElements.html" title=" " alt="" coords="313,55,429,80"/>
 </map>

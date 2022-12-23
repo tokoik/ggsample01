@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: クラスメンバ</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
+  <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
   </td>
@@ -29,21 +30,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.1 -->
+<!-- 構築: Doxygen 1.9.5 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <!-- window showing the filter options -->
@@ -55,101 +57,29 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="contents">
 <div class="textblock">全クラスメンバ一覧です。各メンバが属するクラスへのリンクがあります。</div>
 
-<h3><a id="index_s"></a>- s -</h3><ul>
-<li>GgShader()
-: <a class="el" href="classgg_1_1GgShader.html#a7908ddf4209c6b17fdb1846c65f1e384">gg::GgShader</a>
-</li>
-<li>GgShape()
-: <a class="el" href="classgg_1_1GgShape.html#af48c84a89c0729dd131ff9ee962ca4e8">gg::GgShape</a>
-</li>
-<li>GgSimpleObj()
-: <a class="el" href="classgg_1_1GgSimpleObj.html#a1c0520c2ec7c7edb38550aae324c0cd6">gg::GgSimpleObj</a>
-</li>
-<li>GgSimpleShader()
-: <a class="el" href="classgg_1_1GgSimpleShader.html#a3b01a2498e26aad446c5bb58271d3f51">gg::GgSimpleShader</a>
-</li>
-<li>save()
-: <a class="el" href="classConfig.html#a817566065d6f1d047c96b94fc596830c">Config</a>
-</li>
-<li>scale()
-: <a class="el" href="classgg_1_1GgMatrix.html#a5ea04ac32765bb9ecc2b80792a12d86a">gg::GgMatrix</a>
-</li>
-<li>select()
-: <a class="el" href="classgg_1_1GgSimpleShader_1_1LightBuffer.html#a21c8fad77cffc831e18d9413a253788a">gg::GgSimpleShader::LightBuffer</a>
-, <a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#a60222d434fad051866e4b99f6efcbfb6">gg::GgSimpleShader::MaterialBuffer</a>
-</li>
-<li>selectInterface()
-: <a class="el" href="classWindow.html#adbc1f060541189f00a0518b499217f1a">Window</a>
-</li>
-<li>send()
-: <a class="el" href="classgg_1_1GgBuffer.html#a479120414c50643ebcfb93f3f2f59ed7">gg::GgBuffer&lt; T &gt;</a>
-, <a class="el" href="classgg_1_1GgElements.html#aad52368bf713e03ef748dbeddf469ea3">gg::GgElements</a>
-, <a class="el" href="classgg_1_1GgPoints.html#a06232b837dd52d0dfa4a5d86b5165041">gg::GgPoints</a>
-, <a class="el" href="classgg_1_1GgTriangles.html#ad692daaef1ab57862918178636375328">gg::GgTriangles</a>
-, <a class="el" href="classgg_1_1GgUniformBuffer.html#af998019f39e666887550170538e5ebd4">gg::GgUniformBuffer&lt; T &gt;</a>
-</li>
-<li>setClose()
-: <a class="el" href="classWindow.html#a7dd6ce09e1d68c8576376179aa54fc79">Window</a>
-</li>
-<li>setKeyboardFunc()
-: <a class="el" href="classWindow.html#add753b74c5868eeff32f3fe8d122f2d6">Window</a>
-</li>
-<li>setMenubarHeight()
-: <a class="el" href="classWindow.html#a8e9998f29c1e06492cbe258fb36c20b2">Window</a>
-</li>
-<li>setMode()
-: <a class="el" href="classgg_1_1GgShape.html#a4aa6e7ea313bf3ef47b7a6e5b88ed13d">gg::GgShape</a>
-</li>
-<li>setMouseFunc()
-: <a class="el" href="classWindow.html#aeb09f22aed8453ec749d4c8e0d82d830">Window</a>
-</li>
-<li>setResizeFunc()
-: <a class="el" href="classWindow.html#a49c5c2961b448d71f87b0e5fd2a595c6">Window</a>
-</li>
-<li>setUserPointer()
-: <a class="el" href="classWindow.html#adf319c45dfbe5bdc3e2ad04b8a9f7fa1">Window</a>
-</li>
-<li>setVelocity()
-: <a class="el" href="classWindow.html#a5fd44a07a4a1cd39eeb85911fa6b308d">Window</a>
-</li>
-<li>setWheelFunc()
-: <a class="el" href="classWindow.html#aa740f5ecfeec133d29f95fae566c7778">Window</a>
-</li>
-<li>shininess
-: <a class="el" href="structgg_1_1GgSimpleShader_1_1Material.html#a537c99818191226cb9ceddc7b7ff3d6c">gg::GgSimpleShader::Material</a>
-</li>
-<li>shouldClose()
-: <a class="el" href="classWindow.html#a1caaf150558c0c35a8811f19ccac817d">Window</a>
-</li>
-<li>slerp()
-: <a class="el" href="classgg_1_1GgQuaternion.html#ae87cd428f7803b83a0ef4f1464128a2d">gg::GgQuaternion</a>
-</li>
-<li>specular
-: <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html#acd20cfb495e5923bb67686ac09ceadb9">gg::GgSimpleShader::Light</a>
-, <a class="el" href="structgg_1_1GgSimpleShader_1_1Material.html#a270cd1c30152ee8c29ec5a94e12ff843">gg::GgSimpleShader::Material</a>
-</li>
-<li>subtract()
-: <a class="el" href="classgg_1_1GgQuaternion.html#a41eeb50036f7346680b862956a4d4116">gg::GgQuaternion</a>
-</li>
-<li>swapBuffers()
-: <a class="el" href="classWindow.html#a04ab8fcdfcc749a5f5f2c0441528b5b0">Window</a>
-</li>
-<li>swapRandB()
-: <a class="el" href="classgg_1_1GgTexture.html#a52ed5cb2a58d5aa0ad3f46cc15f98a46">gg::GgTexture</a>
-</li>
+<h3><a id="index_s" name="index_s"></a>- sim -</h3><ul>
+<li>GgSimpleObj()&#160;:&#160;<a class="el" href="classgg_1_1GgSimpleObj.html#a1c0520c2ec7c7edb38550aae324c0cd6">gg::GgSimpleObj</a></li>
+<li>GgSimpleShader()&#160;:&#160;<a class="el" href="classgg_1_1GgSimpleShader.html#a3b01a2498e26aad446c5bb58271d3f51">gg::GgSimpleShader</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2022年12月11日(日) 23時16分34秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2022年12月23日(金) 09時58分59秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

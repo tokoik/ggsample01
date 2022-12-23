@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: parseconfig.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
+  <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
   </td>
@@ -29,21 +30,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.1 -->
+<!-- 構築: Doxygen 1.9.5 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -54,17 +56,23 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#func-members">関数</a>  </div>
-  <div class="headertitle">
-<div class="title">parseconfig.h ファイル</div>  </div>
+  <div class="headertitle"><div class="title">parseconfig.h ファイル</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;picojson.h&quot;</code><br />
@@ -73,8 +81,8 @@ parseconfig.h の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="parseconfig_8h__incl.png" border="0" usemap="#aparseconfig_8h" alt=""/></div>
 <map name="aparseconfig_8h" id="aparseconfig_8h">
-<area shape="rect" title=" " alt="" coords="5,5,104,32"/>
-<area shape="rect" title=" " alt="" coords="14,80,95,107"/>
+<area shape="rect" title=" " alt="" coords="5,5,104,31"/>
+<area shape="rect" title=" " alt="" coords="14,79,95,104"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -82,20 +90,20 @@ parseconfig.h の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="parseconfig_8h__dep__incl.png" border="0" usemap="#aparseconfig_8hdep" alt=""/></div>
 <map name="aparseconfig_8hdep" id="aparseconfig_8hdep">
-<area shape="rect" title=" " alt="" coords="76,5,175,32"/>
-<area shape="rect" href="Config_8h.html" title=" " alt="" coords="91,80,160,107"/>
-<area shape="rect" href="Config_8cpp.html" title=" " alt="" coords="5,155,88,181"/>
-<area shape="rect" href="ggsample01_8cpp.html" title=" " alt="" coords="92,304,209,331"/>
-<area shape="rect" href="Menu_8h.html" title=" " alt="" coords="189,155,254,181"/>
-<area shape="rect" href="Draw_8h.html" title=" " alt="" coords="214,229,277,256"/>
-<area shape="rect" href="Menu_8cpp.html" title=" " alt="" coords="301,229,379,256"/>
-<area shape="rect" href="Draw_8cpp.html" title=" " alt="" coords="234,304,310,331"/>
+<area shape="rect" title=" " alt="" coords="127,5,226,31"/>
+<area shape="rect" href="Config_8h.html" title=" " alt="" coords="142,79,211,104"/>
+<area shape="rect" href="Config_8cpp.html" title=" " alt="" coords="37,152,119,177"/>
+<area shape="rect" href="Menu_8h.html" title=" " alt="" coords="144,152,209,177"/>
+<area shape="rect" href="ggsample01_8cpp.html" title=" " alt="" coords="106,299,223,324"/>
+<area shape="rect" href="Draw_8h.html" title=" " alt="" coords="37,225,100,251"/>
+<area shape="rect" href="Menu_8cpp.html" title=" " alt="" coords="176,225,255,251"/>
+<area shape="rect" href="Draw_8cpp.html" title=" " alt="" coords="5,299,81,324"/>
 </map>
 </div>
 </div>
 <p><a href="parseconfig_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 関数</h2></td></tr>
 <tr class="memitem:ad7387beefe783ec9f01caa7ee49e60db"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ad7387beefe783ec9f01caa7ee49e60db"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="parseconfig_8h.html#ad7387beefe783ec9f01caa7ee49e60db">getValue</a> (const picojson::object &amp;object, const std::string &amp;key, T &amp;scalar)</td></tr>
@@ -129,14 +137,14 @@ parseconfig.h の依存先関係図:</div>
 <tr class="separator:a4cad273831a9de460651017a9bfe6500"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>構成ファイルの読み取り補助</p>
+<div class="textblock"><p >構成ファイルの読み取り補助</p>
 <dl class="section author"><dt>著者</dt><dd>Kohe Tokoi </dd></dl>
 <dl class="section date"><dt>日付</dt><dd>November 15, 2022 </dd></dl>
 
 <p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> に定義があります。</p>
 </div><h2 class="groupheader">関数詳解</h2>
-<a id="a700d3523bb3bad5f952ca1fc2b5744aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a700d3523bb3bad5f952ca1fc2b5744aa">&#9670;&nbsp;</a></span>getString() <span class="overload">[1/3]</span></h2>
+<a id="a700d3523bb3bad5f952ca1fc2b5744aa" name="a700d3523bb3bad5f952ca1fc2b5744aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a700d3523bb3bad5f952ca1fc2b5744aa">&#9670;&#160;</a></span>getString() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -168,7 +176,7 @@ template&lt;std::size_t U&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>構成ファイルの JSON オブジェクトから文字列の配列を取得する</p>
+<p >構成ファイルの JSON オブジェクトから文字列の配列を取得する</p>
 <dl class="tparams"><dt>テンプレート引数</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">U</td><td>構成ファイルから取得する配列の要素の文字列の数 </td></tr>
@@ -188,8 +196,8 @@ template&lt;std::size_t U&gt; </div>
 
 </div>
 </div>
-<a id="aa526c0c2f6ac0f2d8e25de0a8a1300ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa526c0c2f6ac0f2d8e25de0a8a1300ff">&#9670;&nbsp;</a></span>getString() <span class="overload">[2/3]</span></h2>
+<a id="aa526c0c2f6ac0f2d8e25de0a8a1300ff" name="aa526c0c2f6ac0f2d8e25de0a8a1300ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa526c0c2f6ac0f2d8e25de0a8a1300ff">&#9670;&#160;</a></span>getString() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -227,7 +235,7 @@ template&lt;std::size_t U&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>構成ファイルの JSON オブジェクトから文字列を取得する</p>
+<p >構成ファイルの JSON オブジェクトから文字列を取得する</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">object</td><td>構成ファイルの JSON オブジェクト </td></tr>
@@ -243,16 +251,16 @@ template&lt;std::size_t U&gt; </div>
 <div class="dyncontent">
 <div class="center"><img src="parseconfig_8h_aa526c0c2f6ac0f2d8e25de0a8a1300ff_icgraph.png" border="0" usemap="#aparseconfig_8h_aa526c0c2f6ac0f2d8e25de0a8a1300ff_icgraph" alt=""/></div>
 <map name="aparseconfig_8h_aa526c0c2f6ac0f2d8e25de0a8a1300ff_icgraph" id="aparseconfig_8h_aa526c0c2f6ac0f2d8e25de0a8a1300ff_icgraph">
-<area shape="rect" title=" " alt="" coords="295,5,369,32"/>
-<area shape="rect" href="classConfig.html#a5e3336e5f83b8cea516039537861e9e6" title=" " alt="" coords="156,5,247,32"/>
-<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" title=" " alt="" coords="295,5,369,31"/>
+<area shape="rect" href="classConfig.html#a5e3336e5f83b8cea516039537861e9e6" title=" " alt="" coords="156,5,247,31"/>
+<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="5,5,108,31"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a41ddce214cad1ed0bf389012a589f0c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41ddce214cad1ed0bf389012a589f0c5">&#9670;&nbsp;</a></span>getString() <span class="overload">[3/3]</span></h2>
+<a id="a41ddce214cad1ed0bf389012a589f0c5" name="a41ddce214cad1ed0bf389012a589f0c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41ddce214cad1ed0bf389012a589f0c5">&#9670;&#160;</a></span>getString() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -290,7 +298,7 @@ template&lt;std::size_t U&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>構成ファイルの JSON オブジェクトから文字列のベクトルを取得する</p>
+<p >構成ファイルの JSON オブジェクトから文字列のベクトルを取得する</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">object</td><td>構成ファイルの JSON オブジェクト </td></tr>
@@ -304,8 +312,8 @@ template&lt;std::size_t U&gt; </div>
 
 </div>
 </div>
-<a id="a472b54f6db40dac853feeca79826be6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a472b54f6db40dac853feeca79826be6f">&#9670;&nbsp;</a></span>getValue() <span class="overload">[1/2]</span></h2>
+<a id="a472b54f6db40dac853feeca79826be6f" name="a472b54f6db40dac853feeca79826be6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a472b54f6db40dac853feeca79826be6f">&#9670;&#160;</a></span>getValue() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -337,7 +345,7 @@ template&lt;typename T , std::size_t U&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>構成ファイルの JSON オブジェクトから数値の配列を取得する</p>
+<p >構成ファイルの JSON オブジェクトから数値の配列を取得する</p>
 <dl class="tparams"><dt>テンプレート引数</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>構成ファイルから取得する配列の要素の数値のデータ型 </td></tr>
@@ -358,8 +366,8 @@ template&lt;typename T , std::size_t U&gt; </div>
 
 </div>
 </div>
-<a id="ad7387beefe783ec9f01caa7ee49e60db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7387beefe783ec9f01caa7ee49e60db">&#9670;&nbsp;</a></span>getValue() <span class="overload">[2/2]</span></h2>
+<a id="ad7387beefe783ec9f01caa7ee49e60db" name="ad7387beefe783ec9f01caa7ee49e60db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7387beefe783ec9f01caa7ee49e60db">&#9670;&#160;</a></span>getValue() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -391,7 +399,7 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>構成ファイルの JSON オブジェクトから数値を取得する</p>
+<p >構成ファイルの JSON オブジェクトから数値を取得する</p>
 <dl class="tparams"><dt>テンプレート引数</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>構成ファイルから取得する数値のデータ型 </td></tr>
@@ -413,16 +421,16 @@ template&lt;typename T &gt; </div>
 <div class="dyncontent">
 <div class="center"><img src="parseconfig_8h_ad7387beefe783ec9f01caa7ee49e60db_icgraph.png" border="0" usemap="#aparseconfig_8h_ad7387beefe783ec9f01caa7ee49e60db_icgraph" alt=""/></div>
 <map name="aparseconfig_8h_ad7387beefe783ec9f01caa7ee49e60db_icgraph" id="aparseconfig_8h_ad7387beefe783ec9f01caa7ee49e60db_icgraph">
-<area shape="rect" title=" " alt="" coords="295,5,368,32"/>
-<area shape="rect" href="classConfig.html#a5e3336e5f83b8cea516039537861e9e6" title=" " alt="" coords="156,5,247,32"/>
-<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" title=" " alt="" coords="295,5,368,31"/>
+<area shape="rect" href="classConfig.html#a5e3336e5f83b8cea516039537861e9e6" title=" " alt="" coords="156,5,247,31"/>
+<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="5,5,108,31"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a4b215c66b6bbfc08f456fd547694f9cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b215c66b6bbfc08f456fd547694f9cc">&#9670;&nbsp;</a></span>getVector()</h2>
+<a id="a4b215c66b6bbfc08f456fd547694f9cc" name="a4b215c66b6bbfc08f456fd547694f9cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b215c66b6bbfc08f456fd547694f9cc">&#9670;&#160;</a></span>getVector()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -460,7 +468,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>構成ファイルの JSON オブジェクトから４要素の数値のベクトルを取得する</p>
+<p >構成ファイルの JSON オブジェクトから４要素の数値のベクトルを取得する</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">object</td><td>構成ファイルの JSON オブジェクト </td></tr>
@@ -476,16 +484,16 @@ template&lt;typename T &gt; </div>
 <div class="dyncontent">
 <div class="center"><img src="parseconfig_8h_a4b215c66b6bbfc08f456fd547694f9cc_icgraph.png" border="0" usemap="#aparseconfig_8h_a4b215c66b6bbfc08f456fd547694f9cc_icgraph" alt=""/></div>
 <map name="aparseconfig_8h_a4b215c66b6bbfc08f456fd547694f9cc_icgraph" id="aparseconfig_8h_a4b215c66b6bbfc08f456fd547694f9cc_icgraph">
-<area shape="rect" title=" " alt="" coords="295,5,373,32"/>
-<area shape="rect" href="classConfig.html#a5e3336e5f83b8cea516039537861e9e6" title=" " alt="" coords="156,5,247,32"/>
-<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" title=" " alt="" coords="295,5,373,31"/>
+<area shape="rect" href="classConfig.html#a5e3336e5f83b8cea516039537861e9e6" title=" " alt="" coords="156,5,247,31"/>
+<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="5,5,108,31"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a47ae8a74b49d33f074ebfa150204ec95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47ae8a74b49d33f074ebfa150204ec95">&#9670;&nbsp;</a></span>setString() <span class="overload">[1/3]</span></h2>
+<a id="a47ae8a74b49d33f074ebfa150204ec95" name="a47ae8a74b49d33f074ebfa150204ec95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47ae8a74b49d33f074ebfa150204ec95">&#9670;&#160;</a></span>setString() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -517,7 +525,7 @@ template&lt;std::size_t U&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>構成ファイルの JSON オブジェクトに文字列の配列を設定する</p>
+<p >構成ファイルの JSON オブジェクトに文字列の配列を設定する</p>
 <dl class="tparams"><dt>テンプレート引数</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">U</td><td>構成ファイルに設定する配列の要素の文字列の数 </td></tr>
@@ -537,8 +545,8 @@ template&lt;std::size_t U&gt; </div>
 
 </div>
 </div>
-<a id="a6d1cf7a5f56fa09883319b5afb48502f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d1cf7a5f56fa09883319b5afb48502f">&#9670;&nbsp;</a></span>setString() <span class="overload">[2/3]</span></h2>
+<a id="a6d1cf7a5f56fa09883319b5afb48502f" name="a6d1cf7a5f56fa09883319b5afb48502f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d1cf7a5f56fa09883319b5afb48502f">&#9670;&#160;</a></span>setString() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -576,7 +584,7 @@ template&lt;std::size_t U&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>構成ファイルの JSON オブジェクトに文字列を設定する</p>
+<p >構成ファイルの JSON オブジェクトに文字列を設定する</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">object</td><td>構成ファイルの JSON オブジェクト </td></tr>
@@ -592,16 +600,16 @@ template&lt;std::size_t U&gt; </div>
 <div class="dyncontent">
 <div class="center"><img src="parseconfig_8h_a6d1cf7a5f56fa09883319b5afb48502f_icgraph.png" border="0" usemap="#aparseconfig_8h_a6d1cf7a5f56fa09883319b5afb48502f_icgraph" alt=""/></div>
 <map name="aparseconfig_8h_a6d1cf7a5f56fa09883319b5afb48502f_icgraph" id="aparseconfig_8h_a6d1cf7a5f56fa09883319b5afb48502f_icgraph">
-<area shape="rect" title=" " alt="" coords="296,5,371,32"/>
-<area shape="rect" href="classConfig.html#a817566065d6f1d047c96b94fc596830c" title=" " alt="" coords="156,5,248,32"/>
-<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" title=" " alt="" coords="296,5,371,31"/>
+<area shape="rect" href="classConfig.html#a817566065d6f1d047c96b94fc596830c" title=" " alt="" coords="156,5,248,31"/>
+<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="5,5,108,31"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a4cad273831a9de460651017a9bfe6500"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cad273831a9de460651017a9bfe6500">&#9670;&nbsp;</a></span>setString() <span class="overload">[3/3]</span></h2>
+<a id="a4cad273831a9de460651017a9bfe6500" name="a4cad273831a9de460651017a9bfe6500"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cad273831a9de460651017a9bfe6500">&#9670;&#160;</a></span>setString() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -639,7 +647,7 @@ template&lt;std::size_t U&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>構成ファイルの JSON オブジェクトに文字列のベクトルを設定する</p>
+<p >構成ファイルの JSON オブジェクトに文字列のベクトルを設定する</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">object</td><td>構成ファイルの JSON オブジェクト </td></tr>
@@ -653,8 +661,8 @@ template&lt;std::size_t U&gt; </div>
 
 </div>
 </div>
-<a id="a88f3cec9a5d43c9a4292b9768daf67f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88f3cec9a5d43c9a4292b9768daf67f7">&#9670;&nbsp;</a></span>setValue() <span class="overload">[1/2]</span></h2>
+<a id="a88f3cec9a5d43c9a4292b9768daf67f7" name="a88f3cec9a5d43c9a4292b9768daf67f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88f3cec9a5d43c9a4292b9768daf67f7">&#9670;&#160;</a></span>setValue() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -686,7 +694,7 @@ template&lt;typename T , std::size_t U&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>構成ファイルの JSON オブジェクトに数値の配列を設定する</p>
+<p >構成ファイルの JSON オブジェクトに数値の配列を設定する</p>
 <dl class="tparams"><dt>テンプレート引数</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>構成ファイルに設定する配列の要素の数値のデータ型 </td></tr>
@@ -707,8 +715,8 @@ template&lt;typename T , std::size_t U&gt; </div>
 
 </div>
 </div>
-<a id="ab6753f500daf700e3db65f17b841ce2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6753f500daf700e3db65f17b841ce2d">&#9670;&nbsp;</a></span>setValue() <span class="overload">[2/2]</span></h2>
+<a id="ab6753f500daf700e3db65f17b841ce2d" name="ab6753f500daf700e3db65f17b841ce2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6753f500daf700e3db65f17b841ce2d">&#9670;&#160;</a></span>setValue() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -740,7 +748,7 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>構成ファイルの JSON オブジェクトに数値を設定する</p>
+<p >構成ファイルの JSON オブジェクトに数値を設定する</p>
 <dl class="tparams"><dt>テンプレート引数</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>構成ファイルに設定する数値のデータ型 </td></tr>
@@ -762,16 +770,16 @@ template&lt;typename T &gt; </div>
 <div class="dyncontent">
 <div class="center"><img src="parseconfig_8h_ab6753f500daf700e3db65f17b841ce2d_icgraph.png" border="0" usemap="#aparseconfig_8h_ab6753f500daf700e3db65f17b841ce2d_icgraph" alt=""/></div>
 <map name="aparseconfig_8h_ab6753f500daf700e3db65f17b841ce2d_icgraph" id="aparseconfig_8h_ab6753f500daf700e3db65f17b841ce2d_icgraph">
-<area shape="rect" title=" " alt="" coords="296,5,369,32"/>
-<area shape="rect" href="classConfig.html#a817566065d6f1d047c96b94fc596830c" title=" " alt="" coords="156,5,248,32"/>
-<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" title=" " alt="" coords="296,5,369,31"/>
+<area shape="rect" href="classConfig.html#a817566065d6f1d047c96b94fc596830c" title=" " alt="" coords="156,5,248,31"/>
+<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="5,5,108,31"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a3224acf4e4e2672b6b4d9031f955220c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3224acf4e4e2672b6b4d9031f955220c">&#9670;&nbsp;</a></span>setVector()</h2>
+<a id="a3224acf4e4e2672b6b4d9031f955220c" name="a3224acf4e4e2672b6b4d9031f955220c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3224acf4e4e2672b6b4d9031f955220c">&#9670;&#160;</a></span>setVector()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -809,7 +817,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>構成ファイルの JSON オブジェクトに４要素の数値のベクトルを設定する</p>
+<p >構成ファイルの JSON オブジェクトに４要素の数値のベクトルを設定する</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">object</td><td>構成ファイルの JSON オブジェクト </td></tr>
@@ -825,9 +833,9 @@ template&lt;typename T &gt; </div>
 <div class="dyncontent">
 <div class="center"><img src="parseconfig_8h_a3224acf4e4e2672b6b4d9031f955220c_icgraph.png" border="0" usemap="#aparseconfig_8h_a3224acf4e4e2672b6b4d9031f955220c_icgraph" alt=""/></div>
 <map name="aparseconfig_8h_a3224acf4e4e2672b6b4d9031f955220c_icgraph" id="aparseconfig_8h_a3224acf4e4e2672b6b4d9031f955220c_icgraph">
-<area shape="rect" title=" " alt="" coords="296,5,375,32"/>
-<area shape="rect" href="classConfig.html#a817566065d6f1d047c96b94fc596830c" title=" " alt="" coords="156,5,248,32"/>
-<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" title=" " alt="" coords="296,5,375,31"/>
+<area shape="rect" href="classConfig.html#a817566065d6f1d047c96b94fc596830c" title=" " alt="" coords="156,5,248,31"/>
+<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="5,5,108,31"/>
 </map>
 </div>
 
@@ -836,7 +844,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2022年12月11日(日) 23時16分29秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2022年12月23日(金) 09時58分52秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

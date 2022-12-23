@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: メンバ一覧</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
+  <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
   </td>
@@ -29,21 +30,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.1 -->
+<!-- 構築: Doxygen 1.9.5 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -54,9 +56,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -65,95 +74,94 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle">
-<div class="title">gg::GgMatrix メンバ一覧</div>  </div>
+  <div class="headertitle"><div class="title">gg::GgMatrix メンバ一覧</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>継承メンバを含む <a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a> の全メンバ一覧です。</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a9a6f11c693067762d00d4a8f19d678f0">frustum</a>(GLfloat left, GLfloat right, GLfloat bottom, GLfloat top, GLfloat zNear, GLfloat zFar) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#aa5b928ad41aa3ea57c0d1e8b4fc50614">get</a>() const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a85419e1b591aa77fda6a908dab1d9468">get</a>() const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#ae6e115adbafcb42800d05b56ebfa4fdb">get</a>(GLfloat *a) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#ab1de53bb57c829ec7155c60abc154886">GgMatrix</a>()</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#ab1de53bb57c829ec7155c60abc154886">GgMatrix</a>()</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#af34f785f3b2ad4fde228dbb9b5e860fb">GgMatrix</a>(GLfloat m00, GLfloat m01, GLfloat m02, GLfloat m03, GLfloat m10, GLfloat m11, GLfloat m12, GLfloat m13, GLfloat m20, GLfloat m21, GLfloat m22, GLfloat m23, GLfloat m30, GLfloat m31, GLfloat m32, GLfloat m33)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a970a6991bc17ef5a2baabe23bf4632c9">GgMatrix</a>(GLfloat c)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a970a6991bc17ef5a2baabe23bf4632c9">GgMatrix</a>(GLfloat c)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a9347d0840078e7f4dd08d0e9b0fb42ce">GgMatrix</a>(const GLfloat *a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a899cc6209060b580bc14b1a45f9c302c">invert</a>() const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a899cc6209060b580bc14b1a45f9c302c">invert</a>() const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a13f26dafecce8177574108ada080471b">loadFrustum</a>(GLfloat left, GLfloat right, GLfloat bottom, GLfloat top, GLfloat zNear, GLfloat zFar)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a12addc0d862d6083a82b2e082061dae3">loadIdentity</a>()</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a12addc0d862d6083a82b2e082061dae3">loadIdentity</a>()</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a59877ee01fb3e8514872c9e5c7250bb7">loadInvert</a>(const GLfloat *a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#ad8b281570efb6b8ae4fe87516ae65636">loadInvert</a>(const GgMatrix &amp;m)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#aa46998a52b6a39953fe480751daf4255">loadInvert</a>(const GgMatrix &amp;m)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a753d56545359ba6efc11aa9b5b3ade11">loadLookat</a>(GLfloat ex, GLfloat ey, GLfloat ez, GLfloat tx, GLfloat ty, GLfloat tz, GLfloat ux, GLfloat uy, GLfloat uz)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a5dd40cebc2de251aafdfe2a649a52594">loadLookat</a>(const GLfloat *e, const GLfloat *t, const GLfloat *u)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a9534ce35c053eafe1c439cdbbc9c99d0">loadLookat</a>(const GgVector &amp;e, const GgVector &amp;t, const GgVector &amp;u)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#afd68213cca68bbf403e86935e86b1096">loadNormal</a>(const GLfloat *a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a13e8d199c6877e4394c495ba726d2ba9">loadNormal</a>(const GgMatrix &amp;m)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#ae031bf581d90c23fae4a690d0435f522">loadOrthogonal</a>(GLfloat left, GLfloat right, GLfloat bottom, GLfloat top, GLfloat zNear, GLfloat zFar)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a1af80ffb44518f57289ccadac7b0427b">loadLookat</a>(const GLfloat *e, const GLfloat *t, const GLfloat *u)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a69aebea13b88b94d1376302b9ce60b9d">loadLookat</a>(const GgVector &amp;e, const GgVector &amp;t, const GgVector &amp;u)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#afd68213cca68bbf403e86935e86b1096">loadNormal</a>(const GLfloat *a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a0012864fcf7f84e6595367a446fd388a">loadNormal</a>(const GgMatrix &amp;m)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#ae031bf581d90c23fae4a690d0435f522">loadOrthogonal</a>(GLfloat left, GLfloat right, GLfloat bottom, GLfloat top, GLfloat zNear, GLfloat zFar)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a2455429beaf82954d49fa3ca25143177">loadPerspective</a>(GLfloat fovy, GLfloat aspect, GLfloat zNear, GLfloat zFar)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#acc357cb933db716a49e4b0ef09ad69cb">loadRotate</a>(GLfloat x, GLfloat y, GLfloat z, GLfloat a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a4e1cb5411757a33f4d1274234b2456e8">loadRotate</a>(const GLfloat *r, GLfloat a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a3d73ef61926c6f05c570c07f65e42fb8">loadRotate</a>(const GgVector &amp;r, GLfloat a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a864059438faa929c05a54dc7bb9c8624">loadRotate</a>(const GLfloat *r)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#ad9a81fdfe8df9e7e5019b037610f8123">loadRotate</a>(const GgVector &amp;r)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#acc357cb933db716a49e4b0ef09ad69cb">loadRotate</a>(GLfloat x, GLfloat y, GLfloat z, GLfloat a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a541abeb7f08268bc1cb0ff5b0120ecd1">loadRotate</a>(const GLfloat *r, GLfloat a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a8cb5d54a82fdf182d9b097792473f5c6">loadRotate</a>(const GgVector &amp;r, GLfloat a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a3a8cc5cd441c9bb19fae5e0084f03ace">loadRotate</a>(const GLfloat *r)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a994207bdde997dcd1111eb8a9161c28d">loadRotate</a>(const GgVector &amp;r)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#ad1cf1af0b03604dea2ccdfa38cf48219">loadRotateX</a>(GLfloat a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#adc134a1416496139bee3feb6c0359482">loadRotateY</a>(GLfloat a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#adc134a1416496139bee3feb6c0359482">loadRotateY</a>(GLfloat a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#ae314b688f465c548dfa4b5a5ed3a916f">loadRotateZ</a>(GLfloat a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#ac260bb9eaa56ea8e07894566cd9f9dce">loadScale</a>(GLfloat x, GLfloat y, GLfloat z, GLfloat w=1.0f)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a327fbc7dea846af324019e3dd8ccb8da">loadScale</a>(const GLfloat *s)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#ae6930fa68c59aed528ee852f727fd29d">loadScale</a>(const GgVector &amp;s)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#ac260bb9eaa56ea8e07894566cd9f9dce">loadScale</a>(GLfloat x, GLfloat y, GLfloat z, GLfloat w=1.0f)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#ab6457edf15d265943591912b587b85e3">loadScale</a>(const GLfloat *s)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#afa81a8d1885ee2f69c15d3b5dc0a60fa">loadScale</a>(const GgVector &amp;s)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a1411224c2d99609e2a9c8753903df624">loadTranslate</a>(GLfloat x, GLfloat y, GLfloat z, GLfloat w=1.0f)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a09a6669afc37d942f01f69ac6302c8f4">loadTranslate</a>(const GLfloat *t)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#aaaab47ea43701cfacb7025c35c4d3d0a">loadTranslate</a>(const GgVector &amp;t)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#aeb944e9d5e45ee4c64ad3565492b2852">loadTranspose</a>(const GLfloat *a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#aaf7f3eaeda0eae6fbef81f41c3d85a74">loadTranspose</a>(const GgMatrix &amp;m)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a4a34e42fd2285057333c7e2d8cc2686b">lookat</a>(GLfloat ex, GLfloat ey, GLfloat ez, GLfloat tx, GLfloat ty, GLfloat tz, GLfloat ux, GLfloat uy, GLfloat uz) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a4c26156f9a7132965e54679cbe4c955e">loadTranslate</a>(const GLfloat *t)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a8a2902dc97df720f75947306a4e7a1fd">loadTranslate</a>(const GgVector &amp;t)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#aeb944e9d5e45ee4c64ad3565492b2852">loadTranspose</a>(const GLfloat *a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a9943cfa418a97f90d34656d1a593a180">loadTranspose</a>(const GgMatrix &amp;m)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a4a34e42fd2285057333c7e2d8cc2686b">lookat</a>(GLfloat ex, GLfloat ey, GLfloat ez, GLfloat tx, GLfloat ty, GLfloat tz, GLfloat ux, GLfloat uy, GLfloat uz) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#aabb989f445105e6c767e3ee6d707c00d">lookat</a>(const GLfloat *e, const GLfloat *t, const GLfloat *u) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a474be4675659c07c9b8eebf3b5c523a9">lookat</a>(const GgVector &amp;e, const GgVector &amp;t, const GgVector &amp;u) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a474be4675659c07c9b8eebf3b5c523a9">lookat</a>(const GgVector &amp;e, const GgVector &amp;t, const GgVector &amp;u) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a738782ec492a8ec7927de80c1de4c820">normal</a>() const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#ab74f171ed21474bc9970d2765f92e6c7">operator*</a>(const GLfloat *a) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#ab74f171ed21474bc9970d2765f92e6c7">operator*</a>(const GLfloat *a) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#aab39482206c804bc28bb0d32621071ce">operator*</a>(const GgMatrix &amp;m) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a1211fcb3d876d2e85cf05bc826aa8651">operator*</a>(const GgVector &amp;v) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a26b49b75e4170fe443076d00e452c93a">operator*=</a>(const GLfloat *a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#aca069f5ff9fda7b444c060a8b8f4c80c">operator*=</a>(const GgMatrix &amp;m)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a1211fcb3d876d2e85cf05bc826aa8651">operator*</a>(const GgVector &amp;v) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a4655c7207828ffe6c5c3e11b32193eb8">operator*=</a>(const GLfloat *a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a7dd61f98e688a47b12055b33e1611d5e">operator*=</a>(const GgMatrix &amp;m)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a141295bcb96b795e9183bee00a2cf5b0">operator+</a>(const GLfloat *a) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a91696a62af36fd3056300150bd1510fa">operator+</a>(const GgMatrix &amp;m) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a35881c7f1405707272a549002ebdcbf8">operator+=</a>(const GLfloat *a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#adef722b2ff9b75d1a425623e2870449b">operator+=</a>(const GgMatrix &amp;m)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a91696a62af36fd3056300150bd1510fa">operator+</a>(const GgMatrix &amp;m) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a0d6e22e769769b44d6942062db8b5b40">operator+=</a>(const GLfloat *a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a1629f241301976c3d0d87d0e7cc4f16a">operator+=</a>(const GgMatrix &amp;m)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a38a533625fe483e8d6ee209f7e313604">operator-</a>(const GLfloat *a) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#aafae7c9391986b884ebf95f81a3408f0">operator-</a>(const GgMatrix &amp;m) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a4b4ed45883e31e4bedec910698a77bff">operator-=</a>(const GLfloat *a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a73a113efe945ec8169a267de36c37f47">operator-=</a>(const GgMatrix &amp;m)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#aafae7c9391986b884ebf95f81a3408f0">operator-</a>(const GgMatrix &amp;m) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#ab7c83c176d93990cc7c8261962615aca">operator-=</a>(const GLfloat *a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#af6cbb9381f6260917a23405f6a4afa62">operator-=</a>(const GgMatrix &amp;m)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a2de1a5ba97c7946307f99c67af8afd39">operator/</a>(const GLfloat *a) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#aa078aff74fde602835eb40e27b27839a">operator/</a>(const GgMatrix &amp;m) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a575e24eb1695dbfe8094f6e5859b1a7c">operator/=</a>(const GLfloat *a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a80ff601b43903b55400c229ab77e69af">operator/=</a>(const GgMatrix &amp;m)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a0e6466eae938ffbf78df634d2e3094aa">operator=</a>(const GLfloat *a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#ab9cb6439fd594e523d39a4efd8eb0f86">orthogonal</a>(GLfloat left, GLfloat right, GLfloat bottom, GLfloat top, GLfloat zNear, GLfloat zFar) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#aa078aff74fde602835eb40e27b27839a">operator/</a>(const GgMatrix &amp;m) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#aba57513ebc65d37bc8b82dd080a87bae">operator/=</a>(const GLfloat *a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a3d2fc2cd5e3a86e2883acc1c5acef01c">operator/=</a>(const GgMatrix &amp;m)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a1f5f1ebb10022d1f019f079514ce45db">operator=</a>(const GLfloat *a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#ab9cb6439fd594e523d39a4efd8eb0f86">orthogonal</a>(GLfloat left, GLfloat right, GLfloat bottom, GLfloat top, GLfloat zNear, GLfloat zFar) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#afcd829d6ee34cf494c96e9d6ca1e6192">perspective</a>(GLfloat fovy, GLfloat aspect, GLfloat zNear, GLfloat zFar) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a1dfc87382cad9962aadd0d8ef55a098d">projection</a>(GLfloat *c, const GLfloat *v) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a1dfc87382cad9962aadd0d8ef55a098d">projection</a>(GLfloat *c, const GLfloat *v) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#ab80af7ce5f1c1a2a5400280addc28d4b">projection</a>(GLfloat *c, const GgVector &amp;v) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a38b06d117c3e2a1b83b88da9ea2806b5">projection</a>(GgVector &amp;c, const GLfloat *v) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a38b06d117c3e2a1b83b88da9ea2806b5">projection</a>(GgVector &amp;c, const GLfloat *v) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#aef2318924337cb59e073f20ec2094541">projection</a>(GgVector &amp;c, const GgVector &amp;v) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a80f59d17bddcffd528ea6b99e4a2ed75">rotate</a>(GLfloat x, GLfloat y, GLfloat z, GLfloat a) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a80f59d17bddcffd528ea6b99e4a2ed75">rotate</a>(GLfloat x, GLfloat y, GLfloat z, GLfloat a) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a1c381883fc9dc2f3303dd729432c586d">rotate</a>(const GLfloat *r, GLfloat a) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a36727b319fb0b3d1e6d77ec81eccb8a7">rotate</a>(const GgVector &amp;r, GLfloat a) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a36727b319fb0b3d1e6d77ec81eccb8a7">rotate</a>(const GgVector &amp;r, GLfloat a) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a74cd637f02dfcd18961c01a8137dd5f3">rotate</a>(const GLfloat *r) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a9eac11bd0316439ca0038b69ab3b7a9e">rotate</a>(const GgVector &amp;r) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a9eac11bd0316439ca0038b69ab3b7a9e">rotate</a>(const GgVector &amp;r) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a673d91ac86c3109a0fc6c0839e5bebee">rotateX</a>(GLfloat a) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a9fc25e411f5fc0ca8cd6bc2d03f06570">rotateY</a>(GLfloat a) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a9fc25e411f5fc0ca8cd6bc2d03f06570">rotateY</a>(GLfloat a) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a5de975c07013aff7f31b0a45c58e9998">rotateZ</a>(GLfloat a) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a5ea04ac32765bb9ecc2b80792a12d86a">scale</a>(GLfloat x, GLfloat y, GLfloat z, GLfloat w=1.0f) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a5ea04ac32765bb9ecc2b80792a12d86a">scale</a>(GLfloat x, GLfloat y, GLfloat z, GLfloat w=1.0f) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a0c9004fe440a597d57f52e1d1ac05c6a">scale</a>(const GLfloat *s) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#ae323c19d1a4fec620664840695465391">scale</a>(const GgVector &amp;s) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#ae323c19d1a4fec620664840695465391">scale</a>(const GgVector &amp;s) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a687adb8979ae8af7b2cc842782145eb3">translate</a>(GLfloat x, GLfloat y, GLfloat z, GLfloat w=1.0f) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a00b38f04088224a02c6ebf393e355f0e">translate</a>(const GLfloat *t) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a00b38f04088224a02c6ebf393e355f0e">translate</a>(const GLfloat *t) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#aef22dbd307afa5ec7e40d6d2d12c53f2">translate</a>(const GgVector &amp;t) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#adf560abf2a3a5fd8a8fdcb5c1a99709c">transpose</a>() const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#adf560abf2a3a5fd8a8fdcb5c1a99709c">transpose</a>() const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2022年12月11日(日) 23時16分32秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2022年12月23日(金) 09時58分54秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gg_341',['gg',['../namespacegg.html',1,'']]]
+  ['gg_0',['gg',['../namespacegg.html',1,'']]]
 ];

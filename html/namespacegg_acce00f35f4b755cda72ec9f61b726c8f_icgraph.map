@@ -1,7 +1,7 @@
 <map id="gg::ggReadImage" name="gg::ggReadImage">
-<area shape="rect" id="node1" title=" " alt="" coords="199,85,321,112"/>
-<area shape="rect" id="node2" href="$namespacegg.html#a53453ed6229bbd109c279a3765648d01" title=" " alt="" coords="17,5,139,32"/>
-<area shape="rect" id="node3" href="$namespacegg.html#a6ba6c60b5240e74a801a7f33e09bce87" title=" " alt="" coords="17,56,139,83"/>
-<area shape="rect" id="node4" href="$classgg_1_1GgColorTexture.html#afdc734fb5c415a9f5b86e1b13e7ee7d6" title=" " alt="" coords="11,107,145,149"/>
-<area shape="rect" id="node5" href="$classgg_1_1GgNormalTexture.html#adca09b7af04c1a58703fbafcea758671" title=" " alt="" coords="5,173,151,214"/>
+<area shape="rect" id="node1" title=" " alt="" coords="199,84,321,109"/>
+<area shape="rect" id="node2" href="$namespacegg.html#a53453ed6229bbd109c279a3765648d01" title=" " alt="" coords="17,5,139,31"/>
+<area shape="rect" id="node3" href="$namespacegg.html#a6ba6c60b5240e74a801a7f33e09bce87" title=" " alt="" coords="17,55,139,80"/>
+<area shape="rect" id="node4" href="$classgg_1_1GgColorTexture.html#afdc734fb5c415a9f5b86e1b13e7ee7d6" title=" " alt="" coords="11,105,145,145"/>
+<area shape="rect" id="node5" href="$classgg_1_1GgNormalTexture.html#adca09b7af04c1a58703fbafcea758671" title=" " alt="" coords="5,169,151,209"/>
 </map>

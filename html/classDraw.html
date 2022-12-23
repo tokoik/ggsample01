@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: Draw クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
+  <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
   </td>
@@ -29,21 +30,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.1 -->
+<!-- 構築: Doxygen 1.9.5 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -54,9 +56,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
@@ -64,14 +73,13 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="classDraw-members.html">全メンバ一覧</a>  </div>
-  <div class="headertitle">
-<div class="title">Draw クラス</div>  </div>
+  <div class="headertitle"><div class="title">Draw クラス</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Draw_8h_source.html">Draw.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:a981ad45f81757fe14266723e992c02b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDraw.html#a981ad45f81757fe14266723e992c02b8">Draw</a> (const <a class="el" href="classMenu.html">Menu</a> &amp;menu)</td></tr>
 <tr class="separator:a981ad45f81757fe14266723e992c02b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -81,12 +89,12 @@ $(function() {
 <tr class="separator:aada4b251dc995c26f468069654ec7207"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>図形の描画クラス </p>
+<div class="textblock"><p >図形の描画クラス </p>
 
 <p class="definition"> <a class="el" href="Draw_8h_source.html">Draw.h</a> の <a class="el" href="Draw_8h_source.html#l00017">17</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
-<a id="a981ad45f81757fe14266723e992c02b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a981ad45f81757fe14266723e992c02b8">&#9670;&nbsp;</a></span>Draw()</h2>
+<a id="a981ad45f81757fe14266723e992c02b8" name="a981ad45f81757fe14266723e992c02b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a981ad45f81757fe14266723e992c02b8">&#9670;&#160;</a></span>Draw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -100,14 +108,14 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<p>コンストラクタ </p>
+<p >コンストラクタ </p>
 
 <p class="definition"> <a class="el" href="Draw_8cpp_source.html">Draw.cpp</a> の <a class="el" href="Draw_8cpp_source.html#l00013">13</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a206415ad169356614a4ab0cf51116215"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a206415ad169356614a4ab0cf51116215">&#9670;&nbsp;</a></span>~Draw()</h2>
+<a id="a206415ad169356614a4ab0cf51116215" name="a206415ad169356614a4ab0cf51116215"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a206415ad169356614a4ab0cf51116215">&#9670;&#160;</a></span>~Draw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -128,15 +136,15 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
-<p>デストラクタ </p>
+<p >デストラクタ </p>
 
 <p class="definition"> <a class="el" href="Draw_8cpp_source.html">Draw.cpp</a> の <a class="el" href="Draw_8cpp_source.html#l00029">29</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="aada4b251dc995c26f468069654ec7207"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aada4b251dc995c26f468069654ec7207">&#9670;&nbsp;</a></span>draw()</h2>
+<a id="aada4b251dc995c26f468069654ec7207" name="aada4b251dc995c26f468069654ec7207"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aada4b251dc995c26f468069654ec7207">&#9670;&#160;</a></span>draw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -160,7 +168,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<p>描画する </p>
+<p >描画する </p>
 
 <p class="definition"> <a class="el" href="Draw_8cpp_source.html">Draw.cpp</a> の <a class="el" href="Draw_8cpp_source.html#l00036">36</a> 行目に定義があります。</p>
 <div class="dynheader">
@@ -168,9 +176,9 @@ $(function() {
 <div class="dyncontent">
 <div class="center"><img src="classDraw_aada4b251dc995c26f468069654ec7207_cgraph.png" border="0" usemap="#aclassDraw_aada4b251dc995c26f468069654ec7207_cgraph" alt=""/></div>
 <map name="aclassDraw_aada4b251dc995c26f468069654ec7207_cgraph" id="aclassDraw_aada4b251dc995c26f468069654ec7207_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,92,57"/>
-<area shape="rect" href="classgg_1_1GgSimpleObj.html#a4a23b84f66b77e8ec9a9fdd94b9e4d33" title=" " alt="" coords="147,5,303,32"/>
-<area shape="rect" href="classgg_1_1GgSimpleShader.html#aaa721d9ae49296194f949d6ba2f927db" title=" " alt="" coords="140,56,311,83"/>
+<area shape="rect" title=" " alt="" coords="5,31,92,56"/>
+<area shape="rect" href="classgg_1_1GgSimpleObj.html#a4a23b84f66b77e8ec9a9fdd94b9e4d33" title=" " alt="" coords="147,5,303,31"/>
+<area shape="rect" href="classgg_1_1GgSimpleShader.html#aaa721d9ae49296194f949d6ba2f927db" title=" " alt="" coords="140,55,311,80"/>
 </map>
 </div>
 
@@ -183,7 +191,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2022年12月11日(日) 23時16分29秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2022年12月23日(金) 09時58分52秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

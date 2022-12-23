@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: main.cpp ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
+  <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
   </td>
@@ -29,21 +30,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.1 -->
+<!-- 構築: Doxygen 1.9.5 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -54,9 +56,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
@@ -64,52 +73,48 @@ $(function() {
   <div class="summary">
 <a href="#define-members">マクロ定義</a> &#124;
 <a href="#func-members">関数</a>  </div>
-  <div class="headertitle">
-<div class="title">main.cpp ファイル</div>  </div>
+  <div class="headertitle"><div class="title">main.cpp ファイル</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &quot;<a class="el" href="GgApp_8h_source.html">GgApp.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="GgApp_8h_source.html">GgApp.h</a>&quot;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 main.cpp の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#amain_8cpp" alt=""/></div>
 <map name="amain_8cpp" id="amain_8cpp">
-<area shape="rect" title=" " alt="" coords="167,5,241,32"/>
-<area shape="rect" title=" " alt="" coords="20,229,92,256"/>
-<area shape="rect" href="GgApp_8h.html" title=" " alt="" coords="206,80,279,107"/>
-<area shape="rect" href="Window_8h.html" title=" " alt="" coords="271,155,350,181"/>
-<area shape="rect" href="gg_8h.html" title=" " alt="" coords="167,229,214,256"/>
-<area shape="rect" title=" " alt="" coords="5,304,64,331"/>
-<area shape="rect" title=" " alt="" coords="238,229,298,256"/>
-<area shape="rect" title=" " alt="" coords="322,229,387,256"/>
-<area shape="rect" title=" " alt="" coords="411,229,490,256"/>
-<area shape="rect" title=" " alt="" coords="515,229,579,256"/>
-<area shape="rect" title=" " alt="" coords="603,229,727,256"/>
-<area shape="rect" title=" " alt="" coords="752,229,899,256"/>
-<area shape="rect" title=" " alt="" coords="88,304,139,331"/>
-<area shape="rect" title=" " alt="" coords="163,304,219,331"/>
-<area shape="rect" title=" " alt="" coords="243,304,298,331"/>
-<area shape="rect" title=" " alt="" coords="323,304,392,331"/>
-<area shape="rect" title=" " alt="" coords="416,304,480,331"/>
+<area shape="rect" title=" " alt="" coords="521,5,596,31"/>
+<area shape="rect" href="GgApp_8h.html" title=" " alt="" coords="485,79,558,104"/>
+<area shape="rect" title=" " alt="" coords="839,152,911,177"/>
+<area shape="rect" href="gg_8h.html" title=" " alt="" coords="167,152,214,177"/>
+<area shape="rect" title=" " alt="" coords="238,152,303,177"/>
+<area shape="rect" title=" " alt="" coords="327,152,406,177"/>
+<area shape="rect" title=" " alt="" coords="431,152,495,177"/>
+<area shape="rect" title=" " alt="" coords="519,152,643,177"/>
+<area shape="rect" title=" " alt="" coords="668,152,815,177"/>
+<area shape="rect" title=" " alt="" coords="5,225,64,251"/>
+<area shape="rect" title=" " alt="" coords="88,225,139,251"/>
+<area shape="rect" title=" " alt="" coords="163,225,219,251"/>
+<area shape="rect" title=" " alt="" coords="243,225,298,251"/>
+<area shape="rect" title=" " alt="" coords="323,225,392,251"/>
 </map>
 </div>
 </div>
 <p><a href="main_8cpp_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 マクロ定義</h2></td></tr>
 <tr class="memitem:a9eb08c4f3ad005333d49aa2299e5c7c3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a9eb08c4f3ad005333d49aa2299e5c7c3">HEADER_STR</a>&#160;&#160;&#160;&quot;ゲームグラフィックス特論&quot;</td></tr>
 <tr class="separator:a9eb08c4f3ad005333d49aa2299e5c7c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 関数</h2></td></tr>
 <tr class="memitem:a110745d0e996bc19a8c8e8cacbadd525"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525">main</a> (int argc, const char *const *argv)</td></tr>
 <tr class="separator:a110745d0e996bc19a8c8e8cacbadd525"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">マクロ定義詳解</h2>
-<a id="a9eb08c4f3ad005333d49aa2299e5c7c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9eb08c4f3ad005333d49aa2299e5c7c3">&#9670;&nbsp;</a></span>HEADER_STR</h2>
+<a id="a9eb08c4f3ad005333d49aa2299e5c7c3" name="a9eb08c4f3ad005333d49aa2299e5c7c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9eb08c4f3ad005333d49aa2299e5c7c3">&#9670;&#160;</a></span>HEADER_STR</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -120,13 +125,13 @@ main.cpp の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="main_8cpp_source.html">main.cpp</a> の <a class="el" href="main_8cpp_source.html#l00015">15</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="main_8cpp_source.html">main.cpp</a> の <a class="el" href="main_8cpp_source.html#l00014">14</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="a110745d0e996bc19a8c8e8cacbadd525"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a110745d0e996bc19a8c8e8cacbadd525">&#9670;&nbsp;</a></span>main()</h2>
+<a id="a110745d0e996bc19a8c8e8cacbadd525" name="a110745d0e996bc19a8c8e8cacbadd525"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a110745d0e996bc19a8c8e8cacbadd525">&#9670;&#160;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -151,19 +156,18 @@ main.cpp の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="main_8cpp_source.html">main.cpp</a> の <a class="el" href="main_8cpp_source.html#l00023">23</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="main_8cpp_source.html">main.cpp</a> の <a class="el" href="main_8cpp_source.html#l00019">19</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp_a110745d0e996bc19a8c8e8cacbadd525_cgraph.png" border="0" usemap="#amain_8cpp_a110745d0e996bc19a8c8e8cacbadd525_cgraph" alt=""/></div>
 <map name="amain_8cpp_a110745d0e996bc19a8c8e8cacbadd525_cgraph" id="amain_8cpp_a110745d0e996bc19a8c8e8cacbadd525_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,56,57"/>
-<area shape="rect" href="classWindow.html#a0d067da19dc2649f7cb91f2b5c235908" title=" " alt="" coords="104,5,227,32"/>
-<area shape="rect" href="classGgApp.html#ad2e50a5e84d4fd6162e03039ac00c7ae" title=" " alt="" coords="116,56,215,83"/>
-<area shape="rect" href="namespacegg.html#a2924895ad284e08b08a2cfd115c5a7bf" title=" " alt="" coords="289,31,386,57"/>
-<area shape="rect" href="namespacegg.html#a7dcbaa73755efd46f1f19b0b3a39b473" title=" " alt="" coords="275,81,400,108"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#a753d56545359ba6efc11aa9b5b3ade11" title=" " alt="" coords="462,31,630,57"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#a2455429beaf82954d49fa3ca25143177" title=" " alt="" coords="448,81,644,108"/>
+<area shape="rect" title=" " alt="" coords="5,31,56,56"/>
+<area shape="rect" href="classGgApp.html#ad2e50a5e84d4fd6162e03039ac00c7ae" title=" " alt="" coords="104,31,203,56"/>
+<area shape="rect" href="namespacegg.html#a2924895ad284e08b08a2cfd115c5a7bf" title=" " alt="" coords="265,5,362,31"/>
+<area shape="rect" href="namespacegg.html#a7dcbaa73755efd46f1f19b0b3a39b473" title=" " alt="" coords="251,55,376,80"/>
+<area shape="rect" href="classgg_1_1GgMatrix.html#a753d56545359ba6efc11aa9b5b3ade11" title=" " alt="" coords="438,5,606,31"/>
+<area shape="rect" href="classgg_1_1GgMatrix.html#a2455429beaf82954d49fa3ca25143177" title=" " alt="" coords="424,55,620,80"/>
 </map>
 </div>
 
@@ -172,7 +176,7 @@ main.cpp の依存先関係図:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2022年12月11日(日) 23時16分29秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2022年12月23日(金) 09時58分52秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

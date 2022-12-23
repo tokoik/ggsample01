@@ -1,5 +1,5 @@
 <map id="Draw::draw" name="Draw::draw">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,92,57"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgSimpleObj.html#a4a23b84f66b77e8ec9a9fdd94b9e4d33" title=" " alt="" coords="147,5,303,32"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgSimpleShader.html#aaa721d9ae49296194f949d6ba2f927db" title=" " alt="" coords="140,56,311,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,92,56"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgSimpleObj.html#a4a23b84f66b77e8ec9a9fdd94b9e4d33" title=" " alt="" coords="147,5,303,31"/>
+<area shape="rect" id="node3" href="$classgg_1_1GgSimpleShader.html#aaa721d9ae49296194f949d6ba2f927db" title=" " alt="" coords="140,55,311,80"/>
 </map>

@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: gg::GgUniformBuffer&lt; T &gt; クラステンプレート</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
+  <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
   </td>
@@ -29,21 +30,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.1 -->
+<!-- 構築: Doxygen 1.9.5 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -54,9 +56,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -68,14 +77,13 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="classgg_1_1GgUniformBuffer-members.html">全メンバ一覧</a>  </div>
-  <div class="headertitle">
-<div class="title">gg::GgUniformBuffer&lt; T &gt; クラステンプレート</div>  </div>
+  <div class="headertitle"><div class="title">gg::GgUniformBuffer&lt; T &gt; クラステンプレート</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="gg_8h_source.html">gg.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:af7e78fd8c342e9ac9cb9b056c879c768"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#af7e78fd8c342e9ac9cb9b056c879c768">GgUniformBuffer</a> ()</td></tr>
 <tr class="separator:af7e78fd8c342e9ac9cb9b056c879c768"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -85,22 +93,22 @@ $(function() {
 <tr class="separator:af737530228e2b2e70016e433f6c96e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affa4119e5f9aae08c74fda3a31e6ee8e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#affa4119e5f9aae08c74fda3a31e6ee8e">~GgUniformBuffer</a> ()</td></tr>
 <tr class="separator:affa4119e5f9aae08c74fda3a31e6ee8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d52d0cb4f6dada614ce5cfa2f664a4a"><td class="memItemLeft" align="right" valign="top">const GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#a1d52d0cb4f6dada614ce5cfa2f664a4a">getTarget</a> () const</td></tr>
-<tr class="separator:a1d52d0cb4f6dada614ce5cfa2f664a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad097650d4355144a15deb49bf78e6198"><td class="memItemLeft" align="right" valign="top">const GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#ad097650d4355144a15deb49bf78e6198">getTarget</a> () const</td></tr>
+<tr class="separator:ad097650d4355144a15deb49bf78e6198"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4b0676ee460d8884f2f041fd2dc3506"><td class="memItemLeft" align="right" valign="top">GLsizeiptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506">getStride</a> () const</td></tr>
 <tr class="separator:ad4b0676ee460d8884f2f041fd2dc3506"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a330621c187fecf3e1ae6d113166d67a3"><td class="memItemLeft" align="right" valign="top">const GLsizei &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#a330621c187fecf3e1ae6d113166d67a3">getCount</a> () const</td></tr>
-<tr class="separator:a330621c187fecf3e1ae6d113166d67a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24efb551afaf6ece3fb2549d645326a7"><td class="memItemLeft" align="right" valign="top">const GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#a24efb551afaf6ece3fb2549d645326a7">getBuffer</a> () const</td></tr>
-<tr class="separator:a24efb551afaf6ece3fb2549d645326a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a476ed194c6ae2e4a6cbcdfe119db039b"><td class="memItemLeft" align="right" valign="top">const GLsizei &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#a476ed194c6ae2e4a6cbcdfe119db039b">getCount</a> () const</td></tr>
+<tr class="separator:a476ed194c6ae2e4a6cbcdfe119db039b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b32d9bbfd87830bc2db3d4431d89176"><td class="memItemLeft" align="right" valign="top">const GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#a2b32d9bbfd87830bc2db3d4431d89176">getBuffer</a> () const</td></tr>
+<tr class="separator:a2b32d9bbfd87830bc2db3d4431d89176"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcc61a088d16f53a9a51749dd34c24b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#abcc61a088d16f53a9a51749dd34c24b8">bind</a> () const</td></tr>
 <tr class="separator:abcc61a088d16f53a9a51749dd34c24b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4152f1f30958abd2af56ffb27fa8de04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#a4152f1f30958abd2af56ffb27fa8de04">unbind</a> () const</td></tr>
 <tr class="separator:a4152f1f30958abd2af56ffb27fa8de04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a839ba8e74106f821d4a1e39aa7c7fc94"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#a839ba8e74106f821d4a1e39aa7c7fc94">map</a> () const</td></tr>
-<tr class="separator:a839ba8e74106f821d4a1e39aa7c7fc94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52a9205f37ef2dd39ddccabd67fc63aa"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#a52a9205f37ef2dd39ddccabd67fc63aa">map</a> (GLint first, GLsizei count) const</td></tr>
-<tr class="separator:a52a9205f37ef2dd39ddccabd67fc63aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a978849adec295afa4e8772381cbe361f"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">map</a> () const</td></tr>
+<tr class="separator:a978849adec295afa4e8772381cbe361f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2722c9543743039dcde0becd8329d30"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#ab2722c9543743039dcde0becd8329d30">map</a> (GLint first, GLsizei count) const</td></tr>
+<tr class="separator:ab2722c9543743039dcde0becd8329d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abea659ba10d6fae6677463b6d0718197"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197">unmap</a> () const</td></tr>
 <tr class="separator:abea659ba10d6fae6677463b6d0718197"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1af7292924eb187968a4ea1a9221e9e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#a1af7292924eb187968a4ea1a9221e9e7">load</a> (const T *data, GLsizei count, GLenum usage=GL_STATIC_DRAW)</td></tr>
@@ -117,16 +125,14 @@ $(function() {
 <tr class="separator:a0ad63590a48c6a54e92b98a3f0d53242"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><h3>template&lt;typename T&gt;<br />
-class gg::GgUniformBuffer&lt; T &gt;</h3>
-
-<p>ユニフォームバッファオブジェクト.</p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+class gg::GgUniformBuffer&lt; T &gt;</div><p >ユニフォームバッファオブジェクト.</p>
 <dl class="section note"><dt>覚え書き</dt><dd>ユニフォーム変数を格納するバッファオブジェクトの基底クラス. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05764">5764</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05766">5766</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
-<a id="af7e78fd8c342e9ac9cb9b056c879c768"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7e78fd8c342e9ac9cb9b056c879c768">&#9670;&nbsp;</a></span>GgUniformBuffer() <span class="overload">[1/3]</span></h2>
+<a id="af7e78fd8c342e9ac9cb9b056c879c768" name="af7e78fd8c342e9ac9cb9b056c879c768"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7e78fd8c342e9ac9cb9b056c879c768">&#9670;&#160;</a></span>GgUniformBuffer() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -137,7 +143,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgg_1_1GgUniformBuffer.html">gg::GgUniformBuffer</a>&lt; T &gt;::<a class="el" href="classgg_1_1GgUniformBuffer.html">GgUniformBuffer</a> </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgUniformBuffer.html">gg::GgUniformBuffer</a>&lt; T &gt;::GgUniformBuffer </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -149,14 +155,14 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>コンストラクタ. </p>
+<p >コンストラクタ. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05767">5767</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05769">5769</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="ad35bb060eb37e5f3679e24f469016eeb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad35bb060eb37e5f3679e24f469016eeb">&#9670;&nbsp;</a></span>GgUniformBuffer() <span class="overload">[2/3]</span></h2>
+<a id="ad35bb060eb37e5f3679e24f469016eeb" name="ad35bb060eb37e5f3679e24f469016eeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad35bb060eb37e5f3679e24f469016eeb">&#9670;&#160;</a></span>GgUniformBuffer() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,7 +173,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgg_1_1GgUniformBuffer.html">gg::GgUniformBuffer</a>&lt; T &gt;::<a class="el" href="classgg_1_1GgUniformBuffer.html">GgUniformBuffer</a> </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgUniformBuffer.html">gg::GgUniformBuffer</a>&lt; T &gt;::GgUniformBuffer </td>
           <td>(</td>
           <td class="paramtype">const T *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
@@ -196,7 +202,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>ユニフォームバッファオブジェクトのブロックごとにデータを転送するコンストラクタ.</p>
+<p >ユニフォームバッファオブジェクトのブロックごとにデータを転送するコンストラクタ.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>データが格納されている領域の先頭のポインタ (nullptr ならデータを転送しない). </td></tr>
@@ -206,12 +212,12 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05767">5767</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05769">5769</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="af737530228e2b2e70016e433f6c96e9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af737530228e2b2e70016e433f6c96e9d">&#9670;&nbsp;</a></span>GgUniformBuffer() <span class="overload">[3/3]</span></h2>
+<a id="af737530228e2b2e70016e433f6c96e9d" name="af737530228e2b2e70016e433f6c96e9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af737530228e2b2e70016e433f6c96e9d">&#9670;&#160;</a></span>GgUniformBuffer() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -222,7 +228,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgg_1_1GgUniformBuffer.html">gg::GgUniformBuffer</a>&lt; T &gt;::<a class="el" href="classgg_1_1GgUniformBuffer.html">GgUniformBuffer</a> </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgUniformBuffer.html">gg::GgUniformBuffer</a>&lt; T &gt;::GgUniformBuffer </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
           <td class="paramname"><em>data</em>, </td>
@@ -251,7 +257,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>ユニフォームバッファオブジェクトの全ブロックに同じデータを格納するコンストラクタ.</p>
+<p >ユニフォームバッファオブジェクトの全ブロックに同じデータを格納するコンストラクタ.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>格納するデータ. </td></tr>
@@ -261,12 +267,12 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05767">5767</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05769">5769</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="affa4119e5f9aae08c74fda3a31e6ee8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#affa4119e5f9aae08c74fda3a31e6ee8e">&#9670;&nbsp;</a></span>~GgUniformBuffer()</h2>
+<a id="affa4119e5f9aae08c74fda3a31e6ee8e" name="affa4119e5f9aae08c74fda3a31e6ee8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affa4119e5f9aae08c74fda3a31e6ee8e">&#9670;&#160;</a></span>~GgUniformBuffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -289,15 +295,15 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>デストラクタ. </p>
+<p >デストラクタ. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05767">5767</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05769">5769</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="abcc61a088d16f53a9a51749dd34c24b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abcc61a088d16f53a9a51749dd34c24b8">&#9670;&nbsp;</a></span>bind()</h2>
+<a id="abcc61a088d16f53a9a51749dd34c24b8" name="abcc61a088d16f53a9a51749dd34c24b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcc61a088d16f53a9a51749dd34c24b8">&#9670;&#160;</a></span>bind()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -320,14 +326,14 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>ユニフォームバッファオブジェクトを結合する. </p>
+<p >ユニフォームバッファオブジェクトを結合する. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05852">5852</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05854">5854</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a0ad63590a48c6a54e92b98a3f0d53242"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ad63590a48c6a54e92b98a3f0d53242">&#9670;&nbsp;</a></span>copy()</h2>
+<a id="a0ad63590a48c6a54e92b98a3f0d53242" name="a0ad63590a48c6a54e92b98a3f0d53242"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ad63590a48c6a54e92b98a3f0d53242">&#9670;&#160;</a></span>copy()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -373,23 +379,23 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>別のバッファオブジェクトからデータを複写する.</p>
+<p >別のバッファオブジェクトからデータを複写する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">src_buffer</td><td>複写元のバッファオブジェクト名. </td></tr>
     <tr><td class="paramname">src_first</td><td>複写元 (buffer) の先頭のデータの位置. </td></tr>
-    <tr><td class="paramname">dst_first</td><td>複写先 (<a class="el" href="classgg_1_1GgUniformBuffer.html#a24efb551afaf6ece3fb2549d645326a7">getBuffer()</a>) の先頭のデータの位置. </td></tr>
+    <tr><td class="paramname">dst_first</td><td>複写先 (<a class="el" href="classgg_1_1GgUniformBuffer.html#a2b32d9bbfd87830bc2db3d4431d89176">getBuffer()</a>) の先頭のデータの位置. </td></tr>
     <tr><td class="paramname">count</td><td>複写するデータの数 (0 ならバッファオブジェクト全体). </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06063">6063</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06065">6065</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a54af5ca44551f3d6799966590b80d7a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54af5ca44551f3d6799966590b80d7a1">&#9670;&nbsp;</a></span>fill()</h2>
+<a id="a54af5ca44551f3d6799966590b80d7a1" name="a54af5ca44551f3d6799966590b80d7a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54af5ca44551f3d6799966590b80d7a1">&#9670;&#160;</a></span>fill()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -441,7 +447,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>ユニフォームバッファオブジェクトの全ブロックのメンバーを同じデータを格納する.</p>
+<p >ユニフォームバッファオブジェクトの全ブロックのメンバーを同じデータを格納する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>格納するデータ. </td></tr>
@@ -453,12 +459,12 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05980">5980</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05982">5982</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a24efb551afaf6ece3fb2549d645326a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24efb551afaf6ece3fb2549d645326a7">&#9670;&nbsp;</a></span>getBuffer()</h2>
+<a id="a2b32d9bbfd87830bc2db3d4431d89176" name="a2b32d9bbfd87830bc2db3d4431d89176"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b32d9bbfd87830bc2db3d4431d89176">&#9670;&#160;</a></span>getBuffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -469,7 +475,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const GLuint&amp; <a class="el" href="classgg_1_1GgUniformBuffer.html">gg::GgUniformBuffer</a>&lt; T &gt;::getBuffer </td>
+          <td class="memname">const GLuint &amp; <a class="el" href="classgg_1_1GgUniformBuffer.html">gg::GgUniformBuffer</a>&lt; T &gt;::getBuffer </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -481,15 +487,15 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>ユニフォームバッファオブジェクト名を取り出す.</p>
+<p >ユニフォームバッファオブジェクト名を取り出す.</p>
 <dl class="section return"><dt>戻り値</dt><dd>このユニフォームバッファオブジェクト名. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05844">5844</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05846">5846</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a330621c187fecf3e1ae6d113166d67a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a330621c187fecf3e1ae6d113166d67a3">&#9670;&nbsp;</a></span>getCount()</h2>
+<a id="a476ed194c6ae2e4a6cbcdfe119db039b" name="a476ed194c6ae2e4a6cbcdfe119db039b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a476ed194c6ae2e4a6cbcdfe119db039b">&#9670;&#160;</a></span>getCount()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -500,7 +506,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const GLsizei&amp; <a class="el" href="classgg_1_1GgUniformBuffer.html">gg::GgUniformBuffer</a>&lt; T &gt;::getCount </td>
+          <td class="memname">const GLsizei &amp; <a class="el" href="classgg_1_1GgUniformBuffer.html">gg::GgUniformBuffer</a>&lt; T &gt;::getCount </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -512,15 +518,15 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>データの数を取り出す.</p>
+<p >データの数を取り出す.</p>
 <dl class="section return"><dt>戻り値</dt><dd>このユニフォームバッファオブジェクトのデータの数. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05834">5834</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05836">5836</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="ad4b0676ee460d8884f2f041fd2dc3506"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4b0676ee460d8884f2f041fd2dc3506">&#9670;&nbsp;</a></span>getStride()</h2>
+<a id="ad4b0676ee460d8884f2f041fd2dc3506" name="ad4b0676ee460d8884f2f041fd2dc3506"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4b0676ee460d8884f2f041fd2dc3506">&#9670;&#160;</a></span>getStride()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -543,15 +549,15 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>ユニフォームバッファオブジェクトのアライメントを考慮したデータの間隔を取り出す.</p>
+<p >ユニフォームバッファオブジェクトのアライメントを考慮したデータの間隔を取り出す.</p>
 <dl class="section return"><dt>戻り値</dt><dd>このユニフォームバッファオブジェクトのデータの間隔. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05824">5824</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05826">5826</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a1d52d0cb4f6dada614ce5cfa2f664a4a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d52d0cb4f6dada614ce5cfa2f664a4a">&#9670;&nbsp;</a></span>getTarget()</h2>
+<a id="ad097650d4355144a15deb49bf78e6198" name="ad097650d4355144a15deb49bf78e6198"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad097650d4355144a15deb49bf78e6198">&#9670;&#160;</a></span>getTarget()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -562,7 +568,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const GLuint&amp; <a class="el" href="classgg_1_1GgUniformBuffer.html">gg::GgUniformBuffer</a>&lt; T &gt;::getTarget </td>
+          <td class="memname">const GLuint &amp; <a class="el" href="classgg_1_1GgUniformBuffer.html">gg::GgUniformBuffer</a>&lt; T &gt;::getTarget </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -574,15 +580,15 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>ユニフォームバッファオブジェクトのターゲットを取り出す.</p>
+<p >ユニフォームバッファオブジェクトのターゲットを取り出す.</p>
 <dl class="section return"><dt>戻り値</dt><dd>このユニフォームバッファオブジェクトのターゲット. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05814">5814</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05816">5816</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a94c5c828711212b404a18dcd1cc9e9b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94c5c828711212b404a18dcd1cc9e9b0">&#9670;&nbsp;</a></span>load() <span class="overload">[1/2]</span></h2>
+<a id="a94c5c828711212b404a18dcd1cc9e9b0" name="a94c5c828711212b404a18dcd1cc9e9b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94c5c828711212b404a18dcd1cc9e9b0">&#9670;&#160;</a></span>load() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -622,7 +628,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>ユニフォームバッファオブジェクトを確保して全てのブロックに同じデータを格納する.</p>
+<p >ユニフォームバッファオブジェクトを確保して全てのブロックに同じデータを格納する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>格納するデータ. </td></tr>
@@ -632,12 +638,12 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05921">5921</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05923">5923</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a1af7292924eb187968a4ea1a9221e9e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1af7292924eb187968a4ea1a9221e9e7">&#9670;&nbsp;</a></span>load() <span class="overload">[2/2]</span></h2>
+<a id="a1af7292924eb187968a4ea1a9221e9e7" name="a1af7292924eb187968a4ea1a9221e9e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1af7292924eb187968a4ea1a9221e9e7">&#9670;&#160;</a></span>load() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -677,7 +683,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>ユニフォームバッファオブジェクトを確保してブロックごとにデータを転送する.</p>
+<p >ユニフォームバッファオブジェクトを確保してブロックごとにデータを転送する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>データが格納されている領域の先頭のポインタ (nullptr ならデータを転送しない). </td></tr>
@@ -687,12 +693,12 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05902">5902</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05904">5904</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a839ba8e74106f821d4a1e39aa7c7fc94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a839ba8e74106f821d4a1e39aa7c7fc94">&#9670;&nbsp;</a></span>map() <span class="overload">[1/2]</span></h2>
+<a id="a978849adec295afa4e8772381cbe361f" name="a978849adec295afa4e8772381cbe361f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a978849adec295afa4e8772381cbe361f">&#9670;&#160;</a></span>map() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -703,7 +709,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void* <a class="el" href="classgg_1_1GgUniformBuffer.html">gg::GgUniformBuffer</a>&lt; T &gt;::map </td>
+          <td class="memname">void * <a class="el" href="classgg_1_1GgUniformBuffer.html">gg::GgUniformBuffer</a>&lt; T &gt;::map </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -715,15 +721,15 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>ユニフォームバッファオブジェクトをマップする.</p>
+<p >ユニフォームバッファオブジェクトをマップする.</p>
 <dl class="section return"><dt>戻り値</dt><dd>マップしたメモリの先頭のポインタ. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05870">5870</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05872">5872</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a52a9205f37ef2dd39ddccabd67fc63aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52a9205f37ef2dd39ddccabd67fc63aa">&#9670;&nbsp;</a></span>map() <span class="overload">[2/2]</span></h2>
+<a id="ab2722c9543743039dcde0becd8329d30" name="ab2722c9543743039dcde0becd8329d30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2722c9543743039dcde0becd8329d30">&#9670;&#160;</a></span>map() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -734,7 +740,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void* <a class="el" href="classgg_1_1GgUniformBuffer.html">gg::GgUniformBuffer</a>&lt; T &gt;::map </td>
+          <td class="memname">void * <a class="el" href="classgg_1_1GgUniformBuffer.html">gg::GgUniformBuffer</a>&lt; T &gt;::map </td>
           <td>(</td>
           <td class="paramtype">GLint&#160;</td>
           <td class="paramname"><em>first</em>, </td>
@@ -757,7 +763,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>ユニフォームバッファオブジェクトの指定した範囲をマップする.</p>
+<p >ユニフォームバッファオブジェクトの指定した範囲をマップする.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">first</td><td>マップする範囲のバッファオブジェクトの先頭からの位置. </td></tr>
@@ -767,12 +773,12 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>マップしたメモリの先頭のポインタ. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05882">5882</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05884">5884</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="ae9cc42d251faad15a2f506777d280c67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9cc42d251faad15a2f506777d280c67">&#9670;&nbsp;</a></span>read()</h2>
+<a id="ae9cc42d251faad15a2f506777d280c67" name="ae9cc42d251faad15a2f506777d280c67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9cc42d251faad15a2f506777d280c67">&#9670;&#160;</a></span>read()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -824,7 +830,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>ユニフォームバッファオブジェクトからデータを抽出する.</p>
+<p >ユニフォームバッファオブジェクトからデータを抽出する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>抽出先の領域の先頭のポインタ. </td></tr>
@@ -836,12 +842,12 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06015">6015</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06017">6017</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="af998019f39e666887550170538e5ebd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af998019f39e666887550170538e5ebd4">&#9670;&nbsp;</a></span>send()</h2>
+<a id="af998019f39e666887550170538e5ebd4" name="af998019f39e666887550170538e5ebd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af998019f39e666887550170538e5ebd4">&#9670;&#160;</a></span>send()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -893,7 +899,7 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>ユニフォームバッファオブジェクトを確保してユニフォームバッファオブジェクトのブロックごとのメンバを同じデータで埋める.</p>
+<p >ユニフォームバッファオブジェクトを確保してユニフォームバッファオブジェクトのブロックごとのメンバを同じデータで埋める.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>データが格納されている領域の先頭のポインタ. </td></tr>
@@ -905,12 +911,12 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05942">5942</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05944">5944</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a4152f1f30958abd2af56ffb27fa8de04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4152f1f30958abd2af56ffb27fa8de04">&#9670;&nbsp;</a></span>unbind()</h2>
+<a id="a4152f1f30958abd2af56ffb27fa8de04" name="a4152f1f30958abd2af56ffb27fa8de04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4152f1f30958abd2af56ffb27fa8de04">&#9670;&#160;</a></span>unbind()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -933,14 +939,14 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>ユニフォームバッファオブジェクトを解放する. </p>
+<p >ユニフォームバッファオブジェクトを解放する. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05860">5860</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05862">5862</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="abea659ba10d6fae6677463b6d0718197"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abea659ba10d6fae6677463b6d0718197">&#9670;&nbsp;</a></span>unmap()</h2>
+<a id="abea659ba10d6fae6677463b6d0718197" name="abea659ba10d6fae6677463b6d0718197"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abea659ba10d6fae6677463b6d0718197">&#9670;&#160;</a></span>unmap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -963,9 +969,9 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>バッファオブジェクトをアンマップする. </p>
+<p >バッファオブジェクトをアンマップする. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05890">5890</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05892">5892</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -975,7 +981,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2022年12月11日(日) 23時16分34秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2022年12月23日(金) 09時58分57秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: Config.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
+  <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
   </td>
@@ -29,21 +30,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.1 -->
+<!-- 構築: Doxygen 1.9.5 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -54,9 +56,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
@@ -65,8 +74,7 @@ $(function() {
 <a href="#nested-classes">クラス</a> &#124;
 <a href="#define-members">マクロ定義</a> &#124;
 <a href="#typedef-members">型定義</a>  </div>
-  <div class="headertitle">
-<div class="title">Config.h ファイル</div>  </div>
+  <div class="headertitle"><div class="title">Config.h ファイル</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="GgApp_8h_source.html">GgApp.h</a>&quot;</code><br />
@@ -76,25 +84,22 @@ Config.h の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="Config_8h__incl.png" border="0" usemap="#aConfig_8h" alt=""/></div>
 <map name="aConfig_8h" id="aConfig_8h">
-<area shape="rect" title=" " alt="" coords="471,5,540,32"/>
-<area shape="rect" href="GgApp_8h.html" title=" " alt="" coords="414,80,487,107"/>
-<area shape="rect" href="parseconfig_8h.html" title=" " alt="" coords="512,80,611,107"/>
-<area shape="rect" href="Window_8h.html" title=" " alt="" coords="411,155,490,181"/>
-<area shape="rect" href="gg_8h.html" title=" " alt="" coords="167,229,214,256"/>
-<area shape="rect" title=" " alt="" coords="5,304,64,331"/>
-<area shape="rect" title=" " alt="" coords="238,229,298,256"/>
-<area shape="rect" title=" " alt="" coords="322,229,387,256"/>
-<area shape="rect" title=" " alt="" coords="411,229,490,256"/>
-<area shape="rect" title=" " alt="" coords="515,229,587,256"/>
-<area shape="rect" title=" " alt="" coords="611,229,675,256"/>
-<area shape="rect" title=" " alt="" coords="699,229,823,256"/>
-<area shape="rect" title=" " alt="" coords="848,229,995,256"/>
-<area shape="rect" title=" " alt="" coords="88,304,139,331"/>
-<area shape="rect" title=" " alt="" coords="163,304,219,331"/>
-<area shape="rect" title=" " alt="" coords="243,304,298,331"/>
-<area shape="rect" title=" " alt="" coords="323,304,392,331"/>
-<area shape="rect" title=" " alt="" coords="416,304,480,331"/>
-<area shape="rect" title=" " alt="" coords="521,155,602,181"/>
+<area shape="rect" title=" " alt="" coords="532,5,601,31"/>
+<area shape="rect" href="GgApp_8h.html" title=" " alt="" coords="475,79,549,104"/>
+<area shape="rect" href="parseconfig_8h.html" title=" " alt="" coords="749,79,848,104"/>
+<area shape="rect" href="gg_8h.html" title=" " alt="" coords="167,152,214,177"/>
+<area shape="rect" title=" " alt="" coords="238,152,303,177"/>
+<area shape="rect" title=" " alt="" coords="327,152,406,177"/>
+<area shape="rect" title=" " alt="" coords="431,152,503,177"/>
+<area shape="rect" title=" " alt="" coords="527,152,591,177"/>
+<area shape="rect" title=" " alt="" coords="615,152,739,177"/>
+<area shape="rect" title=" " alt="" coords="764,152,911,177"/>
+<area shape="rect" title=" " alt="" coords="5,225,64,251"/>
+<area shape="rect" title=" " alt="" coords="88,225,139,251"/>
+<area shape="rect" title=" " alt="" coords="163,225,219,251"/>
+<area shape="rect" title=" " alt="" coords="243,225,298,251"/>
+<area shape="rect" title=" " alt="" coords="323,225,392,251"/>
+<area shape="rect" title=" " alt="" coords="935,152,1017,177"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -102,31 +107,31 @@ Config.h の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="Config_8h__dep__incl.png" border="0" usemap="#aConfig_8hdep" alt=""/></div>
 <map name="aConfig_8hdep" id="aConfig_8hdep">
-<area shape="rect" title=" " alt="" coords="91,5,160,32"/>
-<area shape="rect" href="Config_8cpp.html" title=" " alt="" coords="5,80,88,107"/>
-<area shape="rect" href="ggsample01_8cpp.html" title=" " alt="" coords="92,229,209,256"/>
-<area shape="rect" href="Menu_8h.html" title=" " alt="" coords="189,80,254,107"/>
-<area shape="rect" href="Draw_8h.html" title=" " alt="" coords="214,155,277,181"/>
-<area shape="rect" href="Menu_8cpp.html" title=" " alt="" coords="301,155,379,181"/>
-<area shape="rect" href="Draw_8cpp.html" title=" " alt="" coords="234,229,310,256"/>
+<area shape="rect" title=" " alt="" coords="142,5,211,31"/>
+<area shape="rect" href="Config_8cpp.html" title=" " alt="" coords="37,79,119,104"/>
+<area shape="rect" href="Menu_8h.html" title=" " alt="" coords="144,79,209,104"/>
+<area shape="rect" href="ggsample01_8cpp.html" title=" " alt="" coords="106,225,223,251"/>
+<area shape="rect" href="Draw_8h.html" title=" " alt="" coords="37,152,100,177"/>
+<area shape="rect" href="Menu_8cpp.html" title=" " alt="" coords="176,152,255,177"/>
+<area shape="rect" href="Draw_8cpp.html" title=" " alt="" coords="5,225,81,251"/>
 </map>
 </div>
 </div>
 <p><a href="Config_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 クラス</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConfig.html">Config</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 マクロ定義</h2></td></tr>
 <tr class="memitem:ac3e934bce537cb8916c7f740e0f992fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#ac3e934bce537cb8916c7f740e0f992fe">Utf8ToTChar</a>(string)&#160;&#160;&#160;(string)</td></tr>
 <tr class="separator:ac3e934bce537cb8916c7f740e0f992fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1037f274e1dfbd5a08c84db205e7b7a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a1037f274e1dfbd5a08c84db205e7b7a2">TCharToUtf8</a>(cstring)&#160;&#160;&#160;(cstring)</td></tr>
 <tr class="separator:a1037f274e1dfbd5a08c84db205e7b7a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 型定義</h2></td></tr>
 <tr class="memitem:a79e8f410a97d0a6e7bf6c4d3fe6b58fb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a79e8f410a97d0a6e7bf6c4d3fe6b58fb">pathString</a> = std::string</td></tr>
 <tr class="separator:a79e8f410a97d0a6e7bf6c4d3fe6b58fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,14 +139,14 @@ Config.h の依存先関係図:</div>
 <tr class="separator:af70ef6365a062670f496b86f311000cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>構成データクラスの定義</p>
+<div class="textblock"><p >構成データクラスの定義</p>
 <dl class="section author"><dt>著者</dt><dd>Kohe Tokoi </dd></dl>
 <dl class="section date"><dt>日付</dt><dd>November 15, 2022 </dd></dl>
 
 <p class="definition"> <a class="el" href="Config_8h_source.html">Config.h</a> に定義があります。</p>
 </div><h2 class="groupheader">マクロ定義詳解</h2>
-<a id="a1037f274e1dfbd5a08c84db205e7b7a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1037f274e1dfbd5a08c84db205e7b7a2">&#9670;&nbsp;</a></span>TCharToUtf8</h2>
+<a id="a1037f274e1dfbd5a08c84db205e7b7a2" name="a1037f274e1dfbd5a08c84db205e7b7a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1037f274e1dfbd5a08c84db205e7b7a2">&#9670;&#160;</a></span>TCharToUtf8</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -160,8 +165,8 @@ Config.h の依存先関係図:</div>
 
 </div>
 </div>
-<a id="ac3e934bce537cb8916c7f740e0f992fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3e934bce537cb8916c7f740e0f992fe">&#9670;&nbsp;</a></span>Utf8ToTChar</h2>
+<a id="ac3e934bce537cb8916c7f740e0f992fe" name="ac3e934bce537cb8916c7f740e0f992fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3e934bce537cb8916c7f740e0f992fe">&#9670;&#160;</a></span>Utf8ToTChar</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -181,8 +186,8 @@ Config.h の依存先関係図:</div>
 </div>
 </div>
 <h2 class="groupheader">型定義詳解</h2>
-<a id="af70ef6365a062670f496b86f311000cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af70ef6365a062670f496b86f311000cf">&#9670;&nbsp;</a></span>pathChar</h2>
+<a id="af70ef6365a062670f496b86f311000cf" name="af70ef6365a062670f496b86f311000cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af70ef6365a062670f496b86f311000cf">&#9670;&#160;</a></span>pathChar</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -197,8 +202,8 @@ Config.h の依存先関係図:</div>
 
 </div>
 </div>
-<a id="a79e8f410a97d0a6e7bf6c4d3fe6b58fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79e8f410a97d0a6e7bf6c4d3fe6b58fb">&#9670;&nbsp;</a></span>pathString</h2>
+<a id="a79e8f410a97d0a6e7bf6c4d3fe6b58fb" name="a79e8f410a97d0a6e7bf6c4d3fe6b58fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79e8f410a97d0a6e7bf6c4d3fe6b58fb">&#9670;&#160;</a></span>pathString</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -216,7 +221,7 @@ Config.h の依存先関係図:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2022年12月11日(日) 23時16分29秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2022年12月23日(金) 09時58分52秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

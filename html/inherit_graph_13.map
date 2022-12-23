@@ -1,4 +1,4 @@
 <map id="クラス階層図" name="クラス階層図">
-<area shape="rect" id="node1" href="$classgg_1_1GgUniformBuffer.html" title=" " alt="" coords="5,5,144,47"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgSimpleShader_1_1LightBuffer.html" title=" " alt="" coords="192,5,335,47"/>
+<area shape="rect" id="node1" href="$classgg_1_1GgUniformBuffer.html" title=" " alt="" coords="5,5,144,45"/>
+<area shape="rect" id="node2" href="$classgg_1_1GgSimpleShader_1_1MaterialBuffer.html" title=" " alt="" coords="192,5,335,45"/>
 </map>

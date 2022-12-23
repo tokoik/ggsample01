@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: メンバ一覧</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
+  <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
   </td>
@@ -29,21 +30,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.1 -->
+<!-- 構築: Doxygen 1.9.5 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -54,9 +56,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -65,56 +74,55 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle">
-<div class="title">gg::GgSimpleShader メンバ一覧</div>  </div>
+  <div class="headertitle"><div class="title">gg::GgSimpleShader メンバ一覧</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>継承メンバを含む <a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a> の全メンバ一覧です。</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html#a491b86fce18818a1a757bc1a81e0f60b">get</a>() const</td><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html">gg::GgPointShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html#a0e243c613ba8cede855c017b403927e7">GgPointShader</a>()</td><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html">gg::GgPointShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html#a0e243c613ba8cede855c017b403927e7">GgPointShader</a>()</td><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html">gg::GgPointShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html#ac4b6079bd97709dc5ff161b1ea738f9e">GgPointShader</a>(const std::string &amp;vert, const std::string &amp;frag=&quot;&quot;, const std::string &amp;geom=&quot;&quot;, GLint nvarying=0, const char *const *varyings=nullptr)</td><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html">gg::GgPointShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html#a5c1dbc75d1854329692a5cc361a17402">GgPointShader</a>(const std::array&lt; std::string, 3 &gt; &amp;files, int nvarying=0, const char *const *varyings=nullptr)</td><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html">gg::GgPointShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html#a5c1dbc75d1854329692a5cc361a17402">GgPointShader</a>(const std::array&lt; std::string, 3 &gt; &amp;files, int nvarying=0, const char *const *varyings=nullptr)</td><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html">gg::GgPointShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#a3b01a2498e26aad446c5bb58271d3f51">GgSimpleShader</a>()</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#aa2f7e9245042f1adbc6ddd6c834022ef">GgSimpleShader</a>(const std::string &amp;vert, const std::string &amp;frag=&quot;&quot;, const std::string &amp;geom=&quot;&quot;, GLint nvarying=0, const char *const *varyings=nullptr)</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#aa2f7e9245042f1adbc6ddd6c834022ef">GgSimpleShader</a>(const std::string &amp;vert, const std::string &amp;frag=&quot;&quot;, const std::string &amp;geom=&quot;&quot;, GLint nvarying=0, const char *const *varyings=nullptr)</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#a675eefb012d78801954308a655682a2c">GgSimpleShader</a>(const std::array&lt; std::string, 3 &gt; &amp;files, GLint nvarying=0, const char *const *varyings=nullptr)</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#a93a658ea59f5844959f986aba85a55b3">GgSimpleShader</a>(const GgSimpleShader &amp;o)</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#a93a658ea59f5844959f986aba85a55b3">GgSimpleShader</a>(const GgSimpleShader &amp;o)</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#acd4095770807f1c4977e6d50c06272ce">load</a>(const std::string &amp;vert, const std::string &amp;frag=&quot;&quot;, const std::string &amp;geom=&quot;&quot;, GLint nvarying=0, const char *const *varyings=nullptr)</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#ad6900bfb221457e36108c321afc07005">load</a>(const std::array&lt; std::string, 3 &gt; &amp;files, GLint nvarying=0, const char *const *varyings=nullptr)</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#ad6900bfb221457e36108c321afc07005">load</a>(const std::array&lt; std::string, 3 &gt; &amp;files, GLint nvarying=0, const char *const *varyings=nullptr)</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#a236d3a1d071666d7fe22e7d7b5eb0874">loadMatrix</a>(const GLfloat *mp, const GLfloat *mv, const GLfloat *mn) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#a80389f621f4aafcf8149ae769af77063">loadMatrix</a>(const GgMatrix &amp;mp, const GgMatrix &amp;mv, const GgMatrix &amp;mn) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#a80389f621f4aafcf8149ae769af77063">loadMatrix</a>(const GgMatrix &amp;mp, const GgMatrix &amp;mv, const GgMatrix &amp;mn) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#abc5a17dcbd9815579f08eb21f48d6fe3">loadMatrix</a>(const GLfloat *mp, const GLfloat *mv) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#a9ff06e613dce7235db2ec0c9efe23ba7">loadMatrix</a>(const GgMatrix &amp;mp, const GgMatrix &amp;mv) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#a9ff06e613dce7235db2ec0c9efe23ba7">loadMatrix</a>(const GgMatrix &amp;mp, const GgMatrix &amp;mv) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#a56ebe35618715b611eda5d1b3d4637da">loadModelviewMatrix</a>(const GLfloat *mv, const GLfloat *mn) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#a139427bcc11fdd9988f5bb5d5c3c65ba">loadModelviewMatrix</a>(const GgMatrix &amp;mv, const GgMatrix &amp;mn) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#a139427bcc11fdd9988f5bb5d5c3c65ba">loadModelviewMatrix</a>(const GgMatrix &amp;mv, const GgMatrix &amp;mn) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#a3745eedb23842a6849b05b6107dca6ba">loadModelviewMatrix</a>(const GLfloat *mv) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#a6be6daa9ab0ad591e2257f594cf5ab34">loadModelviewMatrix</a>(const GgMatrix &amp;mv) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#a6be6daa9ab0ad591e2257f594cf5ab34">loadModelviewMatrix</a>(const GgMatrix &amp;mv) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html#a35ef8670f580eb11d40386aa63ac615b">loadProjectionMatrix</a>(const GLfloat *mp) const</td><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html">gg::GgPointShader</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html#a634da09936448435b4d9b162d9ec28c1">loadProjectionMatrix</a>(const GgMatrix &amp;mp) const</td><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html">gg::GgPointShader</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#ac128333f2eba506b9578a9725eb1cb57">operator=</a>(const GgSimpleShader &amp;o)</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html#a72f2255985115d2bd171eaf0b3b6948e">unuse</a>() const</td><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html">gg::GgPointShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html#a634da09936448435b4d9b162d9ec28c1">loadProjectionMatrix</a>(const GgMatrix &amp;mp) const</td><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html">gg::GgPointShader</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#a39cbc1d08f7a06f5811eda62f7d907c2">operator=</a>(const GgSimpleShader &amp;o)</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html#a72f2255985115d2bd171eaf0b3b6948e">unuse</a>() const</td><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html">gg::GgPointShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#aaa721d9ae49296194f949d6ba2f927db">use</a>() const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#a4931140d1083f3b0ce791d5302c32179">use</a>(const GLfloat *mp, const GLfloat *mv, const GLfloat *mn) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#a4931140d1083f3b0ce791d5302c32179">use</a>(const GLfloat *mp, const GLfloat *mv, const GLfloat *mn) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#ab451dca517c2809eceffe6d62bc823d2">use</a>(const GgMatrix &amp;mp, const GgMatrix &amp;mv, const GgMatrix &amp;mn) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#af5e5866c70b586721d40ca81e380960f">use</a>(const GLfloat *mp, const GLfloat *mv) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#af5e5866c70b586721d40ca81e380960f">use</a>(const GLfloat *mp, const GLfloat *mv) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#aab413041074bf37a137c30b5a1946fec">use</a>(const GgMatrix &amp;mp, const GgMatrix &amp;mv) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#ab74ace3e3768da3e5cb914f47af6b9a9">use</a>(const LightBuffer *light, GLint i=0) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#ab74ace3e3768da3e5cb914f47af6b9a9">use</a>(const LightBuffer *light, GLint i=0) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#ae300f8183cb23f042ab9608a1d3f8f1d">use</a>(const LightBuffer &amp;light, GLint i=0) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#a501c4d9423acb4e3705657105e06e9a4">use</a>(const GLfloat *mp, const GLfloat *mv, const GLfloat *mn, const LightBuffer *light, GLint i=0) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#a501c4d9423acb4e3705657105e06e9a4">use</a>(const GLfloat *mp, const GLfloat *mv, const GLfloat *mn, const LightBuffer *light, GLint i=0) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#a1c043a15e113173810a43c6e4c6bb647">use</a>(const GgMatrix &amp;mp, const GgMatrix &amp;mv, const GgMatrix &amp;mn, const LightBuffer &amp;light, GLint i=0) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#adf085229953fa053077a69c4bd64eb62">use</a>(const GLfloat *mp, const GLfloat *mv, const LightBuffer *light, GLint i=0) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#adf085229953fa053077a69c4bd64eb62">use</a>(const GLfloat *mp, const GLfloat *mv, const LightBuffer *light, GLint i=0) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#a6d6d23ec638c9955910af0762619563b">use</a>(const GgMatrix &amp;mp, const GgMatrix &amp;mv, const LightBuffer &amp;light, GLint i=0) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#a6d368889dad14a63c04b45cbb45b2892">use</a>(const GLfloat *mp, const LightBuffer *light, GLint i=0) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#a6d368889dad14a63c04b45cbb45b2892">use</a>(const GLfloat *mp, const LightBuffer *light, GLint i=0) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#af7a854464c8502b7bc7bb4bfdd0eed0f">use</a>(const GgMatrix &amp;mp, const LightBuffer &amp;light, GLint i=0) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html#a2a41d6e019fea4ac9e8633b988f5fa91">gg::GgPointShader::use</a>(const GLfloat *mp) const</td><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html">gg::GgPointShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html#a2a41d6e019fea4ac9e8633b988f5fa91">gg::GgPointShader::use</a>(const GLfloat *mp) const</td><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html">gg::GgPointShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html#a8d46e3571f4ffdb85368e8b438baa09f">gg::GgPointShader::use</a>(const GgMatrix &amp;mp) const</td><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html">gg::GgPointShader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html#a824b38f7511fe905f0a130dbd7edb7e0">~GgPointShader</a>()</td><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html">gg::GgPointShader</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html#a824b38f7511fe905f0a130dbd7edb7e0">~GgPointShader</a>()</td><td class="entry"><a class="el" href="classgg_1_1GgPointShader.html">gg::GgPointShader</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html#ae02b9f664c69ced6b52413a3bc30abe0">~GgSimpleShader</a>()</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2022年12月11日(日) 23時16分34秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2022年12月23日(金) 09時58分56秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

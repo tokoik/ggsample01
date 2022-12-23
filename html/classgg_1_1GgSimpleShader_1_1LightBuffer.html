@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: gg::GgSimpleShader::LightBuffer クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
+  <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
   </td>
@@ -29,21 +30,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.1 -->
+<!-- 構築: Doxygen 1.9.5 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -54,9 +56,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -68,8 +77,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="classgg_1_1GgSimpleShader_1_1LightBuffer-members.html">全メンバ一覧</a>  </div>
-  <div class="headertitle">
-<div class="title">gg::GgSimpleShader::LightBuffer クラス</div>  </div>
+  <div class="headertitle"><div class="title">gg::GgSimpleShader::LightBuffer クラス</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -79,8 +87,8 @@ gg::GgSimpleShader::LightBuffer の継承関係図</div>
 <div class="dyncontent">
 <div class="center"><img src="classgg_1_1GgSimpleShader_1_1LightBuffer__inherit__graph.png" border="0" usemap="#agg_1_1GgSimpleShader_1_1LightBuffer_inherit__map" alt="Inheritance graph"/></div>
 <map name="agg_1_1GgSimpleShader_1_1LightBuffer_inherit__map" id="agg_1_1GgSimpleShader_1_1LightBuffer_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,95,148,136"/>
-<area shape="rect" href="classgg_1_1GgUniformBuffer.html" title=" " alt="" coords="7,5,146,47"/>
+<area shape="rect" title=" " alt="" coords="5,93,148,133"/>
+<area shape="rect" href="classgg_1_1GgUniformBuffer.html" title=" " alt="" coords="7,5,146,45"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
 <div class="dynheader">
@@ -88,12 +96,12 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="classgg_1_1GgSimpleShader_1_1LightBuffer__coll__graph.png" border="0" usemap="#agg_1_1GgSimpleShader_1_1LightBuffer_coll__map" alt="Collaboration graph"/></div>
 <map name="agg_1_1GgSimpleShader_1_1LightBuffer_coll__map" id="agg_1_1GgSimpleShader_1_1LightBuffer_coll__map">
-<area shape="rect" title=" " alt="" coords="5,95,148,136"/>
-<area shape="rect" href="classgg_1_1GgUniformBuffer.html" title=" " alt="" coords="7,5,146,47"/>
+<area shape="rect" title=" " alt="" coords="5,93,148,133"/>
+<area shape="rect" href="classgg_1_1GgUniformBuffer.html" title=" " alt="" coords="7,5,146,45"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:acf233868d39717cbce43cfe3c00d9900"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgSimpleShader_1_1LightBuffer.html#acf233868d39717cbce43cfe3c00d9900">LightBuffer</a> (const <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a> *light=nullptr, GLsizei count=1, GLenum usage=GL_STATIC_DRAW)</td></tr>
 <tr class="separator:acf233868d39717cbce43cfe3c00d9900"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,22 +152,22 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
 <tr class="separator:af737530228e2b2e70016e433f6c96e9d inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affa4119e5f9aae08c74fda3a31e6ee8e inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#affa4119e5f9aae08c74fda3a31e6ee8e">~GgUniformBuffer</a> ()</td></tr>
 <tr class="separator:affa4119e5f9aae08c74fda3a31e6ee8e inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d52d0cb4f6dada614ce5cfa2f664a4a inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memItemLeft" align="right" valign="top">const GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#a1d52d0cb4f6dada614ce5cfa2f664a4a">getTarget</a> () const</td></tr>
-<tr class="separator:a1d52d0cb4f6dada614ce5cfa2f664a4a inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad097650d4355144a15deb49bf78e6198 inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memItemLeft" align="right" valign="top">const GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#ad097650d4355144a15deb49bf78e6198">getTarget</a> () const</td></tr>
+<tr class="separator:ad097650d4355144a15deb49bf78e6198 inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4b0676ee460d8884f2f041fd2dc3506 inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memItemLeft" align="right" valign="top">GLsizeiptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506">getStride</a> () const</td></tr>
 <tr class="separator:ad4b0676ee460d8884f2f041fd2dc3506 inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a330621c187fecf3e1ae6d113166d67a3 inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memItemLeft" align="right" valign="top">const GLsizei &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#a330621c187fecf3e1ae6d113166d67a3">getCount</a> () const</td></tr>
-<tr class="separator:a330621c187fecf3e1ae6d113166d67a3 inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24efb551afaf6ece3fb2549d645326a7 inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memItemLeft" align="right" valign="top">const GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#a24efb551afaf6ece3fb2549d645326a7">getBuffer</a> () const</td></tr>
-<tr class="separator:a24efb551afaf6ece3fb2549d645326a7 inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a476ed194c6ae2e4a6cbcdfe119db039b inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memItemLeft" align="right" valign="top">const GLsizei &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#a476ed194c6ae2e4a6cbcdfe119db039b">getCount</a> () const</td></tr>
+<tr class="separator:a476ed194c6ae2e4a6cbcdfe119db039b inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b32d9bbfd87830bc2db3d4431d89176 inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memItemLeft" align="right" valign="top">const GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#a2b32d9bbfd87830bc2db3d4431d89176">getBuffer</a> () const</td></tr>
+<tr class="separator:a2b32d9bbfd87830bc2db3d4431d89176 inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcc61a088d16f53a9a51749dd34c24b8 inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#abcc61a088d16f53a9a51749dd34c24b8">bind</a> () const</td></tr>
 <tr class="separator:abcc61a088d16f53a9a51749dd34c24b8 inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4152f1f30958abd2af56ffb27fa8de04 inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#a4152f1f30958abd2af56ffb27fa8de04">unbind</a> () const</td></tr>
 <tr class="separator:a4152f1f30958abd2af56ffb27fa8de04 inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a839ba8e74106f821d4a1e39aa7c7fc94 inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#a839ba8e74106f821d4a1e39aa7c7fc94">map</a> () const</td></tr>
-<tr class="separator:a839ba8e74106f821d4a1e39aa7c7fc94 inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52a9205f37ef2dd39ddccabd67fc63aa inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#a52a9205f37ef2dd39ddccabd67fc63aa">map</a> (GLint first, GLsizei count) const</td></tr>
-<tr class="separator:a52a9205f37ef2dd39ddccabd67fc63aa inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a978849adec295afa4e8772381cbe361f inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">map</a> () const</td></tr>
+<tr class="separator:a978849adec295afa4e8772381cbe361f inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2722c9543743039dcde0becd8329d30 inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#ab2722c9543743039dcde0becd8329d30">map</a> (GLint first, GLsizei count) const</td></tr>
+<tr class="separator:ab2722c9543743039dcde0becd8329d30 inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abea659ba10d6fae6677463b6d0718197 inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197">unmap</a> () const</td></tr>
 <tr class="separator:abea659ba10d6fae6677463b6d0718197 inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1af7292924eb187968a4ea1a9221e9e7 inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#a1af7292924eb187968a4ea1a9221e9e7">load</a> (const Light *data, GLsizei count, GLenum usage=GL_STATIC_DRAW)</td></tr>
@@ -176,12 +184,12 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
 <tr class="separator:a0ad63590a48c6a54e92b98a3f0d53242 inherit pub_methods_classgg_1_1GgUniformBuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>三角形に単純な陰影付けを行うシェーダが参照する光源データのユニフォームバッファオブジェクト. </p>
+<div class="textblock"><p >三角形に単純な陰影付けを行うシェーダが参照する光源データのユニフォームバッファオブジェクト. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07276">7276</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07278">7278</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
-<a id="acf233868d39717cbce43cfe3c00d9900"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf233868d39717cbce43cfe3c00d9900">&#9670;&nbsp;</a></span>LightBuffer() <span class="overload">[1/2]</span></h2>
+<a id="acf233868d39717cbce43cfe3c00d9900" name="acf233868d39717cbce43cfe3c00d9900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf233868d39717cbce43cfe3c00d9900">&#9670;&#160;</a></span>LightBuffer() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -219,7 +227,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>デフォルトコンストラクタ.</p>
+<p >デフォルトコンストラクタ.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">light</td><td><a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">GgSimpleShader::Light</a> 型の光源データのポインタ. </td></tr>
@@ -229,12 +237,12 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07288">7288</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07290">7290</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a573ebac72c3cfa75d2b070306116925b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a573ebac72c3cfa75d2b070306116925b">&#9670;&nbsp;</a></span>LightBuffer() <span class="overload">[2/2]</span></h2>
+<a id="a573ebac72c3cfa75d2b070306116925b" name="a573ebac72c3cfa75d2b070306116925b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a573ebac72c3cfa75d2b070306116925b">&#9670;&#160;</a></span>LightBuffer() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -272,7 +280,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>同じデータで埋めるコンストラクタ.</p>
+<p >同じデータで埋めるコンストラクタ.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">light</td><td><a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">GgSimpleShader::Light</a> 型の光源データ. </td></tr>
@@ -282,12 +290,12 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07304">7304</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07306">7306</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="afb99278d306e57a0eabc54f150da7208"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb99278d306e57a0eabc54f150da7208">&#9670;&nbsp;</a></span>~LightBuffer()</h2>
+<a id="afb99278d306e57a0eabc54f150da7208" name="afb99278d306e57a0eabc54f150da7208"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb99278d306e57a0eabc54f150da7208">&#9670;&#160;</a></span>~LightBuffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -308,15 +316,15 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>デストラクタ. </p>
+<p >デストラクタ. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07316">7316</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07318">7318</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="a7866a9a911275f198a9280c3a75649ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7866a9a911275f198a9280c3a75649ba">&#9670;&nbsp;</a></span>load() <span class="overload">[1/2]</span></h2>
+<a id="a7866a9a911275f198a9280c3a75649ba" name="a7866a9a911275f198a9280c3a75649ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7866a9a911275f198a9280c3a75649ba">&#9670;&#160;</a></span>load() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -354,7 +362,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>光源の色と位置を設定する.</p>
+<p >光源の色と位置を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">light</td><td>光源の特性の <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">GgSimpleShader::Light</a> 構造体. </td></tr>
@@ -364,12 +372,12 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07508">7508</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07510">7510</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="aecf356b8f02c638f8bdf395e5e0245f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecf356b8f02c638f8bdf395e5e0245f7">&#9670;&nbsp;</a></span>load() <span class="overload">[2/2]</span></h2>
+<a id="aecf356b8f02c638f8bdf395e5e0245f7" name="aecf356b8f02c638f8bdf395e5e0245f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecf356b8f02c638f8bdf395e5e0245f7">&#9670;&#160;</a></span>load() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -407,7 +415,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>光源の色と位置を設定する.</p>
+<p >光源の色と位置を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">light</td><td>光源の特性の <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">GgSimpleShader::Light</a> 構造体のポインタ. </td></tr>
@@ -417,12 +425,12 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07496">7496</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07498">7498</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="ac6cd8eaa836bb3265980bc33ac1362c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6cd8eaa836bb3265980bc33ac1362c3">&#9670;&nbsp;</a></span>loadAmbient() <span class="overload">[1/3]</span></h2>
+<a id="ac6cd8eaa836bb3265980bc33ac1362c3" name="ac6cd8eaa836bb3265980bc33ac1362c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6cd8eaa836bb3265980bc33ac1362c3">&#9670;&#160;</a></span>loadAmbient() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -452,7 +460,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>光源の強度の環境光成分を設定する.</p>
+<p >光源の強度の環境光成分を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">ambient</td><td>光源の強度の環境光成分を格納した <a class="el" href="classgg_1_1GgVector.html">GgVector</a> 型の変数. </td></tr>
@@ -462,12 +470,12 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05411">5411</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05410">5410</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a0d4269360b749e21da5f2c25da02d74f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d4269360b749e21da5f2c25da02d74f">&#9670;&nbsp;</a></span>loadAmbient() <span class="overload">[2/3]</span></h2>
+<a id="a0d4269360b749e21da5f2c25da02d74f" name="a0d4269360b749e21da5f2c25da02d74f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d4269360b749e21da5f2c25da02d74f">&#9670;&#160;</a></span>loadAmbient() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -505,7 +513,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>光源の強度の環境光成分を設定する.</p>
+<p >光源の強度の環境光成分を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">ambient</td><td>光源の強度の環境光成分を格納した GLfloat 型の 4 要素の配列変数. </td></tr>
@@ -515,12 +523,12 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07342">7342</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07344">7344</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="adbef7fd0157faf9a2f99ba754fc5ccd7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adbef7fd0157faf9a2f99ba754fc5ccd7">&#9670;&nbsp;</a></span>loadAmbient() <span class="overload">[3/3]</span></h2>
+<a id="adbef7fd0157faf9a2f99ba754fc5ccd7" name="adbef7fd0157faf9a2f99ba754fc5ccd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbef7fd0157faf9a2f99ba754fc5ccd7">&#9670;&#160;</a></span>loadAmbient() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -568,7 +576,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>光源の強度の環境光成分を設定する.</p>
+<p >光源の強度の環境光成分を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">r</td><td>光源の強度の環境光成分の赤成分. </td></tr>
@@ -581,12 +589,12 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05385">5385</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05384">5384</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="ae6fb336b7c3cf6a944fb95ba985b92cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6fb336b7c3cf6a944fb95ba985b92cc">&#9670;&nbsp;</a></span>loadColor()</h2>
+<a id="ae6fb336b7c3cf6a944fb95ba985b92cc" name="ae6fb336b7c3cf6a944fb95ba985b92cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6fb336b7c3cf6a944fb95ba985b92cc">&#9670;&#160;</a></span>loadColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -616,7 +624,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>光源の色を設定するが位置は変更しない.</p>
+<p >光源の色を設定するが位置は変更しない.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">color</td><td>光源の特性の <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">GgSimpleShader::Light</a> 構造体. </td></tr>
@@ -626,12 +634,12 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05538">5538</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05537">5537</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a3742de34f34fc1953221be7f3053f617"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3742de34f34fc1953221be7f3053f617">&#9670;&nbsp;</a></span>loadDiffuse() <span class="overload">[1/3]</span></h2>
+<a id="a3742de34f34fc1953221be7f3053f617" name="a3742de34f34fc1953221be7f3053f617"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3742de34f34fc1953221be7f3053f617">&#9670;&#160;</a></span>loadDiffuse() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -661,7 +669,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>光源の強度の拡散反射光成分を設定する.</p>
+<p >光源の強度の拡散反射光成分を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">specular</td><td>光源の強度の拡散反射光成分を格納した <a class="el" href="classgg_1_1GgVector.html">GgVector</a> 型の変数. </td></tr>
@@ -671,12 +679,12 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05463">5463</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05462">5462</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="ac0f00e2f94bc2105a55f7a5c3306d184"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0f00e2f94bc2105a55f7a5c3306d184">&#9670;&nbsp;</a></span>loadDiffuse() <span class="overload">[2/3]</span></h2>
+<a id="ac0f00e2f94bc2105a55f7a5c3306d184" name="ac0f00e2f94bc2105a55f7a5c3306d184"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0f00e2f94bc2105a55f7a5c3306d184">&#9670;&#160;</a></span>loadDiffuse() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -714,7 +722,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>光源の強度の拡散反射光成分を設定する.</p>
+<p >光源の強度の拡散反射光成分を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">diffuse</td><td>光源の強度の拡散反射光成分を格納した GLfloat 型の 4 要素の配列変数. </td></tr>
@@ -724,12 +732,12 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07388">7388</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07390">7390</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a4bd0a46d083fd92cc24fc0fd8e73c294"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bd0a46d083fd92cc24fc0fd8e73c294">&#9670;&nbsp;</a></span>loadDiffuse() <span class="overload">[3/3]</span></h2>
+<a id="a4bd0a46d083fd92cc24fc0fd8e73c294" name="a4bd0a46d083fd92cc24fc0fd8e73c294"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bd0a46d083fd92cc24fc0fd8e73c294">&#9670;&#160;</a></span>loadDiffuse() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -777,7 +785,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>光源の強度の拡散反射光成分を設定する.</p>
+<p >光源の強度の拡散反射光成分を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">r</td><td>光源の強度の拡散反射光成分の赤成分. </td></tr>
@@ -790,12 +798,12 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05437">5437</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05436">5436</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a5290f498b4335dba50ba6f7a83b24dfc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5290f498b4335dba50ba6f7a83b24dfc">&#9670;&nbsp;</a></span>loadPosition() <span class="overload">[1/4]</span></h2>
+<a id="a5290f498b4335dba50ba6f7a83b24dfc" name="a5290f498b4335dba50ba6f7a83b24dfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5290f498b4335dba50ba6f7a83b24dfc">&#9670;&#160;</a></span>loadPosition() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -825,7 +833,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>光源の位置を設定する.</p>
+<p >光源の位置を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">position</td><td>光源の位置の同次座標を格納した <a class="el" href="classgg_1_1GgVector.html">GgVector</a> 型の変数. </td></tr>
@@ -835,12 +843,12 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05592">5592</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05591">5591</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a0ce7222dadcffd51d3dae84d366bba26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ce7222dadcffd51d3dae84d366bba26">&#9670;&nbsp;</a></span>loadPosition() <span class="overload">[2/4]</span></h2>
+<a id="a0ce7222dadcffd51d3dae84d366bba26" name="a0ce7222dadcffd51d3dae84d366bba26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ce7222dadcffd51d3dae84d366bba26">&#9670;&#160;</a></span>loadPosition() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -878,7 +886,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>光源の位置を設定する.</p>
+<p >光源の位置を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">position</td><td>光源の位置の同次座標を格納した <a class="el" href="classgg_1_1GgVector.html">GgVector</a> 型の配列. </td></tr>
@@ -888,12 +896,12 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07484">7484</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07486">7486</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a93f4540eafd51ed6fc637775ff905df0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93f4540eafd51ed6fc637775ff905df0">&#9670;&nbsp;</a></span>loadPosition() <span class="overload">[3/4]</span></h2>
+<a id="a93f4540eafd51ed6fc637775ff905df0" name="a93f4540eafd51ed6fc637775ff905df0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93f4540eafd51ed6fc637775ff905df0">&#9670;&#160;</a></span>loadPosition() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -931,7 +939,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>光源の位置を設定する.</p>
+<p >光源の位置を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">position</td><td>光源の位置の同次座標を格納した GLfloat 型の 4 要素の配列変数. </td></tr>
@@ -941,12 +949,12 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07471">7471</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07473">7473</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="ab5039579ec62e813d21d67cf8bcf7382"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5039579ec62e813d21d67cf8bcf7382">&#9670;&nbsp;</a></span>loadPosition() <span class="overload">[4/4]</span></h2>
+<a id="ab5039579ec62e813d21d67cf8bcf7382" name="ab5039579ec62e813d21d67cf8bcf7382"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5039579ec62e813d21d67cf8bcf7382">&#9670;&#160;</a></span>loadPosition() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -994,7 +1002,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>光源の位置を設定する.</p>
+<p >光源の位置を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>光源の位置の x 座標. </td></tr>
@@ -1007,12 +1015,12 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05566">5566</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05565">5565</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a1ed4c39a41fdd9f6bc9e7606ad8e8cfc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ed4c39a41fdd9f6bc9e7606ad8e8cfc">&#9670;&nbsp;</a></span>loadSpecular() <span class="overload">[1/3]</span></h2>
+<a id="a1ed4c39a41fdd9f6bc9e7606ad8e8cfc" name="a1ed4c39a41fdd9f6bc9e7606ad8e8cfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ed4c39a41fdd9f6bc9e7606ad8e8cfc">&#9670;&#160;</a></span>loadSpecular() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1042,7 +1050,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>光源の強度の鏡面反射光成分を設定する.</p>
+<p >光源の強度の鏡面反射光成分を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">specular</td><td>光源の強度の鏡面反射光成分を格納した <a class="el" href="classgg_1_1GgVector.html">GgVector</a> 型の変数. </td></tr>
@@ -1052,12 +1060,12 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05515">5515</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05514">5514</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a59e2c42a8bbea3ea37e6cbd217e0b7a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59e2c42a8bbea3ea37e6cbd217e0b7a5">&#9670;&nbsp;</a></span>loadSpecular() <span class="overload">[2/3]</span></h2>
+<a id="a59e2c42a8bbea3ea37e6cbd217e0b7a5" name="a59e2c42a8bbea3ea37e6cbd217e0b7a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59e2c42a8bbea3ea37e6cbd217e0b7a5">&#9670;&#160;</a></span>loadSpecular() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1095,7 +1103,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>光源の強度の鏡面反射光成分を設定する.</p>
+<p >光源の強度の鏡面反射光成分を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">specular</td><td>光源の強度の鏡面反射光成分を格納した GLfloat 型の 4 要素の配列変数. </td></tr>
@@ -1105,12 +1113,12 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07425">7425</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07427">7427</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a45298d18a7c067907dca4ac54a56b76b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45298d18a7c067907dca4ac54a56b76b">&#9670;&nbsp;</a></span>loadSpecular() <span class="overload">[3/3]</span></h2>
+<a id="a45298d18a7c067907dca4ac54a56b76b" name="a45298d18a7c067907dca4ac54a56b76b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45298d18a7c067907dca4ac54a56b76b">&#9670;&#160;</a></span>loadSpecular() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1158,7 +1166,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>光源の強度の鏡面反射光成分を設定する.</p>
+<p >光源の強度の鏡面反射光成分を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">r</td><td>光源の強度の鏡面反射光成分の赤成分. </td></tr>
@@ -1171,12 +1179,12 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05489">5489</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05488">5488</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a21c8fad77cffc831e18d9413a253788a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21c8fad77cffc831e18d9413a253788a">&#9670;&nbsp;</a></span>select()</h2>
+<a id="a21c8fad77cffc831e18d9413a253788a" name="a21c8fad77cffc831e18d9413a253788a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21c8fad77cffc831e18d9413a253788a">&#9670;&#160;</a></span>select()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1198,7 +1206,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>光源を選択する.</p>
+<p >光源を選択する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>光源データの uniform block のインデックス. </td></tr>
@@ -1206,14 +1214,14 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07518">7518</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07520">7520</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgg_1_1GgSimpleShader_1_1LightBuffer_a21c8fad77cffc831e18d9413a253788a_icgraph.png" border="0" usemap="#aclassgg_1_1GgSimpleShader_1_1LightBuffer_a21c8fad77cffc831e18d9413a253788a_icgraph" alt=""/></div>
 <map name="aclassgg_1_1GgSimpleShader_1_1LightBuffer_a21c8fad77cffc831e18d9413a253788a_icgraph" id="aclassgg_1_1GgSimpleShader_1_1LightBuffer_a21c8fad77cffc831e18d9413a253788a_icgraph">
-<area shape="rect" title=" " alt="" coords="224,5,367,47"/>
-<area shape="rect" href="classgg_1_1GgSimpleShader.html#ab74ace3e3768da3e5cb914f47af6b9a9" title=" " alt="" coords="5,13,176,39"/>
+<area shape="rect" title=" " alt="" coords="224,5,367,45"/>
+<area shape="rect" href="classgg_1_1GgSimpleShader.html#ab74ace3e3768da3e5cb914f47af6b9a9" title=" " alt="" coords="5,13,176,38"/>
 </map>
 </div>
 
@@ -1226,7 +1234,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2022年12月11日(日) 23時16分34秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2022年12月23日(金) 09時58分56秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

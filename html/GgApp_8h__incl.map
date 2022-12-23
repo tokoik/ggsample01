@@ -1,18 +1,15 @@
 <map id="GgApp.h" name="GgApp.h">
-<area shape="rect" id="node1" title=" " alt="" coords="414,5,487,32"/>
-<area shape="rect" id="node2" href="$Window_8h.html" title=" " alt="" coords="411,80,490,107"/>
-<area shape="rect" id="node3" href="$gg_8h.html" title=" " alt="" coords="167,155,214,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,229,64,256"/>
-<area shape="rect" id="node10" title=" " alt="" coords="238,155,298,181"/>
-<area shape="rect" id="node11" title=" " alt="" coords="322,155,387,181"/>
-<area shape="rect" id="node12" title=" " alt="" coords="411,155,490,181"/>
-<area shape="rect" id="node13" title=" " alt="" coords="515,155,587,181"/>
-<area shape="rect" id="node14" title=" " alt="" coords="611,155,675,181"/>
-<area shape="rect" id="node15" title=" " alt="" coords="699,155,823,181"/>
-<area shape="rect" id="node16" title=" " alt="" coords="848,155,995,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="88,229,139,256"/>
-<area shape="rect" id="node6" title=" " alt="" coords="163,229,219,256"/>
-<area shape="rect" id="node7" title=" " alt="" coords="243,229,298,256"/>
-<area shape="rect" id="node8" title=" " alt="" coords="323,229,392,256"/>
-<area shape="rect" id="node9" title=" " alt="" coords="416,229,480,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="430,5,503,31"/>
+<area shape="rect" id="node2" href="$gg_8h.html" title=" " alt="" coords="167,79,214,104"/>
+<area shape="rect" id="node8" title=" " alt="" coords="238,79,303,104"/>
+<area shape="rect" id="node9" title=" " alt="" coords="327,79,406,104"/>
+<area shape="rect" id="node10" title=" " alt="" coords="431,79,503,104"/>
+<area shape="rect" id="node11" title=" " alt="" coords="527,79,591,104"/>
+<area shape="rect" id="node12" title=" " alt="" coords="615,79,739,104"/>
+<area shape="rect" id="node13" title=" " alt="" coords="764,79,911,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,152,64,177"/>
+<area shape="rect" id="node4" title=" " alt="" coords="88,152,139,177"/>
+<area shape="rect" id="node5" title=" " alt="" coords="163,152,219,177"/>
+<area shape="rect" id="node6" title=" " alt="" coords="243,152,298,177"/>
+<area shape="rect" id="node7" title=" " alt="" coords="323,152,392,177"/>
 </map>

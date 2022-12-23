@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: gg.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
+  <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
   </td>
@@ -29,21 +30,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.1 -->
+<!-- 構築: Doxygen 1.9.5 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -54,9 +56,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
@@ -68,8 +77,7 @@ $(function() {
 <a href="#enum-members">列挙型</a> &#124;
 <a href="#func-members">関数</a> &#124;
 <a href="#var-members">変数</a>  </div>
-  <div class="headertitle">
-<div class="title">gg.h ファイル</div>  </div>
+  <div class="headertitle"><div class="title">gg.h ファイル</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;cmath&gt;</code><br />
@@ -77,19 +85,17 @@ $(function() {
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
-<code>#include &lt;cstddef&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 gg.h の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="gg_8h__incl.png" border="0" usemap="#agg_8h" alt=""/></div>
 <map name="agg_8h" id="agg_8h">
-<area shape="rect" title=" " alt="" coords="207,5,254,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,64,107"/>
-<area shape="rect" title=" " alt="" coords="88,80,139,107"/>
-<area shape="rect" title=" " alt="" coords="163,80,219,107"/>
-<area shape="rect" title=" " alt="" coords="243,80,298,107"/>
-<area shape="rect" title=" " alt="" coords="323,80,392,107"/>
-<area shape="rect" title=" " alt="" coords="416,80,480,107"/>
+<area shape="rect" title=" " alt="" coords="167,5,214,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,64,104"/>
+<area shape="rect" title=" " alt="" coords="88,79,139,104"/>
+<area shape="rect" title=" " alt="" coords="163,79,219,104"/>
+<area shape="rect" title=" " alt="" coords="243,79,298,104"/>
+<area shape="rect" title=" " alt="" coords="323,79,392,104"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -97,24 +103,24 @@ gg.h の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="gg_8h__dep__incl.png" border="0" usemap="#agg_8hdep" alt=""/></div>
 <map name="agg_8hdep" id="agg_8hdep">
-<area shape="rect" title=" " alt="" coords="59,5,106,32"/>
-<area shape="rect" href="gg_8cpp.html" title=" " alt="" coords="5,80,67,107"/>
-<area shape="rect" href="Window_8h.html" title=" " alt="" coords="91,80,170,107"/>
-<area shape="rect" href="GgApp_8h.html" title=" " alt="" coords="94,155,167,181"/>
-<area shape="rect" href="Config_8h.html" title=" " alt="" coords="96,229,165,256"/>
-<area shape="rect" href="ggsample01_8cpp.html" title=" " alt="" coords="75,453,192,480"/>
-<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="189,229,264,256"/>
-<area shape="rect" href="Config_8cpp.html" title=" " alt="" coords="119,304,201,331"/>
-<area shape="rect" href="Menu_8h.html" title=" " alt="" coords="226,304,291,331"/>
-<area shape="rect" href="Draw_8h.html" title=" " alt="" coords="274,379,337,405"/>
-<area shape="rect" href="Menu_8cpp.html" title=" " alt="" coords="119,379,198,405"/>
-<area shape="rect" href="Draw_8cpp.html" title=" " alt="" coords="267,453,343,480"/>
+<area shape="rect" title=" " alt="" coords="380,5,427,31"/>
+<area shape="rect" href="GgApp_8h.html" title=" " alt="" coords="321,79,395,104"/>
+<area shape="rect" href="gg_8cpp.html" title=" " alt="" coords="419,79,481,104"/>
+<area shape="rect" href="Config_8h.html" title=" " alt="" coords="183,152,253,177"/>
+<area shape="rect" href="ggsample01_8cpp.html" title=" " alt="" coords="157,372,274,397"/>
+<area shape="rect" href="GgApp_8cpp.html" title=" " alt="" coords="356,152,443,177"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="467,152,542,177"/>
+<area shape="rect" href="Config_8cpp.html" title=" " alt="" coords="50,225,133,251"/>
+<area shape="rect" href="Menu_8h.html" title=" " alt="" coords="157,225,223,251"/>
+<area shape="rect" href="Draw_8h.html" title=" " alt="" coords="12,299,75,324"/>
+<area shape="rect" href="Menu_8cpp.html" title=" " alt="" coords="151,299,229,324"/>
+<area shape="rect" href="Draw_8cpp.html" title=" " alt="" coords="5,372,81,397"/>
 </map>
 </div>
 </div>
 <p><a href="gg_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 クラス</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html">gg::GgVector</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,26 +167,26 @@ gg.h の依存先関係図:</div>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgSimpleObj.html">gg::GgSimpleObj</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 名前空間</h2></td></tr>
-<tr class="memitem:namespacegg"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html">gg</a></td></tr>
+<tr class="memitem:namespacegg"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html">gg</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 マクロ定義</h2></td></tr>
 <tr class="memitem:a0c4972fb66e9d9e2ca5682621e5bde85"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gg_8h.html#a0c4972fb66e9d9e2ca5682621e5bde85">ggError</a>()</td></tr>
 <tr class="separator:a0c4972fb66e9d9e2ca5682621e5bde85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bf8b0b52d88e682da02e818adb4d16a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gg_8h.html#a0bf8b0b52d88e682da02e818adb4d16a">ggFBOError</a>()</td></tr>
 <tr class="separator:a0bf8b0b52d88e682da02e818adb4d16a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 列挙型</h2></td></tr>
 <tr class="memitem:ae6e185ba7876df656b8d0b02819b5e49"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ae6e185ba7876df656b8d0b02819b5e49">gg::BindingPoints</a> { <a class="el" href="namespacegg.html#ae6e185ba7876df656b8d0b02819b5e49a64b69a47d95d955aed16b608baf1f68c">gg::LightBindingPoint</a> = 0
 , <a class="el" href="namespacegg.html#ae6e185ba7876df656b8d0b02819b5e49a3ba0d83d74aed68d92082c2621fa2348">gg::MaterialBindingPoint</a>
  }</td></tr>
 <tr class="separator:ae6e185ba7876df656b8d0b02819b5e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 関数</h2></td></tr>
 <tr class="memitem:af7ab5857e56acfcf3e806f587f3737a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#af7ab5857e56acfcf3e806f587f3737a0">gg::ggInit</a> ()</td></tr>
 <tr class="separator:af7ab5857e56acfcf3e806f587f3737a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,8 +216,8 @@ gg.h の依存先関係図:</div>
 <tr class="separator:a53de42a63451f28a4dc644143285b581"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2f149e2a719574c966ff6ad0fdc17cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ab2f149e2a719574c966ff6ad0fdc17cf">gg::ggNormalize4</a> (GLfloat *a)</td></tr>
 <tr class="separator:ab2f149e2a719574c966ff6ad0fdc17cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1863bdf2837f612529353f5f590a0fe4"><td class="memItemLeft" align="right" valign="top">const GgVector &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a1863bdf2837f612529353f5f590a0fe4">gg::operator+</a> (const GgVector &amp;v)</td></tr>
-<tr class="separator:a1863bdf2837f612529353f5f590a0fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a213f65fc7388c1251c2e8fbb8d9b5774"><td class="memItemLeft" align="right" valign="top">const GgVector &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a213f65fc7388c1251c2e8fbb8d9b5774">gg::operator+</a> (const GgVector &amp;v)</td></tr>
+<tr class="separator:a213f65fc7388c1251c2e8fbb8d9b5774"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81d4595fb49bfc30c3b77c34a86b90f2"><td class="memItemLeft" align="right" valign="top">GgVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a81d4595fb49bfc30c3b77c34a86b90f2">gg::operator+</a> (GLfloat a, const GgVector &amp;b)</td></tr>
 <tr class="separator:a81d4595fb49bfc30c3b77c34a86b90f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a267dcc250c978b60d746840361d7b205"><td class="memItemLeft" align="right" valign="top">const GgVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a267dcc250c978b60d746840361d7b205">gg::operator-</a> (const GgVector &amp;v)</td></tr>
@@ -374,26 +380,26 @@ gg.h の依存先関係図:</div>
 <tr class="separator:a0d3c6911e6aff821d2dc3778b400ba1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4a21673782499741c37fe2efd693697"><td class="memItemLeft" align="right" valign="top">GgElements *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ad4a21673782499741c37fe2efd693697">gg::ggElementsSphere</a> (GLfloat radius=1.0f, int slices=16, int stacks=8)</td></tr>
 <tr class="separator:ad4a21673782499741c37fe2efd693697"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a619241f5e989d78b1cd92f9c12f80460"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a619241f5e989d78b1cd92f9c12f80460">gg::ggLoadSimpleObj</a> (const std::string &amp;name, std::vector&lt; std::array&lt; GLuint, 3 &gt;&gt; &amp;group, std::vector&lt; GgSimpleShader::Material &gt; &amp;material, std::vector&lt; GgVertex &gt; &amp;vert, bool normalize=false)</td></tr>
-<tr class="separator:a619241f5e989d78b1cd92f9c12f80460"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b304802078c6d28b9d75718af84d102"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a6b304802078c6d28b9d75718af84d102">gg::ggLoadSimpleObj</a> (const std::string &amp;name, std::vector&lt; std::array&lt; GLuint, 3 &gt;&gt; &amp;group, std::vector&lt; GgSimpleShader::Material &gt; &amp;material, std::vector&lt; GgVertex &gt; &amp;vert, std::vector&lt; GLuint &gt; &amp;face, bool normalize=false)</td></tr>
-<tr class="separator:a6b304802078c6d28b9d75718af84d102"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d6d4d94876d09aebddf88ef7e8387d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a8d6d4d94876d09aebddf88ef7e8387d8">gg::ggLoadSimpleObj</a> (const std::string &amp;name, std::vector&lt; std::array&lt; GLuint, 3 &gt; &gt; &amp;group, std::vector&lt; GgSimpleShader::Material &gt; &amp;material, std::vector&lt; GgVertex &gt; &amp;vert, bool normalize=false)</td></tr>
+<tr class="separator:a8d6d4d94876d09aebddf88ef7e8387d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a780ffd821376742a76828bb211193f70"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a780ffd821376742a76828bb211193f70">gg::ggLoadSimpleObj</a> (const std::string &amp;name, std::vector&lt; std::array&lt; GLuint, 3 &gt; &gt; &amp;group, std::vector&lt; GgSimpleShader::Material &gt; &amp;material, std::vector&lt; GgVertex &gt; &amp;vert, std::vector&lt; GLuint &gt; &amp;face, bool normalize=false)</td></tr>
+<tr class="separator:a780ffd821376742a76828bb211193f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 変数</h2></td></tr>
 <tr class="memitem:a3760bb8490c7d6103a5f186b705b313e"><td class="memItemLeft" align="right" valign="top">GLint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a3760bb8490c7d6103a5f186b705b313e">gg::ggBufferAlignment</a></td></tr>
 <tr class="memdesc:a3760bb8490c7d6103a5f186b705b313e"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用している GPU のバッファアライメント.  <a href="namespacegg.html#a3760bb8490c7d6103a5f186b705b313e">[詳解]</a><br /></td></tr>
 <tr class="separator:a3760bb8490c7d6103a5f186b705b313e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言.</p>
+<div class="textblock"><p >ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言.</p>
 <dl class="section author"><dt>著者</dt><dd>Kohe Tokoi </dd></dl>
 <dl class="section date"><dt>日付</dt><dd>March 31, 2021 </dd></dl>
 
 <p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> に定義があります。</p>
 </div><h2 class="groupheader">マクロ定義詳解</h2>
-<a id="a0c4972fb66e9d9e2ca5682621e5bde85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c4972fb66e9d9e2ca5682621e5bde85">&#9670;&nbsp;</a></span>ggError</h2>
+<a id="a0c4972fb66e9d9e2ca5682621e5bde85" name="a0c4972fb66e9d9e2ca5682621e5bde85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c4972fb66e9d9e2ca5682621e5bde85">&#9670;&#160;</a></span>ggError</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -406,15 +412,15 @@ gg.h の依存先関係図:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>OpenGL のエラーの発生を検知したときにソースファイル名と行番号を表示する.</p>
+<p >OpenGL のエラーの発生を検知したときにソースファイル名と行番号を表示する.</p>
 <dl class="section note"><dt>覚え書き</dt><dd>このマクロを置いた場所（より前）で OpenGL のエラーが発生していた時に, このマクロを置いたソースファイル名と行番号を出力する. リリースビルド時には無視される. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01379">1379</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01381">1381</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a0bf8b0b52d88e682da02e818adb4d16a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bf8b0b52d88e682da02e818adb4d16a">&#9670;&nbsp;</a></span>ggFBOError</h2>
+<a id="a0bf8b0b52d88e682da02e818adb4d16a" name="a0bf8b0b52d88e682da02e818adb4d16a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bf8b0b52d88e682da02e818adb4d16a">&#9670;&#160;</a></span>ggFBOError</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -427,17 +433,17 @@ gg.h の依存先関係図:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>FBO のエラーの発生を検知したときにソースファイル名と行番号を表示する.</p>
+<p >FBO のエラーの発生を検知したときにソースファイル名と行番号を表示する.</p>
 <dl class="section note"><dt>覚え書き</dt><dd>このマクロを置いた場所（より前）で FBO のエラーが発生していた時に, このマクロを置いたソースファイル名と行番号を出力する. リリースビルド時には無視される. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01406">1406</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l01408">1408</a> 行目に定義があります。</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2022年12月11日(日) 23時16分29秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2022年12月23日(金) 09時58分52秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

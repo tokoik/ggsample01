@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: gg::GgTrackball クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,9 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
+  <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
   </td>
@@ -29,21 +30,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.1 -->
+<!-- 構築: Doxygen 1.9.5 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -54,9 +56,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -68,8 +77,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="classgg_1_1GgTrackball-members.html">全メンバ一覧</a>  </div>
-  <div class="headertitle">
-<div class="title">gg::GgTrackball クラス</div>  </div>
+  <div class="headertitle"><div class="title">gg::GgTrackball クラス</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -79,10 +87,10 @@ gg::GgTrackball の継承関係図</div>
 <div class="dyncontent">
 <div class="center"><img src="classgg_1_1GgTrackball__inherit__graph.png" border="0" usemap="#agg_1_1GgTrackball_inherit__map" alt="Inheritance graph"/></div>
 <map name="agg_1_1GgTrackball_inherit__map" id="agg_1_1GgTrackball_inherit__map">
-<area shape="rect" title=" " alt="" coords="27,229,141,256"/>
-<area shape="rect" href="classgg_1_1GgQuaternion.html" title=" " alt="" coords="22,155,146,181"/>
-<area shape="rect" href="classgg_1_1GgVector.html" title=" " alt="" coords="35,80,133,107"/>
-<area shape="rect" title=" " alt="" coords="5,5,163,32"/>
+<area shape="rect" title=" " alt="" coords="27,225,141,251"/>
+<area shape="rect" href="classgg_1_1GgQuaternion.html" title=" " alt="" coords="22,152,146,177"/>
+<area shape="rect" href="classgg_1_1GgVector.html" title=" " alt="" coords="35,79,133,104"/>
+<area shape="rect" title=" " alt="" coords="5,5,163,31"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
 <div class="dynheader">
@@ -90,21 +98,21 @@ gg::GgTrackball 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="classgg_1_1GgTrackball__coll__graph.png" border="0" usemap="#agg_1_1GgTrackball_coll__map" alt="Collaboration graph"/></div>
 <map name="agg_1_1GgTrackball_coll__map" id="agg_1_1GgTrackball_coll__map">
-<area shape="rect" title=" " alt="" coords="27,229,141,256"/>
-<area shape="rect" href="classgg_1_1GgQuaternion.html" title=" " alt="" coords="22,155,146,181"/>
-<area shape="rect" href="classgg_1_1GgVector.html" title=" " alt="" coords="35,80,133,107"/>
-<area shape="rect" title=" " alt="" coords="5,5,163,32"/>
+<area shape="rect" title=" " alt="" coords="27,225,141,251"/>
+<area shape="rect" href="classgg_1_1GgQuaternion.html" title=" " alt="" coords="22,152,146,177"/>
+<area shape="rect" href="classgg_1_1GgVector.html" title=" " alt="" coords="35,79,133,104"/>
+<area shape="rect" title=" " alt="" coords="5,5,163,31"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:a880dce99e0a666536802659963971c50"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTrackball.html#a880dce99e0a666536802659963971c50">GgTrackball</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q=<a class="el" href="namespacegg.html#af887bffaeaee67620ed2f7e020cb6a6a">ggIdentityQuaternion</a>())</td></tr>
 <tr class="separator:a880dce99e0a666536802659963971c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74d0719b05f0b8957ba3c3e48333fb16"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTrackball.html#a74d0719b05f0b8957ba3c3e48333fb16">~GgTrackball</a> ()</td></tr>
 <tr class="separator:a74d0719b05f0b8957ba3c3e48333fb16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2b3d7243e6f07700267d2b4b5305560"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgTrackball.html">GgTrackball</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTrackball.html#ab2b3d7243e6f07700267d2b4b5305560">operator=</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
-<tr class="separator:ab2b3d7243e6f07700267d2b4b5305560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a980a60c0d7b99d203bff8b5f1cb7eb66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgTrackball.html">GgTrackball</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTrackball.html#a980a60c0d7b99d203bff8b5f1cb7eb66">operator=</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
+<tr class="separator:a980a60c0d7b99d203bff8b5f1cb7eb66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6d959db5ef9b8405da2f5ded29766d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTrackball.html#ab6d959db5ef9b8405da2f5ded29766d0">region</a> (GLfloat w, GLfloat h)</td></tr>
 <tr class="separator:ab6d959db5ef9b8405da2f5ded29766d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0ff2b315542776b0b465f5e166c4c8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTrackball.html#af0ff2b315542776b0b465f5e166c4c8a">region</a> (int w, int h)</td></tr>
@@ -119,24 +127,24 @@ gg::GgTrackball 連携図</div>
 <tr class="separator:a4f56d59aadba0be3e8196971828382a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaaa41ddff91ff91173133d478356b836"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTrackball.html#aaaa41ddff91ff91173133d478356b836">reset</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q=<a class="el" href="namespacegg.html#af887bffaeaee67620ed2f7e020cb6a6a">ggIdentityQuaternion</a>())</td></tr>
 <tr class="separator:aaaa41ddff91ff91173133d478356b836"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac13a2715cc1128935d34b6eafb226e1"><td class="memItemLeft" align="right" valign="top">const GLfloat *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTrackball.html#aac13a2715cc1128935d34b6eafb226e1">getStart</a> () const</td></tr>
-<tr class="separator:aac13a2715cc1128935d34b6eafb226e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab98e34a7c5aa53c39a3650c440f7ca7e"><td class="memItemLeft" align="right" valign="top">const GLfloat &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTrackball.html#ab98e34a7c5aa53c39a3650c440f7ca7e">getStart</a> (int direction) const</td></tr>
-<tr class="separator:ab98e34a7c5aa53c39a3650c440f7ca7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10634facc27b69e13c2511aa1dbc4d21"><td class="memItemLeft" align="right" valign="top">const GLfloat *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTrackball.html#a10634facc27b69e13c2511aa1dbc4d21">getStart</a> () const</td></tr>
+<tr class="separator:a10634facc27b69e13c2511aa1dbc4d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8c6d13462b0d387956f9a53dce51b6f"><td class="memItemLeft" align="right" valign="top">const GLfloat &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTrackball.html#ab8c6d13462b0d387956f9a53dce51b6f">getStart</a> (int direction) const</td></tr>
+<tr class="separator:ab8c6d13462b0d387956f9a53dce51b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae44a5319c8ef18de8270e2232abd7d1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTrackball.html#ae44a5319c8ef18de8270e2232abd7d1e">getStart</a> (GLfloat *position) const</td></tr>
 <tr class="separator:ae44a5319c8ef18de8270e2232abd7d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b2c18a6001f825c5e408347ee20d934"><td class="memItemLeft" align="right" valign="top">const GLfloat *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTrackball.html#a7b2c18a6001f825c5e408347ee20d934">getScale</a> () const</td></tr>
-<tr class="separator:a7b2c18a6001f825c5e408347ee20d934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a660339a8239bc5bbdc8677c409ae7da7"><td class="memItemLeft" align="right" valign="top">const GLfloat *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTrackball.html#a660339a8239bc5bbdc8677c409ae7da7">getScale</a> () const</td></tr>
+<tr class="separator:a660339a8239bc5bbdc8677c409ae7da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5238d255732688fb52f590da8801c17b"><td class="memItemLeft" align="right" valign="top">const GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTrackball.html#a5238d255732688fb52f590da8801c17b">getScale</a> (int direction) const</td></tr>
 <tr class="separator:a5238d255732688fb52f590da8801c17b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf190b7c0fedbc0fae01856ec3eb1e27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTrackball.html#aaf190b7c0fedbc0fae01856ec3eb1e27">getScale</a> (GLfloat *factor) const</td></tr>
 <tr class="separator:aaf190b7c0fedbc0fae01856ec3eb1e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad051e0515be0d92c937e26570bd6827b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTrackball.html#ad051e0515be0d92c937e26570bd6827b">getQuaternion</a> () const</td></tr>
-<tr class="separator:ad051e0515be0d92c937e26570bd6827b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5591a64f92654ce58a7e8e1bed9e6fe3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTrackball.html#a5591a64f92654ce58a7e8e1bed9e6fe3">getMatrix</a> () const</td></tr>
-<tr class="separator:a5591a64f92654ce58a7e8e1bed9e6fe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bbac58e46aafbab14d16fb1982dce24"><td class="memItemLeft" align="right" valign="top">const GLfloat *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTrackball.html#a7bbac58e46aafbab14d16fb1982dce24">get</a> () const</td></tr>
-<tr class="separator:a7bbac58e46aafbab14d16fb1982dce24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53c894f599180aae58b3cf2c7b977e23"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTrackball.html#a53c894f599180aae58b3cf2c7b977e23">getQuaternion</a> () const</td></tr>
+<tr class="separator:a53c894f599180aae58b3cf2c7b977e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e831a1bd96d091e919ae307d669969c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTrackball.html#a1e831a1bd96d091e919ae307d669969c">getMatrix</a> () const</td></tr>
+<tr class="separator:a1e831a1bd96d091e919ae307d669969c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b813cad1a0580e0121b7e873c1fcd5d"><td class="memItemLeft" align="right" valign="top">const GLfloat *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgTrackball.html#a3b813cad1a0580e0121b7e873c1fcd5d">get</a> () const</td></tr>
+<tr class="separator:a3b813cad1a0580e0121b7e873c1fcd5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classgg_1_1GgQuaternion"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classgg_1_1GgQuaternion')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="classgg_1_1GgQuaternion.html">gg::GgQuaternion</a> に属する継承公開メンバ関数</td></tr>
 <tr class="memitem:a4000a6b7413f30b94bbd6aacd4f1378d inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a4000a6b7413f30b94bbd6aacd4f1378d">GgQuaternion</a> ()</td></tr>
 <tr class="separator:a4000a6b7413f30b94bbd6aacd4f1378d inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,46 +158,46 @@ gg::GgTrackball 連携図</div>
 <tr class="separator:a4704246cdfc0f5046fa44b1f090984ae inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7948622a1020c4b8cff6a699cbea8696 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a7948622a1020c4b8cff6a699cbea8696">norm</a> () const</td></tr>
 <tr class="separator:a7948622a1020c4b8cff6a699cbea8696 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cf33af7bb0da8bb93bbbf1693da4e63 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a0cf33af7bb0da8bb93bbbf1693da4e63">load</a> (GLfloat x, GLfloat y, GLfloat z, GLfloat w)</td></tr>
-<tr class="separator:a0cf33af7bb0da8bb93bbbf1693da4e63 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8892e31d079f7c00ca716202dd286681 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a8892e31d079f7c00ca716202dd286681">load</a> (const GLfloat *a)</td></tr>
-<tr class="separator:a8892e31d079f7c00ca716202dd286681 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37000488b2a3c48a6b81b709ec0fd9d8 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a37000488b2a3c48a6b81b709ec0fd9d8">load</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
-<tr class="separator:a37000488b2a3c48a6b81b709ec0fd9d8 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a634e82b371ab561a09e09d0c325f8cb3 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a634e82b371ab561a09e09d0c325f8cb3">load</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
-<tr class="separator:a634e82b371ab561a09e09d0c325f8cb3 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0109e825410cc8c83c6c934d458e0704 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a0109e825410cc8c83c6c934d458e0704">loadAdd</a> (GLfloat x, GLfloat y, GLfloat z, GLfloat w)</td></tr>
-<tr class="separator:a0109e825410cc8c83c6c934d458e0704 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fc078bf2cb61fea59192331555c2686 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a9fc078bf2cb61fea59192331555c2686">loadAdd</a> (const GLfloat *a)</td></tr>
-<tr class="separator:a9fc078bf2cb61fea59192331555c2686 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd26b63ad63a836277e17178d410590d inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#afd26b63ad63a836277e17178d410590d">loadAdd</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
-<tr class="separator:afd26b63ad63a836277e17178d410590d inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae34e3bd540e746112ca27cf9673d74a2 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#ae34e3bd540e746112ca27cf9673d74a2">loadAdd</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
-<tr class="separator:ae34e3bd540e746112ca27cf9673d74a2 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1eebcbd84c96e81d1ec84f1785c1472a inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a1eebcbd84c96e81d1ec84f1785c1472a">loadSubtract</a> (GLfloat x, GLfloat y, GLfloat z, GLfloat w)</td></tr>
-<tr class="separator:a1eebcbd84c96e81d1ec84f1785c1472a inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f1692b40daa565d9a308443cee79876 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a9f1692b40daa565d9a308443cee79876">loadSubtract</a> (const GLfloat *a)</td></tr>
-<tr class="separator:a9f1692b40daa565d9a308443cee79876 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46b6a13dc7d5481f2d19868324288a2e inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a46b6a13dc7d5481f2d19868324288a2e">loadSubtract</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
-<tr class="separator:a46b6a13dc7d5481f2d19868324288a2e inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4233621f3862bbb28aaf0fb4430f6920 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a4233621f3862bbb28aaf0fb4430f6920">loadSubtract</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
-<tr class="separator:a4233621f3862bbb28aaf0fb4430f6920 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a634a58b3d88616f0edb299ff1e5e048c inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a634a58b3d88616f0edb299ff1e5e048c">loadMultiply</a> (GLfloat x, GLfloat y, GLfloat z, GLfloat w)</td></tr>
-<tr class="separator:a634a58b3d88616f0edb299ff1e5e048c inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a921144c0712c239b4e88d085714cd5f0 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a921144c0712c239b4e88d085714cd5f0">loadMultiply</a> (const GLfloat *a)</td></tr>
-<tr class="separator:a921144c0712c239b4e88d085714cd5f0 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6046e6b853cd2696551327710697dbf2 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a6046e6b853cd2696551327710697dbf2">loadMultiply</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
-<tr class="separator:a6046e6b853cd2696551327710697dbf2 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac20b07fc8bffcb0f56dea8b2f9f443cc inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#ac20b07fc8bffcb0f56dea8b2f9f443cc">loadMultiply</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
-<tr class="separator:ac20b07fc8bffcb0f56dea8b2f9f443cc inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90946ec703763bf2ec9087428f6788a7 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a90946ec703763bf2ec9087428f6788a7">loadDivide</a> (GLfloat x, GLfloat y, GLfloat z, GLfloat w)</td></tr>
-<tr class="separator:a90946ec703763bf2ec9087428f6788a7 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a442b398af4a6599a3526429b09c18cce inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a442b398af4a6599a3526429b09c18cce">loadDivide</a> (const GLfloat *a)</td></tr>
-<tr class="separator:a442b398af4a6599a3526429b09c18cce inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70fb3693676c81da920748be2ac1f716 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a70fb3693676c81da920748be2ac1f716">loadDivide</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
-<tr class="separator:a70fb3693676c81da920748be2ac1f716 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a890cd662f6552991bb70426a33f15bd7 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a890cd662f6552991bb70426a33f15bd7">loadDivide</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
-<tr class="separator:a890cd662f6552991bb70426a33f15bd7 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa329244555230d31a27e037a741ffc5 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#afa329244555230d31a27e037a741ffc5">load</a> (GLfloat x, GLfloat y, GLfloat z, GLfloat w)</td></tr>
+<tr class="separator:afa329244555230d31a27e037a741ffc5 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4140776e04466eddeab42623717a5218 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a4140776e04466eddeab42623717a5218">load</a> (const GLfloat *a)</td></tr>
+<tr class="separator:a4140776e04466eddeab42623717a5218 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7ce1c5ac551b3bd865ea918c3e254d6 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#ac7ce1c5ac551b3bd865ea918c3e254d6">load</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
+<tr class="separator:ac7ce1c5ac551b3bd865ea918c3e254d6 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19935a60239c53d27fe6f300df8459c3 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a19935a60239c53d27fe6f300df8459c3">load</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
+<tr class="separator:a19935a60239c53d27fe6f300df8459c3 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0b43dbf846eb5c01192dfe63e3d131d inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#ad0b43dbf846eb5c01192dfe63e3d131d">loadAdd</a> (GLfloat x, GLfloat y, GLfloat z, GLfloat w)</td></tr>
+<tr class="separator:ad0b43dbf846eb5c01192dfe63e3d131d inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affe2fa2c0d88961b5af9259ece604ff1 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#affe2fa2c0d88961b5af9259ece604ff1">loadAdd</a> (const GLfloat *a)</td></tr>
+<tr class="separator:affe2fa2c0d88961b5af9259ece604ff1 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a482ad92d4b0edc0ff941146d3c692abd inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a482ad92d4b0edc0ff941146d3c692abd">loadAdd</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
+<tr class="separator:a482ad92d4b0edc0ff941146d3c692abd inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69f0f7d0a100bd3fa8ca71728bd02ec0 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a69f0f7d0a100bd3fa8ca71728bd02ec0">loadAdd</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
+<tr class="separator:a69f0f7d0a100bd3fa8ca71728bd02ec0 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4f92a1abd12399ed4dbfdfd6412b85e inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#ae4f92a1abd12399ed4dbfdfd6412b85e">loadSubtract</a> (GLfloat x, GLfloat y, GLfloat z, GLfloat w)</td></tr>
+<tr class="separator:ae4f92a1abd12399ed4dbfdfd6412b85e inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f19017a52c028e1be588c7a97fb95a2 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a2f19017a52c028e1be588c7a97fb95a2">loadSubtract</a> (const GLfloat *a)</td></tr>
+<tr class="separator:a2f19017a52c028e1be588c7a97fb95a2 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff9fb59fc88f68cf0d595b27aab31e8b inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#aff9fb59fc88f68cf0d595b27aab31e8b">loadSubtract</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
+<tr class="separator:aff9fb59fc88f68cf0d595b27aab31e8b inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea8fb5c63a8ef3c656e69022bdaeeb55 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#aea8fb5c63a8ef3c656e69022bdaeeb55">loadSubtract</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
+<tr class="separator:aea8fb5c63a8ef3c656e69022bdaeeb55 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62e4b4ebf3eeca028c2a085d3d407553 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a62e4b4ebf3eeca028c2a085d3d407553">loadMultiply</a> (GLfloat x, GLfloat y, GLfloat z, GLfloat w)</td></tr>
+<tr class="separator:a62e4b4ebf3eeca028c2a085d3d407553 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a619f0507b382522d4bd262699c49e8fe inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a619f0507b382522d4bd262699c49e8fe">loadMultiply</a> (const GLfloat *a)</td></tr>
+<tr class="separator:a619f0507b382522d4bd262699c49e8fe inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28466c146ec1217765b028025a001777 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a28466c146ec1217765b028025a001777">loadMultiply</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
+<tr class="separator:a28466c146ec1217765b028025a001777 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a518c5ce498e0375156b494091670aa59 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a518c5ce498e0375156b494091670aa59">loadMultiply</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
+<tr class="separator:a518c5ce498e0375156b494091670aa59 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab212808c51a79a9bf730acebd4225247 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#ab212808c51a79a9bf730acebd4225247">loadDivide</a> (GLfloat x, GLfloat y, GLfloat z, GLfloat w)</td></tr>
+<tr class="separator:ab212808c51a79a9bf730acebd4225247 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7491c56443f52e93324f75485983cd3a inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a7491c56443f52e93324f75485983cd3a">loadDivide</a> (const GLfloat *a)</td></tr>
+<tr class="separator:a7491c56443f52e93324f75485983cd3a inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac26325cc6cb393f6632f7e854a9df643 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#ac26325cc6cb393f6632f7e854a9df643">loadDivide</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
+<tr class="separator:ac26325cc6cb393f6632f7e854a9df643 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90f272d2f0306a012f574f2b710fea44 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a90f272d2f0306a012f574f2b710fea44">loadDivide</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
+<tr class="separator:a90f272d2f0306a012f574f2b710fea44 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c776b116c954194ba457324c36b16b2 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a5c776b116c954194ba457324c36b16b2">add</a> (GLfloat x, GLfloat y, GLfloat z, GLfloat w) const</td></tr>
 <tr class="separator:a5c776b116c954194ba457324c36b16b2 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a80ad1641502997b6cec18590bbb830 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a2a80ad1641502997b6cec18590bbb830">add</a> (const GLfloat *a) const</td></tr>
@@ -222,34 +230,34 @@ gg::GgTrackball 連携図</div>
 <tr class="separator:a4b44a2db7bfe4c0aa27358c2011360ec inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b79aae4f347fe8020f90260c81878f8 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a3b79aae4f347fe8020f90260c81878f8">divide</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q) const</td></tr>
 <tr class="separator:a3b79aae4f347fe8020f90260c81878f8 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac038aedaa4e807926e4864382223f396 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#ac038aedaa4e807926e4864382223f396">operator=</a> (const GLfloat *a)</td></tr>
-<tr class="separator:ac038aedaa4e807926e4864382223f396 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abec832727978453d588b3d6ba66c83de inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#abec832727978453d588b3d6ba66c83de">operator=</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
-<tr class="separator:abec832727978453d588b3d6ba66c83de inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07067e1af47174e48cdeb2751c3cd3ac inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a07067e1af47174e48cdeb2751c3cd3ac">operator+=</a> (const GLfloat *a)</td></tr>
-<tr class="separator:a07067e1af47174e48cdeb2751c3cd3ac inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf9595d79957bbfa24937d547755f18d inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#acf9595d79957bbfa24937d547755f18d">operator+=</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
-<tr class="separator:acf9595d79957bbfa24937d547755f18d inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a639e4783e536717d63e2e9a8e4225bd7 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a639e4783e536717d63e2e9a8e4225bd7">operator+=</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
-<tr class="separator:a639e4783e536717d63e2e9a8e4225bd7 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab87b9d50a22c828781720ed7e752bddf inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#ab87b9d50a22c828781720ed7e752bddf">operator-=</a> (const GLfloat *a)</td></tr>
-<tr class="separator:ab87b9d50a22c828781720ed7e752bddf inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a457eb9641a779d860c931473093382ec inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a457eb9641a779d860c931473093382ec">operator-=</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
-<tr class="separator:a457eb9641a779d860c931473093382ec inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c7b10799e51e76047abb3bdd0128e9c inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a0c7b10799e51e76047abb3bdd0128e9c">operator-=</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
-<tr class="separator:a0c7b10799e51e76047abb3bdd0128e9c inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39f0af39988e4d9605f3f0c05ad7ec37 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a39f0af39988e4d9605f3f0c05ad7ec37">operator*=</a> (const GLfloat *a)</td></tr>
-<tr class="separator:a39f0af39988e4d9605f3f0c05ad7ec37 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82c8536a3176ce637b46fdfe6be03e48 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a82c8536a3176ce637b46fdfe6be03e48">operator*=</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
-<tr class="separator:a82c8536a3176ce637b46fdfe6be03e48 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f94c31837a47eaedbe5358fa331dde3 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a5f94c31837a47eaedbe5358fa331dde3">operator*=</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
-<tr class="separator:a5f94c31837a47eaedbe5358fa331dde3 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0eee64c48beb9dd5b04ee1705243b03 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#ac0eee64c48beb9dd5b04ee1705243b03">operator/=</a> (const GLfloat *a)</td></tr>
-<tr class="separator:ac0eee64c48beb9dd5b04ee1705243b03 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab42b8ccc5d4fd18ee0ef1800d2c954e8 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#ab42b8ccc5d4fd18ee0ef1800d2c954e8">operator/=</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
-<tr class="separator:ab42b8ccc5d4fd18ee0ef1800d2c954e8 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28ab06a86f3b1812af71523758df944d inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a28ab06a86f3b1812af71523758df944d">operator/=</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
-<tr class="separator:a28ab06a86f3b1812af71523758df944d inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec921491e40e285733f049306c816838 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#aec921491e40e285733f049306c816838">operator=</a> (const GLfloat *a)</td></tr>
+<tr class="separator:aec921491e40e285733f049306c816838 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1e4c3e0920aca13ab3085eea15e576e inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#ae1e4c3e0920aca13ab3085eea15e576e">operator=</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
+<tr class="separator:ae1e4c3e0920aca13ab3085eea15e576e inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3cfaae9bec190c2201663cd810de9a1 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#aa3cfaae9bec190c2201663cd810de9a1">operator+=</a> (const GLfloat *a)</td></tr>
+<tr class="separator:aa3cfaae9bec190c2201663cd810de9a1 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c60aac088934be6a86e18a98ec7a426 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a1c60aac088934be6a86e18a98ec7a426">operator+=</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
+<tr class="separator:a1c60aac088934be6a86e18a98ec7a426 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa86d4c5f3e16b44741cd5b8c6b8237ba inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#aa86d4c5f3e16b44741cd5b8c6b8237ba">operator+=</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
+<tr class="separator:aa86d4c5f3e16b44741cd5b8c6b8237ba inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19849468f39f0371884696892578b52f inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a19849468f39f0371884696892578b52f">operator-=</a> (const GLfloat *a)</td></tr>
+<tr class="separator:a19849468f39f0371884696892578b52f inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8da90eb5a723a60397bd584bc4feb76 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#ae8da90eb5a723a60397bd584bc4feb76">operator-=</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
+<tr class="separator:ae8da90eb5a723a60397bd584bc4feb76 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1379091e843a1672a8aeae250a7abb1 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#aa1379091e843a1672a8aeae250a7abb1">operator-=</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
+<tr class="separator:aa1379091e843a1672a8aeae250a7abb1 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a497525637b98332b7571b57c319f672d inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a497525637b98332b7571b57c319f672d">operator*=</a> (const GLfloat *a)</td></tr>
+<tr class="separator:a497525637b98332b7571b57c319f672d inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacf8bcdfdee4ddff74b8d6dad1a05ecb inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#aacf8bcdfdee4ddff74b8d6dad1a05ecb">operator*=</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
+<tr class="separator:aacf8bcdfdee4ddff74b8d6dad1a05ecb inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59c994d71db6de3acf9ce85ab351e170 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a59c994d71db6de3acf9ce85ab351e170">operator*=</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
+<tr class="separator:a59c994d71db6de3acf9ce85ab351e170 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb443d6b9fd2cf90942ec8b77172528c inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#acb443d6b9fd2cf90942ec8b77172528c">operator/=</a> (const GLfloat *a)</td></tr>
+<tr class="separator:acb443d6b9fd2cf90942ec8b77172528c inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eb399ffee386f8e80b44e942a4b11ea inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a9eb399ffee386f8e80b44e942a4b11ea">operator/=</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
+<tr class="separator:a9eb399ffee386f8e80b44e942a4b11ea inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26c2bb3780f51dcc7a20ccbbc4865b90 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a26c2bb3780f51dcc7a20ccbbc4865b90">operator/=</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
+<tr class="separator:a26c2bb3780f51dcc7a20ccbbc4865b90 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f536343e54923de7d58507a86edcde0 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a4f536343e54923de7d58507a86edcde0">operator+</a> (const GLfloat *a) const</td></tr>
 <tr class="separator:a4f536343e54923de7d58507a86edcde0 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade17d80d5e710bf94f0d4061df507d93 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#ade17d80d5e710bf94f0d4061df507d93">operator+</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v) const</td></tr>
@@ -274,18 +282,18 @@ gg::GgTrackball 連携図</div>
 <tr class="separator:af2046f124013908bbc115020b4573fb8 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a824ab3b06f1194f5f43f343596113ca7 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a824ab3b06f1194f5f43f343596113ca7">operator/</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q) const</td></tr>
 <tr class="separator:a824ab3b06f1194f5f43f343596113ca7 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e75f5a66841921b5662aade43e85181 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a5e75f5a66841921b5662aade43e85181">loadMatrix</a> (const GLfloat *a)</td></tr>
-<tr class="separator:a5e75f5a66841921b5662aade43e85181 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16fb7212b2ee620848051b40e873598f inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a16fb7212b2ee620848051b40e873598f">loadMatrix</a> (const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;m)</td></tr>
-<tr class="separator:a16fb7212b2ee620848051b40e873598f inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad30f1f7e93673f7b2fa868d64adcbf83 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#ad30f1f7e93673f7b2fa868d64adcbf83">loadIdentity</a> ()</td></tr>
-<tr class="separator:ad30f1f7e93673f7b2fa868d64adcbf83 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0f6e1a2521ec6594818f67eda133c3d inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#ad0f6e1a2521ec6594818f67eda133c3d">loadMatrix</a> (const GLfloat *a)</td></tr>
+<tr class="separator:ad0f6e1a2521ec6594818f67eda133c3d inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a267f6a8171f8676956833ff1cb98878f inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a267f6a8171f8676956833ff1cb98878f">loadMatrix</a> (const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;m)</td></tr>
+<tr class="separator:a267f6a8171f8676956833ff1cb98878f inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5570b27f958ccde717bc997cca85a0fd inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a5570b27f958ccde717bc997cca85a0fd">loadIdentity</a> ()</td></tr>
+<tr class="separator:a5570b27f958ccde717bc997cca85a0fd inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82d0620de0f023642b08d7e0f23e0687 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a82d0620de0f023642b08d7e0f23e0687">loadRotate</a> (GLfloat x, GLfloat y, GLfloat z, GLfloat a)</td></tr>
 <tr class="separator:a82d0620de0f023642b08d7e0f23e0687 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a397071db0143f0a54e0229698b9a081d inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a397071db0143f0a54e0229698b9a081d">loadRotate</a> (const GLfloat *v, GLfloat a)</td></tr>
-<tr class="separator:a397071db0143f0a54e0229698b9a081d inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d921a164a5bb550088f4931dd4eda19 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a9d921a164a5bb550088f4931dd4eda19">loadRotate</a> (const GLfloat *v)</td></tr>
-<tr class="separator:a9d921a164a5bb550088f4931dd4eda19 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48a3652e3eeab6b9b34a404cd5f1dddf inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a48a3652e3eeab6b9b34a404cd5f1dddf">loadRotate</a> (const GLfloat *v, GLfloat a)</td></tr>
+<tr class="separator:a48a3652e3eeab6b9b34a404cd5f1dddf inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4400b1921ecc23b0607e9800742342e6 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a4400b1921ecc23b0607e9800742342e6">loadRotate</a> (const GLfloat *v)</td></tr>
+<tr class="separator:a4400b1921ecc23b0607e9800742342e6 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f9cd8893b1adbbaf17588b1ba5ee9c3 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a6f9cd8893b1adbbaf17588b1ba5ee9c3">loadRotateX</a> (GLfloat a)</td></tr>
 <tr class="separator:a6f9cd8893b1adbbaf17588b1ba5ee9c3 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a308e08f78d2dfeadc2efbcd7a470d6bd inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a308e08f78d2dfeadc2efbcd7a470d6bd">loadRotateY</a> (GLfloat a)</td></tr>
@@ -306,32 +314,32 @@ gg::GgTrackball 連携図</div>
 <tr class="separator:a5640308c334e9de115adc573ac33f3ce inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a1be65570aae13d963e894f02c88beb inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a3a1be65570aae13d963e894f02c88beb">loadEuler</a> (GLfloat heading, GLfloat pitch, GLfloat roll)</td></tr>
 <tr class="separator:a3a1be65570aae13d963e894f02c88beb inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ab3a26b9222afcf352d817be640e66b inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a7ab3a26b9222afcf352d817be640e66b">loadEuler</a> (const GLfloat *e)</td></tr>
-<tr class="separator:a7ab3a26b9222afcf352d817be640e66b inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a471642fc24c7f2af4c7d587eb079c0cd inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a471642fc24c7f2af4c7d587eb079c0cd">loadEuler</a> (const GLfloat *e)</td></tr>
+<tr class="separator:a471642fc24c7f2af4c7d587eb079c0cd inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdbd693a6cd020ed36293d3aec1b528c inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#abdbd693a6cd020ed36293d3aec1b528c">euler</a> (GLfloat heading, GLfloat pitch, GLfloat roll) const</td></tr>
 <tr class="separator:abdbd693a6cd020ed36293d3aec1b528c inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65a6c0126b5f8a857046f8e1defca7cc inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a65a6c0126b5f8a857046f8e1defca7cc">euler</a> (const GLfloat *e) const</td></tr>
 <tr class="separator:a65a6c0126b5f8a857046f8e1defca7cc inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57f80be2fadc68a49f945acec72afc20 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a57f80be2fadc68a49f945acec72afc20">loadSlerp</a> (const GLfloat *a, const GLfloat *b, GLfloat t)</td></tr>
-<tr class="separator:a57f80be2fadc68a49f945acec72afc20 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a981229576309c0ad3c56c07cc3efc316 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a981229576309c0ad3c56c07cc3efc316">loadSlerp</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q, const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;r, GLfloat t)</td></tr>
-<tr class="separator:a981229576309c0ad3c56c07cc3efc316 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c18881b8abdcc6d03e3d3ab2b572698 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a9c18881b8abdcc6d03e3d3ab2b572698">loadSlerp</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q, const GLfloat *a, GLfloat t)</td></tr>
-<tr class="separator:a9c18881b8abdcc6d03e3d3ab2b572698 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addb1e1547e6403ca4b64c956b11c45c2 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#addb1e1547e6403ca4b64c956b11c45c2">loadSlerp</a> (const GLfloat *a, const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q, GLfloat t)</td></tr>
-<tr class="separator:addb1e1547e6403ca4b64c956b11c45c2 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2ca6c2380083877c0d1014650f91d77 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#aa2ca6c2380083877c0d1014650f91d77">loadSlerp</a> (const GLfloat *a, const GLfloat *b, GLfloat t)</td></tr>
+<tr class="separator:aa2ca6c2380083877c0d1014650f91d77 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff9ca9585790c621dec95e18aa7c9c57 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#aff9ca9585790c621dec95e18aa7c9c57">loadSlerp</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q, const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;r, GLfloat t)</td></tr>
+<tr class="separator:aff9ca9585790c621dec95e18aa7c9c57 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeacb9e8dbdcc7854fca46b7b88ec9d57 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#aeacb9e8dbdcc7854fca46b7b88ec9d57">loadSlerp</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q, const GLfloat *a, GLfloat t)</td></tr>
+<tr class="separator:aeacb9e8dbdcc7854fca46b7b88ec9d57 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec0568f0aa49b7038eee69c3fec3f510 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#aec0568f0aa49b7038eee69c3fec3f510">loadSlerp</a> (const GLfloat *a, const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q, GLfloat t)</td></tr>
+<tr class="separator:aec0568f0aa49b7038eee69c3fec3f510 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af529d76bbf4048ad56625575c7af3668 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#af529d76bbf4048ad56625575c7af3668">loadNormalize</a> (const GLfloat *a)</td></tr>
 <tr class="separator:af529d76bbf4048ad56625575c7af3668 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b6ba23dc4182f8e711defc9a0f33436 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a2b6ba23dc4182f8e711defc9a0f33436">loadNormalize</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
-<tr class="separator:a2b6ba23dc4182f8e711defc9a0f33436 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7829ffa84538358008d7e37c247308e1 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a7829ffa84538358008d7e37c247308e1">loadNormalize</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
+<tr class="separator:a7829ffa84538358008d7e37c247308e1 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9a9577581a5f9bbebd675998f741215 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#af9a9577581a5f9bbebd675998f741215">loadConjugate</a> (const GLfloat *a)</td></tr>
 <tr class="separator:af9a9577581a5f9bbebd675998f741215 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6b49c37d9d9b3d2a0e2950a51ba34ac inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#aa6b49c37d9d9b3d2a0e2950a51ba34ac">loadConjugate</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
-<tr class="separator:aa6b49c37d9d9b3d2a0e2950a51ba34ac inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43b85fc04b7be9fa39859ecac808009d inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a43b85fc04b7be9fa39859ecac808009d">loadConjugate</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
+<tr class="separator:a43b85fc04b7be9fa39859ecac808009d inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46f9d1612fdd1fc39db6c8ba7e574a86 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a46f9d1612fdd1fc39db6c8ba7e574a86">loadInvert</a> (const GLfloat *a)</td></tr>
 <tr class="separator:a46f9d1612fdd1fc39db6c8ba7e574a86 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a938136b65190b0cb6b232d9311b043f2 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a938136b65190b0cb6b232d9311b043f2">loadInvert</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
-<tr class="separator:a938136b65190b0cb6b232d9311b043f2 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78779d311b64b91e00bdee479fd490ca inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#a78779d311b64b91e00bdee479fd490ca">loadInvert</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q)</td></tr>
+<tr class="separator:a78779d311b64b91e00bdee479fd490ca inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae87cd428f7803b83a0ef4f1464128a2d inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#ae87cd428f7803b83a0ef4f1464128a2d">slerp</a> (GLfloat *a, GLfloat t) const</td></tr>
 <tr class="separator:ae87cd428f7803b83a0ef4f1464128a2d inherit pub_methods_classgg_1_1GgQuaternion"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5e931d94ea34b3c63d79b081e594b95 inherit pub_methods_classgg_1_1GgQuaternion"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgQuaternion.html#af5e931d94ea34b3c63d79b081e594b95">slerp</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q, GLfloat t) const</td></tr>
@@ -369,34 +377,34 @@ gg::GgTrackball 連携図</div>
 <tr class="separator:aa54098d7856859dff918db40c7509f3f inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18bfe5112e4490430398d3b7ec9330cc inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVector.html">GgVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#a18bfe5112e4490430398d3b7ec9330cc">operator+</a> (GLfloat c) const</td></tr>
 <tr class="separator:a18bfe5112e4490430398d3b7ec9330cc inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e4d0e56bd819e7b12d4620ab9592400 inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#a0e4d0e56bd819e7b12d4620ab9592400">operator+=</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
-<tr class="separator:a0e4d0e56bd819e7b12d4620ab9592400 inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a720164a63ce68682383174cf4c5bd18d inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#a720164a63ce68682383174cf4c5bd18d">operator+=</a> (GLfloat c)</td></tr>
-<tr class="separator:a720164a63ce68682383174cf4c5bd18d inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a772adc5ba545bc9686109c7ef47ea611 inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#a772adc5ba545bc9686109c7ef47ea611">operator+=</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
+<tr class="separator:a772adc5ba545bc9686109c7ef47ea611 inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6accd518c5e38a04f8cf15e5a4742b37 inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#a6accd518c5e38a04f8cf15e5a4742b37">operator+=</a> (GLfloat c)</td></tr>
+<tr class="separator:a6accd518c5e38a04f8cf15e5a4742b37 inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af260ee79492b6f5596c83408b9a2b1a8 inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVector.html">GgVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#af260ee79492b6f5596c83408b9a2b1a8">operator-</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v) const</td></tr>
 <tr class="separator:af260ee79492b6f5596c83408b9a2b1a8 inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad33405b1dbdb6f5409640d6c60361e68 inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVector.html">GgVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#ad33405b1dbdb6f5409640d6c60361e68">operator-</a> (GLfloat c) const</td></tr>
 <tr class="separator:ad33405b1dbdb6f5409640d6c60361e68 inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f1a3c9665c12c7729ba0772cf28e851 inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#a7f1a3c9665c12c7729ba0772cf28e851">operator-=</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
-<tr class="separator:a7f1a3c9665c12c7729ba0772cf28e851 inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65350507736a5d3bc3c441daf6bffa1d inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#a65350507736a5d3bc3c441daf6bffa1d">operator-=</a> (GLfloat c)</td></tr>
-<tr class="separator:a65350507736a5d3bc3c441daf6bffa1d inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1671d0b5aded451bc752ca12667f524e inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#a1671d0b5aded451bc752ca12667f524e">operator-=</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
+<tr class="separator:a1671d0b5aded451bc752ca12667f524e inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab18df96b30a788cea318ae573f032e73 inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#ab18df96b30a788cea318ae573f032e73">operator-=</a> (GLfloat c)</td></tr>
+<tr class="separator:ab18df96b30a788cea318ae573f032e73 inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a024b7eb617070d0d07f4d809a20b4feb inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVector.html">GgVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#a024b7eb617070d0d07f4d809a20b4feb">operator*</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v) const</td></tr>
 <tr class="separator:a024b7eb617070d0d07f4d809a20b4feb inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f46419a169cc49089968d70f493c463 inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVector.html">GgVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#a6f46419a169cc49089968d70f493c463">operator*</a> (GLfloat c) const</td></tr>
 <tr class="separator:a6f46419a169cc49089968d70f493c463 inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38273a881eaa92668f20c050678ee605 inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#a38273a881eaa92668f20c050678ee605">operator*=</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
-<tr class="separator:a38273a881eaa92668f20c050678ee605 inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71dcfabda45757dd82dd1375222c4c8b inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#a71dcfabda45757dd82dd1375222c4c8b">operator*=</a> (GLfloat c)</td></tr>
-<tr class="separator:a71dcfabda45757dd82dd1375222c4c8b inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a537a74b6a70cd092711701b87063a1b6 inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#a537a74b6a70cd092711701b87063a1b6">operator*=</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
+<tr class="separator:a537a74b6a70cd092711701b87063a1b6 inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cee8ca3a7a37e1cba269c9c21837516 inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#a7cee8ca3a7a37e1cba269c9c21837516">operator*=</a> (GLfloat c)</td></tr>
+<tr class="separator:a7cee8ca3a7a37e1cba269c9c21837516 inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af403aa093604e42175e979df634af54f inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVector.html">GgVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#af403aa093604e42175e979df634af54f">operator/</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v) const</td></tr>
 <tr class="separator:af403aa093604e42175e979df634af54f inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a799b21186b3a8e729bbc8a6c383e087b inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#a799b21186b3a8e729bbc8a6c383e087b">operator/=</a> (<a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
-<tr class="separator:a799b21186b3a8e729bbc8a6c383e087b inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec552b9da3ced6f79f06900ed41d3046 inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#aec552b9da3ced6f79f06900ed41d3046">operator/=</a> (<a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v)</td></tr>
+<tr class="separator:aec552b9da3ced6f79f06900ed41d3046 inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace193ff3248135351ec7c18e9bc8809a inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVector.html">GgVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#ace193ff3248135351ec7c18e9bc8809a">operator/</a> (GLfloat c) const</td></tr>
 <tr class="separator:ace193ff3248135351ec7c18e9bc8809a inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a268e5bd68efdc672dddb1e9a55a64567 inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#a268e5bd68efdc672dddb1e9a55a64567">operator/=</a> (GLfloat c)</td></tr>
-<tr class="separator:a268e5bd68efdc672dddb1e9a55a64567 inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e7d2e0d9b204eece2567134d1f0bdc8 inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#a4e7d2e0d9b204eece2567134d1f0bdc8">operator/=</a> (GLfloat c)</td></tr>
+<tr class="separator:a4e7d2e0d9b204eece2567134d1f0bdc8 inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82f2282affb26a02e7251a012e26f5fd inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#a82f2282affb26a02e7251a012e26f5fd">dot3</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;v) const</td></tr>
 <tr class="separator:a82f2282affb26a02e7251a012e26f5fd inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00aad8dbf2cd33361e2b0e495f7f4b0d inherit pub_methods_classgg_1_1GgVector"><td class="memItemLeft" align="right" valign="top">GLfloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgVector.html#a00aad8dbf2cd33361e2b0e495f7f4b0d">length3</a> () const</td></tr>
@@ -415,12 +423,12 @@ gg::GgTrackball 連携図</div>
 <tr class="separator:ac71838f77dde35fdc627b96e6807462f inherit pub_methods_classgg_1_1GgVector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>簡易トラックボール処理. </p>
+<div class="textblock"><p >簡易トラックボール処理. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04750">4750</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04752">4752</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
-<a id="a880dce99e0a666536802659963971c50"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a880dce99e0a666536802659963971c50">&#9670;&nbsp;</a></span>GgTrackball()</h2>
+<a id="a880dce99e0a666536802659963971c50" name="a880dce99e0a666536802659963971c50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a880dce99e0a666536802659963971c50">&#9670;&#160;</a></span>GgTrackball()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -442,7 +450,7 @@ gg::GgTrackball 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>コンストラクタ.</p>
+<p >コンストラクタ.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">q</td><td>トラックボールの回転の初期値の四元数. </td></tr>
@@ -450,21 +458,21 @@ gg::GgTrackball 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04765">4765</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04767">4767</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgg_1_1GgTrackball_a880dce99e0a666536802659963971c50_cgraph.png" border="0" usemap="#aclassgg_1_1GgTrackball_a880dce99e0a666536802659963971c50_cgraph" alt=""/></div>
 <map name="aclassgg_1_1GgTrackball_a880dce99e0a666536802659963971c50_cgraph" id="aclassgg_1_1GgTrackball_a880dce99e0a666536802659963971c50_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,196,32"/>
-<area shape="rect" href="classgg_1_1GgTrackball.html#aaaa41ddff91ff91173133d478356b836" title=" " alt="" coords="244,5,395,32"/>
+<area shape="rect" title=" " alt="" coords="5,5,196,31"/>
+<area shape="rect" href="classgg_1_1GgTrackball.html#aaaa41ddff91ff91173133d478356b836" title=" " alt="" coords="244,5,395,31"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a74d0719b05f0b8957ba3c3e48333fb16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74d0719b05f0b8957ba3c3e48333fb16">&#9670;&nbsp;</a></span>~GgTrackball()</h2>
+<a id="a74d0719b05f0b8957ba3c3e48333fb16" name="a74d0719b05f0b8957ba3c3e48333fb16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74d0719b05f0b8957ba3c3e48333fb16">&#9670;&#160;</a></span>~GgTrackball()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -485,15 +493,15 @@ gg::GgTrackball 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>デストラクタ. </p>
+<p >デストラクタ. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04773">4773</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04775">4775</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="aa747232a05539a110b77d93b09dfffca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa747232a05539a110b77d93b09dfffca">&#9670;&nbsp;</a></span>begin()</h2>
+<a id="aa747232a05539a110b77d93b09dfffca" name="aa747232a05539a110b77d93b09dfffca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa747232a05539a110b77d93b09dfffca">&#9670;&#160;</a></span>begin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -517,7 +525,7 @@ gg::GgTrackball 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>トラックボール処理を開始する.</p>
+<p >トラックボール処理を開始する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>現在のマウスの x 座標. </td></tr>
@@ -527,12 +535,12 @@ gg::GgTrackball 連携図</div>
 </dl>
 <dl class="section note"><dt>覚え書き</dt><dd>マウスのドラッグ開始時 (マウスボタンを押したとき) に呼び出す. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03342">3342</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03341">3341</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a4f56d59aadba0be3e8196971828382a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f56d59aadba0be3e8196971828382a1">&#9670;&nbsp;</a></span>end()</h2>
+<a id="a4f56d59aadba0be3e8196971828382a1" name="a4f56d59aadba0be3e8196971828382a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f56d59aadba0be3e8196971828382a1">&#9670;&#160;</a></span>end()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -556,7 +564,7 @@ gg::GgTrackball 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>トラックボール処理を停止する.</p>
+<p >トラックボール処理を停止する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>現在のマウスの x 座標. </td></tr>
@@ -566,12 +574,12 @@ gg::GgTrackball 連携図</div>
 </dl>
 <dl class="section note"><dt>覚え書き</dt><dd>マウスのドラッグ終了時 (マウスボタンを離したとき) に呼び出す. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03407">3407</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03406">3406</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a7bbac58e46aafbab14d16fb1982dce24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7bbac58e46aafbab14d16fb1982dce24">&#9670;&nbsp;</a></span>get()</h2>
+<a id="a3b813cad1a0580e0121b7e873c1fcd5d" name="a3b813cad1a0580e0121b7e873c1fcd5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b813cad1a0580e0121b7e873c1fcd5d">&#9670;&#160;</a></span>get()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -580,7 +588,7 @@ gg::GgTrackball 連携図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const GLfloat* gg::GgTrackball::get </td>
+          <td class="memname">const GLfloat * gg::GgTrackball::get </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -592,24 +600,24 @@ gg::GgTrackball 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>現在の回転の変換行列を取り出す.</p>
+<p >現在の回転の変換行列を取り出す.</p>
 <dl class="section return"><dt>戻り値</dt><dd>回転の変換を表す GLfloat 型の 16 要素の配列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04945">4945</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04947">4947</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="classgg_1_1GgTrackball_a7bbac58e46aafbab14d16fb1982dce24_cgraph.png" border="0" usemap="#aclassgg_1_1GgTrackball_a7bbac58e46aafbab14d16fb1982dce24_cgraph" alt=""/></div>
-<map name="aclassgg_1_1GgTrackball_a7bbac58e46aafbab14d16fb1982dce24_cgraph" id="aclassgg_1_1GgTrackball_a7bbac58e46aafbab14d16fb1982dce24_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,144,32"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#aa5b928ad41aa3ea57c0d1e8b4fc50614" title=" " alt="" coords="192,5,315,32"/>
+<div class="center"><img src="classgg_1_1GgTrackball_a3b813cad1a0580e0121b7e873c1fcd5d_cgraph.png" border="0" usemap="#aclassgg_1_1GgTrackball_a3b813cad1a0580e0121b7e873c1fcd5d_cgraph" alt=""/></div>
+<map name="aclassgg_1_1GgTrackball_a3b813cad1a0580e0121b7e873c1fcd5d_cgraph" id="aclassgg_1_1GgTrackball_a3b813cad1a0580e0121b7e873c1fcd5d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,144,31"/>
+<area shape="rect" href="classgg_1_1GgMatrix.html#a85419e1b591aa77fda6a908dab1d9468" title=" " alt="" coords="192,5,315,31"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a5591a64f92654ce58a7e8e1bed9e6fe3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5591a64f92654ce58a7e8e1bed9e6fe3">&#9670;&nbsp;</a></span>getMatrix()</h2>
+<a id="a1e831a1bd96d091e919ae307d669969c" name="a1e831a1bd96d091e919ae307d669969c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e831a1bd96d091e919ae307d669969c">&#9670;&#160;</a></span>getMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -618,7 +626,7 @@ gg::GgTrackball 連携図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a>&amp; gg::GgTrackball::getMatrix </td>
+          <td class="memname">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp; gg::GgTrackball::getMatrix </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -630,15 +638,15 @@ gg::GgTrackball 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>現在の回転の変換行列を取り出す.</p>
+<p >現在の回転の変換行列を取り出す.</p>
 <dl class="section return"><dt>戻り値</dt><dd>回転の変換を表す <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> 型の変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04935">4935</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04937">4937</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="ad051e0515be0d92c937e26570bd6827b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad051e0515be0d92c937e26570bd6827b">&#9670;&nbsp;</a></span>getQuaternion()</h2>
+<a id="a53c894f599180aae58b3cf2c7b977e23" name="a53c894f599180aae58b3cf2c7b977e23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53c894f599180aae58b3cf2c7b977e23">&#9670;&#160;</a></span>getQuaternion()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -647,7 +655,7 @@ gg::GgTrackball 連携図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>&amp; gg::GgTrackball::getQuaternion </td>
+          <td class="memname">const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp; gg::GgTrackball::getQuaternion </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -659,15 +667,15 @@ gg::GgTrackball 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>現在の回転の四元数を取り出す.</p>
+<p >現在の回転の四元数を取り出す.</p>
 <dl class="section return"><dt>戻り値</dt><dd>回転の変換を表す Quaternion 型の四元数. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04925">4925</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04927">4927</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a7b2c18a6001f825c5e408347ee20d934"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b2c18a6001f825c5e408347ee20d934">&#9670;&nbsp;</a></span>getScale() <span class="overload">[1/3]</span></h2>
+<a id="a660339a8239bc5bbdc8677c409ae7da7" name="a660339a8239bc5bbdc8677c409ae7da7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a660339a8239bc5bbdc8677c409ae7da7">&#9670;&#160;</a></span>getScale() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -676,7 +684,7 @@ gg::GgTrackball 連携図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const GLfloat* gg::GgTrackball::getScale </td>
+          <td class="memname">const GLfloat * gg::GgTrackball::getScale </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -688,15 +696,15 @@ gg::GgTrackball 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>トラックボール処理の換算係数を取り出す.</p>
+<p >トラックボール処理の換算係数を取り出す.</p>
 <dl class="section return"><dt>戻り値</dt><dd>トラックボールの換算係数のポインタ. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04894">4894</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04896">4896</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="aaf190b7c0fedbc0fae01856ec3eb1e27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf190b7c0fedbc0fae01856ec3eb1e27">&#9670;&nbsp;</a></span>getScale() <span class="overload">[2/3]</span></h2>
+<a id="aaf190b7c0fedbc0fae01856ec3eb1e27" name="aaf190b7c0fedbc0fae01856ec3eb1e27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf190b7c0fedbc0fae01856ec3eb1e27">&#9670;&#160;</a></span>getScale() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -718,7 +726,7 @@ gg::GgTrackball 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>トラックボール処理の換算係数を取り出す.</p>
+<p >トラックボール処理の換算係数を取り出す.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">factor</td><td>トラックボールの換算係数を格納する 2 要素の配列. </td></tr>
@@ -726,12 +734,12 @@ gg::GgTrackball 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04914">4914</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04916">4916</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a5238d255732688fb52f590da8801c17b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5238d255732688fb52f590da8801c17b">&#9670;&nbsp;</a></span>getScale() <span class="overload">[3/3]</span></h2>
+<a id="a5238d255732688fb52f590da8801c17b" name="a5238d255732688fb52f590da8801c17b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5238d255732688fb52f590da8801c17b">&#9670;&#160;</a></span>getScale() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -753,7 +761,7 @@ gg::GgTrackball 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>トラックボール処理の換算係数を取り出す.</p>
+<p >トラックボール処理の換算係数を取り出す.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">direction</td><td>0 なら x 方向, 1 なら y 方向. </td></tr>
@@ -761,12 +769,12 @@ gg::GgTrackball 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04904">4904</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04906">4906</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="aac13a2715cc1128935d34b6eafb226e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac13a2715cc1128935d34b6eafb226e1">&#9670;&nbsp;</a></span>getStart() <span class="overload">[1/3]</span></h2>
+<a id="a10634facc27b69e13c2511aa1dbc4d21" name="a10634facc27b69e13c2511aa1dbc4d21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10634facc27b69e13c2511aa1dbc4d21">&#9670;&#160;</a></span>getStart() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -775,7 +783,7 @@ gg::GgTrackball 連携図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const GLfloat* gg::GgTrackball::getStart </td>
+          <td class="memname">const GLfloat * gg::GgTrackball::getStart </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -787,15 +795,15 @@ gg::GgTrackball 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>トラックボール処理の開始位置を取り出す.</p>
+<p >トラックボール処理の開始位置を取り出す.</p>
 <dl class="section return"><dt>戻り値</dt><dd>トラックボールの開始位置のポインタ. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04865">4865</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04867">4867</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="ae44a5319c8ef18de8270e2232abd7d1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae44a5319c8ef18de8270e2232abd7d1e">&#9670;&nbsp;</a></span>getStart() <span class="overload">[2/3]</span></h2>
+<a id="ae44a5319c8ef18de8270e2232abd7d1e" name="ae44a5319c8ef18de8270e2232abd7d1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae44a5319c8ef18de8270e2232abd7d1e">&#9670;&#160;</a></span>getStart() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -817,7 +825,7 @@ gg::GgTrackball 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>トラックボール処理の開始位置を取り出す.</p>
+<p >トラックボール処理の開始位置を取り出す.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">position</td><td>トラックボールの開始位置を格納する 2 要素の配列. </td></tr>
@@ -825,12 +833,12 @@ gg::GgTrackball 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04883">4883</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04885">4885</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="ab98e34a7c5aa53c39a3650c440f7ca7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab98e34a7c5aa53c39a3650c440f7ca7e">&#9670;&nbsp;</a></span>getStart() <span class="overload">[3/3]</span></h2>
+<a id="ab8c6d13462b0d387956f9a53dce51b6f" name="ab8c6d13462b0d387956f9a53dce51b6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8c6d13462b0d387956f9a53dce51b6f">&#9670;&#160;</a></span>getStart() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -839,7 +847,7 @@ gg::GgTrackball 連携図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const GLfloat&amp; gg::GgTrackball::getStart </td>
+          <td class="memname">const GLfloat &amp; gg::GgTrackball::getStart </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>direction</em></td><td>)</td>
@@ -852,19 +860,19 @@ gg::GgTrackball 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>トラックボール処理の開始位置を取り出す. </p><dl class="params"><dt>引数</dt><dd>
+<p >トラックボール処理の開始位置を取り出す. </p><dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">direction</td><td>0 なら x 方向, 1 なら y 方向. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04873">4873</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04875">4875</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="a9613e5e3f4e41561938f8372ac8f55f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9613e5e3f4e41561938f8372ac8f55f2">&#9670;&nbsp;</a></span>motion()</h2>
+<a id="a9613e5e3f4e41561938f8372ac8f55f2" name="a9613e5e3f4e41561938f8372ac8f55f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9613e5e3f4e41561938f8372ac8f55f2">&#9670;&#160;</a></span>motion()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -888,7 +896,7 @@ gg::GgTrackball 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>回転の変換行列を計算する.</p>
+<p >回転の変換行列を計算する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>現在のマウスの x 座標. </td></tr>
@@ -898,22 +906,22 @@ gg::GgTrackball 連携図</div>
 </dl>
 <dl class="section note"><dt>覚え書き</dt><dd>マウスのドラッグ中に呼び出す. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03358">3358</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03357">3357</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgg_1_1GgTrackball_a9613e5e3f4e41561938f8372ac8f55f2_cgraph.png" border="0" usemap="#aclassgg_1_1GgTrackball_a9613e5e3f4e41561938f8372ac8f55f2_cgraph" alt=""/></div>
 <map name="aclassgg_1_1GgTrackball_a9613e5e3f4e41561938f8372ac8f55f2_cgraph" id="aclassgg_1_1GgTrackball_a9613e5e3f4e41561938f8372ac8f55f2_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,165,32"/>
-<area shape="rect" href="namespacegg.html#a65baca1998bd9ea2b31a3fc1648d53dd" title=" " alt="" coords="213,5,372,32"/>
-<area shape="rect" href="classgg_1_1GgQuaternion.html#a82d0620de0f023642b08d7e0f23e0687" title=" " alt="" coords="420,5,615,32"/>
+<area shape="rect" title=" " alt="" coords="5,5,165,31"/>
+<area shape="rect" href="namespacegg.html#a65baca1998bd9ea2b31a3fc1648d53dd" title=" " alt="" coords="213,5,372,31"/>
+<area shape="rect" href="classgg_1_1GgQuaternion.html#a82d0620de0f023642b08d7e0f23e0687" title=" " alt="" coords="420,5,615,31"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ab2b3d7243e6f07700267d2b4b5305560"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2b3d7243e6f07700267d2b4b5305560">&#9670;&nbsp;</a></span>operator=()</h2>
+<a id="a980a60c0d7b99d203bff8b5f1cb7eb66" name="a980a60c0d7b99d203bff8b5f1cb7eb66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a980a60c0d7b99d203bff8b5f1cb7eb66">&#9670;&#160;</a></span>operator=()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -922,7 +930,7 @@ gg::GgTrackball 連携図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgg_1_1GgTrackball.html">GgTrackball</a>&amp; gg::GgTrackball::operator= </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgTrackball.html">GgTrackball</a> &amp; gg::GgTrackball::operator= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;&#160;</td>
           <td class="paramname"><em>q</em></td><td>)</td>
@@ -935,7 +943,7 @@ gg::GgTrackball 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>代入.</p>
+<p >代入.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">q</td><td>トラックボールの回転の初期値の四元数. </td></tr>
@@ -943,21 +951,21 @@ gg::GgTrackball 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04782">4782</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04784">4784</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="classgg_1_1GgTrackball_ab2b3d7243e6f07700267d2b4b5305560_cgraph.png" border="0" usemap="#aclassgg_1_1GgTrackball_ab2b3d7243e6f07700267d2b4b5305560_cgraph" alt=""/></div>
-<map name="aclassgg_1_1GgTrackball_ab2b3d7243e6f07700267d2b4b5305560_cgraph" id="aclassgg_1_1GgTrackball_ab2b3d7243e6f07700267d2b4b5305560_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,181,32"/>
-<area shape="rect" href="classgg_1_1GgQuaternion.html#a0cf33af7bb0da8bb93bbbf1693da4e63" title=" " alt="" coords="229,5,385,32"/>
+<div class="center"><img src="classgg_1_1GgTrackball_a980a60c0d7b99d203bff8b5f1cb7eb66_cgraph.png" border="0" usemap="#aclassgg_1_1GgTrackball_a980a60c0d7b99d203bff8b5f1cb7eb66_cgraph" alt=""/></div>
+<map name="aclassgg_1_1GgTrackball_a980a60c0d7b99d203bff8b5f1cb7eb66_cgraph" id="aclassgg_1_1GgTrackball_a980a60c0d7b99d203bff8b5f1cb7eb66_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,181,31"/>
+<area shape="rect" href="classgg_1_1GgQuaternion.html#afa329244555230d31a27e037a741ffc5" title=" " alt="" coords="229,5,385,31"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ab6d959db5ef9b8405da2f5ded29766d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6d959db5ef9b8405da2f5ded29766d0">&#9670;&nbsp;</a></span>region() <span class="overload">[1/2]</span></h2>
+<a id="ab6d959db5ef9b8405da2f5ded29766d0" name="ab6d959db5ef9b8405da2f5ded29766d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6d959db5ef9b8405da2f5ded29766d0">&#9670;&#160;</a></span>region() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -981,7 +989,7 @@ gg::GgTrackball 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>トラックボール処理するマウスの移動範囲を指定する.</p>
+<p >トラックボール処理するマウスの移動範囲を指定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">w</td><td>領域の横幅. </td></tr>
@@ -991,21 +999,21 @@ gg::GgTrackball 連携図</div>
 </dl>
 <dl class="section note"><dt>覚え書き</dt><dd>ウィンドウのリサイズ時に呼び出す. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03329">3329</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03328">3328</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgg_1_1GgTrackball_ab6d959db5ef9b8405da2f5ded29766d0_icgraph.png" border="0" usemap="#aclassgg_1_1GgTrackball_ab6d959db5ef9b8405da2f5ded29766d0_icgraph" alt=""/></div>
 <map name="aclassgg_1_1GgTrackball_ab6d959db5ef9b8405da2f5ded29766d0_icgraph" id="aclassgg_1_1GgTrackball_ab6d959db5ef9b8405da2f5ded29766d0_icgraph">
-<area shape="rect" title=" " alt="" coords="209,5,365,32"/>
-<area shape="rect" href="classgg_1_1GgTrackball.html#af0ff2b315542776b0b465f5e166c4c8a" title=" " alt="" coords="5,5,161,32"/>
+<area shape="rect" title=" " alt="" coords="209,5,365,31"/>
+<area shape="rect" href="classgg_1_1GgTrackball.html#af0ff2b315542776b0b465f5e166c4c8a" title=" " alt="" coords="5,5,161,31"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="af0ff2b315542776b0b465f5e166c4c8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0ff2b315542776b0b465f5e166c4c8a">&#9670;&nbsp;</a></span>region() <span class="overload">[2/2]</span></h2>
+<a id="af0ff2b315542776b0b465f5e166c4c8a" name="af0ff2b315542776b0b465f5e166c4c8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0ff2b315542776b0b465f5e166c4c8a">&#9670;&#160;</a></span>region() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1037,7 +1045,7 @@ gg::GgTrackball 連携図</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>トラックボール処理するマウスの移動範囲を指定する.</p>
+<p >トラックボール処理するマウスの移動範囲を指定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">w</td><td>領域の横幅. </td></tr>
@@ -1047,21 +1055,21 @@ gg::GgTrackball 連携図</div>
 </dl>
 <dl class="section note"><dt>覚え書き</dt><dd>ウィンドウのリサイズ時に呼び出す. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04808">4808</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l04810">4810</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgg_1_1GgTrackball_af0ff2b315542776b0b465f5e166c4c8a_cgraph.png" border="0" usemap="#aclassgg_1_1GgTrackball_af0ff2b315542776b0b465f5e166c4c8a_cgraph" alt=""/></div>
 <map name="aclassgg_1_1GgTrackball_af0ff2b315542776b0b465f5e166c4c8a_cgraph" id="aclassgg_1_1GgTrackball_af0ff2b315542776b0b465f5e166c4c8a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,161,32"/>
-<area shape="rect" href="classgg_1_1GgTrackball.html#ab6d959db5ef9b8405da2f5ded29766d0" title=" " alt="" coords="209,5,365,32"/>
+<area shape="rect" title=" " alt="" coords="5,5,161,31"/>
+<area shape="rect" href="classgg_1_1GgTrackball.html#ab6d959db5ef9b8405da2f5ded29766d0" title=" " alt="" coords="209,5,365,31"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="aaaa41ddff91ff91173133d478356b836"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaaa41ddff91ff91173133d478356b836">&#9670;&nbsp;</a></span>reset()</h2>
+<a id="aaaa41ddff91ff91173133d478356b836" name="aaaa41ddff91ff91173133d478356b836"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaa41ddff91ff91173133d478356b836">&#9670;&#160;</a></span>reset()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1075,7 +1083,7 @@ gg::GgTrackball 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>トラックボールをリセットする.</p>
+<p >トラックボールをリセットする.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">トラックボールの回転の初期値の四元数.</td><td></td></tr>
@@ -1083,21 +1091,21 @@ gg::GgTrackball 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03311">3311</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03310">3310</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgg_1_1GgTrackball_aaaa41ddff91ff91173133d478356b836_icgraph.png" border="0" usemap="#aclassgg_1_1GgTrackball_aaaa41ddff91ff91173133d478356b836_icgraph" alt=""/></div>
 <map name="aclassgg_1_1GgTrackball_aaaa41ddff91ff91173133d478356b836_icgraph" id="aclassgg_1_1GgTrackball_aaaa41ddff91ff91173133d478356b836_icgraph">
-<area shape="rect" title=" " alt="" coords="244,5,395,32"/>
-<area shape="rect" href="classgg_1_1GgTrackball.html#a880dce99e0a666536802659963971c50" title=" " alt="" coords="5,5,196,32"/>
+<area shape="rect" title=" " alt="" coords="244,5,395,31"/>
+<area shape="rect" href="classgg_1_1GgTrackball.html#a880dce99e0a666536802659963971c50" title=" " alt="" coords="5,5,196,31"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="adbf3c13a6442309c79bd3185fa74a0a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adbf3c13a6442309c79bd3185fa74a0a4">&#9670;&nbsp;</a></span>rotate()</h2>
+<a id="adbf3c13a6442309c79bd3185fa74a0a4" name="adbf3c13a6442309c79bd3185fa74a0a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbf3c13a6442309c79bd3185fa74a0a4">&#9670;&#160;</a></span>rotate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1111,7 +1119,7 @@ gg::GgTrackball 連携図</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>トラックボールの回転角を修正する.</p>
+<p >トラックボールの回転角を修正する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">q</td><td>修正分の回転角の四元数. </td></tr>
@@ -1119,7 +1127,7 @@ gg::GgTrackball 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03386">3386</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l03385">3385</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1130,7 +1138,7 @@ gg::GgTrackball 連携図</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-2022年12月11日(日) 23時16分33秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+2022年12月23日(金) 09時58分57秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
