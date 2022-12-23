@@ -1601,7 +1601,7 @@ namespace gg
     /// GgVector 型の和を返す.
     ///
     /// @param v GgVector 型のベクトル.
-    /// @return オブジェクトの各要素と v の各要素の要素ごとの和.
+    /// @return オブジェクトの各要素と v の各要素の要素ごとの和のオブジェクト.
     ///
     GgVector operator+(const GgVector& v) const
     {
@@ -1612,7 +1612,7 @@ namespace gg
     /// GgVector 型の各要素にスカラーを足した和を返す.
     ///
     /// @param c GLfloat 型の値.
-    /// @return a の各要素に b を足した和.
+    /// @return a の各要素に b を足した和のオブジェクト.
     ///
     GgVector operator+(GLfloat c) const
     {
@@ -1653,7 +1653,7 @@ namespace gg
     /// GgVector 型の差を返す.
     ///
     /// @param v GgVector 型の変数.
-    /// @return オブジェクトの各要素と v の各要素の要素ごとの差.
+    /// @return オブジェクトの各要素と v の各要素の要素ごとの差のオブジェクト.
     ///
     GgVector operator-(const GgVector& v) const
     {
@@ -1664,7 +1664,7 @@ namespace gg
     /// GgVector 型の各要素からスカラーを引いた差を返す.
     ///
     /// @param c GLfloat 型の変数.
-    /// @return オブジェクトの各要素から c を引いた差.
+    /// @return オブジェクトの各要素から c を引いたオブジェクト.
     ///
     GgVector operator-(GLfloat c) const
     {
@@ -1705,7 +1705,7 @@ namespace gg
     /// GgVector 型の積を返す.
     ///
     /// @param v GgVector 型の変数.
-    /// @return オブジェクトの各要素と v の各要素の要素ごとの積.
+    /// @return オブジェクトの各要素と v の各要素の要素ごとを乗じたオブジェクト.
     ///
     GgVector operator*(const GgVector& v) const
     {
@@ -1715,9 +1715,8 @@ namespace gg
     ///
     /// GgVector 型の各要素にスカラーを乗じた積を返す.
     ///
-    /// @param a GgVector 型の変数.
-    /// @param b GLfloat 型の変数.
-    /// @return a の各要素に c を乗じた積.
+    /// @param c GLfloat 型の変数.
+    /// @return オブジェクトの各要素に c を乗じたオブジェクト.
     ///
     GgVector operator*(GLfloat c) const
     {
@@ -1757,7 +1756,7 @@ namespace gg
     /// GgVector 型の商を返す.
     ///
     /// @param v GgVector 型の変数.
-    /// @return オブジェクトの各要素を v の各要素で要素ごとに割った結果.
+    /// @return オブジェクトの各要素を v の各要素で要素ごとに割った結果のオブジェクト.
     ///
     GgVector operator/(const GgVector& v) const
     {
@@ -1783,7 +1782,7 @@ namespace gg
     /// GgVector 型の各要素をスカラーで割った商を返す.
     ///
     /// @param c GLfloat 型の値.
-    /// @return オブジェクトの各要素を c で割った商.
+    /// @return オブジェクトの各要素を c で割った商のオブジェクト.
     ///
     GgVector operator/(GLfloat c) const
     {
@@ -1840,7 +1839,7 @@ namespace gg
     ///
     /// GgVector 型の 4 要素の正規化.
     ///
-    /// @param a GLfloat 型の 4 要素の配列変数.
+    /// @return GLfloat 型の 4 要素の配列変数.
     ///
     GgVector normalize3() const
     {
@@ -1884,7 +1883,7 @@ namespace gg
     ///
     /// GgVector 型の 4 要素の正規化.
     ///
-    /// @param a GLfloat 型の 4 要素の配列変数.
+    /// @return GLfloat 型の 4 要素の配列変数.
     ///
     GgVector normalize4() const
     {
@@ -2203,7 +2202,7 @@ namespace gg
     ///
     /// 変換行列に別の変換行列を加算した値を返す.
     ///
-    /// @param a GgMatrix 型の変換行列.
+    /// @param m GgMatrix 型の変換行列.
     /// @return 変換行列に a を加えた GgMatrix 型の変換行列.
     ///
     GgMatrix operator+(const GgMatrix& m) const
@@ -2297,7 +2296,7 @@ namespace gg
     ///
     /// 変換行列に別の変換行列を乗算した値を返す.
     ///
-    /// @param a GgMatrix 型の変換行列.
+    /// @param m GgMatrix 型の変換行列.
     /// @return 変換行列に a を乗じた GgMatrix 型の変換行列.
     ///
     GgMatrix operator*(const GgMatrix& m) const
@@ -2345,7 +2344,7 @@ namespace gg
     ///
     /// 変換行列を変換行列で除算した値を返す.
     ///
-    /// @param a GgMatrix 型の変換行列.
+    /// @param m GgMatrix 型の変換行列.
     /// @return 変換行列を a で割った GgMatrix 型の変換行列.
     ///
     GgMatrix operator/(const GgMatrix& m) const
@@ -4587,8 +4586,8 @@ namespace gg
   }
 
   ///
-  /// (x, y, z) を軸として角度 a 回転する四元数を返す
-  /// .
+  /// (x, y, z) を軸として角度 a 回転する四元数を返す.
+  ///
   /// @param x 軸ベクトルの x 成分.
   /// @param y 軸ベクトルの y 成分.
   /// @param z 軸ベクトルの z 成分.
@@ -4855,7 +4854,7 @@ namespace gg
     ///
     /// トラックボールをリセットする.
     ///
-    /// @param トラックボールの回転の初期値の四元数.
+    /// @param q トラックボールの回転の初期値の四元数.
     ///
     void reset(const GgQuaternion& q = ggIdentityQuaternion());
 
@@ -7374,7 +7373,7 @@ namespace gg
       ///
       /// 光源の強度の拡散反射光成分を設定する.
       ///
-      /// @param specular 光源の強度の拡散反射光成分を格納した GgVector 型の変数.
+      /// @param diffuse 光源の強度の拡散反射光成分を格納した GgVector 型の変数.
       /// @param first 値を設定する光源データの最初の番号, デフォルトは 0.
       /// @param count 値を設定する光源データの数, デフォルトは 1.
       ///

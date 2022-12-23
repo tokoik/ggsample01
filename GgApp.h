@@ -384,7 +384,7 @@ public:
     ///
     /// FBO のサイズを得る.
     ///
-    /// @param size FBO の幅と高さを格納した GLsizei 型の 2 要素の配列.
+    /// @param fboSize FBO の幅と高さを格納した GLsizei 型の 2 要素の配列.
     ///
     void getFboSize(GLsizei* fboSize) const
     {
@@ -433,6 +433,7 @@ public:
     ///
     /// @param vx x 方向の移動速度.
     /// @param vy y 方向の移動速度.
+    /// @param vz z 方向の移動速度.
     ///
     void setVelocity(GLfloat vx, GLfloat vy, GLfloat vz = 0.1f)
     {
