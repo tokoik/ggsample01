@@ -6568,7 +6568,7 @@ namespace gg
   /// @param cz 点群の中心の z 座標.
   /// @return GgPoints 型の ポインタ.
   ///
-  extern GgPoints* ggPointsCube(
+  extern std::unique_ptr<GgPoints> ggPointsCube(
     GLsizei countv,
     GLfloat length = 1.0f,
     GLfloat cx = 0.0f,
@@ -6586,7 +6586,7 @@ namespace gg
   /// @param cz 点群の中心の z 座標.
   /// @return GgPoints 型のポインタ.
   ///
-  extern GgPoints* ggPointsSphere(
+  extern std::unique_ptr<GgPoints> ggPointsSphere(
     GLsizei countv,
     GLfloat radius = 0.5f,
     GLfloat cx = 0.0f,
@@ -6601,7 +6601,7 @@ namespace gg
   /// @param height 矩形の高さ.
   /// @return GgTriangles 型のポインタ.
   ///
-  extern GgTriangles* ggRectangle(
+  extern std::unique_ptr<GgTriangles> ggRectangle(
     GLfloat width = 1.0f,
     GLfloat height = 1.0f
   );
@@ -6614,7 +6614,7 @@ namespace gg
   /// @param slices 楕円の分割数.
   /// @return GgTriangles 型のポインタ.
   ///
-  extern GgTriangles* ggEllipse(
+  extern std::unique_ptr<GgTriangles> ggEllipse(
     GLfloat width = 1.0f,
     GLfloat height = 1.0f,
     GLuint slices = 16
@@ -6631,7 +6631,7 @@ namespace gg
   /// 三角形分割された Wavefront OBJ ファイルを読み込んで
   /// GgArrays 形式の三角形データを生成する.
   ///
-  extern GgTriangles* ggArraysObj(
+  extern std::unique_ptr<GgTriangles> ggArraysObj(
     const std::string& name,
     bool normalize = false
   );
@@ -6647,7 +6647,7 @@ namespace gg
   /// 三角形分割された Wavefront OBJ ファイル を読み込んで
   /// GgElements 形式の三角形データを生成する.
   ///
-  extern GgElements* ggElementsObj(
+  extern std::unique_ptr<GgElements> ggElementsObj(
     const std::string& name,
     bool normalize = false
   );
@@ -6664,7 +6664,7 @@ namespace gg
   /// @note
   /// メッシュ状に GgElements 形式の三角形データを生成する.
   ///
-  extern GgElements* ggElementsMesh(
+  extern std::unique_ptr<GgElements> ggElementsMesh(
     GLuint slices,
     GLuint stacks,
     const GLfloat(*pos)[3],
@@ -6681,7 +6681,7 @@ namespace gg
   /// @note
   /// 球状に GgElements 形式の三角形データを生成する.
   ///
-  extern GgElements* ggElementsSphere(
+  extern std::unique_ptr<GgElements> ggElementsSphere(
     GLfloat radius = 1.0f,
     int slices = 16,
     int stacks = 8
