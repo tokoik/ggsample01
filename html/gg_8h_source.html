@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -48,6 +52,22 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('gg_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -5203,9 +5223,13 @@ $(function() {
 <div class="ttc" id="astructgg_1_1GgVertex_html_ac5daf1c53eb546f14141c4259b29e2e4"><div class="ttname"><a href="structgg_1_1GgVertex.html#ac5daf1c53eb546f14141c4259b29e2e4">gg::GgVertex::GgVertex</a></div><div class="ttdeci">GgVertex(const GgVector &amp;pos, const GgVector &amp;norm)</div><div class="ttdef"><b>Definition:</b> <a href="gg_8h_source.html#l06300">gg.h:6300</a></div></div>
 <div class="ttc" id="astructgg_1_1GgVertex_html_af1839d03faeafaaa6e812fb0387535b6"><div class="ttname"><a href="structgg_1_1GgVertex.html#af1839d03faeafaaa6e812fb0387535b6">gg::GgVertex::GgVertex</a></div><div class="ttdeci">GgVertex(const GLfloat *pos, const GLfloat *norm)</div><div class="ttdef"><b>Definition:</b> <a href="gg_8h_source.html#l06331">gg.h:6331</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-2022年12月23日(金) 12時36分35秒作成 - ゲームグラフィックス特論 / 構成: &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="gg_8h.html">gg.h</a></li>
+    <li class="footer">2023年01月03日(火) 18時18分38秒作成 - ゲームグラフィックス特論 / 構成:  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+  </ul>
+</div>
 </body>
 </html>
