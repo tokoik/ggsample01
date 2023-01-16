@@ -14,26 +14,6 @@
 // 構成ファイルの読み取り補助
 #include "parseconfig.h"
 
-#if defined(_MSC_VER)
-//
-// Windows / Visual C++ におけるパス名
-//
-
-// 文字コード
-#include <atlstr.h>
-using pathString = CString;
-using pathChar = wchar_t;
-
-// 文字コード変換
-extern CString Utf8ToTChar(const std::string& string);
-extern std::string TCharToUtf8(const CString& cstring);
-#else
-using pathString = std::string;
-using pathChar = char;
-#define Utf8ToTChar(string) (string)
-#define TCharToUtf8(cstring) (cstring)
-#endif
-
 ///
 /// 構成データ
 ///

@@ -286,7 +286,7 @@ public:
     ///
     void restoreViewport() const
     {
-      glViewport(0, 0, fboSize[0], fboSize[1]);
+      if (!glfwGetWindowAttrib(window, GLFW_ICONIFIED)) glViewport(0, 0, fboSize[0], fboSize[1]);
     }
 
     ///
@@ -384,7 +384,7 @@ public:
     ///
     /// FBO のサイズを得る.
     ///
-    /// @param fboSize FBO の幅と高さを格納した GLsizei 型の 2 要素の配列.
+    /// @param size FBO の幅と高さを格納した GLsizei 型の 2 要素の配列.
     ///
     void getFboSize(GLsizei* fboSize) const
     {

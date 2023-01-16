@@ -1,6 +1,6 @@
 ﻿/*
-** ゲームグラフィックス特論用補助プログラム GLFW3 版
-**
+
+ゲームグラフィックス特論用補助プログラム GLFW3 版
 
 Copyright (c) 2011-2022 Kohe Tokoi. All Rights Reserved.
 
@@ -20,9 +20,7 @@ KOHE TOKOI  BE LIABLE FOR ANY CLAIM,  DAMAGES OR OTHER LIABILITY,  WHETHER IN
 AN ACTION  OF CONTRACT,  TORT  OR  OTHERWISE,  ARISING  FROM,  OUT OF  OR  IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-**
 */
-#include "gg.h"
 
 ///
 /// ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の定義.
@@ -31,6 +29,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 /// @author Kohe Tokoi
 /// @date March 31, 2021
 ///
+#include "gg.h"
 
 /// @cond INCLUDE_OPENGL_FUNCTIONS
 
@@ -53,6 +52,54 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #  endif
 // リンクするライブラリ
 #  pragma comment(lib, "lib\\" GLFW3_PLATFORM "\\" GLFW3_CONFIGURATION "\\glfw3.lib")
+//
+// For VC++ MFC Convert UTF-8 to TCHAR, or Convert TCHAR to UTF-8. VC++ MFC用 UTF-8⇔TCHARの変換処理
+//
+//   Original author: mt-u
+//   Copyright (c) 2013 mt-u
+//   https://gist.github.com/mt-u/6878251
+//
+//   Modified by: Kohe Tokoi
+//
+
+//
+// UTF-8 文字列を CString に変換する
+//
+pathString Utf8ToTChar(const std::string& string)
+{
+  // UTF-8 文字列を UTF-16 に変換した後の文字列の長さを求める
+  const INT length{ MultiByteToWideChar(CP_UTF8, 0, string.c_str(), -1, NULL, 0) };
+
+  // 変換結果の格納に必要な長さのメモリを確保する
+  std::vector<WCHAR> utf16(length);
+
+  // UTF-8 文字列を UTF-16 に変換する
+  MultiByteToWideChar(CP_UTF8, 0, string.c_str(), -1, utf16.data(), length);
+
+  // 変換した文字列を CString にして返す
+  return CString{ utf16.data(), static_cast<int>(wcslen(utf16.data())) };
+}
+
+//
+// Cstring を UTF-8 文字列に変換する
+//
+std::string TCharToUtf8(const pathString& cstring)
+{
+  // 与えられた文字列を一旦 UTF-16 に変換する
+  CStringW cstringw{ cstring };
+
+  // UTF-16 を UTF-8 に変換した後のの文字列の長さを求める
+  const INT length{ WideCharToMultiByte(CP_UTF8, 0, cstringw, -1, NULL, 0, NULL, NULL) };
+
+  // 変換結果の格納に必要な長さのメモリを確保する
+  std::vector<CHAR> utf8(length);
+
+  // UTF-16 を UTF-8 に変換する
+  WideCharToMultiByte(CP_UTF8, 0, cstringw, -1, utf8.data(), length, NULL, NULL);
+
+  // 変換した文字列を std::string にして返す
+  return std::string{ utf8.data(), strlen(utf8.data()) };
+}
 #endif
 
 // OpenGL 3.2 の API のエントリポイント
@@ -3434,7 +3481,7 @@ bool gg::ggSaveTga(
 )
 {
   // ファイルを開く
-  std::ofstream file{ name, std::ios::binary };
+  std::ofstream file{ Utf8ToTChar(name), std::ios::binary };
 
   // ファイルが開けなかったら戻る
   if (file.fail()) return false;
@@ -3580,7 +3627,7 @@ bool gg::ggReadImage(
 )
 {
   // ファイルを開く
-  std::ifstream file{ name, std::ios::binary };
+  std::ifstream file{ Utf8ToTChar(name), std::ios::binary };
 
   // ファイルが開けなかったら戻る
   if (file.fail()) return false;
@@ -4057,7 +4104,7 @@ namespace gg
     std::vector<GgSimpleShader::Material>& material)
   {
     // MTL ファイルが無ければ戻る
-    std::ifstream mtlfile{ mtlpath, std::ios::binary };
+    std::ifstream mtlfile{ Utf8ToTChar(mtlpath), std::ios::binary };
     if (!mtlfile)
     {
 #if defined(DEBUG)
@@ -4213,7 +4260,7 @@ namespace gg
     const std::string dirname{ (base == std::string::npos) ? "" : path.substr(0, base + 1) };
 
     // OBJ ファイルを読み込む
-    std::ifstream file{ path };
+    std::ifstream file{ Utf8ToTChar(path) };
 
     // 読み込みに失敗したら戻る
     if (file.fail())
@@ -4905,7 +4952,7 @@ static bool readShaderSource(const std::string& name, std::string& src)
   if (name.empty()) return true;
 
   // ソースファイルを開く
-  std::ifstream file{ name, std::ios::binary };
+  std::ifstream file{ Utf8ToTChar(name), std::ios::binary };
   if (file.fail())
   {
     // ファイルが開けなければエラーで戻る

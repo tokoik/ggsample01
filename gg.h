@@ -1,10 +1,10 @@
 ﻿#pragma once
 
 /*!
-** @mainpage ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版
-**
 
-Copyright (c) 2011-2022 Kohe Tokoi. All Rights Reserved.
+@mainpage ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版.
+
+@copyright Copyright (c) 2011-2022 Kohe Tokoi. All Rights Reserved.
 
 Permission is hereby granted, free of charge,  to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +22,6 @@ KOHE TOKOI  BE LIABLE FOR ANY CLAIM,  DAMAGES OR OTHER LIABILITY,  WHETHER IN
 AN ACTION  OF CONTRACT,  TORT  OR  OTHERWISE,  ARISING  FROM,  OUT OF  OR  IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-**
 */
 
 ///
@@ -31,8 +30,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 /// @file
 /// @author Kohe Tokoi
 /// @date March 31, 2021
-/// @cond INCLUDE_OPENGL_FUNCTIONS
 ///
+
+/// @cond INCLUDE_OPENGL_FUNCTIONS
 
 // macOS で "OpenGL deprecated の警告を出さない
 #if defined(__APPLE__)
@@ -49,6 +49,13 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #endif
 #include <GLFW/glfw3.h>
 
+// 標準ライブラリ
+#include <cmath>
+#include <array>
+#include <vector>
+#include <string>
+#include <memory>
+
 // Windows (Visual Studio) のとき
 #if defined(_MSC_VER)
 // 非推奨の警告を出さない
@@ -59,6 +66,12 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #  define NOMINMAX
 // APIENTRY マクロは使わない
 #  undef APIENTRY
+// ファイルパスの文字コード
+#include <atlstr.h>
+using pathString = CString;
+using pathChar = wchar_t;
+extern pathString Utf8ToTChar(const std::string& string);
+extern std::string TCharToUtf8(const pathString& cstring);
 // デバッグビルドかどうか調べる
 #  if defined(_DEBUG)
 #    if !defined(DEBUG)
@@ -77,6 +90,12 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #  else
 #    define GLFW3_PLATFORM "Win32"
 #  endif
+#else
+// ファイルパスの文字コード
+using pathString = std::string;
+using pathChar = char;
+inline pathString Utf8ToTChar(const std::string& string) { return string; }
+inline std::string TCharToUtf8(const pathString& cstring) { return cstring; }
 #endif
 
 // OpenGL 3.2 の API のエントリポイント
@@ -1320,13 +1339,6 @@ extern PFNGLWINDOWRECTANGLESEXTPROC glWindowRectanglesEXT;
 
 /// @endcond
 
-// 標準ライブラリ
-#include <cmath>
-#include <array>
-#include <vector>
-#include <string>
-#include <memory>
-
 ///
 /// ゲームグラフィックス特論の宿題用補助プログラムの名前空間
 ///
@@ -1705,7 +1717,7 @@ namespace gg
     /// GgVector 型の積を返す.
     ///
     /// @param v GgVector 型の変数.
-    /// @return オブジェクトの各要素と v の各要素の要素ごとを乗じたオブジェクト.
+    /// @return オブジェクトの各要素と v の各要素の要素ごとの積のオブジェクト.
     ///
     GgVector operator*(const GgVector& v) const
     {
