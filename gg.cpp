@@ -4377,13 +4377,11 @@ namespace gg
 
           // 項目の最初の要素は頂点座標番号
           while (c != s.end() && isdigit(*c)) f.p[i] = f.p[i] * 10 + *c++ - '0';
-          if (c == s.end()) break;
-          if (*c++ != '/') continue;
+          if (c == s.end() || *c++ != '/') continue;
 
           // 二つ目の項目はテクスチャ座標
           while (c != s.end() && isdigit(*c)) f.t[i] = f.t[i] * 10 + *c++ - '0';
-          if (c == s.end()) break;
-          if (*c++ != '/') continue;
+          if (c == s.end() || *c++ != '/') continue;
 
           // 三つ目の項目は法線番号
           while (c != s.end() && isdigit(*c)) f.n[i] = f.n[i] * 10 + *c++ - '0';
