@@ -5110,7 +5110,7 @@ void gg::GgPoints::draw(GLint first, GLsizei count) const
 void gg::GgTriangles::load(const GgVertex* vert, GLsizei count, GLenum usage)
 {
   // 頂点バッファオブジェクトを作成する
-  vertex = std::make_unique<GgBuffer<GgVertex>>(GL_ARRAY_BUFFER, vert, static_cast<GLsizei>(sizeof(GgVertex)), count, usage);
+  vertex = std::make_shared<GgBuffer<GgVertex>>(GL_ARRAY_BUFFER, vert, static_cast<GLsizei>(sizeof(GgVertex)), count, usage);
 
   // 頂点の位置は index == 0 の in 変数から入力する
   glVertexAttribPointer(0, static_cast<GLint>(vert->position.size()), GL_FLOAT, GL_FALSE,
@@ -5151,7 +5151,7 @@ void gg::GgElements::draw(GLint first, GLsizei count) const
 //
 // 点群を立方体状に生成する
 //
-std::unique_ptr<gg::GgPoints> gg::ggPointsCube(GLsizei count, GLfloat length, GLfloat cx, GLfloat cy, GLfloat cz)
+std::shared_ptr<gg::GgPoints> gg::ggPointsCube(GLsizei count, GLfloat length, GLfloat cx, GLfloat cy, GLfloat cz)
 {
   // メモリを確保する
   std::vector<GgVector> pos(count);
@@ -5171,13 +5171,13 @@ std::unique_ptr<gg::GgPoints> gg::ggPointsCube(GLsizei count, GLfloat length, GL
   }
 
   // 点データの GgPoints オブジェクトを作成して返す
-  return std::make_unique<gg::GgPoints>(pos.data(), static_cast<GLsizei>(pos.size()), GL_POINTS);
+  return std::make_shared<gg::GgPoints>(pos.data(), static_cast<GLsizei>(pos.size()), GL_POINTS);
 }
 
 //
 // 点群を球状に生成する
 //
-std::unique_ptr<gg::GgPoints> gg::ggPointsSphere(GLsizei count, GLfloat radius,
+std::shared_ptr<gg::GgPoints> gg::ggPointsSphere(GLsizei count, GLfloat radius,
   GLfloat cx, GLfloat cy, GLfloat cz)
 {
   // メモリを確保する
@@ -5198,13 +5198,13 @@ std::unique_ptr<gg::GgPoints> gg::ggPointsSphere(GLsizei count, GLfloat radius,
   }
 
   // 点データの GgPoints オブジェクトを作成して返す
-  return std::make_unique<gg::GgPoints>(pos.data(), static_cast<GLsizei>(pos.size()), GL_POINTS);
+  return std::make_shared<gg::GgPoints>(pos.data(), static_cast<GLsizei>(pos.size()), GL_POINTS);
 }
 
 //
 // 矩形状に 2 枚の三角形を生成する
 //
-std::unique_ptr<gg::GgTriangles> gg::ggRectangle(GLfloat width, GLfloat height)
+std::shared_ptr<gg::GgTriangles> gg::ggRectangle(GLfloat width, GLfloat height)
 {
   // 頂点属性
   std::array<gg::GgVertex, 4> vert;
@@ -5219,13 +5219,13 @@ std::unique_ptr<gg::GgTriangles> gg::ggRectangle(GLfloat width, GLfloat height)
   }
 
   // 矩形の GgTrianges オブジェクトを作成する
-  return std::make_unique<gg::GgTriangles>(vert.data(), static_cast<GLsizei>(vert.size()), GL_TRIANGLE_STRIP);
+  return std::make_shared<gg::GgTriangles>(vert.data(), static_cast<GLsizei>(vert.size()), GL_TRIANGLE_STRIP);
 }
 
 //
 // 楕円状に三角形を生成する
 //
-std::unique_ptr<gg::GgTriangles> gg::ggEllipse(GLfloat width, GLfloat height, GLuint slices)
+std::shared_ptr<gg::GgTriangles> gg::ggEllipse(GLfloat width, GLfloat height, GLuint slices)
 {
   // 楕円のスケール
   constexpr GLfloat scale{ 0.5f };
@@ -5244,13 +5244,13 @@ std::unique_ptr<gg::GgTriangles> gg::ggEllipse(GLfloat width, GLfloat height, GL
   }
 
   // GgTriangles オブジェクトを作成する
-  return std::make_unique<gg::GgTriangles>(vert.data(), static_cast<GLsizei>(vert.size()), GL_TRIANGLE_FAN);
+  return std::make_shared<gg::GgTriangles>(vert.data(), static_cast<GLsizei>(vert.size()), GL_TRIANGLE_FAN);
 }
 
 //
 // Wavefront OBJ ファイルを読み込む (Arrays 形式)
 //
-std::unique_ptr<gg::GgTriangles> gg::ggArraysObj(const std::string& name, bool normalize)
+std::shared_ptr<gg::GgTriangles> gg::ggArraysObj(const std::string& name, bool normalize)
 {
   std::vector<std::array<GLuint, 3>> group;
   std::vector<gg::GgSimpleShader::Material> material;
@@ -5260,13 +5260,13 @@ std::unique_ptr<gg::GgTriangles> gg::ggArraysObj(const std::string& name, bool n
   if (!ggLoadSimpleObj(name, group, material, vert, normalize)) return nullptr;
 
   // GgTriangles オブジェクトを作成する
-  return std::make_unique<gg::GgTriangles>(vert.data(), static_cast<GLsizei>(vert.size()), GL_TRIANGLES);
+  return std::make_shared<gg::GgTriangles>(vert.data(), static_cast<GLsizei>(vert.size()), GL_TRIANGLES);
 }
 
 //
 // Wavefront OBJ ファイル を読み込む (Elements 形式)
 //
-std::unique_ptr<gg::GgElements> gg::ggElementsObj(const std::string& name, bool normalize)
+std::shared_ptr<gg::GgElements> gg::ggElementsObj(const std::string& name, bool normalize)
 {
   std::vector<std::array<GLuint, 3>> group;
   std::vector<gg::GgSimpleShader::Material> material;
@@ -5277,14 +5277,14 @@ std::unique_ptr<gg::GgElements> gg::ggElementsObj(const std::string& name, bool 
   if (!ggLoadSimpleObj(name, group, material, vert, face, normalize)) return nullptr;
 
   // GgElements オブジェクトを作成する
-  return std::make_unique<gg::GgElements>(vert.data(), static_cast<GLsizei>(vert.size()),
+  return std::make_shared<gg::GgElements>(vert.data(), static_cast<GLsizei>(vert.size()),
     face.data(), static_cast<GLsizei>(face.size()), GL_TRIANGLES);
 }
 
 //
 // メッシュ形状を作成する (Elements 形式)
 //
-std::unique_ptr<gg::GgElements> gg::ggElementsMesh(GLuint slices, GLuint stacks, const GLfloat(*pos)[3], const GLfloat(*norm)[3])
+std::shared_ptr<gg::GgElements> gg::ggElementsMesh(GLuint slices, GLuint stacks, const GLfloat(*pos)[3], const GLfloat(*norm)[3])
 {
   // 頂点属性
   std::vector<gg::GgVertex> vert((slices + 1) * (stacks + 1));
@@ -5372,14 +5372,14 @@ std::unique_ptr<gg::GgElements> gg::ggElementsMesh(GLuint slices, GLuint stacks,
   }
 
   // GgElements オブジェクトを作成する
-  return std::make_unique<GgElements>(vert.data(), static_cast<GLsizei>(vert.size()),
+  return std::make_shared<GgElements>(vert.data(), static_cast<GLsizei>(vert.size()),
     face.data(), static_cast<GLsizei>(face.size()), GL_TRIANGLES);
 }
 
 //
 // 球状に三角形データを生成する (Elements 形式)
 //
-std::unique_ptr<gg::GgElements> gg::ggElementsSphere(GLfloat radius, int slices, int stacks)
+std::shared_ptr<gg::GgElements> gg::ggElementsSphere(GLfloat radius, int slices, int stacks)
 {
   // 頂点の位置と法線
   std::vector<GLfloat> p, n;
@@ -5679,6 +5679,29 @@ void gg::GgSimpleShader::MaterialBuffer::loadAmbient(GLfloat r, GLfloat g, GLflo
 }
 
 //
+// 三角形に単純な陰影付けを行うシェーダが参照する材質データ：環境光に対する反射係数を設定する
+//
+//   ambient 環境光に対する反射係数
+//   first 値を設定する光源データの最初の番号, デフォルトは 0
+//   count 値を設定する光源データの数, デフォルトは 1
+//
+void gg::GgSimpleShader::MaterialBuffer::loadAmbient(const GgVector& ambient,
+  GLint first, GLsizei count) const
+{
+  // データを格納するバッファオブジェクトの先頭のポインタ
+  char* const start{ static_cast<char*>(map(first, count)) };
+  for (GLsizei i = 0; i < count; ++i)
+  {
+    // バッファオブジェクトの i 番目のブロックのポインタ
+    Material* const material{ reinterpret_cast<Material*>(start + getStride() * i) };
+
+    // 光源の強度の環境光成分を設定する
+    material->ambient = ambient;
+  }
+  unmap();
+}
+
+//
 // 三角形に単純な陰影付けを行うシェーダが参照する材質データ：拡散反射係数を設定する
 //
 //   r 拡散反射係数の赤成分
@@ -5708,6 +5731,29 @@ void gg::GgSimpleShader::MaterialBuffer::loadDiffuse(GLfloat r, GLfloat g, GLflo
 }
 
 //
+// 三角形に単純な陰影付けを行うシェーダが参照する材質データ：拡散反射係数を設定する
+//
+//   diffuse 拡散反射係数
+//   first 値を設定する光源データの最初の番号, デフォルトは 0
+//   count 値を設定する光源データの数, デフォルトは 1
+//
+void gg::GgSimpleShader::MaterialBuffer::loadDiffuse(const GgVector& diffuse,
+  GLint first, GLsizei count) const
+{
+  // データを格納するバッファオブジェクトの先頭のポインタ
+  char* const start{ static_cast<char*>(map(first, count)) };
+  for (GLsizei i = 0; i < count; ++i)
+  {
+    // バッファオブジェクトの i 番目のブロックのポインタ
+    Material* const material{ reinterpret_cast<Material*>(start + getStride() * i) };
+
+    // 光源の強度の環境光成分を設定する
+    material->diffuse = diffuse;
+  }
+  unmap();
+}
+
+//
 // 三角形に単純な陰影付けを行うシェーダが参照する材質データ：環境光に対する反射係数と拡散反射係数を設定する
 //
 //   r 環境光に対する反射係数と拡散反射係数の赤成分
@@ -5732,6 +5778,29 @@ void gg::GgSimpleShader::MaterialBuffer::loadAmbientAndDiffuse(GLfloat r, GLfloa
     material->ambient[1] = material->diffuse[1] = g;
     material->ambient[2] = material->diffuse[2] = b;
     material->ambient[3] = material->diffuse[3] = a;
+  }
+  unmap();
+}
+
+//
+// 三角形に単純な陰影付けを行うシェーダが参照する材質データ：環境光に対する反射係数と拡散反射係数を設定する
+//
+//   color 環境光に対する反射係数と拡散反射係数
+//   first 値を設定する光源データの最初の番号, デフォルトは 0
+//   count 値を設定する光源データの数, デフォルトは 1
+//
+void gg::GgSimpleShader::MaterialBuffer::loadAmbientAndDiffuse(const GgVector& color,
+  GLint first, GLsizei count) const
+{
+  // データを格納するバッファオブジェクトの先頭のポインタ
+  char* const start{ static_cast<char*>(map(first, count)) };
+  for (GLsizei i = 0; i < count; ++i)
+  {
+    // バッファオブジェクトの i 番目のブロックのポインタ
+    Material* const material{ reinterpret_cast<Material*>(start + getStride() * i) };
+
+    // 光源の強度の環境光成分を設定する
+    material->ambient = material->diffuse = color;
   }
   unmap();
 }
@@ -5801,6 +5870,29 @@ void gg::GgSimpleShader::MaterialBuffer::loadSpecular(GLfloat r, GLfloat g, GLfl
     material->specular[1] = g;
     material->specular[2] = b;
     material->specular[3] = a;
+  }
+  unmap();
+}
+
+//
+// 三角形に単純な陰影付けを行うシェーダが参照する材質データ：鏡面反射係数を設定する
+//
+//   specular 鏡面反射係数
+//   first 値を設定する光源データの最初の番号, デフォルトは 0
+//   count 値を設定する光源データの数, デフォルトは 1
+//
+void gg::GgSimpleShader::MaterialBuffer::loadSpecular(const GgVector& specular,
+  GLint first, GLsizei count) const
+{
+  // データを格納するバッファオブジェクトの先頭のポインタ
+  char* const start{ static_cast<char*>(map(first, count)) };
+  for (GLsizei i = 0; i < count; ++i)
+  {
+    // バッファオブジェクトの i 番目のブロックのポインタ
+    Material* const material{ reinterpret_cast<Material*>(start + getStride() * i) };
+
+    // 光源の強度の環境光成分を設定する
+    material->specular = specular;
   }
   unmap();
 }

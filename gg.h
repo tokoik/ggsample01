@@ -6102,6 +6102,65 @@ namespace gg
   };
 
   ///
+  /// 頂点配列クラス.
+  ///
+  class GgVertexArray
+  {
+    // 頂点配列オブジェクト
+    const GLuint vao;
+
+  public:
+
+    ///
+    /// コンストラクタ.
+    ///
+    /// @param mode 基本図形の種類.
+    ///
+    GgVertexArray(GLenum mode = 0) :
+      vao{ [] { GLuint vao; glGenVertexArrays(1, &vao); return vao; } () }
+    {
+      glBindVertexArray(vao);
+    }
+
+    ///
+    /// コピーコンストラクタは使用禁止.
+    ///
+    GgVertexArray(const GgVertexArray& o) = delete;
+
+    ///
+    /// デストラクタ.
+    ///
+    virtual ~GgVertexArray()
+    {
+      glBindVertexArray(0);
+      glDeleteVertexArrays(1, &vao);
+    }
+
+    ///
+    /// 代入演算子は使用禁止.
+    ///
+    GgVertexArray& operator=(const GgVertexArray& o) = delete;
+
+    ///
+    /// 頂点配列オブジェクト名を取り出す.
+    ///
+    /// @return 頂点配列オブジェクト名.
+    ///
+    const GLuint& get() const
+    {
+      return vao;
+    }
+
+    ///
+    /// 頂点配列オブジェクトを結合する.
+    ///
+    void bind() const
+    {
+      glBindVertexArray(vao);
+    }
+  };
+
+  ///
   /// 形状データの基底クラス.
   ///
   /// @note
@@ -6111,7 +6170,7 @@ namespace gg
   class GgShape
   {
     // 頂点配列オブジェクト
-    const GLuint vao;
+    std::shared_ptr<GgVertexArray> object;
 
     // 基本図形の種類
     GLenum mode;
@@ -6124,10 +6183,9 @@ namespace gg
     /// @param mode 基本図形の種類.
     ///
     GgShape(GLenum mode = 0) :
-      vao{ [] { GLuint vao; glGenVertexArrays(1, &vao); return vao; } () },
+      object{ std::make_shared<GgVertexArray>() },
       mode{ mode }
     {
-      glBindVertexArray(vao);
     }
 
     ///
@@ -6135,27 +6193,36 @@ namespace gg
     ///
     virtual ~GgShape()
     {
-      glBindVertexArray(0);
-      glDeleteVertexArrays(1, &vao);
     }
 
     ///
-    /// コピーコンストラクタは使用禁止.
+    /// 頂点配列オブジェクトが有効かどうか調べる.
     ///
-    GgShape(const GgShape& o) = delete;
+    /// @return 頂点配列オブジェクトが有効なら true
+    ///
+    virtual explicit operator bool() const noexcept
+    {
+      return object.get() != nullptr;
+    }
 
     ///
-    /// 代入演算子は使用禁止.
+    /// 頂点配列オブジェクトが有効かどうかの結果を反転する.
     ///
-    GgShape& operator=(const GgShape& o) = delete;
+    /// @return 頂点配列オブジェクトが有効なら false, 無効なら true.
+    ///
+    virtual bool operator!() const noexcept
+    {
+      return !static_cast<bool>(*this);
+    }
 
     ///
     /// 頂点配列オブジェクト名を取り出す.
     ///
     /// @return 頂点配列オブジェクト名.
+    ///
     const GLuint& get() const
     {
-      return vao;
+      return object->get();
     }
 
     ///
@@ -6186,7 +6253,7 @@ namespace gg
     ///
     virtual void draw(GLint first = 0, GLsizei count = 0) const
     {
-      glBindVertexArray(vao);
+      object->bind();
     }
   };
 
@@ -6233,6 +6300,26 @@ namespace gg
     ///
     virtual ~GgPoints()
     {
+    }
+
+    ///
+    /// バッファが有効かどうか調べる.
+    ///
+    /// @return バッファが有効なら true
+    ///
+    explicit operator bool() const noexcept
+    {
+      return position.get() != nullptr;
+    }
+
+    ///
+    /// バッファが有効かどうかの結果を反転する.
+    ///
+    /// @return バッファが有効なら false, 無効なら true.
+    ///
+    bool operator!() const noexcept
+    {
+      return !static_cast<bool>(*this);
     }
 
     ///
@@ -6353,7 +6440,7 @@ namespace gg
     : public GgShape
   {
     // 頂点属性
-    std::unique_ptr<GgBuffer<GgVertex>> vertex;
+    std::shared_ptr<GgBuffer<GgVertex>> vertex;
 
   public:
 
@@ -6450,7 +6537,7 @@ namespace gg
     : public GgTriangles
   {
     // インデックスを格納する頂点バッファオブジェクト
-    std::unique_ptr<GgBuffer<GLuint>> index;
+    std::shared_ptr<GgBuffer<GLuint>> index;
 
   public:
 
@@ -6557,7 +6644,7 @@ namespace gg
       GgTriangles::load(vert, countv, usage);
 
       // インデックスの頂点バッファオブジェクトを作成する
-      index = std::make_unique<GgBuffer<GLuint>>(GL_ELEMENT_ARRAY_BUFFER, face, static_cast<GLsizei>(sizeof(GLuint)), countf, usage);
+      index = std::make_shared<GgBuffer<GLuint>>(GL_ELEMENT_ARRAY_BUFFER, face, static_cast<GLsizei>(sizeof(GLuint)), countf, usage);
     }
 
     ///
@@ -6579,7 +6666,7 @@ namespace gg
   /// @param cz 点群の中心の z 座標.
   /// @return GgPoints 型の ポインタ.
   ///
-  extern std::unique_ptr<GgPoints> ggPointsCube(
+  extern std::shared_ptr<GgPoints> ggPointsCube(
     GLsizei countv,
     GLfloat length = 1.0f,
     GLfloat cx = 0.0f,
@@ -6597,7 +6684,7 @@ namespace gg
   /// @param cz 点群の中心の z 座標.
   /// @return GgPoints 型のポインタ.
   ///
-  extern std::unique_ptr<GgPoints> ggPointsSphere(
+  extern std::shared_ptr<GgPoints> ggPointsSphere(
     GLsizei countv,
     GLfloat radius = 0.5f,
     GLfloat cx = 0.0f,
@@ -6612,7 +6699,7 @@ namespace gg
   /// @param height 矩形の高さ.
   /// @return GgTriangles 型のポインタ.
   ///
-  extern std::unique_ptr<GgTriangles> ggRectangle(
+  extern std::shared_ptr<GgTriangles> ggRectangle(
     GLfloat width = 1.0f,
     GLfloat height = 1.0f
   );
@@ -6625,7 +6712,7 @@ namespace gg
   /// @param slices 楕円の分割数.
   /// @return GgTriangles 型のポインタ.
   ///
-  extern std::unique_ptr<GgTriangles> ggEllipse(
+  extern std::shared_ptr<GgTriangles> ggEllipse(
     GLfloat width = 1.0f,
     GLfloat height = 1.0f,
     GLuint slices = 16
@@ -6642,7 +6729,7 @@ namespace gg
   /// 三角形分割された Wavefront OBJ ファイルを読み込んで
   /// GgArrays 形式の三角形データを生成する.
   ///
-  extern std::unique_ptr<GgTriangles> ggArraysObj(
+  extern std::shared_ptr<GgTriangles> ggArraysObj(
     const std::string& name,
     bool normalize = false
   );
@@ -6658,7 +6745,7 @@ namespace gg
   /// 三角形分割された Wavefront OBJ ファイル を読み込んで
   /// GgElements 形式の三角形データを生成する.
   ///
-  extern std::unique_ptr<GgElements> ggElementsObj(
+  extern std::shared_ptr<GgElements> ggElementsObj(
     const std::string& name,
     bool normalize = false
   );
@@ -6675,7 +6762,7 @@ namespace gg
   /// @note
   /// メッシュ状に GgElements 形式の三角形データを生成する.
   ///
-  extern std::unique_ptr<GgElements> ggElementsMesh(
+  extern std::shared_ptr<GgElements> ggElementsMesh(
     GLuint slices,
     GLuint stacks,
     const GLfloat(*pos)[3],
@@ -6692,7 +6779,7 @@ namespace gg
   /// @note
   /// 球状に GgElements 形式の三角形データを生成する.
   ///
-  extern std::unique_ptr<GgElements> ggElementsSphere(
+  extern std::shared_ptr<GgElements> ggElementsSphere(
     GLfloat radius = 1.0f,
     int slices = 16,
     int stacks = 8
@@ -7348,6 +7435,15 @@ namespace gg
       ///
       /// 光源の強度の環境光成分を設定する.
       ///
+      /// @param ambient 光源の強度の環境光成分を格納した GgVector 型の変数.
+      /// @param first 値を設定する光源データの最初の番号, デフォルトは 0.
+      /// @param count 値を設定する光源データの数, デフォルトは 1.
+      ///
+      void loadAmbient(const GgVector& ambient, GLint first = 0, GLsizei count = 1) const;
+
+      ///
+      /// 光源の強度の環境光成分を設定する.
+      ///
       /// @param ambient 光源の強度の環境光成分を格納した GLfloat 型の 4 要素の配列変数.
       /// @param first 値を設定する光源データの最初の番号, デフォルトは 0.
       /// @param count 値を設定する光源データの数, デフォルトは 1.
@@ -7357,15 +7453,6 @@ namespace gg
         // first 番目のブロックから count 個の ambient 要素に値を設定する
         send(ambient, offsetof(Light, ambient), sizeof(Light::ambient), first, count);
       }
-
-      ///
-      /// 光源の強度の環境光成分を設定する.
-      ///
-      /// @param ambient 光源の強度の環境光成分を格納した GgVector 型の変数.
-      /// @param first 値を設定する光源データの最初の番号, デフォルトは 0.
-      /// @param count 値を設定する光源データの数, デフォルトは 1.
-      ///
-      void loadAmbient(const GgVector& ambient, GLint first = 0, GLsizei count = 1) const;
 
       ///
       /// 光源の強度の拡散反射光成分を設定する.
@@ -7385,7 +7472,7 @@ namespace gg
       ///
       /// 光源の強度の拡散反射光成分を設定する.
       ///
-      /// @param diffuse 光源の強度の拡散反射光成分を格納した GgVector 型の変数.
+      /// @param specular 光源の強度の拡散反射光成分を格納した GgVector 型の変数.
       /// @param first 値を設定する光源データの最初の番号, デフォルトは 0.
       /// @param count 値を設定する光源データの数, デフォルトは 1.
       ///
@@ -7610,6 +7697,15 @@ namespace gg
       ) const;
 
       ///
+      /// 三角形に単純な陰影付けを行うシェーダが参照する光源データ：光源の強度の環境光成分を設定する.
+      ///
+      /// @param ambient 光源の強度の環境光成分を格納した GgVector 型の変数.
+      /// @param first 値を設定する光源データの最初の番号, デフォルトは 0.
+      /// @param count 値を設定する光源データの数, デフォルトは 1.
+      ///
+      void loadAmbient(const GgVector& ambient, GLint first = 0, GLsizei count = 1) const;
+
+      ///
       /// 環境光に対する反射係数を設定する.
       ///
       /// @param ambient 環境光に対する反射係数を格納した GLfloat 型の 4 要素の配列変数.
@@ -7636,6 +7732,15 @@ namespace gg
         GLfloat r, GLfloat g, GLfloat b, GLfloat a = 1.0f,
         GLint first = 0, GLsizei count = 1
       ) const;
+
+      ///
+      /// 三角形に単純な陰影付けを行うシェーダが参照する光源データ：光源の強度の拡散反射光成分を設定する.
+      ///
+      /// @param ambient 光源の強度の拡散反射光成分を格納した GgVector 型の変数.
+      /// @param first 値を設定する光源データの最初の番号, デフォルトは 0.
+      /// @param count 値を設定する光源データの数, デフォルトは 1.
+      ///
+      void loadDiffuse(const GgVector& diffuse, GLint first = 0, GLsizei count = 1) const;
 
       ///
       /// 拡散反射係数を設定する.
@@ -7666,6 +7771,15 @@ namespace gg
       ) const;
 
       ///
+      /// 三角形に単純な陰影付けを行うシェーダが参照する材質データ：環境光に対する反射係数と拡散反射係数を設定する.
+      ///
+      /// @param color 環境光に対する反射係数と拡散反射係数を格納した GgVector 型の変数.
+      /// @param first 値を設定する光源データの最初の番号, デフォルトは 0.
+      /// @param count 値を設定する光源データの数, デフォルトは 1.
+      ///
+      void loadAmbientAndDiffuse(const GgVector& color, GLint first = 0, GLsizei count = 1) const;
+
+      ///
       /// 環境光に対する反射係数と拡散反射係数を設定する.
       ///
       /// @param color 環境光に対する反射係数と拡散反射係数を格納した GLfloat 型の 4 要素の配列変数.
@@ -7688,6 +7802,15 @@ namespace gg
         GLfloat r, GLfloat g, GLfloat b, GLfloat a = 1.0f,
         GLint first = 0, GLsizei count = 1
       ) const;
+
+      ///
+      /// 三角形に単純な陰影付けを行うシェーダが参照する材質データ：鏡面反射係数を設定する.
+      ///
+      /// @param ambient 鏡面反射係数を格納した GgVector 型の変数.
+      /// @param first 値を設定する光源データの最初の番号, デフォルトは 0.
+      /// @param count 値を設定する光源データの数, デフォルトは 1.
+      ///
+      void loadSpecular(const GgVector& specular, GLint first = 0, GLsizei count = 1) const;
 
       ///
       /// 鏡面反射係数を設定する.
@@ -8018,6 +8141,26 @@ namespace gg
     /// デストラクタ.
     virtual ~GgSimpleObj()
     {
+    }
+
+    ///
+    /// オブジェクトが有効かどうか調べる.
+    ///
+    /// @return オブジェクトが有効なら true
+    ///
+    explicit operator bool() const noexcept
+    {
+      return data.get() != nullptr;
+    }
+
+    ///
+    /// オブジェクトが有効かどうかの結果を反転する.
+    ///
+    /// @return オブジェクトが有効なら false, 無効なら true.
+    ///
+    bool operator!() const noexcept
+    {
+      return !static_cast<bool>(*this);
     }
 
     ///
