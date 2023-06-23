@@ -32,29 +32,13 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 /// @date March 31, 2021
 ///
 
-/// @cond INCLUDE_OPENGL_FUNCTIONS
-
-// macOS で "OpenGL deprecated の警告を出さない
-#if defined(__APPLE__)
-#  define GL_SILENCE_DEPRECATION
-#endif
-
-// フレームワークに GLFW 3 を使う
-#if defined(IMGUI_IMPL_OPENGL_ES2)
-#  define GLFW_INCLUDE_ES2
-#elif defined(IMGUI_IMPL_OPENGL_ES3)
-#  define GLFW_INCLUDE_ES3
-#else
-#  define GLFW_INCLUDE_GLCOREARB
-#endif
-#include <GLFW/glfw3.h>
-
 // 標準ライブラリ
 #include <cmath>
 #include <array>
 #include <vector>
 #include <string>
 #include <memory>
+#include <cassert>
 
 // Windows (Visual Studio) のとき
 #if defined(_MSC_VER)
@@ -64,8 +48,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #  define _USE_MATH_DEFINES
 // MIN() / MAX マクロは使わない
 #  define NOMINMAX
-// APIENTRY マクロは使わない
-#  undef APIENTRY
 // ファイルパスの文字コード
 #include <atlstr.h>
 using pathString = CString;
@@ -96,6 +78,23 @@ using pathString = std::string;
 using pathChar = char;
 inline pathString Utf8ToTChar(const std::string& string) { return string; }
 inline std::string TCharToUtf8(const pathString& cstring) { return cstring; }
+#endif
+
+/// @cond INCLUDE_OPENGL_FUNCTIONS
+
+// フレームワークに GLFW 3 を使う
+#if defined(IMGUI_IMPL_OPENGL_ES2)
+#  define GLFW_INCLUDE_ES2
+#elif defined(IMGUI_IMPL_OPENGL_ES3)
+#  define GLFW_INCLUDE_ES3
+#else
+#  define GLFW_INCLUDE_GLCOREARB
+#endif
+#include <GLFW/glfw3.h>
+
+// macOS で "OpenGL deprecated の警告を出さない
+#if defined(__APPLE__)
+#  define GL_SILENCE_DEPRECATION
 #endif
 
 // OpenGL 3.2 の API のエントリポイント
@@ -1479,6 +1478,7 @@ namespace gg
   inline void ggNormalize3(const GLfloat* a, GLfloat* b)
   {
     const GLfloat l{ ggLength3(a) };
+    assert(l > 0.0f);
     b[0] = a[0] / l;
     b[1] = a[1] / l;
     b[2] = a[2] / l;
@@ -1492,6 +1492,7 @@ namespace gg
   inline void ggNormalize3(GLfloat* a)
   {
     const GLfloat l{ ggLength3(a) };
+    assert(l > 0.0f);
     a[0] /= l;
     a[1] /= l;
     a[2] /= l;
@@ -1542,6 +1543,7 @@ namespace gg
   inline void ggNormalize4(const GLfloat* a, GLfloat* b)
   {
     const GLfloat l{ ggLength4(a) };
+    assert(l > 0.0f);
     b[0] = a[0] / l;
     b[1] = a[1] / l;
     b[2] = a[2] / l;
@@ -1556,6 +1558,7 @@ namespace gg
   inline void ggNormalize4(GLfloat* a)
   {
     const GLfloat l{ ggLength4(a) };
+    assert(l > 0.0f);
     a[0] /= l;
     a[1] /= l;
     a[2] /= l;
