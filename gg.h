@@ -7475,7 +7475,7 @@ namespace gg
       ///
       /// 光源の強度の拡散反射光成分を設定する.
       ///
-      /// @param specular 光源の強度の拡散反射光成分を格納した GgVector 型の変数.
+      /// @param diffuse 光源の強度の拡散反射光成分を格納した GgVector 型の変数.
       /// @param first 値を設定する光源データの最初の番号, デフォルトは 0.
       /// @param count 値を設定する光源データの数, デフォルトは 1.
       ///
