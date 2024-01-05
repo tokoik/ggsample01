@@ -4,7 +4,7 @@
 
 @mainpage ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版.
 
-@copyright Copyright (c) 2011-2022 Kohe Tokoi. All Rights Reserved.
+@copyright Copyright (c) 2011-2024 Kohe Tokoi. All Rights Reserved.
 
 Permission is hereby granted, free of charge,  to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -29,7 +29,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ///
 /// @file
 /// @author Kohe Tokoi
-/// @date March 31, 2021
+/// @date January 5, 2024
 ///
 
 // 標準ライブラリ
@@ -82,6 +82,11 @@ inline std::string TCharToUtf8(const pathString& cstring) { return cstring; }
 
 /// @cond INCLUDE_OPENGL_FUNCTIONS
 
+// macOS で "OpenGL deprecated の警告を出さない
+#if defined(__APPLE__)
+#  define GL_SILENCE_DEPRECATION
+#endif
+
 // フレームワークに GLFW 3 を使う
 #if defined(IMGUI_IMPL_OPENGL_ES2)
 #  define GLFW_INCLUDE_ES2
@@ -91,11 +96,6 @@ inline std::string TCharToUtf8(const pathString& cstring) { return cstring; }
 #  define GLFW_INCLUDE_GLCOREARB
 #endif
 #include <GLFW/glfw3.h>
-
-// macOS で "OpenGL deprecated の警告を出さない
-#if defined(__APPLE__)
-#  define GL_SILENCE_DEPRECATION
-#endif
 
 // OpenGL 3.2 の API のエントリポイント
 #if !defined(GL3_PROTOTYPES) && !defined(GL_GLES_PROTOTYPES)

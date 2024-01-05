@@ -2,7 +2,7 @@
 
 ゲームグラフィックス特論用補助プログラム GLFW3 版
 
-Copyright (c) 2011-2022 Kohe Tokoi. All Rights Reserved.
+Copyright (c) 2011-2024 Kohe Tokoi. All Rights Reserved.
 
 Permission is hereby granted, free of charge,  to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -27,7 +27,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ///
 /// @file
 /// @author Kohe Tokoi
-/// @date March 31, 2021
+/// @date January 5, 2024
 ///
 #include "gg.h"
 
