@@ -73,9 +73,9 @@ public:
   ///
   GgApp(int major = 0, int minor = 1);
 
-  //
-  // コピーコンストラクタは封じる
-  //
+  ///
+  /// コピーコンストラクタは使用しない
+  ///
   GgApp(const GgApp& w) = delete;
 
   ///
@@ -83,9 +83,9 @@ public:
   ///
   virtual ~GgApp();
 
-  //
-  // 代入演算子は封じる
-  //
+  ///
+  /// 代入演算子は使用しない
+  ///
   GgApp& operator=(const GgApp& w) = delete;
 
   ///
@@ -115,7 +115,7 @@ public:
     GLsizei menubarHeight;
 #endif
 
-    // ビューポートのアスペクト比
+    // ビューポートの縦横比
     GLfloat aspect;
 
     // マウスの移動速度[X/Y/Z]
@@ -216,9 +216,9 @@ public:
     Window(const std::string& title = "GLFW Window", int width = 640, int height = 480,
       int fullscreen = 0, GLFWwindow* share = nullptr);
 
-    //
-    // コピーコンストラクタは封じる
-    //
+    ///
+    /// コピーコンストラクタは使用しない
+    ///
     Window(const Window& w) = delete;
 
     ///
@@ -233,9 +233,9 @@ public:
       glfwDestroyWindow(window);
     }
 
-    //
-    // 代入演算子は封じる
-    //
+    ///
+    /// 代入演算子は使用しない
+    ///
     Window& operator=(const Window& w) = delete;
 
     ///
@@ -376,9 +376,9 @@ public:
     ///
     /// @return FBO の幅と高さを格納した GLsizei 型の 2 要素の配列.
     ///
-    const auto getFboSize() const
+    const auto& getFboSize() const
     {
-      return fboSize.data();
+      return fboSize;
     }
 
     ///
@@ -393,7 +393,7 @@ public:
     }
 
     ///
-    /// ウィンドウのアスペクト比を得る.
+    /// ウィンドウの縦横比を得る.
     ///
     /// @return ウィンドウの縦横比.
     ///

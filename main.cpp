@@ -1,6 +1,10 @@
-﻿//
-// ゲームグラフィックス特論宿題アプリケーション
-//
+﻿///
+/// ゲームグラフィックス特論宿題アプリケーション
+///
+/// @file
+/// @author Kohe Tokoi
+/// @date February 20, 2024
+///
 #include "GgApp.h"
 
 // MessageBox の準備

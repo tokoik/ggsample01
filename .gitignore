@@ -1,9 +1,9 @@
 #
 # for Linux
 #
-ggsample01
+/ggsample01
+/core
 a.out
-core
 *.o
 *.dep
 #
@@ -28,10 +28,10 @@ xcuserdata
 # for Windows
 #
 .vs/
-.vscode/
+[Dd]ebug/
+[Rr]elease/
+/[Ww][Ii][Nn]32/
 /x64/
-/[Dd]ebug/
-/[Rr]elease/
 /ipch/
 /packages/
 *.com
@@ -44,9 +44,11 @@ xcuserdata
 *.opendb
 *.userosscache
 *.sln.docstates
-*.opendb
-*.db
+*.VC.opendb
+*.VC.db
 *.aps
+*.msi
+Thumbs.db
 #
 # anothre stuff
 #
@@ -55,6 +57,7 @@ xcuserdata
 *.tmp
 *.swp
 *.aps
+.vscode/
 imgui.ini
 /pdf/*
 !/pdf/refman.pdf

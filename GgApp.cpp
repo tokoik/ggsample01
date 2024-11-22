@@ -492,7 +492,7 @@ void GgApp::Window::updateViewport()
   fboSize[1] -= menubarHeight;
 #endif
 
-  // ウィンドウのアスペクト比を保存する
+  // ウィンドウの縦横比を保存する
   aspect = static_cast<GLfloat>(fboSize[0]) / static_cast<GLfloat>(fboSize[1]);
 
   // ビューポートを設定する

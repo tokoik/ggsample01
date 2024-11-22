@@ -11,6 +11,9 @@ indent_size = 2
 [*.{h,hpp,c,cpp,cc,c++}]
 charset = utf-8-bom
 
+[*.{vert,frag,geom,comp}]
+end_of_line = lf
+
 [*.md]
 trim_trailing_whitespace = false
 
