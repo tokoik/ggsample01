@@ -4,7 +4,7 @@
 
 @mainpage ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版.
 
-@copyright Copyright (c) 2011-2024 Kohe Tokoi. All Rights Reserved.
+@copyright Copyright (c) 2011-2025 Kohe Tokoi. All Rights Reserved.
 
 Permission is hereby granted, free of charge,  to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -29,7 +29,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ///
 /// @file
 /// @author Kohe Tokoi
-/// @date January 5, 2024
+/// @date July 17, 2025
 ///
 
 // 標準ライブラリ
@@ -1575,9 +1575,7 @@ namespace gg
     ///
     /// コンストラクタ.
     ///
-    GgVector()
-    {
-    }
+    GgVector() = default;
 
     ///
     /// コンストラクタ.
@@ -1595,16 +1593,6 @@ namespace gg
     ///
     /// コンストラクタ.
     ///
-    /// @param c GLfloat 型の値.
-    ///
-    constexpr GgVector(GLfloat c) :
-      GgVector{ c, c, c, c }
-    {
-    }
-
-    ///
-    /// コンストラクタ.
-    ///
     /// @param a GLfloat 型の 4 要素の配列変数.
     ///
     constexpr GgVector(const GLfloat* a) :
@@ -1613,14 +1601,49 @@ namespace gg
     }
 
     ///
+    /// コンストラクタ.
+    ///
+    /// @param c GLfloat 型の値.
+    ///
+    constexpr GgVector(GLfloat c) :
+      GgVector{ c, c, c, c }
+    {
+    }
+
+    ///
+    /// コピーコンストラクタ.
+    ///
+    GgVector(const GgVector& v) = default;
+
+    ///
+    /// ムーブコンストラクタ.
+    ///
+    GgVector(GgVector&& v) = default;
+
+    ///
+    /// デストラクタ.
+    ///
+    ~GgVector() = default;
+
+    ///
+    /// 代入演算子.
+    ///
+    GgVector& operator=(const GgVector& v) = default;
+
+    ///
+    /// ムーブ代入演算子.
+    ///
+    GgVector& operator=(GgVector&& v) = default;
+
+    ///
     /// GgVector 型の和を返す.
     ///
     /// @param v GgVector 型のベクトル.
     /// @return オブジェクトの各要素と v の各要素の要素ごとの和のオブジェクト.
     ///
-    GgVector operator+(const GgVector& v) const
+    inline GgVector operator+(const GgVector& v) const
     {
-      return GgVector{ data()[0] + v[0], data()[1] + v[1], data()[2] + v[2], data()[3] + v[3] };
+      return GgVector{ (*this)[0] + v[0], (*this)[1] + v[1], (*this)[2] + v[2], (*this)[3] + v[3] };
     }
 
     ///
@@ -1629,9 +1652,9 @@ namespace gg
     /// @param c GLfloat 型の値.
     /// @return a の各要素に b を足した和のオブジェクト.
     ///
-    GgVector operator+(GLfloat c) const
+    inline GgVector operator+(GLfloat c) const
     {
-      return GgVector{ data()[0] + c, data()[1] + c, data()[2] + c, data()[3] + c };
+      return *this + GgVector(c);
     }
 
     ///
@@ -1640,12 +1663,9 @@ namespace gg
     /// @param v GgVector 型の変数.
     /// @return オブジェクトの各要素に v の各要素をそれぞれ加算したオブジェクトの参照.
     ///
-    GgVector& operator+=(const GgVector& v)
+    inline GgVector& operator+=(const GgVector& v)
     {
-      data()[0] += v[0];
-      data()[1] += v[1];
-      data()[2] += v[2];
-      data()[3] += v[3];
+      *this = *this + v;
       return *this;
     }
 
@@ -1655,12 +1675,9 @@ namespace gg
     /// @param c GLfloat 型の値.
     /// @return オブジェクトの各要素に c を足したオブジェクトの参照.
     ///
-    GgVector& operator+=(GLfloat c)
+    inline GgVector& operator+=(GLfloat c)
     {
-      data()[0] += c;
-      data()[1] += c;
-      data()[2] += c;
-      data()[3] += c;
+      *this = *this + c;
       return *this;
     }
 
@@ -1670,9 +1687,9 @@ namespace gg
     /// @param v GgVector 型の変数.
     /// @return オブジェクトの各要素と v の各要素の要素ごとの差のオブジェクト.
     ///
-    GgVector operator-(const GgVector& v) const
+    inline GgVector operator-(const GgVector& v) const
     {
-      return GgVector{ data()[0] - v[0], data()[1] - v[1], data()[2] - v[2], data()[3] - v[3] };
+      return GgVector{ (*this)[0] - v[0], (*this)[1] - v[1], (*this)[2] - v[2], (*this)[3] - v[3] };
     }
 
     ///
@@ -1681,9 +1698,9 @@ namespace gg
     /// @param c GLfloat 型の変数.
     /// @return オブジェクトの各要素から c を引いたオブジェクト.
     ///
-    GgVector operator-(GLfloat c) const
+    inline GgVector operator-(GLfloat c) const
     {
-      return GgVector{ data()[0] - c, data()[1] - c, data()[2] - c, data()[3] - c };
+      return *this - GgVector(c);
     }
 
     ///
@@ -1692,12 +1709,9 @@ namespace gg
     /// @param v GgVector 型の変数.
     /// @return オブジェクトの各要素に v の各要素をそれぞれ減算したオブジェクトの参照.
     ///
-    GgVector& operator-=(const GgVector& v)
+    inline GgVector& operator-=(const GgVector& v)
     {
-      data()[0] -= v[0];
-      data()[1] -= v[1];
-      data()[2] -= v[2];
-      data()[3] -= v[3];
+      *this = *this - v;
       return *this;
     }
 
@@ -1707,12 +1721,9 @@ namespace gg
     /// @param c GLfloat 型の変数.
     /// @return オブジェクトの各要素から c を引いたオブジェクトの参照.
     ///
-    GgVector& operator-=(GLfloat c)
+    inline GgVector& operator-=(GLfloat c)
     {
-      data()[0] -= c;
-      data()[1] -= c;
-      data()[2] -= c;
-      data()[3] -= c;
+      *this = *this - c;
       return *this;
     }
 
@@ -1722,9 +1733,9 @@ namespace gg
     /// @param v GgVector 型の変数.
     /// @return オブジェクトの各要素と v の各要素の要素ごとの積のオブジェクト.
     ///
-    GgVector operator*(const GgVector& v) const
+    inline GgVector operator*(const GgVector& v) const
     {
-      return GgVector{ data()[0] * v[0], data()[1] * v[1], data()[2] * v[2], data()[3] * v[3] };
+      return GgVector{ (*this)[0] * v[0], (*this)[1] * v[1], (*this)[2] * v[2], (*this)[3] * v[3] };
     }
 
     ///
@@ -1733,9 +1744,9 @@ namespace gg
     /// @param c GLfloat 型の変数.
     /// @return オブジェクトの各要素に c を乗じたオブジェクト.
     ///
-    GgVector operator*(GLfloat c) const
+    inline GgVector operator*(GLfloat c) const
     {
-      return GgVector{ data()[0] * c, data()[1] * c, data()[2] * c, data()[3] * c };
+      return *this * GgVector(c);
     }
 
     ///
@@ -1743,12 +1754,9 @@ namespace gg
     ///
     /// @param v GgVector 型の変数.
     /// @return オブジェクトの各要素に v の各要素をそれぞれ乗算したオブジェクトの参照.
-    GgVector& operator*=(const GgVector& v)
+    inline GgVector& operator*=(const GgVector& v)
     {
-      data()[0] *= v[0];
-      data()[1] *= v[1];
-      data()[2] *= v[2];
-      data()[3] *= v[3];
+      *this = *this * v;
       return *this;
     }
 
@@ -1758,12 +1766,9 @@ namespace gg
     /// @param c GgVector 型のベクトル.
     /// @return オブジェクトの各要素に c を乗じたオブジェクトの参照.
     ///
-    GgVector& operator*=(GLfloat c)
+    inline GgVector& operator*=(GLfloat c)
     {
-      data()[0] *= c;
-      data()[1] *= c;
-      data()[2] *= c;
-      data()[3] *= c;
+      *this = *this * c;
       return *this;
     }
 
@@ -1773,9 +1778,20 @@ namespace gg
     /// @param v GgVector 型の変数.
     /// @return オブジェクトの各要素を v の各要素で要素ごとに割った結果のオブジェクト.
     ///
-    GgVector operator/(const GgVector& v) const
+    inline GgVector operator/(const GgVector& v) const
     {
-      return GgVector{ data()[0] / v[0], data()[1] / v[1], data()[2] / v[2], data()[3] / v[3] };
+      return GgVector{ (*this)[0] / v[0], (*this)[1] / v[1], (*this)[2] / v[2], (*this)[3] / v[3] };
+    }
+
+    ///
+    /// GgVector 型の各要素をスカラーで割った商を返す.
+    ///
+    /// @param c GLfloat 型の変数.
+    /// @return オブジェクトの各要素を c で割ったオブジェクト.
+    ///
+    inline GgVector operator/(GLfloat c) const
+    {
+      return *this / GgVector(c);
     }
 
     ///
@@ -1784,24 +1800,10 @@ namespace gg
     /// @param v GgVector 型の変数.
     /// @return オブジェクトの各要素に v の各要素をそれぞれ乗算したオブジェクトの参照.
     ///
-    GgVector& operator/=(GgVector& v)
+    inline GgVector& operator/=(GgVector& v)
     {
-      data()[0] /= v[0];
-      data()[1] /= v[1];
-      data()[2] /= v[2];
-      data()[3] /= v[3];
+      *this = *this / v;
       return *this;
-    }
-
-    ///
-    /// GgVector 型の各要素をスカラーで割った商を返す.
-    ///
-    /// @param c GLfloat 型の値.
-    /// @return オブジェクトの各要素を c で割った商のオブジェクト.
-    ///
-    GgVector operator/(GLfloat c) const
-    {
-      return GgVector{ data()[0] / c, data()[1] / c, data()[2] / c, data()[3] / c };
     }
 
     ///
@@ -1810,12 +1812,9 @@ namespace gg
     /// @param c GLfloat 型の変数.
     /// @return オブジェクトの各要素を c で割ったオブジェクトの参照.
     ///
-    GgVector& operator/=(GLfloat c)
+    inline GgVector& operator/=(GLfloat c)
     {
-      data()[0] /= c;
-      data()[1] /= c;
-      data()[2] /= c;
-      data()[3] /= c;
+      *this = *this / c;
       return *this;
     }
 
@@ -1825,7 +1824,7 @@ namespace gg
     /// @param v GgVector 型のベクトル.
     /// @return オブジェクトと v のそれぞれの 3 要素の内積.
     ///
-    GLfloat dot3(const GgVector& v) const
+    inline GLfloat dot3(const GgVector& v) const
     {
       return ggDot3(data(), v.data());
     }
@@ -1835,7 +1834,7 @@ namespace gg
     ///
     /// @return オブジェクトの 4 要素の長さ.
     ///
-    GLfloat length3() const
+    inline GLfloat length3() const
     {
       return ggLength3(data());
     }
@@ -1846,7 +1845,7 @@ namespace gg
     /// @param v GgVector 型のベクトル.
     /// @return オブジェクトと v の 3 要素の距離.
     ///
-    GLfloat distance3(const GgVector& v) const
+    inline GLfloat distance3(const GgVector& v) const
     {
       return ggDistance3(data(), v.data());
     }
@@ -1856,7 +1855,7 @@ namespace gg
     ///
     /// @return GLfloat 型の 4 要素の配列変数.
     ///
-    GgVector normalize3() const
+    inline GgVector normalize3() const
     {
       GgVector b;
       ggNormalize3(data(), b.data());
@@ -1869,7 +1868,7 @@ namespace gg
     /// @param v GgVector 型のベクトル.
     /// @return オブジェクトと v のそれぞれの 4 要素の内積.
     ///
-    GLfloat dot4(const GgVector& v) const
+    inline GLfloat dot4(const GgVector& v) const
     {
       return ggDot4(data(), v.data());
     }
@@ -1879,7 +1878,7 @@ namespace gg
     ///
     /// @return オブジェクトの 4 要素の長さ.
     ///
-    GLfloat length4() const
+    inline GLfloat length4() const
     {
       return ggLength4(data());
     }
@@ -1890,7 +1889,7 @@ namespace gg
     /// @param v GgVector 型のベクトル.
     /// @return オブジェクトと v の 4 要素の距離.
     ///
-    GLfloat distance4(const GgVector& v) const
+    inline GLfloat distance4(const GgVector& v) const
     {
       return ggDistance4(data(), v.data());
     }
@@ -1900,7 +1899,7 @@ namespace gg
     ///
     /// @return GLfloat 型の 4 要素の配列変数.
     ///
-    GgVector normalize4() const
+    inline GgVector normalize4() const
     {
       GgVector b;
       ggNormalize4(data(), b.data());
@@ -1909,7 +1908,7 @@ namespace gg
   };
 
   ///
-  /// 何もしない.
+  /// 単項の + 演算子なので何もしない.
   ///
   /// @param v GgVector 型のベクトル.
   /// @return v の値.
@@ -2124,10 +2123,10 @@ namespace gg
   ///
   class GgMatrix : public std::array<GLfloat, 16>
   {
-    // 行列 a とベクトル b の積をベクトル c に代入する
+    // 行列 a とベクトル b の積をベクトル c に格納する
     void projection(GLfloat* c, const GLfloat* a, const GLfloat* b) const;
 
-    // 行列 a と行列 b の積を行列 c に代入する
+    // 行列 a と行列 b の積を行列 c に格納する
     void multiply(GLfloat* c, const GLfloat* a, const GLfloat* b) const;
 
   public:
@@ -2135,9 +2134,7 @@ namespace gg
     ///
     /// コンストラクタ.
     ///
-    GgMatrix()
-    {
-    }
+    GgMatrix() = default;
 
     ///
     /// コンストラクタ.
@@ -2165,7 +2162,17 @@ namespace gg
       GLfloat m20, GLfloat m21, GLfloat m22, GLfloat m23,
       GLfloat m30, GLfloat m31, GLfloat m32, GLfloat m33
     ) :
-      std::array<GLfloat, 16>{ m00, m10, m20, m30, m01, m11, m21, m31, m02, m12, m22, m32, m03, m13, m23, m33 }
+      std::array<GLfloat, 16>{ m00, m01, m02, m03, m10, m11, m12, m13, m20, m21, m22, m23, m30, m31, m32, m33 }
+    {
+    }
+
+    ///
+    /// コンストラクタ.
+    ///
+    /// @param a GLfloat 型の 16 要素の配列変数.
+    ///
+    constexpr GgMatrix(const GLfloat* a) :
+      GgMatrix{ a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7], a[8], a[9], a[10], a[11], a[12], a[13], a[14], a[15] }
     {
     }
 
@@ -2180,14 +2187,29 @@ namespace gg
     }
 
     ///
-    /// コンストラクタ.
+    /// コピーコンストラクタ.
     ///
-    /// @param a GLfloat 型の 16 要素の配列変数.
+    GgMatrix(const GgMatrix& m) = default;
+
     ///
-    GgMatrix(const GLfloat* a)
-    {
-      operator=(a);
-    }
+    /// ムーブコンストラクタ.
+    ///
+    GgMatrix(GgMatrix&& m) = default;
+
+    ///
+    /// デストラクタ.
+    ///
+    ~GgMatrix() = default;
+
+    ///
+    /// 代入演算子.
+    ///
+    GgMatrix& operator=(const GgMatrix& m) = default;
+
+    ///
+    /// ムーブ代入演算子.
+    ///
+    GgMatrix& operator=(GgMatrix&& m) = default;
 
     ///
     /// 配列変数の値を格納する.
@@ -2197,7 +2219,7 @@ namespace gg
     ///
     GgMatrix& operator=(const GLfloat* a)
     {
-      std::copy(a, a + size(), data());
+      *this = GgMatrix(a);
       return *this;
     }
 
@@ -3440,9 +3462,7 @@ namespace gg
     ///
     /// コンストラクタ.
     ///
-    GgQuaternion()
-    {
-    }
+    GgQuaternion() = default;
 
     ///
     /// コンストラクタ.
@@ -3488,6 +3508,31 @@ namespace gg
     }
 
     ///
+    /// コピーコンストラクタ.
+    ///
+    GgQuaternion(const GgQuaternion& q) = default;
+
+    ///
+    /// ムーブコンストラクタ.
+    ///
+    GgQuaternion(GgQuaternion&& q) = default;
+
+    ///
+    /// デストラクタ.
+    ///
+    ~GgQuaternion() = default;
+
+    ///
+    /// 代入演算子.
+    ///
+    GgQuaternion& operator=(const GgQuaternion& q) = default;
+
+    ///
+    /// ムーブ代入演算子.
+    ///
+    GgQuaternion& operator=(GgQuaternion&& q) = default;
+
+    ///
     /// 四元数のノルムを求める.
     ///
     /// @return 四元数のノルム.
@@ -3495,59 +3540,6 @@ namespace gg
     GLfloat norm() const
     {
       return ggLength4(*this);
-    }
-
-    ///
-    /// 四元数を格納する.
-    ///
-    /// @param x 四元数の x 要素.
-    /// @param y 四元数の y 要素.
-    /// @param z 四元数の z 要素.
-    /// @param w 四元数の w 要素.
-    /// @return 設定した四元数.
-    ///
-    GgQuaternion& load(GLfloat x, GLfloat y, GLfloat z, GLfloat w)
-    {
-      data()[0] = x;
-      data()[1] = y;
-      data()[2] = z;
-      data()[3] = w;
-      return *this;
-    }
-
-    ///
-    /// 四元数を格納する.
-    ///
-    /// @param a 四元数を格納した GLfloat 型の 4 要素の配列変数.
-    /// @return 設定した四元数.
-    ///
-    GgQuaternion& load(const GLfloat* a)
-    {
-      return load(a[0], a[1], a[2], a[3]);
-    }
-
-    ///
-    /// 四元数を格納する.
-    ///
-    /// @param v 四元数を格納した GgVector 型の変数.
-    /// @return 設定した四元数.
-    ///
-    GgQuaternion& load(const GgVector& v)
-    {
-      static_cast<GgVector>(*this) = v;
-      return *this;
-    }
-
-    ///
-    /// 四元数を格納する.
-    ///
-    /// @param q GgQuaternion 型の四元数.
-    /// @return 設定した四元数.
-    ///
-    GgQuaternion& load(const GgQuaternion& q)
-    {
-      *this = q;
-      return *this;
     }
 
     ///
@@ -3561,10 +3553,11 @@ namespace gg
     ///
     GgQuaternion& loadAdd(GLfloat x, GLfloat y, GLfloat z, GLfloat w)
     {
-      data()[0] += x;
-      data()[1] += y;
-      data()[2] += z;
-      data()[3] += w;
+      (*this)[0] += x;
+      (*this)[1] += y;
+      (*this)[2] += z;
+      (*this)[3] += w;
+
       return *this;
     }
 
@@ -3612,10 +3605,11 @@ namespace gg
     ///
     GgQuaternion& loadSubtract(GLfloat x, GLfloat y, GLfloat z, GLfloat w)
     {
-      data()[0] -= x;
-      data()[1] -= y;
-      data()[2] -= z;
-      data()[3] -= w;
+      (*this)[0] -= x;
+      (*this)[1] -= y;
+      (*this)[2] -= z;
+      (*this)[3] -= w;
+
       return *this;
     }
 
@@ -3675,7 +3669,7 @@ namespace gg
     ///
     GgQuaternion& loadMultiply(const GLfloat* a)
     {
-      return load(multiply(a));
+      return *this = multiply(a);
     }
 
     ///
@@ -3723,7 +3717,7 @@ namespace gg
     ///
     GgQuaternion& loadDivide(const GLfloat* a)
     {
-      return load(divide(a));
+      return *this = divide(a);
     }
 
     ///
@@ -3948,11 +3942,11 @@ namespace gg
     // 演算子
     GgQuaternion& operator=(const GLfloat* a)
     {
-      return load(a);
+      return *this = GgQuaternion(a);
     }
     GgQuaternion& operator=(const GgVector& v)
     {
-      return load(v);
+      return *this = GgQuaternion(v);
     }
     GgQuaternion& operator+=(const GLfloat* a)
     {
@@ -4081,7 +4075,7 @@ namespace gg
     ///
     GgQuaternion& loadIdentity()
     {
-      return load(0.0f, 0.0f, 0.0f, 1.0f);
+      return *this = GgQuaternion(0.0f, 0.0f, 0.0f, 1.0f);
     }
 
     ///
@@ -4514,32 +4508,6 @@ namespace gg
   };
 
   ///
-  /// 四元数を返す.
-  ///
-  /// @param x 四元数の x 要素.
-  /// @param y 四元数の y 要素.
-  /// @param z 四元数の z 要素.
-  /// @param w 四元数の w 要素.
-  /// @return 四元数.
-  ///
-  inline GgQuaternion ggQuaternion(GLfloat x, GLfloat y, GLfloat z, GLfloat w)
-  {
-    GgQuaternion q;
-    return q.load(x, y, z, w);
-  }
-
-  ///
-  /// 四元数を返す.
-  ///
-  /// @param a GLfloat 型の GLfloat 型の 4 要素の配列変数に格納した四元数.
-  /// @return 四元数.
-  ///
-  inline GgQuaternion ggQuaternion(const GLfloat* a)
-  {
-    return ggQuaternion(a[0], a[1], a[2], a[3]);
-  }
-
-  ///
   /// 単位四元数を返す.
   ///
   /// @return 単位四元数.
@@ -4786,9 +4754,7 @@ namespace gg
     ///
     /// デストラクタ.
     ///
-    virtual ~GgTrackball()
-    {
-    }
+    ~GgTrackball() = default;
 
     ///
     /// 代入.
@@ -4797,7 +4763,7 @@ namespace gg
     ///
     GgTrackball& operator=(const GgQuaternion& q)
     {
-      this->load(q);
+      GgQuaternion::operator=(q);
       return *this;
     }
 
@@ -5221,6 +5187,16 @@ namespace gg
     }
 
     ///
+    /// コピーコンストラクタは使用しない.
+    ///
+    GgTexture(const GgTexture& texture) = delete;
+
+    ///
+    /// ムーブコンストラクタはデフォルトのものを使用する.
+    ///
+    GgTexture(GgTexture&& texture) = default;
+
+    ///
     /// デストラクタ.
     ///
     virtual ~GgTexture()
@@ -5230,14 +5206,14 @@ namespace gg
     }
 
     ///
-    /// コピーコンストラクタは使用禁止.
+    /// 代入演算子は使用しない.
     ///
-    GgTexture(const GgTexture& o) = delete;
+    GgTexture& operator=(const GgTexture& texture) = delete;
 
     ///
-    /// 代入演算子は使用禁止.
+    /// ムーブ代入演算子はデフォルトのものを使用する.
     ///
-    GgTexture& operator=(const GgTexture& o) = delete;
+    GgTexture& operator=(GgTexture&& texture) = default;
 
     ///
     /// テクスチャの使用開始 (このテクスチャを使用する際に呼び出す).
@@ -5584,6 +5560,16 @@ namespace gg
     }
 
     ///
+    /// コピーコンストラクタは使用しない.
+    ///
+    GgBuffer<T>(const GgBuffer<T>& buffer) = delete;
+
+    ///
+    /// ムーブコンストラクタはデフォルトのものを使用する.
+    ///
+    GgBuffer<T>(GgBuffer<T>&& buffer) = default;
+
+    ///
     /// デストラクタ.
     ///
     virtual ~GgBuffer<T>()
@@ -5594,14 +5580,14 @@ namespace gg
     }
 
     ///
-    /// コピーコンストラクタは使用禁止.
+    /// 代入演算子は使用しない.
     ///
-    GgBuffer<T>(const GgBuffer<T>& o) = delete;
+    GgBuffer<T>& operator=(const GgBuffer<T>& buffer) = delete;
 
     ///
-    /// 代入演算子は使用禁止.
+    /// ムーブ代入演算子はデフォルトのものを使用する.
     ///
-    GgBuffer<T>& operator=(const GgBuffer<T>& o) = delete;
+    GgBuffer<T>& operator=(GgBuffer<T>&& buffer) = default;
 
     ///
     /// バッファオブジェクトのターゲットを取り出す.
@@ -6126,9 +6112,14 @@ namespace gg
     }
 
     ///
-    /// コピーコンストラクタは使用禁止.
+    /// コピーコンストラクタは使用しない.
     ///
-    GgVertexArray(const GgVertexArray& o) = delete;
+    GgVertexArray(const GgVertexArray& array) = delete;
+
+    ///
+    /// ムーブコンストラクタはデフォルトのものを使用する.
+    ///
+    GgVertexArray(GgVertexArray&& array) = default;
 
     ///
     /// デストラクタ.
@@ -6140,9 +6131,14 @@ namespace gg
     }
 
     ///
-    /// 代入演算子は使用禁止.
+    /// 代入演算子は使用しない.
     ///
-    GgVertexArray& operator=(const GgVertexArray& o) = delete;
+    GgVertexArray& operator=(const GgVertexArray& array) = delete;
+
+    ///
+    /// ムーブ代入演算子はデフォルトのものを使用する.
+    ///
+    GgVertexArray& operator=(GgVertexArray&& array) = default;
 
     ///
     /// 頂点配列オブジェクト名を取り出す.
@@ -6838,9 +6834,14 @@ namespace gg
     }
 
     ///
-    /// コピーコンストラクタは使用禁止.
+    /// コピーコンストラクタは使用しない.
     ///
-    GgShader(const GgShader& o) = delete;
+    GgShader(const GgShader& shader) = delete;
+
+    ///
+    /// ムーブコンストラクタはデフォルトのものを使用する.
+    ///
+    GgShader(GgShader&& shader) = default;
 
     ///
     /// デストラクタ.
@@ -6853,9 +6854,14 @@ namespace gg
     }
 
     ///
-    /// 代入演算子は使用禁止.
+    /// 代入演算子は使用しない.
     ///
-    GgShader& operator=(const GgShader& o) = delete;
+    GgShader& operator=(const GgShader& shader) = delete;
+
+    ///
+    /// ムーブ代入演算子はデフォルトのものを使用する.
+    ///
+    GgShader& operator=(GgShader&& shader) = default;
 
     ///
     /// シェーダプログラムの使用を開始する.

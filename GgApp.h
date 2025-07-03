@@ -1,11 +1,35 @@
 ﻿#pragma once
 
+/*
+
+ゲームグラフィックス特論用補助プログラム GLFW3 版
+
+Copyright (c) 2011-2025 Kohe Tokoi. All Rights Reserved.
+
+Permission is hereby granted, free of charge,  to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction,  including without limitation the rights
+to use, copy,  modify, merge,  publish, distribute,  sublicense,  and/or sell
+copies or substantial portions of the Software.
+
+The above  copyright notice  and this permission notice  shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE  IS PROVIDED "AS IS",  WITHOUT WARRANTY OF ANY KIND,  EXPRESS OR
+IMPLIED,  INCLUDING  BUT  NOT LIMITED  TO THE WARRANTIES  OF MERCHANTABILITY,
+FITNESS  FOR  A PARTICULAR PURPOSE  AND NONINFRINGEMENT.  IN  NO EVENT  SHALL
+KOHE TOKOI  BE LIABLE FOR ANY CLAIM,  DAMAGES OR OTHER LIABILITY,  WHETHER IN
+AN ACTION  OF CONTRACT,  TORT  OR  OTHERWISE,  ARISING  FROM,  OUT OF  OR  IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+*/
+
 ///
 /// ゲームグラフィックス特論宿題アプリケーションクラスの定義
 ///
 /// @file
 /// @author Kohe Tokoi
-/// @date November 22, 2022
+/// @date July 17, 2025
 ///
 
 // Dear ImGui を使うなら
@@ -79,6 +103,11 @@ public:
   GgApp(const GgApp& w) = delete;
 
   ///
+  /// ムーブコンストラクタはデフォルトのものを使用する
+  ///
+  GgApp(GgApp&& w) = default;
+
+  ///
   /// デストラクタ.
   ///
   virtual ~GgApp();
@@ -87,6 +116,11 @@ public:
   /// 代入演算子は使用しない
   ///
   GgApp& operator=(const GgApp& w) = delete;
+
+  ///
+  /// ムーブ代入演算子はデフォルトのものを使用する
+  ///
+  GgApp& operator=(GgApp&& w) = default;
 
   ///
   /// アプリケーション本体.
@@ -222,6 +256,11 @@ public:
     Window(const Window& w) = delete;
 
     ///
+    /// ムーブコンストラクタはデフォルトのものを使用する
+    ///
+    Window(Window&& w) = default;
+
+    ///
     /// デストラクタ.
     ///
     virtual ~Window()
@@ -237,6 +276,11 @@ public:
     /// 代入演算子は使用しない
     ///
     Window& operator=(const Window& w) = delete;
+
+    ///
+    /// ムーブ代入演算子はデフォルトのものを使用する
+    ///
+    Window& operator=(Window&& w) = default;
 
     ///
     /// ウィンドウの識別子のポインタを取得する.
@@ -731,12 +775,15 @@ public:
       const auto& current_if{ interfaceData[interfaceNo] };
       assert(button >= GLFW_MOUSE_BUTTON_1 && button < GLFW_MOUSE_BUTTON_1 + GG_BUTTON_COUNT);
       const auto& t{ current_if.translation[button][1] };
-      GgMatrix m;
-      m[ 1] = m[ 2] = m[ 3] = m[ 4] = m[ 6] = m[ 7] = m[ 8] = m[ 9] = m[11] = 0.0f;
-      m[ 0] = m[ 5] = m[10] = m[15] = 1.0f;
-      m[12] = t[0];
-      m[13] = t[1];
-      m[14] = t[2];
+
+      GgMatrix m
+      {
+        1.0f, 0.0f, 0.0f, 0.0f,
+        0.0f, 1.0f, 0.0f, 0.0f,
+        0.0f, 0.0f, 1.0f, 0.0f,
+        t[0], t[1], t[2], 1.0f
+      };
+
       return m;
     }
 
@@ -751,12 +798,15 @@ public:
       const auto& current_if{ interfaceData[interfaceNo] };
       assert(button >= GLFW_MOUSE_BUTTON_1 && button < GLFW_MOUSE_BUTTON_1 + GG_BUTTON_COUNT);
       const auto& t{ current_if.translation[button][1] };
-      GgMatrix m;
-      m[ 0] = m[ 5] = t[2] + 1.0f;
-      m[ 1] = m[ 2] = m[ 3] = m[ 4] = m[ 6] = m[ 7] = m[ 8] = m[ 9] = m[11] = m[14] = 0.0f;
-      m[10] = m[15] = 1.0f;
-      m[12] = t[0];
-      m[13] = t[1];
+
+      GgMatrix m
+      {
+        t[2] + 1.0f, 0.0f, 0.0f, 0.0f,
+        0.0f, t[2] + 1.0f, 0.0f, 0.0f,
+        0.0f, 0.0f, 1.0f, 0.0f,
+        t[0], t[1], 0.0f, 1.0f
+      };
+
       return m;
     }
 

@@ -22,7 +22,7 @@ Menu::Menu(const Config& config) :
   // ImGui の初期設定
   //
 
- // ファイルダイアログ (Native File Dialog Extended) を初期化する
+  // ファイルダイアログ (Native File Dialog Extended) を初期化する
   NFD_Init();
 
   // Dear ImGui の入力デバイス
