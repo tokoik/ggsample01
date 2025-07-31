@@ -1,4 +1,5 @@
 <map id="gg::GgQuaternion::getConjugateMatrix" name="gg::GgQuaternion::getConjugateMatrix">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,213,45"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#af9a9577581a5f9bbebd675998f741215" title=" " alt="" coords="261,13,476,38"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,213,48"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#af9a9577581a5f9bbebd675998f741215" title=" " alt="" coords="261,13,474,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,24,245,24,245,29,213,29"/>
 </map>

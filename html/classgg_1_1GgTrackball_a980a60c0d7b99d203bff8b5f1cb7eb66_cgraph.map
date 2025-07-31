@@ -1,4 +1,5 @@
 <map id="gg::GgTrackball::operator=" name="gg::GgTrackball::operator=">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,181,31"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#afa329244555230d31a27e037a741ffc5" title=" " alt="" coords="229,5,385,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,181,32"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#ade4e8ace3b9839738eea02c4e2be70a1" title=" " alt="" coords="229,5,415,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,16,213,16,213,21,181,21"/>
 </map>

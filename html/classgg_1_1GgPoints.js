@@ -7,5 +7,7 @@ var classgg_1_1GgPoints =
     [ "getBuffer", "classgg_1_1GgPoints.html#a4adc35aa470ef04eb39cebd52294ed3b", null ],
     [ "getCount", "classgg_1_1GgPoints.html#a7f3cad112cdcb664771259eebac5874c", null ],
     [ "load", "classgg_1_1GgPoints.html#aa1e392b623c66b9d82aaa2f899b58cfa", null ],
+    [ "operator bool", "classgg_1_1GgPoints.html#a715fe854e6ada93c6172334479594055", null ],
+    [ "operator!", "classgg_1_1GgPoints.html#a6d4d433aba60b40a62f9c1904009a71f", null ],
     [ "send", "classgg_1_1GgPoints.html#a06232b837dd52d0dfa4a5d86b5165041", null ]
 ];

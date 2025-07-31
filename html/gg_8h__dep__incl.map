@@ -1,14 +1,28 @@
 <map id="gg.h" name="gg.h">
-<area shape="rect" id="node1" title=" " alt="" coords="380,5,427,31"/>
-<area shape="rect" id="node2" href="$GgApp_8h.html" title=" " alt="" coords="321,79,395,104"/>
-<area shape="rect" id="node12" href="$gg_8cpp.html" title=" " alt="" coords="419,79,481,104"/>
-<area shape="rect" id="node3" href="$Config_8h.html" title=" " alt="" coords="183,152,253,177"/>
-<area shape="rect" id="node8" href="$ggsample01_8cpp.html" title=" " alt="" coords="157,372,274,397"/>
-<area shape="rect" id="node10" href="$GgApp_8cpp.html" title=" " alt="" coords="356,152,443,177"/>
-<area shape="rect" id="node11" href="$main_8cpp.html" title=" " alt="" coords="467,152,542,177"/>
-<area shape="rect" id="node4" href="$Config_8cpp.html" title=" " alt="" coords="50,225,133,251"/>
-<area shape="rect" id="node5" href="$Menu_8h.html" title=" " alt="" coords="157,225,223,251"/>
-<area shape="rect" id="node6" href="$Draw_8h.html" title=" " alt="" coords="12,299,75,324"/>
-<area shape="rect" id="node9" href="$Menu_8cpp.html" title=" " alt="" coords="151,299,229,324"/>
-<area shape="rect" id="node7" href="$Draw_8cpp.html" title=" " alt="" coords="5,372,81,397"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="376,5,422,32"/>
+<area shape="rect" id="Node000002" href="$GgApp_8h.html" title=" " alt="" coords="318,80,390,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="385,47,364,81,359,78,381,44"/>
+<area shape="rect" id="Node000012" href="$gg_8cpp.html" title=" " alt="" coords="414,80,475,107"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="417,44,439,78,434,81,413,47"/>
+<area shape="rect" id="Node000003" href="$Config_8h.html" title=" " alt="" coords="181,155,249,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="317,117,241,156,238,152,315,112"/>
+<area shape="rect" id="Node000008" href="$ggsample01_8cpp.html" title=" " alt="" coords="154,379,271,405"/>
+<area shape="poly" id="edge12_Node000002_Node000008" title=" " alt="" coords="348,122,314,217,289,275,260,332,226,380,221,376,255,329,284,273,309,215,343,120"/>
+<area shape="rect" id="Node000010" href="$GgApp_8cpp.html" title=" " alt="" coords="351,155,437,181"/>
+<area shape="poly" id="edge11_Node000002_Node000010" title=" " alt="" coords="370,119,389,153,384,156,366,122"/>
+<area shape="rect" id="Node000011" href="$main_8cpp.html" title=" " alt="" coords="461,155,535,181"/>
+<area shape="poly" id="edge13_Node000002_Node000011" title=" " alt="" coords="394,112,474,152,471,156,391,116"/>
+<area shape="rect" id="Node000004" href="$Config_8cpp.html" title=" " alt="" coords="49,229,131,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="182,192,113,231,110,226,179,187"/>
+<area shape="rect" id="Node000005" href="$Menu_8h.html" title=" " alt="" coords="155,229,219,256"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="207,197,194,230,189,228,202,195"/>
+<area shape="poly" id="edge10_Node000003_Node000008" title=" " alt="" coords="227,196,241,258,244,295,240,331,232,357,222,379,217,377,227,356,235,330,238,294,236,259,222,197"/>
+<area shape="rect" id="Node000006" href="$Draw_8h.html" title=" " alt="" coords="12,304,74,331"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="149,266,69,306,67,301,147,261"/>
+<area shape="poly" id="edge9_Node000005_Node000008" title=" " alt="" coords="162,268,140,298,136,314,139,330,160,357,188,376,185,380,157,361,134,332,130,314,135,296,158,265"/>
+<area shape="rect" id="Node000009" href="$Menu_8cpp.html" title=" " alt="" coords="148,304,226,331"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="190,272,190,304,184,304,184,272"/>
+<area shape="rect" id="Node000007" href="$Draw_8cpp.html" title=" " alt="" coords="5,379,81,405"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="46,346,46,378,40,378,40,346"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="88,335,184,376,182,380,85,340"/>
 </map>

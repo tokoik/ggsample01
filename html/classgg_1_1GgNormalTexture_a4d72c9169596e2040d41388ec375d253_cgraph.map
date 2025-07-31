@@ -1,7 +1,11 @@
 <map id="gg::GgNormalTexture::load" name="gg::GgNormalTexture::load">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,151,45"/>
-<area shape="rect" id="node2" href="$namespacegg.html#a2cd46afb53daa13fa8bb2de14baf4e7b" title=" " alt="" coords="199,13,361,38"/>
-<area shape="rect" id="node3" href="$namespacegg.html#accd75f02070ef57b1da0dccdec3fdd66" title=" " alt="" coords="409,13,532,38"/>
-<area shape="rect" id="node4" href="$namespacegg.html#a837850150a8293353ade7900452955b2" title=" " alt="" coords="580,13,684,38"/>
-<area shape="rect" id="node5" href="$namespacegg.html#a4e49aff9138ef05a803f1ee703d0f67f" title=" " alt="" coords="732,13,817,38"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,150,48"/>
+<area shape="rect" id="Node000002" href="$namespacegg.html#a2cd46afb53daa13fa8bb2de14baf4e7b" title=" " alt="" coords="198,13,359,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,24,182,24,182,29,150,29"/>
+<area shape="rect" id="Node000003" href="$namespacegg.html#accd75f02070ef57b1da0dccdec3fdd66" title=" " alt="" coords="407,13,529,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="360,24,391,24,391,29,360,29"/>
+<area shape="rect" id="Node000004" href="$namespacegg.html#a837850150a8293353ade7900452955b2" title=" " alt="" coords="577,13,681,40"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="530,24,562,24,562,29,530,29"/>
+<area shape="rect" id="Node000005" href="$namespacegg.html#a4e49aff9138ef05a803f1ee703d0f67f" title=" " alt="" coords="729,13,813,40"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="681,24,713,24,713,29,681,29"/>
 </map>

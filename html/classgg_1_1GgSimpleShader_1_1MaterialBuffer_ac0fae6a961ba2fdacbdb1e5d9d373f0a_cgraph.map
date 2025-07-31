@@ -1,4 +1,0 @@
-<map id="gg::GgSimpleShader::MaterialBuffer::load" name="gg::GgSimpleShader::MaterialBuffer::load">
-<area shape="rect" id="node1" title="材質を設定する." alt="" coords="5,5,148,47"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgUniformBuffer.html#af998019f39e666887550170538e5ebd4" title="ユニフォームバッファオブジェクトを確保してユニフォームバッファオブジェクトのブロックごとのメンバを同じデータで埋める." alt="" coords="196,5,335,47"/>
-</map>

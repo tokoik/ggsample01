@@ -1,5 +1,0 @@
-<map id="gg::GgPointShader::use" name="gg::GgPointShader::use">
-<area shape="rect" id="node1" title="投影変換行列とモデルビューを設定してシェーダプログラムの使用を開始する." alt="" coords="5,42,167,69"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgPointShader.html#ac6e9398fa71096e9866fcd84cb542a91" title="モデルビュー変換行列を設定する." alt="" coords="225,5,366,47"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgPointShader.html#a6809087ef5e8a563310c3fc396246e78" title="シェーダプログラムの使用を開始する." alt="" coords="215,71,376,98"/>
-</map>

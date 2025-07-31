@@ -3,16 +3,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: GgApp::Window クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -34,7 +36,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.5 -->
+<!-- 構築: Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
@@ -46,7 +48,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -64,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initResizable(); });
+$(function(){initNavTree('classGgApp_1_1Window.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -91,7 +93,6 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">クラス</a> &#124;
 <a href="#pub-methods">公開メンバ関数</a> &#124;
 <a href="classGgApp_1_1Window-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle"><div class="title">GgApp::Window クラス</div></div>
@@ -102,137 +103,141 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a127c516045e716c271524fa45998cbc0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a127c516045e716c271524fa45998cbc0">Window</a> (const std::string &amp;title=&quot;GLFW Window&quot;, int width=640, int height=480, int fullscreen=0, GLFWwindow *share=nullptr)</td></tr>
+<tr class="memitem:a127c516045e716c271524fa45998cbc0" id="r_a127c516045e716c271524fa45998cbc0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a127c516045e716c271524fa45998cbc0">Window</a> (const std::string &amp;title=&quot;GLFW Window&quot;, int width=640, int height=480, int fullscreen=0, GLFWwindow *share=nullptr)</td></tr>
 <tr class="separator:a127c516045e716c271524fa45998cbc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5d861cc5384a9345370038451126247"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#ae5d861cc5384a9345370038451126247">Window</a> (const <a class="el" href="classGgApp_1_1Window.html">Window</a> &amp;w)=delete</td></tr>
+<tr class="memitem:ae5d861cc5384a9345370038451126247" id="r_ae5d861cc5384a9345370038451126247"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5d861cc5384a9345370038451126247">Window</a> (const <a class="el" href="classGgApp_1_1Window.html">Window</a> &amp;w)=delete</td></tr>
 <tr class="separator:ae5d861cc5384a9345370038451126247"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94c6ee97910853aafc9dd886e0d44e05"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a94c6ee97910853aafc9dd886e0d44e05">~Window</a> ()</td></tr>
+<tr class="memitem:ae00316789fab8d4d5d9f824a3569df10" id="r_ae00316789fab8d4d5d9f824a3569df10"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae00316789fab8d4d5d9f824a3569df10">Window</a> (<a class="el" href="classGgApp_1_1Window.html">Window</a> &amp;&amp;w)=default</td></tr>
+<tr class="separator:ae00316789fab8d4d5d9f824a3569df10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94c6ee97910853aafc9dd886e0d44e05" id="r_a94c6ee97910853aafc9dd886e0d44e05"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94c6ee97910853aafc9dd886e0d44e05">~Window</a> ()</td></tr>
 <tr class="separator:a94c6ee97910853aafc9dd886e0d44e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee308edd9b401ca148f3b28fc7f77774"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGgApp_1_1Window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#aee308edd9b401ca148f3b28fc7f77774">operator=</a> (const <a class="el" href="classGgApp_1_1Window.html">Window</a> &amp;w)=delete</td></tr>
+<tr class="memitem:aee308edd9b401ca148f3b28fc7f77774" id="r_aee308edd9b401ca148f3b28fc7f77774"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGgApp_1_1Window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee308edd9b401ca148f3b28fc7f77774">operator=</a> (const <a class="el" href="classGgApp_1_1Window.html">Window</a> &amp;w)=delete</td></tr>
 <tr class="separator:aee308edd9b401ca148f3b28fc7f77774"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4d2d5b01b708a68cfbbd694eea14116"><td class="memItemLeft" align="right" valign="top">auto *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#ae4d2d5b01b708a68cfbbd694eea14116">get</a> () const</td></tr>
+<tr class="memitem:a827f53cb49b693e31344ab100358a66d" id="r_a827f53cb49b693e31344ab100358a66d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGgApp_1_1Window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a827f53cb49b693e31344ab100358a66d">operator=</a> (<a class="el" href="classGgApp_1_1Window.html">Window</a> &amp;&amp;w)=default</td></tr>
+<tr class="separator:a827f53cb49b693e31344ab100358a66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4d2d5b01b708a68cfbbd694eea14116" id="r_ae4d2d5b01b708a68cfbbd694eea14116"><td class="memItemLeft" align="right" valign="top">auto *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4d2d5b01b708a68cfbbd694eea14116">get</a> () const</td></tr>
 <tr class="separator:ae4d2d5b01b708a68cfbbd694eea14116"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c90728cd2fcebd0f3c0d6d48741c5fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a2c90728cd2fcebd0f3c0d6d48741c5fd">setClose</a> (int flag=GLFW_TRUE) const</td></tr>
+<tr class="memitem:a2c90728cd2fcebd0f3c0d6d48741c5fd" id="r_a2c90728cd2fcebd0f3c0d6d48741c5fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c90728cd2fcebd0f3c0d6d48741c5fd">setClose</a> (int flag=GLFW_TRUE) const</td></tr>
 <tr class="separator:a2c90728cd2fcebd0f3c0d6d48741c5fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8401b4de974f114d3fb9d1ecac74eb9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#aa8401b4de974f114d3fb9d1ecac74eb9">shouldClose</a> () const</td></tr>
+<tr class="memitem:aa8401b4de974f114d3fb9d1ecac74eb9" id="r_aa8401b4de974f114d3fb9d1ecac74eb9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8401b4de974f114d3fb9d1ecac74eb9">shouldClose</a> () const</td></tr>
 <tr class="separator:aa8401b4de974f114d3fb9d1ecac74eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab052f671422136d5ff1d45192ba5b632"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#ab052f671422136d5ff1d45192ba5b632">operator bool</a> ()</td></tr>
+<tr class="memitem:ab052f671422136d5ff1d45192ba5b632" id="r_ab052f671422136d5ff1d45192ba5b632"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab052f671422136d5ff1d45192ba5b632">operator bool</a> ()</td></tr>
 <tr class="separator:ab052f671422136d5ff1d45192ba5b632"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19ae0ed75fc177b2a0672fc2af3c78a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a19ae0ed75fc177b2a0672fc2af3c78a4">swapBuffers</a> () const</td></tr>
+<tr class="memitem:a19ae0ed75fc177b2a0672fc2af3c78a4" id="r_a19ae0ed75fc177b2a0672fc2af3c78a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19ae0ed75fc177b2a0672fc2af3c78a4">swapBuffers</a> () const</td></tr>
 <tr class="separator:a19ae0ed75fc177b2a0672fc2af3c78a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a515578a995bb8d3e37ce1767f4095efd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a515578a995bb8d3e37ce1767f4095efd">restoreViewport</a> () const</td></tr>
+<tr class="memitem:a515578a995bb8d3e37ce1767f4095efd" id="r_a515578a995bb8d3e37ce1767f4095efd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a515578a995bb8d3e37ce1767f4095efd">restoreViewport</a> () const</td></tr>
 <tr class="separator:a515578a995bb8d3e37ce1767f4095efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b349c4887749cd9e5c6e655a0eea865"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a6b349c4887749cd9e5c6e655a0eea865">updateViewport</a> ()</td></tr>
+<tr class="memitem:a6b349c4887749cd9e5c6e655a0eea865" id="r_a6b349c4887749cd9e5c6e655a0eea865"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b349c4887749cd9e5c6e655a0eea865">updateViewport</a> ()</td></tr>
 <tr class="separator:a6b349c4887749cd9e5c6e655a0eea865"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a579867ae1179b9d946e2a0e34a62e830"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a579867ae1179b9d946e2a0e34a62e830">getWidth</a> () const</td></tr>
+<tr class="memitem:a579867ae1179b9d946e2a0e34a62e830" id="r_a579867ae1179b9d946e2a0e34a62e830"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a579867ae1179b9d946e2a0e34a62e830">getWidth</a> () const</td></tr>
 <tr class="separator:a579867ae1179b9d946e2a0e34a62e830"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c9fe611549defaacbd77eb1178b63c5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a6c9fe611549defaacbd77eb1178b63c5">getHeight</a> () const</td></tr>
+<tr class="memitem:a6c9fe611549defaacbd77eb1178b63c5" id="r_a6c9fe611549defaacbd77eb1178b63c5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c9fe611549defaacbd77eb1178b63c5">getHeight</a> () const</td></tr>
 <tr class="separator:a6c9fe611549defaacbd77eb1178b63c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9584690e81de333b5ede0e10b184212"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#aa9584690e81de333b5ede0e10b184212">getFboWidth</a> () const</td></tr>
+<tr class="memitem:aa9584690e81de333b5ede0e10b184212" id="r_aa9584690e81de333b5ede0e10b184212"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9584690e81de333b5ede0e10b184212">getFboWidth</a> () const</td></tr>
 <tr class="separator:aa9584690e81de333b5ede0e10b184212"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65f86fe33c40b5ca0f374484df5a2132"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a65f86fe33c40b5ca0f374484df5a2132">getFboHeight</a> () const</td></tr>
+<tr class="memitem:a65f86fe33c40b5ca0f374484df5a2132" id="r_a65f86fe33c40b5ca0f374484df5a2132"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65f86fe33c40b5ca0f374484df5a2132">getFboHeight</a> () const</td></tr>
 <tr class="separator:a65f86fe33c40b5ca0f374484df5a2132"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4601eaeb4c129cfe4080b93a421df484"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a4601eaeb4c129cfe4080b93a421df484">getSize</a> () const</td></tr>
+<tr class="memitem:a4601eaeb4c129cfe4080b93a421df484" id="r_a4601eaeb4c129cfe4080b93a421df484"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4601eaeb4c129cfe4080b93a421df484">getSize</a> () const</td></tr>
 <tr class="separator:a4601eaeb4c129cfe4080b93a421df484"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5efeec0d33380bc170b768db972a9150"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a5efeec0d33380bc170b768db972a9150">getSize</a> (GLsizei *size) const</td></tr>
+<tr class="memitem:a5efeec0d33380bc170b768db972a9150" id="r_a5efeec0d33380bc170b768db972a9150"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5efeec0d33380bc170b768db972a9150">getSize</a> (GLsizei *size) const</td></tr>
 <tr class="separator:a5efeec0d33380bc170b768db972a9150"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0966f984510152cbfa4ac04dec3f0a0"><td class="memItemLeft" align="right" valign="top">const auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#ab0966f984510152cbfa4ac04dec3f0a0">getFboSize</a> () const</td></tr>
-<tr class="separator:ab0966f984510152cbfa4ac04dec3f0a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55b581c4f03c8685f6632b69413aa774"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a55b581c4f03c8685f6632b69413aa774">getFboSize</a> (GLsizei *fboSize) const</td></tr>
+<tr class="memitem:ae86fec088b4d80bbe2cac9f11ef95adb" id="r_ae86fec088b4d80bbe2cac9f11ef95adb"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae86fec088b4d80bbe2cac9f11ef95adb">getFboSize</a> () const</td></tr>
+<tr class="separator:ae86fec088b4d80bbe2cac9f11ef95adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55b581c4f03c8685f6632b69413aa774" id="r_a55b581c4f03c8685f6632b69413aa774"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55b581c4f03c8685f6632b69413aa774">getFboSize</a> (GLsizei *fboSize) const</td></tr>
 <tr class="separator:a55b581c4f03c8685f6632b69413aa774"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac175ec3d297b415120c6cc29b6392fdd"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#ac175ec3d297b415120c6cc29b6392fdd">getAspect</a> () const</td></tr>
+<tr class="memitem:ac175ec3d297b415120c6cc29b6392fdd" id="r_ac175ec3d297b415120c6cc29b6392fdd"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac175ec3d297b415120c6cc29b6392fdd">getAspect</a> () const</td></tr>
 <tr class="separator:ac175ec3d297b415120c6cc29b6392fdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae35ef8daf8ae087a8972923ce7d6d22f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#ae35ef8daf8ae087a8972923ce7d6d22f">getKey</a> (int key) const</td></tr>
+<tr class="memitem:ae35ef8daf8ae087a8972923ce7d6d22f" id="r_ae35ef8daf8ae087a8972923ce7d6d22f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae35ef8daf8ae087a8972923ce7d6d22f">getKey</a> (int key) const</td></tr>
 <tr class="separator:ae35ef8daf8ae087a8972923ce7d6d22f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c11756525ab64e276fbf90bff68bbc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a7c11756525ab64e276fbf90bff68bbc9">selectInterface</a> (int no)</td></tr>
+<tr class="memitem:a7c11756525ab64e276fbf90bff68bbc9" id="r_a7c11756525ab64e276fbf90bff68bbc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c11756525ab64e276fbf90bff68bbc9">selectInterface</a> (int no)</td></tr>
 <tr class="separator:a7c11756525ab64e276fbf90bff68bbc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5026c2115f22e214b979655ca9820e13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a5026c2115f22e214b979655ca9820e13">setVelocity</a> (GLfloat vx, GLfloat vy, GLfloat vz=0.1f)</td></tr>
+<tr class="memitem:a5026c2115f22e214b979655ca9820e13" id="r_a5026c2115f22e214b979655ca9820e13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5026c2115f22e214b979655ca9820e13">setVelocity</a> (GLfloat vx, GLfloat vy, GLfloat vz=0.1f)</td></tr>
 <tr class="separator:a5026c2115f22e214b979655ca9820e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc88ed5fdc4ad5c6b4c99e1dc73c44e8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#afc88ed5fdc4ad5c6b4c99e1dc73c44e8">getLastKey</a> ()</td></tr>
+<tr class="memitem:afc88ed5fdc4ad5c6b4c99e1dc73c44e8" id="r_afc88ed5fdc4ad5c6b4c99e1dc73c44e8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc88ed5fdc4ad5c6b4c99e1dc73c44e8">getLastKey</a> ()</td></tr>
 <tr class="separator:afc88ed5fdc4ad5c6b4c99e1dc73c44e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affa358bdcc627505e042577790c8444a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a">getArrow</a> (int direction=0, int mods=0) const</td></tr>
+<tr class="memitem:affa358bdcc627505e042577790c8444a" id="r_affa358bdcc627505e042577790c8444a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affa358bdcc627505e042577790c8444a">getArrow</a> (int direction=0, int mods=0) const</td></tr>
 <tr class="separator:affa358bdcc627505e042577790c8444a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78660227f814654a1bc2e886365e0996"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a78660227f814654a1bc2e886365e0996">getArrowX</a> (int mods=0) const</td></tr>
+<tr class="memitem:a78660227f814654a1bc2e886365e0996" id="r_a78660227f814654a1bc2e886365e0996"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78660227f814654a1bc2e886365e0996">getArrowX</a> (int mods=0) const</td></tr>
 <tr class="separator:a78660227f814654a1bc2e886365e0996"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46411c2f5238715c5347356ba9282dfc"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a46411c2f5238715c5347356ba9282dfc">getArrowY</a> (int mods=0) const</td></tr>
+<tr class="memitem:a46411c2f5238715c5347356ba9282dfc" id="r_a46411c2f5238715c5347356ba9282dfc"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46411c2f5238715c5347356ba9282dfc">getArrowY</a> (int mods=0) const</td></tr>
 <tr class="separator:a46411c2f5238715c5347356ba9282dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed83d934df05d6cb8c8a902711a9329c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#aed83d934df05d6cb8c8a902711a9329c">getArrow</a> (GLfloat *arrow, int mods=0) const</td></tr>
+<tr class="memitem:aed83d934df05d6cb8c8a902711a9329c" id="r_aed83d934df05d6cb8c8a902711a9329c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed83d934df05d6cb8c8a902711a9329c">getArrow</a> (GLfloat *arrow, int mods=0) const</td></tr>
 <tr class="separator:aed83d934df05d6cb8c8a902711a9329c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c2238b6a1ad09eaeaf9f268b79bf00d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a0c2238b6a1ad09eaeaf9f268b79bf00d">getShiftArrowX</a> () const</td></tr>
+<tr class="memitem:a0c2238b6a1ad09eaeaf9f268b79bf00d" id="r_a0c2238b6a1ad09eaeaf9f268b79bf00d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c2238b6a1ad09eaeaf9f268b79bf00d">getShiftArrowX</a> () const</td></tr>
 <tr class="separator:a0c2238b6a1ad09eaeaf9f268b79bf00d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad622962036e9c6dc8210b16a67486862"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#ad622962036e9c6dc8210b16a67486862">getShiftArrowY</a> () const</td></tr>
+<tr class="memitem:ad622962036e9c6dc8210b16a67486862" id="r_ad622962036e9c6dc8210b16a67486862"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad622962036e9c6dc8210b16a67486862">getShiftArrowY</a> () const</td></tr>
 <tr class="separator:ad622962036e9c6dc8210b16a67486862"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2201654415ccd466ce8c2e25de831e7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a2201654415ccd466ce8c2e25de831e7f">getShiftArrow</a> (GLfloat *shift_arrow) const</td></tr>
+<tr class="memitem:a2201654415ccd466ce8c2e25de831e7f" id="r_a2201654415ccd466ce8c2e25de831e7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2201654415ccd466ce8c2e25de831e7f">getShiftArrow</a> (GLfloat *shift_arrow) const</td></tr>
 <tr class="separator:a2201654415ccd466ce8c2e25de831e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05de269eb17027de60e41e3776b581b2"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a05de269eb17027de60e41e3776b581b2">getControlArrowX</a> () const</td></tr>
+<tr class="memitem:a05de269eb17027de60e41e3776b581b2" id="r_a05de269eb17027de60e41e3776b581b2"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05de269eb17027de60e41e3776b581b2">getControlArrowX</a> () const</td></tr>
 <tr class="separator:a05de269eb17027de60e41e3776b581b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0707b5143ccc9f5c8df94cce446bdab2"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a0707b5143ccc9f5c8df94cce446bdab2">getControlArrowY</a> () const</td></tr>
+<tr class="memitem:a0707b5143ccc9f5c8df94cce446bdab2" id="r_a0707b5143ccc9f5c8df94cce446bdab2"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0707b5143ccc9f5c8df94cce446bdab2">getControlArrowY</a> () const</td></tr>
 <tr class="separator:a0707b5143ccc9f5c8df94cce446bdab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95461db15ac62a3f5200d9563d245d1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a95461db15ac62a3f5200d9563d245d1d">getControlArrow</a> (GLfloat *control_arrow) const</td></tr>
+<tr class="memitem:a95461db15ac62a3f5200d9563d245d1d" id="r_a95461db15ac62a3f5200d9563d245d1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95461db15ac62a3f5200d9563d245d1d">getControlArrow</a> (GLfloat *control_arrow) const</td></tr>
 <tr class="separator:a95461db15ac62a3f5200d9563d245d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac41a2596b28817ae5f807af75d451121"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#ac41a2596b28817ae5f807af75d451121">getAltArrowX</a> () const</td></tr>
+<tr class="memitem:ac41a2596b28817ae5f807af75d451121" id="r_ac41a2596b28817ae5f807af75d451121"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac41a2596b28817ae5f807af75d451121">getAltArrowX</a> () const</td></tr>
 <tr class="separator:ac41a2596b28817ae5f807af75d451121"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf24b249cfff5f6df4f05e3454ef5822"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#abf24b249cfff5f6df4f05e3454ef5822">getAltArrowY</a> () const</td></tr>
+<tr class="memitem:abf24b249cfff5f6df4f05e3454ef5822" id="r_abf24b249cfff5f6df4f05e3454ef5822"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf24b249cfff5f6df4f05e3454ef5822">getAltArrowY</a> () const</td></tr>
 <tr class="separator:abf24b249cfff5f6df4f05e3454ef5822"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e67bb74bd136fe84e5d2d76ef01bf16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a9e67bb74bd136fe84e5d2d76ef01bf16">getAltlArrow</a> (GLfloat *alt_arrow) const</td></tr>
+<tr class="memitem:a9e67bb74bd136fe84e5d2d76ef01bf16" id="r_a9e67bb74bd136fe84e5d2d76ef01bf16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e67bb74bd136fe84e5d2d76ef01bf16">getAltlArrow</a> (GLfloat *alt_arrow) const</td></tr>
 <tr class="separator:a9e67bb74bd136fe84e5d2d76ef01bf16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a222e4a998fbef8e2e818bb8a3457dd9b"><td class="memItemLeft" align="right" valign="top">const auto *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a222e4a998fbef8e2e818bb8a3457dd9b">getMouse</a> () const</td></tr>
+<tr class="memitem:a222e4a998fbef8e2e818bb8a3457dd9b" id="r_a222e4a998fbef8e2e818bb8a3457dd9b"><td class="memItemLeft" align="right" valign="top">const auto *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a222e4a998fbef8e2e818bb8a3457dd9b">getMouse</a> () const</td></tr>
 <tr class="separator:a222e4a998fbef8e2e818bb8a3457dd9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7472df8c6089d4e85c236f16d5981c6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a7472df8c6089d4e85c236f16d5981c6e">getMouse</a> (GLfloat *position) const</td></tr>
+<tr class="memitem:a7472df8c6089d4e85c236f16d5981c6e" id="r_a7472df8c6089d4e85c236f16d5981c6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7472df8c6089d4e85c236f16d5981c6e">getMouse</a> (GLfloat *position) const</td></tr>
 <tr class="separator:a7472df8c6089d4e85c236f16d5981c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4165aa1f7754ebacc0fb0a6dbcecd832"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a4165aa1f7754ebacc0fb0a6dbcecd832">getMouse</a> (int direction) const</td></tr>
+<tr class="memitem:a4165aa1f7754ebacc0fb0a6dbcecd832" id="r_a4165aa1f7754ebacc0fb0a6dbcecd832"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4165aa1f7754ebacc0fb0a6dbcecd832">getMouse</a> (int direction) const</td></tr>
 <tr class="separator:a4165aa1f7754ebacc0fb0a6dbcecd832"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55666f5d7c3c754090622944b84a04a0"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a55666f5d7c3c754090622944b84a04a0">getMouseX</a> () const</td></tr>
+<tr class="memitem:a55666f5d7c3c754090622944b84a04a0" id="r_a55666f5d7c3c754090622944b84a04a0"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55666f5d7c3c754090622944b84a04a0">getMouseX</a> () const</td></tr>
 <tr class="separator:a55666f5d7c3c754090622944b84a04a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e6fb715e92cb734ba644c90916b1360"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a7e6fb715e92cb734ba644c90916b1360">getMouseY</a> () const</td></tr>
+<tr class="memitem:a7e6fb715e92cb734ba644c90916b1360" id="r_a7e6fb715e92cb734ba644c90916b1360"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e6fb715e92cb734ba644c90916b1360">getMouseY</a> () const</td></tr>
 <tr class="separator:a7e6fb715e92cb734ba644c90916b1360"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af12e09dffd442b7b49d5a8386ff253c4"><td class="memItemLeft" align="right" valign="top">const auto *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#af12e09dffd442b7b49d5a8386ff253c4">getWheel</a> () const</td></tr>
+<tr class="memitem:af12e09dffd442b7b49d5a8386ff253c4" id="r_af12e09dffd442b7b49d5a8386ff253c4"><td class="memItemLeft" align="right" valign="top">const auto *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af12e09dffd442b7b49d5a8386ff253c4">getWheel</a> () const</td></tr>
 <tr class="separator:af12e09dffd442b7b49d5a8386ff253c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad27764b87b9f7d09ca49de137cfbeb78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#ad27764b87b9f7d09ca49de137cfbeb78">getWheel</a> (GLfloat *rotation) const</td></tr>
+<tr class="memitem:ad27764b87b9f7d09ca49de137cfbeb78" id="r_ad27764b87b9f7d09ca49de137cfbeb78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad27764b87b9f7d09ca49de137cfbeb78">getWheel</a> (GLfloat *rotation) const</td></tr>
 <tr class="separator:ad27764b87b9f7d09ca49de137cfbeb78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37cdade6e1a2fe60049650552ea7505c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a37cdade6e1a2fe60049650552ea7505c">getWheel</a> (int direction) const</td></tr>
+<tr class="memitem:a37cdade6e1a2fe60049650552ea7505c" id="r_a37cdade6e1a2fe60049650552ea7505c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37cdade6e1a2fe60049650552ea7505c">getWheel</a> (int direction) const</td></tr>
 <tr class="separator:a37cdade6e1a2fe60049650552ea7505c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad45195a5efaae1bf44b20ffd1cf0c18d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#ad45195a5efaae1bf44b20ffd1cf0c18d">getWheelX</a> () const</td></tr>
+<tr class="memitem:ad45195a5efaae1bf44b20ffd1cf0c18d" id="r_ad45195a5efaae1bf44b20ffd1cf0c18d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad45195a5efaae1bf44b20ffd1cf0c18d">getWheelX</a> () const</td></tr>
 <tr class="separator:ad45195a5efaae1bf44b20ffd1cf0c18d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0ffc69a289b38b33f137e40a2f4dae5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#af0ffc69a289b38b33f137e40a2f4dae5">getWheelY</a> () const</td></tr>
+<tr class="memitem:af0ffc69a289b38b33f137e40a2f4dae5" id="r_af0ffc69a289b38b33f137e40a2f4dae5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0ffc69a289b38b33f137e40a2f4dae5">getWheelY</a> () const</td></tr>
 <tr class="separator:af0ffc69a289b38b33f137e40a2f4dae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6227b2825a8a7e8481fb5bb27c8c3753"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a6227b2825a8a7e8481fb5bb27c8c3753">getTranslation</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
+<tr class="memitem:a6227b2825a8a7e8481fb5bb27c8c3753" id="r_a6227b2825a8a7e8481fb5bb27c8c3753"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6227b2825a8a7e8481fb5bb27c8c3753">getTranslation</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
 <tr class="separator:a6227b2825a8a7e8481fb5bb27c8c3753"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a074e392cd47e92946d23308cae934e40"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a074e392cd47e92946d23308cae934e40">getTranslationMatrix</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
+<tr class="memitem:a074e392cd47e92946d23308cae934e40" id="r_a074e392cd47e92946d23308cae934e40"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a074e392cd47e92946d23308cae934e40">getTranslationMatrix</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
 <tr class="separator:a074e392cd47e92946d23308cae934e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a882289de8c5dabb26c1370d036607a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a5a882289de8c5dabb26c1370d036607a">getScrollMatrix</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
+<tr class="memitem:a5a882289de8c5dabb26c1370d036607a" id="r_a5a882289de8c5dabb26c1370d036607a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a882289de8c5dabb26c1370d036607a">getScrollMatrix</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
 <tr class="separator:a5a882289de8c5dabb26c1370d036607a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9b5b4830a2e6c5491292a83d2b744f5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#aa9b5b4830a2e6c5491292a83d2b744f5">getRotation</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
+<tr class="memitem:aa9b5b4830a2e6c5491292a83d2b744f5" id="r_aa9b5b4830a2e6c5491292a83d2b744f5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9b5b4830a2e6c5491292a83d2b744f5">getRotation</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
 <tr class="separator:aa9b5b4830a2e6c5491292a83d2b744f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae072fc515e5a2fc54b8a11a552fc10b0"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#ae072fc515e5a2fc54b8a11a552fc10b0">getRotationMatrix</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
+<tr class="memitem:ae072fc515e5a2fc54b8a11a552fc10b0" id="r_ae072fc515e5a2fc54b8a11a552fc10b0"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae072fc515e5a2fc54b8a11a552fc10b0">getRotationMatrix</a> (int button=GLFW_MOUSE_BUTTON_1) const</td></tr>
 <tr class="separator:ae072fc515e5a2fc54b8a11a552fc10b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0e5bf92c55529a7ac9b5722528ae2b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#aa0e5bf92c55529a7ac9b5722528ae2b6">resetRotation</a> ()</td></tr>
+<tr class="memitem:aa0e5bf92c55529a7ac9b5722528ae2b6" id="r_aa0e5bf92c55529a7ac9b5722528ae2b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0e5bf92c55529a7ac9b5722528ae2b6">resetRotation</a> ()</td></tr>
 <tr class="separator:aa0e5bf92c55529a7ac9b5722528ae2b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fbe5cd9550549cce2eb0c148653ac39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a7fbe5cd9550549cce2eb0c148653ac39">resetTranslation</a> ()</td></tr>
+<tr class="memitem:a7fbe5cd9550549cce2eb0c148653ac39" id="r_a7fbe5cd9550549cce2eb0c148653ac39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7fbe5cd9550549cce2eb0c148653ac39">resetTranslation</a> ()</td></tr>
 <tr class="separator:a7fbe5cd9550549cce2eb0c148653ac39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7931a21c03bd1865a90f7b05964f7cdc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a7931a21c03bd1865a90f7b05964f7cdc">reset</a> ()</td></tr>
+<tr class="memitem:a7931a21c03bd1865a90f7b05964f7cdc" id="r_a7931a21c03bd1865a90f7b05964f7cdc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7931a21c03bd1865a90f7b05964f7cdc">reset</a> ()</td></tr>
 <tr class="separator:a7931a21c03bd1865a90f7b05964f7cdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5959f9f57f4b12cab5e729732a0b54e7"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a5959f9f57f4b12cab5e729732a0b54e7">getUserPointer</a> () const</td></tr>
+<tr class="memitem:a5959f9f57f4b12cab5e729732a0b54e7" id="r_a5959f9f57f4b12cab5e729732a0b54e7"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5959f9f57f4b12cab5e729732a0b54e7">getUserPointer</a> () const</td></tr>
 <tr class="separator:a5959f9f57f4b12cab5e729732a0b54e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e8975f427f140148331b0bc294e931d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a3e8975f427f140148331b0bc294e931d">setUserPointer</a> (void *pointer)</td></tr>
+<tr class="memitem:a3e8975f427f140148331b0bc294e931d" id="r_a3e8975f427f140148331b0bc294e931d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e8975f427f140148331b0bc294e931d">setUserPointer</a> (void *pointer)</td></tr>
 <tr class="separator:a3e8975f427f140148331b0bc294e931d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad40d89ff090cf184882fab3048a323d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#ad40d89ff090cf184882fab3048a323d0">setResizeFunc</a> (void(*func)(const <a class="el" href="classGgApp_1_1Window.html">Window</a> *window, int width, int height))</td></tr>
+<tr class="memitem:ad40d89ff090cf184882fab3048a323d0" id="r_ad40d89ff090cf184882fab3048a323d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad40d89ff090cf184882fab3048a323d0">setResizeFunc</a> (void(*func)(const <a class="el" href="classGgApp_1_1Window.html">Window</a> *window, int width, int height))</td></tr>
 <tr class="separator:ad40d89ff090cf184882fab3048a323d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f03a692bf813089182b2331262265a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a3f03a692bf813089182b2331262265a6">setKeyboardFunc</a> (void(*func)(const <a class="el" href="classGgApp_1_1Window.html">Window</a> *window, int key, int scancode, int action, int mods))</td></tr>
+<tr class="memitem:a3f03a692bf813089182b2331262265a6" id="r_a3f03a692bf813089182b2331262265a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f03a692bf813089182b2331262265a6">setKeyboardFunc</a> (void(*func)(const <a class="el" href="classGgApp_1_1Window.html">Window</a> *window, int key, int scancode, int action, int mods))</td></tr>
 <tr class="separator:a3f03a692bf813089182b2331262265a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3be62ffb0be6016f7ce531755667730b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a3be62ffb0be6016f7ce531755667730b">setMouseFunc</a> (void(*func)(const <a class="el" href="classGgApp_1_1Window.html">Window</a> *window, int button, int action, int mods))</td></tr>
+<tr class="memitem:a3be62ffb0be6016f7ce531755667730b" id="r_a3be62ffb0be6016f7ce531755667730b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3be62ffb0be6016f7ce531755667730b">setMouseFunc</a> (void(*func)(const <a class="el" href="classGgApp_1_1Window.html">Window</a> *window, int button, int action, int mods))</td></tr>
 <tr class="separator:a3be62ffb0be6016f7ce531755667730b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a658fd07bb623e4e6e0745211d1870e46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html#a658fd07bb623e4e6e0745211d1870e46">setWheelFunc</a> (void(*func)(const <a class="el" href="classGgApp_1_1Window.html">Window</a> *window, double x, double y))</td></tr>
+<tr class="memitem:a658fd07bb623e4e6e0745211d1870e46" id="r_a658fd07bb623e4e6e0745211d1870e46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a658fd07bb623e4e6e0745211d1870e46">setWheelFunc</a> (void(*func)(const <a class="el" href="classGgApp_1_1Window.html">Window</a> *window, double x, double y))</td></tr>
 <tr class="separator:a658fd07bb623e4e6e0745211d1870e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p >ウィンドウ関連の処理.</p>
+<div class="textblock"><p>ウィンドウ関連の処理.</p>
 <dl class="section note"><dt>覚え書き</dt><dd>GLFW を使って OpenGL のウィンドウを操作するラッパークラス. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00102">102</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00136">136</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
 <a id="a127c516045e716c271524fa45998cbc0" name="a127c516045e716c271524fa45998cbc0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a127c516045e716c271524fa45998cbc0">&#9670;&#160;</a></span>Window() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a127c516045e716c271524fa45998cbc0">&#9670;&#160;</a></span>Window() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -240,41 +245,31 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">GgApp::Window::Window </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>title</em> = <code>&quot;GLFW&#160;Window&quot;</code>, </td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em><span class="paramdefsep"> = </span><span class="paramdefval">&quot;GLFW&#160;Window&quot;</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>width</em> = <code>640</code>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em><span class="paramdefsep"> = </span><span class="paramdefval">640</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>height</em> = <code>480</code>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em><span class="paramdefsep"> = </span><span class="paramdefval">480</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>fullscreen</em> = <code>0</code>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>fullscreen</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLFWwindow *&#160;</td>
-          <td class="paramname"><em>share</em> = <code>nullptr</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">GLFWwindow *</td>          <td class="paramname"><span class="paramname"><em>share</em><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >コンストラクタ.</p>
+<p>コンストラクタ.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">title</td><td>ウィンドウタイトルの文字列. </td></tr>
@@ -286,21 +281,22 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="GgApp_8cpp_source.html">GgApp.cpp</a> の <a class="el" href="GgApp_8cpp_source.html#l00324">324</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8cpp_source.html">GgApp.cpp</a> の <a class="el" href="GgApp_8cpp_source.html#l00348">348</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_a127c516045e716c271524fa45998cbc0_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a127c516045e716c271524fa45998cbc0_cgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_a127c516045e716c271524fa45998cbc0_cgraph" id="aclassGgApp_1_1Window_a127c516045e716c271524fa45998cbc0_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,176,31"/>
-<area shape="rect" href="namespacegg.html#af7ab5857e56acfcf3e806f587f3737a0" title=" " alt="" coords="224,5,299,31"/>
+<area shape="rect" title=" " alt="" coords="5,5,175,32"/>
+<area shape="rect" href="namespacegg.html#af7ab5857e56acfcf3e806f587f3737a0" title=" " alt="" coords="223,5,297,32"/>
+<area shape="poly" title=" " alt="" coords="175,16,207,16,207,21,175,21"/>
 </map>
 </div>
 
 </div>
 </div>
 <a id="ae5d861cc5384a9345370038451126247" name="ae5d861cc5384a9345370038451126247"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5d861cc5384a9345370038451126247">&#9670;&#160;</a></span>Window() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5d861cc5384a9345370038451126247">&#9670;&#160;</a></span>Window() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -311,8 +307,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">GgApp::Window::Window </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classGgApp_1_1Window.html">Window</a> &amp;&#160;</td>
-          <td class="paramname"><em>w</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classGgApp_1_1Window.html">Window</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>w</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -322,6 +317,33 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
+<p>コピーコンストラクタは使用しない </p>
+
+</div>
+</div>
+<a id="ae00316789fab8d4d5d9f824a3569df10" name="ae00316789fab8d4d5d9f824a3569df10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae00316789fab8d4d5d9f824a3569df10">&#9670;&#160;</a></span>Window() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GgApp::Window::Window </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGgApp_1_1Window.html">Window</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>w</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>ムーブコンストラクタはデフォルトのものを使用する </p>
 
 </div>
 </div>
@@ -337,7 +359,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">virtual GgApp::Window::~Window </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -347,9 +369,9 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >デストラクタ. </p>
+<p>デストラクタ. </p>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00227">227</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00266">266</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -366,7 +388,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto * GgApp::Window::get </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -376,10 +398,10 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >ウィンドウの識別子のポインタを取得する.</p>
+<p>ウィンドウの識別子のポインタを取得する.</p>
 <dl class="section return"><dt>戻り値</dt><dd>GLFWwindow 型のウィンドウ識別子のポインタ. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00246">246</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00290">290</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -395,7 +417,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto GgApp::Window::getAltArrowX </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -405,17 +427,18 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >ALT キーを押しながら矢印キーを押したときの現在の X 値を得る.</p>
+<p>ALT キーを押しながら矢印キーを押したときの現在の X 値を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>ALT キーを押しながら矢印キーを押したときの現在の X 値. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00570">570</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00614">614</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_ac41a2596b28817ae5f807af75d451121_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_ac41a2596b28817ae5f807af75d451121_cgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_ac41a2596b28817ae5f807af75d451121_cgraph" id="aclassGgApp_1_1Window_ac41a2596b28817ae5f807af75d451121_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,204,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="252,5,427,31"/>
+<area shape="rect" title=" " alt="" coords="5,5,203,32"/>
+<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="251,5,425,32"/>
+<area shape="poly" title=" " alt="" coords="203,16,235,16,235,21,203,21"/>
 </map>
 </div>
 <div class="dynheader">
@@ -423,8 +446,9 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_ac41a2596b28817ae5f807af75d451121_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_ac41a2596b28817ae5f807af75d451121_icgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_ac41a2596b28817ae5f807af75d451121_icgraph" id="aclassGgApp_1_1Window_ac41a2596b28817ae5f807af75d451121_icgraph">
-<area shape="rect" title=" " alt="" coords="248,5,447,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a9e67bb74bd136fe84e5d2d76ef01bf16" title=" " alt="" coords="5,5,200,31"/>
+<area shape="rect" title=" " alt="" coords="247,5,444,32"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a9e67bb74bd136fe84e5d2d76ef01bf16" title=" " alt="" coords="5,5,199,32"/>
+<area shape="poly" title=" " alt="" coords="231,21,199,21,199,16,231,16"/>
 </map>
 </div>
 
@@ -442,7 +466,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto GgApp::Window::getAltArrowY </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -452,17 +476,18 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >ALT キーを押しながら矢印キーを押したときの現在の Y 値を得る.</p>
+<p>ALT キーを押しながら矢印キーを押したときの現在の Y 値を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>ALT キーを押しながら矢印キーを押したときの現在の Y 値. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00580">580</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00624">624</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_abf24b249cfff5f6df4f05e3454ef5822_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_abf24b249cfff5f6df4f05e3454ef5822_cgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_abf24b249cfff5f6df4f05e3454ef5822_cgraph" id="aclassGgApp_1_1Window_abf24b249cfff5f6df4f05e3454ef5822_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,205,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="253,5,428,31"/>
+<area shape="rect" title=" " alt="" coords="5,5,205,32"/>
+<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="253,5,427,32"/>
+<area shape="poly" title=" " alt="" coords="205,16,237,16,237,21,205,21"/>
 </map>
 </div>
 <div class="dynheader">
@@ -470,8 +495,9 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_abf24b249cfff5f6df4f05e3454ef5822_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_abf24b249cfff5f6df4f05e3454ef5822_icgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_abf24b249cfff5f6df4f05e3454ef5822_icgraph" id="aclassGgApp_1_1Window_abf24b249cfff5f6df4f05e3454ef5822_icgraph">
-<area shape="rect" title=" " alt="" coords="248,5,448,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a9e67bb74bd136fe84e5d2d76ef01bf16" title=" " alt="" coords="5,5,200,31"/>
+<area shape="rect" title=" " alt="" coords="247,5,446,32"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a9e67bb74bd136fe84e5d2d76ef01bf16" title=" " alt="" coords="5,5,199,32"/>
+<area shape="poly" title=" " alt="" coords="231,21,199,21,199,16,231,16"/>
 </map>
 </div>
 
@@ -489,8 +515,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">void GgApp::Window::getAltlArrow </td>
           <td>(</td>
-          <td class="paramtype">GLfloat *&#160;</td>
-          <td class="paramname"><em>alt_arrow</em></td><td>)</td>
+          <td class="paramtype">GLfloat *</td>          <td class="paramname"><span class="paramname"><em>alt_arrow</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -500,7 +525,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >ALT キーを押しながら矢印キーを押したときの現在の値を得る.</p>
+<p>ALT キーを押しながら矢印キーを押したときの現在の値を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">alt_arrow</td><td>ALT キーを押しながら矢印キーを押したときの値を格納する GLfloat 型の 2 要素の配列. </td></tr>
@@ -508,16 +533,20 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00590">590</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00634">634</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_a9e67bb74bd136fe84e5d2d76ef01bf16_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a9e67bb74bd136fe84e5d2d76ef01bf16_cgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_a9e67bb74bd136fe84e5d2d76ef01bf16_cgraph" id="aclassGgApp_1_1Window_a9e67bb74bd136fe84e5d2d76ef01bf16_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,200,56"/>
-<area shape="rect" href="classGgApp_1_1Window.html#ac41a2596b28817ae5f807af75d451121" title=" " alt="" coords="249,5,447,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#abf24b249cfff5f6df4f05e3454ef5822" title=" " alt="" coords="248,55,448,80"/>
-<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="496,31,671,56"/>
+<area shape="rect" title=" " alt="" coords="5,31,199,57"/>
+<area shape="rect" href="classGgApp_1_1Window.html#ac41a2596b28817ae5f807af75d451121" title=" " alt="" coords="248,5,445,32"/>
+<area shape="poly" title=" " alt="" coords="199,31,232,28,233,33,199,37"/>
+<area shape="rect" href="classGgApp_1_1Window.html#abf24b249cfff5f6df4f05e3454ef5822" title=" " alt="" coords="247,56,446,83"/>
+<area shape="poly" title=" " alt="" coords="199,51,231,55,231,60,199,57"/>
+<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="494,31,668,57"/>
+<area shape="poly" title=" " alt="" coords="446,27,479,30,478,36,445,32"/>
+<area shape="poly" title=" " alt="" coords="446,56,478,52,479,58,447,61"/>
 </map>
 </div>
 
@@ -535,19 +564,12 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">void GgApp::Window::getArrow </td>
           <td>(</td>
-          <td class="paramtype">GLfloat *&#160;</td>
-          <td class="paramname"><em>arrow</em>, </td>
+          <td class="paramtype">GLfloat *</td>          <td class="paramname"><span class="paramname"><em>arrow</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>mods</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mods</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -556,7 +578,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >矢印キーの現在の値を得る.</p>
+<p>矢印キーの現在の値を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">arrow</td><td>矢印キーの値を格納する GLfloat[2] の配列. </td></tr>
@@ -565,16 +587,20 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00497">497</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00541">541</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_aed83d934df05d6cb8c8a902711a9329c_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_aed83d934df05d6cb8c8a902711a9329c_cgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_aed83d934df05d6cb8c8a902711a9329c_cgraph" id="aclassGgApp_1_1Window_aed83d934df05d6cb8c8a902711a9329c_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,180,56"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a78660227f814654a1bc2e886365e0996" title=" " alt="" coords="229,5,411,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a46411c2f5238715c5347356ba9282dfc" title=" " alt="" coords="228,55,412,80"/>
-<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="460,31,635,56"/>
+<area shape="rect" title=" " alt="" coords="5,31,180,57"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a78660227f814654a1bc2e886365e0996" title=" " alt="" coords="229,5,410,32"/>
+<area shape="poly" title=" " alt="" coords="180,32,213,28,213,33,180,37"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a46411c2f5238715c5347356ba9282dfc" title=" " alt="" coords="228,56,411,83"/>
+<area shape="poly" title=" " alt="" coords="180,51,212,55,212,60,180,56"/>
+<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="459,31,633,57"/>
+<area shape="poly" title=" " alt="" coords="411,26,444,30,443,35,410,31"/>
+<area shape="poly" title=" " alt="" coords="411,56,443,53,444,58,411,62"/>
 </map>
 </div>
 
@@ -592,19 +618,12 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto GgApp::Window::getArrow </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>direction</em> = <code>0</code>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>direction</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>mods</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mods</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -613,7 +632,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >矢印キーの現在の値を得る.</p>
+<p>矢印キーの現在の値を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">direction</td><td>方向 (0: X, 1:Y). </td></tr>
@@ -623,25 +642,41 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>矢印キーの値. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00463">463</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00507">507</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_affa358bdcc627505e042577790c8444a_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_affa358bdcc627505e042577790c8444a_icgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_affa358bdcc627505e042577790c8444a_icgraph" id="aclassGgApp_1_1Window_affa358bdcc627505e042577790c8444a_icgraph">
-<area shape="rect" title=" " alt="" coords="513,183,688,208"/>
-<area shape="rect" href="classGgApp_1_1Window.html#ac41a2596b28817ae5f807af75d451121" title=" " alt="" coords="261,5,459,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#abf24b249cfff5f6df4f05e3454ef5822" title=" " alt="" coords="260,55,460,80"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a78660227f814654a1bc2e886365e0996" title=" " alt="" coords="269,104,451,129"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a46411c2f5238715c5347356ba9282dfc" title=" " alt="" coords="268,153,452,179"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a05de269eb17027de60e41e3776b581b2" title=" " alt="" coords="269,203,451,243"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a0707b5143ccc9f5c8df94cce446bdab2" title=" " alt="" coords="269,267,451,307"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a0c2238b6a1ad09eaeaf9f268b79bf00d" title=" " alt="" coords="256,332,464,357"/>
-<area shape="rect" href="classGgApp_1_1Window.html#ad622962036e9c6dc8210b16a67486862" title=" " alt="" coords="255,381,465,407"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a9e67bb74bd136fe84e5d2d76ef01bf16" title=" " alt="" coords="9,31,203,56"/>
-<area shape="rect" href="classGgApp_1_1Window.html#aed83d934df05d6cb8c8a902711a9329c" title=" " alt="" coords="19,129,193,155"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a95461db15ac62a3f5200d9563d245d1d" title=" " alt="" coords="15,255,197,295"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a2201654415ccd466ce8c2e25de831e7f" title=" " alt="" coords="5,344,207,369"/>
+<area shape="rect" title=" " alt="" coords="511,187,685,213"/>
+<area shape="rect" href="classGgApp_1_1Window.html#ac41a2596b28817ae5f807af75d451121" title=" " alt="" coords="260,5,457,32"/>
+<area shape="poly" title=" " alt="" coords="579,175,532,109,499,75,462,46,438,35,440,30,464,42,503,71,536,106,584,172"/>
+<area shape="rect" href="classGgApp_1_1Window.html#abf24b249cfff5f6df4f05e3454ef5822" title=" " alt="" coords="259,56,458,83"/>
+<area shape="poly" title=" " alt="" coords="571,178,523,136,493,115,462,97,432,86,434,81,464,92,496,110,526,132,574,174"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a78660227f814654a1bc2e886365e0996" title=" " alt="" coords="268,107,449,133"/>
+<area shape="poly" title=" " alt="" coords="552,183,462,148,422,137,424,131,464,143,554,178"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a46411c2f5238715c5347356ba9282dfc" title=" " alt="" coords="267,157,450,184"/>
+<area shape="poly" title=" " alt="" coords="495,190,450,185,451,179,496,185"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a05de269eb17027de60e41e3776b581b2" title=" " alt="" coords="267,208,450,251"/>
+<area shape="poly" title=" " alt="" coords="496,215,450,221,450,216,495,210"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a0707b5143ccc9f5c8df94cce446bdab2" title=" " alt="" coords="267,275,450,317"/>
+<area shape="poly" title=" " alt="" coords="557,223,464,265,433,277,431,272,462,260,555,218"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a0c2238b6a1ad09eaeaf9f268b79bf00d" title=" " alt="" coords="255,341,462,368"/>
+<area shape="poly" title=" " alt="" coords="580,227,531,281,499,308,464,332,438,343,435,338,462,327,496,304,527,277,576,224"/>
+<area shape="rect" href="classGgApp_1_1Window.html#ad622962036e9c6dc8210b16a67486862" title=" " alt="" coords="254,392,463,419"/>
+<area shape="poly" title=" " alt="" coords="587,229,567,264,540,306,506,347,464,382,442,394,439,389,462,378,502,343,536,302,563,261,582,226"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a9e67bb74bd136fe84e5d2d76ef01bf16" title=" " alt="" coords="9,44,202,71"/>
+<area shape="poly" title=" " alt="" coords="252,38,197,46,197,41,251,32"/>
+<area shape="poly" title=" " alt="" coords="243,67,202,65,203,59,243,61"/>
+<area shape="rect" href="classGgApp_1_1Window.html#aed83d934df05d6cb8c8a902711a9329c" title=" " alt="" coords="18,120,193,147"/>
+<area shape="poly" title=" " alt="" coords="252,128,193,131,193,126,252,123"/>
+<area shape="poly" title=" " alt="" coords="251,158,193,149,193,144,252,152"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a95461db15ac62a3f5200d9563d245d1d" title=" " alt="" coords="14,241,197,284"/>
+<area shape="poly" title=" " alt="" coords="252,246,197,253,197,248,251,241"/>
+<area shape="poly" title=" " alt="" coords="251,285,197,277,197,272,252,279"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a2201654415ccd466ce8c2e25de831e7f" title=" " alt="" coords="5,367,206,393"/>
+<area shape="poly" title=" " alt="" coords="239,369,206,373,206,367,239,364"/>
+<area shape="poly" title=" " alt="" coords="238,396,206,393,206,387,238,391"/>
 </map>
 </div>
 
@@ -659,8 +694,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto GgApp::Window::getArrowX </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>mods</em> = <code>0</code></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mods</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -670,7 +704,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >矢印キーの現在の X 値を得る.</p>
+<p>矢印キーの現在の X 値を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">mods</td><td>修飾キーの状態 (0:なし, 1, SHIFT, 2: CTRL, 3: ALT). </td></tr>
@@ -679,14 +713,15 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>矢印キーの X 値. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00475">475</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00519">519</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_a78660227f814654a1bc2e886365e0996_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a78660227f814654a1bc2e886365e0996_cgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_a78660227f814654a1bc2e886365e0996_cgraph" id="aclassGgApp_1_1Window_a78660227f814654a1bc2e886365e0996_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,188,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="236,5,411,31"/>
+<area shape="rect" title=" " alt="" coords="5,5,187,32"/>
+<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="235,5,409,32"/>
+<area shape="poly" title=" " alt="" coords="187,16,219,16,219,21,187,21"/>
 </map>
 </div>
 <div class="dynheader">
@@ -694,8 +729,9 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_a78660227f814654a1bc2e886365e0996_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a78660227f814654a1bc2e886365e0996_icgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_a78660227f814654a1bc2e886365e0996_icgraph" id="aclassGgApp_1_1Window_a78660227f814654a1bc2e886365e0996_icgraph">
-<area shape="rect" title=" " alt="" coords="228,5,411,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#aed83d934df05d6cb8c8a902711a9329c" title=" " alt="" coords="5,5,180,31"/>
+<area shape="rect" title=" " alt="" coords="228,5,409,32"/>
+<area shape="rect" href="classGgApp_1_1Window.html#aed83d934df05d6cb8c8a902711a9329c" title=" " alt="" coords="5,5,180,32"/>
+<area shape="poly" title=" " alt="" coords="212,21,180,21,180,16,212,16"/>
 </map>
 </div>
 
@@ -713,8 +749,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto GgApp::Window::getArrowY </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>mods</em> = <code>0</code></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mods</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -724,7 +759,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >矢印キーの現在の Y 値を得る.</p>
+<p>矢印キーの現在の Y 値を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">mods</td><td>修飾キーの状態 (0:なし, 1, SHIFT, 2: CTRL, 3: ALT). </td></tr>
@@ -733,14 +768,15 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>矢印キーの Y 値. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00486">486</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00530">530</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_a46411c2f5238715c5347356ba9282dfc_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a46411c2f5238715c5347356ba9282dfc_cgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_a46411c2f5238715c5347356ba9282dfc_cgraph" id="aclassGgApp_1_1Window_a46411c2f5238715c5347356ba9282dfc_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,189,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="237,5,412,31"/>
+<area shape="rect" title=" " alt="" coords="5,5,189,32"/>
+<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="237,5,411,32"/>
+<area shape="poly" title=" " alt="" coords="189,16,221,16,221,21,189,21"/>
 </map>
 </div>
 <div class="dynheader">
@@ -748,8 +784,9 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_a46411c2f5238715c5347356ba9282dfc_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a46411c2f5238715c5347356ba9282dfc_icgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_a46411c2f5238715c5347356ba9282dfc_icgraph" id="aclassGgApp_1_1Window_a46411c2f5238715c5347356ba9282dfc_icgraph">
-<area shape="rect" title=" " alt="" coords="228,5,412,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#aed83d934df05d6cb8c8a902711a9329c" title=" " alt="" coords="5,5,180,31"/>
+<area shape="rect" title=" " alt="" coords="228,5,411,32"/>
+<area shape="rect" href="classGgApp_1_1Window.html#aed83d934df05d6cb8c8a902711a9329c" title=" " alt="" coords="5,5,180,32"/>
+<area shape="poly" title=" " alt="" coords="212,21,180,21,180,16,212,16"/>
 </map>
 </div>
 
@@ -767,7 +804,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto GgApp::Window::getAspect </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -777,10 +814,10 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >ウィンドウのアスペクト比を得る.</p>
+<p>ウィンドウの縦横比を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>ウィンドウの縦横比. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00400">400</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00444">444</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -796,8 +833,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">void GgApp::Window::getControlArrow </td>
           <td>(</td>
-          <td class="paramtype">GLfloat *&#160;</td>
-          <td class="paramname"><em>control_arrow</em></td><td>)</td>
+          <td class="paramtype">GLfloat *</td>          <td class="paramname"><span class="paramname"><em>control_arrow</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -807,7 +843,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >CTRL キーを押しながら矢印キーを押したときの現在の値を得る.</p>
+<p>CTRL キーを押しながら矢印キーを押したときの現在の値を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">control_arrow</td><td>CTRL キーを押しながら矢印キーを押したときの値を格納する GLfloat 型の 2 要素の配列. </td></tr>
@@ -815,16 +851,20 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00559">559</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00603">603</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_a95461db15ac62a3f5200d9563d245d1d_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a95461db15ac62a3f5200d9563d245d1d_cgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_a95461db15ac62a3f5200d9563d245d1d_cgraph" id="aclassGgApp_1_1Window_a95461db15ac62a3f5200d9563d245d1d_cgraph">
-<area shape="rect" title=" " alt="" coords="5,37,188,77"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a05de269eb17027de60e41e3776b581b2" title=" " alt="" coords="236,5,419,45"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a0707b5143ccc9f5c8df94cce446bdab2" title=" " alt="" coords="236,69,419,109"/>
-<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="467,45,641,70"/>
+<area shape="rect" title=" " alt="" coords="5,39,188,81"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a05de269eb17027de60e41e3776b581b2" title=" " alt="" coords="236,5,418,48"/>
+<area shape="poly" title=" " alt="" coords="187,44,220,39,220,45,188,49"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a0707b5143ccc9f5c8df94cce446bdab2" title=" " alt="" coords="236,72,418,115"/>
+<area shape="poly" title=" " alt="" coords="188,71,220,75,220,81,187,76"/>
+<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="466,47,640,73"/>
+<area shape="poly" title=" " alt="" coords="419,37,451,42,450,48,418,43"/>
+<area shape="poly" title=" " alt="" coords="418,77,450,72,451,78,419,83"/>
 </map>
 </div>
 
@@ -842,7 +882,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto GgApp::Window::getControlArrowX </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -852,17 +892,18 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >CTRL キーを押しながら矢印キーを押したときの現在の X 値を得る.</p>
+<p>CTRL キーを押しながら矢印キーを押したときの現在の X 値を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>CTRL キーを押しながら矢印キーを押したときの現在の X 値. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00539">539</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00583">583</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_a05de269eb17027de60e41e3776b581b2_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a05de269eb17027de60e41e3776b581b2_cgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_a05de269eb17027de60e41e3776b581b2_cgraph" id="aclassGgApp_1_1Window_a05de269eb17027de60e41e3776b581b2_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,188,45"/>
-<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="236,13,411,38"/>
+<area shape="rect" title=" " alt="" coords="5,5,188,48"/>
+<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="236,13,410,40"/>
+<area shape="poly" title=" " alt="" coords="188,24,220,24,220,29,188,29"/>
 </map>
 </div>
 <div class="dynheader">
@@ -870,8 +911,9 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_a05de269eb17027de60e41e3776b581b2_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a05de269eb17027de60e41e3776b581b2_icgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_a05de269eb17027de60e41e3776b581b2_icgraph" id="aclassGgApp_1_1Window_a05de269eb17027de60e41e3776b581b2_icgraph">
-<area shape="rect" title=" " alt="" coords="236,5,419,45"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a95461db15ac62a3f5200d9563d245d1d" title=" " alt="" coords="5,5,188,45"/>
+<area shape="rect" title=" " alt="" coords="236,5,418,48"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a95461db15ac62a3f5200d9563d245d1d" title=" " alt="" coords="5,5,188,48"/>
+<area shape="poly" title=" " alt="" coords="220,29,188,29,188,24,220,24"/>
 </map>
 </div>
 
@@ -889,7 +931,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto GgApp::Window::getControlArrowY </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -899,17 +941,18 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >CTRL キーを押しながら矢印キーを押したときの現在の Y 値を得る.</p>
+<p>CTRL キーを押しながら矢印キーを押したときの現在の Y 値を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>CTRL キーを押しながら矢印キーを押したときの現在の Y 値. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00549">549</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00593">593</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_a0707b5143ccc9f5c8df94cce446bdab2_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a0707b5143ccc9f5c8df94cce446bdab2_cgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_a0707b5143ccc9f5c8df94cce446bdab2_cgraph" id="aclassGgApp_1_1Window_a0707b5143ccc9f5c8df94cce446bdab2_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,188,45"/>
-<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="236,13,411,38"/>
+<area shape="rect" title=" " alt="" coords="5,5,188,48"/>
+<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="236,13,410,40"/>
+<area shape="poly" title=" " alt="" coords="188,24,220,24,220,29,188,29"/>
 </map>
 </div>
 <div class="dynheader">
@@ -917,8 +960,9 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_a0707b5143ccc9f5c8df94cce446bdab2_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a0707b5143ccc9f5c8df94cce446bdab2_icgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_a0707b5143ccc9f5c8df94cce446bdab2_icgraph" id="aclassGgApp_1_1Window_a0707b5143ccc9f5c8df94cce446bdab2_icgraph">
-<area shape="rect" title=" " alt="" coords="236,5,419,45"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a95461db15ac62a3f5200d9563d245d1d" title=" " alt="" coords="5,5,188,45"/>
+<area shape="rect" title=" " alt="" coords="236,5,418,48"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a95461db15ac62a3f5200d9563d245d1d" title=" " alt="" coords="5,5,188,48"/>
+<area shape="poly" title=" " alt="" coords="220,29,188,29,188,24,220,24"/>
 </map>
 </div>
 
@@ -936,7 +980,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto GgApp::Window::getFboHeight </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -946,24 +990,25 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >FBO の高さを得る.</p>
+<p>FBO の高さを得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>FBO の高さ. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00348">348</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00392">392</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_a65f86fe33c40b5ca0f374484df5a2132_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a65f86fe33c40b5ca0f374484df5a2132_icgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_a65f86fe33c40b5ca0f374484df5a2132_icgraph" id="aclassGgApp_1_1Window_a65f86fe33c40b5ca0f374484df5a2132_icgraph">
-<area shape="rect" title=" " alt="" coords="244,5,445,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a55b581c4f03c8685f6632b69413aa774" title=" " alt="" coords="5,5,196,31"/>
+<area shape="rect" title=" " alt="" coords="243,5,443,32"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a55b581c4f03c8685f6632b69413aa774" title=" " alt="" coords="5,5,195,32"/>
+<area shape="poly" title=" " alt="" coords="227,21,195,21,195,16,227,16"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ab0966f984510152cbfa4ac04dec3f0a0" name="ab0966f984510152cbfa4ac04dec3f0a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0966f984510152cbfa4ac04dec3f0a0">&#9670;&#160;</a></span>getFboSize() <span class="overload">[1/2]</span></h2>
+<a id="ae86fec088b4d80bbe2cac9f11ef95adb" name="ae86fec088b4d80bbe2cac9f11ef95adb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae86fec088b4d80bbe2cac9f11ef95adb">&#9670;&#160;</a></span>getFboSize() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -972,9 +1017,9 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const auto GgApp::Window::getFboSize </td>
+          <td class="memname">const auto &amp; GgApp::Window::getFboSize </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -984,10 +1029,10 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >FBO のサイズを得る.</p>
+<p>FBO のサイズを得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>FBO の幅と高さを格納した GLsizei 型の 2 要素の配列. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00379">379</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00423">423</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1003,8 +1048,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">void GgApp::Window::getFboSize </td>
           <td>(</td>
-          <td class="paramtype">GLsizei *&#160;</td>
-          <td class="paramname"><em>fboSize</em></td><td>)</td>
+          <td class="paramtype">GLsizei *</td>          <td class="paramname"><span class="paramname"><em>fboSize</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1014,23 +1058,25 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >FBO のサイズを得る.</p>
+<p>FBO のサイズを得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fboSize</td><td>FBO の幅と高さを格納した GLsizei 型の 2 要素の配列. </td></tr>
+    <tr><td class="paramname">size</td><td>FBO の幅と高さを格納した GLsizei 型の 2 要素の配列. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00389">389</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00433">433</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_a55b581c4f03c8685f6632b69413aa774_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a55b581c4f03c8685f6632b69413aa774_cgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_a55b581c4f03c8685f6632b69413aa774_cgraph" id="aclassGgApp_1_1Window_a55b581c4f03c8685f6632b69413aa774_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,196,56"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a65f86fe33c40b5ca0f374484df5a2132" title=" " alt="" coords="244,5,445,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#aa9584690e81de333b5ede0e10b184212" title=" " alt="" coords="245,55,444,80"/>
+<area shape="rect" title=" " alt="" coords="5,31,195,57"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a65f86fe33c40b5ca0f374484df5a2132" title=" " alt="" coords="243,5,443,32"/>
+<area shape="poly" title=" " alt="" coords="195,31,227,28,227,33,195,37"/>
+<area shape="rect" href="classGgApp_1_1Window.html#aa9584690e81de333b5ede0e10b184212" title=" " alt="" coords="244,56,442,83"/>
+<area shape="poly" title=" " alt="" coords="195,51,229,55,228,60,195,57"/>
 </map>
 </div>
 
@@ -1048,7 +1094,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto GgApp::Window::getFboWidth </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1058,17 +1104,18 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >FBO の横幅を得る.</p>
+<p>FBO の横幅を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>FBO の横幅. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00338">338</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00382">382</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_aa9584690e81de333b5ede0e10b184212_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_aa9584690e81de333b5ede0e10b184212_icgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_aa9584690e81de333b5ede0e10b184212_icgraph" id="aclassGgApp_1_1Window_aa9584690e81de333b5ede0e10b184212_icgraph">
-<area shape="rect" title=" " alt="" coords="244,5,443,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a55b581c4f03c8685f6632b69413aa774" title=" " alt="" coords="5,5,196,31"/>
+<area shape="rect" title=" " alt="" coords="243,5,440,32"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a55b581c4f03c8685f6632b69413aa774" title=" " alt="" coords="5,5,195,32"/>
+<area shape="poly" title=" " alt="" coords="227,21,195,21,195,16,227,16"/>
 </map>
 </div>
 
@@ -1086,7 +1133,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto GgApp::Window::getHeight </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1096,17 +1143,18 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >ウィンドウの高さを得る.</p>
+<p>ウィンドウの高さを得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>ウィンドウの高さ. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00328">328</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00372">372</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_a6c9fe611549defaacbd77eb1178b63c5_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a6c9fe611549defaacbd77eb1178b63c5_icgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_a6c9fe611549defaacbd77eb1178b63c5_icgraph" id="aclassGgApp_1_1Window_a6c9fe611549defaacbd77eb1178b63c5_icgraph">
-<area shape="rect" title=" " alt="" coords="221,5,400,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a5efeec0d33380bc170b768db972a9150" title=" " alt="" coords="5,5,173,31"/>
+<area shape="rect" title=" " alt="" coords="221,5,399,32"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a5efeec0d33380bc170b768db972a9150" title=" " alt="" coords="5,5,173,32"/>
+<area shape="poly" title=" " alt="" coords="205,21,173,21,173,16,205,16"/>
 </map>
 </div>
 
@@ -1124,8 +1172,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">bool GgApp::Window::getKey </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>key</em></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1135,10 +1182,10 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >キーが押されているかどうかを判定する.</p>
+<p>キーが押されているかどうかを判定する.</p>
 <dl class="section return"><dt>戻り値</dt><dd>キーが押されていれば true. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00410">410</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00454">454</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1154,7 +1201,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">int GgApp::Window::getLastKey </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1164,10 +1211,10 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >最後にタイプしたキーを得る.</p>
+<p>最後にタイプしたキーを得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>最後にタイプしたキーの文字. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00448">448</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00492">492</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1183,7 +1230,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">const auto * GgApp::Window::getMouse </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1193,10 +1240,10 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >マウスカーソルの現在位置を得る.</p>
+<p>マウスカーソルの現在位置を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>マウスカーソルの現在位置を格納した GLfloat 型の 2 要素の配列. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00601">601</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00645">645</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1212,8 +1259,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">void GgApp::Window::getMouse </td>
           <td>(</td>
-          <td class="paramtype">GLfloat *&#160;</td>
-          <td class="paramname"><em>position</em></td><td>)</td>
+          <td class="paramtype">GLfloat *</td>          <td class="paramname"><span class="paramname"><em>position</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1223,7 +1269,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >マウスカーソルの現在位置を得る.</p>
+<p>マウスカーソルの現在位置を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">position</td><td>マウスカーソルの現在位置を格納した GLfloat 型の 2 要素の配列. </td></tr>
@@ -1231,7 +1277,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00612">612</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00656">656</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1247,8 +1293,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto GgApp::Window::getMouse </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>direction</em></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>direction</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1258,7 +1303,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >マウスカーソルの現在位置を得る.</p>
+<p>マウスカーソルの現在位置を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">direction</td><td>方向 (0:X, 1:Y). </td></tr>
@@ -1267,7 +1312,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>direction 方向のマウスカーソルの現在位置. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00625">625</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00669">669</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1283,7 +1328,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto GgApp::Window::getMouseX </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1293,10 +1338,10 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >マウスカーソルの現在位置の X 座標を得る.</p>
+<p>マウスカーソルの現在位置の X 座標を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>direction 方向のマウスカーソルの X 方向の現在位置. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00636">636</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00680">680</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1312,7 +1357,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto GgApp::Window::getMouseY </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1322,10 +1367,10 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >マウスカーソルの現在位置の Y 座標を得る.</p>
+<p>マウスカーソルの現在位置の Y 座標を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>direction 方向のマウスカーソルの Y 方向の現在位置. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00647">647</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00691">691</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1341,8 +1386,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto GgApp::Window::getRotation </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>button</em> = <code>GLFW_MOUSE_BUTTON_1</code></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>button</em><span class="paramdefsep"> = </span><span class="paramdefval">GLFW_MOUSE_BUTTON_1</span></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1352,7 +1396,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >トラックボールの回転変換行列を得る.</p>
+<p>トラックボールの回転変換行列を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">button</td><td>回転変換行列を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]). </td></tr>
@@ -1361,7 +1405,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>回転を行う GgQuaternion 型の四元数. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00769">769</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00819">819</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1377,8 +1421,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto GgApp::Window::getRotationMatrix </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>button</em> = <code>GLFW_MOUSE_BUTTON_1</code></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>button</em><span class="paramdefsep"> = </span><span class="paramdefval">GLFW_MOUSE_BUTTON_1</span></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1388,7 +1431,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >トラックボールの回転変換行列を得る.</p>
+<p>トラックボールの回転変換行列を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">button</td><td>回転変換行列を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]). </td></tr>
@@ -1397,7 +1440,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>回転を行う GgMarix 型の変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00782">782</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00832">832</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1413,8 +1456,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto GgApp::Window::getScrollMatrix </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>button</em> = <code>GLFW_MOUSE_BUTTON_1</code></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>button</em><span class="paramdefsep"> = </span><span class="paramdefval">GLFW_MOUSE_BUTTON_1</span></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1424,7 +1466,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >マウスによってオブジェクトの平行移動の変換行列を得る.</p>
+<p>マウスによってオブジェクトの平行移動の変換行列を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">button</td><td>平行移動量を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]). </td></tr>
@@ -1433,7 +1475,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>クリッピング座標系で平行移動を行う GgMatrix 型の変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00749">749</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00796">796</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1449,8 +1491,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">void GgApp::Window::getShiftArrow </td>
           <td>(</td>
-          <td class="paramtype">GLfloat *&#160;</td>
-          <td class="paramname"><em>shift_arrow</em></td><td>)</td>
+          <td class="paramtype">GLfloat *</td>          <td class="paramname"><span class="paramname"><em>shift_arrow</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1460,7 +1501,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >SHIFT キーを押しながら矢印キーを押したときの現在の値を得る.</p>
+<p>SHIFT キーを押しながら矢印キーを押したときの現在の値を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">shift_arrow</td><td>SHIFT キーを押しながら矢印キーを押したときの値を格納する GLfloat 型の 2 要素の配列. </td></tr>
@@ -1468,16 +1509,20 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00528">528</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00572">572</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_a2201654415ccd466ce8c2e25de831e7f_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a2201654415ccd466ce8c2e25de831e7f_cgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_a2201654415ccd466ce8c2e25de831e7f_cgraph" id="aclassGgApp_1_1Window_a2201654415ccd466ce8c2e25de831e7f_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,207,56"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a0c2238b6a1ad09eaeaf9f268b79bf00d" title=" " alt="" coords="256,5,464,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#ad622962036e9c6dc8210b16a67486862" title=" " alt="" coords="255,55,465,80"/>
-<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="513,31,688,56"/>
+<area shape="rect" title=" " alt="" coords="5,31,206,57"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a0c2238b6a1ad09eaeaf9f268b79bf00d" title=" " alt="" coords="255,5,462,32"/>
+<area shape="poly" title=" " alt="" coords="206,31,239,28,239,33,206,37"/>
+<area shape="rect" href="classGgApp_1_1Window.html#ad622962036e9c6dc8210b16a67486862" title=" " alt="" coords="254,56,463,83"/>
+<area shape="poly" title=" " alt="" coords="206,51,238,55,238,60,206,57"/>
+<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="511,31,685,57"/>
+<area shape="poly" title=" " alt="" coords="463,27,496,31,495,36,462,32"/>
+<area shape="poly" title=" " alt="" coords="463,56,495,52,495,58,464,61"/>
 </map>
 </div>
 
@@ -1495,7 +1540,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto GgApp::Window::getShiftArrowX </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1505,17 +1550,18 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >SHIFT キーを押しながら矢印キーを押したときの現在の X 値を得る.</p>
+<p>SHIFT キーを押しながら矢印キーを押したときの現在の X 値を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>SHIFT キーを押しながら矢印キーを押したときの現在の X 値. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00508">508</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00552">552</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_a0c2238b6a1ad09eaeaf9f268b79bf00d_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a0c2238b6a1ad09eaeaf9f268b79bf00d_cgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_a0c2238b6a1ad09eaeaf9f268b79bf00d_cgraph" id="aclassGgApp_1_1Window_a0c2238b6a1ad09eaeaf9f268b79bf00d_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,213,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="261,5,436,31"/>
+<area shape="rect" title=" " alt="" coords="5,5,213,32"/>
+<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="261,5,435,32"/>
+<area shape="poly" title=" " alt="" coords="213,16,245,16,245,21,213,21"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1523,8 +1569,9 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_a0c2238b6a1ad09eaeaf9f268b79bf00d_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a0c2238b6a1ad09eaeaf9f268b79bf00d_icgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_a0c2238b6a1ad09eaeaf9f268b79bf00d_icgraph" id="aclassGgApp_1_1Window_a0c2238b6a1ad09eaeaf9f268b79bf00d_icgraph">
-<area shape="rect" title=" " alt="" coords="255,5,463,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a2201654415ccd466ce8c2e25de831e7f" title=" " alt="" coords="5,5,207,31"/>
+<area shape="rect" title=" " alt="" coords="254,5,461,32"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a2201654415ccd466ce8c2e25de831e7f" title=" " alt="" coords="5,5,206,32"/>
+<area shape="poly" title=" " alt="" coords="238,21,206,21,206,16,238,16"/>
 </map>
 </div>
 
@@ -1542,7 +1589,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto GgApp::Window::getShiftArrowY </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1552,17 +1599,18 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >SHIFT キーを押しながら矢印キーを押したときの現在の Y 値を得る.</p>
+<p>SHIFT キーを押しながら矢印キーを押したときの現在の Y 値を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>SHIFT キーを押しながら矢印キーを押したときの現在の Y 値. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00518">518</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00562">562</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_ad622962036e9c6dc8210b16a67486862_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_ad622962036e9c6dc8210b16a67486862_cgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_ad622962036e9c6dc8210b16a67486862_cgraph" id="aclassGgApp_1_1Window_ad622962036e9c6dc8210b16a67486862_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,216,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="264,5,439,31"/>
+<area shape="rect" title=" " alt="" coords="5,5,215,32"/>
+<area shape="rect" href="classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="263,5,437,32"/>
+<area shape="poly" title=" " alt="" coords="215,16,247,16,247,21,215,21"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1570,8 +1618,9 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_ad622962036e9c6dc8210b16a67486862_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_ad622962036e9c6dc8210b16a67486862_icgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_ad622962036e9c6dc8210b16a67486862_icgraph" id="aclassGgApp_1_1Window_ad622962036e9c6dc8210b16a67486862_icgraph">
-<area shape="rect" title=" " alt="" coords="255,5,465,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a2201654415ccd466ce8c2e25de831e7f" title=" " alt="" coords="5,5,207,31"/>
+<area shape="rect" title=" " alt="" coords="254,5,463,32"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a2201654415ccd466ce8c2e25de831e7f" title=" " alt="" coords="5,5,206,32"/>
+<area shape="poly" title=" " alt="" coords="238,21,206,21,206,16,238,16"/>
 </map>
 </div>
 
@@ -1589,7 +1638,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">const auto &amp; GgApp::Window::getSize </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1599,10 +1648,10 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >ウィンドウのサイズを得る.</p>
+<p>ウィンドウのサイズを得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>ウィンドウの幅と高さを格納した GLsizei 型の 2 要素の配列の参照. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00358">358</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00402">402</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1618,8 +1667,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">void GgApp::Window::getSize </td>
           <td>(</td>
-          <td class="paramtype">GLsizei *&#160;</td>
-          <td class="paramname"><em>size</em></td><td>)</td>
+          <td class="paramtype">GLsizei *</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1629,7 +1677,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >ウィンドウのサイズを得る.</p>
+<p>ウィンドウのサイズを得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">size</td><td>ウィンドウの幅と高さを格納した GLsizei 型の 2 要素の配列. </td></tr>
@@ -1637,15 +1685,17 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00368">368</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00412">412</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_a5efeec0d33380bc170b768db972a9150_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a5efeec0d33380bc170b768db972a9150_cgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_a5efeec0d33380bc170b768db972a9150_cgraph" id="aclassGgApp_1_1Window_a5efeec0d33380bc170b768db972a9150_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,173,56"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a6c9fe611549defaacbd77eb1178b63c5" title=" " alt="" coords="221,5,400,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a579867ae1179b9d946e2a0e34a62e830" title=" " alt="" coords="223,55,399,80"/>
+<area shape="rect" title=" " alt="" coords="5,31,173,57"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a6c9fe611549defaacbd77eb1178b63c5" title=" " alt="" coords="221,5,399,32"/>
+<area shape="poly" title=" " alt="" coords="173,32,205,28,205,33,173,37"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a579867ae1179b9d946e2a0e34a62e830" title=" " alt="" coords="222,56,398,83"/>
+<area shape="poly" title=" " alt="" coords="173,51,207,55,206,60,173,56"/>
 </map>
 </div>
 
@@ -1663,8 +1713,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">const auto &amp; GgApp::Window::getTranslation </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>button</em> = <code>GLFW_MOUSE_BUTTON_1</code></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>button</em><span class="paramdefsep"> = </span><span class="paramdefval">GLFW_MOUSE_BUTTON_1</span></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1674,7 +1723,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >トラックボール処理を考慮したマウスによるスクロールの変換行列を得る.</p>
+<p>トラックボール処理を考慮したマウスによるスクロールの変換行列を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">button</td><td>平行移動量を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]). </td></tr>
@@ -1683,7 +1732,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>平行移動量を格納した GLfloat[3] の配列のポインタ. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00716">716</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00760">760</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1699,8 +1748,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto GgApp::Window::getTranslationMatrix </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>button</em> = <code>GLFW_MOUSE_BUTTON_1</code></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>button</em><span class="paramdefsep"> = </span><span class="paramdefval">GLFW_MOUSE_BUTTON_1</span></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1710,7 +1758,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >マウスによって視点の平行移動の変換行列を得る.</p>
+<p>マウスによって視点の平行移動の変換行列を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">button</td><td>平行移動量を取得するマウスボタン (GLFW_MOUSE_BUTTON_[1,2]). </td></tr>
@@ -1719,7 +1767,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>視点座標系で平行移動を行う GgMatrix 型の変換行列. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00729">729</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00773">773</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1735,7 +1783,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">void * GgApp::Window::getUserPointer </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1745,10 +1793,10 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >ユーザーポインタを取り出す.</p>
+<p>ユーザーポインタを取り出す.</p>
 <dl class="section return"><dt>戻り値</dt><dd>保存されているユーザポインタ. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00824">824</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00874">874</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1764,7 +1812,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">const auto * GgApp::Window::getWheel </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1774,10 +1822,10 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >マウスホイールの回転量を得る.</p>
+<p>マウスホイールの回転量を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>マウスホイールの回転量を格納した GLfloat 型の 2 要素の配列. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00658">658</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00702">702</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1793,8 +1841,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">void GgApp::Window::getWheel </td>
           <td>(</td>
-          <td class="paramtype">GLfloat *&#160;</td>
-          <td class="paramname"><em>rotation</em></td><td>)</td>
+          <td class="paramtype">GLfloat *</td>          <td class="paramname"><span class="paramname"><em>rotation</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1804,7 +1851,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >マウスホイールの回転量を得る.</p>
+<p>マウスホイールの回転量を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">rotation</td><td>マウスホイールの回転量を格納した GLfloat 型の 2 要素の配列. </td></tr>
@@ -1812,7 +1859,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00669">669</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00713">713</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1828,8 +1875,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto GgApp::Window::getWheel </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>direction</em></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>direction</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1839,7 +1885,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >マウスホイールの回転量を得る.</p>
+<p>マウスホイールの回転量を得る.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">direction</td><td>方向 (0:X, 1:Y). </td></tr>
@@ -1848,7 +1894,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>direction 方向のマウスホイールの回転量. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00682">682</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00726">726</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1864,7 +1910,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto GgApp::Window::getWheelX </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1874,10 +1920,10 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >マウスホイールの X 方向の回転量を得る.</p>
+<p>マウスホイールの X 方向の回転量を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>マウスホイールの X 方向の回転量. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00693">693</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00737">737</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1893,7 +1939,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto GgApp::Window::getWheelY </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1903,10 +1949,10 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >マウスホイールの Y 方向の回転量を得る.</p>
+<p>マウスホイールの Y 方向の回転量を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>マウスホイールの Y 方向の回転量. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00704">704</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00748">748</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1922,7 +1968,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">auto GgApp::Window::getWidth </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1932,17 +1978,22 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >ウィンドウの横幅を得る.</p>
+<p>ウィンドウの横幅を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>ウィンドウの横幅. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00318">318</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00362">362</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_a579867ae1179b9d946e2a0e34a62e830_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a579867ae1179b9d946e2a0e34a62e830_icgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_a579867ae1179b9d946e2a0e34a62e830_icgraph" id="aclassGgApp_1_1Window_a579867ae1179b9d946e2a0e34a62e830_icgraph">
-<area shape="rect" title=" " alt="" coords="221,5,397,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a5efeec0d33380bc170b768db972a9150" title=" " alt="" coords="5,5,173,31"/>
+<area shape="rect" title=" " alt="" coords="318,31,493,57"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a5efeec0d33380bc170b768db972a9150" title=" " alt="" coords="103,5,270,32"/>
+<area shape="poly" title=" " alt="" coords="302,35,270,31,271,26,303,29"/>
+<area shape="rect" href="classGgApp.html#ad2e50a5e84d4fd6162e03039ac00c7ae" title=" " alt="" coords="138,56,235,83"/>
+<area shape="poly" title=" " alt="" coords="303,59,236,66,235,61,302,53"/>
+<area shape="rect" href="main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525" title=" " alt="" coords="5,56,55,83"/>
+<area shape="poly" title=" " alt="" coords="122,72,55,72,55,67,122,67"/>
 </map>
 </div>
 
@@ -1960,7 +2011,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">GgApp::Window::operator bool </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1970,15 +2021,15 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >イベントを取得してループを継続すべきかどうか調べる.</p>
+<p>イベントを取得してループを継続すべきかどうか調べる.</p>
 <dl class="section return"><dt>戻り値</dt><dd>ループを継続すべきなら true. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8cpp_source.html">GgApp.cpp</a> の <a class="el" href="GgApp_8cpp_source.html#l00417">417</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8cpp_source.html">GgApp.cpp</a> の <a class="el" href="GgApp_8cpp_source.html#l00441">441</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <a id="aee308edd9b401ca148f3b28fc7f77774" name="aee308edd9b401ca148f3b28fc7f77774"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee308edd9b401ca148f3b28fc7f77774">&#9670;&#160;</a></span>operator=()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aee308edd9b401ca148f3b28fc7f77774">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1989,8 +2040,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname"><a class="el" href="classGgApp_1_1Window.html">Window</a> &amp; GgApp::Window::operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classGgApp_1_1Window.html">Window</a> &amp;&#160;</td>
-          <td class="paramname"><em>w</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classGgApp_1_1Window.html">Window</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>w</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2000,6 +2050,33 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
+<p>代入演算子は使用しない </p>
+
+</div>
+</div>
+<a id="a827f53cb49b693e31344ab100358a66d" name="a827f53cb49b693e31344ab100358a66d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a827f53cb49b693e31344ab100358a66d">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGgApp_1_1Window.html">Window</a> &amp; GgApp::Window::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGgApp_1_1Window.html">Window</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>w</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>ムーブ代入演算子はデフォルトのものを使用する </p>
 
 </div>
 </div>
@@ -2015,7 +2092,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">void GgApp::Window::reset </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2025,17 +2102,19 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >トラックボール・マウスホイール・矢印キーの値を初期化する. </p>
+<p>トラックボール・マウスホイール・矢印キーの値を初期化する. </p>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00810">810</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00860">860</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_a7931a21c03bd1865a90f7b05964f7cdc_cgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a7931a21c03bd1865a90f7b05964f7cdc_cgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_a7931a21c03bd1865a90f7b05964f7cdc_cgraph" id="aclassGgApp_1_1Window_a7931a21c03bd1865a90f7b05964f7cdc_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,159,56"/>
-<area shape="rect" href="classGgApp_1_1Window.html#aa0e5bf92c55529a7ac9b5722528ae2b6" title=" " alt="" coords="214,5,415,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a7fbe5cd9550549cce2eb0c148653ac39" title=" " alt="" coords="207,55,423,80"/>
+<area shape="rect" title=" " alt="" coords="5,31,158,57"/>
+<area shape="rect" href="classGgApp_1_1Window.html#aa0e5bf92c55529a7ac9b5722528ae2b6" title=" " alt="" coords="213,5,414,32"/>
+<area shape="poly" title=" " alt="" coords="158,33,197,29,198,34,158,38"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a7fbe5cd9550549cce2eb0c148653ac39" title=" " alt="" coords="206,56,421,83"/>
+<area shape="poly" title=" " alt="" coords="158,50,190,53,190,59,158,55"/>
 </map>
 </div>
 
@@ -2053,7 +2132,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">void GgApp::Window::resetRotation </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2063,16 +2142,17 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >トラックボール処理を初期化する. </p>
+<p>トラックボール処理を初期化する. </p>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00792">792</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00842">842</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_aa0e5bf92c55529a7ac9b5722528ae2b6_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_aa0e5bf92c55529a7ac9b5722528ae2b6_icgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_aa0e5bf92c55529a7ac9b5722528ae2b6_icgraph" id="aclassGgApp_1_1Window_aa0e5bf92c55529a7ac9b5722528ae2b6_icgraph">
-<area shape="rect" title=" " alt="" coords="207,5,408,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a7931a21c03bd1865a90f7b05964f7cdc" title=" " alt="" coords="5,5,159,31"/>
+<area shape="rect" title=" " alt="" coords="206,5,406,32"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a7931a21c03bd1865a90f7b05964f7cdc" title=" " alt="" coords="5,5,158,32"/>
+<area shape="poly" title=" " alt="" coords="190,21,158,21,158,16,190,16"/>
 </map>
 </div>
 
@@ -2090,7 +2170,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">void GgApp::Window::resetTranslation </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2100,16 +2180,17 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >平行移動量を初期化する. </p>
+<p>平行移動量を初期化する. </p>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00801">801</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00851">851</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_1_1Window_a7fbe5cd9550549cce2eb0c148653ac39_icgraph.png" border="0" usemap="#aclassGgApp_1_1Window_a7fbe5cd9550549cce2eb0c148653ac39_icgraph" alt=""/></div>
 <map name="aclassGgApp_1_1Window_a7fbe5cd9550549cce2eb0c148653ac39_icgraph" id="aclassGgApp_1_1Window_a7fbe5cd9550549cce2eb0c148653ac39_icgraph">
-<area shape="rect" title=" " alt="" coords="207,5,423,31"/>
-<area shape="rect" href="classGgApp_1_1Window.html#a7931a21c03bd1865a90f7b05964f7cdc" title=" " alt="" coords="5,5,159,31"/>
+<area shape="rect" title=" " alt="" coords="206,5,421,32"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a7931a21c03bd1865a90f7b05964f7cdc" title=" " alt="" coords="5,5,158,32"/>
+<area shape="poly" title=" " alt="" coords="190,21,158,21,158,16,190,16"/>
 </map>
 </div>
 
@@ -2127,7 +2208,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">void GgApp::Window::restoreViewport </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -2137,9 +2218,9 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >ビューポートを元のサイズに復帰する. </p>
+<p>ビューポートを元のサイズに復帰する. </p>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00287">287</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00331">331</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2155,8 +2236,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">void GgApp::Window::selectInterface </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>no</em></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>no</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2166,7 +2246,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >インタフェースを選択する.</p>
+<p>インタフェースを選択する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">no</td><td>インターフェース番号. </td></tr>
@@ -2174,7 +2254,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00425">425</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00469">469</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2190,8 +2270,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">void GgApp::Window::setClose </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>flag</em> = <code>GLFW_TRUE</code></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>flag</em><span class="paramdefsep"> = </span><span class="paramdefval">GLFW_TRUE</span></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -2201,7 +2280,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >ウィンドウのクローズフラグを設定する.</p>
+<p>ウィンドウのクローズフラグを設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">flag</td><td>クローズフラグ, 0 (GLFW_FALSE) 以外ならウィンドウを閉じる. </td></tr>
@@ -2209,7 +2288,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00256">256</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00300">300</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2225,8 +2304,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">void GgApp::Window::setKeyboardFunc </td>
           <td>(</td>
-          <td class="paramtype">void(*)(const <a class="el" href="classGgApp_1_1Window.html">Window</a> *window, int key, int scancode, int action, int mods)&#160;</td>
-          <td class="paramname"><em>func</em></td><td>)</td>
+          <td class="paramtype">void(*)(const <a class="el" href="classGgApp_1_1Window.html">Window</a> *window, int key, int scancode, int action, int mods)</td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2236,7 +2314,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >ユーザ定義の keyboard 関数を設定する.</p>
+<p>ユーザ定義の keyboard 関数を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">func</td><td>ユーザ定義の keyboard 関数, キーボードの操作時に呼び出される. </td></tr>
@@ -2244,7 +2322,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00854">854</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00904">904</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2260,8 +2338,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">void GgApp::Window::setMouseFunc </td>
           <td>(</td>
-          <td class="paramtype">void(*)(const <a class="el" href="classGgApp_1_1Window.html">Window</a> *window, int button, int action, int mods)&#160;</td>
-          <td class="paramname"><em>func</em></td><td>)</td>
+          <td class="paramtype">void(*)(const <a class="el" href="classGgApp_1_1Window.html">Window</a> *window, int button, int action, int mods)</td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2271,7 +2348,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >ユーザ定義の mouse 関数を設定する.</p>
+<p>ユーザ定義の mouse 関数を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">func</td><td>ユーザ定義の mouse 関数, マウスボタンの操作時に呼び出される. </td></tr>
@@ -2279,7 +2356,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00864">864</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00914">914</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2295,8 +2372,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">void GgApp::Window::setResizeFunc </td>
           <td>(</td>
-          <td class="paramtype">void(*)(const <a class="el" href="classGgApp_1_1Window.html">Window</a> *window, int width, int height)&#160;</td>
-          <td class="paramname"><em>func</em></td><td>)</td>
+          <td class="paramtype">void(*)(const <a class="el" href="classGgApp_1_1Window.html">Window</a> *window, int width, int height)</td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2306,7 +2382,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >ユーザ定義の resize 関数を設定する.</p>
+<p>ユーザ定義の resize 関数を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">func</td><td>ユーザ定義の resize 関数, ウィンドウのサイズ変更時に呼び出される. </td></tr>
@@ -2314,7 +2390,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00844">844</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00894">894</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2330,8 +2406,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">void GgApp::Window::setUserPointer </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>pointer</em></td><td>)</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>pointer</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2341,7 +2416,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >任意のユーザポインタを保存する.</p>
+<p>任意のユーザポインタを保存する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">pointer</td><td>保存するユーザポインタ. </td></tr>
@@ -2349,7 +2424,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00834">834</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00884">884</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2365,25 +2440,17 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">void GgApp::Window::setVelocity </td>
           <td>(</td>
-          <td class="paramtype">GLfloat&#160;</td>
-          <td class="paramname"><em>vx</em>, </td>
+          <td class="paramtype">GLfloat</td>          <td class="paramname"><span class="paramname"><em>vx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLfloat&#160;</td>
-          <td class="paramname"><em>vy</em>, </td>
+          <td class="paramtype">GLfloat</td>          <td class="paramname"><span class="paramname"><em>vy</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLfloat&#160;</td>
-          <td class="paramname"><em>vz</em> = <code>0.1f</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">GLfloat</td>          <td class="paramname"><span class="paramname"><em>vz</em><span class="paramdefsep"> = </span><span class="paramdefval">0.1f</span></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2392,7 +2459,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >マウスの移動速度を設定する.</p>
+<p>マウスの移動速度を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">vx</td><td>x 方向の移動速度. </td></tr>
@@ -2402,7 +2469,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00438">438</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00482">482</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2418,8 +2485,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">void GgApp::Window::setWheelFunc </td>
           <td>(</td>
-          <td class="paramtype">void(*)(const <a class="el" href="classGgApp_1_1Window.html">Window</a> *window, double x, double y)&#160;</td>
-          <td class="paramname"><em>func</em></td><td>)</td>
+          <td class="paramtype">void(*)(const <a class="el" href="classGgApp_1_1Window.html">Window</a> *window, double x, double y)</td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2429,7 +2495,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >ユーザ定義の wheel 関数を設定する.</p>
+<p>ユーザ定義の wheel 関数を設定する.</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">func</td><td>ユーザ定義の wheel 関数, マウスホイールの操作時に呼び出される. </td></tr>
@@ -2437,7 +2503,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00874">874</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00924">924</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2453,7 +2519,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">bool GgApp::Window::shouldClose </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -2463,10 +2529,10 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
   </tr>
 </table>
 </div><div class="memdoc">
-<p >ウィンドウを閉じるべきかどうか調べる.</p>
+<p>ウィンドウを閉じるべきかどうか調べる.</p>
 <dl class="section return"><dt>戻り値</dt><dd>ウィンドウを閉じるべきなら true. </dd></dl>
 
-<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00266">266</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00310">310</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2479,14 +2545,14 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">void GgApp::Window::swapBuffers </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >カラーバッファを入れ替える. </p>
+<p>カラーバッファを入れ替える. </p>
 
-<p class="definition"> <a class="el" href="GgApp_8cpp_source.html">GgApp.cpp</a> の <a class="el" href="GgApp_8cpp_source.html#l00467">467</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8cpp_source.html">GgApp.cpp</a> の <a class="el" href="GgApp_8cpp_source.html#l00491">491</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2499,14 +2565,14 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
         <tr>
           <td class="memname">void GgApp::Window::updateViewport </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >ビューポートのサイズを更新する. </p>
+<p>ビューポートのサイズを更新する. </p>
 
-<p class="definition"> <a class="el" href="GgApp_8cpp_source.html">GgApp.cpp</a> の <a class="el" href="GgApp_8cpp_source.html#l00485">485</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="GgApp_8cpp_source.html">GgApp.cpp</a> の <a class="el" href="GgApp_8cpp_source.html#l00509">509</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -2520,7 +2586,7 @@ $(document).ready(function(){initNavTree('classGgApp_1_1Window.html',''); initRe
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classGgApp.html">GgApp</a></li><li class="navelem"><a class="el" href="classGgApp_1_1Window.html">Window</a></li>
-    <li class="footer">2023年01月03日(火) 18時18分38秒作成 - ゲームグラフィックス特論 / 構成:  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

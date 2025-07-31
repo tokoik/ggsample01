@@ -6,7 +6,7 @@ var searchData=
   ['material_3',['Material',['../structgg_1_1GgSimpleShader_1_1Material.html',1,'gg::GgSimpleShader']]],
   ['materialbindingpoint_4',['MaterialBindingPoint',['../namespacegg.html#ae6e185ba7876df656b8d0b02819b5e49a3ba0d83d74aed68d92082c2621fa2348',1,'gg']]],
   ['materialbuffer_5',['MaterialBuffer',['../classgg_1_1GgSimpleShader_1_1MaterialBuffer.html',1,'gg::GgSimpleShader::MaterialBuffer'],['../classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#abb1ac93a5f24d73fee1086df16e835ac',1,'gg::GgSimpleShader::MaterialBuffer::MaterialBuffer(const Material *material=nullptr, GLsizei count=1, GLenum usage=GL_STATIC_DRAW)'],['../classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#a2894a265a27c8e98efa8e63b04c8d3f1',1,'gg::GgSimpleShader::MaterialBuffer::MaterialBuffer(const Material &amp;material, GLsizei count=1, GLenum usage=GL_STATIC_DRAW)']]],
-  ['menu_6',['Menu',['../classMenu.html',1,'Menu'],['../classConfig.html#a834cec0fab7efabab3cd53540e4d466d',1,'Config::Menu()'],['../classMenu.html#af68aba17029de91b02b05f102ca63f37',1,'Menu::Menu(const Config &amp;config)'],['../classMenu.html#a1fb469a852bcd1eea11afa514aa3fed8',1,'Menu::Menu(const Menu &amp;menu)=delete']]],
+  ['menu_6',['Menu',['../classMenu.html',1,'Menu'],['../classConfig.html#a834cec0fab7efabab3cd53540e4d466d',1,'Config::Menu'],['../classMenu.html#af68aba17029de91b02b05f102ca63f37',1,'Menu::Menu(const Config &amp;config)'],['../classMenu.html#a1fb469a852bcd1eea11afa514aa3fed8',1,'Menu::Menu(const Menu &amp;menu)=delete']]],
   ['menu_2ecpp_7',['Menu.cpp',['../Menu_8cpp.html',1,'']]],
   ['menu_2eh_8',['Menu.h',['../Menu_8h.html',1,'']]],
   ['motion_9',['motion',['../classgg_1_1GgTrackball.html#a9613e5e3f4e41561938f8372ac8f55f2',1,'gg::GgTrackball']]],

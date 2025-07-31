@@ -1,5 +1,7 @@
 <map id="gg::GgTexture::getSize" name="gg::GgTexture::getSize">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,161,56"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgTexture.html#a352d7fd4fa497ffe06e3d774a29735a0" title=" " alt="" coords="209,5,376,31"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgTexture.html#a0990799facf6f2affd41be247f5ce9f1" title=" " alt="" coords="211,55,375,80"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,161,57"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgTexture.html#a352d7fd4fa497ffe06e3d774a29735a0" title=" " alt="" coords="209,5,375,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,32,193,28,193,33,161,37"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgTexture.html#a0990799facf6f2affd41be247f5ce9f1" title=" " alt="" coords="210,56,374,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="161,51,195,55,194,60,161,56"/>
 </map>

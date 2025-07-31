@@ -1,4 +1,5 @@
 <map id="gg::ggCross" name="gg::ggCross">
-<area shape="rect" id="node1" title=" " alt="" coords="145,5,237,31"/>
-<area shape="rect" id="node2" href="$namespacegg.html#a3e4152d613985419556992a591628dc2" title=" " alt="" coords="5,5,97,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="145,5,236,32"/>
+<area shape="rect" id="Node000002" href="$namespacegg.html#a3e4152d613985419556992a591628dc2" title=" " alt="" coords="5,5,97,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,21,97,21,97,16,129,16"/>
 </map>

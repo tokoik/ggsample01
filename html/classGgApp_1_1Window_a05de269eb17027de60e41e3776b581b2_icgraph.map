@@ -1,4 +1,5 @@
 <map id="GgApp::Window::getControlArrowX" name="GgApp::Window::getControlArrowX">
-<area shape="rect" id="node1" title=" " alt="" coords="236,5,419,45"/>
-<area shape="rect" id="node2" href="$classGgApp_1_1Window.html#a95461db15ac62a3f5200d9563d245d1d" title=" " alt="" coords="5,5,188,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="236,5,418,48"/>
+<area shape="rect" id="Node000002" href="$classGgApp_1_1Window.html#a95461db15ac62a3f5200d9563d245d1d" title=" " alt="" coords="5,5,188,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="220,29,188,29,188,24,220,24"/>
 </map>

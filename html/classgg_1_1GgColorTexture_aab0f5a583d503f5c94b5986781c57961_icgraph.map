@@ -1,4 +1,7 @@
 <map id="gg::GgColorTexture::load" name="gg::GgColorTexture::load">
-<area shape="rect" id="node1" title=" " alt="" coords="188,5,323,45"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgColorTexture.html#ae8565003fd5b169fe21027803d642ec1" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="187,39,320,81"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgColorTexture.html#ae8565003fd5b169fe21027803d642ec1" title=" " alt="" coords="5,5,139,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,48,138,42,139,36,172,42"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgColorTexture.html#a903ecf406da9f95a19dc908d00bdf229" title=" " alt="" coords="5,72,139,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="172,78,139,84,138,78,171,72"/>
 </map>

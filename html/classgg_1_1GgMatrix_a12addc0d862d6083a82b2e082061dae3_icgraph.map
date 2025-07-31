@@ -1,4 +1,5 @@
 <map id="gg::GgMatrix::loadIdentity" name="gg::GgMatrix::loadIdentity">
-<area shape="rect" id="node1" title=" " alt="" coords="153,5,324,31"/>
-<area shape="rect" id="node2" href="$namespacegg.html#afca3af3d6f73db24e8309a0f83592356" title=" " alt="" coords="5,5,105,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="153,5,323,32"/>
+<area shape="rect" id="Node000002" href="$namespacegg.html#afca3af3d6f73db24e8309a0f83592356" title=" " alt="" coords="5,5,105,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,21,105,21,105,16,137,16"/>
 </map>

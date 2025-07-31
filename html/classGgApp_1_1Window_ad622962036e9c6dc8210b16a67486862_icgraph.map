@@ -1,4 +1,5 @@
 <map id="GgApp::Window::getShiftArrowY" name="GgApp::Window::getShiftArrowY">
-<area shape="rect" id="node1" title=" " alt="" coords="255,5,465,31"/>
-<area shape="rect" id="node2" href="$classGgApp_1_1Window.html#a2201654415ccd466ce8c2e25de831e7f" title=" " alt="" coords="5,5,207,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="254,5,463,32"/>
+<area shape="rect" id="Node000002" href="$classGgApp_1_1Window.html#a2201654415ccd466ce8c2e25de831e7f" title=" " alt="" coords="5,5,206,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,21,206,21,206,16,238,16"/>
 </map>

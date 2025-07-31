@@ -1,4 +1,5 @@
 <map id="gg::GgPoints" name="gg::GgPoints">
-<area shape="rect" id="node1" title=" " alt="" coords="5,79,104,104"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgShape.html" title=" " alt="" coords="5,5,104,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,103,107"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgShape.html" title=" " alt="" coords="5,5,103,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="57,48,57,80,51,80,51,48"/>
 </map>

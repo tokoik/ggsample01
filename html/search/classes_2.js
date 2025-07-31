@@ -20,5 +20,6 @@ var searchData=
   ['gguniformbuffer_3c_20light_20_3e_17',['GgUniformBuffer&lt; Light &gt;',['../classgg_1_1GgUniformBuffer.html',1,'gg']]],
   ['gguniformbuffer_3c_20material_20_3e_18',['GgUniformBuffer&lt; Material &gt;',['../classgg_1_1GgUniformBuffer.html',1,'gg']]],
   ['ggvector_19',['GgVector',['../classgg_1_1GgVector.html',1,'gg']]],
-  ['ggvertex_20',['GgVertex',['../structgg_1_1GgVertex.html',1,'gg']]]
+  ['ggvertex_20',['GgVertex',['../structgg_1_1GgVertex.html',1,'gg']]],
+  ['ggvertexarray_21',['GgVertexArray',['../classgg_1_1GgVertexArray.html',1,'gg']]]
 ];

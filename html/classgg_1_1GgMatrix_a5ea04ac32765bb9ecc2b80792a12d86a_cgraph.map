@@ -1,5 +1,7 @@
 <map id="gg::GgMatrix::scale" name="gg::GgMatrix::scale">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,141,56"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgMatrix.html#ac260bb9eaa56ea8e07894566cd9f9dce" title=" " alt="" coords="189,5,352,31"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgMatrix.html#ab74f171ed21474bc9970d2765f92e6c7" title=" " alt="" coords="192,55,349,80"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,141,57"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgMatrix.html#ac260bb9eaa56ea8e07894566cd9f9dce" title=" " alt="" coords="189,5,350,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,33,173,28,173,34,141,38"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgMatrix.html#ab74f171ed21474bc9970d2765f92e6c7" title=" " alt="" coords="191,56,348,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="141,50,176,55,175,60,141,55"/>
 </map>

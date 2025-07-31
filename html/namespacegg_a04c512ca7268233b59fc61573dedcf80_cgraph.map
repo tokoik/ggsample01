@@ -1,7 +1,11 @@
 <map id="gg::ggElementsSphere" name="gg::ggElementsSphere">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,160,32"/>
-<area shape="rect" id="node2" href="$namespacegg.html#afe1fcb205a0f34a31eda2d2eb4012084" title=" " alt="" coords="208,5,353,32"/>
-<area shape="rect" id="node3" href="$namespacegg.html#accd75f02070ef57b1da0dccdec3fdd66" title=" " alt="" coords="401,5,524,32"/>
-<area shape="rect" id="node4" href="$namespacegg.html#a837850150a8293353ade7900452955b2" title=" " alt="" coords="572,5,676,32"/>
-<area shape="rect" id="node5" href="$namespacegg.html#a4e49aff9138ef05a803f1ee703d0f67f" title=" " alt="" coords="724,5,809,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,159,32"/>
+<area shape="rect" id="Node000002" href="$namespacegg.html#afe1fcb205a0f34a31eda2d2eb4012084" title=" " alt="" coords="207,5,351,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,16,191,16,191,21,159,21"/>
+<area shape="rect" id="Node000003" href="$namespacegg.html#accd75f02070ef57b1da0dccdec3fdd66" title=" " alt="" coords="399,5,521,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="351,16,384,16,384,21,351,21"/>
+<area shape="rect" id="Node000004" href="$namespacegg.html#a837850150a8293353ade7900452955b2" title=" " alt="" coords="569,5,673,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="522,16,554,16,554,21,522,21"/>
+<area shape="rect" id="Node000005" href="$namespacegg.html#a4e49aff9138ef05a803f1ee703d0f67f" title=" " alt="" coords="721,5,805,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="673,16,705,16,705,21,673,21"/>
 </map>

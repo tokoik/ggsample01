@@ -3,16 +3,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: Menu.h ソースファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -34,7 +36,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.5 -->
+<!-- 構築: Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
@@ -46,11 +48,16 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -64,7 +71,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('Menu_8h_source.html',''); initResizable(); });
+$(function(){initNavTree('Menu_8h_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -102,6 +109,7 @@ $(document).ready(function(){initNavTree('Menu_8h_source.html',''); initResizabl
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// ファイルダイアログ</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;nfd.h&quot;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classMenu.html">   20</a></span><span class="keyword">class </span><a class="code hl_class" href="classMenu.html">Menu</a></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="comment">// 図形の描画クラスから参照する</span></div>
@@ -127,7 +135,7 @@ $(document).ready(function(){initNavTree('Menu_8h_source.html',''); initResizabl
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <a class="code hl_class" href="classMenu.html">Menu</a>(<span class="keyword">const</span> <a class="code hl_class" href="classConfig.html">Config</a>&amp; config);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <a class="code hl_function" href="classMenu.html#af68aba17029de91b02b05f102ca63f37">Menu</a>(<span class="keyword">const</span> <a class="code hl_class" href="classConfig.html">Config</a>&amp; config);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="comment">// コピーコンストラクタは封じる</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classMenu.html#a1fb469a852bcd1eea11afa514aa3fed8">   51</a></span>  <a class="code hl_function" href="classMenu.html#a1fb469a852bcd1eea11afa514aa3fed8">Menu</a>(<span class="keyword">const</span> <a class="code hl_class" href="classMenu.html">Menu</a>&amp; menu) = <span class="keyword">delete</span>;</div>
@@ -139,21 +147,23 @@ $(document).ready(function(){initNavTree('Menu_8h_source.html',''); initResizabl
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classMenu.html#a2cd7ab9901a8f42a3ae977d0774398a6">draw</a>();</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
+</div>
 <div class="ttc" id="aConfig_8h_html"><div class="ttname"><a href="Config_8h.html">Config.h</a></div></div>
-<div class="ttc" id="aclassConfig_html"><div class="ttname"><a href="classConfig.html">Config</a></div><div class="ttdef"><b>Definition:</b> <a href="Config_8h_source.html#l00040">Config.h:41</a></div></div>
-<div class="ttc" id="aclassDraw_html"><div class="ttname"><a href="classDraw.html">Draw</a></div><div class="ttdef"><b>Definition:</b> <a href="Draw_8h_source.html#l00017">Draw.h:18</a></div></div>
-<div class="ttc" id="aclassMenu_html"><div class="ttname"><a href="classMenu.html">Menu</a></div><div class="ttdef"><b>Definition:</b> <a href="Menu_8h_source.html#l00020">Menu.h:21</a></div></div>
+<div class="ttc" id="aclassConfig_html"><div class="ttname"><a href="classConfig.html">Config</a></div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00020">Config.h:21</a></div></div>
+<div class="ttc" id="aclassDraw_html"><div class="ttname"><a href="classDraw.html">Draw</a></div><div class="ttdef"><b>Definition</b> <a href="Draw_8h_source.html#l00017">Draw.h:18</a></div></div>
+<div class="ttc" id="aclassMenu_html"><div class="ttname"><a href="classMenu.html">Menu</a></div><div class="ttdef"><b>Definition</b> <a href="#l00020">Menu.h:21</a></div></div>
 <div class="ttc" id="aclassMenu_html_a1fb469a852bcd1eea11afa514aa3fed8"><div class="ttname"><a href="classMenu.html#a1fb469a852bcd1eea11afa514aa3fed8">Menu::Menu</a></div><div class="ttdeci">Menu(const Menu &amp;menu)=delete</div></div>
-<div class="ttc" id="aclassMenu_html_a2cd7ab9901a8f42a3ae977d0774398a6"><div class="ttname"><a href="classMenu.html#a2cd7ab9901a8f42a3ae977d0774398a6">Menu::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdef"><b>Definition:</b> <a href="Menu_8cpp_source.html#l00074">Menu.cpp:74</a></div></div>
+<div class="ttc" id="aclassMenu_html_a2cd7ab9901a8f42a3ae977d0774398a6"><div class="ttname"><a href="classMenu.html#a2cd7ab9901a8f42a3ae977d0774398a6">Menu::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdef"><b>Definition</b> <a href="Menu_8cpp_source.html#l00074">Menu.cpp:74</a></div></div>
 <div class="ttc" id="aclassMenu_html_a4959822a63a56fc22f664598ff81313a"><div class="ttname"><a href="classMenu.html#a4959822a63a56fc22f664598ff81313a">Menu::operator=</a></div><div class="ttdeci">Menu &amp; operator=(const Menu &amp;menu)=delete</div></div>
-<div class="ttc" id="aclassMenu_html_a831387f51358cfb88cd018e1777bc980"><div class="ttname"><a href="classMenu.html#a831387f51358cfb88cd018e1777bc980">Menu::~Menu</a></div><div class="ttdeci">virtual ~Menu()</div><div class="ttdef"><b>Definition:</b> <a href="Menu_8cpp_source.html#l00049">Menu.cpp:49</a></div></div>
+<div class="ttc" id="aclassMenu_html_a831387f51358cfb88cd018e1777bc980"><div class="ttname"><a href="classMenu.html#a831387f51358cfb88cd018e1777bc980">Menu::~Menu</a></div><div class="ttdeci">virtual ~Menu()</div><div class="ttdef"><b>Definition</b> <a href="Menu_8cpp_source.html#l00049">Menu.cpp:49</a></div></div>
+<div class="ttc" id="aclassMenu_html_af68aba17029de91b02b05f102ca63f37"><div class="ttname"><a href="classMenu.html#af68aba17029de91b02b05f102ca63f37">Menu::Menu</a></div><div class="ttdeci">Menu(const Config &amp;config)</div><div class="ttdef"><b>Definition</b> <a href="Menu_8cpp_source.html#l00013">Menu.cpp:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="Menu_8h.html">Menu.h</a></li>
-    <li class="footer">2023年01月03日(火) 18時18分38秒作成 - ゲームグラフィックス特論 / 構成:  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

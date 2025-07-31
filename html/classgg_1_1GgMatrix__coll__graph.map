@@ -1,4 +1,5 @@
 <map id="gg::GgMatrix" name="gg::GgMatrix">
-<area shape="rect" id="node1" title=" " alt="" coords="24,93,121,119"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="24,96,120,123"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,139,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,64,75,95,69,95,69,64"/>
 </map>

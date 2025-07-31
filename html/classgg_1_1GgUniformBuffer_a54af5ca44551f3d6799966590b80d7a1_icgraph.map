@@ -1,4 +1,0 @@
-<map id="gg::GgUniformBuffer::fill" name="gg::GgUniformBuffer::fill">
-<area shape="rect" id="node1" title="ユニフォームバッファオブジェクトの全ブロックのメンバーを同じデータを格納する." alt="" coords="192,5,331,47"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgUniformBuffer.html#a94c5c828711212b404a18dcd1cc9e9b0" title="ユニフォームバッファオブジェクトを確保して全てのブロックに同じデータを格納する." alt="" coords="5,5,144,47"/>
-</map>

@@ -1,5 +1,7 @@
 <map id="gg::GgQuaternion::loadInvert" name="gg::GgQuaternion::loadInvert">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,192,56"/>
-<area shape="rect" id="node2" href="$namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title=" " alt="" coords="305,5,390,31"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgQuaternion.html#af9a9577581a5f9bbebd675998f741215" title=" " alt="" coords="240,55,455,80"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,191,57"/>
+<area shape="rect" id="Node000002" href="$namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title=" " alt="" coords="303,5,388,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,32,288,22,288,27,191,37"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgQuaternion.html#af9a9577581a5f9bbebd675998f741215" title=" " alt="" coords="239,56,452,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="191,51,223,54,223,59,191,56"/>
 </map>

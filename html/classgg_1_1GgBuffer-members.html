@@ -3,16 +3,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: メンバ一覧</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -34,7 +36,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.5 -->
+<!-- 構築: Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
@@ -46,7 +48,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -64,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classgg_1_1GgBuffer.html',''); initResizable(); });
+$(function(){initNavTree('classgg_1_1GgBuffer.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -103,10 +105,12 @@ $(document).ready(function(){initNavTree('classgg_1_1GgBuffer.html',''); initRes
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html#ad47094790f7d71b016ff9e3c677eea30">getStride</a>() const</td><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html">gg::GgBuffer&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html#ac4ee0321f9137cb3e8515d4706e363e9">getTarget</a>() const</td><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html">gg::GgBuffer&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html#a6073ce01bd09b5a2b4893e33c108167e">GgBuffer</a>(GLenum target, const T *data, GLsizei stride, GLsizei count, GLenum usage)</td><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html">gg::GgBuffer&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html#aa2b2fee4dcddc7d4781fdfc38987e2d6">GgBuffer</a>(const GgBuffer&lt; T &gt; &amp;o)=delete</td><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html">gg::GgBuffer&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html#aa24e72390ee3728bbba12e04aa5a6986">map</a>() const</td><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html">gg::GgBuffer&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html#a9b567fbd4e34c730b30d4320ccc86a6a">map</a>(GLint first, GLsizei count) const</td><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html">gg::GgBuffer&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html#aae9aefb58bb2cdc23de14668e4e7d8f5">operator=</a>(const GgBuffer&lt; T &gt; &amp;o)=delete</td><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html">gg::GgBuffer&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html#a294c71621a6e6b1368fe20e3858b64ec">GgBuffer</a>(const GgBuffer&lt; T &gt; &amp;buffer)=delete</td><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html">gg::GgBuffer&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html#a175e7b30946f1040bf9f35d9af8430aa">GgBuffer</a>(GgBuffer&lt; T &gt; &amp;&amp;buffer)=default</td><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html">gg::GgBuffer&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html#aa24e72390ee3728bbba12e04aa5a6986">map</a>() const</td><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html">gg::GgBuffer&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html#a9b567fbd4e34c730b30d4320ccc86a6a">map</a>(GLint first, GLsizei count) const</td><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html">gg::GgBuffer&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html#a4fbe7fc6d7bc5b37fbb3667734c9618f">operator=</a>(const GgBuffer&lt; T &gt; &amp;buffer)=delete</td><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html">gg::GgBuffer&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html#ae4887f225747a37dee8fe73c7036f295">operator=</a>(GgBuffer&lt; T &gt; &amp;&amp;buffer)=default</td><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html">gg::GgBuffer&lt; T &gt;</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html#a42fb5b6c8f42841b6054d3313033b7c5">read</a>(T *data, GLint first, GLsizei count) const</td><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html">gg::GgBuffer&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html#a479120414c50643ebcfb93f3f2f59ed7">send</a>(const T *data, GLint first, GLsizei count) const</td><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html">gg::GgBuffer&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html#a83a3b8f42aceb85122012bf465ee7ff2">unbind</a>() const</td><td class="entry"><a class="el" href="classgg_1_1GgBuffer.html">gg::GgBuffer&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
@@ -117,7 +121,7 @@ $(document).ready(function(){initNavTree('classgg_1_1GgBuffer.html',''); initRes
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">2023年01月03日(火) 18時18分38秒作成 - ゲームグラフィックス特論 / 構成:  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

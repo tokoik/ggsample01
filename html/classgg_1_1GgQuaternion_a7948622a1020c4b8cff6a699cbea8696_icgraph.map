@@ -1,4 +1,5 @@
 <map id="gg::GgQuaternion::norm" name="gg::GgQuaternion::norm">
-<area shape="rect" id="node1" title=" " alt="" coords="143,5,304,31"/>
-<area shape="rect" id="node2" href="$namespacegg.html#aca5935d7314e7ba3f7d8043b56e04931" title=" " alt="" coords="5,5,95,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="142,5,302,32"/>
+<area shape="rect" id="Node000002" href="$namespacegg.html#aca5935d7314e7ba3f7d8043b56e04931" title=" " alt="" coords="5,5,94,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,21,94,21,94,16,126,16"/>
 </map>

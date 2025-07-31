@@ -1,4 +1,0 @@
-<map id="gg::GgTrackball::region" name="gg::GgTrackball::region">
-<area shape="rect" id="node1" title="トラックボール処理するマウスの移動範囲を指定する." alt="" coords="209,5,365,32"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgTrackball.html#af0ff2b315542776b0b465f5e166c4c8a" title="トラックボール処理するマウスの移動範囲を指定する." alt="" coords="5,5,161,32"/>
-</map>

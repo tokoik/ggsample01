@@ -1,4 +1,5 @@
 <map id="gg::ggSlerp" name="gg::ggSlerp">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,93,31"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#aa2ca6c2380083877c0d1014650f91d77" title=" " alt="" coords="141,5,328,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,93,32"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#aa2ca6c2380083877c0d1014650f91d77" title=" " alt="" coords="141,5,326,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,16,125,16,125,21,93,21"/>
 </map>

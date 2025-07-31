@@ -1,4 +1,5 @@
 <map id="gg::GgSimpleObj::draw" name="gg::GgSimpleObj::draw">
-<area shape="rect" id="node1" title=" " alt="" coords="140,5,296,31"/>
-<area shape="rect" id="node2" href="$classDraw.html#aada4b251dc995c26f468069654ec7207" title=" " alt="" coords="5,5,92,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="139,5,294,32"/>
+<area shape="rect" id="Node000002" href="$classDraw.html#aada4b251dc995c26f468069654ec7207" title=" " alt="" coords="5,5,91,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,21,91,21,91,16,123,16"/>
 </map>

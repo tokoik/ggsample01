@@ -34,6 +34,7 @@ var hierarchy =
       [ "gg::GgSimpleShader::MaterialBuffer", "classgg_1_1GgSimpleShader_1_1MaterialBuffer.html", null ]
     ] ],
     [ "gg::GgVertex", "structgg_1_1GgVertex.html", null ],
+    [ "gg::GgVertexArray", "classgg_1_1GgVertexArray.html", null ],
     [ "gg::GgSimpleShader::Light", "structgg_1_1GgSimpleShader_1_1Light.html", null ],
     [ "gg::GgSimpleShader::Material", "structgg_1_1GgSimpleShader_1_1Material.html", null ],
     [ "Menu", "classMenu.html", null ],

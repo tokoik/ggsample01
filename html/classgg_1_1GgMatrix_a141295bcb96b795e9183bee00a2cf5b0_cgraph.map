@@ -1,5 +1,0 @@
-<map id="gg::GgMatrix::operator+" name="gg::GgMatrix::operator+">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,165,32"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgMatrix.html#a0fc26568d9b238ad5aee964edca6a520" title="変換行列に配列に格納した変換行列を加算した値を返す." alt="" coords="213,5,340,32"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgMatrix.html#ad694f87a1ac084897fad1a94b6e91d3b" title="変換行列に配列に格納した変換行列を加算した結果を格納する." alt="" coords="388,5,540,32"/>
-</map>

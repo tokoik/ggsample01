@@ -1,9 +1,0 @@
-<map id="gg::GgUniformBuffer::getCount" name="gg::GgUniformBuffer::getCount">
-<area shape="rect" id="node1" title="データの数を取り出す." alt="" coords="379,104,517,145"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgUniformBuffer.html#a0ad63590a48c6a54e92b98a3f0d53242" title="別のバッファオブジェクトからデータを複写する." alt="" coords="192,5,331,47"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgUniformBuffer.html#a54af5ca44551f3d6799966590b80d7a1" title="ユニフォームバッファオブジェクトの全ブロックのメンバーを同じデータを格納する." alt="" coords="192,71,331,112"/>
-<area shape="rect" id="node5" href="$classgg_1_1GgUniformBuffer.html#ae9cc42d251faad15a2f506777d280c67" title="ユニフォームバッファオブジェクトからデータを抽出する." alt="" coords="192,136,331,177"/>
-<area shape="rect" id="node6" href="$classgg_1_1GgUniformBuffer.html#af998019f39e666887550170538e5ebd4" title="ユニフォームバッファオブジェクトを確保してユニフォームバッファオブジェクトのブロックごとのメンバを同じデータで埋める." alt="" coords="192,201,331,243"/>
-<area shape="rect" id="node4" href="$classgg_1_1GgUniformBuffer.html#a94c5c828711212b404a18dcd1cc9e9b0" title="ユニフォームバッファオブジェクトを確保して全てのブロックに同じデータを格納する." alt="" coords="5,71,144,112"/>
-<area shape="rect" id="node7" href="$classgg_1_1GgUniformBuffer.html#a1af7292924eb187968a4ea1a9221e9e7" title="ユニフォームバッファオブジェクトを確保してブロックごとにデータを転送する." alt="" coords="5,201,144,243"/>
-</map>

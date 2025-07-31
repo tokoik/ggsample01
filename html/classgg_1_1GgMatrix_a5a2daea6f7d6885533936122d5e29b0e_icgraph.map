@@ -1,6 +1,0 @@
-<map id="gg::GgMatrix::loadMultiply" name="gg::GgMatrix::loadMultiply">
-<area shape="rect" id="node1" title="変換行列に配列に格納した変換行列を乗算した結果を格納する." alt="" coords="441,31,616,57"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgMatrix.html#ad2aabbb700c3227cd7d26d3f18f4c109" title="変換行列に別の変換行列を乗算した結果を格納する." alt="" coords="219,5,393,32"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgMatrix.html#a26b49b75e4170fe443076d00e452c93a" title=" " alt="" coords="223,56,389,83"/>
-<area shape="rect" id="node4" href="$classgg_1_1GgMatrix.html#aca069f5ff9fda7b444c060a8b8f4c80c" title=" " alt="" coords="5,56,171,83"/>
-</map>

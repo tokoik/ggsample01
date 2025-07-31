@@ -1,5 +1,7 @@
 <map id="GgApp::Window::reset" name="GgApp::Window::reset">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,159,56"/>
-<area shape="rect" id="node2" href="$classGgApp_1_1Window.html#aa0e5bf92c55529a7ac9b5722528ae2b6" title=" " alt="" coords="214,5,415,31"/>
-<area shape="rect" id="node3" href="$classGgApp_1_1Window.html#a7fbe5cd9550549cce2eb0c148653ac39" title=" " alt="" coords="207,55,423,80"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,158,57"/>
+<area shape="rect" id="Node000002" href="$classGgApp_1_1Window.html#aa0e5bf92c55529a7ac9b5722528ae2b6" title=" " alt="" coords="213,5,414,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,33,197,29,198,34,158,38"/>
+<area shape="rect" id="Node000003" href="$classGgApp_1_1Window.html#a7fbe5cd9550549cce2eb0c148653ac39" title=" " alt="" coords="206,56,421,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="158,50,190,53,190,59,158,55"/>
 </map>

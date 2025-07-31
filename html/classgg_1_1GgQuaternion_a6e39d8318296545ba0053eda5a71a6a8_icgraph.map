@@ -1,4 +1,14 @@
 <map id="gg::GgQuaternion::getMatrix" name="gg::GgQuaternion::getMatrix">
-<area shape="rect" id="node1" title=" " alt="" coords="240,5,427,31"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a7a551bed8460169b910c5a6c7fdc389a" title=" " alt="" coords="5,5,192,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="476,81,661,108"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="609,69,595,62,569,60,544,62,531,67,528,72,534,79,529,83,522,73,527,63,543,57,569,55,597,57,611,64"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#a7a551bed8460169b910c5a6c7fdc389a" title=" " alt="" coords="243,5,428,32"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="516,78,427,47,389,35,390,30,429,41,518,73"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgTrackball.html#a9613e5e3f4e41561938f8372ac8f55f2" title=" " alt="" coords="256,56,415,83"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="460,86,415,81,416,75,461,80"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgTrackball.html#aaaa41ddff91ff91173133d478356b836" title=" " alt="" coords="261,107,410,133"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="461,109,411,115,410,109,460,104"/>
+<area shape="rect" id="Node000006" href="$classgg_1_1GgTrackball.html#adbf3c13a6442309c79bd3185fa74a0a4" title=" " alt="" coords="259,157,412,184"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="518,116,429,148,390,159,389,154,427,143,516,111"/>
+<area shape="rect" id="Node000005" href="$classgg_1_1GgTrackball.html#a880dce99e0a666536802659963971c50" title=" " alt="" coords="5,107,195,133"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="245,123,195,123,195,117,245,117"/>
 </map>

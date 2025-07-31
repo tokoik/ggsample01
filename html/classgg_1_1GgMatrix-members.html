@@ -3,16 +3,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: メンバ一覧</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -34,7 +36,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.5 -->
+<!-- 構築: Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
@@ -46,7 +48,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -64,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classgg_1_1GgMatrix.html',''); initResizable(); });
+$(function(){initNavTree('classgg_1_1GgMatrix.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -99,10 +101,12 @@ $(document).ready(function(){initNavTree('classgg_1_1GgMatrix.html',''); initRes
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a9a6f11c693067762d00d4a8f19d678f0">frustum</a>(GLfloat left, GLfloat right, GLfloat bottom, GLfloat top, GLfloat zNear, GLfloat zFar) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a85419e1b591aa77fda6a908dab1d9468">get</a>() const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#ae6e115adbafcb42800d05b56ebfa4fdb">get</a>(GLfloat *a) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#ab1de53bb57c829ec7155c60abc154886">GgMatrix</a>()</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a0b02e5282a686d3276d2dfb23a70484b">GgMatrix</a>()=default</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#af34f785f3b2ad4fde228dbb9b5e860fb">GgMatrix</a>(GLfloat m00, GLfloat m01, GLfloat m02, GLfloat m03, GLfloat m10, GLfloat m11, GLfloat m12, GLfloat m13, GLfloat m20, GLfloat m21, GLfloat m22, GLfloat m23, GLfloat m30, GLfloat m31, GLfloat m32, GLfloat m33)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a970a6991bc17ef5a2baabe23bf4632c9">GgMatrix</a>(GLfloat c)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a9347d0840078e7f4dd08d0e9b0fb42ce">GgMatrix</a>(const GLfloat *a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a20e1c524a6352afce5fd78de153a7941">GgMatrix</a>(const GLfloat *a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a970a6991bc17ef5a2baabe23bf4632c9">GgMatrix</a>(GLfloat c)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a8e1880ee693628ef03c1d3e90d1fe50f">GgMatrix</a>(const GgMatrix &amp;m)=default</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a811f5a68324335ff26a476dab51abe39">GgMatrix</a>(GgMatrix &amp;&amp;m)=default</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a899cc6209060b580bc14b1a45f9c302c">invert</a>() const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a13f26dafecce8177574108ada080471b">loadFrustum</a>(GLfloat left, GLfloat right, GLfloat bottom, GLfloat top, GLfloat zNear, GLfloat zFar)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a12addc0d862d6083a82b2e082061dae3">loadIdentity</a>()</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
@@ -152,6 +156,8 @@ $(document).ready(function(){initNavTree('classgg_1_1GgMatrix.html',''); initRes
   <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#aa078aff74fde602835eb40e27b27839a">operator/</a>(const GgMatrix &amp;m) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#aba57513ebc65d37bc8b82dd080a87bae">operator/=</a>(const GLfloat *a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a3d2fc2cd5e3a86e2883acc1c5acef01c">operator/=</a>(const GgMatrix &amp;m)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a77ce78fe534d5ca4c02d1958a560a3f5">operator=</a>(const GgMatrix &amp;m)=default</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a544ed944aa670100bc7408eea7c4da09">operator=</a>(GgMatrix &amp;&amp;m)=default</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a1f5f1ebb10022d1f019f079514ce45db">operator=</a>(const GLfloat *a)</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#ab9cb6439fd594e523d39a4efd8eb0f86">orthogonal</a>(GLfloat left, GLfloat right, GLfloat bottom, GLfloat top, GLfloat zNear, GLfloat zFar) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#afcd829d6ee34cf494c96e9d6ca1e6192">perspective</a>(GLfloat fovy, GLfloat aspect, GLfloat zNear, GLfloat zFar) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
@@ -174,12 +180,13 @@ $(document).ready(function(){initNavTree('classgg_1_1GgMatrix.html',''); initRes
   <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#a00b38f04088224a02c6ebf393e355f0e">translate</a>(const GLfloat *t) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#aef22dbd307afa5ec7e40d6d2d12c53f2">translate</a>(const GgVector &amp;t) const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#adf560abf2a3a5fd8a8fdcb5c1a99709c">transpose</a>() const</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html#aed403705e51c6d03a61d29c6a2ad519c">~GgMatrix</a>()=default</td><td class="entry"><a class="el" href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">2023年01月03日(火) 18時18分38秒作成 - ゲームグラフィックス特論 / 構成:  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

@@ -1,7 +1,7 @@
 var classgg_1_1GgTrackball =
 [
     [ "GgTrackball", "classgg_1_1GgTrackball.html#a880dce99e0a666536802659963971c50", null ],
-    [ "~GgTrackball", "classgg_1_1GgTrackball.html#a74d0719b05f0b8957ba3c3e48333fb16", null ],
+    [ "~GgTrackball", "classgg_1_1GgTrackball.html#ae1cbb2773fc61437c86a8f4641e32f12", null ],
     [ "begin", "classgg_1_1GgTrackball.html#aa747232a05539a110b77d93b09dfffca", null ],
     [ "end", "classgg_1_1GgTrackball.html#a4f56d59aadba0be3e8196971828382a1", null ],
     [ "get", "classgg_1_1GgTrackball.html#a3b813cad1a0580e0121b7e873c1fcd5d", null ],

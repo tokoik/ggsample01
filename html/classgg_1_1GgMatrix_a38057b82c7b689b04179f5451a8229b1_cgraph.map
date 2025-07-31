@@ -1,4 +1,0 @@
-<map id="gg::GgMatrix::loadSubtract" name="gg::GgMatrix::loadSubtract">
-<area shape="rect" id="node1" title="変換行列から別の変換行列を減算した結果を格納する." alt="" coords="5,5,184,32"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgMatrix.html#a19ba92d5135daf0bbea3fc76941c1fee" title="変換行列から配列に格納した変換行列を減算した結果を格納する." alt="" coords="232,5,411,32"/>
-</map>

@@ -1,6 +1,9 @@
 <map id="gg::ggLoadSimpleObj" name="gg::ggLoadSimpleObj">
-<area shape="rect" id="node1" title=" " alt="" coords="260,55,407,80"/>
-<area shape="rect" id="node2" href="$namespacegg.html#a301666163fe82d79f1bba928a0461a4d" title=" " alt="" coords="51,5,167,31"/>
-<area shape="rect" id="node3" href="$namespacegg.html#a54a9b023f3d76b729fd4fd9ade5ecbc7" title=" " alt="" coords="42,55,175,80"/>
-<area shape="rect" id="node4" href="$classgg_1_1GgSimpleObj.html#a1c0520c2ec7c7edb38550aae324c0cd6" title=" " alt="" coords="5,104,212,129"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="259,56,404,83"/>
+<area shape="rect" id="Node000002" href="$namespacegg.html#a27430d60881b68061b8a8093cfac74ce" title=" " alt="" coords="50,5,166,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="254,55,166,34,167,29,255,49"/>
+<area shape="rect" id="Node000003" href="$namespacegg.html#a6b3f7b9af6577d60e0a6702fa7c1b3f7" title=" " alt="" coords="42,56,174,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="244,72,175,72,175,67,244,67"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgSimpleObj.html#a1c0520c2ec7c7edb38550aae324c0cd6" title=" " alt="" coords="5,107,211,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="255,89,171,109,169,103,254,84"/>
 </map>

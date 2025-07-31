@@ -1,4 +1,0 @@
-<map id="gg::GgSimpleShader::LightBuffer::loadAmbient" name="gg::GgSimpleShader::LightBuffer::loadAmbient">
-<area shape="rect" id="node1" title="光源の強度の環境光成分を設定する." alt="" coords="5,5,176,47"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgUniformBuffer.html#af998019f39e666887550170538e5ebd4" title="ユニフォームバッファオブジェクトを確保してユニフォームバッファオブジェクトのブロックごとのメンバを同じデータで埋める." alt="" coords="224,5,363,47"/>
-</map>

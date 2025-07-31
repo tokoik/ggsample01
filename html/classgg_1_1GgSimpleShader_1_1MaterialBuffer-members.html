@@ -3,16 +3,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: メンバ一覧</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -34,7 +36,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.5 -->
+<!-- 構築: Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
@@ -46,7 +48,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -64,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('classgg_1_1GgSimpleShader_1_1MaterialBuffer.html',''); initResizable(); });
+$(function(){initNavTree('classgg_1_1GgSimpleShader_1_1MaterialBuffer.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -111,14 +113,18 @@ $(document).ready(function(){initNavTree('classgg_1_1GgSimpleShader_1_1MaterialB
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgUniformBuffer.html#a1af7292924eb187968a4ea1a9221e9e7">GgUniformBuffer&lt; Material &gt;::load</a>(const Material *data, GLsizei count, GLenum usage=GL_STATIC_DRAW)</td><td class="entry"><a class="el" href="classgg_1_1GgUniformBuffer.html">gg::GgUniformBuffer&lt; Material &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgUniformBuffer.html#a94c5c828711212b404a18dcd1cc9e9b0">GgUniformBuffer&lt; Material &gt;::load</a>(const Material &amp;data, GLsizei count, GLenum usage=GL_STATIC_DRAW)</td><td class="entry"><a class="el" href="classgg_1_1GgUniformBuffer.html">gg::GgUniformBuffer&lt; Material &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#a2362bd0ba0eadfba2e11c6322f5357ea">loadAmbient</a>(GLfloat r, GLfloat g, GLfloat b, GLfloat a=1.0f, GLint first=0, GLsizei count=1) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html">gg::GgSimpleShader::MaterialBuffer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#a683763773afb44009cbca19b1ef40ace">loadAmbient</a>(const GLfloat *ambient, GLint first=0, GLsizei count=1) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html">gg::GgSimpleShader::MaterialBuffer</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#ac6fdf62b08115efab0c068313eae404f">loadAmbientAndDiffuse</a>(GLfloat r, GLfloat g, GLfloat b, GLfloat a=1.0f, GLint first=0, GLsizei count=1) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html">gg::GgSimpleShader::MaterialBuffer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#a1fd1234a547efafc6e4d1c1969c552e5">loadAmbient</a>(const GgVector &amp;ambient, GLint first=0, GLsizei count=1) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html">gg::GgSimpleShader::MaterialBuffer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#a683763773afb44009cbca19b1ef40ace">loadAmbient</a>(const GLfloat *ambient, GLint first=0, GLsizei count=1) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html">gg::GgSimpleShader::MaterialBuffer</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#ac6fdf62b08115efab0c068313eae404f">loadAmbientAndDiffuse</a>(GLfloat r, GLfloat g, GLfloat b, GLfloat a=1.0f, GLint first=0, GLsizei count=1) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html">gg::GgSimpleShader::MaterialBuffer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#a3557fcdfe2079748f64e350311760cc7">loadAmbientAndDiffuse</a>(const GgVector &amp;color, GLint first=0, GLsizei count=1) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html">gg::GgSimpleShader::MaterialBuffer</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#a137e456268648c0cb0d588efb3ec43db">loadAmbientAndDiffuse</a>(const GLfloat *color, GLint first=0, GLsizei count=1) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html">gg::GgSimpleShader::MaterialBuffer</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#ae73be670a4aa8a4c3b316988b5357561">loadDiffuse</a>(GLfloat r, GLfloat g, GLfloat b, GLfloat a=1.0f, GLint first=0, GLsizei count=1) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html">gg::GgSimpleShader::MaterialBuffer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#aa21bc29a20ebdd31ca4d8e5b78d6b4fe">loadDiffuse</a>(const GLfloat *diffuse, GLint first=0, GLsizei count=1) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html">gg::GgSimpleShader::MaterialBuffer</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#a06ed0bb3f14b3f34ec2d96b5c4ef46e2">loadShininess</a>(GLfloat shininess, GLint first=0, GLsizei count=1) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html">gg::GgSimpleShader::MaterialBuffer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#a86609495863a6a126b8ebf799ed9f40a">loadShininess</a>(const GLfloat *shininess, GLint first=0, GLsizei count=1) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html">gg::GgSimpleShader::MaterialBuffer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#a51f6f04e85233f86139bef53b49c352b">loadSpecular</a>(GLfloat r, GLfloat g, GLfloat b, GLfloat a=1.0f, GLint first=0, GLsizei count=1) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html">gg::GgSimpleShader::MaterialBuffer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#a6fc7787a0723c1204839d86806e41211">loadDiffuse</a>(const GgVector &amp;diffuse, GLint first=0, GLsizei count=1) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html">gg::GgSimpleShader::MaterialBuffer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#aa21bc29a20ebdd31ca4d8e5b78d6b4fe">loadDiffuse</a>(const GLfloat *diffuse, GLint first=0, GLsizei count=1) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html">gg::GgSimpleShader::MaterialBuffer</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#a06ed0bb3f14b3f34ec2d96b5c4ef46e2">loadShininess</a>(GLfloat shininess, GLint first=0, GLsizei count=1) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html">gg::GgSimpleShader::MaterialBuffer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#a86609495863a6a126b8ebf799ed9f40a">loadShininess</a>(const GLfloat *shininess, GLint first=0, GLsizei count=1) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html">gg::GgSimpleShader::MaterialBuffer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#a51f6f04e85233f86139bef53b49c352b">loadSpecular</a>(GLfloat r, GLfloat g, GLfloat b, GLfloat a=1.0f, GLint first=0, GLsizei count=1) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html">gg::GgSimpleShader::MaterialBuffer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#aff60f66132bf688d9cbcb363be916d90">loadSpecular</a>(const GgVector &amp;specular, GLint first=0, GLsizei count=1) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html">gg::GgSimpleShader::MaterialBuffer</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#a454f09ee0599eb06e0c3d6d6024ce76a">loadSpecular</a>(const GLfloat *specular, GLint first=0, GLsizei count=1) const</td><td class="entry"><a class="el" href="classgg_1_1GgSimpleShader_1_1MaterialBuffer.html">gg::GgSimpleShader::MaterialBuffer</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">map</a>() const</td><td class="entry"><a class="el" href="classgg_1_1GgUniformBuffer.html">gg::GgUniformBuffer&lt; Material &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classgg_1_1GgUniformBuffer.html#ab2722c9543743039dcde0becd8329d30">map</a>(GLint first, GLsizei count) const</td><td class="entry"><a class="el" href="classgg_1_1GgUniformBuffer.html">gg::GgUniformBuffer&lt; Material &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
@@ -136,7 +142,7 @@ $(document).ready(function(){initNavTree('classgg_1_1GgSimpleShader_1_1MaterialB
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">2023年01月03日(火) 18時18分38秒作成 - ゲームグラフィックス特論 / 構成:  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

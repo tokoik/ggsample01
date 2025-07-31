@@ -1,5 +1,7 @@
 <map id="GgApp::Window::getFboSize" name="GgApp::Window::getFboSize">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,196,56"/>
-<area shape="rect" id="node2" href="$classGgApp_1_1Window.html#a65f86fe33c40b5ca0f374484df5a2132" title=" " alt="" coords="244,5,445,31"/>
-<area shape="rect" id="node3" href="$classGgApp_1_1Window.html#aa9584690e81de333b5ede0e10b184212" title=" " alt="" coords="245,55,444,80"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,195,57"/>
+<area shape="rect" id="Node000002" href="$classGgApp_1_1Window.html#a65f86fe33c40b5ca0f374484df5a2132" title=" " alt="" coords="243,5,443,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,31,227,28,227,33,195,37"/>
+<area shape="rect" id="Node000003" href="$classGgApp_1_1Window.html#aa9584690e81de333b5ede0e10b184212" title=" " alt="" coords="244,56,442,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="195,51,229,55,228,60,195,57"/>
 </map>

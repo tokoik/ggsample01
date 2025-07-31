@@ -1,6 +1,17 @@
 <map id="gg::GgQuaternion::loadSlerp" name="gg::GgQuaternion::loadSlerp">
-<area shape="rect" id="node1" title=" " alt="" coords="376,31,563,56"/>
-<area shape="rect" id="node2" href="$namespacegg.html#a191d7b15d7374dfc6fa5243e3b667537" title=" " alt="" coords="191,5,279,31"/>
-<area shape="rect" id="node4" href="$classgg_1_1GgQuaternion.html#aff9ca9585790c621dec95e18aa7c9c57" title=" " alt="" coords="141,55,328,80"/>
-<area shape="rect" id="node3" href="$namespacegg.html#af14e01e111b4a4b141c268038e69809e" title=" " alt="" coords="5,5,93,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="374,132,559,159"/>
+<area shape="rect" id="Node000002" href="$namespacegg.html#a191d7b15d7374dfc6fa5243e3b667537" title=" " alt="" coords="190,56,277,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="414,129,325,97,277,83,278,78,327,92,416,124"/>
+<area shape="rect" id="Node000006" href="$classgg_1_1GgQuaternion.html#aff9ca9585790c621dec95e18aa7c9c57" title=" " alt="" coords="141,107,326,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="358,136,326,133,327,127,359,131"/>
+<area shape="rect" id="Node000007" href="$classgg_1_1GgQuaternion.html#aeacb9e8dbdcc7854fca46b7b88ec9d57" title=" " alt="" coords="141,157,326,184"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="359,160,327,163,326,158,358,154"/>
+<area shape="rect" id="Node000008" href="$classgg_1_1GgQuaternion.html#aec0568f0aa49b7038eee69c3fec3f510" title=" " alt="" coords="141,208,326,235"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="416,167,327,199,288,210,287,205,325,193,414,162"/>
+<area shape="rect" id="Node000003" href="$namespacegg.html#af14e01e111b4a4b141c268038e69809e" title=" " alt="" coords="5,5,93,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="174,56,93,33,94,28,176,51"/>
+<area shape="rect" id="Node000004" href="$namespacegg.html#a0df14e92a8460428403c7f82d32cf19b" title=" " alt="" coords="5,56,93,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="174,72,93,72,93,67,174,67"/>
+<area shape="rect" id="Node000005" href="$namespacegg.html#a6485d9c8b7bda82d43bc8cc59158f1ba" title=" " alt="" coords="5,107,93,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="175,88,141,97,94,111,92,105,140,92,174,83"/>
 </map>

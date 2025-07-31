@@ -1,5 +1,7 @@
 <map id="gg::ggSaveTga" name="gg::ggSaveTga">
-<area shape="rect" id="node1" title=" " alt="" coords="173,31,280,56"/>
-<area shape="rect" id="node2" href="$namespacegg.html#a6dc1ef6d0e78a6694ae8aca973b1b9ae" title=" " alt="" coords="7,5,123,31"/>
-<area shape="rect" id="node3" href="$namespacegg.html#a236701485bbc8278654781a810bf2880" title=" " alt="" coords="5,55,125,80"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="173,31,279,57"/>
+<area shape="rect" id="Node000002" href="$namespacegg.html#a6dc1ef6d0e78a6694ae8aca973b1b9ae" title=" " alt="" coords="7,5,123,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,36,122,30,123,25,158,31"/>
+<area shape="rect" id="Node000003" href="$namespacegg.html#a236701485bbc8278654781a810bf2880" title=" " alt="" coords="5,56,125,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="158,57,125,63,125,57,157,52"/>
 </map>

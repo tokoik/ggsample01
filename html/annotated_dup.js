@@ -18,7 +18,8 @@ var annotated_dup =
       [ "GgTriangles", "classgg_1_1GgTriangles.html", "classgg_1_1GgTriangles" ],
       [ "GgUniformBuffer", "classgg_1_1GgUniformBuffer.html", "classgg_1_1GgUniformBuffer" ],
       [ "GgVector", "classgg_1_1GgVector.html", "classgg_1_1GgVector" ],
-      [ "GgVertex", "structgg_1_1GgVertex.html", "structgg_1_1GgVertex" ]
+      [ "GgVertex", "structgg_1_1GgVertex.html", "structgg_1_1GgVertex" ],
+      [ "GgVertexArray", "classgg_1_1GgVertexArray.html", "classgg_1_1GgVertexArray" ]
     ] ],
     [ "Config", "classConfig.html", "classConfig" ],
     [ "Draw", "classDraw.html", "classDraw" ],

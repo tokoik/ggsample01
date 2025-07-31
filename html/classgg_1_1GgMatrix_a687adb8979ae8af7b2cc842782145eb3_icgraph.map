@@ -1,4 +1,7 @@
 <map id="gg::GgMatrix::translate" name="gg::GgMatrix::translate">
-<area shape="rect" id="node1" title=" " alt="" coords="208,5,363,31"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgMatrix.html#a00b38f04088224a02c6ebf393e355f0e" title=" " alt="" coords="5,5,160,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="208,31,362,57"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgMatrix.html#aef22dbd307afa5ec7e40d6d2d12c53f2" title=" " alt="" coords="5,5,160,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,35,159,31,160,26,193,30"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgMatrix.html#a00b38f04088224a02c6ebf393e355f0e" title=" " alt="" coords="5,56,160,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="193,58,160,62,159,57,192,53"/>
 </map>

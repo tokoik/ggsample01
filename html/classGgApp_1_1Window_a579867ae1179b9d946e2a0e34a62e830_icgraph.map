@@ -1,4 +1,9 @@
 <map id="GgApp::Window::getWidth" name="GgApp::Window::getWidth">
-<area shape="rect" id="node1" title=" " alt="" coords="221,5,397,31"/>
-<area shape="rect" id="node2" href="$classGgApp_1_1Window.html#a5efeec0d33380bc170b768db972a9150" title=" " alt="" coords="5,5,173,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="318,31,493,57"/>
+<area shape="rect" id="Node000002" href="$classGgApp_1_1Window.html#a5efeec0d33380bc170b768db972a9150" title=" " alt="" coords="103,5,270,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="302,35,270,31,271,26,303,29"/>
+<area shape="rect" id="Node000003" href="$classGgApp.html#ad2e50a5e84d4fd6162e03039ac00c7ae" title=" " alt="" coords="138,56,235,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="303,59,236,66,235,61,302,53"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525" title=" " alt="" coords="5,56,55,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="122,72,55,72,55,67,122,67"/>
 </map>

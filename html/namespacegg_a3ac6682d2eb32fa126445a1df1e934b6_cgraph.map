@@ -1,8 +1,13 @@
 <map id="gg::ggEulerQuaternion" name="gg::ggEulerQuaternion">
-<area shape="rect" id="node1" title=" " alt="" coords="5,55,156,80"/>
-<area shape="rect" id="node2" href="$namespacegg.html#aacfb5aa2cd001a0ad0fc8c7831576860" title=" " alt="" coords="204,55,355,80"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgQuaternion.html#a3a1be65570aae13d963e894f02c88beb" title=" " alt="" coords="403,55,589,80"/>
-<area shape="rect" id="node4" href="$classgg_1_1GgQuaternion.html#a6f9cd8893b1adbbaf17588b1ba5ee9c3" title=" " alt="" coords="638,5,839,31"/>
-<area shape="rect" id="node5" href="$classgg_1_1GgQuaternion.html#a308e08f78d2dfeadc2efbcd7a470d6bd" title=" " alt="" coords="637,55,840,80"/>
-<area shape="rect" id="node6" href="$classgg_1_1GgQuaternion.html#a345f63c1d1278daece7b1a09d279d74a" title=" " alt="" coords="638,104,839,129"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,156,83"/>
+<area shape="rect" id="Node000002" href="$namespacegg.html#aacfb5aa2cd001a0ad0fc8c7831576860" title=" " alt="" coords="204,56,354,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,67,188,67,188,72,156,72"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgQuaternion.html#a3a1be65570aae13d963e894f02c88beb" title=" " alt="" coords="402,56,587,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="354,67,386,67,386,72,354,72"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgQuaternion.html#a6f9cd8893b1adbbaf17588b1ba5ee9c3" title=" " alt="" coords="636,5,837,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="561,53,654,33,655,38,563,58"/>
+<area shape="rect" id="Node000005" href="$classgg_1_1GgQuaternion.html#a308e08f78d2dfeadc2efbcd7a470d6bd" title=" " alt="" coords="635,56,838,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="588,67,620,67,620,72,588,72"/>
+<area shape="rect" id="Node000006" href="$classgg_1_1GgQuaternion.html#a345f63c1d1278daece7b1a09d279d74a" title=" " alt="" coords="636,107,837,133"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="563,81,655,100,654,106,561,86"/>
 </map>

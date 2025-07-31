@@ -3,16 +3,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: Draw.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -34,7 +36,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.5 -->
+<!-- 構築: Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
@@ -46,7 +48,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+  $(function() { init_search(); });
 });
 /* @license-end */
 </script>
@@ -64,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('Draw_8h.html',''); initResizable(); });
+$(function(){initNavTree('Draw_8h.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -101,25 +103,44 @@ Draw.h の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="Draw_8h__incl.png" border="0" usemap="#aDraw_8h" alt=""/></div>
 <map name="aDraw_8h" id="aDraw_8h">
-<area shape="rect" title=" " alt="" coords="577,5,639,31"/>
-<area shape="rect" href="Menu_8h.html" title=" " alt="" coords="575,79,641,104"/>
-<area shape="rect" href="Config_8h.html" title=" " alt="" coords="532,152,601,177"/>
-<area shape="rect" title=" " alt="" coords="625,152,676,177"/>
-<area shape="rect" href="GgApp_8h.html" title=" " alt="" coords="475,225,549,251"/>
-<area shape="rect" href="parseconfig_8h.html" title=" " alt="" coords="749,225,848,251"/>
-<area shape="rect" href="gg_8h.html" title=" " alt="" coords="167,299,214,324"/>
-<area shape="rect" title=" " alt="" coords="238,299,303,324"/>
-<area shape="rect" title=" " alt="" coords="327,299,406,324"/>
-<area shape="rect" title=" " alt="" coords="431,299,503,324"/>
-<area shape="rect" title=" " alt="" coords="527,299,591,324"/>
-<area shape="rect" title=" " alt="" coords="615,299,739,324"/>
-<area shape="rect" title=" " alt="" coords="764,299,911,324"/>
-<area shape="rect" title=" " alt="" coords="5,372,64,397"/>
-<area shape="rect" title=" " alt="" coords="88,372,139,397"/>
-<area shape="rect" title=" " alt="" coords="163,372,219,397"/>
-<area shape="rect" title=" " alt="" coords="243,372,298,397"/>
-<area shape="rect" title=" " alt="" coords="323,372,392,397"/>
-<area shape="rect" title=" " alt="" coords="935,299,1017,324"/>
+<area shape="rect" title=" " alt="" coords="670,5,731,32"/>
+<area shape="rect" href="Menu_8h.html" title=" " alt="" coords="669,80,733,107"/>
+<area shape="poly" title=" " alt="" coords="703,33,703,64,698,64,698,33"/>
+<area shape="rect" href="Config_8h.html" title=" " alt="" coords="625,155,694,181"/>
+<area shape="poly" title=" " alt="" coords="696,109,676,143,672,140,691,106"/>
+<area shape="rect" title=" " alt="" coords="717,155,767,181"/>
+<area shape="poly" title=" " alt="" coords="710,106,730,140,725,143,706,109"/>
+<area shape="rect" href="GgApp_8h.html" title=" " alt="" coords="569,229,641,256"/>
+<area shape="poly" title=" " alt="" coords="652,183,625,218,621,215,648,180"/>
+<area shape="rect" href="parseconfig_8h.html" title=" " alt="" coords="840,229,938,256"/>
+<area shape="poly" title=" " alt="" coords="695,178,835,222,833,227,693,183"/>
+<area shape="rect" href="gg_8h.html" title=" " alt="" coords="244,304,291,331"/>
+<area shape="poly" title=" " alt="" coords="568,254,306,310,305,305,567,249"/>
+<area shape="rect" title=" " alt="" coords="411,379,476,405"/>
+<area shape="poly" title=" " alt="" coords="568,246,530,249,486,258,445,276,427,289,412,305,407,320,408,335,425,366,420,368,403,336,401,319,408,303,424,285,442,272,485,253,529,244,568,241"/>
+<area shape="rect" title=" " alt="" coords="422,304,500,331"/>
+<area shape="poly" title=" " alt="" coords="581,259,501,299,498,294,578,254"/>
+<area shape="rect" title=" " alt="" coords="524,304,595,331"/>
+<area shape="poly" title=" " alt="" coords="599,258,578,292,573,289,595,255"/>
+<area shape="rect" title=" " alt="" coords="620,304,683,331"/>
+<area shape="poly" title=" " alt="" coords="615,255,637,290,633,292,611,258"/>
+<area shape="rect" title=" " alt="" coords="707,304,830,331"/>
+<area shape="poly" title=" " alt="" coords="634,254,727,295,725,300,632,259"/>
+<area shape="rect" title=" " alt="" coords="854,304,1001,331"/>
+<area shape="poly" title=" " alt="" coords="642,250,857,298,856,303,640,255"/>
+<area shape="rect" title=" " alt="" coords="5,379,63,405"/>
+<area shape="poly" title=" " alt="" coords="244,329,78,380,77,375,243,323"/>
+<area shape="rect" title=" " alt="" coords="86,379,137,405"/>
+<area shape="poly" title=" " alt="" coords="245,332,152,375,150,370,243,327"/>
+<area shape="rect" title=" " alt="" coords="161,379,216,405"/>
+<area shape="poly" title=" " alt="" coords="255,333,215,370,212,366,252,329"/>
+<area shape="rect" title=" " alt="" coords="241,379,294,405"/>
+<area shape="poly" title=" " alt="" coords="270,331,270,363,265,363,265,331"/>
+<area shape="rect" title=" " alt="" coords="319,379,387,405"/>
+<area shape="poly" title=" " alt="" coords="284,329,328,367,325,371,280,333"/>
+<area shape="poly" title=" " alt="" coords="292,326,400,370,398,375,290,331"/>
+<area shape="rect" title=" " alt="" coords="1025,304,1105,331"/>
+<area shape="poly" title=" " alt="" coords="920,254,1021,295,1019,300,918,259"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -127,9 +148,11 @@ Draw.h の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="Draw_8h__dep__incl.png" border="0" usemap="#aDraw_8hdep" alt=""/></div>
 <map name="aDraw_8hdep" id="aDraw_8hdep">
-<area shape="rect" title=" " alt="" coords="72,5,135,31"/>
-<area shape="rect" href="Draw_8cpp.html" title=" " alt="" coords="5,79,81,104"/>
-<area shape="rect" href="ggsample01_8cpp.html" title=" " alt="" coords="106,79,223,104"/>
+<area shape="rect" title=" " alt="" coords="72,5,134,32"/>
+<area shape="rect" href="Draw_8cpp.html" title=" " alt="" coords="5,80,81,107"/>
+<area shape="poly" title=" " alt="" coords="85,46,55,81,51,78,81,42"/>
+<area shape="rect" href="ggsample01_8cpp.html" title=" " alt="" coords="105,80,221,107"/>
+<area shape="poly" title=" " alt="" coords="125,42,155,78,151,81,121,46"/>
 </map>
 </div>
 </div>
@@ -141,7 +164,7 @@ Draw.h の依存先関係図:</div>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p >図形の描画クラスの定義</p>
+<div class="textblock"><p>図形の描画クラスの定義</p>
 <dl class="section author"><dt>著者</dt><dd>Kohe Tokoi </dd></dl>
 <dl class="section date"><dt>日付</dt><dd>November 15, 2022 </dd></dl>
 
@@ -152,7 +175,7 @@ Draw.h の依存先関係図:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="Draw_8h.html">Draw.h</a></li>
-    <li class="footer">2023年01月03日(火) 18時18分38秒作成 - ゲームグラフィックス特論 / 構成:  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

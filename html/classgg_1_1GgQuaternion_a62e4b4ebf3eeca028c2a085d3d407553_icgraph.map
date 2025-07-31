@@ -1,5 +1,14 @@
 <map id="gg::GgQuaternion::loadMultiply" name="gg::GgQuaternion::loadMultiply">
-<area shape="rect" id="node1" title=" " alt="" coords="485,29,687,55"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a497525637b98332b7571b57c319f672d" title=" " alt="" coords="245,29,437,55"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgQuaternion.html#a59c994d71db6de3acf9ce85ab351e170" title=" " alt="" coords="5,29,197,55"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="493,81,693,108"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="636,69,622,62,593,60,567,62,553,67,549,72,556,79,552,83,544,73,549,63,566,57,593,55,623,57,639,64"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#a518c5ce498e0375156b494091670aa59" title=" " alt="" coords="245,5,445,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="539,78,444,47,403,35,405,30,446,41,541,73"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgQuaternion.html#a28466c146ec1217765b028025a001777" title=" " alt="" coords="245,56,445,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="477,86,445,82,446,77,478,80"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgQuaternion.html#aacf8bcdfdee4ddff74b8d6dad1a05ecb" title=" " alt="" coords="249,107,441,133"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="478,109,441,113,441,108,477,104"/>
+<area shape="rect" id="Node000005" href="$classgg_1_1GgQuaternion.html#a497525637b98332b7571b57c319f672d" title=" " alt="" coords="249,157,441,184"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="541,116,446,148,405,159,403,154,444,143,539,111"/>
+<area shape="rect" id="Node000006" href="$classgg_1_1GgQuaternion.html#a59c994d71db6de3acf9ce85ab351e170" title=" " alt="" coords="5,157,197,184"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="233,173,197,173,197,168,233,168"/>
 </map>

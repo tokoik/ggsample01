@@ -1,6 +1,10 @@
 <map id="GgApp::Window::getControlArrow" name="GgApp::Window::getControlArrow">
-<area shape="rect" id="node1" title=" " alt="" coords="5,37,188,77"/>
-<area shape="rect" id="node2" href="$classGgApp_1_1Window.html#a05de269eb17027de60e41e3776b581b2" title=" " alt="" coords="236,5,419,45"/>
-<area shape="rect" id="node4" href="$classGgApp_1_1Window.html#a0707b5143ccc9f5c8df94cce446bdab2" title=" " alt="" coords="236,69,419,109"/>
-<area shape="rect" id="node3" href="$classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="467,45,641,70"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,188,81"/>
+<area shape="rect" id="Node000002" href="$classGgApp_1_1Window.html#a05de269eb17027de60e41e3776b581b2" title=" " alt="" coords="236,5,418,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,44,220,39,220,45,188,49"/>
+<area shape="rect" id="Node000004" href="$classGgApp_1_1Window.html#a0707b5143ccc9f5c8df94cce446bdab2" title=" " alt="" coords="236,72,418,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="188,71,220,75,220,81,187,76"/>
+<area shape="rect" id="Node000003" href="$classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="466,47,640,73"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="419,37,451,42,450,48,418,43"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="418,77,450,72,451,78,419,83"/>
 </map>

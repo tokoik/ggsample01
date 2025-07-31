@@ -1,6 +1,9 @@
 <map id="gg::GgTrackball" name="gg::GgTrackball">
-<area shape="rect" id="node1" title=" " alt="" coords="27,225,141,251"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html" title=" " alt="" coords="22,152,146,177"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgVector.html" title=" " alt="" coords="35,79,133,104"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,5,163,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="27,229,140,256"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html" title=" " alt="" coords="22,155,145,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,197,86,229,81,229,81,197"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgVector.html" title=" " alt="" coords="34,80,133,107"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="86,122,86,154,81,154,81,122"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,5,162,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="86,48,86,80,81,80,81,48"/>
 </map>

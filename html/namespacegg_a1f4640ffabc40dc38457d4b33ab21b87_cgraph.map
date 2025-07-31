@@ -1,4 +1,5 @@
 <map id="gg::ggDot4" name="gg::ggDot4">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,91,31"/>
-<area shape="rect" id="node2" href="$namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title=" " alt="" coords="139,5,224,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,90,32"/>
+<area shape="rect" id="Node000002" href="$namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title=" " alt="" coords="138,5,222,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,16,122,16,122,21,90,21"/>
 </map>

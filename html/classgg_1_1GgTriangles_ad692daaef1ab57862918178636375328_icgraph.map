@@ -1,4 +1,0 @@
-<map id="gg::GgTriangles::send" name="gg::GgTriangles::send">
-<area shape="rect" id="node1" title="既存のバッファオブジェクトに頂点属性を転送する." alt="" coords="205,5,355,32"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgElements.html#aad52368bf713e03ef748dbeddf469ea3" title="既存のバッファオブジェクトに頂点属性と三角形の頂点インデックスデータを転送する." alt="" coords="5,5,157,32"/>
-</map>

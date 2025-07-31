@@ -1,5 +1,13 @@
 <map id="gg::ggCreateNormalMap" name="gg::ggCreateNormalMap">
-<area shape="rect" id="node1" title=" " alt="" coords="199,35,361,60"/>
-<area shape="rect" id="node2" href="$namespacegg.html#a53453ed6229bbd109c279a3765648d01" title=" " alt="" coords="17,5,139,31"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgNormalTexture.html#adca09b7af04c1a58703fbafcea758671" title=" " alt="" coords="5,55,151,95"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="390,64,551,91"/>
+<area shape="rect" id="Node000002" href="$namespacegg.html#a53453ed6229bbd109c279a3765648d01" title=" " alt="" coords="209,5,331,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="407,62,317,35,319,30,409,57"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgNormalTexture.html#a4d72c9169596e2040d41388ec375d253" title=" " alt="" coords="198,56,342,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="375,80,342,80,342,75,375,75"/>
+<area shape="rect" id="Node000006" href="$classgg_1_1GgNormalTexture.html#adca09b7af04c1a58703fbafcea758671" title=" " alt="" coords="198,123,342,165"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="414,99,337,125,336,120,413,94"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgNormalTexture.html#a3388010b4affdc12eef3a13f5e3ac38d" title=" " alt="" coords="5,23,150,65"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="182,65,149,59,150,54,183,60"/>
+<area shape="rect" id="Node000005" href="$classgg_1_1GgNormalTexture.html#a1e9944398bead9cf4f3631c217b77900" title=" " alt="" coords="5,89,150,132"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="183,95,150,101,149,96,182,90"/>
 </map>

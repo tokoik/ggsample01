@@ -1,6 +1,10 @@
 <map id="GgApp::Window::getShiftArrow" name="GgApp::Window::getShiftArrow">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,207,56"/>
-<area shape="rect" id="node2" href="$classGgApp_1_1Window.html#a0c2238b6a1ad09eaeaf9f268b79bf00d" title=" " alt="" coords="256,5,464,31"/>
-<area shape="rect" id="node4" href="$classGgApp_1_1Window.html#ad622962036e9c6dc8210b16a67486862" title=" " alt="" coords="255,55,465,80"/>
-<area shape="rect" id="node3" href="$classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="513,31,688,56"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,206,57"/>
+<area shape="rect" id="Node000002" href="$classGgApp_1_1Window.html#a0c2238b6a1ad09eaeaf9f268b79bf00d" title=" " alt="" coords="255,5,462,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,31,239,28,239,33,206,37"/>
+<area shape="rect" id="Node000004" href="$classGgApp_1_1Window.html#ad622962036e9c6dc8210b16a67486862" title=" " alt="" coords="254,56,463,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="206,51,238,55,238,60,206,57"/>
+<area shape="rect" id="Node000003" href="$classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="511,31,685,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="463,27,496,31,495,36,462,32"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="463,56,495,52,495,58,464,61"/>
 </map>

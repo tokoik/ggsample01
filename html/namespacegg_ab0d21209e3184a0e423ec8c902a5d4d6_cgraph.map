@@ -1,4 +1,5 @@
 <map id="gg::ggOrthogonal" name="gg::ggOrthogonal">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,127,31"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgMatrix.html#ae031bf581d90c23fae4a690d0435f522" title=" " alt="" coords="175,5,367,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,126,32"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgMatrix.html#ae031bf581d90c23fae4a690d0435f522" title=" " alt="" coords="174,5,365,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,16,158,16,158,21,126,21"/>
 </map>

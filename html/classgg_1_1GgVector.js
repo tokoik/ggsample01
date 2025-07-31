@@ -1,9 +1,12 @@
 var classgg_1_1GgVector =
 [
-    [ "GgVector", "classgg_1_1GgVector.html#a5a61b7af624c31e8711d6f9201bb7916", null ],
+    [ "GgVector", "classgg_1_1GgVector.html#a8d6fb720fb6068cd9f6cb51435cdcf58", null ],
     [ "GgVector", "classgg_1_1GgVector.html#aafd0d0934ac3dd51f6e7160abc6d4363", null ],
-    [ "GgVector", "classgg_1_1GgVector.html#aced648e19ce3203bbe2db19026a59a33", null ],
     [ "GgVector", "classgg_1_1GgVector.html#ace37bc353956e5299419b639ff1c0c01", null ],
+    [ "GgVector", "classgg_1_1GgVector.html#aced648e19ce3203bbe2db19026a59a33", null ],
+    [ "GgVector", "classgg_1_1GgVector.html#a40c847639889f357bd233553fc3ace51", null ],
+    [ "GgVector", "classgg_1_1GgVector.html#afd8ceac14ec84418fc17ad0174e699bb", null ],
+    [ "~GgVector", "classgg_1_1GgVector.html#a14e101a2316d7ef891457a4063159c7e", null ],
     [ "distance3", "classgg_1_1GgVector.html#a784cd4bc882511beb2953014de7ba573", null ],
     [ "distance4", "classgg_1_1GgVector.html#aa533c2f61342d5091ebb7802b11169f7", null ],
     [ "dot3", "classgg_1_1GgVector.html#a82f2282affb26a02e7251a012e26f5fd", null ],
@@ -27,5 +30,7 @@ var classgg_1_1GgVector =
     [ "operator/", "classgg_1_1GgVector.html#af403aa093604e42175e979df634af54f", null ],
     [ "operator/", "classgg_1_1GgVector.html#ace193ff3248135351ec7c18e9bc8809a", null ],
     [ "operator/=", "classgg_1_1GgVector.html#aec552b9da3ced6f79f06900ed41d3046", null ],
-    [ "operator/=", "classgg_1_1GgVector.html#a4e7d2e0d9b204eece2567134d1f0bdc8", null ]
+    [ "operator/=", "classgg_1_1GgVector.html#a4e7d2e0d9b204eece2567134d1f0bdc8", null ],
+    [ "operator=", "classgg_1_1GgVector.html#aa87eb7621081b5fe44d14a806321aabb", null ],
+    [ "operator=", "classgg_1_1GgVector.html#a2ac14c5d810fd71e75eb6e55ea693e2c", null ]
 ];

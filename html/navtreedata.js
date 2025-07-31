@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "ゲームグラフィックス特論", "index.html", [
-    [ "ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版", "index.html", null ],
+    [ "ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版.", "index.html", null ],
     [ "ggsample01", "md_README.html", [
       [ "ゲームグラフィックス特論A　第１回　宿題", "md_README.html#autotoc_md1", null ],
       [ "宿題プログラムの作成に必要な環境", "md_README.html#autotoc_md2", null ],
@@ -76,11 +76,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Config_8cpp.html",
-"classgg_1_1GgMatrix.html#a753d56545359ba6efc11aa9b5b3ade11",
-"classgg_1_1GgQuaternion.html#a65a6c0126b5f8a857046f8e1defca7cc",
-"classgg_1_1GgSimpleShader_1_1LightBuffer.html#a4bd0a46d083fd92cc24fc0fd8e73c294",
-"functions_c.html",
-"namespacegg.html#a6c6e29eda69894e9d1256fe894cb6fbe"
+"classgg_1_1GgMatrix.html#a673d91ac86c3109a0fc6c0839e5bebee",
+"classgg_1_1GgQuaternion.html#a5240a31507b906e03592a4f6a6ca8f7a",
+"classgg_1_1GgSimpleShader.html#acd4095770807f1c4977e6d50c06272ce",
+"classgg_1_1GgVector.html#a6f46419a169cc49089968d70f493c463",
+"namespacegg.html#a047058f8d45e31ce77232ef66796e6b0"
 ];
 
 var SYNCONMSG = 'クリックで同期表示が無効になります';

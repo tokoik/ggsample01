@@ -1,5 +1,7 @@
 <map id="gg::GgMatrix::rotateY" name="gg::GgMatrix::rotateY">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,152,56"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgMatrix.html#adc134a1416496139bee3feb6c0359482" title=" " alt="" coords="200,5,376,31"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgMatrix.html#ab74f171ed21474bc9970d2765f92e6c7" title=" " alt="" coords="209,55,367,80"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,152,57"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgMatrix.html#adc134a1416496139bee3feb6c0359482" title=" " alt="" coords="200,5,375,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,32,184,29,184,34,152,38"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgMatrix.html#ab74f171ed21474bc9970d2765f92e6c7" title=" " alt="" coords="209,56,366,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="152,50,194,55,193,61,152,56"/>
 </map>

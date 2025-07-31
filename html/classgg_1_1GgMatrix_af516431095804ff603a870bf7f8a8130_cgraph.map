@@ -1,4 +1,0 @@
-<map id="gg::GgMatrix::loadAdd" name="gg::GgMatrix::loadAdd">
-<area shape="rect" id="node1" title="変換行列に別の変換行列を加算した結果を格納する." alt="" coords="5,5,157,32"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgMatrix.html#ad694f87a1ac084897fad1a94b6e91d3b" title="変換行列に配列に格納した変換行列を加算した結果を格納する." alt="" coords="205,5,357,32"/>
-</map>

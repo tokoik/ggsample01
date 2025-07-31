@@ -1,8 +1,0 @@
-<map id="gg::GgUniformBuffer::load" name="gg::GgUniformBuffer::load">
-<area shape="rect" id="node1" title="ユニフォームバッファオブジェクトを確保して全てのブロックに同じデータを格納する." alt="" coords="5,104,144,145"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgUniformBuffer.html#a54af5ca44551f3d6799966590b80d7a1" title="ユニフォームバッファオブジェクトの全ブロックのメンバーを同じデータを格納する." alt="" coords="192,104,331,145"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgUniformBuffer.html#abcc61a088d16f53a9a51749dd34c24b8" title="ユニフォームバッファオブジェクトを結合する." alt="" coords="379,5,517,47"/>
-<area shape="rect" id="node4" href="$classgg_1_1GgUniformBuffer.html#a057fe919fb0bf8627bcde7aff89d5de2" title="データの数を取り出す." alt="" coords="379,71,517,112"/>
-<area shape="rect" id="node5" href="$classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506" title="ユニフォームバッファオブジェクトのアライメントを考慮したデータの間隔を取り出す." alt="" coords="379,136,517,177"/>
-<area shape="rect" id="node6" href="$classgg_1_1GgUniformBuffer.html#a4ad0f5571d91f9148872318d6ae24601" title="ユニフォームバッファオブジェクトのターゲットを取り出す." alt="" coords="379,201,517,243"/>
-</map>

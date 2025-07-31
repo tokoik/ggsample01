@@ -1,4 +1,0 @@
-<map id="gg::GgColorTexture::load" name="gg::GgColorTexture::load">
-<area shape="rect" id="node1" title="テクスチャを作成してメモリ上のデータを読み込む." alt="" coords="188,5,323,47"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgColorTexture.html#ac4382d61aa389838630385ec3b646cfa" title="メモリ上のデータからテクスチャを作成するコンストラクタ." alt="" coords="5,5,140,47"/>
-</map>

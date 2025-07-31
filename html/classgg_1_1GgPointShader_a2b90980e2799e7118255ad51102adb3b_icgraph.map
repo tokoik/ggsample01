@@ -1,6 +1,0 @@
-<map id="gg::GgPointShader::load" name="gg::GgPointShader::load">
-<area shape="rect" id="node1" title="シェーダのソースファイルを読み込む." alt="" coords="387,46,551,73"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgPointShader.html#ad58a3c3d252e425b9e1540a112893918" title="コンストラクタ" alt="" coords="197,5,337,47"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgSimpleShader.html#abede961e921712e2f2f2000e09a207ee" title="シェーダのソースファイルの読み込み" alt="" coords="196,71,339,112"/>
-<area shape="rect" id="node4" href="$classgg_1_1GgSimpleShader.html#a08c3997010253884a9e7d8e887d5f145" title="コンストラクタ." alt="" coords="5,71,148,112"/>
-</map>

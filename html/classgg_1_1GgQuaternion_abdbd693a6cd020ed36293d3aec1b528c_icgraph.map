@@ -1,4 +1,5 @@
 <map id="gg::GgQuaternion::euler" name="gg::GgQuaternion::euler">
-<area shape="rect" id="node1" title=" " alt="" coords="213,5,373,31"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgQuaternion.html#a65a6c0126b5f8a857046f8e1defca7cc" title=" " alt="" coords="5,5,165,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="213,5,372,32"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#a65a6c0126b5f8a857046f8e1defca7cc" title=" " alt="" coords="5,5,165,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,21,165,21,165,16,197,16"/>
 </map>

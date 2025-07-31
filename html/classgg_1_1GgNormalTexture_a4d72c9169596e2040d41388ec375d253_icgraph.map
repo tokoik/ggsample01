@@ -1,4 +1,7 @@
 <map id="gg::GgNormalTexture::load" name="gg::GgNormalTexture::load">
-<area shape="rect" id="node1" title=" " alt="" coords="199,5,344,45"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgNormalTexture.html#a3388010b4affdc12eef3a13f5e3ac38d" title=" " alt="" coords="5,5,151,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="198,39,342,81"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgNormalTexture.html#a3388010b4affdc12eef3a13f5e3ac38d" title=" " alt="" coords="5,5,150,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,48,149,42,150,37,183,42"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgNormalTexture.html#a1e9944398bead9cf4f3631c217b77900" title=" " alt="" coords="5,72,150,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="183,78,150,83,149,78,182,72"/>
 </map>

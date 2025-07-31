@@ -1,4 +1,5 @@
 <map id="gg::GgSimpleShader::LightBuffer" name="gg::GgSimpleShader::LightBuffer">
-<area shape="rect" id="node1" title=" " alt="" coords="5,93,148,133"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgUniformBuffer.html" title=" " alt="" coords="7,5,146,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,96,147,139"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgUniformBuffer.html" title=" " alt="" coords="7,5,145,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,64,79,96,73,96,73,64"/>
 </map>

@@ -1,6 +1,9 @@
 <map id="gg::GgVector::normalize4" name="gg::GgVector::normalize4">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,176,31"/>
-<area shape="rect" id="node2" href="$namespacegg.html#a53de42a63451f28a4dc644143285b581" title=" " alt="" coords="224,5,347,31"/>
-<area shape="rect" id="node3" href="$namespacegg.html#a2f383a711d58b805ebaf26bc004986ab" title=" " alt="" coords="395,5,499,31"/>
-<area shape="rect" id="node4" href="$namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title=" " alt="" coords="547,5,632,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,175,32"/>
+<area shape="rect" id="Node000002" href="$namespacegg.html#a53de42a63451f28a4dc644143285b581" title=" " alt="" coords="223,5,345,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,16,207,16,207,21,175,21"/>
+<area shape="rect" id="Node000003" href="$namespacegg.html#a2f383a711d58b805ebaf26bc004986ab" title=" " alt="" coords="393,5,496,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="345,16,377,16,377,21,345,21"/>
+<area shape="rect" id="Node000004" href="$namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title=" " alt="" coords="544,5,629,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="497,16,529,16,529,21,497,21"/>
 </map>

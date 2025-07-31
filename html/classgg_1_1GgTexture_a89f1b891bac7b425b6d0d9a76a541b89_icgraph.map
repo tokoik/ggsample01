@@ -1,4 +1,0 @@
-<map id="gg::GgTexture::getWidth" name="gg::GgTexture::getWidth">
-<area shape="rect" id="node1" title="使用しているテクスチャの横の画素数を取り出す." alt="" coords="209,5,373,32"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgTexture.html#af146fa5435ecf5d2b2bcc7d309d41934" title="使用しているテクスチャのサイズを取り出す." alt="" coords="5,5,161,32"/>
-</map>

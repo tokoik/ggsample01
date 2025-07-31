@@ -1,5 +1,0 @@
-<map id="gg::GgSimpleShader::GgSimpleShader" name="gg::GgSimpleShader::GgSimpleShader">
-<area shape="rect" id="node1" title="コンストラクタ." alt="" coords="5,5,148,47"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgSimpleShader.html#abede961e921712e2f2f2000e09a207ee" title="シェーダのソースファイルの読み込み" alt="" coords="196,5,339,47"/>
-<area shape="rect" id="node3" href="$classgg_1_1GgPointShader.html#a2b90980e2799e7118255ad51102adb3b" title="シェーダのソースファイルを読み込む." alt="" coords="387,13,551,39"/>
-</map>

@@ -1,4 +1,5 @@
 <map id="gg::GgPointShader::load" name="gg::GgPointShader::load">
-<area shape="rect" id="node1" title=" " alt="" coords="196,13,360,38"/>
-<area shape="rect" id="node2" href="$classgg_1_1GgSimpleShader.html#acd4095770807f1c4977e6d50c06272ce" title=" " alt="" coords="5,5,148,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="195,13,358,40"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgSimpleShader.html#acd4095770807f1c4977e6d50c06272ce" title=" " alt="" coords="5,5,147,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,29,147,29,147,24,179,24"/>
 </map>
