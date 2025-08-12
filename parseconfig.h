@@ -8,6 +8,10 @@
 /// @date November 15, 2022
 ///
 
+// 補助プログラム
+#include "gg.h"
+using namespace gg;
+
 // JSON
 #include "picojson.h"
 

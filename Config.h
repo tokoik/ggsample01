@@ -8,8 +8,9 @@
 /// @date November 15, 2022
 ///
 
-// アプリケーションの設定
-#include "GgApp.h"
+// 補助プログラム
+#include "gg.h"
+using namespace gg;
 
 // 構成ファイルの読み取り補助
 #include "parseconfig.h"
