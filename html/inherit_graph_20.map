@@ -1,11 +1,11 @@
 <map id="クラス階層図" name="クラス階層図">
 <area shape="rect" id="Node000000" title=" " alt="" coords="5,31,82,57"/>
-<area shape="rect" id="Node000001" href="$classgg_1_1GgMatrix.html" title=" " alt="" coords="131,5,227,32"/>
-<area shape="poly" id="edge7_Node000000_Node000001" title=" " alt="" coords="97,31,130,25,131,30,98,37"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgVector.html" title=" " alt="" coords="130,56,228,83"/>
-<area shape="poly" id="edge8_Node000000_Node000002" title=" " alt="" coords="98,51,130,57,129,63,97,57"/>
-<area shape="rect" id="Node000003" href="$classgg_1_1GgQuaternion.html" title=" " alt="" coords="276,56,399,83"/>
+<area shape="rect" id="Node000001" href="$classgg_1_1GgMatrix.html" title=" " alt="" coords="130,5,226,32"/>
+<area shape="poly" id="edge7_Node000000_Node000001" title=" " alt="" coords="96,31,129,25,130,30,97,37"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgVector.html" title=" " alt="" coords="130,56,227,83"/>
+<area shape="poly" id="edge8_Node000000_Node000002" title=" " alt="" coords="98,51,130,58,129,63,97,57"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgQuaternion.html" title=" " alt="" coords="275,56,398,83"/>
 <area shape="poly" id="edge9_Node000002_Node000003" title=" " alt="" coords="243,67,275,67,275,72,243,72"/>
-<area shape="rect" id="Node000004" href="$classgg_1_1GgTrackball.html" title=" " alt="" coords="447,56,560,83"/>
-<area shape="poly" id="edge10_Node000003_Node000004" title=" " alt="" coords="415,67,447,67,447,72,415,72"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgTrackball.html" title=" " alt="" coords="446,56,560,83"/>
+<area shape="poly" id="edge10_Node000003_Node000004" title=" " alt="" coords="414,67,446,67,446,72,414,72"/>
 </map>

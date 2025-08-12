@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: gg::GgTriangles クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -11,9 +11,9 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -26,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
   <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
@@ -36,10 +35,15 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.10.0 -->
+<!-- 構築: Doxygen 1.12.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -47,7 +51,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','検索');
+  initMenu('',true,false,'search.php','検索',true);
   $(function() { init_search(); });
 });
 /* @license-end */
@@ -66,7 +70,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('classgg_1_1GgTriangles.html',''); initResizable(); });
+$(function(){initNavTree('classgg_1_1GgTriangles.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -105,7 +109,7 @@ gg::GgTriangles の継承関係図</div>
 <div class="dyncontent">
 <div class="center"><img src="classgg_1_1GgTriangles__inherit__graph.png" border="0" usemap="#agg_1_1GgTriangles_inherit__map" alt="Inheritance graph"/></div>
 <map name="agg_1_1GgTriangles_inherit__map" id="agg_1_1GgTriangles_inherit__map">
-<area shape="rect" title=" " alt="" coords="7,80,119,107"/>
+<area shape="rect" title=" " alt="" coords="6,80,120,107"/>
 <area shape="rect" href="classgg_1_1GgElements.html" title=" " alt="" coords="5,155,121,181"/>
 <area shape="poly" title=" " alt="" coords="66,122,66,154,60,154,60,122"/>
 <area shape="rect" href="classgg_1_1GgShape.html" title=" " alt="" coords="14,5,112,32"/>
@@ -117,9 +121,9 @@ gg::GgTriangles 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="classgg_1_1GgTriangles__coll__graph.png" border="0" usemap="#agg_1_1GgTriangles_coll__map" alt="Collaboration graph"/></div>
 <map name="agg_1_1GgTriangles_coll__map" id="agg_1_1GgTriangles_coll__map">
-<area shape="rect" title=" " alt="" coords="5,80,118,107"/>
-<area shape="rect" href="classgg_1_1GgShape.html" title=" " alt="" coords="13,5,110,32"/>
-<area shape="poly" title=" " alt="" coords="64,48,64,80,59,80,59,48"/>
+<area shape="rect" title=" " alt="" coords="5,80,119,107"/>
+<area shape="rect" href="classgg_1_1GgShape.html" title=" " alt="" coords="13,5,111,32"/>
+<area shape="poly" title=" " alt="" coords="65,48,65,80,59,80,59,48"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
@@ -174,7 +178,7 @@ gg::GgTriangles 連携図</div>
         <tr>
           <td class="memname">gg::GgTriangles::GgTriangles </td>
           <td>(</td>
-          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>mode</em><span class="paramdefsep"> = </span><span class="paramdefval">GL_TRIANGLES</span></span></td><td>)</td>
+          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>mode</em></span><span class="paramdefsep"> = </span><span class="paramdefval">GL_TRIANGLES</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -208,22 +212,22 @@ gg::GgTriangles 連携図</div>
         <tr>
           <td class="memname">gg::GgTriangles::GgTriangles </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structgg_1_1GgVertex.html">GgVertex</a> *</td>          <td class="paramname"><span class="paramname"><em>vert</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="structgg_1_1GgVertex.html">GgVertex</a> *</td>          <td class="paramname"><span class="paramname"><em>vert</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em>, </span></td>
+          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>mode</em><span class="paramdefsep"> = </span><span class="paramdefval">GL_TRIANGLES</span>, </span></td>
+          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>mode</em></span><span class="paramdefsep"> = </span><span class="paramdefval">GL_TRIANGLES</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>usage</em><span class="paramdefsep"> = </span><span class="paramdefval">GL_STATIC_DRAW</span></span>&#160;)</td>
+          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>usage</em></span><span class="paramdefsep"> = </span><span class="paramdefval">GL_STATIC_DRAW</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -259,7 +263,7 @@ gg::GgTriangles 連携図</div>
         <tr>
           <td class="memname">virtual gg::GgTriangles::~GgTriangles </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -288,12 +292,12 @@ gg::GgTriangles 連携図</div>
         <tr>
           <td class="memname">void gg::GgTriangles::draw </td>
           <td>(</td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>first</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
+          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>first</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span></span>&#160;) const</td>
+          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -321,9 +325,9 @@ gg::GgTriangles 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="classgg_1_1GgTriangles_ac6af2cf80311f3429271e7cbde302e02_cgraph.png" border="0" usemap="#aclassgg_1_1GgTriangles_ac6af2cf80311f3429271e7cbde302e02_cgraph" alt=""/></div>
 <map name="aclassgg_1_1GgTriangles_ac6af2cf80311f3429271e7cbde302e02_cgraph" id="aclassgg_1_1GgTriangles_ac6af2cf80311f3429271e7cbde302e02_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,153,32"/>
-<area shape="rect" href="classgg_1_1GgShape.html#adf1b1da86a75b4c74dddf6194e615f6d" title=" " alt="" coords="201,5,333,32"/>
-<area shape="poly" title=" " alt="" coords="153,16,185,16,185,21,153,21"/>
+<area shape="rect" title=" " alt="" coords="5,5,155,32"/>
+<area shape="rect" href="classgg_1_1GgShape.html#adf1b1da86a75b4c74dddf6194e615f6d" title=" " alt="" coords="203,5,336,32"/>
+<area shape="poly" title=" " alt="" coords="155,16,187,16,187,21,155,21"/>
 </map>
 </div>
 
@@ -341,7 +345,7 @@ gg::GgTriangles 連携図</div>
         <tr>
           <td class="memname">const GLuint &amp; gg::GgTriangles::getBuffer </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -370,7 +374,7 @@ gg::GgTriangles 連携図</div>
         <tr>
           <td class="memname">const GLsizei &amp; gg::GgTriangles::getCount </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -396,17 +400,17 @@ gg::GgTriangles 連携図</div>
         <tr>
           <td class="memname">void gg::GgTriangles::load </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structgg_1_1GgVertex.html">GgVertex</a> *</td>          <td class="paramname"><span class="paramname"><em>vert</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="structgg_1_1GgVertex.html">GgVertex</a> *</td>          <td class="paramname"><span class="paramname"><em>vert</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em>, </span></td>
+          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>usage</em><span class="paramdefsep"> = </span><span class="paramdefval">GL_STATIC_DRAW</span></span>&#160;)</td>
+          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>usage</em></span><span class="paramdefsep"> = </span><span class="paramdefval">GL_STATIC_DRAW</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -436,17 +440,17 @@ gg::GgTriangles 連携図</div>
         <tr>
           <td class="memname">void gg::GgTriangles::send </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structgg_1_1GgVertex.html">GgVertex</a> *</td>          <td class="paramname"><span class="paramname"><em>vert</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="structgg_1_1GgVertex.html">GgVertex</a> *</td>          <td class="paramname"><span class="paramname"><em>vert</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>first</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
+          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>first</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span></span>&#160;) const</td>
+          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -479,7 +483,7 @@ gg::GgTriangles 連携図</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacegg.html">gg</a></li><li class="navelem"><a class="el" href="classgg_1_1GgTriangles.html">GgTriangles</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

@@ -1,7 +1,7 @@
 <map id="gg::ggPerspective" name="gg::ggPerspective">
-<area shape="rect" id="Node000001" title=" " alt="" coords="248,5,372,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="248,5,374,32"/>
 <area shape="rect" id="Node000002" href="$classGgApp.html#ad2e50a5e84d4fd6162e03039ac00c7ae" title=" " alt="" coords="103,5,200,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,21,200,21,200,16,232,16"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="233,21,200,21,200,16,233,16"/>
 <area shape="rect" id="Node000003" href="$main_8cpp.html#a110745d0e996bc19a8c8e8cacbadd525" title=" " alt="" coords="5,5,55,32"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
 </map>

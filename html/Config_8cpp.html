@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: Config.cpp ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -11,9 +11,9 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -26,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
   <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
@@ -36,10 +35,15 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.10.0 -->
+<!-- 構築: Doxygen 1.12.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -47,7 +51,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','検索');
+  initMenu('',true,false,'search.php','検索',true);
   $(function() { init_search(); });
 });
 /* @license-end */
@@ -66,7 +70,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('Config_8cpp.html',''); initResizable(); });
+$(function(){initNavTree('Config_8cpp.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -104,42 +108,30 @@ Config.cpp の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="Config_8cpp__incl.png" border="0" usemap="#aConfig_8cpp" alt=""/></div>
 <map name="aConfig_8cpp" id="aConfig_8cpp">
-<area shape="rect" title=" " alt="" coords="664,5,746,32"/>
-<area shape="rect" href="Config_8h.html" title=" " alt="" coords="625,80,694,107"/>
-<area shape="poly" title=" " alt="" coords="699,34,678,68,673,65,695,31"/>
-<area shape="rect" title=" " alt="" coords="718,80,782,107"/>
-<area shape="poly" title=" " alt="" coords="715,31,736,65,732,68,710,34"/>
-<area shape="rect" href="GgApp_8h.html" title=" " alt="" coords="569,155,641,181"/>
-<area shape="poly" title=" " alt="" coords="652,109,625,144,621,140,648,106"/>
-<area shape="rect" href="parseconfig_8h.html" title=" " alt="" coords="840,155,938,181"/>
-<area shape="poly" title=" " alt="" coords="695,103,835,147,833,152,693,108"/>
-<area shape="rect" href="gg_8h.html" title=" " alt="" coords="244,229,291,256"/>
-<area shape="poly" title=" " alt="" coords="568,180,306,236,305,231,567,175"/>
-<area shape="rect" title=" " alt="" coords="411,304,476,331"/>
-<area shape="poly" title=" " alt="" coords="568,171,530,174,486,184,445,202,427,215,412,231,407,245,408,260,425,291,420,294,403,262,401,244,408,228,424,211,442,197,485,179,529,169,568,166"/>
-<area shape="rect" title=" " alt="" coords="422,229,500,256"/>
-<area shape="poly" title=" " alt="" coords="581,184,501,224,498,219,578,179"/>
-<area shape="rect" title=" " alt="" coords="524,229,595,256"/>
-<area shape="poly" title=" " alt="" coords="599,183,578,217,573,215,595,180"/>
-<area shape="rect" title=" " alt="" coords="620,229,683,256"/>
-<area shape="poly" title=" " alt="" coords="615,180,637,215,633,218,611,183"/>
-<area shape="rect" title=" " alt="" coords="707,229,830,256"/>
-<area shape="poly" title=" " alt="" coords="634,179,727,220,725,225,632,184"/>
-<area shape="rect" title=" " alt="" coords="854,229,1001,256"/>
-<area shape="poly" title=" " alt="" coords="642,175,857,223,856,228,640,180"/>
+<area shape="rect" title=" " alt="" coords="274,5,359,32"/>
+<area shape="rect" href="Config_8h.html" title=" " alt="" coords="236,80,306,107"/>
+<area shape="poly" title=" " alt="" coords="311,34,290,68,285,65,307,31"/>
+<area shape="rect" title=" " alt="" coords="331,80,396,107"/>
+<area shape="poly" title=" " alt="" coords="327,31,349,66,345,68,323,34"/>
+<area shape="rect" href="gg_8h.html" title=" " alt="" coords="206,229,252,256"/>
+<area shape="poly" title=" " alt="" coords="270,108,239,215,234,213,265,106"/>
+<area shape="rect" href="parseconfig_8h.html" title=" " alt="" coords="266,155,365,181"/>
+<area shape="poly" title=" " alt="" coords="281,106,302,140,298,143,277,109"/>
 <area shape="rect" title=" " alt="" coords="5,304,63,331"/>
-<area shape="poly" title=" " alt="" coords="244,254,78,305,77,300,243,249"/>
-<area shape="rect" title=" " alt="" coords="86,304,137,331"/>
-<area shape="poly" title=" " alt="" coords="245,257,152,300,150,295,243,253"/>
-<area shape="rect" title=" " alt="" coords="161,304,216,331"/>
-<area shape="poly" title=" " alt="" coords="255,259,215,295,212,291,252,255"/>
-<area shape="rect" title=" " alt="" coords="241,304,294,331"/>
-<area shape="poly" title=" " alt="" coords="270,257,270,288,265,288,265,257"/>
-<area shape="rect" title=" " alt="" coords="319,304,387,331"/>
-<area shape="poly" title=" " alt="" coords="284,255,328,292,325,296,280,259"/>
-<area shape="poly" title=" " alt="" coords="292,251,400,295,398,300,290,256"/>
-<area shape="rect" title=" " alt="" coords="1025,229,1105,256"/>
-<area shape="poly" title=" " alt="" coords="920,179,1021,220,1019,225,918,184"/>
+<area shape="poly" title=" " alt="" coords="206,255,78,302,77,297,204,250"/>
+<area shape="rect" title=" " alt="" coords="86,304,136,331"/>
+<area shape="poly" title=" " alt="" coords="210,259,146,298,143,293,207,254"/>
+<area shape="rect" title=" " alt="" coords="160,304,217,331"/>
+<area shape="poly" title=" " alt="" coords="224,258,205,292,201,289,219,255"/>
+<area shape="rect" title=" " alt="" coords="242,304,295,331"/>
+<area shape="poly" title=" " alt="" coords="238,255,257,289,252,292,233,258"/>
+<area shape="rect" title=" " alt="" coords="320,304,388,331"/>
+<area shape="poly" title=" " alt="" coords="252,254,321,294,318,298,249,259"/>
+<area shape="rect" title=" " alt="" coords="412,304,477,331"/>
+<area shape="poly" title=" " alt="" coords="253,249,399,298,397,303,251,254"/>
+<area shape="poly" title=" " alt="" coords="302,184,257,221,253,217,299,180"/>
+<area shape="rect" title=" " alt="" coords="276,229,357,256"/>
+<area shape="poly" title=" " alt="" coords="318,182,319,214,313,214,313,182"/>
 </map>
 </div>
 </div>
@@ -167,7 +159,7 @@ Config.cpp の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">GgSimpleShader::Light</a> defaultLight</td>
+          <td class="memname"><a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">GgSimpleShader::Light</a> defaultLight</td>
         </tr>
       </table>
   </td>
@@ -193,7 +185,7 @@ Config.cpp の依存先関係図:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="Config_8cpp.html">Config.cpp</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

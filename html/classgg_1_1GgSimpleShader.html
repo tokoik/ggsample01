@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: gg::GgSimpleShader クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -11,9 +11,9 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -26,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
   <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
@@ -36,10 +35,15 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.10.0 -->
+<!-- 構築: Doxygen 1.12.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -47,7 +51,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','検索');
+  initMenu('',true,false,'search.php','検索',true);
   $(function() { init_search(); });
 });
 /* @license-end */
@@ -66,7 +70,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('classgg_1_1GgSimpleShader.html',''); initResizable(); });
+$(function(){initNavTree('classgg_1_1GgSimpleShader.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -240,7 +244,7 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">gg::GgSimpleShader::GgSimpleShader </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -268,27 +272,27 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">gg::GgSimpleShader::GgSimpleShader </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>vert</em>, </span></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>vert</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>frag</em><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </span></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>frag</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>geom</em><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </span></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>geom</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>nvarying</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
+          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>nvarying</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *const *</td>          <td class="paramname"><span class="paramname"><em>varyings</em><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></span>&#160;)</td>
+          <td class="paramtype">const char *const *</td>          <td class="paramname"><span class="paramname"><em>varyings</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -325,17 +329,17 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">gg::GgSimpleShader::GgSimpleShader </td>
           <td>(</td>
-          <td class="paramtype">const std::array&lt; std::string, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>files</em>, </span></td>
+          <td class="paramtype">const std::array&lt; std::string, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>files</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>nvarying</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
+          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>nvarying</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *const *</td>          <td class="paramname"><span class="paramname"><em>varyings</em><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></span>&#160;)</td>
+          <td class="paramtype">const char *const *</td>          <td class="paramname"><span class="paramname"><em>varyings</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -398,7 +402,7 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">virtual gg::GgSimpleShader::~GgSimpleShader </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -427,17 +431,17 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">bool gg::GgSimpleShader::load </td>
           <td>(</td>
-          <td class="paramtype">const std::array&lt; std::string, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>files</em>, </span></td>
+          <td class="paramtype">const std::array&lt; std::string, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>files</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>nvarying</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
+          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>nvarying</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *const *</td>          <td class="paramname"><span class="paramname"><em>varyings</em><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></span>&#160;)</td>
+          <td class="paramtype">const char *const *</td>          <td class="paramname"><span class="paramname"><em>varyings</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -470,27 +474,27 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">bool gg::GgSimpleShader::load </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>vert</em>, </span></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>vert</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>frag</em><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </span></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>frag</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>geom</em><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </span></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>geom</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>nvarying</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
+          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>nvarying</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *const *</td>          <td class="paramname"><span class="paramname"><em>varyings</em><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></span>&#160;)</td>
+          <td class="paramtype">const char *const *</td>          <td class="paramname"><span class="paramname"><em>varyings</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -533,7 +537,7 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">virtual void gg::GgSimpleShader::loadMatrix </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mp</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mp</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -567,7 +571,7 @@ gg::GgSimpleShader 連携図</div>
 <area shape="rect" title=" " alt="" coords="5,5,147,48"/>
 <area shape="rect" href="classgg_1_1GgMatrix.html#a738782ec492a8ec7927de80c1de4c820" title=" " alt="" coords="195,13,338,40"/>
 <area shape="poly" title=" " alt="" coords="147,24,179,24,179,29,147,29"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#afd68213cca68bbf403e86935e86b1096" title=" " alt="" coords="386,13,555,40"/>
+<area shape="rect" href="classgg_1_1GgMatrix.html#afd68213cca68bbf403e86935e86b1096" title=" " alt="" coords="386,13,556,40"/>
 <area shape="poly" title=" " alt="" coords="338,24,370,24,370,29,338,29"/>
 </map>
 </div>
@@ -586,12 +590,12 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">virtual void gg::GgSimpleShader::loadMatrix </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mp</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mp</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mv</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mv</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -641,7 +645,7 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">virtual void gg::GgSimpleShader::loadMatrix </td>
           <td>(</td>
-          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mp</em>, </span></td>
+          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mp</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -682,12 +686,12 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">virtual void gg::GgSimpleShader::loadMatrix </td>
           <td>(</td>
-          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mp</em>, </span></td>
+          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mp</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mv</em>, </span></td>
+          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mv</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -753,9 +757,9 @@ gg::GgSimpleShader 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="classgg_1_1GgSimpleShader_a6be6daa9ab0ad591e2257f594cf5ab34_cgraph.png" border="0" usemap="#aclassgg_1_1GgSimpleShader_a6be6daa9ab0ad591e2257f594cf5ab34_cgraph" alt=""/></div>
 <map name="aclassgg_1_1GgSimpleShader_a6be6daa9ab0ad591e2257f594cf5ab34_cgraph" id="aclassgg_1_1GgSimpleShader_a6be6daa9ab0ad591e2257f594cf5ab34_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,154,48"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#a85419e1b591aa77fda6a908dab1d9468" title=" " alt="" coords="202,13,324,40"/>
-<area shape="poly" title=" " alt="" coords="154,24,186,24,186,29,154,29"/>
+<area shape="rect" title=" " alt="" coords="5,5,157,48"/>
+<area shape="rect" href="classgg_1_1GgMatrix.html#a85419e1b591aa77fda6a908dab1d9468" title=" " alt="" coords="205,13,327,40"/>
+<area shape="poly" title=" " alt="" coords="157,24,189,24,189,29,157,29"/>
 </map>
 </div>
 
@@ -773,7 +777,7 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">virtual void gg::GgSimpleShader::loadModelviewMatrix </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mv</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mv</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -802,9 +806,9 @@ gg::GgSimpleShader 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="classgg_1_1GgSimpleShader_a139427bcc11fdd9988f5bb5d5c3c65ba_cgraph.png" border="0" usemap="#aclassgg_1_1GgSimpleShader_a139427bcc11fdd9988f5bb5d5c3c65ba_cgraph" alt=""/></div>
 <map name="aclassgg_1_1GgSimpleShader_a139427bcc11fdd9988f5bb5d5c3c65ba_cgraph" id="aclassgg_1_1GgSimpleShader_a139427bcc11fdd9988f5bb5d5c3c65ba_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,154,48"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#a85419e1b591aa77fda6a908dab1d9468" title=" " alt="" coords="202,13,324,40"/>
-<area shape="poly" title=" " alt="" coords="154,24,186,24,186,29,154,29"/>
+<area shape="rect" title=" " alt="" coords="5,5,157,48"/>
+<area shape="rect" href="classgg_1_1GgMatrix.html#a85419e1b591aa77fda6a908dab1d9468" title=" " alt="" coords="205,13,327,40"/>
+<area shape="poly" title=" " alt="" coords="157,24,189,24,189,29,157,29"/>
 </map>
 </div>
 
@@ -858,7 +862,7 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">virtual void gg::GgSimpleShader::loadModelviewMatrix </td>
           <td>(</td>
-          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mv</em>, </span></td>
+          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mv</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -925,7 +929,7 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">void gg::GgSimpleShader::use </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -945,9 +949,9 @@ gg::GgSimpleShader 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="classgg_1_1GgSimpleShader_aaa721d9ae49296194f949d6ba2f927db_icgraph.png" border="0" usemap="#aclassgg_1_1GgSimpleShader_aaa721d9ae49296194f949d6ba2f927db_icgraph" alt=""/></div>
 <map name="aclassgg_1_1GgSimpleShader_aaa721d9ae49296194f949d6ba2f927db_icgraph" id="aclassgg_1_1GgSimpleShader_aaa721d9ae49296194f949d6ba2f927db_icgraph">
-<area shape="rect" title=" " alt="" coords="139,5,309,32"/>
-<area shape="rect" href="classDraw.html#aada4b251dc995c26f468069654ec7207" title=" " alt="" coords="5,5,91,32"/>
-<area shape="poly" title=" " alt="" coords="123,21,91,21,91,16,123,16"/>
+<area shape="rect" title=" " alt="" coords="142,5,312,32"/>
+<area shape="rect" href="classDraw.html#aada4b251dc995c26f468069654ec7207" title=" " alt="" coords="5,5,94,32"/>
+<area shape="poly" title=" " alt="" coords="126,21,94,21,94,16,126,16"/>
 </map>
 </div>
 
@@ -965,7 +969,7 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">void gg::GgSimpleShader::use </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mp</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mp</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -997,7 +1001,7 @@ gg::GgSimpleShader 連携図</div>
 <area shape="rect" title=" " alt="" coords="5,5,176,32"/>
 <area shape="rect" href="classgg_1_1GgMatrix.html#a738782ec492a8ec7927de80c1de4c820" title=" " alt="" coords="224,5,367,32"/>
 <area shape="poly" title=" " alt="" coords="176,16,208,16,208,21,176,21"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#afd68213cca68bbf403e86935e86b1096" title=" " alt="" coords="415,5,584,32"/>
+<area shape="rect" href="classgg_1_1GgMatrix.html#afd68213cca68bbf403e86935e86b1096" title=" " alt="" coords="415,5,585,32"/>
 <area shape="poly" title=" " alt="" coords="367,16,399,16,399,21,367,21"/>
 </map>
 </div>
@@ -1016,12 +1020,12 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">void gg::GgSimpleShader::use </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mp</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mp</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mv</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mv</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1071,27 +1075,27 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">void gg::GgSimpleShader::use </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mp</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mp</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mv</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mv</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mn</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mn</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgSimpleShader_1_1LightBuffer.html">LightBuffer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>light</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgSimpleShader_1_1LightBuffer.html">LightBuffer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>light</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>i</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span></span>&#160;) const</td>
+          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>i</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -1138,22 +1142,22 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">void gg::GgSimpleShader::use </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mp</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mp</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mv</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mv</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgSimpleShader_1_1LightBuffer.html">LightBuffer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>light</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgSimpleShader_1_1LightBuffer.html">LightBuffer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>light</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>i</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span></span>&#160;) const</td>
+          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>i</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -1182,7 +1186,7 @@ gg::GgSimpleShader 連携図</div>
 <area shape="rect" title=" " alt="" coords="5,5,176,32"/>
 <area shape="rect" href="classgg_1_1GgMatrix.html#a738782ec492a8ec7927de80c1de4c820" title=" " alt="" coords="224,5,367,32"/>
 <area shape="poly" title=" " alt="" coords="176,16,208,16,208,21,176,21"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#afd68213cca68bbf403e86935e86b1096" title=" " alt="" coords="415,5,584,32"/>
+<area shape="rect" href="classgg_1_1GgMatrix.html#afd68213cca68bbf403e86935e86b1096" title=" " alt="" coords="415,5,585,32"/>
 <area shape="poly" title=" " alt="" coords="367,16,399,16,399,21,367,21"/>
 </map>
 </div>
@@ -1201,17 +1205,17 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">void gg::GgSimpleShader::use </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mp</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgMatrix.html">GgMatrix</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mp</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgSimpleShader_1_1LightBuffer.html">LightBuffer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>light</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgSimpleShader_1_1LightBuffer.html">LightBuffer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>light</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>i</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span></span>&#160;) const</td>
+          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>i</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -1256,7 +1260,7 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">void gg::GgSimpleShader::use </td>
           <td>(</td>
-          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mp</em>, </span></td>
+          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mp</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1295,12 +1299,12 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">void gg::GgSimpleShader::use </td>
           <td>(</td>
-          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mp</em>, </span></td>
+          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mp</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mv</em>, </span></td>
+          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mv</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1340,27 +1344,27 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">void gg::GgSimpleShader::use </td>
           <td>(</td>
-          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mp</em>, </span></td>
+          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mp</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mv</em>, </span></td>
+          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mv</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mn</em>, </span></td>
+          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mn</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgSimpleShader_1_1LightBuffer.html">LightBuffer</a> *</td>          <td class="paramname"><span class="paramname"><em>light</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgSimpleShader_1_1LightBuffer.html">LightBuffer</a> *</td>          <td class="paramname"><span class="paramname"><em>light</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>i</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span></span>&#160;) const</td>
+          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>i</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -1397,22 +1401,22 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">void gg::GgSimpleShader::use </td>
           <td>(</td>
-          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mp</em>, </span></td>
+          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mp</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mv</em>, </span></td>
+          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mv</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgSimpleShader_1_1LightBuffer.html">LightBuffer</a> *</td>          <td class="paramname"><span class="paramname"><em>light</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgSimpleShader_1_1LightBuffer.html">LightBuffer</a> *</td>          <td class="paramname"><span class="paramname"><em>light</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>i</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span></span>&#160;) const</td>
+          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>i</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -1448,17 +1452,17 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">void gg::GgSimpleShader::use </td>
           <td>(</td>
-          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mp</em>, </span></td>
+          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>mp</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgSimpleShader_1_1LightBuffer.html">LightBuffer</a> *</td>          <td class="paramname"><span class="paramname"><em>light</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgSimpleShader_1_1LightBuffer.html">LightBuffer</a> *</td>          <td class="paramname"><span class="paramname"><em>light</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>i</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span></span>&#160;) const</td>
+          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>i</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -1493,12 +1497,12 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">void gg::GgSimpleShader::use </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgSimpleShader_1_1LightBuffer.html">LightBuffer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>light</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgSimpleShader_1_1LightBuffer.html">LightBuffer</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>light</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>i</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span></span>&#160;) const</td>
+          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>i</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -1532,12 +1536,12 @@ gg::GgSimpleShader 連携図</div>
         <tr>
           <td class="memname">void gg::GgSimpleShader::use </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgSimpleShader_1_1LightBuffer.html">LightBuffer</a> *</td>          <td class="paramname"><span class="paramname"><em>light</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgSimpleShader_1_1LightBuffer.html">LightBuffer</a> *</td>          <td class="paramname"><span class="paramname"><em>light</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>i</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span></span>&#160;) const</td>
+          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>i</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -1579,7 +1583,7 @@ gg::GgSimpleShader 連携図</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacegg.html">gg</a></li><li class="navelem"><a class="el" href="classgg_1_1GgSimpleShader.html">GgSimpleShader</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

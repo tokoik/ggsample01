@@ -1,6 +1,6 @@
 <map id="gg::GgQuaternion::getConjugateMatrix" name="gg::GgQuaternion::getConjugateMatrix">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,213,72"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#ac7a0d84adeee39ee8b04327c4f3add36" title=" " alt="" coords="261,29,468,72"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,48,245,48,245,53,213,53"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="316,29,314,19,322,10,339,5,364,3,392,5,408,11,406,16,390,10,364,8,340,10,325,15,319,21,321,28"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,214,72"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#ac7a0d84adeee39ee8b04327c4f3add36" title=" " alt="" coords="262,29,470,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,48,246,48,246,53,214,53"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="317,29,316,19,324,10,340,5,366,3,393,5,409,11,408,16,392,10,366,8,342,10,327,15,321,21,323,28"/>
 </map>

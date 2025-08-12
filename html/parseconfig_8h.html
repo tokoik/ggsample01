@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: parseconfig.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -11,9 +11,9 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -26,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
   <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
@@ -36,10 +35,15 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.10.0 -->
+<!-- 構築: Doxygen 1.12.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -47,7 +51,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','検索');
+  initMenu('',true,false,'search.php','検索',true);
   $(function() { init_search(); });
 });
 /* @license-end */
@@ -66,7 +70,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('parseconfig_8h.html',''); initResizable(); });
+$(function(){initNavTree('parseconfig_8h.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -97,15 +101,30 @@ $(function(){initNavTree('parseconfig_8h.html',''); initResizable(); });
   <div class="headertitle"><div class="title">parseconfig.h ファイル</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;picojson.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="gg_8h_source.html">gg.h</a>&quot;</code><br />
+<code>#include &quot;picojson.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 parseconfig.h の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="parseconfig_8h__incl.png" border="0" usemap="#aparseconfig_8h" alt=""/></div>
 <map name="aparseconfig_8h" id="aparseconfig_8h">
-<area shape="rect" title=" " alt="" coords="5,5,104,32"/>
-<area shape="rect" title=" " alt="" coords="14,80,95,107"/>
-<area shape="poly" title=" " alt="" coords="57,33,57,64,52,64,52,33"/>
+<area shape="rect" title=" " alt="" coords="223,5,322,32"/>
+<area shape="rect" href="gg_8h.html" title=" " alt="" coords="206,80,252,107"/>
+<area shape="poly" title=" " alt="" coords="267,34,246,68,242,65,263,31"/>
+<area shape="rect" title=" " alt="" coords="276,80,357,107"/>
+<area shape="poly" title=" " alt="" coords="283,31,303,65,299,68,278,34"/>
+<area shape="rect" title=" " alt="" coords="5,155,63,181"/>
+<area shape="poly" title=" " alt="" coords="206,106,78,153,77,148,204,101"/>
+<area shape="rect" title=" " alt="" coords="86,155,136,181"/>
+<area shape="poly" title=" " alt="" coords="210,109,146,149,143,144,207,105"/>
+<area shape="rect" title=" " alt="" coords="160,155,217,181"/>
+<area shape="poly" title=" " alt="" coords="224,109,205,142,201,140,219,106"/>
+<area shape="rect" title=" " alt="" coords="242,155,295,181"/>
+<area shape="poly" title=" " alt="" coords="238,106,257,140,252,142,233,109"/>
+<area shape="rect" title=" " alt="" coords="320,155,388,181"/>
+<area shape="poly" title=" " alt="" coords="252,105,321,144,318,149,249,110"/>
+<area shape="rect" title=" " alt="" coords="412,155,477,181"/>
+<area shape="poly" title=" " alt="" coords="253,100,399,148,397,154,251,105"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -113,23 +132,23 @@ parseconfig.h の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="parseconfig_8h__dep__incl.png" border="0" usemap="#aparseconfig_8hdep" alt=""/></div>
 <map name="aparseconfig_8hdep" id="aparseconfig_8hdep">
-<area shape="rect" title=" " alt="" coords="125,5,223,32"/>
-<area shape="rect" href="Config_8h.html" title=" " alt="" coords="140,80,208,107"/>
-<area shape="poly" title=" " alt="" coords="176,48,176,80,171,80,171,48"/>
-<area shape="rect" href="Config_8cpp.html" title=" " alt="" coords="35,155,118,181"/>
-<area shape="poly" title=" " alt="" coords="146,118,95,156,92,152,143,114"/>
+<area shape="rect" title=" " alt="" coords="124,5,224,32"/>
+<area shape="rect" href="Config_8h.html" title=" " alt="" coords="139,80,209,107"/>
+<area shape="poly" title=" " alt="" coords="177,48,177,80,172,80,172,48"/>
+<area shape="rect" href="Config_8cpp.html" title=" " alt="" coords="33,155,118,181"/>
+<area shape="poly" title=" " alt="" coords="146,118,94,156,91,152,143,114"/>
 <area shape="rect" href="Menu_8h.html" title=" " alt="" coords="142,155,206,181"/>
-<area shape="poly" title=" " alt="" coords="176,122,176,154,171,154,171,122"/>
-<area shape="rect" href="ggsample01_8cpp.html" title=" " alt="" coords="105,304,221,331"/>
-<area shape="poly" title=" " alt="" coords="204,115,232,143,259,178,268,198,273,218,272,238,265,257,253,274,238,287,204,306,201,301,235,283,249,270,261,255,267,237,268,218,263,200,254,181,228,147,200,119"/>
-<area shape="rect" href="Draw_8h.html" title=" " alt="" coords="38,229,99,256"/>
-<area shape="poly" title=" " alt="" coords="144,193,88,231,85,226,141,188"/>
-<area shape="poly" title=" " alt="" coords="170,197,164,230,163,270,165,303,159,304,158,270,159,229,164,196"/>
-<area shape="rect" href="Menu_8cpp.html" title=" " alt="" coords="173,229,252,256"/>
-<area shape="poly" title=" " alt="" coords="190,194,208,228,203,230,185,196"/>
-<area shape="rect" href="Draw_8cpp.html" title=" " alt="" coords="5,304,81,331"/>
-<area shape="poly" title=" " alt="" coords="61,272,50,304,45,303,56,270"/>
-<area shape="poly" title=" " alt="" coords="99,264,148,301,145,306,95,268"/>
+<area shape="poly" title=" " alt="" coords="177,122,177,154,172,154,172,122"/>
+<area shape="rect" href="ggsample01_8cpp.html" title=" " alt="" coords="105,304,222,331"/>
+<area shape="poly" title=" " alt="" coords="204,115,233,143,259,178,268,198,273,218,273,238,266,257,254,274,238,287,204,306,202,301,235,283,250,270,261,255,268,237,268,218,263,200,254,181,229,147,200,119"/>
+<area shape="rect" href="Draw_8h.html" title=" " alt="" coords="38,229,100,256"/>
+<area shape="poly" title=" " alt="" coords="145,193,89,231,86,226,142,188"/>
+<area shape="poly" title=" " alt="" coords="170,197,165,230,164,270,165,303,160,304,158,270,160,229,165,196"/>
+<area shape="rect" href="Menu_8cpp.html" title=" " alt="" coords="174,229,252,256"/>
+<area shape="poly" title=" " alt="" coords="190,194,209,228,204,230,186,196"/>
+<area shape="rect" href="Draw_8cpp.html" title=" " alt="" coords="5,304,82,331"/>
+<area shape="poly" title=" " alt="" coords="62,272,50,304,45,303,57,270"/>
+<area shape="poly" title=" " alt="" coords="99,264,149,301,146,306,96,268"/>
 </map>
 </div>
 </div>
@@ -143,7 +162,7 @@ parseconfig.h の依存先関係図:</div>
 <tr class="memitem:a472b54f6db40dac853feeca79826be6f" id="r_a472b54f6db40dac853feeca79826be6f"><td class="memTemplParams" colspan="2">template&lt;typename T , std::size_t U&gt; </td></tr>
 <tr class="memitem:a472b54f6db40dac853feeca79826be6f"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a472b54f6db40dac853feeca79826be6f">getValue</a> (const picojson::object &amp;object, const std::string &amp;key, std::array&lt; T, U &gt; &amp;vector)</td></tr>
 <tr class="separator:a472b54f6db40dac853feeca79826be6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b215c66b6bbfc08f456fd547694f9cc" id="r_a4b215c66b6bbfc08f456fd547694f9cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b215c66b6bbfc08f456fd547694f9cc">getVector</a> (const picojson::object &amp;object, const std::string &amp;key, GgVector &amp;vector)</td></tr>
+<tr class="memitem:a4b215c66b6bbfc08f456fd547694f9cc" id="r_a4b215c66b6bbfc08f456fd547694f9cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b215c66b6bbfc08f456fd547694f9cc">getVector</a> (const picojson::object &amp;object, const std::string &amp;key, <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;vector)</td></tr>
 <tr class="separator:a4b215c66b6bbfc08f456fd547694f9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa526c0c2f6ac0f2d8e25de0a8a1300ff" id="r_aa526c0c2f6ac0f2d8e25de0a8a1300ff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa526c0c2f6ac0f2d8e25de0a8a1300ff">getString</a> (const picojson::object &amp;object, const std::string &amp;key, std::string &amp;string)</td></tr>
 <tr class="separator:aa526c0c2f6ac0f2d8e25de0a8a1300ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,7 +177,7 @@ parseconfig.h の依存先関係図:</div>
 <tr class="memitem:a88f3cec9a5d43c9a4292b9768daf67f7" id="r_a88f3cec9a5d43c9a4292b9768daf67f7"><td class="memTemplParams" colspan="2">template&lt;typename T , std::size_t U&gt; </td></tr>
 <tr class="memitem:a88f3cec9a5d43c9a4292b9768daf67f7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a88f3cec9a5d43c9a4292b9768daf67f7">setValue</a> (picojson::object &amp;object, const std::string &amp;key, const std::array&lt; T, U &gt; &amp;vector)</td></tr>
 <tr class="separator:a88f3cec9a5d43c9a4292b9768daf67f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3224acf4e4e2672b6b4d9031f955220c" id="r_a3224acf4e4e2672b6b4d9031f955220c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3224acf4e4e2672b6b4d9031f955220c">setVector</a> (picojson::object &amp;object, const std::string &amp;key, const GgVector &amp;vector)</td></tr>
+<tr class="memitem:a3224acf4e4e2672b6b4d9031f955220c" id="r_a3224acf4e4e2672b6b4d9031f955220c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3224acf4e4e2672b6b4d9031f955220c">setVector</a> (picojson::object &amp;object, const std::string &amp;key, const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;vector)</td></tr>
 <tr class="separator:a3224acf4e4e2672b6b4d9031f955220c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d1cf7a5f56fa09883319b5afb48502f" id="r_a6d1cf7a5f56fa09883319b5afb48502f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d1cf7a5f56fa09883319b5afb48502f">setString</a> (picojson::object &amp;object, const std::string &amp;key, const std::string &amp;string)</td></tr>
 <tr class="separator:a6d1cf7a5f56fa09883319b5afb48502f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,12 +205,12 @@ template&lt;std::size_t U&gt; </div>
         <tr>
           <td class="memname">bool getString </td>
           <td>(</td>
-          <td class="paramtype">const picojson::object &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em>, </span></td>
+          <td class="paramtype">const picojson::object &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em>, </span></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -216,7 +235,7 @@ template&lt;std::size_t U&gt; </div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> の <a class="el" href="parseconfig_8h_source.html#l00138">138</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> の <a class="el" href="parseconfig_8h_source.html#l00142">142</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -232,12 +251,12 @@ template&lt;std::size_t U&gt; </div>
         <tr>
           <td class="memname">bool getString </td>
           <td>(</td>
-          <td class="paramtype">const picojson::object &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em>, </span></td>
+          <td class="paramtype">const picojson::object &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em>, </span></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -261,17 +280,17 @@ template&lt;std::size_t U&gt; </div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> の <a class="el" href="parseconfig_8h_source.html#l00114">114</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> の <a class="el" href="parseconfig_8h_source.html#l00118">118</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="parseconfig_8h_aa526c0c2f6ac0f2d8e25de0a8a1300ff_icgraph.png" border="0" usemap="#aparseconfig_8h_aa526c0c2f6ac0f2d8e25de0a8a1300ff_icgraph" alt=""/></div>
 <map name="aparseconfig_8h_aa526c0c2f6ac0f2d8e25de0a8a1300ff_icgraph" id="aparseconfig_8h_aa526c0c2f6ac0f2d8e25de0a8a1300ff_icgraph">
-<area shape="rect" title=" " alt="" coords="292,5,365,32"/>
-<area shape="rect" href="classConfig.html#a5e3336e5f83b8cea516039537861e9e6" title=" " alt="" coords="155,5,244,32"/>
-<area shape="poly" title=" " alt="" coords="276,21,244,21,244,16,276,16"/>
-<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="5,5,107,32"/>
-<area shape="poly" title=" " alt="" coords="139,21,107,21,107,16,139,16"/>
+<area shape="rect" title=" " alt="" coords="298,5,371,32"/>
+<area shape="rect" href="classConfig.html#a5e3336e5f83b8cea516039537861e9e6" title=" " alt="" coords="159,5,250,32"/>
+<area shape="poly" title=" " alt="" coords="282,21,250,21,250,16,282,16"/>
+<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="5,5,111,32"/>
+<area shape="poly" title=" " alt="" coords="143,21,111,21,111,16,143,16"/>
 </map>
 </div>
 
@@ -289,12 +308,12 @@ template&lt;std::size_t U&gt; </div>
         <tr>
           <td class="memname">bool getString </td>
           <td>(</td>
-          <td class="paramtype">const picojson::object &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em>, </span></td>
+          <td class="paramtype">const picojson::object &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em>, </span></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -318,7 +337,7 @@ template&lt;std::size_t U&gt; </div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> の <a class="el" href="parseconfig_8h_source.html#l00171">171</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> の <a class="el" href="parseconfig_8h_source.html#l00175">175</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -333,12 +352,12 @@ template&lt;typename T , std::size_t U&gt; </div>
         <tr>
           <td class="memname">bool getValue </td>
           <td>(</td>
-          <td class="paramtype">const picojson::object &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em>, </span></td>
+          <td class="paramtype">const picojson::object &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em>, </span></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -364,7 +383,7 @@ template&lt;typename T , std::size_t U&gt; </div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> の <a class="el" href="parseconfig_8h_source.html#l00048">48</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> の <a class="el" href="parseconfig_8h_source.html#l00052">52</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -379,12 +398,12 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">bool getValue </td>
           <td>(</td>
-          <td class="paramtype">const picojson::object &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em>, </span></td>
+          <td class="paramtype">const picojson::object &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em>, </span></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -409,17 +428,17 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> の <a class="el" href="parseconfig_8h_source.html#l00023">23</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> の <a class="el" href="parseconfig_8h_source.html#l00027">27</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="parseconfig_8h_ad7387beefe783ec9f01caa7ee49e60db_icgraph.png" border="0" usemap="#aparseconfig_8h_ad7387beefe783ec9f01caa7ee49e60db_icgraph" alt=""/></div>
 <map name="aparseconfig_8h_ad7387beefe783ec9f01caa7ee49e60db_icgraph" id="aparseconfig_8h_ad7387beefe783ec9f01caa7ee49e60db_icgraph">
-<area shape="rect" title=" " alt="" coords="292,5,364,32"/>
-<area shape="rect" href="classConfig.html#a5e3336e5f83b8cea516039537861e9e6" title=" " alt="" coords="155,5,244,32"/>
-<area shape="poly" title=" " alt="" coords="276,21,244,21,244,16,276,16"/>
-<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="5,5,107,32"/>
-<area shape="poly" title=" " alt="" coords="139,21,107,21,107,16,139,16"/>
+<area shape="rect" title=" " alt="" coords="298,5,369,32"/>
+<area shape="rect" href="classConfig.html#a5e3336e5f83b8cea516039537861e9e6" title=" " alt="" coords="159,5,250,32"/>
+<area shape="poly" title=" " alt="" coords="282,21,250,21,250,16,282,16"/>
+<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="5,5,111,32"/>
+<area shape="poly" title=" " alt="" coords="143,21,111,21,111,16,143,16"/>
 </map>
 </div>
 
@@ -437,17 +456,17 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">bool getVector </td>
           <td>(</td>
-          <td class="paramtype">const picojson::object &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em>, </span></td>
+          <td class="paramtype">const picojson::object &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em>, </span></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GgVector &amp;</td>          <td class="paramname"><span class="paramname"><em>vector</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>vector</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -466,17 +485,17 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> の <a class="el" href="parseconfig_8h_source.html#l00081">81</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> の <a class="el" href="parseconfig_8h_source.html#l00085">85</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="parseconfig_8h_a4b215c66b6bbfc08f456fd547694f9cc_icgraph.png" border="0" usemap="#aparseconfig_8h_a4b215c66b6bbfc08f456fd547694f9cc_icgraph" alt=""/></div>
 <map name="aparseconfig_8h_a4b215c66b6bbfc08f456fd547694f9cc_icgraph" id="aparseconfig_8h_a4b215c66b6bbfc08f456fd547694f9cc_icgraph">
-<area shape="rect" title=" " alt="" coords="292,5,369,32"/>
-<area shape="rect" href="classConfig.html#a5e3336e5f83b8cea516039537861e9e6" title=" " alt="" coords="155,5,244,32"/>
-<area shape="poly" title=" " alt="" coords="276,21,245,21,245,16,276,16"/>
-<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="5,5,107,32"/>
-<area shape="poly" title=" " alt="" coords="139,21,107,21,107,16,139,16"/>
+<area shape="rect" title=" " alt="" coords="298,5,374,32"/>
+<area shape="rect" href="classConfig.html#a5e3336e5f83b8cea516039537861e9e6" title=" " alt="" coords="159,5,250,32"/>
+<area shape="poly" title=" " alt="" coords="282,21,250,21,250,16,282,16"/>
+<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="5,5,111,32"/>
+<area shape="poly" title=" " alt="" coords="143,21,111,21,111,16,143,16"/>
 </map>
 </div>
 
@@ -493,12 +512,12 @@ template&lt;std::size_t U&gt; </div>
         <tr>
           <td class="memname">void setString </td>
           <td>(</td>
-          <td class="paramtype">picojson::object &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em>, </span></td>
+          <td class="paramtype">picojson::object &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em>, </span></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -523,7 +542,7 @@ template&lt;std::size_t U&gt; </div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> の <a class="el" href="parseconfig_8h_source.html#l00283">283</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> の <a class="el" href="parseconfig_8h_source.html#l00287">287</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -539,12 +558,12 @@ template&lt;std::size_t U&gt; </div>
         <tr>
           <td class="memname">void setString </td>
           <td>(</td>
-          <td class="paramtype">picojson::object &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em>, </span></td>
+          <td class="paramtype">picojson::object &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em>, </span></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -568,17 +587,17 @@ template&lt;std::size_t U&gt; </div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> の <a class="el" href="parseconfig_8h_source.html#l00268">268</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> の <a class="el" href="parseconfig_8h_source.html#l00272">272</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="parseconfig_8h_a6d1cf7a5f56fa09883319b5afb48502f_icgraph.png" border="0" usemap="#aparseconfig_8h_a6d1cf7a5f56fa09883319b5afb48502f_icgraph" alt=""/></div>
 <map name="aparseconfig_8h_a6d1cf7a5f56fa09883319b5afb48502f_icgraph" id="aparseconfig_8h_a6d1cf7a5f56fa09883319b5afb48502f_icgraph">
-<area shape="rect" title=" " alt="" coords="294,5,367,32"/>
-<area shape="rect" href="classConfig.html#a817566065d6f1d047c96b94fc596830c" title=" " alt="" coords="155,5,246,32"/>
-<area shape="poly" title=" " alt="" coords="278,21,246,21,246,16,278,16"/>
-<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="5,5,107,32"/>
-<area shape="poly" title=" " alt="" coords="139,21,107,21,107,16,139,16"/>
+<area shape="rect" title=" " alt="" coords="302,5,375,32"/>
+<area shape="rect" href="classConfig.html#a817566065d6f1d047c96b94fc596830c" title=" " alt="" coords="159,5,254,32"/>
+<area shape="poly" title=" " alt="" coords="286,21,255,21,255,16,286,16"/>
+<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="5,5,111,32"/>
+<area shape="poly" title=" " alt="" coords="143,21,111,21,111,16,143,16"/>
 </map>
 </div>
 
@@ -596,12 +615,12 @@ template&lt;std::size_t U&gt; </div>
         <tr>
           <td class="memname">void setString </td>
           <td>(</td>
-          <td class="paramtype">picojson::object &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em>, </span></td>
+          <td class="paramtype">picojson::object &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em>, </span></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -625,7 +644,7 @@ template&lt;std::size_t U&gt; </div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> の <a class="el" href="parseconfig_8h_source.html#l00308">308</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> の <a class="el" href="parseconfig_8h_source.html#l00312">312</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -640,12 +659,12 @@ template&lt;typename T , std::size_t U&gt; </div>
         <tr>
           <td class="memname">void setValue </td>
           <td>(</td>
-          <td class="paramtype">picojson::object &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em>, </span></td>
+          <td class="paramtype">picojson::object &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em>, </span></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -671,7 +690,7 @@ template&lt;typename T , std::size_t U&gt; </div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> の <a class="el" href="parseconfig_8h_source.html#l00218">218</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> の <a class="el" href="parseconfig_8h_source.html#l00222">222</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -686,12 +705,12 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void setValue </td>
           <td>(</td>
-          <td class="paramtype">picojson::object &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em>, </span></td>
+          <td class="paramtype">picojson::object &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em>, </span></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -716,17 +735,17 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> の <a class="el" href="parseconfig_8h_source.html#l00202">202</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> の <a class="el" href="parseconfig_8h_source.html#l00206">206</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="parseconfig_8h_ab6753f500daf700e3db65f17b841ce2d_icgraph.png" border="0" usemap="#aparseconfig_8h_ab6753f500daf700e3db65f17b841ce2d_icgraph" alt=""/></div>
 <map name="aparseconfig_8h_ab6753f500daf700e3db65f17b841ce2d_icgraph" id="aparseconfig_8h_ab6753f500daf700e3db65f17b841ce2d_icgraph">
-<area shape="rect" title=" " alt="" coords="294,5,366,32"/>
-<area shape="rect" href="classConfig.html#a817566065d6f1d047c96b94fc596830c" title=" " alt="" coords="155,5,246,32"/>
-<area shape="poly" title=" " alt="" coords="278,21,246,21,246,16,278,16"/>
-<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="5,5,107,32"/>
-<area shape="poly" title=" " alt="" coords="139,21,107,21,107,16,139,16"/>
+<area shape="rect" title=" " alt="" coords="302,5,373,32"/>
+<area shape="rect" href="classConfig.html#a817566065d6f1d047c96b94fc596830c" title=" " alt="" coords="159,5,254,32"/>
+<area shape="poly" title=" " alt="" coords="286,21,255,21,255,16,286,16"/>
+<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="5,5,111,32"/>
+<area shape="poly" title=" " alt="" coords="143,21,111,21,111,16,143,16"/>
 </map>
 </div>
 
@@ -744,17 +763,17 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void setVector </td>
           <td>(</td>
-          <td class="paramtype">picojson::object &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em>, </span></td>
+          <td class="paramtype">picojson::object &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em>, </span></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const GgVector &amp;</td>          <td class="paramname"><span class="paramname"><em>vector</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>vector</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -773,17 +792,17 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> の <a class="el" href="parseconfig_8h_source.html#l00243">243</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="parseconfig_8h_source.html">parseconfig.h</a> の <a class="el" href="parseconfig_8h_source.html#l00247">247</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="parseconfig_8h_a3224acf4e4e2672b6b4d9031f955220c_icgraph.png" border="0" usemap="#aparseconfig_8h_a3224acf4e4e2672b6b4d9031f955220c_icgraph" alt=""/></div>
 <map name="aparseconfig_8h_a3224acf4e4e2672b6b4d9031f955220c_icgraph" id="aparseconfig_8h_a3224acf4e4e2672b6b4d9031f955220c_icgraph">
-<area shape="rect" title=" " alt="" coords="294,5,371,32"/>
-<area shape="rect" href="classConfig.html#a817566065d6f1d047c96b94fc596830c" title=" " alt="" coords="155,5,246,32"/>
-<area shape="poly" title=" " alt="" coords="278,21,246,21,246,16,278,16"/>
-<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="5,5,107,32"/>
-<area shape="poly" title=" " alt="" coords="139,21,107,21,107,16,139,16"/>
+<area shape="rect" title=" " alt="" coords="302,5,378,32"/>
+<area shape="rect" href="classConfig.html#a817566065d6f1d047c96b94fc596830c" title=" " alt="" coords="159,5,254,32"/>
+<area shape="poly" title=" " alt="" coords="287,21,254,21,254,16,287,16"/>
+<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="5,5,111,32"/>
+<area shape="poly" title=" " alt="" coords="143,21,111,21,111,16,143,16"/>
 </map>
 </div>
 
@@ -795,7 +814,7 @@ template&lt;typename T &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="parseconfig_8h.html">parseconfig.h</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

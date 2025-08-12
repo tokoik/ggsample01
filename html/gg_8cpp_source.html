@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: gg.cpp ソースファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -11,9 +11,9 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -26,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
   <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
@@ -36,10 +35,15 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.10.0 -->
+<!-- 構築: Doxygen 1.12.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -47,17 +51,12 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','検索');
+  initMenu('',true,false,'search.php','検索',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -71,7 +70,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
+$(function(){initNavTree('gg_8cpp_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -4499,17 +4498,17 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l04325" name="l04325"></a><span class="lineno"> 4325</span>    <span class="comment">// 読み込みに失敗したら戻る</span></div>
 <div class="line"><a id="l04326" name="l04326"></a><span class="lineno"> 4326</span>    <span class="keywordflow">if</span> (file.fail())</div>
 <div class="line"><a id="l04327" name="l04327"></a><span class="lineno"> 4327</span>    {</div>
-<div class="line"><a id="l04328" name="l04328"></a><span class="lineno"> 4328</span><span class="preprocessor">#if defined(DEBUG)</span></div>
+<div class="line"><a id="l04328" name="l04328"></a><span class="lineno"> 4328</span>#if defined(DEBUG)</div>
 <div class="line"><a id="l04329" name="l04329"></a><span class="lineno"> 4329</span>      std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: Can&#39;t open OBJ file: &quot;</span> &lt;&lt; path &lt;&lt; std::endl;</div>
-<div class="line"><a id="l04330" name="l04330"></a><span class="lineno"> 4330</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l04331" name="l04331"></a><span class="lineno"> 4331</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l04330" name="l04330"></a><span class="lineno"> 4330</span>#endif</div>
+<div class="line"><a id="l04331" name="l04331"></a><span class="lineno"> 4331</span>      return false;</div>
 <div class="line"><a id="l04332" name="l04332"></a><span class="lineno"> 4332</span>    }</div>
 <div class="line"><a id="l04333" name="l04333"></a><span class="lineno"> 4333</span> </div>
 <div class="line"><a id="l04334" name="l04334"></a><span class="lineno"> 4334</span>    <span class="comment">// ポリゴングループの最初の三角形番号</span></div>
 <div class="line"><a id="l04335" name="l04335"></a><span class="lineno"> 4335</span>    GLsizei startgroup(<span class="keyword">static_cast&lt;</span>GLsizei<span class="keyword">&gt;</span>(group.size()));</div>
 <div class="line"><a id="l04336" name="l04336"></a><span class="lineno"> 4336</span> </div>
 <div class="line"><a id="l04337" name="l04337"></a><span class="lineno"> 4337</span>    <span class="comment">// スムーズシェーディングのスイッチ</span></div>
-<div class="line"><a id="l04338" name="l04338"></a><span class="lineno"> 4338</span>    <span class="keywordtype">bool</span> smooth{ <span class="keyword">false</span> };</div>
+<div class="line"><a id="l04338" name="l04338"></a><span class="lineno"> 4338</span>    <span class="keywordtype">bool</span> smooth{ false };</div>
 <div class="line"><a id="l04339" name="l04339"></a><span class="lineno"> 4339</span> </div>
 <div class="line"><a id="l04340" name="l04340"></a><span class="lineno"> 4340</span>    <span class="comment">// 材質のテーブル</span></div>
 <div class="line"><a id="l04341" name="l04341"></a><span class="lineno"> 4341</span>    std::map&lt;std::string, GLuint&gt; mtl;</div>
@@ -4524,7 +4523,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l04350" name="l04350"></a><span class="lineno"> 4350</span>    std::string line;</div>
 <div class="line"><a id="l04351" name="l04351"></a><span class="lineno"> 4351</span> </div>
 <div class="line"><a id="l04352" name="l04352"></a><span class="lineno"> 4352</span>    <span class="comment">// データの読み込み</span></div>
-<div class="line"><a id="l04353" name="l04353"></a><span class="lineno"> 4353</span>    <span class="keywordflow">while</span> (std::getline(file, line))</div>
+<div class="line"><a id="l04353" name="l04353"></a><span class="lineno"> 4353</span>    while (std::getline(file, line))</div>
 <div class="line"><a id="l04354" name="l04354"></a><span class="lineno"> 4354</span>    {</div>
 <div class="line"><a id="l04355" name="l04355"></a><span class="lineno"> 4355</span>      <span class="comment">// 空行は読み飛ばす</span></div>
 <div class="line"><a id="l04356" name="l04356"></a><span class="lineno"> 4356</span>      <span class="keywordflow">if</span> (line == <span class="stringliteral">&quot;&quot;</span>) <span class="keywordflow">continue</span>;</div>
@@ -4678,11 +4677,11 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l04504" name="l04504"></a><span class="lineno"> 4504</span>    <span class="comment">// OBJ ファイルの読み込みに失敗したら戻る</span></div>
 <div class="line"><a id="l04505" name="l04505"></a><span class="lineno"> 4505</span>    <span class="keywordflow">if</span> (file.bad())</div>
 <div class="line"><a id="l04506" name="l04506"></a><span class="lineno"> 4506</span>    {</div>
-<div class="line"><a id="l04507" name="l04507"></a><span class="lineno"> 4507</span><span class="preprocessor">#if defined(DEBUG)</span></div>
+<div class="line"><a id="l04507" name="l04507"></a><span class="lineno"> 4507</span>#if defined(DEBUG)</div>
 <div class="line"><a id="l04508" name="l04508"></a><span class="lineno"> 4508</span>      std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: Can&#39;t read OBJ file: &quot;</span> &lt;&lt; path &lt;&lt; std::endl;</div>
-<div class="line"><a id="l04509" name="l04509"></a><span class="lineno"> 4509</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l04509" name="l04509"></a><span class="lineno"> 4509</span>#endif</div>
 <div class="line"><a id="l04510" name="l04510"></a><span class="lineno"> 4510</span>      file.close();</div>
-<div class="line"><a id="l04511" name="l04511"></a><span class="lineno"> 4511</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l04511" name="l04511"></a><span class="lineno"> 4511</span>      return false;</div>
 <div class="line"><a id="l04512" name="l04512"></a><span class="lineno"> 4512</span>    }</div>
 <div class="line"><a id="l04513" name="l04513"></a><span class="lineno"> 4513</span> </div>
 <div class="line"><a id="l04514" name="l04514"></a><span class="lineno"> 4514</span>    <span class="comment">// ファイルを閉じる</span></div>
@@ -4690,7 +4689,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l04516" name="l04516"></a><span class="lineno"> 4516</span> </div>
 <div class="line"><a id="l04517" name="l04517"></a><span class="lineno"> 4517</span>    <span class="comment">// 最後のポリゴングループの次の三角形番号</span></div>
 <div class="line"><a id="l04518" name="l04518"></a><span class="lineno"> 4518</span>    <span class="keyword">const</span> GLsizei nextgroup(<span class="keyword">static_cast&lt;</span>GLsizei<span class="keyword">&gt;</span>(face.size()));</div>
-<div class="line"><a id="l04519" name="l04519"></a><span class="lineno"> 4519</span>    <span class="keywordflow">if</span> (nextgroup &gt; startgroup)</div>
+<div class="line"><a id="l04519" name="l04519"></a><span class="lineno"> 4519</span>    if (nextgroup &gt; startgroup)</div>
 <div class="line"><a id="l04520" name="l04520"></a><span class="lineno"> 4520</span>    {</div>
 <div class="line"><a id="l04521" name="l04521"></a><span class="lineno"> 4521</span>      <span class="comment">// 最後のポリゴングループの三角形数と材質を記録する</span></div>
 <div class="line"><a id="l04522" name="l04522"></a><span class="lineno"> 4522</span>      group.emplace_back(nextgroup, <span class="keyword">static_cast&lt;</span>GLuint<span class="keyword">&gt;</span>(mtl[mtlname]));</div>
@@ -5709,7 +5708,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05497" name="l05497"></a><span class="lineno"> 5497</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
 <div class="line"><a id="l05498" name="l05498"></a><span class="lineno"> 5498</span> </div>
 <div class="line"><a id="l05499" name="l05499"></a><span class="lineno"> 5499</span>    <span class="comment">// 光源の環境光成分を設定する</span></div>
-<div class="line"><a id="l05500" name="l05500"></a><span class="lineno"> 5500</span>    light-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#a981dd763865a2aca613579df66ed4653">ambient</a>[0] = r;</div>
+<div class="line"><a id="l05500" name="l05500"></a><span class="lineno"> 5500</span>    light-&gt;ambient[0] = r;</div>
 <div class="line"><a id="l05501" name="l05501"></a><span class="lineno"> 5501</span>    light-&gt;ambient[1] = g;</div>
 <div class="line"><a id="l05502" name="l05502"></a><span class="lineno"> 5502</span>    light-&gt;ambient[2] = b;</div>
 <div class="line"><a id="l05503" name="l05503"></a><span class="lineno"> 5503</span>    light-&gt;ambient[3] = a;</div>
@@ -5737,7 +5736,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05523" name="l05523"></a><span class="lineno"> 5523</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
 <div class="line"><a id="l05524" name="l05524"></a><span class="lineno"> 5524</span> </div>
 <div class="line"><a id="l05525" name="l05525"></a><span class="lineno"> 5525</span>    <span class="comment">// 光源の強度の環境光成分を設定する</span></div>
-<div class="line"><a id="l05526" name="l05526"></a><span class="lineno"> 5526</span>    light-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#a981dd763865a2aca613579df66ed4653">ambient</a> = ambient;</div>
+<div class="line"><a id="l05526" name="l05526"></a><span class="lineno"> 5526</span>    light-&gt;ambient = ambient;</div>
 <div class="line"><a id="l05527" name="l05527"></a><span class="lineno"> 5527</span>  }</div>
 <div class="line"><a id="l05528" name="l05528"></a><span class="lineno"> 5528</span>  unmap();</div>
 <div class="line"><a id="l05529" name="l05529"></a><span class="lineno"> 5529</span>}</div>
@@ -5765,7 +5764,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05549" name="l05549"></a><span class="lineno"> 5549</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
 <div class="line"><a id="l05550" name="l05550"></a><span class="lineno"> 5550</span> </div>
 <div class="line"><a id="l05551" name="l05551"></a><span class="lineno"> 5551</span>    <span class="comment">// 光源の拡散反射光成分を設定する</span></div>
-<div class="line"><a id="l05552" name="l05552"></a><span class="lineno"> 5552</span>    light-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#abf0f33bcdf0da82a52c2f814ce8b71fa">diffuse</a>[0] = r;</div>
+<div class="line"><a id="l05552" name="l05552"></a><span class="lineno"> 5552</span>    light-&gt;diffuse[0] = r;</div>
 <div class="line"><a id="l05553" name="l05553"></a><span class="lineno"> 5553</span>    light-&gt;diffuse[1] = g;</div>
 <div class="line"><a id="l05554" name="l05554"></a><span class="lineno"> 5554</span>    light-&gt;diffuse[2] = b;</div>
 <div class="line"><a id="l05555" name="l05555"></a><span class="lineno"> 5555</span>    light-&gt;diffuse[3] = a;</div>
@@ -5793,7 +5792,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05575" name="l05575"></a><span class="lineno"> 5575</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
 <div class="line"><a id="l05576" name="l05576"></a><span class="lineno"> 5576</span> </div>
 <div class="line"><a id="l05577" name="l05577"></a><span class="lineno"> 5577</span>    <span class="comment">// 光源の強度の拡散反射光成分を設定する</span></div>
-<div class="line"><a id="l05578" name="l05578"></a><span class="lineno"> 5578</span>    light-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#abf0f33bcdf0da82a52c2f814ce8b71fa">diffuse</a> = diffuse;</div>
+<div class="line"><a id="l05578" name="l05578"></a><span class="lineno"> 5578</span>    light-&gt;diffuse = diffuse;</div>
 <div class="line"><a id="l05579" name="l05579"></a><span class="lineno"> 5579</span>  }</div>
 <div class="line"><a id="l05580" name="l05580"></a><span class="lineno"> 5580</span>  unmap();</div>
 <div class="line"><a id="l05581" name="l05581"></a><span class="lineno"> 5581</span>}</div>
@@ -5821,7 +5820,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05601" name="l05601"></a><span class="lineno"> 5601</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
 <div class="line"><a id="l05602" name="l05602"></a><span class="lineno"> 5602</span> </div>
 <div class="line"><a id="l05603" name="l05603"></a><span class="lineno"> 5603</span>    <span class="comment">// 光源の鏡面反射光成分を設定する</span></div>
-<div class="line"><a id="l05604" name="l05604"></a><span class="lineno"> 5604</span>    light-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#acd20cfb495e5923bb67686ac09ceadb9">specular</a>[0] = r;</div>
+<div class="line"><a id="l05604" name="l05604"></a><span class="lineno"> 5604</span>    light-&gt;specular[0] = r;</div>
 <div class="line"><a id="l05605" name="l05605"></a><span class="lineno"> 5605</span>    light-&gt;specular[1] = g;</div>
 <div class="line"><a id="l05606" name="l05606"></a><span class="lineno"> 5606</span>    light-&gt;specular[2] = b;</div>
 <div class="line"><a id="l05607" name="l05607"></a><span class="lineno"> 5607</span>    light-&gt;specular[3] = a;</div>
@@ -5849,7 +5848,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05627" name="l05627"></a><span class="lineno"> 5627</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
 <div class="line"><a id="l05628" name="l05628"></a><span class="lineno"> 5628</span> </div>
 <div class="line"><a id="l05629" name="l05629"></a><span class="lineno"> 5629</span>    <span class="comment">// 光源の強度の鏡面反射光成分を設定する</span></div>
-<div class="line"><a id="l05630" name="l05630"></a><span class="lineno"> 5630</span>    light-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#acd20cfb495e5923bb67686ac09ceadb9">specular</a> = specular;</div>
+<div class="line"><a id="l05630" name="l05630"></a><span class="lineno"> 5630</span>    light-&gt;specular = specular;</div>
 <div class="line"><a id="l05631" name="l05631"></a><span class="lineno"> 5631</span>  }</div>
 <div class="line"><a id="l05632" name="l05632"></a><span class="lineno"> 5632</span>  unmap();</div>
 <div class="line"><a id="l05633" name="l05633"></a><span class="lineno"> 5633</span>}</div>
@@ -5874,7 +5873,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05650" name="l05650"></a><span class="lineno"> 5650</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
 <div class="line"><a id="l05651" name="l05651"></a><span class="lineno"> 5651</span> </div>
 <div class="line"><a id="l05652" name="l05652"></a><span class="lineno"> 5652</span>    <span class="comment">// 光源の色を設定する</span></div>
-<div class="line"><a id="l05653" name="l05653"></a><span class="lineno"> 5653</span>    light-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#a981dd763865a2aca613579df66ed4653">ambient</a> = color.<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#a981dd763865a2aca613579df66ed4653">ambient</a>;</div>
+<div class="line"><a id="l05653" name="l05653"></a><span class="lineno"> 5653</span>    light-&gt;ambient = color.<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#a981dd763865a2aca613579df66ed4653">ambient</a>;</div>
 <div class="line"><a id="l05654" name="l05654"></a><span class="lineno"> 5654</span>    light-&gt;diffuse = color.<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#abf0f33bcdf0da82a52c2f814ce8b71fa">diffuse</a>;</div>
 <div class="line"><a id="l05655" name="l05655"></a><span class="lineno"> 5655</span>    light-&gt;specular = color.<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#acd20cfb495e5923bb67686ac09ceadb9">specular</a>;</div>
 <div class="line"><a id="l05656" name="l05656"></a><span class="lineno"> 5656</span>  }</div>
@@ -5904,7 +5903,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05678" name="l05678"></a><span class="lineno"> 5678</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
 <div class="line"><a id="l05679" name="l05679"></a><span class="lineno"> 5679</span> </div>
 <div class="line"><a id="l05680" name="l05680"></a><span class="lineno"> 5680</span>    <span class="comment">// 光源の位置を設定する</span></div>
-<div class="line"><a id="l05681" name="l05681"></a><span class="lineno"> 5681</span>    light-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#a5f6b1744a8c35121c8e27a6a01c8aceb">position</a>[0] = x;</div>
+<div class="line"><a id="l05681" name="l05681"></a><span class="lineno"> 5681</span>    light-&gt;position[0] = x;</div>
 <div class="line"><a id="l05682" name="l05682"></a><span class="lineno"> 5682</span>    light-&gt;position[1] = y;</div>
 <div class="line"><a id="l05683" name="l05683"></a><span class="lineno"> 5683</span>    light-&gt;position[2] = z;</div>
 <div class="line"><a id="l05684" name="l05684"></a><span class="lineno"> 5684</span>    light-&gt;position[3] = w;</div>
@@ -5932,7 +5931,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05704" name="l05704"></a><span class="lineno"> 5704</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
 <div class="line"><a id="l05705" name="l05705"></a><span class="lineno"> 5705</span> </div>
 <div class="line"><a id="l05706" name="l05706"></a><span class="lineno"> 5706</span>    <span class="comment">// 光源の位置を設定する</span></div>
-<div class="line"><a id="l05707" name="l05707"></a><span class="lineno"> 5707</span>    light-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#a5f6b1744a8c35121c8e27a6a01c8aceb">position</a> = position;</div>
+<div class="line"><a id="l05707" name="l05707"></a><span class="lineno"> 5707</span>    light-&gt;position = position;</div>
 <div class="line"><a id="l05708" name="l05708"></a><span class="lineno"> 5708</span>  }</div>
 <div class="line"><a id="l05709" name="l05709"></a><span class="lineno"> 5709</span>  unmap();</div>
 <div class="line"><a id="l05710" name="l05710"></a><span class="lineno"> 5710</span>}</div>
@@ -5960,7 +5959,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05730" name="l05730"></a><span class="lineno"> 5730</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
 <div class="line"><a id="l05731" name="l05731"></a><span class="lineno"> 5731</span> </div>
 <div class="line"><a id="l05732" name="l05732"></a><span class="lineno"> 5732</span>    <span class="comment">// 環境光に対する反射係数を設定する</span></div>
-<div class="line"><a id="l05733" name="l05733"></a><span class="lineno"> 5733</span>    material-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Material.html#a6816024cb1c246f897c00e5c90c94e34">ambient</a>[0] = r;</div>
+<div class="line"><a id="l05733" name="l05733"></a><span class="lineno"> 5733</span>    material-&gt;ambient[0] = r;</div>
 <div class="line"><a id="l05734" name="l05734"></a><span class="lineno"> 5734</span>    material-&gt;ambient[1] = g;</div>
 <div class="line"><a id="l05735" name="l05735"></a><span class="lineno"> 5735</span>    material-&gt;ambient[2] = b;</div>
 <div class="line"><a id="l05736" name="l05736"></a><span class="lineno"> 5736</span>    material-&gt;ambient[3] = a;</div>
@@ -5988,7 +5987,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05756" name="l05756"></a><span class="lineno"> 5756</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
 <div class="line"><a id="l05757" name="l05757"></a><span class="lineno"> 5757</span> </div>
 <div class="line"><a id="l05758" name="l05758"></a><span class="lineno"> 5758</span>    <span class="comment">// 光源の強度の環境光成分を設定する</span></div>
-<div class="line"><a id="l05759" name="l05759"></a><span class="lineno"> 5759</span>    material-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Material.html#a6816024cb1c246f897c00e5c90c94e34">ambient</a> = ambient;</div>
+<div class="line"><a id="l05759" name="l05759"></a><span class="lineno"> 5759</span>    material-&gt;ambient = ambient;</div>
 <div class="line"><a id="l05760" name="l05760"></a><span class="lineno"> 5760</span>  }</div>
 <div class="line"><a id="l05761" name="l05761"></a><span class="lineno"> 5761</span>  unmap();</div>
 <div class="line"><a id="l05762" name="l05762"></a><span class="lineno"> 5762</span>}</div>
@@ -6016,7 +6015,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05782" name="l05782"></a><span class="lineno"> 5782</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
 <div class="line"><a id="l05783" name="l05783"></a><span class="lineno"> 5783</span> </div>
 <div class="line"><a id="l05784" name="l05784"></a><span class="lineno"> 5784</span>    <span class="comment">// 拡散反射係数を設定する</span></div>
-<div class="line"><a id="l05785" name="l05785"></a><span class="lineno"> 5785</span>    material-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Material.html#a68a085fbd3294ff971aa3af1ec93adf4">diffuse</a>[0] = r;</div>
+<div class="line"><a id="l05785" name="l05785"></a><span class="lineno"> 5785</span>    material-&gt;diffuse[0] = r;</div>
 <div class="line"><a id="l05786" name="l05786"></a><span class="lineno"> 5786</span>    material-&gt;diffuse[1] = g;</div>
 <div class="line"><a id="l05787" name="l05787"></a><span class="lineno"> 5787</span>    material-&gt;diffuse[2] = b;</div>
 <div class="line"><a id="l05788" name="l05788"></a><span class="lineno"> 5788</span>    material-&gt;diffuse[3] = a;</div>
@@ -6044,7 +6043,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05808" name="l05808"></a><span class="lineno"> 5808</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
 <div class="line"><a id="l05809" name="l05809"></a><span class="lineno"> 5809</span> </div>
 <div class="line"><a id="l05810" name="l05810"></a><span class="lineno"> 5810</span>    <span class="comment">// 光源の強度の環境光成分を設定する</span></div>
-<div class="line"><a id="l05811" name="l05811"></a><span class="lineno"> 5811</span>    material-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Material.html#a68a085fbd3294ff971aa3af1ec93adf4">diffuse</a> = diffuse;</div>
+<div class="line"><a id="l05811" name="l05811"></a><span class="lineno"> 5811</span>    material-&gt;diffuse = diffuse;</div>
 <div class="line"><a id="l05812" name="l05812"></a><span class="lineno"> 5812</span>  }</div>
 <div class="line"><a id="l05813" name="l05813"></a><span class="lineno"> 5813</span>  unmap();</div>
 <div class="line"><a id="l05814" name="l05814"></a><span class="lineno"> 5814</span>}</div>
@@ -6072,7 +6071,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05834" name="l05834"></a><span class="lineno"> 5834</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
 <div class="line"><a id="l05835" name="l05835"></a><span class="lineno"> 5835</span> </div>
 <div class="line"><a id="l05836" name="l05836"></a><span class="lineno"> 5836</span>    <span class="comment">// 環境光に対する反射係数と拡散反射係数を設定する</span></div>
-<div class="line"><a id="l05837" name="l05837"></a><span class="lineno"> 5837</span>    material-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Material.html#a6816024cb1c246f897c00e5c90c94e34">ambient</a>[0] = material-&gt;diffuse[0] = r;</div>
+<div class="line"><a id="l05837" name="l05837"></a><span class="lineno"> 5837</span>    material-&gt;ambient[0] = material-&gt;diffuse[0] = r;</div>
 <div class="line"><a id="l05838" name="l05838"></a><span class="lineno"> 5838</span>    material-&gt;ambient[1] = material-&gt;diffuse[1] = g;</div>
 <div class="line"><a id="l05839" name="l05839"></a><span class="lineno"> 5839</span>    material-&gt;ambient[2] = material-&gt;diffuse[2] = b;</div>
 <div class="line"><a id="l05840" name="l05840"></a><span class="lineno"> 5840</span>    material-&gt;ambient[3] = material-&gt;diffuse[3] = a;</div>
@@ -6100,7 +6099,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05860" name="l05860"></a><span class="lineno"> 5860</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
 <div class="line"><a id="l05861" name="l05861"></a><span class="lineno"> 5861</span> </div>
 <div class="line"><a id="l05862" name="l05862"></a><span class="lineno"> 5862</span>    <span class="comment">// 光源の強度の環境光成分を設定する</span></div>
-<div class="line"><a id="l05863" name="l05863"></a><span class="lineno"> 5863</span>    material-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Material.html#a6816024cb1c246f897c00e5c90c94e34">ambient</a> = material-&gt;diffuse = color;</div>
+<div class="line"><a id="l05863" name="l05863"></a><span class="lineno"> 5863</span>    material-&gt;ambient = material-&gt;diffuse = color;</div>
 <div class="line"><a id="l05864" name="l05864"></a><span class="lineno"> 5864</span>  }</div>
 <div class="line"><a id="l05865" name="l05865"></a><span class="lineno"> 5865</span>  unmap();</div>
 <div class="line"><a id="l05866" name="l05866"></a><span class="lineno"> 5866</span>}</div>
@@ -6170,7 +6169,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05926" name="l05926"></a><span class="lineno"> 5926</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
 <div class="line"><a id="l05927" name="l05927"></a><span class="lineno"> 5927</span> </div>
 <div class="line"><a id="l05928" name="l05928"></a><span class="lineno"> 5928</span>    <span class="comment">// 鏡面反射係数を設定する</span></div>
-<div class="line"><a id="l05929" name="l05929"></a><span class="lineno"> 5929</span>    material-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Material.html#a270cd1c30152ee8c29ec5a94e12ff843">specular</a>[0] = r;</div>
+<div class="line"><a id="l05929" name="l05929"></a><span class="lineno"> 5929</span>    material-&gt;specular[0] = r;</div>
 <div class="line"><a id="l05930" name="l05930"></a><span class="lineno"> 5930</span>    material-&gt;specular[1] = g;</div>
 <div class="line"><a id="l05931" name="l05931"></a><span class="lineno"> 5931</span>    material-&gt;specular[2] = b;</div>
 <div class="line"><a id="l05932" name="l05932"></a><span class="lineno"> 5932</span>    material-&gt;specular[3] = a;</div>
@@ -6198,7 +6197,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05952" name="l05952"></a><span class="lineno"> 5952</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
 <div class="line"><a id="l05953" name="l05953"></a><span class="lineno"> 5953</span> </div>
 <div class="line"><a id="l05954" name="l05954"></a><span class="lineno"> 5954</span>    <span class="comment">// 光源の強度の環境光成分を設定する</span></div>
-<div class="line"><a id="l05955" name="l05955"></a><span class="lineno"> 5955</span>    material-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Material.html#a270cd1c30152ee8c29ec5a94e12ff843">specular</a> = specular;</div>
+<div class="line"><a id="l05955" name="l05955"></a><span class="lineno"> 5955</span>    material-&gt;specular = specular;</div>
 <div class="line"><a id="l05956" name="l05956"></a><span class="lineno"> 5956</span>  }</div>
 <div class="line"><a id="l05957" name="l05957"></a><span class="lineno"> 5957</span>  unmap();</div>
 <div class="line"><a id="l05958" name="l05958"></a><span class="lineno"> 5958</span>}</div>
@@ -6221,7 +6220,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05973" name="l05973"></a><span class="lineno"> 5973</span>  {</div>
 <div class="line"><a id="l05974" name="l05974"></a><span class="lineno"> 5974</span>    <span class="comment">// バッファオブジェクトの i 番目のブロックのポインタ</span></div>
 <div class="line"><a id="l05975" name="l05975"></a><span class="lineno"> 5975</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
-<div class="line"><a id="l05976" name="l05976"></a><span class="lineno"> 5976</span>    material-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Material.html#a537c99818191226cb9ceddc7b7ff3d6c">shininess</a> = shininess;</div>
+<div class="line"><a id="l05976" name="l05976"></a><span class="lineno"> 5976</span>    material-&gt;shininess = shininess;</div>
 <div class="line"><a id="l05977" name="l05977"></a><span class="lineno"> 5977</span>  }</div>
 <div class="line"><a id="l05978" name="l05978"></a><span class="lineno"> 5978</span>  unmap();</div>
 <div class="line"><a id="l05979" name="l05979"></a><span class="lineno"> 5979</span>}</div>
@@ -6244,7 +6243,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05994" name="l05994"></a><span class="lineno"> 5994</span>  {</div>
 <div class="line"><a id="l05995" name="l05995"></a><span class="lineno"> 5995</span>    <span class="comment">// バッファオブジェクトの i 番目のブロックのポインタ</span></div>
 <div class="line"><a id="l05996" name="l05996"></a><span class="lineno"> 5996</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
-<div class="line"><a id="l05997" name="l05997"></a><span class="lineno"> 5997</span>    material-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Material.html#a537c99818191226cb9ceddc7b7ff3d6c">shininess</a> = shininess[i];</div>
+<div class="line"><a id="l05997" name="l05997"></a><span class="lineno"> 5997</span>    material-&gt;shininess = shininess[i];</div>
 <div class="line"><a id="l05998" name="l05998"></a><span class="lineno"> 5998</span>  }</div>
 <div class="line"><a id="l05999" name="l05999"></a><span class="lineno"> 5999</span>  unmap();</div>
 <div class="line"><a id="l06000" name="l06000"></a><span class="lineno"> 6000</span>}</div>
@@ -6417,15 +6416,10 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="ttc" id="anamespacegg_html_af7ab5857e56acfcf3e806f587f3737a0"><div class="ttname"><a href="namespacegg.html#af7ab5857e56acfcf3e806f587f3737a0">gg::ggInit</a></div><div class="ttdeci">void ggInit()</div><div class="ttdef"><b>Definition</b> <a href="#l01354">gg.cpp:1354</a></div></div>
 <div class="ttc" id="anamespacegg_html_afe1fcb205a0f34a31eda2d2eb4012084"><div class="ttname"><a href="namespacegg.html#afe1fcb205a0f34a31eda2d2eb4012084">gg::ggElementsMesh</a></div><div class="ttdeci">std::shared_ptr&lt; GgElements &gt; ggElementsMesh(GLuint slices, GLuint stacks, const GLfloat(*pos)[3], const GLfloat(*norm)[3]=nullptr)</div><div class="ttdef"><b>Definition</b> <a href="#l05347">gg.cpp:5347</a></div></div>
 <div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Light_html"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Light.html">gg::GgSimpleShader::Light</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07374">gg.h:7375</a></div></div>
-<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Light_html_a5f6b1744a8c35121c8e27a6a01c8aceb"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Light.html#a5f6b1744a8c35121c8e27a6a01c8aceb">gg::GgSimpleShader::Light::position</a></div><div class="ttdeci">GgVector position</div><div class="ttdoc">光源の位置.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07379">gg.h:7379</a></div></div>
 <div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Light_html_a981dd763865a2aca613579df66ed4653"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Light.html#a981dd763865a2aca613579df66ed4653">gg::GgSimpleShader::Light::ambient</a></div><div class="ttdeci">GgVector ambient</div><div class="ttdoc">光源強度の環境光成分.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07376">gg.h:7376</a></div></div>
 <div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Light_html_abf0f33bcdf0da82a52c2f814ce8b71fa"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Light.html#abf0f33bcdf0da82a52c2f814ce8b71fa">gg::GgSimpleShader::Light::diffuse</a></div><div class="ttdeci">GgVector diffuse</div><div class="ttdoc">光源強度の拡散反射光成分.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07377">gg.h:7377</a></div></div>
 <div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Light_html_acd20cfb495e5923bb67686ac09ceadb9"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Light.html#acd20cfb495e5923bb67686ac09ceadb9">gg::GgSimpleShader::Light::specular</a></div><div class="ttdeci">GgVector specular</div><div class="ttdoc">光源強度の鏡面反射光成分.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07378">gg.h:7378</a></div></div>
 <div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Material_html"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Material.html">gg::GgSimpleShader::Material</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07638">gg.h:7639</a></div></div>
-<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Material_html_a270cd1c30152ee8c29ec5a94e12ff843"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Material.html#a270cd1c30152ee8c29ec5a94e12ff843">gg::GgSimpleShader::Material::specular</a></div><div class="ttdeci">GgVector specular</div><div class="ttdoc">鏡面反射係数.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07642">gg.h:7642</a></div></div>
-<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Material_html_a537c99818191226cb9ceddc7b7ff3d6c"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Material.html#a537c99818191226cb9ceddc7b7ff3d6c">gg::GgSimpleShader::Material::shininess</a></div><div class="ttdeci">GLfloat shininess</div><div class="ttdoc">輝き係数.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07643">gg.h:7643</a></div></div>
-<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Material_html_a6816024cb1c246f897c00e5c90c94e34"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Material.html#a6816024cb1c246f897c00e5c90c94e34">gg::GgSimpleShader::Material::ambient</a></div><div class="ttdeci">GgVector ambient</div><div class="ttdoc">環境光に対する反射係数.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07640">gg.h:7640</a></div></div>
-<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Material_html_a68a085fbd3294ff971aa3af1ec93adf4"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Material.html#a68a085fbd3294ff971aa3af1ec93adf4">gg::GgSimpleShader::Material::diffuse</a></div><div class="ttdeci">GgVector diffuse</div><div class="ttdoc">拡散反射係数.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07641">gg.h:7641</a></div></div>
 <div class="ttc" id="astructgg_1_1GgVertex_html"><div class="ttname"><a href="structgg_1_1GgVertex.html">gg::GgVertex</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l06377">gg.h:6378</a></div></div>
 <div class="ttc" id="astructgg_1_1GgVertex_html_a33f0042dbe503f3d31dddd2dd5af50f9"><div class="ttname"><a href="structgg_1_1GgVertex.html#a33f0042dbe503f3d31dddd2dd5af50f9">gg::GgVertex::normal</a></div><div class="ttdeci">GgVector normal</div><div class="ttdoc">法線.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l06383">gg.h:6383</a></div></div>
 <div class="ttc" id="astructgg_1_1GgVertex_html_a789c403b3289b3f8de6dec3f6a2f46d4"><div class="ttname"><a href="structgg_1_1GgVertex.html#a789c403b3289b3f8de6dec3f6a2f46d4">gg::GgVertex::position</a></div><div class="ttdeci">GgVector position</div><div class="ttdoc">位置.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l06380">gg.h:6380</a></div></div>
@@ -6435,7 +6429,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="gg_8cpp.html">gg.cpp</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

@@ -1,9 +1,9 @@
 <map id="クラス階層図" name="クラス階層図">
 <area shape="rect" id="Node000000" href="$classgg_1_1GgShape.html" title=" " alt="" coords="5,31,103,57"/>
-<area shape="rect" id="Node000001" href="$classgg_1_1GgPoints.html" title=" " alt="" coords="158,5,256,32"/>
-<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="118,31,157,24,158,29,119,36"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgTriangles.html" title=" " alt="" coords="151,56,263,83"/>
-<area shape="poly" id="edge3_Node000000_Node000002" title=" " alt="" coords="119,52,151,57,150,63,118,57"/>
-<area shape="rect" id="Node000003" href="$classgg_1_1GgElements.html" title=" " alt="" coords="311,56,426,83"/>
-<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="278,67,311,67,311,72,278,72"/>
+<area shape="rect" id="Node000001" href="$classgg_1_1GgPoints.html" title=" " alt="" coords="159,5,256,32"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="117,31,158,24,159,29,118,36"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgTriangles.html" title=" " alt="" coords="151,56,264,83"/>
+<area shape="poly" id="edge3_Node000000_Node000002" title=" " alt="" coords="118,52,151,57,150,63,117,57"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgElements.html" title=" " alt="" coords="312,56,427,83"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="280,67,312,67,312,72,280,72"/>
 </map>

@@ -1,6 +1,6 @@
 <map id="gg::GgQuaternion::loadDivide" name="gg::GgQuaternion::loadDivide">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,195,56"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#a0d9f4c9b28fc3424ef26aed061448287" title=" " alt="" coords="243,29,406,56"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,40,227,40,227,45,195,45"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="287,30,280,21,284,11,300,5,324,3,351,5,365,12,363,17,350,10,324,8,301,10,288,15,285,20,291,27"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,198,56"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#a0d9f4c9b28fc3424ef26aed061448287" title=" " alt="" coords="246,29,411,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,40,230,40,230,45,198,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="290,30,283,21,288,11,303,5,328,3,355,5,370,12,367,17,354,10,328,8,304,10,292,15,289,20,294,27"/>
 </map>

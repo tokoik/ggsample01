@@ -1,7 +1,7 @@
 <map id="gg::ggSaveDepth" name="gg::ggSaveDepth">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,125,32"/>
-<area shape="rect" id="Node000002" href="$namespacegg.html#ae450600cc658bd7d6b0f7ecb62156fe8" title=" " alt="" coords="173,5,279,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,16,157,16,157,21,125,21"/>
-<area shape="rect" id="Node000003" href="$gg_8h.html#ac735c9fb18adb1f2127c90adcea87cd8" title=" " alt="" coords="327,5,419,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="279,16,311,16,311,21,279,21"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,128,32"/>
+<area shape="rect" id="Node000002" href="$namespacegg.html#ae450600cc658bd7d6b0f7ecb62156fe8" title=" " alt="" coords="176,5,285,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,16,160,16,160,21,128,21"/>
+<area shape="rect" id="Node000003" href="$gg_8h.html#ac735c9fb18adb1f2127c90adcea87cd8" title=" " alt="" coords="333,5,429,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="286,16,317,16,317,21,286,21"/>
 </map>

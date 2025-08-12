@@ -1,11 +1,11 @@
 <map id="gg::GgQuaternion::GgQuaternion" name="gg::GgQuaternion::GgQuaternion">
-<area shape="rect" id="Node000001" title=" " alt="" coords="461,56,672,83"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#a5570b27f958ccde717bc997cca85a0fd" title=" " alt="" coords="216,5,413,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="481,55,384,35,385,30,482,50"/>
-<area shape="rect" id="Node000004" href="$classgg_1_1GgQuaternion.html#ae1e4c3e0920aca13ab3085eea15e576e" title=" " alt="" coords="221,56,408,83"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="445,72,408,72,408,67,445,67"/>
-<area shape="rect" id="Node000005" href="$classgg_1_1GgQuaternion.html#aec921491e40e285733f049306c816838" title=" " alt="" coords="221,107,408,133"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="482,89,385,109,384,103,481,84"/>
-<area shape="rect" id="Node000003" href="$namespacegg.html#af887bffaeaee67620ed2f7e020cb6a6a" title=" " alt="" coords="5,5,168,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="200,21,168,21,168,16,200,16"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="463,56,674,83"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#a5570b27f958ccde717bc997cca85a0fd" title=" " alt="" coords="217,5,415,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="483,55,385,35,386,30,484,50"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgQuaternion.html#ae1e4c3e0920aca13ab3085eea15e576e" title=" " alt="" coords="223,56,409,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="448,72,409,72,409,67,448,67"/>
+<area shape="rect" id="Node000005" href="$classgg_1_1GgQuaternion.html#aec921491e40e285733f049306c816838" title=" " alt="" coords="223,107,409,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="484,89,386,109,385,103,483,84"/>
+<area shape="rect" id="Node000003" href="$namespacegg.html#af887bffaeaee67620ed2f7e020cb6a6a" title=" " alt="" coords="5,5,169,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="201,21,169,21,169,16,201,16"/>
 </map>

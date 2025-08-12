@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: gg.h ソースファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -11,9 +11,9 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -26,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
   <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
@@ -36,10 +35,15 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.10.0 -->
+<!-- 構築: Doxygen 1.12.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -47,17 +51,12 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','検索');
+  initMenu('',true,false,'search.php','検索',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -71,7 +70,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('gg_8h_source.html',''); initResizable(); });
+$(function(){initNavTree('gg_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -3979,31 +3978,31 @@ $(function(){initNavTree('gg_8h_source.html',''); initResizable(); });
 <div class="line"><a id="l05520" name="l05520"></a><span class="lineno"><a class="line" href="classgg_1_1GgBuffer.html"> 5520</a></span>  <span class="keyword">class </span><a class="code hl_class" href="classgg_1_1GgBuffer.html">GgBuffer</a></div>
 <div class="line"><a id="l05521" name="l05521"></a><span class="lineno"> 5521</span>  {</div>
 <div class="line"><a id="l05522" name="l05522"></a><span class="lineno"> 5522</span>    <span class="comment">// ターゲット</span></div>
-<div class="line"><a id="l05523" name="l05523"></a><span class="lineno"> 5523</span>    <span class="keyword">const</span> <a class="code hl_function" href="classgg_1_1GgBuffer.html#aa24e72390ee3728bbba12e04aa5a6986">GLenum</a> target;</div>
+<div class="line"><a id="l05523" name="l05523"></a><span class="lineno"> 5523</span>    <span class="keyword">const</span> GLenum target;</div>
 <div class="line"><a id="l05524" name="l05524"></a><span class="lineno"> 5524</span> </div>
 <div class="line"><a id="l05525" name="l05525"></a><span class="lineno"> 5525</span>    <span class="comment">// バッファオブジェクトのアライメントを考慮したデータの間隔</span></div>
-<div class="line"><a id="l05526" name="l05526"></a><span class="lineno"> 5526</span>    <span class="keyword">const</span> <a class="code hl_function" href="classgg_1_1GgBuffer.html#aa24e72390ee3728bbba12e04aa5a6986">GLsizei</a> stride;</div>
+<div class="line"><a id="l05526" name="l05526"></a><span class="lineno"> 5526</span>    <span class="keyword">const</span> GLsizei stride;</div>
 <div class="line"><a id="l05527" name="l05527"></a><span class="lineno"> 5527</span> </div>
 <div class="line"><a id="l05528" name="l05528"></a><span class="lineno"> 5528</span>    <span class="comment">// データの数</span></div>
-<div class="line"><a id="l05529" name="l05529"></a><span class="lineno"> 5529</span>    <span class="keyword">const</span> <a class="code hl_function" href="classgg_1_1GgBuffer.html#aa24e72390ee3728bbba12e04aa5a6986">GLsizei</a> count;</div>
+<div class="line"><a id="l05529" name="l05529"></a><span class="lineno"> 5529</span>    <span class="keyword">const</span> GLsizei count;</div>
 <div class="line"><a id="l05530" name="l05530"></a><span class="lineno"> 5530</span> </div>
 <div class="line"><a id="l05531" name="l05531"></a><span class="lineno"> 5531</span>    <span class="comment">// バッファオブジェクト</span></div>
 <div class="foldopen" id="foldopen05532" data-start="{" data-end="}">
-<div class="line"><a id="l05532" name="l05532"></a><span class="lineno"><a class="line" href="classgg_1_1GgBuffer.html#a6073ce01bd09b5a2b4893e33c108167e"> 5532</a></span>    <span class="keyword">const</span> <a class="code hl_function" href="classgg_1_1GgBuffer.html#aa24e72390ee3728bbba12e04aa5a6986">GLuint</a> buffer;</div>
+<div class="line"><a id="l05532" name="l05532"></a><span class="lineno"><a class="line" href="classgg_1_1GgBuffer.html#a6073ce01bd09b5a2b4893e33c108167e"> 5532</a></span>    <span class="keyword">const</span> GLuint buffer;</div>
 <div class="line"><a id="l05533" name="l05533"></a><span class="lineno"> 5533</span> </div>
 <div class="line"><a id="l05534" name="l05534"></a><span class="lineno"> 5534</span>  <span class="keyword">public</span>:</div>
 <div class="line"><a id="l05535" name="l05535"></a><span class="lineno"> 5535</span> </div>
-<div class="line"><a id="l05545" name="l05545"></a><span class="lineno"> 5545</span>    <a class="code hl_function" href="classgg_1_1GgBuffer.html#aa24e72390ee3728bbba12e04aa5a6986">GgBuffer&lt;T&gt;</a>(</div>
-<div class="line"><a id="l05546" name="l05546"></a><span class="lineno"> 5546</span>      <a class="code hl_function" href="classgg_1_1GgBuffer.html#aa24e72390ee3728bbba12e04aa5a6986">GLenum</a> target,</div>
-<div class="line"><a id="l05547" name="l05547"></a><span class="lineno"> 5547</span>      <span class="keyword">const</span> <a class="code hl_function" href="classgg_1_1GgBuffer.html#aa24e72390ee3728bbba12e04aa5a6986">T</a>* data,</div>
-<div class="line"><a id="l05548" name="l05548"></a><span class="lineno"> 5548</span>      <a class="code hl_function" href="classgg_1_1GgBuffer.html#aa24e72390ee3728bbba12e04aa5a6986">GLsizei</a> stride,</div>
-<div class="line"><a id="l05549" name="l05549"></a><span class="lineno"> 5549</span>      <a class="code hl_function" href="classgg_1_1GgBuffer.html#aa24e72390ee3728bbba12e04aa5a6986">GLsizei</a> count,</div>
-<div class="line"><a id="l05550" name="l05550"></a><span class="lineno"> 5550</span>      <a class="code hl_function" href="classgg_1_1GgBuffer.html#aa24e72390ee3728bbba12e04aa5a6986">GLenum</a> <a class="code hl_function" href="classgg_1_1GgBuffer.html#aa24e72390ee3728bbba12e04aa5a6986">usage</a></div>
+<div class="line"><a id="l05545" name="l05545"></a><span class="lineno"> 5545</span>    <a class="code hl_function" href="classgg_1_1GgBuffer.html#a6073ce01bd09b5a2b4893e33c108167e">GgBuffer&lt;T&gt;</a>(</div>
+<div class="line"><a id="l05546" name="l05546"></a><span class="lineno"> 5546</span>      GLenum target,</div>
+<div class="line"><a id="l05547" name="l05547"></a><span class="lineno"> 5547</span>      <span class="keyword">const</span> T* data,</div>
+<div class="line"><a id="l05548" name="l05548"></a><span class="lineno"> 5548</span>      GLsizei stride,</div>
+<div class="line"><a id="l05549" name="l05549"></a><span class="lineno"> 5549</span>      GLsizei count,</div>
+<div class="line"><a id="l05550" name="l05550"></a><span class="lineno"> 5550</span>      GLenum usage</div>
 <div class="line"><a id="l05551" name="l05551"></a><span class="lineno"> 5551</span>      ) :</div>
 <div class="line"><a id="l05552" name="l05552"></a><span class="lineno"> 5552</span>      target{ target },</div>
 <div class="line"><a id="l05553" name="l05553"></a><span class="lineno"> 5553</span>      stride{ stride },</div>
 <div class="line"><a id="l05554" name="l05554"></a><span class="lineno"> 5554</span>      count{ count },</div>
-<div class="line"><a id="l05555" name="l05555"></a><span class="lineno"> 5555</span>      buffer{ [] { <a class="code hl_function" href="classgg_1_1GgBuffer.html#aa24e72390ee3728bbba12e04aa5a6986">GLuint</a> buffer; <a class="code hl_function" href="classgg_1_1GgBuffer.html#aa24e72390ee3728bbba12e04aa5a6986">glGenBuffers</a>(1, &amp;buffer); <span class="keywordflow">return</span> buffer; } () }</div>
+<div class="line"><a id="l05555" name="l05555"></a><span class="lineno"> 5555</span>      buffer{ [] { GLuint buffer; glGenBuffers(1, &amp;buffer); <span class="keywordflow">return</span> buffer; } () }</div>
 <div class="line"><a id="l05556" name="l05556"></a><span class="lineno"> 5556</span>    {</div>
 <div class="line"><a id="l05557" name="l05557"></a><span class="lineno"> 5557</span>      <span class="comment">// バッファオブジェクトのメモリを確保してデータを転送する</span></div>
 <div class="line"><a id="l05558" name="l05558"></a><span class="lineno"> 5558</span>      glBindBuffer(target, buffer);</div>
@@ -5725,6 +5724,7 @@ $(function(){initNavTree('gg_8h_source.html',''); initResizable(); });
 <div class="ttc" id="aclassgg_1_1GgBuffer_html_a42fb5b6c8f42841b6054d3313033b7c5"><div class="ttname"><a href="classgg_1_1GgBuffer.html#a42fb5b6c8f42841b6054d3313033b7c5">gg::GgBuffer::read</a></div><div class="ttdeci">void read(T *data, GLint first, GLsizei count) const</div><div class="ttdef"><b>Definition</b> <a href="#l05713">gg.h:5713</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgBuffer_html_a479120414c50643ebcfb93f3f2f59ed7"><div class="ttname"><a href="classgg_1_1GgBuffer.html#a479120414c50643ebcfb93f3f2f59ed7">gg::GgBuffer::send</a></div><div class="ttdeci">void send(const T *data, GLint first, GLsizei count) const</div><div class="ttdef"><b>Definition</b> <a href="#l05695">gg.h:5695</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgBuffer_html_a4fbe7fc6d7bc5b37fbb3667734c9618f"><div class="ttname"><a href="classgg_1_1GgBuffer.html#a4fbe7fc6d7bc5b37fbb3667734c9618f">gg::GgBuffer::operator=</a></div><div class="ttdeci">GgBuffer&lt; T &gt; &amp; operator=(const GgBuffer&lt; T &gt; &amp;buffer)=delete</div></div>
+<div class="ttc" id="aclassgg_1_1GgBuffer_html_a6073ce01bd09b5a2b4893e33c108167e"><div class="ttname"><a href="classgg_1_1GgBuffer.html#a6073ce01bd09b5a2b4893e33c108167e">gg::GgBuffer::GgBuffer</a></div><div class="ttdeci">GgBuffer(GLenum target, const T *data, GLsizei stride, GLsizei count, GLenum usage)</div><div class="ttdef"><b>Definition</b> <a href="#l05532">gg.h:5545</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgBuffer_html_a6370b2ab43bffabea798d25783860748"><div class="ttname"><a href="classgg_1_1GgBuffer.html#a6370b2ab43bffabea798d25783860748">gg::GgBuffer::bind</a></div><div class="ttdeci">void bind() const</div><div class="ttdef"><b>Definition</b> <a href="#l05635">gg.h:5635</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgBuffer_html_a7c057bb71cf443429b4d27cf60140df8"><div class="ttname"><a href="classgg_1_1GgBuffer.html#a7c057bb71cf443429b4d27cf60140df8">gg::GgBuffer::getCount</a></div><div class="ttdeci">const GLsizei &amp; getCount() const</div><div class="ttdef"><b>Definition</b> <a href="#l05617">gg.h:5617</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgBuffer_html_a83a3b8f42aceb85122012bf465ee7ff2"><div class="ttname"><a href="classgg_1_1GgBuffer.html#a83a3b8f42aceb85122012bf465ee7ff2">gg::GgBuffer::unbind</a></div><div class="ttdeci">void unbind() const</div><div class="ttdef"><b>Definition</b> <a href="#l05643">gg.h:5643</a></div></div>
@@ -6236,7 +6236,7 @@ $(function(){initNavTree('gg_8h_source.html',''); initResizable(); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="gg_8h.html">gg.h</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

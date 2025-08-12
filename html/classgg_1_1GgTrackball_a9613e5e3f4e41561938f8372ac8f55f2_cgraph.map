@@ -1,10 +1,10 @@
 <map id="gg::GgTrackball::motion" name="gg::GgTrackball::motion">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,165,81"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#a6e39d8318296545ba0053eda5a71a6a8" title=" " alt="" coords="213,29,398,56"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,56,197,52,197,58,165,62"/>
-<area shape="rect" id="Node000003" href="$namespacegg.html#a65baca1998bd9ea2b31a3fc1648d53dd" title=" " alt="" coords="226,80,385,107"/>
-<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="165,74,211,80,210,85,165,80"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="268,30,261,21,266,11,281,5,305,3,331,5,345,12,343,16,330,10,305,8,282,10,270,15,267,20,272,27"/>
-<area shape="rect" id="Node000004" href="$classgg_1_1GgQuaternion.html#a82d0620de0f023642b08d7e0f23e0687" title=" " alt="" coords="446,80,639,107"/>
-<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="385,91,430,91,430,96,385,96"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,166,81"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#a6e39d8318296545ba0053eda5a71a6a8" title=" " alt="" coords="214,29,399,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,56,198,52,198,58,167,61"/>
+<area shape="rect" id="Node000003" href="$namespacegg.html#a65baca1998bd9ea2b31a3fc1648d53dd" title=" " alt="" coords="227,80,386,107"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="167,75,212,80,211,85,166,80"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="269,30,262,21,267,11,282,5,306,3,333,5,346,12,344,16,331,10,306,8,283,10,271,15,268,20,273,27"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgQuaternion.html#a82d0620de0f023642b08d7e0f23e0687" title=" " alt="" coords="447,80,641,107"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="387,91,431,91,431,96,387,96"/>
 </map>
