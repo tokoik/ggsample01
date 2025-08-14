@@ -8,6 +8,9 @@
 /// @date November 15, 2022
 ///
 
+// 補助プログラムのラッパー
+#include "GgApp.h"
+
 // 構成データ
 #include "Config.h"
 
@@ -20,7 +23,7 @@
 class Menu
 {
   // 図形の描画クラスから参照する
-  friend class Draw;
+  friend class Object;
 
   // オリジナルの構成データ
   const Config& defaults;
@@ -45,18 +48,34 @@ public:
   ///
   /// コンストラクタ
   ///
+  /// @param config 構成データ
+  ///
   Menu(const Config& config);
 
-  // コピーコンストラクタは封じる
+  ///
+  /// コピーコンストラクタは使用しない
+  ///
   Menu(const Menu& menu) = delete;
 
   ///
-  /// デストラクタ
+  /// ムーブコンストラクタはデフォルトのものを使用する
+  ///
+  Menu(Menu&& menu) = default;
+
+  ///
+  /// デストラクタ.
   ///
   virtual ~Menu();
 
-  // 代入演算子は封じる
-  Menu& operator=(const Menu& menu) = delete;
+  ///
+  /// 代入演算子は使用しない
+  ///
+  Menu& operator=(const Menu & menu) = delete;
+
+  ///
+  /// ムーブ代入演算子はデフォルトのものを使用する
+  ///
+  Menu& operator=(Menu && menu) = default;
 
   ///
   /// 描画する

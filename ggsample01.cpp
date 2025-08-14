@@ -1,6 +1,8 @@
 ﻿//
 // ゲームグラフィックス特論宿題アプリケーション
 //
+
+// 補助プログラムのラッパー
 #include "GgApp.h"
 
 // プロジェクト名
@@ -20,7 +22,7 @@
 #include "Menu.h"
 
 // 図形の描画
-#include "Draw.h"
+#include "Object.h"
 
 //
 // アプリケーション本体
@@ -37,7 +39,7 @@ int GgApp::main(int argc, const char* const* argv)
   Menu menu{ config };
 
   // 図形の描画の設定を行う
-  Draw draw{ menu };
+  Object object{ menu };
 
   // ビュー変換行列を設定する
   const GgMatrix mv{ ggLookat(0.0f, 0.0f, 5.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f) };
@@ -61,7 +63,7 @@ int GgApp::main(int argc, const char* const* argv)
     const GgMatrix&& mp{ ggPerspective(0.5f, window.getAspect(), 1.0f, 15.0f) };
 
     // 図形を描画する
-    draw.draw(mp, mt * mv * mr);
+    object.draw(mp, mt * mv * mr);
 
     // カラーバッファを入れ替えてイベントを取り出す
     window.swapBuffers();

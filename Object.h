@@ -14,31 +14,34 @@
 ///
 /// 図形の描画クラス
 ///
-class Draw
+class Object
 {
   // 光源
   const GgSimpleShader::LightBuffer& light;
 
-  // モデル
-  const GgSimpleObj& model;
-
   // シェーダ
   const GgSimpleShader& shader;
+
+  // モデル
+  const GgSimpleObj& model;
 
 public:
 
   ///
   /// コンストラクタ
   ///
-  Draw(const Menu& menu);
+  Object(const Menu& menu);
 
   ///
   /// デストラクタ
   ///
-  virtual ~Draw();
+  virtual ~Object();
 
   ///
   /// 描画する
+  ///
+  /// @param mp 投影変換行列
+  /// @param mv モデルビュー変換行列
   ///
   void draw(const GgMatrix& mp, const GgMatrix& mv) const;
 };

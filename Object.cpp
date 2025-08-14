@@ -5,15 +5,15 @@
 /// @author Kohe Tokoi
 /// @date November 15, 2022
 ///
-#include "Draw.h"
+#include "Object.h"
 
 //
 // コンストラクタ
 //
-Draw::Draw(const Menu& menu) :
+Object::Object(const Menu& menu) :
   light{ *menu.light.get() },
-  model{ *menu.model.get() },
-  shader{ *menu.shader.get() }
+  shader{ *menu.shader.get() },
+  model{ *menu.model.get() }
 {
   // 背景色を設定する
   glClearColor(0.1f, 0.2f, 0.3f, 0.0f);
@@ -26,14 +26,14 @@ Draw::Draw(const Menu& menu) :
 //
 // デストラクタ
 //
-Draw::~Draw()
+Object::~Object()
 {
 }
 
 //
 // 描画する
 //
-void Draw::draw(const GgMatrix& mp, const GgMatrix& mv) const
+void Object::draw(const GgMatrix& mp, const GgMatrix& mv) const
 {
   // シェーダプログラムを指定する
   shader.use(mp, mv, light);

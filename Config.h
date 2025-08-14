@@ -51,6 +51,8 @@ public:
   ///
   /// ファイルから構成データを読み込むコンストラクタ
   ///
+  /// @param filename 読み込む構成ファイル名
+  ///
   Config(const std::string& filename);
 
   ///
@@ -60,14 +62,18 @@ public:
 
   ///
   /// ウィンドウの横幅を得る
-  /// 
+  ///
+  /// @return ウィンドウの横幅
+  ///
   auto getWidth() const
   {
     return winSize[0];
   }
 
   ///
-  /// ウィンドウの横幅を得る
+  /// ウィンドウの高さを得る
+  ///
+  /// @return ウィンドウの高さ
   /// 
   auto getHeight() const
   {
@@ -75,12 +81,16 @@ public:
   }
 
   ///
-  /// 設定ファイルを読み込む
+  /// 構成ファイルを読み込む
+  ///
+  /// @param filename 読み込む構成ファイル名
   ///
   bool load(const std::string& filename);
 
   ///
-  /// 設定ファイルを書き出す
+  /// 構成ファイルを書き出す
+  ///
+  /// @param 書き出す構成ファイル名
   ///
   bool save(const std::string& filename) const;
 };
