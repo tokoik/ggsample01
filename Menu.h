@@ -5,10 +5,10 @@
 ///
 /// @file
 /// @author Kohe Tokoi
-/// @date November 15, 2022
+/// @date August 15, 2025
 ///
 
-// 補助プログラムのラッパー
+// 宿題用補助プログラムのラッパー
 #include "GgApp.h"
 
 // 構成データ
@@ -23,7 +23,7 @@
 class Menu
 {
   // 図形の描画クラスから参照する
-  friend class Object;
+  friend class Scene;
 
   // オリジナルの構成データ
   const Config& defaults;
@@ -31,14 +31,14 @@ class Menu
   // 構成データのコピー
   Config settings;
 
-  // CAD データ
-  std::unique_ptr<const GgSimpleObj> model;
-
   // 光源データ
   std::unique_ptr<const GgSimpleShader::LightBuffer> light;
 
   // シェーダ
   std::unique_ptr<const GgSimpleShader> shader;
+
+  // CAD データ
+  std::unique_ptr<const GgSimpleObj> model;
 
   // ファイルパスを取得する
   bool getFilePath(std::string& path, const nfdfilteritem_t* filter);
@@ -47,8 +47,6 @@ public:
 
   ///
   /// コンストラクタ
-  ///
-  /// @param config 構成データ
   ///
   Menu(const Config& config);
 
@@ -70,12 +68,36 @@ public:
   ///
   /// 代入演算子は使用しない
   ///
-  Menu& operator=(const Menu & menu) = delete;
+  Menu& operator=(const Menu& menu) = delete;
 
   ///
   /// ムーブ代入演算子はデフォルトのものを使用する
   ///
-  Menu& operator=(Menu && menu) = default;
+  Menu& operator=(Menu&& menu) = default;
+
+  ///
+  /// 光源データを取り出す
+  ///
+  const auto& getLight() const
+  {
+    return *light;
+  }
+
+  ///
+  /// シェーダを取り出す
+  ///
+  const auto& getShader() const
+  {
+    return *shader;
+  }
+
+  ///
+  /// モデルデータを取り出す
+  ///
+  const auto& getModel() const
+  {
+    return *model;
+  }
 
   ///
   /// 描画する

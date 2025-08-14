@@ -149,7 +149,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Config.cpp" />
-    <ClCompile Include="Object.cpp" />
     <ClCompile Include="gg.cpp" />
     <ClCompile Include="GgApp.cpp" />
     <ClCompile Include="ggsample01.cpp" />
@@ -165,7 +164,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Config.h" />
-    <ClInclude Include="Object.h" />
     <ClInclude Include="gg.h" />
     <ClInclude Include="GgApp.h" />
     <ClInclude Include="Menu.h" />

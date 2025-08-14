@@ -21,9 +21,6 @@
 // メニューの描画
 #include "Menu.h"
 
-// 図形の描画
-#include "Object.h"
-
 //
 // アプリケーション本体
 //
@@ -38,8 +35,12 @@ int GgApp::main(int argc, const char* const* argv)
   // メニューを初期化する
   Menu menu{ config };
 
-  // 図形の描画の設定を行う
-  Object object{ menu };
+  // 背景色を設定する
+  glClearColor(0.1f, 0.2f, 0.3f, 0.0f);
+
+  // 隠面消去処理を設定する
+  glEnable(GL_DEPTH_TEST);
+  glEnable(GL_CULL_FACE);
 
   // ビュー変換行列を設定する
   const GgMatrix mv{ ggLookat(0.0f, 0.0f, 5.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f) };
@@ -62,8 +63,11 @@ int GgApp::main(int argc, const char* const* argv)
     // 投影変換行列を設定する
     const GgMatrix&& mp{ ggPerspective(0.5f, window.getAspect(), 1.0f, 15.0f) };
 
-    // 図形を描画する
-    object.draw(mp, mt * mv * mr);
+    // シェーダを指定する
+    menu.getShader().use(mp, mt * mv * mr, menu.getLight());
+
+    // シーンを描画する
+    menu.getModel().draw();
 
     // カラーバッファを入れ替えてイベントを取り出す
     window.swapBuffers();
