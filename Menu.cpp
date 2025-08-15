@@ -13,9 +13,9 @@
 Menu::Menu(const Config& config) :
   defaults{ config },
   settings{ config },
-  model{ std::make_unique<GgSimpleObj>(config.model, true) },
   light{ std::make_unique<GgSimpleShader::LightBuffer>(config.light) },
-  shader{ std::make_unique<GgSimpleShader>(config.shader) }
+  shader{ std::make_unique<GgSimpleShader>(config.shader) },
+  model{ std::make_unique<GgSimpleObj>(config.model, true) }
 {
 #if defined(IMGUI_VERSION)
   //
