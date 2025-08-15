@@ -3032,7 +3032,7 @@ gg::GgMatrix& gg::GgMatrix::loadLookat(
   const auto zz{ ez - tz };
 
   // z 軸の長さ
-  const auto z{ sqrt(zx * zx + zy * zy + zz * zz) };
+  const auto z{ sqrtf(zx * zx + zy * zy + zz * zz) };
 
   // x 軸 = u × z 軸
   const auto xx{ uy * zz - uz * zy };
@@ -3040,7 +3040,7 @@ gg::GgMatrix& gg::GgMatrix::loadLookat(
   const auto xz{ ux * zy - uy * zx };
 
   // x 軸の長さ
-  const auto x{ sqrt(xx * xx + xy * xy + xz * xz) };
+  const auto x{ sqrtf(xx * xx + xy * xy + xz * xz) };
 
   // y 軸 = z 軸 × x 軸
   const auto yx{ zy * xz - zz * xy };
@@ -3048,7 +3048,7 @@ gg::GgMatrix& gg::GgMatrix::loadLookat(
   const auto yz{ zx * xy - zy * xx };
 
   // y 軸の長さ
-  const auto y{ sqrt(yx * yx + yy * yy + yz * yz) };
+  const auto y{ sqrtf(yx * yx + yy * yy + yz * yz) };
 
   // y 軸の長さをチェック
   if (fabs(y) < std::numeric_limits<float>::epsilon()) return *this;
@@ -3056,17 +3056,17 @@ gg::GgMatrix& gg::GgMatrix::loadLookat(
   (*this)[ 0] = xx / x;
   (*this)[ 1] = yx / y;
   (*this)[ 2] = zx / z;
-  (*this)[ 3] = 0.0f,
+  (*this)[ 3] = 0.0f;
 
   (*this)[ 4] = xy / x;
   (*this)[ 5] = yy / y;
   (*this)[ 6] = zy / z;
-  (*this)[ 7] = 0.0f,
+  (*this)[ 7] = 0.0f;
 
   (*this)[ 8] = xz / x;
   (*this)[ 9] = yz / y;
   (*this)[10] = zz / z;
-  (*this)[11] = 0.0f,
+  (*this)[11] = 0.0f;
 
   (*this)[12] = -(ex * (*this)[ 0] + ey * (*this)[ 4] + ez * (*this)[ 8]);
   (*this)[13] = -(ex * (*this)[ 1] + ey * (*this)[ 5] + ez * (*this)[ 9]);
@@ -3273,11 +3273,11 @@ void gg::GgQuaternion::slerp(GLfloat* p, const GLfloat* q, const GLfloat* r, GLf
   }
   else
   {
-    const auto sp{ sqrt(ss) };
-    const auto ph{ acos(qr) };
+    const auto sp{ sqrtf(ss) };
+    const auto ph{ acosf(qr) };
     const auto pt{ ph * t };
-    const auto t1{ sin(pt) / sp };
-    const auto t0{ sin(ph - pt) / sp };
+    const auto t1{ sinf(pt) / sp };
+    const auto t0{ sinf(ph - pt) / sp };
 
     p[0] = q[0] * t0 + r[0] * t1;
     p[1] = q[1] * t0 + r[1] * t1;
@@ -3292,7 +3292,7 @@ void gg::GgQuaternion::slerp(GLfloat* p, const GLfloat* q, const GLfloat* r, GLf
 gg::GgQuaternion& gg::GgQuaternion::loadRotate(GLfloat x, GLfloat y, GLfloat z, GLfloat a)
 {
   const auto l{ x * x + y * y + z * z };
-  const auto w{ cosf(a *= 0.5f ) };
+  const auto w{ cosf(a *= 0.5f) };
 
   if (fabs(l) > std::numeric_limits<float>::epsilon())
   {
@@ -3810,12 +3810,15 @@ GLuint gg::ggLoadTexture(
   bool swizzle
 )
 {
-  // テクスチャオブジェクト
-  const auto tex{ [] { GLuint tex; glGenTextures(1, &tex); return tex; } () };
-  glBindTexture(GL_TEXTURE_2D, tex);
+  // テクスチャを作成する
+  GLuint texture;
+  glGenTextures(1, &texture);
+
+  // 作成したテクスチャを 2D テクスチャとしてバインドする
+  glBindTexture(GL_TEXTURE_2D, texture);
 
   // アルファチャンネルがついていれば 4 バイト境界に設定する
-  glPixelStorei(GL_UNPACK_ALIGNMENT, format == GL_RGBA ? 4 : 1);
+  glPixelStorei(GL_UNPACK_ALIGNMENT, format == GL_RGBA || format == GL_BGRA ? 4 : 1);
 
   // テクスチャを割り当てる
   glTexImage2D(GL_TEXTURE_2D, 0, internal, width, height, 0, format, type, image);
@@ -3834,7 +3837,7 @@ GLuint gg::ggLoadTexture(
   }
 
   // テクスチャ名を返す
-  return tex;
+  return texture;
 }
 
 //
@@ -3873,9 +3876,9 @@ GLuint gg::ggLoadImage(
   // internal == 0 なら内部フォーマットを読み込んだファイルに合わせる
   if (internal == 0) internal = format;
 
-  // テクスチャに読み込む
+  // テクスチャに読み込む (ggReadImage() で読み込んだ画像は GL_BGR / GL_BGRA)
   const auto tex{ ggLoadTexture(image.data(), width, height,
-    format, GL_UNSIGNED_BYTE, internal, wrap, true) };
+    format, GL_UNSIGNED_BYTE, internal, wrap, false) };
 
   // 画像サイズを返す
   if (pWidth) *pWidth = width;
@@ -3944,13 +3947,13 @@ void gg::ggCreateNormalMap(
     const auto v1{ ((y + width) % size + x) * stride };
 
     // 隣接する画素との値の差を法線の成分に用いる
-    nmap[i][0] = static_cast<GLfloat>(hmap[u1] - hmap[u0]);
-    nmap[i][1] = static_cast<GLfloat>(hmap[v1] - hmap[v0]);
+    nmap[i][0] = static_cast<GLfloat>(hmap[u0] - hmap[u1]);
+    nmap[i][1] = static_cast<GLfloat>(hmap[v0] - hmap[v1]);
     nmap[i][2] = nz;
     nmap[i][3] = hmap[i * stride];
 
     // 法線ベクトルを正規化する
-    ggNormalize3(nmap[i]);
+    ggNormalize3(&nmap[i]);
   }
 
   // 内部フォーマットが浮動小数点テクスチャでなければ [0,1] に正規化する
@@ -4064,9 +4067,9 @@ void gg::GgColorTexture::load(
   // internal == 0 なら内部フォーマットを読み込んだファイルに合わせる
   if (internal == 0) internal = format;
 
-  // テクスチャを作成する
+  // テクスチャを作成する (ggReadImage() で読み込んだ画像は GL_BGR / GL_BGRA)
   texture = std::make_shared<GgTexture>(image.data(), width, height,
-    format, GL_UNSIGNED_BYTE, internal, wrap, true);
+    format, GL_UNSIGNED_BYTE, internal, wrap, false);
 }
 
 //
@@ -5297,8 +5300,8 @@ std::shared_ptr<gg::GgTriangles> gg::ggEllipse(GLfloat width, GLfloat height, GL
   for (GLuint v = 0; v < slices; ++v)
   {
     const auto t{ 6.28318530717f * static_cast<GLfloat>(v) / static_cast<GLfloat>(slices) };
-    const auto x{ cos(t) * width * scale };
-    const auto y{ sin(t) * height * scale };
+    const auto x{ cosf(t) * width * scale };
+    const auto y{ sinf(t) * height * scale };
 
     vert.emplace_back(x, y, 0.0f, 0.0f, 0.0f, 1.0f);
   }
@@ -5449,15 +5452,15 @@ std::shared_ptr<gg::GgElements> gg::ggElementsSphere(GLfloat radius, int slices,
   {
     const auto t{ static_cast<GLfloat>(j) / static_cast<GLfloat>(stacks) };
     const auto ph{ 3.1415926536f * t };
-    const auto y{ cos(ph) };
-    const auto r{ sin(ph) };
+    const auto y{ cosf(ph) };
+    const auto r{ sinf(ph) };
 
     for (int i = 0; i <= slices; ++i)
     {
       const auto s{ static_cast<GLfloat>(i) / static_cast<GLfloat>(slices) };
       const auto th{ -2.0f * 3.1415926536f * s };
-      const auto x{ r * cos(th) };
-      const auto z{ r * sin(th) };
+      const auto x{ r * cosf(th) };
+      const auto z{ r * sinf(th) };
 
       // 頂点の座標値
       p.emplace_back(x * radius);

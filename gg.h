@@ -2036,13 +2036,12 @@ namespace gg
   /// @return a の 3 要素を正規化したもの.
   ///
   /// @note
-  /// 戻り値の w (第4) 要素は 0 になる.
+  /// 戻り値の w (第4) 要素は操作しない.
   ///
   inline GgVector ggNormalize3(const GgVector& a)
   {
     GgVector b;
     ggNormalize3(a.data(), b.data());
-    b.data()[3] = 0.0f;
     return b;
   }
 
@@ -2052,12 +2051,11 @@ namespace gg
   /// @param a GgVector 型の変数のポインタ.
   ///
   /// @note
-  /// a の w (第4) 要素は 0 になる.
+  /// a の w (第4) 要素は操作しない.
   ///
   inline void ggNormalize3(GgVector* a)
   {
     ggNormalize3(a->data());
-    a->data()[3] = 0.0f;
   }
 
   ///
@@ -4992,7 +4990,7 @@ namespace gg
   /// @param type image のデータ型.
   /// @param internal テクスチャの内部フォーマット.
   /// @param wrap テクスチャのラッピングモード, デフォルトは GL_CLAMP_TO_EDGE.
-  /// @param swizzle true ならテクスチャの赤と青を入れ替える, デフォルトは true.
+  /// @param swizzle true ならテクスチャの赤と青を入れ替える, デフォルトは false.
   /// @return テクスチャの作成に成功すればテクスチャ名, 失敗すれば 0.
   ///
   extern GLuint ggLoadTexture(
@@ -5003,7 +5001,7 @@ namespace gg
     GLenum type = GL_UNSIGNED_BYTE,
     GLenum internal = GL_RGB,
     GLenum wrap = GL_CLAMP_TO_EDGE,
-    bool swizzle = true
+    bool swizzle = false
   );
 
   ///
@@ -5169,7 +5167,7 @@ namespace gg
     /// @param type 画像のデータ型.
     /// @param internal テクスチャの内部フォーマット.
     /// @param wrap テクスチャのラッピングモード, デフォルトは GL_CLAMP_TO_EDGE.
-    /// @param swizzle true ならテクスチャの赤と青を入れ替える, デフォルトは true.
+    /// @param swizzle true ならテクスチャの赤と青を入れ替える, デフォルトは false.
     ///
     GgTexture(
       const GLvoid* image,
@@ -5179,7 +5177,7 @@ namespace gg
       GLenum type = GL_UNSIGNED_BYTE,
       GLenum internal = GL_RGBA,
       GLenum wrap = GL_CLAMP_TO_EDGE,
-      bool swizzle = true
+      bool swizzle = false
     ) :
       texture{ ggLoadTexture(image, width, height, format, type, internal, wrap, swizzle) },
       size{ width, height }
@@ -5548,7 +5546,7 @@ namespace gg
       GLsizei stride,
       GLsizei count,
       GLenum usage
-      ) :
+    ) :
       target{ target },
       stride{ stride },
       count{ count },
@@ -5556,7 +5554,7 @@ namespace gg
     {
       // バッファオブジェクトのメモリを確保してデータを転送する
       glBindBuffer(target, buffer);
-      glBufferData(target, getStride()* count, data, usage);
+      glBufferData(target, getStride() * count, data, usage);
     }
 
     ///
@@ -7420,6 +7418,28 @@ namespace gg
       }
 
       ///
+      /// 同じ引数で埋めるコンストラクタ.
+      ///
+      /// @param ambient 光源強度の環境光成分.
+      /// @param diffuse 光源強度の拡散反射光成分.
+      /// @param specular 光源強度の鏡面反射光成分.
+      /// @param position 光源の位置.
+      /// @param count バッファ中の GgSimpleShader::Light 型の光源データの数.
+      /// @param usage バッファの使い方のパターン, glBufferData() の第 4 引数の usage に渡される.
+      ///
+      LightBuffer(
+        GgVector ambient,
+        GgVector diffuse,
+        GgVector specular,
+        GgVector position,
+        GLsizei count = 1,
+        GLenum usage = GL_STATIC_DRAW
+      ) :
+        GgUniformBuffer<Light>(Light{ ambient, diffuse, specular, position }, count, usage)
+      {
+      }
+
+      ///
       /// デストラクタ.
       ///
       virtual ~LightBuffer()
@@ -7680,6 +7700,28 @@ namespace gg
         GLenum usage = GL_STATIC_DRAW
       ) :
         GgUniformBuffer<Material>(material, count, usage)
+      {
+      }
+
+      ///
+      /// 同じ引数で埋めるコンストラクタ.
+      ///
+      /// @param ambient 環境光に対する反射係数.
+      /// @param diffuse 拡散反射係数.
+      /// @param specular 鏡面反射係数.
+      /// @param shininess 輝き係数.
+      /// @param count バッファ中の GgSimpleShader::Material 型の材質データの数.
+      /// @param usage バッファの使い方のパターン, glBufferData() の第 4 引数の usage に渡される.
+      ///
+      MaterialBuffer(
+        GgVector ambient,
+        GgVector diffuse,
+        GgVector specular,
+        GLfloat shininess,
+        GLsizei count = 1,
+        GLenum usage = GL_STATIC_DRAW
+      ) :
+        GgUniformBuffer<Material>(Material{ ambient, diffuse, specular, shininess }, count, usage)
       {
       }
 
