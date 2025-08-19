@@ -3795,8 +3795,8 @@ bool gg::ggReadImage(
 //   format 画像データのフォーマット
 //   type 画像のデータ型
 //   internal テクスチャの内部フォーマット
-//   wrap テクスチャのラッピングモード, デフォルトは GL_CLAMP_TO_EDGE
-//   swizzle true ならテクスチャの赤と青を入れ替える, デフォルトは true
+//   wrap テクスチャのラッピングモード
+//   swizzle true ならテクスチャの赤と青を入れ替える
 //   戻り値 テクスチャ名
 //
 GLuint gg::ggLoadTexture(
@@ -3846,8 +3846,8 @@ GLuint gg::ggLoadTexture(
 //   name TGA ファイル名
 //   pWidth 読みだした画像ファイルの横の画素数の格納先のポインタ (nullptr なら格納しない)
 //   pHeight 読みだした画像ファイルの縦の画素数の格納先のポインタ (nullptr なら格納しない)
-//   internal テクスチャの内部フォーマット， 0 なら外部フォーマットに合わせる.
-//   wrap テクスチャのラッピングモード, デフォルトは GL_CLAMP_TO_EDGE
+//   internal テクスチャの内部フォーマット
+//   wrap テクスチャのラッピングモード
 //   戻り値 テクスチャ名
 //
 GLuint gg::ggLoadImage(
@@ -5485,9 +5485,9 @@ std::shared_ptr<gg::GgElements> gg::ggElementsSphere(GLfloat radius, int slices,
 //   r 光源の強度の環境光成分の赤成分
 //   g 光源の強度の環境光成分の緑成分
 //   b 光源の強度の環境光成分の青成分
-//   a 光源の強度の環境光成分の不透明度, デフォルトは 1
-//   first 値を設定する光源データの最初の番号, デフォルトは 0
-//   count 値を設定する光源データの数, デフォルトは 1
+//   a 光源の強度の環境光成分の不透明度
+//   first 値を設定する光源データの最初の番号
+//   count 値を設定する光源データの数
 //
 void gg::GgSimpleShader::LightBuffer::loadAmbient(GLfloat r, GLfloat g, GLfloat b, GLfloat a,
   GLint first, GLsizei count) const
@@ -5512,8 +5512,8 @@ void gg::GgSimpleShader::LightBuffer::loadAmbient(GLfloat r, GLfloat g, GLfloat 
 // 三角形に単純な陰影付けを行うシェーダが参照する光源データ：光源の強度の環境光成分を設定する
 //
 //   ambient 光源の強度の環境光成分
-//   first 値を設定する光源データの最初の番号, デフォルトは 0
-//   count 値を設定する光源データの数, デフォルトは 1
+//   first 値を設定する光源データの最初の番号
+//   count 値を設定する光源データの数
 //
 void gg::GgSimpleShader::LightBuffer::loadAmbient(const GgVector& ambient,
   GLint first, GLsizei count) const
@@ -5537,9 +5537,9 @@ void gg::GgSimpleShader::LightBuffer::loadAmbient(const GgVector& ambient,
 //   r 光源の強度の拡散反射光成分の赤成分
 //   g 光源の強度の拡散反射光成分の緑成分
 //   b 光源の強度の拡散反射光成分の青成分
-//   a 光源の強度の拡散反射光成分の不透明度, デフォルトは 1
-//   first 値を設定する光源データの最初の番号, デフォルトは 0
-//   count 値を設定する光源データの数, デフォルトは 1
+//   a 光源の強度の拡散反射光成分の不透明度
+//   first 値を設定する光源データの最初の番号
+//   count 値を設定する光源データの数
 //
 void gg::GgSimpleShader::LightBuffer::loadDiffuse(GLfloat r, GLfloat g, GLfloat b, GLfloat a,
   GLint first, GLsizei count) const
@@ -5564,8 +5564,8 @@ void gg::GgSimpleShader::LightBuffer::loadDiffuse(GLfloat r, GLfloat g, GLfloat 
 // 三角形に単純な陰影付けを行うシェーダが参照する光源データ：光源の強度の拡散反射光成分を設定する
 //
 //   ambient 光源の強度の拡散反射光成分
-//   first 値を設定する光源データの最初の番号, デフォルトは 0
-//   count 値を設定する光源データの数, デフォルトは 1
+//   first 値を設定する光源データの最初の番号
+//   count 値を設定する光源データの数
 //
 void gg::GgSimpleShader::LightBuffer::loadDiffuse(const GgVector& diffuse,
   GLint first, GLsizei count) const
@@ -5589,9 +5589,9 @@ void gg::GgSimpleShader::LightBuffer::loadDiffuse(const GgVector& diffuse,
 //   r 光源の強度の鏡面反射光成分の赤成分
 //   g 光源の強度の鏡面反射光成分の緑成分
 //   b 光源の強度の鏡面反射光成分の青成分
-//   a 光源の強度の鏡面反射光成分の不透明度, デフォルトは 1
-//   first 値を設定する光源データの最初の番号, デフォルトは 0
-//   count 値を設定する光源データの数, デフォルトは 1
+//   a 光源の強度の鏡面反射光成分の不透明度
+//   first 値を設定する光源データの最初の番号
+//   count 値を設定する光源データの数
 //
 void gg::GgSimpleShader::LightBuffer::loadSpecular(GLfloat r, GLfloat g, GLfloat b, GLfloat a,
   GLint first, GLsizei count) const
@@ -5616,8 +5616,8 @@ void gg::GgSimpleShader::LightBuffer::loadSpecular(GLfloat r, GLfloat g, GLfloat
 // 三角形に単純な陰影付けを行うシェーダが参照する光源データ：光源の強度の鏡面反射光成分を設定する
 //
 //   ambient 光源の強度の鏡面反射光成分
-//   first 値を設定する光源データの最初の番号, デフォルトは 0
-//   count 値を設定する光源データの数, デフォルトは 1
+//   first 値を設定する光源データの最初の番号
+//   count 値を設定する光源データの数
 //
 void gg::GgSimpleShader::LightBuffer::loadSpecular(const GgVector& specular,
   GLint first, GLsizei count) const
@@ -5639,8 +5639,8 @@ void gg::GgSimpleShader::LightBuffer::loadSpecular(const GgVector& specular,
 // 三角形に単純な陰影付けを行うシェーダが参照する光源データ：光源の色を設定するが位置は変更しない
 //
 //   material 光源の特性の GgSimpleShader::Light 構造体
-//   first 値を設定する光源データの最初の番号, デフォルトは 0
-//   count 値を設定する光源データの数, デフォルトは 1
+//   first 値を設定する光源データの最初の番号
+//   count 値を設定する光源データの数
 //
 void gg::GgSimpleShader::LightBuffer::loadColor(const Light& color,
   GLint first, GLsizei count) const
@@ -5666,9 +5666,9 @@ void gg::GgSimpleShader::LightBuffer::loadColor(const Light& color,
 //   x 光源の位置の x 座標
 //   y 光源の位置の y 座標
 //   z 光源の位置の z 座標
-//   w 光源の位置の w 座標, デフォルトは 1
-//   first 値を設定する光源データの最初の番号, デフォルトは 0
-//   count 値を設定する光源データの数, デフォルトは 1
+//   w 光源の位置の w 座標
+//   first 値を設定する光源データの最初の番号
+//   count 値を設定する光源データの数
 //
 void gg::GgSimpleShader::LightBuffer::loadPosition(GLfloat x, GLfloat y, GLfloat z, GLfloat w,
   GLint first, GLsizei count) const
@@ -5693,8 +5693,8 @@ void gg::GgSimpleShader::LightBuffer::loadPosition(GLfloat x, GLfloat y, GLfloat
 // 三角形に単純な陰影付けを行うシェーダが参照する光源データ：光源の位置を設定する
 //
 //   position 光源の位置
-//   first 値を設定する光源データの最初の番号, デフォルトは 0
-//   count 値を設定する光源データの数, デフォルトは 1
+//   first 値を設定する光源データの最初の番号
+//   count 値を設定する光源データの数
 //
 void gg::GgSimpleShader::LightBuffer::loadPosition(const GgVector& position,
   GLint first, GLsizei count) const
@@ -5718,9 +5718,9 @@ void gg::GgSimpleShader::LightBuffer::loadPosition(const GgVector& position,
 //   r 環境光に対する反射係数の赤成分
 //   g 環境光に対する反射係数の緑成分
 //   b 環境光に対する反射係数の青成分
-//   a 環境光に対する反射係数の不透明度, デフォルトは 1
-//   first 値を設定する材質データの最初の番号, デフォルトは 0
-//   count 値を設定する材質データの数, デフォルトは 1
+//   a 環境光に対する反射係数の不透明度
+//   first 値を設定する材質データの最初の番号
+//   count 値を設定する材質データの数
 //
 void gg::GgSimpleShader::MaterialBuffer::loadAmbient(GLfloat r, GLfloat g, GLfloat b, GLfloat a,
   GLint first, GLsizei count) const
@@ -5745,8 +5745,8 @@ void gg::GgSimpleShader::MaterialBuffer::loadAmbient(GLfloat r, GLfloat g, GLflo
 // 三角形に単純な陰影付けを行うシェーダが参照する材質データ：環境光に対する反射係数を設定する
 //
 //   ambient 環境光に対する反射係数
-//   first 値を設定する光源データの最初の番号, デフォルトは 0
-//   count 値を設定する光源データの数, デフォルトは 1
+//   first 値を設定する光源データの最初の番号
+//   count 値を設定する光源データの数
 //
 void gg::GgSimpleShader::MaterialBuffer::loadAmbient(const GgVector& ambient,
   GLint first, GLsizei count) const
@@ -5770,9 +5770,9 @@ void gg::GgSimpleShader::MaterialBuffer::loadAmbient(const GgVector& ambient,
 //   r 拡散反射係数の赤成分
 //   g 拡散反射係数の緑成分
 //   b 拡散反射係数の青成分
-//   a 拡散反射係数の不透明度, デフォルトは 1
-//   first 値を設定する材質データの最初の番号, デフォルトは 0
-//   count 値を設定する材質データの数, デフォルトは 1
+//   a 拡散反射係数の不透明度
+//   first 値を設定する材質データの最初の番号
+//   count 値を設定する材質データの数
 //
 void gg::GgSimpleShader::MaterialBuffer::loadDiffuse(GLfloat r, GLfloat g, GLfloat b, GLfloat a,
   GLint first, GLsizei count) const
@@ -5797,8 +5797,8 @@ void gg::GgSimpleShader::MaterialBuffer::loadDiffuse(GLfloat r, GLfloat g, GLflo
 // 三角形に単純な陰影付けを行うシェーダが参照する材質データ：拡散反射係数を設定する
 //
 //   diffuse 拡散反射係数
-//   first 値を設定する光源データの最初の番号, デフォルトは 0
-//   count 値を設定する光源データの数, デフォルトは 1
+//   first 値を設定する光源データの最初の番号
+//   count 値を設定する光源データの数
 //
 void gg::GgSimpleShader::MaterialBuffer::loadDiffuse(const GgVector& diffuse,
   GLint first, GLsizei count) const
@@ -5822,9 +5822,9 @@ void gg::GgSimpleShader::MaterialBuffer::loadDiffuse(const GgVector& diffuse,
 //   r 環境光に対する反射係数と拡散反射係数の赤成分
 //   g 環境光に対する反射係数と拡散反射係数の緑成分
 //   b 環境光に対する反射係数と拡散反射係数の青成分
-//   a 環境光に対する反射係数と拡散反射係数の不透明度, デフォルトは 1
-//   first 値を設定する材質データの最初の番号, デフォルトは 0
-//   count 値を設定する材質データの数, デフォルトは 1
+//   a 環境光に対する反射係数と拡散反射係数の不透明度
+//   first 値を設定する材質データの最初の番号
+//   count 値を設定する材質データの数
 //
 void gg::GgSimpleShader::MaterialBuffer::loadAmbientAndDiffuse(GLfloat r, GLfloat g, GLfloat b, GLfloat a,
   GLint first, GLsizei count) const
@@ -5849,8 +5849,8 @@ void gg::GgSimpleShader::MaterialBuffer::loadAmbientAndDiffuse(GLfloat r, GLfloa
 // 三角形に単純な陰影付けを行うシェーダが参照する材質データ：環境光に対する反射係数と拡散反射係数を設定する
 //
 //   color 環境光に対する反射係数と拡散反射係数
-//   first 値を設定する光源データの最初の番号, デフォルトは 0
-//   count 値を設定する光源データの数, デフォルトは 1
+//   first 値を設定する光源データの最初の番号
+//   count 値を設定する光源データの数
 //
 void gg::GgSimpleShader::MaterialBuffer::loadAmbientAndDiffuse(const GgVector& color,
   GLint first, GLsizei count) const
@@ -5872,8 +5872,8 @@ void gg::GgSimpleShader::MaterialBuffer::loadAmbientAndDiffuse(const GgVector& c
 // 三角形に単純な陰影付けを行うシェーダが参照する材質データ：環境光に対する反射係数と拡散反射係数を設定する
 //
 //   color 環境光に対する反射係数と拡散反射係数を格納した GLfloat 型の 4 要素の配列
-//   first 値を設定する材質データの最初の番号, デフォルトは 0
-//   count 値を設定する材質データの数, デフォルトは 1
+//   first 値を設定する材質データの最初の番号
+//   count 値を設定する材質データの数
 //
 void gg::GgSimpleShader::MaterialBuffer::loadAmbientAndDiffuse(const GLfloat* color,
   GLint first, GLsizei count) const
@@ -5914,9 +5914,9 @@ void gg::GgSimpleShader::MaterialBuffer::loadAmbientAndDiffuse(const GLfloat* co
 //   r 鏡面反射係数の赤成分
 //   g 鏡面反射係数の緑成分
 //   b 鏡面反射係数の青成分
-//   a 鏡面反射係数の不透明度, デフォルトは 1
-//   first 値を設定する材質データの最初の番号, デフォルトは 0
-//   count 値を設定する材質データの数, デフォルトは 1
+//   a 鏡面反射係数の不透明度
+//   first 値を設定する材質データの最初の番号
+//   count 値を設定する材質データの数
 //
 void gg::GgSimpleShader::MaterialBuffer::loadSpecular(GLfloat r, GLfloat g, GLfloat b, GLfloat a,
   GLint first, GLsizei count) const
@@ -5941,8 +5941,8 @@ void gg::GgSimpleShader::MaterialBuffer::loadSpecular(GLfloat r, GLfloat g, GLfl
 // 三角形に単純な陰影付けを行うシェーダが参照する材質データ：鏡面反射係数を設定する
 //
 //   specular 鏡面反射係数
-//   first 値を設定する光源データの最初の番号, デフォルトは 0
-//   count 値を設定する光源データの数, デフォルトは 1
+//   first 値を設定する光源データの最初の番号
+//   count 値を設定する光源データの数
 //
 void gg::GgSimpleShader::MaterialBuffer::loadSpecular(const GgVector& specular,
   GLint first, GLsizei count) const
@@ -5964,8 +5964,8 @@ void gg::GgSimpleShader::MaterialBuffer::loadSpecular(const GgVector& specular,
 // 三角形に単純な陰影付けを行うシェーダが参照する材質データ：輝き係数を設定する
 //
 //   shininess 輝き係数
-//   first 値を設定する材質データの最初の番号, デフォルトは 0
-//   count 値を設定する材質データの数, デフォルトは 1
+//   first 値を設定する材質データの最初の番号
+//   count 値を設定する材質データの数
 //
 void gg::GgSimpleShader::MaterialBuffer::loadShininess(GLfloat shininess,
   GLint first, GLsizei count) const
@@ -5985,8 +5985,8 @@ void gg::GgSimpleShader::MaterialBuffer::loadShininess(GLfloat shininess,
 // 三角形に単純な陰影付けを行うシェーダが参照する材質データ：輝き係数を設定する
 //
 //   shininess 輝き係数
-//   first 値を設定する材質データの最初の番号, デフォルトは 0
-//   count 値を設定する材質データの数, デフォルトは 1
+//   first 値を設定する材質データの最初の番号
+//   count 値を設定する材質データの数
 //
 void gg::GgSimpleShader::MaterialBuffer::loadShininess(const GLfloat* shininess,
   GLint first, GLsizei count) const

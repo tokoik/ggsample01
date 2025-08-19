@@ -4252,6 +4252,20 @@ namespace gg
     }
 
     ///
+    /// 四元数をオイラー角 (e[0], e[1], e[2]) で回転した四元数を返す.
+    ///
+    /// @param e オイラー角を表す GgVector 型の変数 (heading, pitch, roll) の参照.
+    /// @return 回転した四元数.
+    ///
+    /// @note
+    /// 第 4 要素は無視する.
+    ///
+    GgQuaternion euler(const GgVector& e) const
+    {
+      return euler(e[0], e[1], e[2]);
+    }
+
+    ///
     /// 球面線形補間の結果を格納する.
     ///
     /// @param a 四元数を格納した GLfloat 型の 4 要素の配列変数.
@@ -4625,6 +4639,17 @@ namespace gg
   /// @return 回転を表す四元数.
   ///
   inline GgQuaternion ggEulerQuaternion(const GLfloat* e)
+  {
+    return ggEulerQuaternion(e[0], e[1], e[2]);
+  }
+
+  ///
+  /// オイラー角 (e[0], e[1], e[2]) で与えられた回転を表す四元数を返す.
+  ///
+  /// @param e オイラー角を表す GgVector 型の変数 (heading, pitch, roll) の参照.
+  /// @return 回転を表す四元数.
+  ///
+  inline GgQuaternion ggEulerQuaternion(const GgVector& e)
   {
     return ggEulerQuaternion(e[0], e[1], e[2]);
   }
@@ -5010,7 +5035,7 @@ namespace gg
   /// @param name 読み込むファイル名.
   /// @param pWidth 読みだした画像ファイルの横の画素数の格納先のポインタ (nullptr なら格納しない).
   /// @param pHeight 読みだした画像ファイルの縦の画素数の格納先のポインタ (nullptr なら格納しない).
-  /// @param internal glTexImage2D() に指定するテクスチャの内部フォーマット, 0 なら外部フォーマットに合わせる.
+  /// @param internal テクスチャの内部フォーマット, デフォルトは GL_RGBA. 0 なら外部フォーマットに合わせる.
   /// @param wrap テクスチャのラッピングモード, デフォルトは GL_CLAMP_TO_EDGE.
   /// @return テクスチャの作成に成功すればテクスチャ名, 失敗すれば 0.
   ///
@@ -5018,7 +5043,7 @@ namespace gg
     const std::string& name,
     GLsizei* pWidth = nullptr,
     GLsizei* pHeight = nullptr,
-    GLenum internal = 0,
+    GLenum internal = GL_RGBA,
     GLenum wrap = GL_CLAMP_TO_EDGE
   );
 
