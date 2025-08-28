@@ -145,7 +145,6 @@ bool Config::save(const std::string& filename) const
   // 構成出データをシリアライズして JSON で保存
   picojson::value v{ object };
   file << v.serialize(true);
-  file.close();
 
   return true;
 }

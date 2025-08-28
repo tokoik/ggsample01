@@ -453,6 +453,7 @@ GgApp::Window::operator bool()
   // ImGui の新規フレームを作成する
   ImGui_ImplOpenGL3_NewFrame();
   ImGui_ImplGlfw_NewFrame();
+  ImGui::NewFrame();
 
   // ImGui の状態を取り出す
   const ImGuiIO& io{ ImGui::GetIO() };
@@ -492,6 +493,7 @@ void GgApp::Window::swapBuffers() const
 {
 #if defined(IMGUI_VERSION)
   // ImGui の描画データがあればフレームをレンダリングする
+  ImGui::Render();
   ImDrawData* data{ ImGui::GetDrawData() };
   if (data) ImGui_ImplOpenGL3_RenderDrawData(data);
 #endif

@@ -3571,11 +3571,7 @@ bool gg::ggSaveTga(
   file.write(reinterpret_cast<const char*>(header), sizeof header);
 
   // ヘッダの書き込みに失敗したら戻る
-  if (file.bad())
-  {
-    file.close();
-    return false;
-  }
+  if (file.bad()) return false;
 
   // データを書き込む
   const unsigned int size{ width * height * depth };
@@ -3602,18 +3598,8 @@ bool gg::ggSaveTga(
   constexpr char footer[] = "\0\0\0\0\0\0\0\0TRUEVISION-XFILE.";
   file.write(footer, sizeof footer);
 
-  // データの書き込みに失敗したら戻る
-  if (file.bad())
-  {
-    file.close();
-    return false;
-  }
-
-  // ファイルを閉じる
-  file.close();
-
-  // データの書き込みに成功した
-  return true;
+  // データの書き込みに失敗していなければ true を返す
+  return file.bad() != false;
 }
 
 //
@@ -3697,11 +3683,7 @@ bool gg::ggReadImage(
   file.read(reinterpret_cast<char*>(header), sizeof header);
 
   // ヘッダの読み込みに失敗したら戻る
-  if (file.bad())
-  {
-    file.close();
-    return false;
-  }
+  if (file.bad()) return false;
 
   // 深度
   const auto depth{ header[16] / 8 };
@@ -3721,7 +3703,6 @@ bool gg::ggReadImage(
     break;
   default:
     // 取り扱えないフォーマットだったら戻る
-    file.close();
     return false;
   }
 
@@ -3731,6 +3712,8 @@ bool gg::ggReadImage(
 
   // データサイズ
   const auto size{ *pWidth * *pHeight * depth };
+
+  // サイズが小さすぎたら戻る
   if (size < 2) return false;
 
   // 読み込みに使うメモリを確保する
@@ -3772,18 +3755,8 @@ bool gg::ggReadImage(
     file.read(reinterpret_cast<char*>(image.data()), size);
   }
 
-  // 読み込みに失敗したら戻る
-  if (file.bad())
-  {
-    file.close();
-    return false;
-  }
-
-  // ファイルを閉じる
-  file.close();
-
-  // ファイルの読み込みに成功した
-  return true;
+  // 読み込みに失敗していなければ true を返す
+  return file.bad() != false;
 }
 
 //
@@ -4280,16 +4253,8 @@ namespace gg
 #if defined(DEBUG)
       std::cerr << "Warning: Can't read MTL file: " << mtlpath << std::endl;
 #endif
-
-      // MTL ファイルを閉じる
-      mtlfile.close();
-
-      // MTL ファイルが読み込みに失敗したので戻る
       return false;
     }
-
-    // MTL ファイルを閉じる
-    mtlfile.close();
 
     // MTL ファイルの読み込みに成功した
     return true;
@@ -4510,12 +4475,8 @@ namespace gg
 #if defined(DEBUG)
       std::cerr << "Error: Can't read OBJ file: " << path << std::endl;
 #endif
-      file.close();
       return false;
     }
-
-    // ファイルを閉じる
-    file.close();
 
     // 最後のポリゴングループの次の三角形番号
     const GLsizei nextgroup(static_cast<GLsizei>(face.size()));
@@ -5034,12 +4995,10 @@ static bool readShaderSource(const std::string& name, std::string& src)
 #if defined(DEBUG)
     std::cerr << "Error: Could not read souce file: " << name << std::endl;
 #endif
-    file.close();
     return false;
   }
 
   // ファイルを閉じて戻る
-  file.close();
   return true;
 }
 
@@ -6011,10 +5970,10 @@ bool gg::GgSimpleShader::load(const std::string& vert, const std::string& frag, 
   if (!GgPointShader::load(vert, frag, geom, nvarying, varyings)) return false;
 
   mnLoc = glGetUniformLocation(get(), "mn");
-  lightIndex = glGetUniformBlockIndex(get(), "Light");
-  glUniformBlockBinding(get(), lightIndex, 0);
-  materialIndex = glGetUniformBlockIndex(get(), "Material");
-  glUniformBlockBinding(get(), materialIndex, 1);
+  const auto lightIndex{ glGetUniformBlockIndex(get(), "Light") };
+  glUniformBlockBinding(get(), lightIndex, LightBindingPoint);
+  const auto materialIndex{ glGetUniformBlockIndex(get(), "Material") };
+  glUniformBlockBinding(get(), materialIndex, MaterialBindingPoint);
 
   return true;
 }

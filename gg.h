@@ -7174,12 +7174,6 @@ namespace gg
   class GgSimpleShader
     : public GgPointShader
   {
-    // 材質データの uniform block のインデックス
-    GLint materialIndex;
-
-    // 光源データの uniform block のインデックス
-    GLint lightIndex;
-
     // モデルビュー変換の法線変換行列の uniform 変数の場所
     GLint mnLoc;
 
@@ -7190,8 +7184,6 @@ namespace gg
     ///
     GgSimpleShader() :
       GgPointShader(),
-      materialIndex{ -1 },
-      lightIndex{ -1 },
       mnLoc{ -1 }
     {
     }
@@ -7237,8 +7229,6 @@ namespace gg
     ///
     GgSimpleShader(const GgSimpleShader& o) :
       GgPointShader(o),
-      materialIndex{ o.materialIndex },
-      lightIndex{ o.lightIndex },
       mnLoc{ o.mnLoc }
     {
     }
@@ -7258,8 +7248,6 @@ namespace gg
       if (&o != this)
       {
         GgPointShader::operator=(o);
-        materialIndex = o.materialIndex;
-        lightIndex = o.lightIndex;
         mnLoc = o.mnLoc;
       }
 

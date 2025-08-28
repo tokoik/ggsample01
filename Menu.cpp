@@ -78,9 +78,6 @@ void Menu::draw()
   // ImGui によるユーザインタフェース
   //
 
-  // ImGui のフレームを準備する
-  ImGui::NewFrame();
-
   // メニューの表示位置を決定する
   ImGui::SetNextWindowPos(ImVec2(4, 4), ImGuiCond_Once);
   ImGui::SetNextWindowSize(ImVec2(320, 98), ImGuiCond_Once);
@@ -96,8 +93,5 @@ void Menu::draw()
 
   // メニュー表示終了
   ImGui::End();
-
-  // ImGui のフレームに描画する
-  ImGui::Render();
 #endif
 }
