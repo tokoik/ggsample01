@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: gg.cpp ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -11,9 +11,9 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -26,6 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
   <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
@@ -35,15 +36,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.12.0 -->
+<!-- 構築: Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -51,7 +47,7 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','検索',true);
+  initMenu('',true,false,'search.php','検索');
   $(function() { init_search(); });
 });
 /* @license-end */
@@ -70,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('gg_8cpp.html',''); initResizable(true); });
+$(function(){initNavTree('gg_8cpp.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -105,21 +101,21 @@ gg.cpp の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="gg_8cpp__incl.png" border="0" usemap="#agg_8cpp" alt=""/></div>
 <map name="agg_8cpp" id="agg_8cpp">
-<area shape="rect" title=" " alt="" coords="198,5,259,32"/>
-<area shape="rect" href="gg_8h.html" title=" " alt="" coords="206,80,252,107"/>
-<area shape="poly" title=" " alt="" coords="231,33,231,64,226,64,226,33"/>
+<area shape="rect" title=" " alt="" coords="197,5,258,32"/>
+<area shape="rect" href="gg_8h.html" title=" " alt="" coords="204,80,251,107"/>
+<area shape="poly" title=" " alt="" coords="230,33,230,64,225,64,225,33"/>
 <area shape="rect" title=" " alt="" coords="5,155,63,181"/>
-<area shape="poly" title=" " alt="" coords="206,106,78,153,77,148,204,101"/>
-<area shape="rect" title=" " alt="" coords="86,155,136,181"/>
-<area shape="poly" title=" " alt="" coords="210,109,146,149,143,144,207,105"/>
-<area shape="rect" title=" " alt="" coords="160,155,217,181"/>
-<area shape="poly" title=" " alt="" coords="224,109,205,142,201,140,219,106"/>
-<area shape="rect" title=" " alt="" coords="242,155,295,181"/>
-<area shape="poly" title=" " alt="" coords="238,106,257,140,252,142,233,109"/>
-<area shape="rect" title=" " alt="" coords="320,155,388,181"/>
-<area shape="poly" title=" " alt="" coords="252,105,321,144,318,149,249,110"/>
-<area shape="rect" title=" " alt="" coords="412,155,477,181"/>
-<area shape="poly" title=" " alt="" coords="253,100,399,148,397,154,251,105"/>
+<area shape="poly" title=" " alt="" coords="205,106,78,153,76,148,203,101"/>
+<area shape="rect" title=" " alt="" coords="86,155,137,181"/>
+<area shape="poly" title=" " alt="" coords="209,109,146,148,143,144,206,105"/>
+<area shape="rect" title=" " alt="" coords="161,155,216,181"/>
+<area shape="poly" title=" " alt="" coords="223,108,205,142,200,140,218,106"/>
+<area shape="rect" title=" " alt="" coords="241,155,294,181"/>
+<area shape="poly" title=" " alt="" coords="237,106,255,140,251,142,232,109"/>
+<area shape="rect" title=" " alt="" coords="319,155,387,181"/>
+<area shape="poly" title=" " alt="" coords="250,105,319,144,317,149,248,110"/>
+<area shape="rect" title=" " alt="" coords="411,155,476,181"/>
+<area shape="poly" title=" " alt="" coords="252,100,397,148,396,154,250,105"/>
 </map>
 </div>
 </div>
@@ -136,7 +132,7 @@ gg.cpp の依存先関係図:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="gg_8cpp.html">gg.cpp</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

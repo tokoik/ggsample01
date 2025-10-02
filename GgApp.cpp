@@ -23,7 +23,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
 ///
-/// ゲームグラフィックス特論宿題アプリケーションクラスの実装
+/// ゲームグラフィックス特論宿題アプリケーションクラスの実装.
 ///
 /// @file
 /// @author Kohe Tokoi

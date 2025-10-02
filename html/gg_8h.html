@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: gg.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -11,9 +11,9 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -26,6 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
   <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
@@ -35,15 +36,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.12.0 -->
+<!-- 構築: Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -51,7 +47,7 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','検索',true);
+  initMenu('',true,false,'search.php','検索');
   $(function() { init_search(); });
 });
 /* @license-end */
@@ -70,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('gg_8h.html',''); initResizable(true); });
+$(function(){initNavTree('gg_8h.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -118,19 +114,19 @@ gg.h の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="gg_8h__incl.png" border="0" usemap="#agg_8h" alt=""/></div>
 <map name="agg_8h" id="agg_8h">
-<area shape="rect" title=" " alt="" coords="206,5,252,32"/>
+<area shape="rect" title=" " alt="" coords="204,5,251,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,63,107"/>
-<area shape="poly" title=" " alt="" coords="206,31,78,78,77,73,204,26"/>
-<area shape="rect" title=" " alt="" coords="86,80,136,107"/>
-<area shape="poly" title=" " alt="" coords="210,35,146,74,143,69,207,30"/>
-<area shape="rect" title=" " alt="" coords="160,80,217,107"/>
-<area shape="poly" title=" " alt="" coords="224,34,205,68,201,65,219,31"/>
-<area shape="rect" title=" " alt="" coords="242,80,295,107"/>
-<area shape="poly" title=" " alt="" coords="238,31,257,65,252,68,233,34"/>
-<area shape="rect" title=" " alt="" coords="320,80,388,107"/>
-<area shape="poly" title=" " alt="" coords="252,30,321,70,318,74,249,35"/>
-<area shape="rect" title=" " alt="" coords="412,80,477,107"/>
-<area shape="poly" title=" " alt="" coords="253,25,399,74,397,79,251,30"/>
+<area shape="poly" title=" " alt="" coords="205,31,78,78,76,73,203,26"/>
+<area shape="rect" title=" " alt="" coords="86,80,137,107"/>
+<area shape="poly" title=" " alt="" coords="209,35,146,74,143,69,206,30"/>
+<area shape="rect" title=" " alt="" coords="161,80,216,107"/>
+<area shape="poly" title=" " alt="" coords="223,34,205,68,200,65,218,31"/>
+<area shape="rect" title=" " alt="" coords="241,80,294,107"/>
+<area shape="poly" title=" " alt="" coords="237,31,255,65,251,68,232,34"/>
+<area shape="rect" title=" " alt="" coords="319,80,387,107"/>
+<area shape="poly" title=" " alt="" coords="250,30,319,70,317,74,248,35"/>
+<area shape="rect" title=" " alt="" coords="411,80,476,107"/>
+<area shape="poly" title=" " alt="" coords="252,25,397,74,396,79,250,30"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -138,35 +134,31 @@ gg.h の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="gg_8h__dep__incl.png" border="0" usemap="#agg_8hdep" alt=""/></div>
 <map name="agg_8hdep" id="agg_8hdep">
-<area shape="rect" title=" " alt="" coords="262,5,308,32"/>
-<area shape="rect" href="Config_8h.html" title=" " alt="" coords="168,155,239,181"/>
-<area shape="poly" title=" " alt="" coords="273,47,213,155,208,153,268,45"/>
-<area shape="rect" href="GgApp_8h.html" title=" " alt="" coords="374,80,446,107"/>
-<area shape="poly" title=" " alt="" coords="321,38,389,77,387,82,318,42"/>
-<area shape="rect" href="gg_8cpp.html" title=" " alt="" coords="289,80,350,107"/>
-<area shape="poly" title=" " alt="" coords="300,45,316,78,311,81,295,47"/>
-<area shape="rect" href="parseconfig_8h.html" title=" " alt="" coords="115,80,214,107"/>
-<area shape="poly" title=" " alt="" coords="252,43,187,82,185,77,250,38"/>
-<area shape="rect" href="Config_8cpp.html" title=" " alt="" coords="303,229,387,256"/>
-<area shape="poly" title=" " alt="" coords="243,186,321,226,319,231,240,191"/>
-<area shape="rect" href="Menu_8h.html" title=" " alt="" coords="109,229,173,256"/>
-<area shape="poly" title=" " alt="" coords="185,195,154,231,150,227,181,192"/>
-<area shape="rect" href="ggsample01_8cpp.html" title=" " alt="" coords="181,379,298,405"/>
-<area shape="poly" title=" " alt="" coords="211,196,240,378,235,379,205,197"/>
-<area shape="rect" href="Draw_8h.html" title=" " alt="" coords="12,304,75,331"/>
-<area shape="poly" title=" " alt="" coords="113,268,62,306,59,301,110,263"/>
-<area shape="poly" title=" " alt="" coords="164,267,191,303,235,377,231,380,187,305,159,270"/>
-<area shape="rect" href="Menu_8cpp.html" title=" " alt="" coords="99,304,177,331"/>
-<area shape="poly" title=" " alt="" coords="142,272,141,304,136,304,137,272"/>
-<area shape="rect" href="Draw_8cpp.html" title=" " alt="" coords="5,379,82,405"/>
-<area shape="poly" title=" " alt="" coords="46,346,46,378,41,378,41,346"/>
-<area shape="poly" title=" " alt="" coords="90,333,206,376,205,381,88,338"/>
-<area shape="poly" title=" " alt="" coords="438,116,459,146,464,164,462,182,446,218,423,251,397,281,369,308,312,352,265,380,262,376,309,347,366,304,394,278,419,248,441,215,457,181,459,164,454,148,434,119"/>
-<area shape="rect" href="GgApp_8cpp.html" title=" " alt="" coords="263,155,349,181"/>
-<area shape="poly" title=" " alt="" coords="381,118,326,156,323,152,378,113"/>
-<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="373,155,447,181"/>
-<area shape="poly" title=" " alt="" coords="413,122,413,154,408,154,408,122"/>
-<area shape="poly" title=" " alt="" coords="181,119,199,153,194,156,176,122"/>
+<area shape="rect" title=" " alt="" coords="214,5,260,32"/>
+<area shape="rect" href="Config_8h.html" title=" " alt="" coords="91,155,159,181"/>
+<area shape="poly" title=" " alt="" coords="201,34,165,53,149,66,135,81,128,100,124,119,126,154,120,154,119,119,122,98,131,79,145,62,162,48,198,29"/>
+<area shape="rect" href="GgApp_8h.html" title=" " alt="" coords="245,155,317,181"/>
+<area shape="poly" title=" " alt="" coords="248,46,258,79,280,154,275,155,253,81,243,48"/>
+<area shape="rect" href="gg_8cpp.html" title=" " alt="" coords="319,80,379,107"/>
+<area shape="poly" title=" " alt="" coords="271,38,331,77,328,82,268,43"/>
+<area shape="rect" href="parseconfig_8h.html" title=" " alt="" coords="145,80,244,107"/>
+<area shape="poly" title=" " alt="" coords="224,47,204,81,200,78,220,44"/>
+<area shape="rect" href="Config_8cpp.html" title=" " alt="" coords="5,229,88,256"/>
+<area shape="poly" title=" " alt="" coords="102,194,62,231,58,227,98,190"/>
+<area shape="rect" href="Menu_8h.html" title=" " alt="" coords="162,229,227,256"/>
+<area shape="poly" title=" " alt="" coords="149,191,184,227,181,231,146,194"/>
+<area shape="rect" href="ggsample01_8cpp.html" title=" " alt="" coords="102,304,218,331"/>
+<area shape="poly" title=" " alt="" coords="134,196,159,303,154,304,129,197"/>
+<area shape="rect" href="Menu_8cpp.html" title=" " alt="" coords="242,304,320,331"/>
+<area shape="poly" title=" " alt="" coords="223,264,268,302,265,306,219,268"/>
+<area shape="poly" title=" " alt="" coords="184,271,168,305,163,302,179,269"/>
+<area shape="poly" title=" " alt="" coords="256,194,211,231,208,227,253,189"/>
+<area shape="poly" title=" " alt="" coords="274,197,260,227,241,258,212,285,183,306,180,301,209,281,236,254,256,225,269,195"/>
+<area shape="rect" href="GgApp_8cpp.html" title=" " alt="" coords="301,229,387,256"/>
+<area shape="poly" title=" " alt="" coords="304,192,335,227,331,231,300,195"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="411,229,485,256"/>
+<area shape="poly" title=" " alt="" coords="325,185,420,226,418,231,323,190"/>
+<area shape="poly" title=" " alt="" coords="174,120,139,156,135,152,170,116"/>
 </map>
 </div>
 </div>
@@ -223,7 +215,7 @@ gg.h の依存先関係図:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 名前空間</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html">gg</a></td></tr>
+<tr class="memitem:namespacegg" id="r_namespacegg"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html">gg</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -383,6 +375,8 @@ gg.h の依存先関係図:</div>
 <tr class="separator:aacfb5aa2cd001a0ad0fc8c7831576860"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ac6682d2eb32fa126445a1df1e934b6" id="r_a3ac6682d2eb32fa126445a1df1e934b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a3ac6682d2eb32fa126445a1df1e934b6">gg::ggEulerQuaternion</a> (const GLfloat *e)</td></tr>
 <tr class="separator:a3ac6682d2eb32fa126445a1df1e934b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4da45ac0eaceae1ab1717c749b8d059" id="r_aa4da45ac0eaceae1ab1717c749b8d059"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#aa4da45ac0eaceae1ab1717c749b8d059">gg::ggEulerQuaternion</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;e)</td></tr>
+<tr class="separator:aa4da45ac0eaceae1ab1717c749b8d059"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a191d7b15d7374dfc6fa5243e3b667537" id="r_a191d7b15d7374dfc6fa5243e3b667537"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a191d7b15d7374dfc6fa5243e3b667537">gg::ggSlerp</a> (const GLfloat *a, const GLfloat *b, GLfloat t)</td></tr>
 <tr class="separator:a191d7b15d7374dfc6fa5243e3b667537"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af14e01e111b4a4b141c268038e69809e" id="r_af14e01e111b4a4b141c268038e69809e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#af14e01e111b4a4b141c268038e69809e">gg::ggSlerp</a> (const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;q, const <a class="el" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> &amp;r, GLfloat t)</td></tr>
@@ -407,10 +401,10 @@ gg.h の依存先関係図:</div>
 <tr class="separator:a236701485bbc8278654781a810bf2880"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acce00f35f4b755cda72ec9f61b726c8f" id="r_acce00f35f4b755cda72ec9f61b726c8f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#acce00f35f4b755cda72ec9f61b726c8f">gg::ggReadImage</a> (const std::string &amp;name, std::vector&lt; GLubyte &gt; &amp;image, GLsizei *pWidth, GLsizei *pHeight, GLenum *pFormat)</td></tr>
 <tr class="separator:acce00f35f4b755cda72ec9f61b726c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c7814fec8a87f48c57a367567c422d6" id="r_a4c7814fec8a87f48c57a367567c422d6"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a4c7814fec8a87f48c57a367567c422d6">gg::ggLoadTexture</a> (const GLvoid *image, GLsizei width, GLsizei height, GLenum format=GL_RGB, GLenum type=GL_UNSIGNED_BYTE, GLenum internal=GL_RGB, GLenum wrap=GL_CLAMP_TO_EDGE, bool swizzle=true)</td></tr>
-<tr class="separator:a4c7814fec8a87f48c57a367567c422d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ba6c60b5240e74a801a7f33e09bce87" id="r_a6ba6c60b5240e74a801a7f33e09bce87"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a6ba6c60b5240e74a801a7f33e09bce87">gg::ggLoadImage</a> (const std::string &amp;name, GLsizei *pWidth=nullptr, GLsizei *pHeight=nullptr, GLenum internal=0, GLenum wrap=GL_CLAMP_TO_EDGE)</td></tr>
-<tr class="separator:a6ba6c60b5240e74a801a7f33e09bce87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4085c8da7546d15a8e25dc2f11e79f6" id="r_ab4085c8da7546d15a8e25dc2f11e79f6"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#ab4085c8da7546d15a8e25dc2f11e79f6">gg::ggLoadTexture</a> (const GLvoid *image, GLsizei width, GLsizei height, GLenum format=GL_RGB, GLenum type=GL_UNSIGNED_BYTE, GLenum internal=GL_RGB, GLenum wrap=GL_CLAMP_TO_EDGE, bool swizzle=false)</td></tr>
+<tr class="separator:ab4085c8da7546d15a8e25dc2f11e79f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb72b124c601db7888fa70aa2d6f584f" id="r_abb72b124c601db7888fa70aa2d6f584f"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#abb72b124c601db7888fa70aa2d6f584f">gg::ggLoadImage</a> (const std::string &amp;name, GLsizei *pWidth=nullptr, GLsizei *pHeight=nullptr, GLenum internal=GL_RGBA, GLenum wrap=GL_CLAMP_TO_EDGE)</td></tr>
+<tr class="separator:abb72b124c601db7888fa70aa2d6f584f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cd46afb53daa13fa8bb2de14baf4e7b" id="r_a2cd46afb53daa13fa8bb2de14baf4e7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a2cd46afb53daa13fa8bb2de14baf4e7b">gg::ggCreateNormalMap</a> (const GLubyte *hmap, GLsizei width, GLsizei height, GLenum format, GLfloat nz, GLenum internal, std::vector&lt; <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &gt; &amp;nmap)</td></tr>
 <tr class="separator:a2cd46afb53daa13fa8bb2de14baf4e7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53453ed6229bbd109c279a3765648d01" id="r_a53453ed6229bbd109c279a3765648d01"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegg.html#a53453ed6229bbd109c279a3765648d01">gg::ggLoadHeight</a> (const std::string &amp;name, GLfloat nz, GLsizei *pWidth=nullptr, GLsizei *pHeight=nullptr, GLenum internal=GL_RGBA)</td></tr>
@@ -468,7 +462,7 @@ gg.h の依存先関係図:</div>
         <tr>
           <td class="memname">#define ggError</td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -489,7 +483,7 @@ gg.h の依存先関係図:</div>
         <tr>
           <td class="memname">#define ggFBOError</td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -591,30 +585,30 @@ gg.h の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="gg_8h_ac735c9fb18adb1f2127c90adcea87cd8_icgraph.png" border="0" usemap="#agg_8h_ac735c9fb18adb1f2127c90adcea87cd8_icgraph" alt=""/></div>
 <map name="agg_8h_ac735c9fb18adb1f2127c90adcea87cd8_icgraph" id="agg_8h_ac735c9fb18adb1f2127c90adcea87cd8_icgraph">
-<area shape="rect" title=" " alt="" coords="371,265,467,292"/>
-<area shape="rect" href="namespacegg.html#acce00f35f4b755cda72ec9f61b726c8f" title=" " alt="" coords="199,115,323,141"/>
-<area shape="poly" title=" " alt="" coords="391,256,275,144,278,140,394,252"/>
-<area shape="rect" href="namespacegg.html#ae450600cc658bd7d6b0f7ecb62156fe8" title=" " alt="" coords="206,240,316,267"/>
-<area shape="poly" title=" " alt="" coords="355,271,315,265,316,259,356,266"/>
-<area shape="rect" href="classConfig.html#a5e3336e5f83b8cea516039537861e9e6" title=" " alt="" coords="215,291,306,317"/>
-<area shape="poly" title=" " alt="" coords="356,291,307,299,307,294,356,286"/>
-<area shape="rect" href="classConfig.html#a817566065d6f1d047c96b94fc596830c" title=" " alt="" coords="213,341,308,368"/>
-<area shape="poly" title=" " alt="" coords="381,302,324,332,298,343,296,338,322,327,379,297"/>
-<area shape="rect" href="namespacegg.html#a53453ed6229bbd109c279a3765648d01" title=" " alt="" coords="16,5,140,32"/>
-<area shape="poly" title=" " alt="" coords="232,106,194,76,149,46,124,35,127,30,152,42,197,71,235,102"/>
-<area shape="rect" href="namespacegg.html#a6ba6c60b5240e74a801a7f33e09bce87" title=" " alt="" coords="17,56,139,83"/>
-<area shape="poly" title=" " alt="" coords="202,112,121,86,123,81,203,107"/>
-<area shape="rect" href="classgg_1_1GgColorTexture.html#afdc734fb5c415a9f5b86e1b13e7ee7d6" title=" " alt="" coords="11,107,145,149"/>
-<area shape="poly" title=" " alt="" coords="183,131,145,131,145,125,183,125"/>
-<area shape="rect" href="classgg_1_1GgNormalTexture.html#adca09b7af04c1a58703fbafcea758671" title=" " alt="" coords="5,173,151,216"/>
-<area shape="poly" title=" " alt="" coords="208,150,140,175,138,170,207,145"/>
-<area shape="rect" href="namespacegg.html#a6dc1ef6d0e78a6694ae8aca973b1b9ae" title=" " alt="" coords="19,240,137,267"/>
-<area shape="poly" title=" " alt="" coords="191,256,137,256,137,251,191,251"/>
-<area shape="rect" href="namespacegg.html#a236701485bbc8278654781a810bf2880" title=" " alt="" coords="17,291,139,317"/>
-<area shape="poly" title=" " alt="" coords="196,274,130,293,128,287,194,269"/>
-<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="25,341,131,368"/>
-<area shape="poly" title=" " alt="" coords="201,323,130,343,128,338,199,318"/>
-<area shape="poly" title=" " alt="" coords="197,357,131,357,131,352,197,352"/>
+<area shape="rect" title=" " alt="" coords="368,265,460,292"/>
+<area shape="rect" href="namespacegg.html#acce00f35f4b755cda72ec9f61b726c8f" title=" " alt="" coords="198,115,320,141"/>
+<area shape="poly" title=" " alt="" coords="386,256,272,144,276,140,390,252"/>
+<area shape="rect" href="namespacegg.html#ae450600cc658bd7d6b0f7ecb62156fe8" title=" " alt="" coords="206,240,312,267"/>
+<area shape="poly" title=" " alt="" coords="352,271,312,265,313,259,353,266"/>
+<area shape="rect" href="classConfig.html#a5e3336e5f83b8cea516039537861e9e6" title=" " alt="" coords="214,291,304,317"/>
+<area shape="poly" title=" " alt="" coords="353,291,305,299,304,294,352,286"/>
+<area shape="rect" href="classConfig.html#a817566065d6f1d047c96b94fc596830c" title=" " alt="" coords="213,341,305,368"/>
+<area shape="poly" title=" " alt="" coords="377,302,321,332,296,343,294,338,319,327,375,298"/>
+<area shape="rect" href="namespacegg.html#a53453ed6229bbd109c279a3765648d01" title=" " alt="" coords="16,5,139,32"/>
+<area shape="poly" title=" " alt="" coords="230,106,193,76,148,46,124,35,126,30,151,42,196,71,234,102"/>
+<area shape="rect" href="namespacegg.html#abb72b124c601db7888fa70aa2d6f584f" title=" " alt="" coords="17,56,138,83"/>
+<area shape="poly" title=" " alt="" coords="200,112,120,86,122,81,202,107"/>
+<area shape="rect" href="classgg_1_1GgColorTexture.html#afdc734fb5c415a9f5b86e1b13e7ee7d6" title=" " alt="" coords="11,107,144,149"/>
+<area shape="poly" title=" " alt="" coords="182,131,145,131,145,125,182,125"/>
+<area shape="rect" href="classgg_1_1GgNormalTexture.html#adca09b7af04c1a58703fbafcea758671" title=" " alt="" coords="5,173,150,216"/>
+<area shape="poly" title=" " alt="" coords="207,150,139,175,137,170,205,145"/>
+<area shape="rect" href="namespacegg.html#a6dc1ef6d0e78a6694ae8aca973b1b9ae" title=" " alt="" coords="20,240,135,267"/>
+<area shape="poly" title=" " alt="" coords="190,256,136,256,136,251,190,251"/>
+<area shape="rect" href="namespacegg.html#a236701485bbc8278654781a810bf2880" title=" " alt="" coords="18,291,137,317"/>
+<area shape="poly" title=" " alt="" coords="194,274,129,293,127,288,193,269"/>
+<area shape="rect" href="classConfig.html#abc51a2c710c8666d27b53cc03597201d" title=" " alt="" coords="27,341,128,368"/>
+<area shape="poly" title=" " alt="" coords="200,323,128,343,127,338,198,318"/>
+<area shape="poly" title=" " alt="" coords="198,357,129,357,129,352,198,352"/>
 </map>
 </div>
 
@@ -626,7 +620,7 @@ gg.h の依存先関係図:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="gg_8h.html">gg.h</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

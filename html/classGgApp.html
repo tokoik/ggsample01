@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: GgApp クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -11,9 +11,9 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -26,6 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
   <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
@@ -35,15 +36,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.12.0 -->
+<!-- 構築: Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -51,7 +47,7 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','検索',true);
+  initMenu('',true,false,'search.php','検索');
   $(function() { init_search(); });
 });
 /* @license-end */
@@ -70,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('classGgApp.html',''); initResizable(true); });
+$(function(){initNavTree('classGgApp.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -129,7 +125,7 @@ $(function(){initNavTree('classGgApp.html',''); initResizable(true); });
 <tr class="separator:ad2e50a5e84d4fd6162e03039ac00c7ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>ゲームグラフィックス特論宿題アプリケーションクラス </p>
+<div class="textblock"><p>ゲームグラフィックス特論宿題アプリケーションクラス. </p>
 
 <p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> の <a class="el" href="GgApp_8h_source.html#l00088">88</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
@@ -142,12 +138,12 @@ $(function(){initNavTree('classGgApp.html',''); initResizable(true); });
         <tr>
           <td class="memname">GgApp::GgApp </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>major</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>major</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>minor</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>minor</em><span class="paramdefsep"> = </span><span class="paramdefval">1</span></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -186,7 +182,13 @@ $(function(){initNavTree('classGgApp.html',''); initResizable(true); });
   </tr>
 </table>
 </div><div class="memdoc">
-<p>コピーコンストラクタは使用しない </p>
+<p>コピーコンストラクタは使用しない.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">w</td><td>コピー元のオブジェクト. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -212,7 +214,13 @@ $(function(){initNavTree('classGgApp.html',''); initResizable(true); });
   </tr>
 </table>
 </div><div class="memdoc">
-<p>ムーブコンストラクタはデフォルトのものを使用する </p>
+<p>ムーブコンストラクタ.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">w</td><td>ムーブ元のオブジェクト. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -228,7 +236,7 @@ $(function(){initNavTree('classGgApp.html',''); initResizable(true); });
         <tr>
           <td class="memname">GgApp::~GgApp </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -254,7 +262,7 @@ $(function(){initNavTree('classGgApp.html',''); initResizable(true); });
         <tr>
           <td class="memname">int GgApp::main </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -263,23 +271,33 @@ $(function(){initNavTree('classGgApp.html',''); initResizable(true); });
         </tr>
       </table>
 </div><div class="memdoc">
-<p>アプリケーション本体. </p>
+<p>アプリケーション本体.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>コマンドライン引数の数. </td></tr>
+    <tr><td class="paramname">argv</td><td>コマンドライン引数の配列. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>アプリケーションの終了ステータス. </dd></dl>
 
-<p class="definition"> <a class="el" href="ggsample01_8cpp_source.html">ggsample01.cpp</a> の <a class="el" href="ggsample01_8cpp_source.html#l00028">28</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="ggsample01_8cpp_source.html">ggsample01.cpp</a> の <a class="el" href="ggsample01_8cpp_source.html#l00027">27</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGgApp_ad2e50a5e84d4fd6162e03039ac00c7ae_cgraph.png" border="0" usemap="#aclassGgApp_ad2e50a5e84d4fd6162e03039ac00c7ae_cgraph" alt=""/></div>
 <map name="aclassGgApp_ad2e50a5e84d4fd6162e03039ac00c7ae_cgraph" id="aclassGgApp_ad2e50a5e84d4fd6162e03039ac00c7ae_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,103,57"/>
-<area shape="rect" href="namespacegg.html#a2924895ad284e08b08a2cfd115c5a7bf" title=" " alt="" coords="166,5,262,32"/>
-<area shape="poly" title=" " alt="" coords="102,34,150,26,151,31,103,39"/>
-<area shape="rect" href="namespacegg.html#a7dcbaa73755efd46f1f19b0b3a39b473" title=" " alt="" coords="151,56,277,83"/>
-<area shape="poly" title=" " alt="" coords="103,49,136,54,135,60,102,54"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#a753d56545359ba6efc11aa9b5b3ade11" title=" " alt="" coords="340,5,507,32"/>
-<area shape="poly" title=" " alt="" coords="262,16,325,16,325,21,262,21"/>
-<area shape="rect" href="classgg_1_1GgMatrix.html#a2455429beaf82954d49fa3ca25143177" title=" " alt="" coords="325,56,522,83"/>
-<area shape="poly" title=" " alt="" coords="277,67,309,67,309,72,277,72"/>
+<area shape="rect" title=" " alt="" coords="5,56,103,83"/>
+<area shape="rect" href="classGgApp_1_1Window.html#a579867ae1179b9d946e2a0e34a62e830" title=" " alt="" coords="151,5,326,32"/>
+<area shape="poly" title=" " alt="" coords="102,53,172,34,173,39,104,59"/>
+<area shape="rect" href="namespacegg.html#a2924895ad284e08b08a2cfd115c5a7bf" title=" " alt="" coords="190,56,287,83"/>
+<area shape="poly" title=" " alt="" coords="103,67,174,67,174,72,103,72"/>
+<area shape="rect" href="namespacegg.html#a7dcbaa73755efd46f1f19b0b3a39b473" title=" " alt="" coords="176,107,301,133"/>
+<area shape="poly" title=" " alt="" coords="104,80,173,99,172,105,102,85"/>
+<area shape="rect" href="classgg_1_1GgMatrix.html#a753d56545359ba6efc11aa9b5b3ade11" title=" " alt="" coords="388,56,555,83"/>
+<area shape="poly" title=" " alt="" coords="287,67,372,67,372,72,287,72"/>
+<area shape="rect" href="classgg_1_1GgMatrix.html#a2455429beaf82954d49fa3ca25143177" title=" " alt="" coords="374,107,569,133"/>
+<area shape="poly" title=" " alt="" coords="301,117,358,117,358,123,301,123"/>
 </map>
 </div>
 <div class="dynheader">
@@ -317,7 +335,14 @@ $(function(){initNavTree('classGgApp.html',''); initResizable(true); });
   </tr>
 </table>
 </div><div class="memdoc">
-<p>代入演算子は使用しない </p>
+<p>代入演算子は使用しない.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">w</td><td>代入元のオブジェクト. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>代入後のこのオブジェクトの参照. </dd></dl>
 
 </div>
 </div>
@@ -343,7 +368,14 @@ $(function(){initNavTree('classGgApp.html',''); initResizable(true); });
   </tr>
 </table>
 </div><div class="memdoc">
-<p>ムーブ代入演算子はデフォルトのものを使用する </p>
+<p>ムーブ代入演算子.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">w</td><td>ムーブ代入元のオブジェクト. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>ムーブ代入後のこのオブジェクトの参照. </dd></dl>
 
 </div>
 </div>
@@ -358,7 +390,7 @@ $(function(){initNavTree('classGgApp.html',''); initResizable(true); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classGgApp.html">GgApp</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

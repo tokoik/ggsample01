@@ -17,6 +17,7 @@ var classgg_1_1GgQuaternion =
     [ "divide", "classgg_1_1GgQuaternion.html#a4b44a2db7bfe4c0aa27358c2011360ec", null ],
     [ "divide", "classgg_1_1GgQuaternion.html#a0d70c27c7840e8bcb1031e12669a9405", null ],
     [ "divide", "classgg_1_1GgQuaternion.html#a0d9f4c9b28fc3424ef26aed061448287", null ],
+    [ "euler", "classgg_1_1GgQuaternion.html#a67653ac2a70b598147b4f2b1fd9cccab", null ],
     [ "euler", "classgg_1_1GgQuaternion.html#a65a6c0126b5f8a857046f8e1defca7cc", null ],
     [ "euler", "classgg_1_1GgQuaternion.html#abdbd693a6cd020ed36293d3aec1b528c", null ],
     [ "get", "classgg_1_1GgQuaternion.html#a694406f9dd114d0d804f33528db3c854", null ],

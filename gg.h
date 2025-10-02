@@ -1566,7 +1566,7 @@ namespace gg
   }
 
   ///
-  /// 4 要素の単精度実数の配列.
+  /// 単精度実数の 4 要素のベクトル.
   ///
   class GgVector : public std::array<GLfloat, 4>
   {
@@ -1613,10 +1613,14 @@ namespace gg
     ///
     /// コピーコンストラクタ.
     ///
+    /// @param v コピー元のベクトル.
+    ///
     GgVector(const GgVector& v) = default;
 
     ///
     /// ムーブコンストラクタ.
+    ///
+    /// @param v ムーブ元のベクトル.
     ///
     GgVector(GgVector&& v) = default;
 
@@ -2187,10 +2191,14 @@ namespace gg
     ///
     /// コピーコンストラクタ.
     ///
+    /// @param m コピー元の変換行列.
+    ///
     GgMatrix(const GgMatrix& m) = default;
 
     ///
     /// ムーブコンストラクタ.
+    ///
+    /// @param m ムーブ元の変換行列.
     ///
     GgMatrix(GgMatrix&& m) = default;
 
@@ -3508,10 +3516,14 @@ namespace gg
     ///
     /// コピーコンストラクタ.
     ///
+    /// @param q コピー元の四元数.
+    ///
     GgQuaternion(const GgQuaternion& q) = default;
 
     ///
     /// ムーブコンストラクタ.
+    ///
+    /// @param q ムーブ元の四元数.
     ///
     GgQuaternion(GgQuaternion&& q) = default;
 
@@ -3523,10 +3535,16 @@ namespace gg
     ///
     /// 代入演算子.
     ///
+    /// @param q 代入元の四元数.
+    /// @return 代入後のこの四元数の参照.
+    ///
     GgQuaternion& operator=(const GgQuaternion& q) = default;
 
     ///
     /// ムーブ代入演算子.
+    ///
+    /// @param q ムーブ代入元の四元数.
+    /// @return ムーブ代入後のこの四元数の参照.
     ///
     GgQuaternion& operator=(GgQuaternion&& q) = default;
 
@@ -5212,10 +5230,14 @@ namespace gg
     ///
     /// コピーコンストラクタは使用しない.
     ///
+    /// @param texture コピー元のテクスチャ.
+    ///
     GgTexture(const GgTexture& texture) = delete;
 
     ///
-    /// ムーブコンストラクタはデフォルトのものを使用する.
+    /// ムーブコンストラクタ.
+    ///
+    /// @param texture ムーブ元のテクスチャ.
     ///
     GgTexture(GgTexture&& texture) = default;
 
@@ -5231,10 +5253,16 @@ namespace gg
     ///
     /// 代入演算子は使用しない.
     ///
+    /// @param texture 代入元のテクスチャ.
+    /// @return 代入後のこのテクスチャの参照.
+    ///
     GgTexture& operator=(const GgTexture& texture) = delete;
 
     ///
-    /// ムーブ代入演算子はデフォルトのものを使用する.
+    /// ムーブ代入演算子.
+    ///
+    /// @param texture ムーブ代入元のテクスチャ.
+    /// @return ムーブ代入後のこのテクスチャの参照.
     ///
     GgTexture& operator=(GgTexture&& texture) = default;
 
@@ -5585,10 +5613,14 @@ namespace gg
     ///
     /// コピーコンストラクタは使用しない.
     ///
+    /// @param buffer コピー元のバッファ.
+    ///
     GgBuffer<T>(const GgBuffer<T>& buffer) = delete;
 
     ///
-    /// ムーブコンストラクタはデフォルトのものを使用する.
+    /// ムーブコンストラクタ.
+    ///
+    /// @param buffer ムーブ元のバッファ.
     ///
     GgBuffer<T>(GgBuffer<T>&& buffer) = default;
 
@@ -5605,10 +5637,16 @@ namespace gg
     ///
     /// 代入演算子は使用しない.
     ///
+    /// @param buffer 代入元のバッファ.
+    /// @return 代入後のこのバッファの参照.
+    ///
     GgBuffer<T>& operator=(const GgBuffer<T>& buffer) = delete;
 
     ///
-    /// ムーブ代入演算子はデフォルトのものを使用する.
+    /// ムーブ代入演算子.
+    ///
+    /// @param buffer ムーブ代入元のバッファ.
+    /// @return ムーブ代入後のこのバッファの参照.
     ///
     GgBuffer<T>& operator=(GgBuffer<T>&& buffer) = default;
 
@@ -6137,10 +6175,14 @@ namespace gg
     ///
     /// コピーコンストラクタは使用しない.
     ///
+    /// @param array コピー元の頂点配列オブジェクト.
+    ///
     GgVertexArray(const GgVertexArray& array) = delete;
 
     ///
-    /// ムーブコンストラクタはデフォルトのものを使用する.
+    /// ムーブコンストラクタ.
+    ///
+    /// @param array ムーブ元の頂点配列オブジェクト.
     ///
     GgVertexArray(GgVertexArray&& array) = default;
 
@@ -6156,10 +6198,16 @@ namespace gg
     ///
     /// 代入演算子は使用しない.
     ///
+    /// @param array 代入元の頂点配列オブジェクト.
+    /// @return 代入後のこの頂点配列オブジェクトの参照.
+    ///
     GgVertexArray& operator=(const GgVertexArray& array) = delete;
 
     ///
-    /// ムーブ代入演算子はデフォルトのものを使用する.
+    /// ムーブ代入演算子.
+    ///
+    /// @param array ムーブ代入元の頂点配列オブジェクト.
+    /// @return ムーブ代入後のこの頂点配列オブジェクトの参照.
     ///
     GgVertexArray& operator=(GgVertexArray&& array) = default;
 
@@ -6859,10 +6907,14 @@ namespace gg
     ///
     /// コピーコンストラクタは使用しない.
     ///
+    /// @param shader コピー元のシェーダ.
+    ///
     GgShader(const GgShader& shader) = delete;
 
     ///
-    /// ムーブコンストラクタはデフォルトのものを使用する.
+    /// ムーブコンストラクタ.
+    ///
+    /// @param shader ムーブ元のシェーダ.
     ///
     GgShader(GgShader&& shader) = default;
 
@@ -6879,10 +6931,16 @@ namespace gg
     ///
     /// 代入演算子は使用しない.
     ///
+    /// @param shader 代入元のシェーダ.
+    /// @return 代入後のこのシェーダの参照.
+    ///
     GgShader& operator=(const GgShader& shader) = delete;
 
     ///
-    /// ムーブ代入演算子はデフォルトのものを使用する.
+    /// ムーブ代入演算子.
+    ///
+    /// @param shader ムーブ代入元のシェーダ.
+    /// @return ムーブ代入後のこのシェーダの参照.
     ///
     GgShader& operator=(GgShader&& shader) = default;
 
@@ -7242,6 +7300,9 @@ namespace gg
 
     ///
     /// 代入演算子.
+    ///
+    /// @param o 代入する GgSimpleShader 型のオブジェクト.
+    /// @return 代入後の GgSimpleShader 型のオブジェクトの参照.
     ///
     GgSimpleShader& operator=(const GgSimpleShader& o)
     {

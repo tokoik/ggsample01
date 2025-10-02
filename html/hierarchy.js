@@ -9,7 +9,6 @@ var hierarchy =
       ] ]
     ] ],
     [ "Config", "classConfig.html", null ],
-    [ "Draw", "classDraw.html", null ],
     [ "GgApp", "classGgApp.html", null ],
     [ "gg::GgBuffer< T >", "classgg_1_1GgBuffer.html", null ],
     [ "gg::GgColorTexture", "classgg_1_1GgColorTexture.html", null ],

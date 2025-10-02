@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['light_0',['Light',['../structgg_1_1GgSimpleShader_1_1Light.html',1,'gg::GgSimpleShader']]],
-  ['lightbuffer_1',['LightBuffer',['../classgg_1_1GgSimpleShader_1_1LightBuffer.html',1,'gg::GgSimpleShader']]]
+  ['material_0',['Material',['../structgg_1_1GgSimpleShader_1_1Material.html',1,'gg::GgSimpleShader']]],
+  ['materialbuffer_1',['MaterialBuffer',['../classgg_1_1GgSimpleShader_1_1MaterialBuffer.html',1,'gg::GgSimpleShader']]],
+  ['menu_2',['Menu',['../classMenu.html',1,'']]]
 ];

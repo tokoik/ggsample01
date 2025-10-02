@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: gg::GgSimpleShader::LightBuffer クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -11,9 +11,9 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -26,6 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
   <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
@@ -35,15 +36,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.12.0 -->
+<!-- 構築: Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -51,7 +47,7 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','検索',true);
+  initMenu('',true,false,'search.php','検索');
   $(function() { init_search(); });
 });
 /* @license-end */
@@ -70,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('classgg_1_1GgSimpleShader_1_1LightBuffer.html',''); initResizable(true); });
+$(function(){initNavTree('classgg_1_1GgSimpleShader_1_1LightBuffer.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -110,7 +106,7 @@ gg::GgSimpleShader::LightBuffer の継承関係図</div>
 <div class="center"><img src="classgg_1_1GgSimpleShader_1_1LightBuffer__inherit__graph.png" border="0" usemap="#agg_1_1GgSimpleShader_1_1LightBuffer_inherit__map" alt="Inheritance graph"/></div>
 <map name="agg_1_1GgSimpleShader_1_1LightBuffer_inherit__map" id="agg_1_1GgSimpleShader_1_1LightBuffer_inherit__map">
 <area shape="rect" title=" " alt="" coords="5,96,147,139"/>
-<area shape="rect" href="classgg_1_1GgUniformBuffer.html" title=" " alt="" coords="6,5,146,48"/>
+<area shape="rect" href="classgg_1_1GgUniformBuffer.html" title=" " alt="" coords="7,5,145,48"/>
 <area shape="poly" title=" " alt="" coords="79,64,79,96,73,96,73,64"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
@@ -120,52 +116,54 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
 <div class="center"><img src="classgg_1_1GgSimpleShader_1_1LightBuffer__coll__graph.png" border="0" usemap="#agg_1_1GgSimpleShader_1_1LightBuffer_coll__map" alt="Collaboration graph"/></div>
 <map name="agg_1_1GgSimpleShader_1_1LightBuffer_coll__map" id="agg_1_1GgSimpleShader_1_1LightBuffer_coll__map">
 <area shape="rect" title=" " alt="" coords="5,96,147,139"/>
-<area shape="rect" href="classgg_1_1GgUniformBuffer.html" title=" " alt="" coords="6,5,146,48"/>
+<area shape="rect" href="classgg_1_1GgUniformBuffer.html" title=" " alt="" coords="7,5,145,48"/>
 <area shape="poly" title=" " alt="" coords="79,64,79,96,73,96,73,64"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:acf233868d39717cbce43cfe3c00d9900" id="r_acf233868d39717cbce43cfe3c00d9900"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf233868d39717cbce43cfe3c00d9900">LightBuffer</a> (const <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a> *light=nullptr, GLsizei count=1, GLenum usage=GL_STATIC_DRAW)</td></tr>
+<tr class="memitem:acf233868d39717cbce43cfe3c00d9900" id="r_acf233868d39717cbce43cfe3c00d9900"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf233868d39717cbce43cfe3c00d9900">LightBuffer</a> (<a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a> *light=<a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">nullptr</a>, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a> count=1, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLenum</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">usage</a>=<a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GL_STATIC_DRAW</a>)</td></tr>
 <tr class="separator:acf233868d39717cbce43cfe3c00d9900"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a573ebac72c3cfa75d2b070306116925b" id="r_a573ebac72c3cfa75d2b070306116925b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a573ebac72c3cfa75d2b070306116925b">LightBuffer</a> (const <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a> &amp;light, GLsizei count=1, GLenum usage=GL_STATIC_DRAW)</td></tr>
+<tr class="memitem:a573ebac72c3cfa75d2b070306116925b" id="r_a573ebac72c3cfa75d2b070306116925b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a573ebac72c3cfa75d2b070306116925b">LightBuffer</a> (<a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a> &amp;light, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a> count=1, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLenum</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">usage</a>=<a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GL_STATIC_DRAW</a>)</td></tr>
 <tr class="separator:a573ebac72c3cfa75d2b070306116925b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb99278d306e57a0eabc54f150da7208" id="r_afb99278d306e57a0eabc54f150da7208"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb99278d306e57a0eabc54f150da7208">~LightBuffer</a> ()</td></tr>
+<tr class="memitem:ac292843abeade6d90d75609c853d47e9" id="r_ac292843abeade6d90d75609c853d47e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac292843abeade6d90d75609c853d47e9">LightBuffer</a> (<a class="el" href="classgg_1_1GgVector.html">GgVector</a> ambient, <a class="el" href="classgg_1_1GgVector.html">GgVector</a> diffuse, <a class="el" href="classgg_1_1GgVector.html">GgVector</a> specular, <a class="el" href="classgg_1_1GgVector.html">GgVector</a> position, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a> count=1, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLenum</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">usage</a>=<a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GL_STATIC_DRAW</a>)</td></tr>
+<tr class="separator:ac292843abeade6d90d75609c853d47e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb99278d306e57a0eabc54f150da7208" id="r_afb99278d306e57a0eabc54f150da7208"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">virtual</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb99278d306e57a0eabc54f150da7208">~LightBuffer</a> ()</td></tr>
 <tr class="separator:afb99278d306e57a0eabc54f150da7208"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbef7fd0157faf9a2f99ba754fc5ccd7" id="r_adbef7fd0157faf9a2f99ba754fc5ccd7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbef7fd0157faf9a2f99ba754fc5ccd7">loadAmbient</a> (GLfloat r, GLfloat g, GLfloat b, GLfloat a=1.0f, GLint first=0, GLsizei count=1) const</td></tr>
+<tr class="memitem:adbef7fd0157faf9a2f99ba754fc5ccd7" id="r_adbef7fd0157faf9a2f99ba754fc5ccd7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbef7fd0157faf9a2f99ba754fc5ccd7">loadAmbient</a> (<a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">r</a>, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">g</a>, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">b</a>, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">a</a>=1.0f, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">first</a>=0, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a> count=1) <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a></td></tr>
 <tr class="separator:adbef7fd0157faf9a2f99ba754fc5ccd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6cd8eaa836bb3265980bc33ac1362c3" id="r_ac6cd8eaa836bb3265980bc33ac1362c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6cd8eaa836bb3265980bc33ac1362c3">loadAmbient</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;ambient, GLint first=0, GLsizei count=1) const</td></tr>
+<tr class="memitem:ac6cd8eaa836bb3265980bc33ac1362c3" id="r_ac6cd8eaa836bb3265980bc33ac1362c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6cd8eaa836bb3265980bc33ac1362c3">loadAmbient</a> (<a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;ambient, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">first</a>=0, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a> count=1) <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a></td></tr>
 <tr class="separator:ac6cd8eaa836bb3265980bc33ac1362c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d4269360b749e21da5f2c25da02d74f" id="r_a0d4269360b749e21da5f2c25da02d74f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d4269360b749e21da5f2c25da02d74f">loadAmbient</a> (const GLfloat *ambient, GLint first=0, GLsizei count=1) const</td></tr>
+<tr class="memitem:a0d4269360b749e21da5f2c25da02d74f" id="r_a0d4269360b749e21da5f2c25da02d74f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d4269360b749e21da5f2c25da02d74f">loadAmbient</a> (<a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a> *ambient, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">first</a>=0, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a> count=1) <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a></td></tr>
 <tr class="separator:a0d4269360b749e21da5f2c25da02d74f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bd0a46d083fd92cc24fc0fd8e73c294" id="r_a4bd0a46d083fd92cc24fc0fd8e73c294"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bd0a46d083fd92cc24fc0fd8e73c294">loadDiffuse</a> (GLfloat r, GLfloat g, GLfloat b, GLfloat a=1.0f, GLint first=0, GLsizei count=1) const</td></tr>
+<tr class="memitem:a4bd0a46d083fd92cc24fc0fd8e73c294" id="r_a4bd0a46d083fd92cc24fc0fd8e73c294"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bd0a46d083fd92cc24fc0fd8e73c294">loadDiffuse</a> (<a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">r</a>, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">g</a>, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">b</a>, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">a</a>=1.0f, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">first</a>=0, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a> count=1) <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a></td></tr>
 <tr class="separator:a4bd0a46d083fd92cc24fc0fd8e73c294"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3742de34f34fc1953221be7f3053f617" id="r_a3742de34f34fc1953221be7f3053f617"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3742de34f34fc1953221be7f3053f617">loadDiffuse</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;diffuse, GLint first=0, GLsizei count=1) const</td></tr>
+<tr class="memitem:a3742de34f34fc1953221be7f3053f617" id="r_a3742de34f34fc1953221be7f3053f617"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3742de34f34fc1953221be7f3053f617">loadDiffuse</a> (<a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;diffuse, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">first</a>=0, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a> count=1) <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a></td></tr>
 <tr class="separator:a3742de34f34fc1953221be7f3053f617"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0f00e2f94bc2105a55f7a5c3306d184" id="r_ac0f00e2f94bc2105a55f7a5c3306d184"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0f00e2f94bc2105a55f7a5c3306d184">loadDiffuse</a> (const GLfloat *diffuse, GLint first=0, GLsizei count=1) const</td></tr>
+<tr class="memitem:ac0f00e2f94bc2105a55f7a5c3306d184" id="r_ac0f00e2f94bc2105a55f7a5c3306d184"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0f00e2f94bc2105a55f7a5c3306d184">loadDiffuse</a> (<a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a> *diffuse, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">first</a>=0, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a> count=1) <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a></td></tr>
 <tr class="separator:ac0f00e2f94bc2105a55f7a5c3306d184"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45298d18a7c067907dca4ac54a56b76b" id="r_a45298d18a7c067907dca4ac54a56b76b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45298d18a7c067907dca4ac54a56b76b">loadSpecular</a> (GLfloat r, GLfloat g, GLfloat b, GLfloat a=1.0f, GLint first=0, GLsizei count=1) const</td></tr>
+<tr class="memitem:a45298d18a7c067907dca4ac54a56b76b" id="r_a45298d18a7c067907dca4ac54a56b76b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45298d18a7c067907dca4ac54a56b76b">loadSpecular</a> (<a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">r</a>, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">g</a>, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">b</a>, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">a</a>=1.0f, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">first</a>=0, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a> count=1) <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a></td></tr>
 <tr class="separator:a45298d18a7c067907dca4ac54a56b76b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ed4c39a41fdd9f6bc9e7606ad8e8cfc" id="r_a1ed4c39a41fdd9f6bc9e7606ad8e8cfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ed4c39a41fdd9f6bc9e7606ad8e8cfc">loadSpecular</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;specular, GLint first=0, GLsizei count=1) const</td></tr>
+<tr class="memitem:a1ed4c39a41fdd9f6bc9e7606ad8e8cfc" id="r_a1ed4c39a41fdd9f6bc9e7606ad8e8cfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ed4c39a41fdd9f6bc9e7606ad8e8cfc">loadSpecular</a> (<a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;specular, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">first</a>=0, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a> count=1) <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a></td></tr>
 <tr class="separator:a1ed4c39a41fdd9f6bc9e7606ad8e8cfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59e2c42a8bbea3ea37e6cbd217e0b7a5" id="r_a59e2c42a8bbea3ea37e6cbd217e0b7a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59e2c42a8bbea3ea37e6cbd217e0b7a5">loadSpecular</a> (const GLfloat *specular, GLint first=0, GLsizei count=1) const</td></tr>
+<tr class="memitem:a59e2c42a8bbea3ea37e6cbd217e0b7a5" id="r_a59e2c42a8bbea3ea37e6cbd217e0b7a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59e2c42a8bbea3ea37e6cbd217e0b7a5">loadSpecular</a> (<a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a> *specular, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">first</a>=0, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a> count=1) <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a></td></tr>
 <tr class="separator:a59e2c42a8bbea3ea37e6cbd217e0b7a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6fb336b7c3cf6a944fb95ba985b92cc" id="r_ae6fb336b7c3cf6a944fb95ba985b92cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6fb336b7c3cf6a944fb95ba985b92cc">loadColor</a> (const <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a> &amp;color, GLint first=0, GLsizei count=1) const</td></tr>
+<tr class="memitem:ae6fb336b7c3cf6a944fb95ba985b92cc" id="r_ae6fb336b7c3cf6a944fb95ba985b92cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6fb336b7c3cf6a944fb95ba985b92cc">loadColor</a> (<a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a> &amp;<a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">color</a>, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">first</a>=0, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a> count=1) <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a></td></tr>
 <tr class="separator:ae6fb336b7c3cf6a944fb95ba985b92cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5039579ec62e813d21d67cf8bcf7382" id="r_ab5039579ec62e813d21d67cf8bcf7382"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5039579ec62e813d21d67cf8bcf7382">loadPosition</a> (GLfloat x, GLfloat y, GLfloat z, GLfloat w=1.0f, GLint first=0, GLsizei count=1) const</td></tr>
+<tr class="memitem:ab5039579ec62e813d21d67cf8bcf7382" id="r_ab5039579ec62e813d21d67cf8bcf7382"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5039579ec62e813d21d67cf8bcf7382">loadPosition</a> (<a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">x</a>, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">y</a>, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">z</a>, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">w</a>=1.0f, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">first</a>=0, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a> count=1) <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a></td></tr>
 <tr class="separator:ab5039579ec62e813d21d67cf8bcf7382"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5290f498b4335dba50ba6f7a83b24dfc" id="r_a5290f498b4335dba50ba6f7a83b24dfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5290f498b4335dba50ba6f7a83b24dfc">loadPosition</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;position, GLint first=0, GLsizei count=1) const</td></tr>
+<tr class="memitem:a5290f498b4335dba50ba6f7a83b24dfc" id="r_a5290f498b4335dba50ba6f7a83b24dfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5290f498b4335dba50ba6f7a83b24dfc">loadPosition</a> (<a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;position, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">first</a>=0, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a> count=1) <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a></td></tr>
 <tr class="separator:a5290f498b4335dba50ba6f7a83b24dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93f4540eafd51ed6fc637775ff905df0" id="r_a93f4540eafd51ed6fc637775ff905df0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93f4540eafd51ed6fc637775ff905df0">loadPosition</a> (const GLfloat *position, GLint first=0, GLsizei count=1) const</td></tr>
+<tr class="memitem:a93f4540eafd51ed6fc637775ff905df0" id="r_a93f4540eafd51ed6fc637775ff905df0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93f4540eafd51ed6fc637775ff905df0">loadPosition</a> (<a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a> *position, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">first</a>=0, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a> count=1) <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a></td></tr>
 <tr class="separator:a93f4540eafd51ed6fc637775ff905df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ce7222dadcffd51d3dae84d366bba26" id="r_a0ce7222dadcffd51d3dae84d366bba26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ce7222dadcffd51d3dae84d366bba26">loadPosition</a> (const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> *position, GLint first=0, GLsizei count=1) const</td></tr>
+<tr class="memitem:a0ce7222dadcffd51d3dae84d366bba26" id="r_a0ce7222dadcffd51d3dae84d366bba26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ce7222dadcffd51d3dae84d366bba26">loadPosition</a> (<a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="classgg_1_1GgVector.html">GgVector</a> *position, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">first</a>=0, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a> count=1) <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a></td></tr>
 <tr class="separator:a0ce7222dadcffd51d3dae84d366bba26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecf356b8f02c638f8bdf395e5e0245f7" id="r_aecf356b8f02c638f8bdf395e5e0245f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecf356b8f02c638f8bdf395e5e0245f7">load</a> (const <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a> *light, GLint first=0, GLsizei count=1) const</td></tr>
+<tr class="memitem:aecf356b8f02c638f8bdf395e5e0245f7" id="r_aecf356b8f02c638f8bdf395e5e0245f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecf356b8f02c638f8bdf395e5e0245f7">load</a> (<a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a> *light, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">first</a>=0, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a> count=1) <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a></td></tr>
 <tr class="separator:aecf356b8f02c638f8bdf395e5e0245f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7866a9a911275f198a9280c3a75649ba" id="r_a7866a9a911275f198a9280c3a75649ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7866a9a911275f198a9280c3a75649ba">load</a> (const <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a> &amp;light, GLint first=0, GLsizei count=1) const</td></tr>
+<tr class="memitem:a7866a9a911275f198a9280c3a75649ba" id="r_a7866a9a911275f198a9280c3a75649ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7866a9a911275f198a9280c3a75649ba">load</a> (<a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a> &amp;light, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">first</a>=0, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a> count=1) <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a></td></tr>
 <tr class="separator:a7866a9a911275f198a9280c3a75649ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21c8fad77cffc831e18d9413a253788a" id="r_a21c8fad77cffc831e18d9413a253788a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21c8fad77cffc831e18d9413a253788a">select</a> (GLint i=0) const</td></tr>
+<tr class="memitem:a21c8fad77cffc831e18d9413a253788a" id="r_a21c8fad77cffc831e18d9413a253788a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21c8fad77cffc831e18d9413a253788a">select</a> (<a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">i</a>=0) <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a></td></tr>
 <tr class="separator:a21c8fad77cffc831e18d9413a253788a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classgg_1_1GgUniformBuffer"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classgg_1_1GgUniformBuffer')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="classgg_1_1GgUniformBuffer.html">gg::GgUniformBuffer&lt; Light &gt;</a> に属する継承公開メンバ関数</td></tr>
 <tr class="memitem:af7e78fd8c342e9ac9cb9b056c879c768 inherit pub_methods_classgg_1_1GgUniformBuffer" id="r_af7e78fd8c342e9ac9cb9b056c879c768"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgg_1_1GgUniformBuffer.html#af7e78fd8c342e9ac9cb9b056c879c768">GgUniformBuffer</a> ()</td></tr>
@@ -210,10 +208,10 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>三角形に単純な陰影付けを行うシェーダが参照する光源データのユニフォームバッファオブジェクト. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07385">7385</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07457">7457</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
 <a id="acf233868d39717cbce43cfe3c00d9900" name="acf233868d39717cbce43cfe3c00d9900"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf233868d39717cbce43cfe3c00d9900">&#9670;&#160;</a></span>LightBuffer() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acf233868d39717cbce43cfe3c00d9900">&#9670;&#160;</a></span>LightBuffer() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -224,17 +222,17 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
         <tr>
           <td class="memname">gg::GgSimpleShader::LightBuffer::LightBuffer </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a> *</td>          <td class="paramname"><span class="paramname"><em>light</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a> *</td>          <td class="paramname"><span class="paramname"><em>light</em><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">nullptr</a></span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a></td>          <td class="paramname"><span class="paramname"><em>count</em><span class="paramdefsep"> = </span><span class="paramdefval">1</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>usage</em></span><span class="paramdefsep"> = </span><span class="paramdefval">GL_STATIC_DRAW</span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLenum</a></td>          <td class="paramname"><span class="paramname"><em>usage</em><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GL_STATIC_DRAW</a></span></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -248,17 +246,17 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   <table class="params">
     <tr><td class="paramname">light</td><td><a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">GgSimpleShader::Light</a> 型の光源データのポインタ. </td></tr>
     <tr><td class="paramname">count</td><td>バッファ中の <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">GgSimpleShader::Light</a> 型の光源データの数. </td></tr>
-    <tr><td class="paramname">usage</td><td>バッファの使い方のパターン, glBufferData() の第 4 引数の usage に渡される. </td></tr>
+    <tr><td class="paramname">usage</td><td>バッファの使い方のパターン, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">glBufferData()</a> の第 4 引数の usage に渡される. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07397">7397</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07469">7469</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <a id="a573ebac72c3cfa75d2b070306116925b" name="a573ebac72c3cfa75d2b070306116925b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a573ebac72c3cfa75d2b070306116925b">&#9670;&#160;</a></span>LightBuffer() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a573ebac72c3cfa75d2b070306116925b">&#9670;&#160;</a></span>LightBuffer() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -269,17 +267,17 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
         <tr>
           <td class="memname">gg::GgSimpleShader::LightBuffer::LightBuffer </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>light</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>light</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a></td>          <td class="paramname"><span class="paramname"><em>count</em><span class="paramdefsep"> = </span><span class="paramdefval">1</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>usage</em></span><span class="paramdefsep"> = </span><span class="paramdefval">GL_STATIC_DRAW</span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLenum</a></td>          <td class="paramname"><span class="paramname"><em>usage</em><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GL_STATIC_DRAW</a></span></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -293,12 +291,75 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   <table class="params">
     <tr><td class="paramname">light</td><td><a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">GgSimpleShader::Light</a> 型の光源データ. </td></tr>
     <tr><td class="paramname">count</td><td>バッファ中の <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">GgSimpleShader::Light</a> 型の光源データの数. </td></tr>
-    <tr><td class="paramname">usage</td><td>バッファの使い方のパターン, glBufferData() の第 4 引数の usage に渡される. </td></tr>
+    <tr><td class="paramname">usage</td><td>バッファの使い方のパターン, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">glBufferData()</a> の第 4 引数の usage に渡される. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07413">7413</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07485">7485</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac292843abeade6d90d75609c853d47e9" name="ac292843abeade6d90d75609c853d47e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac292843abeade6d90d75609c853d47e9">&#9670;&#160;</a></span>LightBuffer() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">gg::GgSimpleShader::LightBuffer::LightBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgVector.html">GgVector</a></td>          <td class="paramname"><span class="paramname"><em>ambient</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgVector.html">GgVector</a></td>          <td class="paramname"><span class="paramname"><em>diffuse</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgVector.html">GgVector</a></td>          <td class="paramname"><span class="paramname"><em>specular</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgVector.html">GgVector</a></td>          <td class="paramname"><span class="paramname"><em>position</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a></td>          <td class="paramname"><span class="paramname"><em>count</em><span class="paramdefsep"> = </span><span class="paramdefval">1</span>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLenum</a></td>          <td class="paramname"><span class="paramname"><em>usage</em><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GL_STATIC_DRAW</a></span></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>同じ引数で埋めるコンストラクタ.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ambient</td><td>光源強度の環境光成分. </td></tr>
+    <tr><td class="paramname">diffuse</td><td>光源強度の拡散反射光成分. </td></tr>
+    <tr><td class="paramname">specular</td><td>光源強度の鏡面反射光成分. </td></tr>
+    <tr><td class="paramname">position</td><td>光源の位置. </td></tr>
+    <tr><td class="paramname">count</td><td>バッファ中の <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">GgSimpleShader::Light</a> 型の光源データの数. </td></tr>
+    <tr><td class="paramname">usage</td><td>バッファの使い方のパターン, <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">glBufferData()</a> の第 4 引数の usage に渡される. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07504">7504</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -312,9 +373,9 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual gg::GgSimpleShader::LightBuffer::~LightBuffer </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">virtual</a> gg::GgSimpleShader::LightBuffer::~LightBuffer </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -326,7 +387,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
 </div><div class="memdoc">
 <p>デストラクタ. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07425">7425</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07519">7519</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -341,19 +402,19 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void gg::GgSimpleShader::LightBuffer::load </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a> gg::GgSimpleShader::LightBuffer::load </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>light</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>light</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>first</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a></td>          <td class="paramname"><span class="paramname"><em>first</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a></td>          <td class="paramname"><span class="paramname"><em>count</em><span class="paramdefsep"> = </span><span class="paramdefval">1</span></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -372,7 +433,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07617">7617</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07711">7711</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -386,19 +447,19 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void gg::GgSimpleShader::LightBuffer::load </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a> gg::GgSimpleShader::LightBuffer::load </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a> *</td>          <td class="paramname"><span class="paramname"><em>light</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a> *</td>          <td class="paramname"><span class="paramname"><em>light</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>first</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a></td>          <td class="paramname"><span class="paramname"><em>first</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a></td>          <td class="paramname"><span class="paramname"><em>count</em><span class="paramdefsep"> = </span><span class="paramdefval">1</span></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -417,7 +478,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07605">7605</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07699">7699</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -428,19 +489,19 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void gg::GgSimpleShader::LightBuffer::loadAmbient </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a> gg::GgSimpleShader::LightBuffer::loadAmbient </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ambient</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ambient</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>first</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a></td>          <td class="paramname"><span class="paramname"><em>first</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a></td>          <td class="paramname"><span class="paramname"><em>count</em><span class="paramdefsep"> = </span><span class="paramdefval">1</span></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -454,7 +515,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05515">5515</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05477">5477</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -468,19 +529,19 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void gg::GgSimpleShader::LightBuffer::loadAmbient </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a> gg::GgSimpleShader::LightBuffer::loadAmbient </td>
           <td>(</td>
-          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>ambient</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a> *</td>          <td class="paramname"><span class="paramname"><em>ambient</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>first</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a></td>          <td class="paramname"><span class="paramname"><em>first</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a></td>          <td class="paramname"><span class="paramname"><em>count</em><span class="paramdefsep"> = </span><span class="paramdefval">1</span></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -499,7 +560,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07460">7460</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07554">7554</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -510,34 +571,34 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void gg::GgSimpleShader::LightBuffer::loadAmbient </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a> gg::GgSimpleShader::LightBuffer::loadAmbient </td>
           <td>(</td>
-          <td class="paramtype">GLfloat</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a></td>          <td class="paramname"><span class="paramname"><em>r</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLfloat</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a></td>          <td class="paramname"><span class="paramname"><em>g</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLfloat</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a></td>          <td class="paramname"><span class="paramname"><em>b</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLfloat</td>          <td class="paramname"><span class="paramname"><em>a</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a></td>          <td class="paramname"><span class="paramname"><em>a</em><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>first</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a></td>          <td class="paramname"><span class="paramname"><em>first</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a></td>          <td class="paramname"><span class="paramname"><em>count</em><span class="paramdefsep"> = </span><span class="paramdefval">1</span></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -554,7 +615,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05489">5489</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05451">5451</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -565,19 +626,19 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void gg::GgSimpleShader::LightBuffer::loadColor </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a> gg::GgSimpleShader::LightBuffer::loadColor </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>color</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>first</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a></td>          <td class="paramname"><span class="paramname"><em>first</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a></td>          <td class="paramname"><span class="paramname"><em>count</em><span class="paramdefsep"> = </span><span class="paramdefval">1</span></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -591,7 +652,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05642">5642</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05604">5604</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -602,19 +663,19 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void gg::GgSimpleShader::LightBuffer::loadDiffuse </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a> gg::GgSimpleShader::LightBuffer::loadDiffuse </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>diffuse</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>diffuse</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>first</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a></td>          <td class="paramname"><span class="paramname"><em>first</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a></td>          <td class="paramname"><span class="paramname"><em>count</em><span class="paramdefsep"> = </span><span class="paramdefval">1</span></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -628,7 +689,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05567">5567</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05529">5529</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -642,19 +703,19 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void gg::GgSimpleShader::LightBuffer::loadDiffuse </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a> gg::GgSimpleShader::LightBuffer::loadDiffuse </td>
           <td>(</td>
-          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>diffuse</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a> *</td>          <td class="paramname"><span class="paramname"><em>diffuse</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>first</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a></td>          <td class="paramname"><span class="paramname"><em>first</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a></td>          <td class="paramname"><span class="paramname"><em>count</em><span class="paramdefsep"> = </span><span class="paramdefval">1</span></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -673,7 +734,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07497">7497</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07591">7591</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -684,34 +745,34 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void gg::GgSimpleShader::LightBuffer::loadDiffuse </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a> gg::GgSimpleShader::LightBuffer::loadDiffuse </td>
           <td>(</td>
-          <td class="paramtype">GLfloat</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a></td>          <td class="paramname"><span class="paramname"><em>r</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLfloat</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a></td>          <td class="paramname"><span class="paramname"><em>g</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLfloat</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a></td>          <td class="paramname"><span class="paramname"><em>b</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLfloat</td>          <td class="paramname"><span class="paramname"><em>a</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a></td>          <td class="paramname"><span class="paramname"><em>a</em><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>first</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a></td>          <td class="paramname"><span class="paramname"><em>first</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a></td>          <td class="paramname"><span class="paramname"><em>count</em><span class="paramdefsep"> = </span><span class="paramdefval">1</span></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -728,7 +789,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05541">5541</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05503">5503</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -739,19 +800,19 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void gg::GgSimpleShader::LightBuffer::loadPosition </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a> gg::GgSimpleShader::LightBuffer::loadPosition </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>position</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>position</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>first</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a></td>          <td class="paramname"><span class="paramname"><em>first</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a></td>          <td class="paramname"><span class="paramname"><em>count</em><span class="paramdefsep"> = </span><span class="paramdefval">1</span></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -765,7 +826,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05696">5696</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05658">5658</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -779,19 +840,19 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void gg::GgSimpleShader::LightBuffer::loadPosition </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a> gg::GgSimpleShader::LightBuffer::loadPosition </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> *</td>          <td class="paramname"><span class="paramname"><em>position</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="classgg_1_1GgVector.html">GgVector</a> *</td>          <td class="paramname"><span class="paramname"><em>position</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>first</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a></td>          <td class="paramname"><span class="paramname"><em>first</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a></td>          <td class="paramname"><span class="paramname"><em>count</em><span class="paramdefsep"> = </span><span class="paramdefval">1</span></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -810,7 +871,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07593">7593</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07687">7687</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -824,19 +885,19 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void gg::GgSimpleShader::LightBuffer::loadPosition </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a> gg::GgSimpleShader::LightBuffer::loadPosition </td>
           <td>(</td>
-          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>position</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a> *</td>          <td class="paramname"><span class="paramname"><em>position</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>first</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a></td>          <td class="paramname"><span class="paramname"><em>first</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a></td>          <td class="paramname"><span class="paramname"><em>count</em><span class="paramdefsep"> = </span><span class="paramdefval">1</span></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -855,7 +916,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07580">7580</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07674">7674</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -866,34 +927,34 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void gg::GgSimpleShader::LightBuffer::loadPosition </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a> gg::GgSimpleShader::LightBuffer::loadPosition </td>
           <td>(</td>
-          <td class="paramtype">GLfloat</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a></td>          <td class="paramname"><span class="paramname"><em>x</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLfloat</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a></td>          <td class="paramname"><span class="paramname"><em>y</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLfloat</td>          <td class="paramname"><span class="paramname"><em>z</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a></td>          <td class="paramname"><span class="paramname"><em>z</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLfloat</td>          <td class="paramname"><span class="paramname"><em>w</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a></td>          <td class="paramname"><span class="paramname"><em>w</em><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>first</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a></td>          <td class="paramname"><span class="paramname"><em>first</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a></td>          <td class="paramname"><span class="paramname"><em>count</em><span class="paramdefsep"> = </span><span class="paramdefval">1</span></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -910,7 +971,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05670">5670</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05632">5632</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -921,19 +982,19 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void gg::GgSimpleShader::LightBuffer::loadSpecular </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a> gg::GgSimpleShader::LightBuffer::loadSpecular </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>specular</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="classgg_1_1GgVector.html">GgVector</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>specular</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>first</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a></td>          <td class="paramname"><span class="paramname"><em>first</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a></td>          <td class="paramname"><span class="paramname"><em>count</em><span class="paramdefsep"> = </span><span class="paramdefval">1</span></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -947,7 +1008,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05619">5619</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05581">5581</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -961,19 +1022,19 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void gg::GgSimpleShader::LightBuffer::loadSpecular </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a> gg::GgSimpleShader::LightBuffer::loadSpecular </td>
           <td>(</td>
-          <td class="paramtype">const GLfloat *</td>          <td class="paramname"><span class="paramname"><em>specular</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">const</a> <a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a> *</td>          <td class="paramname"><span class="paramname"><em>specular</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>first</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a></td>          <td class="paramname"><span class="paramname"><em>first</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a></td>          <td class="paramname"><span class="paramname"><em>count</em><span class="paramdefsep"> = </span><span class="paramdefval">1</span></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -992,7 +1053,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07534">7534</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07628">7628</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1003,34 +1064,34 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void gg::GgSimpleShader::LightBuffer::loadSpecular </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a> gg::GgSimpleShader::LightBuffer::loadSpecular </td>
           <td>(</td>
-          <td class="paramtype">GLfloat</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a></td>          <td class="paramname"><span class="paramname"><em>r</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLfloat</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a></td>          <td class="paramname"><span class="paramname"><em>g</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLfloat</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a></td>          <td class="paramname"><span class="paramname"><em>b</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLfloat</td>          <td class="paramname"><span class="paramname"><em>a</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLfloat</a></td>          <td class="paramname"><span class="paramname"><em>a</em><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>first</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a></td>          <td class="paramname"><span class="paramname"><em>first</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLsizei</a></td>          <td class="paramname"><span class="paramname"><em>count</em><span class="paramdefsep"> = </span><span class="paramdefval">1</span></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1047,7 +1108,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05593">5593</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05555">5555</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -1061,9 +1122,9 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void gg::GgSimpleShader::LightBuffer::select </td>
+          <td class="memname"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">void</a> gg::GgSimpleShader::LightBuffer::select </td>
           <td>(</td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>i</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">GLint</a></td>          <td class="paramname"><span class="paramname"><em>i</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1081,7 +1142,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07627">7627</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l07721">7721</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -1105,7 +1166,7 @@ gg::GgSimpleShader::LightBuffer 連携図</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacegg.html">gg</a></li><li class="navelem"><a class="el" href="classgg_1_1GgSimpleShader.html">GgSimpleShader</a></li><li class="navelem"><a class="el" href="classgg_1_1GgSimpleShader_1_1LightBuffer.html">LightBuffer</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

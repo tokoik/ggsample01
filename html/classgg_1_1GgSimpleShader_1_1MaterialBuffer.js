@@ -2,6 +2,7 @@ var classgg_1_1GgSimpleShader_1_1MaterialBuffer =
 [
     [ "MaterialBuffer", "classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#abb1ac93a5f24d73fee1086df16e835ac", null ],
     [ "MaterialBuffer", "classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#a2894a265a27c8e98efa8e63b04c8d3f1", null ],
+    [ "MaterialBuffer", "classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#a8350a656b9a4b589fe78da6f3405791f", null ],
     [ "~MaterialBuffer", "classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#a85046b49629ba1c6f330cc67b6941e49", null ],
     [ "load", "classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#a800848bfd9b578ea460948898ee014bb", null ],
     [ "load", "classgg_1_1GgSimpleShader_1_1MaterialBuffer.html#ac0fae6a961ba2fdacbdb1e5d9d373f0a", null ],

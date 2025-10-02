@@ -1,7 +1,7 @@
 <map id="gg::GgColorTexture::load" name="gg::GgColorTexture::load">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,140,48"/>
-<area shape="rect" id="Node000002" href="$namespacegg.html#acce00f35f4b755cda72ec9f61b726c8f" title=" " alt="" coords="188,13,312,40"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,24,172,24,172,29,140,29"/>
-<area shape="rect" id="Node000003" href="$gg_8h.html#ac735c9fb18adb1f2127c90adcea87cd8" title=" " alt="" coords="360,13,456,40"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="312,24,344,24,344,29,312,29"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,139,48"/>
+<area shape="rect" id="Node000002" href="$namespacegg.html#acce00f35f4b755cda72ec9f61b726c8f" title=" " alt="" coords="187,13,309,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,24,171,24,171,29,139,29"/>
+<area shape="rect" id="Node000003" href="$gg_8h.html#ac735c9fb18adb1f2127c90adcea87cd8" title=" " alt="" coords="357,13,449,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="310,24,342,24,342,29,310,29"/>
 </map>

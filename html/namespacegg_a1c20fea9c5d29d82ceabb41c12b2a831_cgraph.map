@@ -1,7 +1,7 @@
 <map id="gg::ggDistance3" name="gg::ggDistance3">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,122,32"/>
-<area shape="rect" id="Node000002" href="$namespacegg.html#a837850150a8293353ade7900452955b2" title=" " alt="" coords="170,5,273,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,16,154,16,154,21,122,21"/>
-<area shape="rect" id="Node000003" href="$namespacegg.html#a4e49aff9138ef05a803f1ee703d0f67f" title=" " alt="" coords="321,5,406,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="273,16,305,16,305,21,273,21"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,121,32"/>
+<area shape="rect" id="Node000002" href="$namespacegg.html#a837850150a8293353ade7900452955b2" title=" " alt="" coords="169,5,272,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,16,153,16,153,21,121,21"/>
+<area shape="rect" id="Node000003" href="$namespacegg.html#a4e49aff9138ef05a803f1ee703d0f67f" title=" " alt="" coords="320,5,404,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="272,16,304,16,304,21,272,21"/>
 </map>

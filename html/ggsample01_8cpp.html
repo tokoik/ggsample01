@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: ggsample01.cpp ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -11,9 +11,9 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -26,6 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
   <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
@@ -35,15 +36,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.12.0 -->
+<!-- 構築: Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -51,7 +47,7 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','検索',true);
+  initMenu('',true,false,'search.php','検索');
   $(function() { init_search(); });
 });
 /* @license-end */
@@ -70,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('ggsample01_8cpp.html',''); initResizable(true); });
+$(function(){initNavTree('ggsample01_8cpp.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -104,56 +100,53 @@ $(function(){initNavTree('ggsample01_8cpp.html',''); initResizable(true); });
 <div class="textblock"><code>#include &quot;<a class="el" href="GgApp_8h_source.html">GgApp.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Config_8h_source.html">Config.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Menu_8h_source.html">Menu.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Draw_8h_source.html">Draw.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 ggsample01.cpp の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="ggsample01_8cpp__incl.png" border="0" usemap="#aggsample01_8cpp" alt=""/></div>
 <map name="aggsample01_8cpp" id="aggsample01_8cpp">
-<area shape="rect" title=" " alt="" coords="590,5,707,32"/>
-<area shape="rect" href="GgApp_8h.html" title=" " alt="" coords="396,304,469,331"/>
-<area shape="poly" title=" " alt="" coords="642,34,453,293,448,290,637,31"/>
-<area shape="rect" href="Config_8h.html" title=" " alt="" coords="604,229,674,256"/>
-<area shape="poly" title=" " alt="" coords="651,33,643,214,638,214,645,32"/>
-<area shape="rect" href="Menu_8h.html" title=" " alt="" coords="672,155,737,181"/>
-<area shape="poly" title=" " alt="" coords="656,32,697,139,692,141,651,33"/>
-<area shape="rect" href="Draw_8h.html" title=" " alt="" coords="711,80,773,107"/>
-<area shape="poly" title=" " alt="" coords="666,30,715,68,712,73,663,35"/>
-<area shape="rect" href="gg_8h.html" title=" " alt="" coords="660,379,706,405"/>
-<area shape="poly" title=" " alt="" coords="470,327,643,376,646,377,644,382,641,381,468,332"/>
-<area shape="rect" title=" " alt="" coords="492,453,557,480"/>
-<area shape="poly" title=" " alt="" coords="469,318,502,323,538,333,573,350,600,377,606,397,598,416,582,433,563,447,560,443,579,429,593,413,600,397,596,380,569,355,536,338,501,328,469,323"/>
-<area shape="rect" title=" " alt="" coords="5,379,84,405"/>
-<area shape="poly" title=" " alt="" coords="396,327,269,349,100,381,99,375,268,343,395,322"/>
-<area shape="rect" title=" " alt="" coords="108,379,179,405"/>
-<area shape="poly" title=" " alt="" coords="396,330,195,381,194,375,395,325"/>
-<area shape="rect" title=" " alt="" coords="204,379,267,405"/>
-<area shape="poly" title=" " alt="" coords="399,334,282,376,280,371,397,329"/>
-<area shape="rect" title=" " alt="" coords="290,379,415,405"/>
-<area shape="poly" title=" " alt="" coords="420,333,379,370,376,366,417,329"/>
-<area shape="rect" title=" " alt="" coords="439,379,586,405"/>
-<area shape="poly" title=" " alt="" coords="448,329,489,366,486,370,445,333"/>
-<area shape="rect" title=" " alt="" coords="906,453,964,480"/>
-<area shape="poly" title=" " alt="" coords="708,399,720,403,892,450,891,455,718,408,706,404"/>
-<area shape="rect" title=" " alt="" coords="581,453,631,480"/>
-<area shape="poly" title=" " alt="" coords="672,408,632,445,628,441,668,404"/>
-<area shape="rect" title=" " alt="" coords="654,453,712,480"/>
-<area shape="poly" title=" " alt="" coords="686,406,686,438,680,438,680,406"/>
-<area shape="rect" title=" " alt="" coords="736,453,790,480"/>
-<area shape="poly" title=" " alt="" coords="699,404,740,441,737,445,695,408"/>
-<area shape="rect" title=" " alt="" coords="814,453,883,480"/>
-<area shape="poly" title=" " alt="" coords="708,401,807,444,805,449,706,406"/>
-<area shape="poly" title=" " alt="" coords="661,407,567,449,565,444,658,402"/>
-<area shape="poly" title=" " alt="" coords="645,256,667,330,677,363,672,365,662,331,640,257"/>
-<area shape="rect" href="parseconfig_8h.html" title=" " alt="" coords="676,304,776,331"/>
-<area shape="poly" title=" " alt="" coords="656,254,701,292,698,296,653,259"/>
-<area shape="poly" title=" " alt="" coords="721,333,700,367,696,364,716,330"/>
-<area shape="rect" title=" " alt="" coords="731,379,811,405"/>
-<area shape="poly" title=" " alt="" coords="736,330,757,364,753,367,731,333"/>
-<area shape="poly" title=" " alt="" coords="695,184,662,220,658,216,691,180"/>
-<area shape="rect" title=" " alt="" coords="698,229,748,256"/>
-<area shape="poly" title=" " alt="" coords="710,181,719,213,714,215,705,183"/>
-<area shape="poly" title=" " alt="" coords="738,108,720,142,715,140,733,106"/>
+<area shape="rect" title=" " alt="" coords="227,5,343,32"/>
+<area shape="rect" href="GgApp_8h.html" title=" " alt="" coords="349,155,421,181"/>
+<area shape="poly" title=" " alt="" coords="297,31,331,78,371,140,367,143,327,82,292,34"/>
+<area shape="rect" href="Config_8h.html" title=" " alt="" coords="140,155,209,181"/>
+<area shape="poly" title=" " alt="" coords="278,34,195,144,191,141,274,31"/>
+<area shape="rect" href="Menu_8h.html" title=" " alt="" coords="253,80,317,107"/>
+<area shape="poly" title=" " alt="" coords="288,33,288,64,283,64,283,33"/>
+<area shape="rect" href="gg_8h.html" title=" " alt="" coords="163,304,210,331"/>
+<area shape="poly" title=" " alt="" coords="349,179,293,198,264,213,238,231,214,260,198,291,194,288,210,257,234,227,261,208,291,193,348,174"/>
+<area shape="rect" title=" " alt="" coords="622,379,687,405"/>
+<area shape="poly" title=" " alt="" coords="422,169,659,188,777,205,818,216,840,227,853,251,851,274,838,295,817,316,761,350,702,376,700,371,758,346,814,311,834,292,846,272,848,252,837,231,816,221,776,211,658,194,422,174"/>
+<area shape="rect" title=" " alt="" coords="247,229,326,256"/>
+<area shape="poly" title=" " alt="" coords="370,184,317,222,314,218,366,180"/>
+<area shape="rect" title=" " alt="" coords="350,229,421,256"/>
+<area shape="poly" title=" " alt="" coords="388,182,388,214,383,214,383,182"/>
+<area shape="rect" title=" " alt="" coords="446,229,509,256"/>
+<area shape="poly" title=" " alt="" coords="403,180,451,218,448,222,400,184"/>
+<area shape="rect" title=" " alt="" coords="533,229,656,256"/>
+<area shape="poly" title=" " alt="" coords="422,179,544,221,543,226,421,184"/>
+<area shape="rect" title=" " alt="" coords="680,229,826,256"/>
+<area shape="poly" title=" " alt="" coords="422,174,675,223,674,228,421,179"/>
+<area shape="rect" title=" " alt="" coords="330,379,387,405"/>
+<area shape="poly" title=" " alt="" coords="211,326,317,370,315,375,209,331"/>
+<area shape="rect" title=" " alt="" coords="5,379,56,405"/>
+<area shape="poly" title=" " alt="" coords="164,332,71,375,69,370,162,327"/>
+<area shape="rect" title=" " alt="" coords="80,379,136,405"/>
+<area shape="poly" title=" " alt="" coords="175,333,134,370,131,366,171,329"/>
+<area shape="rect" title=" " alt="" coords="160,379,213,405"/>
+<area shape="poly" title=" " alt="" coords="189,331,189,363,184,363,184,331"/>
+<area shape="rect" title=" " alt="" coords="238,379,306,405"/>
+<area shape="poly" title=" " alt="" coords="203,329,248,367,244,371,200,333"/>
+<area shape="poly" title=" " alt="" coords="210,320,608,381,607,386,209,325"/>
+<area shape="poly" title=" " alt="" coords="178,182,187,288,182,289,173,182"/>
+<area shape="rect" href="parseconfig_8h.html" title=" " alt="" coords="24,229,122,256"/>
+<area shape="poly" title=" " alt="" coords="158,184,105,222,102,218,155,180"/>
+<area shape="poly" title=" " alt="" coords="94,254,155,293,152,298,91,259"/>
+<area shape="rect" title=" " alt="" coords="33,304,113,331"/>
+<area shape="poly" title=" " alt="" coords="76,257,76,288,71,288,71,257"/>
+<area shape="poly" title=" " alt="" coords="304,105,357,143,354,147,301,109"/>
+<area shape="poly" title=" " alt="" coords="267,109,208,148,205,144,264,105"/>
+<area shape="rect" title=" " alt="" coords="261,155,310,181"/>
+<area shape="poly" title=" " alt="" coords="288,107,288,139,283,139,283,107"/>
 </map>
 </div>
 </div>
@@ -179,7 +172,7 @@ ggsample01.cpp の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="ggsample01_8cpp_source.html">ggsample01.cpp</a> の <a class="el" href="ggsample01_8cpp_source.html#l00013">13</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="ggsample01_8cpp_source.html">ggsample01.cpp</a> の <a class="el" href="ggsample01_8cpp_source.html#l00015">15</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -195,7 +188,7 @@ ggsample01.cpp の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="ggsample01_8cpp_source.html">ggsample01.cpp</a> の <a class="el" href="ggsample01_8cpp_source.html#l00008">8</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="ggsample01_8cpp_source.html">ggsample01.cpp</a> の <a class="el" href="ggsample01_8cpp_source.html#l00010">10</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -205,7 +198,7 @@ ggsample01.cpp の依存先関係図:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="ggsample01_8cpp.html">ggsample01.cpp</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: gg::GgPoints クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -11,9 +11,9 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -26,6 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
   <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
@@ -35,15 +36,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.12.0 -->
+<!-- 構築: Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -51,7 +47,7 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','検索',true);
+  initMenu('',true,false,'search.php','検索');
   $(function() { init_search(); });
 });
 /* @license-end */
@@ -70,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('classgg_1_1GgPoints.html',''); initResizable(true); });
+$(function(){initNavTree('classgg_1_1GgPoints.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -162,7 +158,7 @@ gg::GgPoints 連携図</div>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>点. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06262">6262</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06333">6333</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
 <a id="aca74376961ea4f170e83a8afc3fe4565" name="aca74376961ea4f170e83a8afc3fe4565"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aca74376961ea4f170e83a8afc3fe4565">&#9670;&#160;</a></span>GgPoints() <span class="overload">[1/2]</span></h2>
@@ -176,7 +172,7 @@ gg::GgPoints 連携図</div>
         <tr>
           <td class="memname">gg::GgPoints::GgPoints </td>
           <td>(</td>
-          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>mode</em></span><span class="paramdefsep"> = </span><span class="paramdefval">GL_POINTS</span></td><td>)</td>
+          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>mode</em><span class="paramdefsep"> = </span><span class="paramdefval">GL_POINTS</span></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -188,7 +184,7 @@ gg::GgPoints 連携図</div>
 </div><div class="memdoc">
 <p>コンストラクタ. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06273">6273</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06344">6344</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -204,22 +200,22 @@ gg::GgPoints 連携図</div>
         <tr>
           <td class="memname">gg::GgPoints::GgPoints </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>countv</em></span>, </td>
+          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>countv</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>mode</em></span><span class="paramdefsep"> = </span><span class="paramdefval">GL_POINTS</span>, </td>
+          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>mode</em><span class="paramdefsep"> = </span><span class="paramdefval">GL_POINTS</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>usage</em></span><span class="paramdefsep"> = </span><span class="paramdefval">GL_STATIC_DRAW</span>&#160;)</td>
+          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>usage</em><span class="paramdefsep"> = </span><span class="paramdefval">GL_STATIC_DRAW</span></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -239,7 +235,7 @@ gg::GgPoints 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06286">6286</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06357">6357</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -255,7 +251,7 @@ gg::GgPoints 連携図</div>
         <tr>
           <td class="memname">virtual gg::GgPoints::~GgPoints </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -267,7 +263,7 @@ gg::GgPoints 連携図</div>
 </div><div class="memdoc">
 <p>デストラクタ. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06300">6300</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06371">6371</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -284,12 +280,12 @@ gg::GgPoints 連携図</div>
         <tr>
           <td class="memname">void gg::GgPoints::draw </td>
           <td>(</td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>first</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>first</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;) const</td>
+          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -309,15 +305,15 @@ gg::GgPoints 連携図</div>
 
 <p><a class="el" href="classgg_1_1GgShape.html#adf1b1da86a75b4c74dddf6194e615f6d">gg::GgShape</a>を再実装しています。</p>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05158">5158</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05120">5120</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgg_1_1GgPoints_a132523e30fbb6afa7e27cf43d3ccaece_cgraph.png" border="0" usemap="#aclassgg_1_1GgPoints_a132523e30fbb6afa7e27cf43d3ccaece_cgraph" alt=""/></div>
 <map name="aclassgg_1_1GgPoints_a132523e30fbb6afa7e27cf43d3ccaece_cgraph" id="aclassgg_1_1GgPoints_a132523e30fbb6afa7e27cf43d3ccaece_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,139,32"/>
-<area shape="rect" href="classgg_1_1GgShape.html#adf1b1da86a75b4c74dddf6194e615f6d" title=" " alt="" coords="187,5,320,32"/>
-<area shape="poly" title=" " alt="" coords="139,16,171,16,171,21,139,21"/>
+<area shape="rect" title=" " alt="" coords="5,5,138,32"/>
+<area shape="rect" href="classgg_1_1GgShape.html#adf1b1da86a75b4c74dddf6194e615f6d" title=" " alt="" coords="186,5,318,32"/>
+<area shape="poly" title=" " alt="" coords="138,16,170,16,170,21,138,21"/>
 </map>
 </div>
 
@@ -335,7 +331,7 @@ gg::GgPoints 連携図</div>
         <tr>
           <td class="memname">const GLuint &amp; gg::GgPoints::getBuffer </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -348,7 +344,7 @@ gg::GgPoints 連携図</div>
 <p>頂点の位置データを格納した頂点バッファオブジェクト名を取り出す.</p>
 <dl class="section return"><dt>戻り値</dt><dd>この図形の頂点の位置データを格納した頂点バッファオブジェクト名. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06339">6339</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06410">6410</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -364,7 +360,7 @@ gg::GgPoints 連携図</div>
         <tr>
           <td class="memname">const GLsizei &amp; gg::GgPoints::getCount </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -377,7 +373,7 @@ gg::GgPoints 連携図</div>
 <p>データの数を取り出す.</p>
 <dl class="section return"><dt>戻り値</dt><dd>この図形の頂点の位置データの数 (頂点数). </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06329">6329</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06400">6400</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -390,17 +386,17 @@ gg::GgPoints 連携図</div>
         <tr>
           <td class="memname">void gg::GgPoints::load </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span>, </td>
+          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>usage</em></span><span class="paramdefsep"> = </span><span class="paramdefval">GL_STATIC_DRAW</span>&#160;)</td>
+          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>usage</em><span class="paramdefsep"> = </span><span class="paramdefval">GL_STATIC_DRAW</span></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -414,7 +410,7 @@ gg::GgPoints 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05145">5145</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8cpp_source.html">gg.cpp</a> の <a class="el" href="gg_8cpp_source.html#l05107">5107</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -430,7 +426,7 @@ gg::GgPoints 連携図</div>
         <tr>
           <td class="memname">gg::GgPoints::operator bool </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -445,7 +441,7 @@ gg::GgPoints 連携図</div>
 
 <p><a class="el" href="classgg_1_1GgShape.html#a721bb786cc7ab8873aeffbb33216fe2b">gg::GgShape</a>を再実装しています。</p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06309">6309</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06380">6380</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -461,7 +457,7 @@ gg::GgPoints 連携図</div>
         <tr>
           <td class="memname">bool gg::GgPoints::operator! </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -476,7 +472,7 @@ gg::GgPoints 連携図</div>
 
 <p><a class="el" href="classgg_1_1GgShape.html#a9728d042512e5f21d585614dce7db872">gg::GgShape</a>を再実装しています。</p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06319">6319</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06390">6390</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -492,17 +488,17 @@ gg::GgPoints 連携図</div>
         <tr>
           <td class="memname">void gg::GgPoints::send </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classgg_1_1GgVector.html">GgVector</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>first</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype">GLint</td>          <td class="paramname"><span class="paramname"><em>first</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;) const</td>
+          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>count</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -521,7 +517,7 @@ gg::GgPoints 連携図</div>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06351">6351</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06422">6422</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -535,7 +531,7 @@ gg::GgPoints 連携図</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacegg.html">gg</a></li><li class="navelem"><a class="el" href="classgg_1_1GgPoints.html">GgPoints</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

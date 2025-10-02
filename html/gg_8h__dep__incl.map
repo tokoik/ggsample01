@@ -1,31 +1,27 @@
 <map id="gg.h" name="gg.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="262,5,308,32"/>
-<area shape="rect" id="Node000002" href="$Config_8h.html" title=" " alt="" coords="168,155,239,181"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="273,47,213,155,208,153,268,45"/>
-<area shape="rect" id="Node000009" href="$GgApp_8h.html" title=" " alt="" coords="374,80,446,107"/>
-<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="321,38,389,77,387,82,318,42"/>
-<area shape="rect" id="Node000012" href="$gg_8cpp.html" title=" " alt="" coords="289,80,350,107"/>
-<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="300,45,316,78,311,81,295,47"/>
-<area shape="rect" id="Node000013" href="$parseconfig_8h.html" title=" " alt="" coords="115,80,214,107"/>
-<area shape="poly" id="edge15_Node000001_Node000013" title=" " alt="" coords="252,43,187,82,185,77,250,38"/>
-<area shape="rect" id="Node000003" href="$Config_8cpp.html" title=" " alt="" coords="303,229,387,256"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="243,186,321,226,319,231,240,191"/>
-<area shape="rect" id="Node000004" href="$Menu_8h.html" title=" " alt="" coords="109,229,173,256"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="185,195,154,231,150,227,181,192"/>
-<area shape="rect" id="Node000007" href="$ggsample01_8cpp.html" title=" " alt="" coords="181,379,298,405"/>
-<area shape="poly" id="edge9_Node000002_Node000007" title=" " alt="" coords="211,196,240,378,235,379,205,197"/>
-<area shape="rect" id="Node000005" href="$Draw_8h.html" title=" " alt="" coords="12,304,75,331"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="113,268,62,306,59,301,110,263"/>
-<area shape="poly" id="edge8_Node000004_Node000007" title=" " alt="" coords="164,267,191,303,235,377,231,380,187,305,159,270"/>
-<area shape="rect" id="Node000008" href="$Menu_8cpp.html" title=" " alt="" coords="99,304,177,331"/>
-<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="142,272,141,304,136,304,137,272"/>
-<area shape="rect" id="Node000006" href="$Draw_8cpp.html" title=" " alt="" coords="5,379,82,405"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="46,346,46,378,41,378,41,346"/>
-<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="90,333,206,376,205,381,88,338"/>
-<area shape="poly" id="edge12_Node000009_Node000007" title=" " alt="" coords="438,116,459,146,464,164,462,182,446,218,423,251,397,281,369,308,312,352,265,380,262,376,309,347,366,304,394,278,419,248,441,215,457,181,459,164,454,148,434,119"/>
-<area shape="rect" id="Node000010" href="$GgApp_8cpp.html" title=" " alt="" coords="263,155,349,181"/>
-<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="381,118,326,156,323,152,378,113"/>
-<area shape="rect" id="Node000011" href="$main_8cpp.html" title=" " alt="" coords="373,155,447,181"/>
-<area shape="poly" id="edge13_Node000009_Node000011" title=" " alt="" coords="413,122,413,154,408,154,408,122"/>
-<area shape="poly" id="edge16_Node000013_Node000002" title=" " alt="" coords="181,119,199,153,194,156,176,122"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="214,5,260,32"/>
+<area shape="rect" id="Node000002" href="$Config_8h.html" title=" " alt="" coords="91,155,159,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,34,165,53,149,66,135,81,128,100,124,119,126,154,120,154,119,119,122,98,131,79,145,62,162,48,198,29"/>
+<area shape="rect" id="Node000007" href="$GgApp_8h.html" title=" " alt="" coords="245,155,317,181"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="248,46,258,79,280,154,275,155,253,81,243,48"/>
+<area shape="rect" id="Node000010" href="$gg_8cpp.html" title=" " alt="" coords="319,80,379,107"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="271,38,331,77,328,82,268,43"/>
+<area shape="rect" id="Node000011" href="$parseconfig_8h.html" title=" " alt="" coords="145,80,244,107"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="224,47,204,81,200,78,220,44"/>
+<area shape="rect" id="Node000003" href="$Config_8cpp.html" title=" " alt="" coords="5,229,88,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="102,194,62,231,58,227,98,190"/>
+<area shape="rect" id="Node000004" href="$Menu_8h.html" title=" " alt="" coords="162,229,227,256"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="149,191,184,227,181,231,146,194"/>
+<area shape="rect" id="Node000006" href="$ggsample01_8cpp.html" title=" " alt="" coords="102,304,218,331"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="134,196,159,303,154,304,129,197"/>
+<area shape="rect" id="Node000005" href="$Menu_8cpp.html" title=" " alt="" coords="242,304,320,331"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="223,264,268,302,265,306,219,268"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="184,271,168,305,163,302,179,269"/>
+<area shape="poly" id="edge9_Node000007_Node000004" title=" " alt="" coords="256,194,211,231,208,227,253,189"/>
+<area shape="poly" id="edge10_Node000007_Node000006" title=" " alt="" coords="274,197,260,227,241,258,212,285,183,306,180,301,209,281,236,254,256,225,269,195"/>
+<area shape="rect" id="Node000008" href="$GgApp_8cpp.html" title=" " alt="" coords="301,229,387,256"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="304,192,335,227,331,231,300,195"/>
+<area shape="rect" id="Node000009" href="$main_8cpp.html" title=" " alt="" coords="411,229,485,256"/>
+<area shape="poly" id="edge11_Node000007_Node000009" title=" " alt="" coords="325,185,420,226,418,231,323,190"/>
+<area shape="poly" id="edge14_Node000011_Node000002" title=" " alt="" coords="174,120,139,156,135,152,170,116"/>
 </map>

@@ -1,15 +1,15 @@
 <map id="gg::GgNormalTexture::load" name="gg::GgNormalTexture::load">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,151,65"/>
-<area shape="rect" id="Node000002" href="$namespacegg.html#a2cd46afb53daa13fa8bb2de14baf4e7b" title=" " alt="" coords="199,5,362,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,32,183,28,183,33,151,38"/>
-<area shape="rect" id="Node000006" href="$namespacegg.html#acce00f35f4b755cda72ec9f61b726c8f" title=" " alt="" coords="218,56,342,83"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="151,50,203,57,203,62,151,56"/>
-<area shape="rect" id="Node000003" href="$namespacegg.html#accd75f02070ef57b1da0dccdec3fdd66" title=" " alt="" coords="410,5,533,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="362,16,394,16,394,21,362,21"/>
-<area shape="rect" id="Node000004" href="$namespacegg.html#a837850150a8293353ade7900452955b2" title=" " alt="" coords="581,5,685,32"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="534,16,566,16,566,21,534,21"/>
-<area shape="rect" id="Node000005" href="$namespacegg.html#a4e49aff9138ef05a803f1ee703d0f67f" title=" " alt="" coords="733,5,818,32"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="685,16,717,16,717,21,685,21"/>
-<area shape="rect" id="Node000007" href="$gg_8h.html#ac735c9fb18adb1f2127c90adcea87cd8" title=" " alt="" coords="424,56,520,83"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="343,67,408,67,408,72,343,72"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,150,65"/>
+<area shape="rect" id="Node000002" href="$namespacegg.html#a2cd46afb53daa13fa8bb2de14baf4e7b" title=" " alt="" coords="198,5,359,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,32,182,28,182,33,150,38"/>
+<area shape="rect" id="Node000006" href="$namespacegg.html#acce00f35f4b755cda72ec9f61b726c8f" title=" " alt="" coords="217,56,340,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="150,50,203,57,202,62,149,56"/>
+<area shape="rect" id="Node000003" href="$namespacegg.html#accd75f02070ef57b1da0dccdec3fdd66" title=" " alt="" coords="407,5,529,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="360,16,391,16,391,21,360,21"/>
+<area shape="rect" id="Node000004" href="$namespacegg.html#a837850150a8293353ade7900452955b2" title=" " alt="" coords="577,5,681,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="530,16,562,16,562,21,530,21"/>
+<area shape="rect" id="Node000005" href="$namespacegg.html#a4e49aff9138ef05a803f1ee703d0f67f" title=" " alt="" coords="729,5,813,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="681,16,713,16,713,21,681,21"/>
+<area shape="rect" id="Node000007" href="$gg_8h.html#ac735c9fb18adb1f2127c90adcea87cd8" title=" " alt="" coords="422,56,514,83"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="340,67,407,67,407,72,340,72"/>
 </map>

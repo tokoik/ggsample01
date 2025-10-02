@@ -2,8 +2,6 @@ var files_dup =
 [
     [ "Config.cpp", "Config_8cpp.html", "Config_8cpp" ],
     [ "Config.h", "Config_8h.html", "Config_8h" ],
-    [ "Draw.cpp", "Draw_8cpp.html", null ],
-    [ "Draw.h", "Draw_8h.html", "Draw_8h" ],
     [ "gg.cpp", "gg_8cpp.html", null ],
     [ "gg.h", "gg_8h.html", "gg_8h" ],
     [ "GgApp.cpp", "GgApp_8cpp.html", null ],

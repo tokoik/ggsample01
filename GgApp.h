@@ -25,7 +25,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
 ///
-/// ゲームグラフィックス特論宿題アプリケーションクラスの定義
+/// ゲームグラフィックス特論宿題アプリケーションクラスの定義.
 ///
 /// @file
 /// @author Kohe Tokoi
@@ -83,7 +83,7 @@ using namespace gg;
 #endif
 
 ///
-/// ゲームグラフィックス特論宿題アプリケーションクラス
+/// ゲームグラフィックス特論宿題アプリケーションクラス.
 ///
 class GgApp
 {
@@ -98,12 +98,16 @@ public:
   GgApp(int major = 0, int minor = 1);
 
   ///
-  /// コピーコンストラクタは使用しない
+  /// コピーコンストラクタは使用しない.
+  ///
+  /// @param w コピー元のオブジェクト.
   ///
   GgApp(const GgApp& w) = delete;
 
   ///
-  /// ムーブコンストラクタはデフォルトのものを使用する
+  /// ムーブコンストラクタ.
+  ///
+  /// @param w ムーブ元のオブジェクト.
   ///
   GgApp(GgApp&& w) = default;
 
@@ -113,17 +117,27 @@ public:
   virtual ~GgApp();
 
   ///
-  /// 代入演算子は使用しない
+  /// 代入演算子は使用しない.
+  ///
+  /// @param w 代入元のオブジェクト.
+  /// @return 代入後のこのオブジェクトの参照.
   ///
   GgApp& operator=(const GgApp& w) = delete;
 
   ///
-  /// ムーブ代入演算子はデフォルトのものを使用する
+  /// ムーブ代入演算子.
+  ///
+  /// @param w ムーブ代入元のオブジェクト.
+  /// @return ムーブ代入後のこのオブジェクトの参照.
   ///
   GgApp& operator=(GgApp&& w) = default;
 
   ///
   /// アプリケーション本体.
+  ///
+  /// @param argc コマンドライン引数の数.
+  /// @param argv コマンドライン引数の配列.
+  /// @return アプリケーションの終了ステータス.
   ///
   int main(int argc, const char* const* argv);
 
@@ -251,12 +265,16 @@ public:
       int fullscreen = 0, GLFWwindow* share = nullptr);
 
     ///
-    /// コピーコンストラクタは使用しない
+    /// コピーコンストラクタは使用しない.
+    ///
+    /// @param w コピー元のウィンドウ.
     ///
     Window(const Window& w) = delete;
 
     ///
-    /// ムーブコンストラクタはデフォルトのものを使用する
+    /// ムーブコンストラクタ.
+    ///
+    /// @param w ムーブ代入元のウィンドウ.
     ///
     Window(Window&& w) = default;
 
@@ -273,12 +291,18 @@ public:
     }
 
     ///
-    /// 代入演算子は使用しない
+    /// 代入演算子は使用しない.
+    ///
+    /// @param w 代入元のウィンドウ.
+    /// @return 代入後のこのオブジェクトの参照.
     ///
     Window& operator=(const Window& w) = delete;
 
     ///
-    /// ムーブ代入演算子はデフォルトのものを使用する
+    /// ムーブ代入演算子.
+    ///
+    /// @param w ムーブ代入元のウィンドウ.
+    /// @return ムーブ代入後のこのオブジェクトの参照.
     ///
     Window& operator=(Window&& w) = default;
 

@@ -2,6 +2,7 @@ var classgg_1_1GgSimpleShader_1_1LightBuffer =
 [
     [ "LightBuffer", "classgg_1_1GgSimpleShader_1_1LightBuffer.html#acf233868d39717cbce43cfe3c00d9900", null ],
     [ "LightBuffer", "classgg_1_1GgSimpleShader_1_1LightBuffer.html#a573ebac72c3cfa75d2b070306116925b", null ],
+    [ "LightBuffer", "classgg_1_1GgSimpleShader_1_1LightBuffer.html#ac292843abeade6d90d75609c853d47e9", null ],
     [ "~LightBuffer", "classgg_1_1GgSimpleShader_1_1LightBuffer.html#afb99278d306e57a0eabc54f150da7208", null ],
     [ "load", "classgg_1_1GgSimpleShader_1_1LightBuffer.html#a7866a9a911275f198a9280c3a75649ba", null ],
     [ "load", "classgg_1_1GgSimpleShader_1_1LightBuffer.html#aecf356b8f02c638f8bdf395e5e0245f7", null ],

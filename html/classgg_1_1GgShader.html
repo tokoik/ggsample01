@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: gg::GgShader クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -11,9 +11,9 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
@@ -26,6 +26,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="gg.ico"/></td>
   <td id="projectalign">
    <div id="projectname">ゲームグラフィックス特論
    </div>
@@ -35,15 +36,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.12.0 -->
+<!-- 構築: Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -51,7 +47,7 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','検索',true);
+  initMenu('',true,false,'search.php','検索');
   $(function() { init_search(); });
 });
 /* @license-end */
@@ -70,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(true); });
+$(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -132,7 +128,7 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(true); })
 <div class="textblock"><p>シェーダの基底クラス.</p>
 <dl class="section note"><dt>覚え書き</dt><dd>シェーダのクラスはこのクラスを派生して作る. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06793">6793</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06864">6864</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">構築子と解体子</h2>
 <a id="a7908ddf4209c6b17fdb1846c65f1e384" name="a7908ddf4209c6b17fdb1846c65f1e384"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7908ddf4209c6b17fdb1846c65f1e384">&#9670;&#160;</a></span>GgShader() <span class="overload">[1/4]</span></h2>
@@ -146,27 +142,27 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(true); })
         <tr>
           <td class="memname">gg::GgShader::GgShader </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>vert</em></span>, </td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>vert</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>frag</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>frag</em><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>geom</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>geom</em><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nvarying</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nvarying</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *const *</td>          <td class="paramname"><span class="paramname"><em>varyings</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+          <td class="paramtype">const char *const *</td>          <td class="paramname"><span class="paramname"><em>varyings</em><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -187,7 +183,7 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(true); })
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06809">6809</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06880">6880</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -196,8 +192,8 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(true); })
 <area shape="rect" title=" " alt="" coords="5,5,173,32"/>
 <area shape="rect" href="namespacegg.html#acbe6e5044fcf43f001242937e14b6b43" title=" " alt="" coords="221,5,347,32"/>
 <area shape="poly" title=" " alt="" coords="173,16,205,16,205,21,173,21"/>
-<area shape="rect" href="namespacegg.html#a047058f8d45e31ce77232ef66796e6b0" title=" " alt="" coords="395,5,532,32"/>
-<area shape="poly" title=" " alt="" coords="348,16,379,16,379,21,348,21"/>
+<area shape="rect" href="namespacegg.html#a047058f8d45e31ce77232ef66796e6b0" title=" " alt="" coords="395,5,531,32"/>
+<area shape="poly" title=" " alt="" coords="347,16,380,16,380,21,347,21"/>
 </map>
 </div>
 
@@ -215,17 +211,17 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(true); })
         <tr>
           <td class="memname">gg::GgShader::GgShader </td>
           <td>(</td>
-          <td class="paramtype">const std::array&lt; std::string, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>files</em></span>, </td>
+          <td class="paramtype">const std::array&lt; std::string, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>files</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nvarying</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nvarying</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *const *</td>          <td class="paramname"><span class="paramname"><em>varyings</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+          <td class="paramtype">const char *const *</td>          <td class="paramname"><span class="paramname"><em>varyings</em><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -244,7 +240,7 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(true); })
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06827">6827</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06898">6898</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -270,7 +266,13 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(true); })
   </tr>
 </table>
 </div><div class="memdoc">
-<p>コピーコンストラクタは使用しない. </p>
+<p>コピーコンストラクタは使用しない.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shader</td><td>コピー元のシェーダ. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -296,7 +298,13 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(true); })
   </tr>
 </table>
 </div><div class="memdoc">
-<p>ムーブコンストラクタはデフォルトのものを使用する. </p>
+<p>ムーブコンストラクタ.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shader</td><td>ムーブ元のシェーダ. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -312,7 +320,7 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(true); })
         <tr>
           <td class="memname">virtual gg::GgShader::~GgShader </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -324,7 +332,7 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(true); })
 </div><div class="memdoc">
 <p>デストラクタ. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06849">6849</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06924">6924</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -341,7 +349,7 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(true); })
         <tr>
           <td class="memname">GLuint gg::GgShader::get </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -354,7 +362,7 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(true); })
 <p>シェーダのプログラム名を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>シェーダのプログラム名. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06887">6887</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06968">6968</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -380,7 +388,14 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(true); })
   </tr>
 </table>
 </div><div class="memdoc">
-<p>代入演算子は使用しない. </p>
+<p>代入演算子は使用しない.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shader</td><td>代入元のシェーダ. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>代入後のこのシェーダの参照. </dd></dl>
 
 </div>
 </div>
@@ -406,7 +421,14 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(true); })
   </tr>
 </table>
 </div><div class="memdoc">
-<p>ムーブ代入演算子はデフォルトのものを使用する. </p>
+<p>ムーブ代入演算子.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shader</td><td>ムーブ代入元のシェーダ. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>ムーブ代入後のこのシェーダの参照. </dd></dl>
 
 </div>
 </div>
@@ -422,7 +444,7 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(true); })
         <tr>
           <td class="memname">void gg::GgShader::unuse </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -434,7 +456,7 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(true); })
 </div><div class="memdoc">
 <p>シェーダプログラムの使用を終了する. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06877">6877</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06958">6958</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -450,7 +472,7 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(true); })
         <tr>
           <td class="memname">void gg::GgShader::use </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -462,7 +484,7 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(true); })
 </div><div class="memdoc">
 <p>シェーダプログラムの使用を開始する. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06869">6869</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06950">6950</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -475,7 +497,7 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(true); })
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacegg.html">gg</a></li><li class="navelem"><a class="el" href="classgg_1_1GgShader.html">GgShader</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

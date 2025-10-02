@@ -22,7 +22,6 @@ var annotated_dup =
       [ "GgVertexArray", "classgg_1_1GgVertexArray.html", "classgg_1_1GgVertexArray" ]
     ] ],
     [ "Config", "classConfig.html", "classConfig" ],
-    [ "Draw", "classDraw.html", "classDraw" ],
     [ "GgApp", "classGgApp.html", "classGgApp" ],
     [ "Menu", "classMenu.html", "classMenu" ]
 ];

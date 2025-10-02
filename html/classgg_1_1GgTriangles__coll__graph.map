@@ -1,5 +1,5 @@
 <map id="gg::GgTriangles" name="gg::GgTriangles">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,119,107"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgShape.html" title=" " alt="" coords="13,5,111,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,48,65,80,59,80,59,48"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,118,107"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgShape.html" title=" " alt="" coords="13,5,110,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="64,48,64,80,59,80,59,48"/>
 </map>

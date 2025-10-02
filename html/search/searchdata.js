@@ -1,15 +1,15 @@
 var indexSectionsWithContent =
 {
   0: "_abcdefghilmnoprstuw~のをゲ宿版補",
-  1: "cdglmw",
+  1: "cglmw",
   2: "g",
-  3: "cdgmpr",
+  3: "cgmpr",
   4: "_abcdefgilmnoprstuw~",
   5: "adgnps",
   6: "p",
   7: "b",
   8: "lm",
-  9: "dm",
+  9: "ms",
   10: "cghp",
   11: "gゲ版"
 };
