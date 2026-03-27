@@ -96,6 +96,12 @@ inline std::string TCharToUtf8(const pathString& cstring) { return cstring; }
 #  define GLFW_INCLUDE_GLCOREARB
 #endif
 #include <GLFW/glfw3.h>
+#if !defined(__gl_h__)
+#  define __gl_h__
+#endif
+#if !defined(__GL_H__)
+#  define __GL_H__
+#endif
 
 // OpenGL 3.2 の API のエントリポイント
 #if !defined(GL3_PROTOTYPES) && !defined(GL_GLES_PROTOTYPES)

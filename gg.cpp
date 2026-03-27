@@ -3595,7 +3595,7 @@ bool gg::ggSaveTga(
   }
 
   // フッタを書き込む
-  constexpr char footer[] = "\0\0\0\0\0\0\0\0TRUEVISION-XFILE.";
+  constexpr char footer[]{ "\0\0\0\0\0\0\0\0TRUEVISION-XFILE." };
   file.write(footer, sizeof footer);
 
   // データの書き込みに失敗していなければ true を返す
