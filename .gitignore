@@ -24,6 +24,7 @@ xcuserdata
 *.xcuserstate
 *.xccheckout
 .DS_Store
+.derived-data-log-*
 #
 # for Windows
 #
