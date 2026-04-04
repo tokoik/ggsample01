@@ -5599,7 +5599,7 @@ namespace gg
     /// @param stride データの間隔.
     /// @param usage バッファオブジェクトの使い方.
     ///
-    GgBuffer<T>(
+    GgBuffer(
       GLenum target,
       const T* data,
       GLsizei stride,
@@ -5621,19 +5621,19 @@ namespace gg
     ///
     /// @param buffer コピー元のバッファ.
     ///
-    GgBuffer<T>(const GgBuffer<T>& buffer) = delete;
+    GgBuffer(const GgBuffer<T>& buffer) = delete;
 
     ///
     /// ムーブコンストラクタ.
     ///
     /// @param buffer ムーブ元のバッファ.
     ///
-    GgBuffer<T>(GgBuffer<T>&& buffer) = default;
+    GgBuffer(GgBuffer<T>&& buffer) = default;
 
     ///
     /// デストラクタ.
     ///
-    virtual ~GgBuffer<T>()
+    virtual ~GgBuffer()
     {
       // バッファオブジェクトを削除する
       glBindBuffer(target, 0);
@@ -5840,7 +5840,7 @@ namespace gg
     ///
     /// コンストラクタ.
     ///
-    GgUniformBuffer<T>()
+    GgUniformBuffer()
     {
     }
 
@@ -5851,7 +5851,7 @@ namespace gg
     /// @param count データの数.
     /// @param usage バッファオブジェクトの使い方.
     ///
-    GgUniformBuffer<T>(const T* data, GLsizei count, GLenum usage = GL_STATIC_DRAW)
+    GgUniformBuffer(const T* data, GLsizei count, GLenum usage = GL_STATIC_DRAW)
     {
       load(data, count, usage);
     }
@@ -5863,7 +5863,7 @@ namespace gg
     /// @param count 格納する数.
     /// @param usage バッファオブジェクトの使い方.
     ///
-    GgUniformBuffer<T>(const T& data, GLsizei count, GLenum usage = GL_STATIC_DRAW)
+    GgUniformBuffer(const T& data, GLsizei count, GLenum usage = GL_STATIC_DRAW)
     {
       load(data, count, usage);
     }
@@ -5871,7 +5871,7 @@ namespace gg
     ///
     /// デストラクタ.
     ///
-    virtual ~GgUniformBuffer<T>()
+    virtual ~GgUniformBuffer()
     {
     }
 
