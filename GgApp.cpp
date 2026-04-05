@@ -1150,3 +1150,38 @@ bool GgApp::Oculus::submit(bool mirror)
   return true;
 }
 #endif
+
+#if !defined(_MSC_VER)
+#  include <pwd.h>
+#  include <unistd.h>
+#endif
+//
+// ユーザ名を得る
+//
+std::string GgApp::getUsername()
+{
+  // 環境変数からユーザ名を得る
+  const char* user{
+#if defined(_MSC_VER)
+    std::getenv("USERNAME")
+#else
+    std::getenv("USER")
+#endif
+  };
+
+  // 環境変数からユーザ名が得られたらそれを返す
+  if (user) return user;
+
+#if defined(_MSC_VER)
+  // Win32 API を使ってユーザ名を得る
+  char username[256];
+  DWORD size{ sizeof(username) };
+  if (GetUserNameA(username, &size)) return std::string(username);
+#else
+  struct passwd* pw{ getpwuid(getuid()) };
+  if (pw) return std::string(pw->pw_name);
+#endif
+
+  // ユーザ名が得られなかった
+  return "unknown";
+}

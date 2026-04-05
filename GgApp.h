@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 /*
 
@@ -53,7 +53,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 using namespace gg;
 
 // 標準ライブラリ
-#include <cassert>
 #include <stdexcept>
 #include <iostream>
 
@@ -1091,4 +1090,11 @@ public:
     bool submit(bool mirror = true);
   };
 #endif
+
+  ///
+  /// ユーザ名を得る.
+  ///
+  /// @return ユーザ名の文字列.
+  ///
+  static std::string getUsername();
 };
