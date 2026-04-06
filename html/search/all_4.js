@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['dear_20imgui_20を使う場合_0',['Dear ImGui を使う場合',['../md_README.html#autotoc_md8',1,'']]],
+  ['dear_20imgui_20を使う場合_0',['Dear ImGui を使う場合',['../md_README.html#autotoc_md9',1,'']]],
   ['defaultlight_1',['defaultLight',['../Config_8cpp.html#a043ec680e623c661e8a9fe1c41b69ef7',1,'Config.cpp']]],
   ['diffuse_2',['diffuse',['../structgg_1_1GgSimpleShader_1_1Light.html#abf0f33bcdf0da82a52c2f814ce8b71fa',1,'gg::GgSimpleShader::Light::diffuse'],['../structgg_1_1GgSimpleShader_1_1Material.html#a68a085fbd3294ff971aa3af1ec93adf4',1,'gg::GgSimpleShader::Material::diffuse']]],
   ['distance3_3',['distance3',['../classgg_1_1GgVector.html#a784cd4bc882511beb2953014de7ba573',1,'gg::GgVector']]],

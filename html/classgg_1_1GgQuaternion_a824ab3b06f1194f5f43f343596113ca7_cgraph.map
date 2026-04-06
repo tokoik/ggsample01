@@ -1,8 +1,12 @@
 <map id="gg::GgQuaternion::operator/" name="gg::GgQuaternion::operator/">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,188,56"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#a9a390b8f63028ecd4c79b95f7eb0515f" title=" " alt="" coords="236,29,418,56"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,40,220,40,220,45,188,45"/>
-<area shape="rect" id="Node000003" href="$classgg_1_1GgQuaternion.html#a0d9f4c9b28fc3424ef26aed061448287" title=" " alt="" coords="466,29,629,56"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="418,40,451,40,451,45,418,45"/>
-<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="510,30,504,21,508,11,523,5,548,3,574,5,588,12,586,16,572,10,548,8,524,10,512,15,509,20,515,27"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,188,32"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#ac1c52c26e2fdfdde277f9aa714757a2f" title=" " alt="" coords="679,31,891,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,14,391,13,512,16,632,23,668,28,662,29,631,28,511,21,391,18,188,19"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgQuaternion.html#a9a390b8f63028ecd4c79b95f7eb0515f" title=" " alt="" coords="236,31,418,57"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="187,26,223,32,217,33,188,31"/>
+<area shape="poly" id="edge6_Node000003_Node000002" title=" " alt="" coords="418,41,666,43,661,45,418,47"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgQuaternion.html#a0d9f4c9b28fc3424ef26aed061448287" title=" " alt="" coords="466,105,631,132"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="369,55,495,100,490,100,368,60"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="593,102,723,63,728,62,594,107"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="511,104,504,97,509,87,524,81,549,79,575,81,591,91,585,90,574,86,549,84,525,86,513,91,510,96,516,106"/>
 </map>

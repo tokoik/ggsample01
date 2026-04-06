@@ -1,7 +1,7 @@
 <map id="gg::GgMatrix::loadOrthogonal" name="gg::GgMatrix::loadOrthogonal">
 <area shape="rect" id="Node000001" title=" " alt="" coords="218,31,409,57"/>
 <area shape="rect" id="Node000002" href="$namespacegg.html#ab0d21209e3184a0e423ec8c902a5d4d6" title=" " alt="" coords="27,5,148,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,34,148,28,148,23,203,29"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,32,148,28,148,23,205,31"/>
 <area shape="rect" id="Node000003" href="$classgg_1_1GgMatrix.html#ab9cb6439fd594e523d39a4efd8eb0f86" title=" " alt="" coords="5,56,170,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="202,59,171,63,170,57,202,54"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="200,57,171,63,170,57,205,56"/>
 </map>

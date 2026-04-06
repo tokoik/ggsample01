@@ -1,0 +1,19 @@
+<map id="gg::GgUniformBuffer::getCount" name="gg::GgUniformBuffer::getCount">
+<area shape="rect" id="Node000001" title=" " alt="" coords="570,105,711,148"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgUniformBuffer.html#a0ad63590a48c6a54e92b98a3f0d53242" title=" " alt="" coords="382,5,522,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="587,97,521,62,500,51,500,46,524,58,592,97"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgUniformBuffer.html#a54af5ca44551f3d6799966590b80d7a1" title=" " alt="" coords="382,72,522,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="552,112,523,108,523,103,558,111"/>
+<area shape="rect" id="Node000005" href="$classgg_1_1GgUniformBuffer.html#ae9cc42d251faad15a2f506777d280c67" title=" " alt="" coords="382,139,522,181"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="552,142,523,150,522,145,558,141"/>
+<area shape="rect" id="Node000006" href="$classgg_1_1GgUniformBuffer.html#af998019f39e666887550170538e5ebd4" title=" " alt="" coords="382,205,522,248"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="592,155,524,196,501,207,499,202,521,191,587,157"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgUniformBuffer.html#a94c5c828711212b404a18dcd1cc9e9b0" title=" " alt="" coords="194,72,334,115"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="364,94,335,96,334,91,369,93"/>
+<area shape="rect" id="Node000007" href="$classgg_1_1GgUniformBuffer.html#a1af7292924eb187968a4ea1a9221e9e7" title=" " alt="" coords="194,205,334,248"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="364,227,335,229,334,224,369,226"/>
+<area shape="rect" id="Node000008" href="$classgg_1_1GgUniformBuffer.html#af737530228e2b2e70016e433f6c96e9d" title=" " alt="" coords="5,172,146,215"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="176,212,146,208,146,203,181,211"/>
+<area shape="rect" id="Node000009" href="$classgg_1_1GgUniformBuffer.html#ad35bb060eb37e5f3679e24f469016eeb" title=" " alt="" coords="5,239,146,281"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="176,242,147,250,146,245,181,241"/>
+</map>

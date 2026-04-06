@@ -1,5 +1,7 @@
 <map id="gg::GgMatrix::operator/" name="gg::GgMatrix::operator/">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,161,32"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgMatrix.html#a59877ee01fb3e8514872c9e5c7250bb7" title=" " alt="" coords="209,5,367,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,16,193,16,193,21,161,21"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,161,57"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgMatrix.html#a0b02e5282a686d3276d2dfb23a70484b" title=" " alt="" coords="211,5,368,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,32,198,30,192,31,162,37"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgMatrix.html#a59877ee01fb3e8514872c9e5c7250bb7" title=" " alt="" coords="209,56,370,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="161,51,196,57,191,58,161,56"/>
 </map>

@@ -1,9 +1,13 @@
 <map id="gg::GgMatrix::operator/=" name="gg::GgMatrix::operator/=">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,5,169,32"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgMatrix.html#aba57513ebc65d37bc8b82dd080a87bae" title=" " alt="" coords="217,5,380,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,16,201,16,201,21,169,21"/>
-<area shape="rect" id="Node000003" href="$classgg_1_1GgMatrix.html#a2de1a5ba97c7946307f99c67af8afd39" title=" " alt="" coords="428,5,583,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="381,16,412,16,412,21,381,21"/>
-<area shape="rect" id="Node000004" href="$classgg_1_1GgMatrix.html#a59877ee01fb3e8514872c9e5c7250bb7" title=" " alt="" coords="631,5,790,32"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="583,16,616,16,616,21,583,21"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgMatrix.html#a0b02e5282a686d3276d2dfb23a70484b" title=" " alt="" coords="633,31,791,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,13,358,12,471,15,584,23,620,29,615,29,583,28,471,21,358,18,169,19"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgMatrix.html#aba57513ebc65d37bc8b82dd080a87bae" title=" " alt="" coords="217,31,380,57"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="169,26,204,32,199,33,169,31"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="380,41,620,43,615,45,380,47"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgMatrix.html#a2de1a5ba97c7946307f99c67af8afd39" title=" " alt="" coords="428,81,583,108"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="356,55,436,77,431,77,356,61"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="563,78,637,62,643,61,564,83"/>
+<area shape="rect" id="Node000005" href="$classgg_1_1GgMatrix.html#a59877ee01fb3e8514872c9e5c7250bb7" title=" " alt="" coords="631,81,793,108"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="584,92,618,95,613,95,584,97"/>
 </map>

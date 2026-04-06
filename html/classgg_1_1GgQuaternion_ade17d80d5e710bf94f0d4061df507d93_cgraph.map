@@ -1,7 +1,13 @@
 <map id="gg::GgQuaternion::operator+" name="gg::GgQuaternion::operator+">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,192,32"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#a5c776b116c954194ba457324c36b16b2" title=" " alt="" coords="240,5,392,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,16,224,16,224,21,192,21"/>
-<area shape="rect" id="Node000003" href="$classgg_1_1GgQuaternion.html#ad0b43dbf846eb5c01192dfe63e3d131d" title=" " alt="" coords="440,5,618,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="393,16,424,16,424,21,393,21"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,74,192,100"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#a5c776b116c954194ba457324c36b16b2" title=" " alt="" coords="243,23,396,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,70,246,52,241,55,161,75"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgQuaternion.html#ac1c52c26e2fdfdde277f9aa714757a2f" title=" " alt="" coords="673,23,885,50"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="192,83,391,76,625,59,692,52,687,53,626,64,392,82,192,88"/>
+<area shape="rect" id="Node000005" href="$classgg_1_1GgVector.html#a8d6fb720fb6068cd9f6cb51435cdcf58" title=" " alt="" coords="240,124,399,151"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="160,98,246,119,241,121,160,104"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="377,20,447,8,536,3,626,8,696,20,691,20,625,14,536,8,447,14,378,25"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgQuaternion.html#ad0b43dbf846eb5c01192dfe63e3d131d" title=" " alt="" coords="447,23,625,50"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="395,34,434,36,429,37,396,39"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="626,34,660,36,655,36,626,39"/>
 </map>

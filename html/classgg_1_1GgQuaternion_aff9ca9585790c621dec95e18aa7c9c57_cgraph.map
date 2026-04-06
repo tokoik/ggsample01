@@ -1,5 +1,8 @@
 <map id="gg::GgQuaternion::loadSlerp" name="gg::GgQuaternion::loadSlerp">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,5,191,32"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#aa2ca6c2380083877c0d1014650f91d77" title=" " alt="" coords="239,5,424,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,16,223,16,223,21,191,21"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#ac1c52c26e2fdfdde277f9aa714757a2f" title=" " alt="" coords="472,5,683,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,16,457,16,456,21,191,21"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgQuaternion.html#aa2ca6c2380083877c0d1014650f91d77" title=" " alt="" coords="239,31,424,57"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="191,26,226,32,220,32,191,31"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="424,32,454,31,459,31,425,37"/>
 </map>

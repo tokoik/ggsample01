@@ -1,0 +1,9 @@
+<map id="gg::GgSimpleShader::LightBuffer::loadDiffuse" name="gg::GgSimpleShader::LightBuffer::loadDiffuse">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,72,170,115"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506" title=" " alt="" coords="218,5,358,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,69,210,52,205,55,155,74"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f" title=" " alt="" coords="218,72,358,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="169,91,205,93,200,94,170,96"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197" title=" " alt="" coords="218,139,358,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="154,113,210,133,205,134,153,118"/>
+</map>

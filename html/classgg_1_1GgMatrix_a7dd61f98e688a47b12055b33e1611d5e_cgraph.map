@@ -1,7 +1,11 @@
 <map id="gg::GgMatrix::operator*=" name="gg::GgMatrix::operator*=">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,5,170,32"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgMatrix.html#a4655c7207828ffe6c5c3e11b32193eb8" title=" " alt="" coords="218,5,382,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,16,202,16,202,21,170,21"/>
-<area shape="rect" id="Node000003" href="$classgg_1_1GgMatrix.html#ab74f171ed21474bc9970d2765f92e6c7" title=" " alt="" coords="430,5,586,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="382,16,414,16,414,21,382,21"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgMatrix.html#a0b02e5282a686d3276d2dfb23a70484b" title=" " alt="" coords="634,31,792,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,13,360,12,474,15,587,23,622,29,616,29,586,28,473,21,360,17,170,19"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgMatrix.html#a4655c7207828ffe6c5c3e11b32193eb8" title=" " alt="" coords="218,31,382,57"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="170,26,205,32,200,33,170,31"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="382,41,621,43,616,45,382,47"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgMatrix.html#ab74f171ed21474bc9970d2765f92e6c7" title=" " alt="" coords="430,81,586,108"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="358,55,438,77,433,77,358,61"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="565,78,639,62,644,61,566,83"/>
 </map>

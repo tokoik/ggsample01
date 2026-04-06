@@ -1,7 +1,13 @@
 <map id="gg::GgQuaternion::add" name="gg::GgQuaternion::add">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,158,32"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#a5c776b116c954194ba457324c36b16b2" title=" " alt="" coords="206,5,358,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,16,190,16,190,21,158,21"/>
-<area shape="rect" id="Node000003" href="$classgg_1_1GgQuaternion.html#ad0b43dbf846eb5c01192dfe63e3d131d" title=" " alt="" coords="406,5,584,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="359,16,390,16,390,21,359,21"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,74,158,100"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#a5c776b116c954194ba457324c36b16b2" title=" " alt="" coords="209,23,362,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,70,216,52,212,55,139,75"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgQuaternion.html#ac1c52c26e2fdfdde277f9aa714757a2f" title=" " alt="" coords="639,23,851,50"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="158,83,354,76,591,59,658,52,653,53,592,64,355,82,158,88"/>
+<area shape="rect" id="Node000005" href="$classgg_1_1GgVector.html#a8d6fb720fb6068cd9f6cb51435cdcf58" title=" " alt="" coords="206,124,365,151"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="139,98,217,119,212,121,138,104"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="343,20,413,8,502,3,592,8,662,19,657,20,591,14,502,8,413,14,344,25"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgQuaternion.html#ad0b43dbf846eb5c01192dfe63e3d131d" title=" " alt="" coords="413,23,591,50"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="361,34,400,36,395,37,362,39"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="592,34,626,36,621,36,592,39"/>
 </map>

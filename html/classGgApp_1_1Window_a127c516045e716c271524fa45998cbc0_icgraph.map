@@ -1,0 +1,19 @@
+<map id="GgApp::Window::Window" name="GgApp::Window::Window">
+<area shape="rect" id="Node000001" title=" " alt="" coords="280,183,451,209"/>
+<area shape="rect" id="Node000002" href="$classGgApp_1_1Window.html#aee308edd9b401ca148f3b28fc7f77774" title=" " alt="" coords="29,5,208,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="346,169,300,107,267,74,230,46,207,35,206,30,233,42,271,70,304,104,351,169"/>
+<area shape="rect" id="Node000003" href="$classGgApp_1_1Window.html#a827f53cb49b693e31344ab100358a66d" title=" " alt="" coords="29,56,208,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="337,172,290,134,230,97,201,86,200,81,233,92,293,130,342,172"/>
+<area shape="rect" id="Node000004" href="$classGgApp_1_1Window.html#a3f03a692bf813089182b2331262265a6" title=" " alt="" coords="5,107,232,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="315,177,231,148,189,136,188,131,232,143,320,175"/>
+<area shape="rect" id="Node000005" href="$classGgApp_1_1Window.html#a3be62ffb0be6016f7ce531755667730b" title=" " alt="" coords="13,157,224,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="262,187,225,184,224,179,267,185"/>
+<area shape="rect" id="Node000006" href="$classGgApp_1_1Window.html#ad40d89ff090cf184882fab3048a323d0" title=" " alt="" coords="12,208,225,235"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="262,207,226,213,224,208,267,205"/>
+<area shape="rect" id="Node000007" href="$classGgApp_1_1Window.html#a658fd07bb623e4e6e0745211d1870e46" title=" " alt="" coords="14,259,223,285"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="316,217,232,249,189,261,187,256,231,244,320,214"/>
+<area shape="rect" id="Node000008" href="$classGgApp_1_1Window.html#ae5d861cc5384a9345370038451126247" title=" " alt="" coords="33,309,204,336"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="342,219,293,262,233,300,202,311,200,306,230,295,290,258,337,222"/>
+<area shape="rect" id="Node000009" href="$classGgApp_1_1Window.html#ae00316789fab8d4d5d9f824a3569df10" title=" " alt="" coords="33,360,204,387"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="351,221,304,288,271,322,233,350,205,363,204,358,230,346,267,318,300,285,346,224"/>
+</map>

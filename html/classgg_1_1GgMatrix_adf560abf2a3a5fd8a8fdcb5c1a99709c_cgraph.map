@@ -1,5 +1,7 @@
 <map id="gg::GgMatrix::transpose" name="gg::GgMatrix::transpose">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,167,32"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgMatrix.html#aeb944e9d5e45ee4c64ad3565492b2852" title=" " alt="" coords="215,5,403,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,16,199,16,199,21,167,21"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,167,57"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgMatrix.html#a0b02e5282a686d3276d2dfb23a70484b" title=" " alt="" coords="231,5,388,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,32,218,29,213,30,167,37"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgMatrix.html#aeb944e9d5e45ee4c64ad3565492b2852" title=" " alt="" coords="215,56,404,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="167,50,202,57,196,57,167,56"/>
 </map>

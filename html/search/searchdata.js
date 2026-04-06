@@ -11,7 +11,7 @@ var indexSectionsWithContent =
   8: "lm",
   9: "ms",
   10: "cghp",
-  11: "gゲ版"
+  11: "dghiorのをゲ宿版補"
 };
 
 var indexSectionNames =

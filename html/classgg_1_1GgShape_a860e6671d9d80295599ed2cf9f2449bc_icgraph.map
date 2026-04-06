@@ -1,0 +1,9 @@
+<map id="gg::GgShape::getMode" name="gg::GgShape::getMode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="205,56,360,83"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgElements.html#a81e0b1de878227acdea4cb4fd450c6db" title=" " alt="" coords="5,5,157,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,53,137,35,137,30,214,50"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgPoints.html#a132523e30fbb6afa7e27cf43d3ccaece" title=" " alt="" coords="14,56,148,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="187,70,148,72,148,67,192,69"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgTriangles.html#ac6af2cf80311f3429271e7cbde302e02" title=" " alt="" coords="6,107,156,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="214,87,138,109,136,103,209,88"/>
+</map>

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: gg::GgVertexArray クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -11,7 +11,6 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
@@ -36,21 +35,20 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.10.0 -->
+<!-- 構築: Doxygen 1.15.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','検索');
+  initMenu('',true,false,'search.php','検索',true);
   $(function() { init_search(); });
 });
-/* @license-end */
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
@@ -65,10 +63,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('classgg_1_1GgVertexArray.html',''); initResizable(); });
-/* @license-end */
+$(function(){initNavTree('classgg_1_1GgVertexArray.html','','classgg_1_1GgVertexArray-members'); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -92,39 +89,28 @@ $(function(){initNavTree('classgg_1_1GgVertexArray.html',''); initResizable(); }
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">公開メンバ関数</a> &#124;
-<a href="classgg_1_1GgVertexArray-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle"><div class="title">gg::GgVertexArray クラス</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="gg_8h_source.html">gg.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:af10aae052e9b86a6f7375fdb9349cc44" id="r_af10aae052e9b86a6f7375fdb9349cc44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af10aae052e9b86a6f7375fdb9349cc44">GgVertexArray</a> (GLenum mode=0)</td></tr>
-<tr class="separator:af10aae052e9b86a6f7375fdb9349cc44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b4aae25f9f95c9d1d996a0b9bc729b5" id="r_a8b4aae25f9f95c9d1d996a0b9bc729b5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b4aae25f9f95c9d1d996a0b9bc729b5">GgVertexArray</a> (const <a class="el" href="classgg_1_1GgVertexArray.html">GgVertexArray</a> &amp;array)=delete</td></tr>
-<tr class="separator:a8b4aae25f9f95c9d1d996a0b9bc729b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67a0aa3458fa91fc4beec6475e74545f" id="r_a67a0aa3458fa91fc4beec6475e74545f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67a0aa3458fa91fc4beec6475e74545f">GgVertexArray</a> (<a class="el" href="classgg_1_1GgVertexArray.html">GgVertexArray</a> &amp;&amp;array)=default</td></tr>
-<tr class="separator:a67a0aa3458fa91fc4beec6475e74545f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b4aae25f9f95c9d1d996a0b9bc729b5" id="r_a8b4aae25f9f95c9d1d996a0b9bc729b5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b4aae25f9f95c9d1d996a0b9bc729b5">GgVertexArray</a> (const GgVertexArray &amp;array)=delete</td></tr>
+<tr class="memitem:a67a0aa3458fa91fc4beec6475e74545f" id="r_a67a0aa3458fa91fc4beec6475e74545f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67a0aa3458fa91fc4beec6475e74545f">GgVertexArray</a> (GgVertexArray &amp;&amp;array)=default</td></tr>
 <tr class="memitem:a991375d084522058f70c6da9e0e758c5" id="r_a991375d084522058f70c6da9e0e758c5"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a991375d084522058f70c6da9e0e758c5">~GgVertexArray</a> ()</td></tr>
-<tr class="separator:a991375d084522058f70c6da9e0e758c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70895cc9ffad3ed8c9ea54de0bc76794" id="r_a70895cc9ffad3ed8c9ea54de0bc76794"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVertexArray.html">GgVertexArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70895cc9ffad3ed8c9ea54de0bc76794">operator=</a> (const <a class="el" href="classgg_1_1GgVertexArray.html">GgVertexArray</a> &amp;array)=delete</td></tr>
-<tr class="separator:a70895cc9ffad3ed8c9ea54de0bc76794"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27efae436581771b3ee4da33753fed88" id="r_a27efae436581771b3ee4da33753fed88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgVertexArray.html">GgVertexArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27efae436581771b3ee4da33753fed88">operator=</a> (<a class="el" href="classgg_1_1GgVertexArray.html">GgVertexArray</a> &amp;&amp;array)=default</td></tr>
-<tr class="separator:a27efae436581771b3ee4da33753fed88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70895cc9ffad3ed8c9ea54de0bc76794" id="r_a70895cc9ffad3ed8c9ea54de0bc76794"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#af10aae052e9b86a6f7375fdb9349cc44">GgVertexArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70895cc9ffad3ed8c9ea54de0bc76794">operator=</a> (const <a class="el" href="#af10aae052e9b86a6f7375fdb9349cc44">GgVertexArray</a> &amp;array)=delete</td></tr>
+<tr class="memitem:a27efae436581771b3ee4da33753fed88" id="r_a27efae436581771b3ee4da33753fed88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#af10aae052e9b86a6f7375fdb9349cc44">GgVertexArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27efae436581771b3ee4da33753fed88">operator=</a> (<a class="el" href="#af10aae052e9b86a6f7375fdb9349cc44">GgVertexArray</a> &amp;&amp;array)=default</td></tr>
 <tr class="memitem:a251347f8cedf6fc801fbd95e8dcc4511" id="r_a251347f8cedf6fc801fbd95e8dcc4511"><td class="memItemLeft" align="right" valign="top">const GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a251347f8cedf6fc801fbd95e8dcc4511">get</a> () const</td></tr>
-<tr class="separator:a251347f8cedf6fc801fbd95e8dcc4511"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b3dd81d2d4b8583ef09298edc037cd6" id="r_a1b3dd81d2d4b8583ef09298edc037cd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b3dd81d2d4b8583ef09298edc037cd6">bind</a> () const</td></tr>
-<tr class="separator:a1b3dd81d2d4b8583ef09298edc037cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
 <div class="textblock"><p>頂点配列クラス. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06157">6157</a> 行目に定義があります。</p>
-</div><h2 class="groupheader">構築子と解体子</h2>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06163">6163</a> 行目に定義があります。</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
 <a id="af10aae052e9b86a6f7375fdb9349cc44" name="af10aae052e9b86a6f7375fdb9349cc44"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af10aae052e9b86a6f7375fdb9349cc44">&#9670;&#160;</a></span>GgVertexArray() <span class="overload">[1/3]</span></h2>
 
@@ -137,13 +123,13 @@ $(function(){initNavTree('classgg_1_1GgVertexArray.html',''); initResizable(); }
         <tr>
           <td class="memname">gg::GgVertexArray::GgVertexArray </td>
           <td>(</td>
-          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>mode</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span></span></td><td>)</td>
+          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>mode</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -155,7 +141,23 @@ $(function(){initNavTree('classgg_1_1GgVertexArray.html',''); initResizable(); }
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06169">6169</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06175">6175</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgVertexArray_af10aae052e9b86a6f7375fdb9349cc44_icgraph.png" border="0" usemap="#aclassgg_1_1GgVertexArray_af10aae052e9b86a6f7375fdb9349cc44_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassgg_1_1GgVertexArray_af10aae052e9b86a6f7375fdb9349cc44_icgraph" id="aclassgg_1_1GgVertexArray_af10aae052e9b86a6f7375fdb9349cc44_icgraph">
+<area shape="rect" title=" " alt="" coords="190,105,326,148"/>
+<area shape="rect" href="classgg_1_1GgVertexArray.html#a8b4aae25f9f95c9d1d996a0b9bc729b5" title=" " alt="" coords="5,5,142,48"/>
+<area shape="poly" title=" " alt="" coords="205,98,140,62,120,51,119,46,143,58,210,96"/>
+<area shape="rect" href="classgg_1_1GgVertexArray.html#a67a0aa3458fa91fc4beec6475e74545f" title=" " alt="" coords="5,72,142,115"/>
+<area shape="poly" title=" " alt="" coords="172,113,143,108,142,103,177,111"/>
+<area shape="rect" href="classgg_1_1GgVertexArray.html#a70895cc9ffad3ed8c9ea54de0bc76794" title=" " alt="" coords="5,139,142,181"/>
+<area shape="poly" title=" " alt="" coords="172,143,143,150,141,145,177,141"/>
+<area shape="rect" href="classgg_1_1GgVertexArray.html#a27efae436581771b3ee4da33753fed88" title=" " alt="" coords="5,205,142,248"/>
+<area shape="poly" title=" " alt="" coords="210,155,143,196,121,207,118,202,140,191,205,157"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -171,13 +173,13 @@ $(function(){initNavTree('classgg_1_1GgVertexArray.html',''); initResizable(); }
         <tr>
           <td class="memname">gg::GgVertexArray::GgVertexArray </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgVertexArray.html">GgVertexArray</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>array</em></span></td><td>)</td>
+          <td class="paramtype">const GgVertexArray &amp;</td>          <td class="paramname"><span class="paramname"><em>array</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -188,6 +190,16 @@ $(function(){initNavTree('classgg_1_1GgVertexArray.html',''); initResizable(); }
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgVertexArray_a8b4aae25f9f95c9d1d996a0b9bc729b5_cgraph.png" border="0" usemap="#aclassgg_1_1GgVertexArray_a8b4aae25f9f95c9d1d996a0b9bc729b5_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassgg_1_1GgVertexArray_a8b4aae25f9f95c9d1d996a0b9bc729b5_cgraph" id="aclassgg_1_1GgVertexArray_a8b4aae25f9f95c9d1d996a0b9bc729b5_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,142,48"/>
+<area shape="rect" href="classgg_1_1GgVertexArray.html#af10aae052e9b86a6f7375fdb9349cc44" title=" " alt="" coords="190,5,326,48"/>
+<area shape="poly" title=" " alt="" coords="142,24,177,26,171,27,142,29"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -203,13 +215,13 @@ $(function(){initNavTree('classgg_1_1GgVertexArray.html',''); initResizable(); }
         <tr>
           <td class="memname">gg::GgVertexArray::GgVertexArray </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classgg_1_1GgVertexArray.html">GgVertexArray</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>array</em></span></td><td>)</td>
+          <td class="paramtype">GgVertexArray &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>array</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -220,6 +232,16 @@ $(function(){initNavTree('classgg_1_1GgVertexArray.html',''); initResizable(); }
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgVertexArray_a67a0aa3458fa91fc4beec6475e74545f_cgraph.png" border="0" usemap="#aclassgg_1_1GgVertexArray_a67a0aa3458fa91fc4beec6475e74545f_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassgg_1_1GgVertexArray_a67a0aa3458fa91fc4beec6475e74545f_cgraph" id="aclassgg_1_1GgVertexArray_a67a0aa3458fa91fc4beec6475e74545f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,142,48"/>
+<area shape="rect" href="classgg_1_1GgVertexArray.html#af10aae052e9b86a6f7375fdb9349cc44" title=" " alt="" coords="190,5,326,48"/>
+<area shape="poly" title=" " alt="" coords="142,24,177,26,171,27,142,29"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -235,23 +257,23 @@ $(function(){initNavTree('classgg_1_1GgVertexArray.html',''); initResizable(); }
         <tr>
           <td class="memname">virtual gg::GgVertexArray::~GgVertexArray </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>デストラクタ. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06192">6192</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06198">6198</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<h2 class="groupheader">関数詳解</h2>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
 <a id="a1b3dd81d2d4b8583ef09298edc037cd6" name="a1b3dd81d2d4b8583ef09298edc037cd6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1b3dd81d2d4b8583ef09298edc037cd6">&#9670;&#160;</a></span>bind()</h2>
 
@@ -264,19 +286,19 @@ $(function(){initNavTree('classgg_1_1GgVertexArray.html',''); initResizable(); }
         <tr>
           <td class="memname">void gg::GgVertexArray::bind </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>頂点配列オブジェクトを結合する. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06227">6227</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06233">6233</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -292,20 +314,20 @@ $(function(){initNavTree('classgg_1_1GgVertexArray.html',''); initResizable(); }
         <tr>
           <td class="memname">const GLuint &amp; gg::GgVertexArray::get </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>頂点配列オブジェクト名を取り出す.</p>
 <dl class="section return"><dt>戻り値</dt><dd>頂点配列オブジェクト名. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06219">6219</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06225">6225</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -319,15 +341,15 @@ $(function(){initNavTree('classgg_1_1GgVertexArray.html',''); initResizable(); }
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgg_1_1GgVertexArray.html">GgVertexArray</a> &amp; gg::GgVertexArray::operator= </td>
+          <td class="memname"><a class="el" href="#af10aae052e9b86a6f7375fdb9349cc44">GgVertexArray</a> &amp; gg::GgVertexArray::operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgVertexArray.html">GgVertexArray</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>array</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="#af10aae052e9b86a6f7375fdb9349cc44">GgVertexArray</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>array</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -339,6 +361,16 @@ $(function(){initNavTree('classgg_1_1GgVertexArray.html',''); initResizable(); }
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>代入後のこの頂点配列オブジェクトの参照. </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgVertexArray_a70895cc9ffad3ed8c9ea54de0bc76794_cgraph.png" border="0" usemap="#aclassgg_1_1GgVertexArray_a70895cc9ffad3ed8c9ea54de0bc76794_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassgg_1_1GgVertexArray_a70895cc9ffad3ed8c9ea54de0bc76794_cgraph" id="aclassgg_1_1GgVertexArray_a70895cc9ffad3ed8c9ea54de0bc76794_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,142,48"/>
+<area shape="rect" href="classgg_1_1GgVertexArray.html#af10aae052e9b86a6f7375fdb9349cc44" title=" " alt="" coords="190,5,326,48"/>
+<area shape="poly" title=" " alt="" coords="142,24,177,26,171,27,142,29"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -352,15 +384,15 @@ $(function(){initNavTree('classgg_1_1GgVertexArray.html',''); initResizable(); }
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgg_1_1GgVertexArray.html">GgVertexArray</a> &amp; gg::GgVertexArray::operator= </td>
+          <td class="memname"><a class="el" href="#af10aae052e9b86a6f7375fdb9349cc44">GgVertexArray</a> &amp; gg::GgVertexArray::operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classgg_1_1GgVertexArray.html">GgVertexArray</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>array</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#af10aae052e9b86a6f7375fdb9349cc44">GgVertexArray</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>array</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -372,6 +404,16 @@ $(function(){initNavTree('classgg_1_1GgVertexArray.html',''); initResizable(); }
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>ムーブ代入後のこの頂点配列オブジェクトの参照. </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgVertexArray_a27efae436581771b3ee4da33753fed88_cgraph.png" border="0" usemap="#aclassgg_1_1GgVertexArray_a27efae436581771b3ee4da33753fed88_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassgg_1_1GgVertexArray_a27efae436581771b3ee4da33753fed88_cgraph" id="aclassgg_1_1GgVertexArray_a27efae436581771b3ee4da33753fed88_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,142,48"/>
+<area shape="rect" href="classgg_1_1GgVertexArray.html#af10aae052e9b86a6f7375fdb9349cc44" title=" " alt="" coords="190,5,326,48"/>
+<area shape="poly" title=" " alt="" coords="142,24,177,26,171,27,142,29"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -380,11 +422,19 @@ $(function(){initNavTree('classgg_1_1GgVertexArray.html',''); initResizable(); }
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacegg.html">gg</a></li><li class="navelem"><a class="el" href="classgg_1_1GgVertexArray.html">GgVertexArray</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="navelem"><a href="namespacegg.html">gg</a></li><li class="navelem"><a href="classgg_1_1GgVertexArray.html">GgVertexArray</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
   </ul>
 </div>
 </body>

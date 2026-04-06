@@ -1,9 +1,12 @@
 <map id="gg::GgQuaternion::invert" name="gg::GgQuaternion::invert">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,167,57"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#a46f9d1612fdd1fc39db6c8ba7e574a86" title=" " alt="" coords="215,31,400,57"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,41,199,41,199,47,167,47"/>
-<area shape="rect" id="Node000003" href="$namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title=" " alt="" coords="513,5,597,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="400,32,497,22,497,27,401,37"/>
-<area shape="rect" id="Node000004" href="$classgg_1_1GgQuaternion.html#af9a9577581a5f9bbebd675998f741215" title=" " alt="" coords="448,56,661,83"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="401,51,433,54,432,59,400,56"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,169,57"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#ac1c52c26e2fdfdde277f9aa714757a2f" title=" " alt="" coords="454,5,666,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,37,440,23,438,28,170,42"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgQuaternion.html#a46f9d1612fdd1fc39db6c8ba7e574a86" title=" " alt="" coords="217,56,405,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="169,51,204,56,199,58,169,56"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="380,53,479,35,473,36,381,58"/>
+<area shape="rect" id="Node000004" href="$namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51" title=" " alt="" coords="518,56,603,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="405,67,505,69,499,70,406,72"/>
+<area shape="rect" id="Node000005" href="$classgg_1_1GgQuaternion.html#af9a9577581a5f9bbebd675998f741215" title=" " alt="" coords="453,107,667,133"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="380,81,479,103,473,103,380,86"/>
 </map>

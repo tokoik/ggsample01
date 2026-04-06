@@ -1,0 +1,11 @@
+<map id="gg::GgSimpleShader::LightBuffer::loadPosition" name="gg::GgSimpleShader::LightBuffer::loadPosition">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,72,176,115"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgSimpleShader_1_1LightBuffer.html#ab5039579ec62e813d21d67cf8bcf7382" title=" " alt="" coords="224,72,394,115"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,91,211,93,205,94,176,96"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506" title=" " alt="" coords="442,5,582,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="375,69,428,54,433,53,377,74"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f" title=" " alt="" coords="442,72,582,115"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="394,91,429,93,424,94,394,96"/>
+<area shape="rect" id="Node000005" href="$classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197" title=" " alt="" coords="442,139,582,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="376,113,433,133,428,133,376,118"/>
+</map>

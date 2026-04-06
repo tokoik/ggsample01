@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: GgApp.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -11,7 +11,6 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
@@ -36,21 +35,20 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.10.0 -->
+<!-- 構築: Doxygen 1.15.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','検索');
+  initMenu('',true,false,'search.php','検索',true);
   $(function() { init_search(); });
 });
-/* @license-end */
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
@@ -65,10 +63,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('GgApp_8h.html',''); initResizable(); });
-/* @license-end */
+$(function(){initNavTree('GgApp_8h.html','',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -92,14 +89,10 @@ $(function(){initNavTree('GgApp_8h.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#nested-classes">クラス</a> &#124;
-<a href="#define-members">マクロ定義</a>  </div>
   <div class="headertitle"><div class="title">GgApp.h ファイル</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="gg_8h_source.html">gg.h</a>&quot;</code><br />
-<code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;stdexcept&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &quot;imgui.h&quot;</code><br />
@@ -108,81 +101,75 @@ $(function(){initNavTree('GgApp_8h.html',''); initResizable(); });
 </div><div class="textblock"><div class="dynheader">
 GgApp.h の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="GgApp_8h__incl.png" border="0" usemap="#aGgApp_8h" alt=""/></div>
+<div class="center"><img src="GgApp_8h__incl.png" border="0" usemap="#aGgApp_8h" loading="lazy" alt=""/></div>
 <map name="aGgApp_8h" id="aGgApp_8h">
-<area shape="rect" title=" " alt="" coords="523,5,596,32"/>
-<area shape="rect" href="gg_8h.html" title=" " alt="" coords="244,80,291,107"/>
-<area shape="poly" title=" " alt="" coords="524,32,306,85,305,80,522,26"/>
-<area shape="rect" title=" " alt="" coords="411,155,476,181"/>
-<area shape="poly" title=" " alt="" coords="523,26,494,32,463,42,435,58,412,81,407,96,409,111,424,141,420,143,404,112,402,95,408,79,432,54,461,37,493,27,522,21"/>
-<area shape="rect" title=" " alt="" coords="422,80,500,107"/>
-<area shape="poly" title=" " alt="" coords="544,35,491,73,488,69,541,30"/>
-<area shape="rect" title=" " alt="" coords="524,80,595,107"/>
-<area shape="poly" title=" " alt="" coords="562,33,562,64,557,64,557,33"/>
-<area shape="rect" title=" " alt="" coords="620,80,683,107"/>
-<area shape="poly" title=" " alt="" coords="577,30,625,68,622,73,574,35"/>
-<area shape="rect" title=" " alt="" coords="707,80,830,107"/>
-<area shape="poly" title=" " alt="" coords="597,30,719,72,717,77,595,35"/>
-<area shape="rect" title=" " alt="" coords="854,80,1001,107"/>
-<area shape="poly" title=" " alt="" coords="596,25,849,74,848,79,595,30"/>
+<area shape="rect" title=" " alt="" coords="423,5,496,32"/>
+<area shape="rect" href="gg_8h.html" title=" " alt="" coords="206,80,252,107"/>
+<area shape="poly" title=" " alt="" coords="420,32,268,82,266,77,425,30"/>
+<area shape="rect" title=" " alt="" coords="276,80,354,107"/>
+<area shape="poly" title=" " alt="" coords="437,32,355,75,353,70,432,33"/>
+<area shape="rect" title=" " alt="" coords="378,80,450,107"/>
+<area shape="poly" title=" " alt="" coords="454,31,432,69,428,65,449,34"/>
+<area shape="rect" title=" " alt="" coords="474,80,538,107"/>
+<area shape="poly" title=" " alt="" coords="469,30,492,68,487,66,466,35"/>
+<area shape="rect" title=" " alt="" coords="561,80,686,107"/>
+<area shape="poly" title=" " alt="" coords="488,30,583,73,578,73,487,35"/>
+<area shape="rect" title=" " alt="" coords="710,80,856,107"/>
+<area shape="poly" title=" " alt="" coords="496,25,715,76,710,77,496,31"/>
 <area shape="rect" title=" " alt="" coords="5,155,63,181"/>
-<area shape="poly" title=" " alt="" coords="244,105,78,156,77,151,243,99"/>
-<area shape="rect" title=" " alt="" coords="86,155,137,181"/>
-<area shape="poly" title=" " alt="" coords="245,108,152,151,150,146,243,103"/>
-<area shape="rect" title=" " alt="" coords="161,155,216,181"/>
-<area shape="poly" title=" " alt="" coords="255,109,215,146,212,142,252,105"/>
-<area shape="rect" title=" " alt="" coords="241,155,294,181"/>
-<area shape="poly" title=" " alt="" coords="270,107,270,139,265,139,265,107"/>
-<area shape="rect" title=" " alt="" coords="319,155,387,181"/>
-<area shape="poly" title=" " alt="" coords="284,105,328,143,325,147,280,109"/>
-<area shape="poly" title=" " alt="" coords="292,102,400,146,398,151,290,107"/>
+<area shape="poly" title=" " alt="" coords="206,106,78,153,77,148,204,101"/>
+<area shape="rect" title=" " alt="" coords="86,155,136,181"/>
+<area shape="poly" title=" " alt="" coords="211,107,146,149,143,144,206,108"/>
+<area shape="rect" title=" " alt="" coords="160,155,217,181"/>
+<area shape="poly" title=" " alt="" coords="224,106,205,143,201,139,219,109"/>
+<area shape="rect" title=" " alt="" coords="242,155,295,181"/>
+<area shape="poly" title=" " alt="" coords="237,105,257,142,252,140,234,110"/>
+<area shape="rect" title=" " alt="" coords="320,155,388,181"/>
+<area shape="poly" title=" " alt="" coords="251,105,322,147,317,147,250,110"/>
+<area shape="rect" title=" " alt="" coords="412,155,477,181"/>
+<area shape="poly" title=" " alt="" coords="253,100,400,150,395,152,252,105"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 被依存関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="GgApp_8h__dep__incl.png" border="0" usemap="#aGgApp_8hdep" alt=""/></div>
+<div class="center"><img src="GgApp_8h__dep__incl.png" border="0" usemap="#aGgApp_8hdep" loading="lazy" alt=""/></div>
 <map name="aGgApp_8hdep" id="aGgApp_8hdep">
 <area shape="rect" title=" " alt="" coords="147,5,219,32"/>
 <area shape="rect" href="GgApp_8cpp.html" title=" " alt="" coords="5,80,92,107"/>
-<area shape="poly" title=" " alt="" coords="148,42,73,82,71,77,145,37"/>
+<area shape="poly" title=" " alt="" coords="145,42,74,82,71,77,148,37"/>
 <area shape="rect" href="Menu_8h.html" title=" " alt="" coords="116,80,181,107"/>
-<area shape="poly" title=" " alt="" coords="173,47,157,81,152,78,168,45"/>
+<area shape="poly" title=" " alt="" coords="172,44,157,81,152,78,169,48"/>
 <area shape="rect" href="ggsample01_8cpp.html" title=" " alt="" coords="160,155,276,181"/>
-<area shape="poly" title=" " alt="" coords="192,47,217,154,212,155,187,48"/>
+<area shape="poly" title=" " alt="" coords="192,45,218,155,212,154,188,49"/>
 <area shape="rect" href="main_8cpp.html" title=" " alt="" coords="255,80,330,107"/>
-<area shape="poly" title=" " alt="" coords="216,39,275,77,272,82,214,43"/>
+<area shape="poly" title=" " alt="" coords="216,38,276,79,271,80,214,44"/>
 <area shape="rect" href="Menu_8cpp.html" title=" " alt="" coords="57,155,136,181"/>
-<area shape="poly" title=" " alt="" coords="133,121,108,156,103,153,128,118"/>
-<area shape="poly" title=" " alt="" coords="173,116,208,152,204,156,169,120"/>
+<area shape="poly" title=" " alt="" coords="133,118,107,156,104,152,128,121"/>
+<area shape="poly" title=" " alt="" coords="172,115,209,154,203,154,170,120"/>
 </map>
 </div>
 </div>
 <p><a href="GgApp_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 クラス</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp.html">GgApp</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html">GgApp::Window</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:GgApp" id="r_GgApp"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp.html">GgApp</a></td></tr>
+<tr class="memitem:GgApp_3A_3AWindow" id="r_GgApp_3A_3AWindow"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGgApp_1_1Window.html">GgApp::Window</a></td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 マクロ定義</h2></td></tr>
 <tr class="memitem:aa86aa98e9a069096e9b0463ed43b0bdd" id="r_aa86aa98e9a069096e9b0463ed43b0bdd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa86aa98e9a069096e9b0463ed43b0bdd">GG_USE_IMGUI</a></td></tr>
-<tr class="separator:aa86aa98e9a069096e9b0463ed43b0bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ed2c057903764ef8477b9da6ac4ed64" id="r_a1ed2c057903764ef8477b9da6ac4ed64"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ed2c057903764ef8477b9da6ac4ed64">GG_BUTTON_COUNT</a>&#160;&#160;&#160;3</td></tr>
-<tr class="separator:a1ed2c057903764ef8477b9da6ac4ed64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65e9ad0c9a623761c24f44a8fbdf6d2d" id="r_a65e9ad0c9a623761c24f44a8fbdf6d2d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65e9ad0c9a623761c24f44a8fbdf6d2d">GG_INTERFACE_COUNT</a>&#160;&#160;&#160;5</td></tr>
-<tr class="separator:a65e9ad0c9a623761c24f44a8fbdf6d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
 <div class="textblock"><p>ゲームグラフィックス特論宿題アプリケーションクラスの定義.</p>
 <dl class="section author"><dt>著者</dt><dd>Kohe Tokoi </dd></dl>
 <dl class="section date"><dt>日付</dt><dd>July 17, 2025 </dd></dl>
 
 <p class="definition"> <a class="el" href="GgApp_8h_source.html">GgApp.h</a> に定義があります。</p>
-</div><h2 class="groupheader">マクロ定義詳解</h2>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">マクロ定義詳解</h2>
 <a id="a1ed2c057903764ef8477b9da6ac4ed64" name="a1ed2c057903764ef8477b9da6ac4ed64"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1ed2c057903764ef8477b9da6ac4ed64">&#9670;&#160;</a></span>GG_BUTTON_COUNT</h2>
 
@@ -233,11 +220,19 @@ GgApp.h の依存先関係図:</div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="GgApp_8h.html">GgApp.h</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="navelem"><a href="GgApp_8h.html">GgApp.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
   </ul>
 </div>
 </body>

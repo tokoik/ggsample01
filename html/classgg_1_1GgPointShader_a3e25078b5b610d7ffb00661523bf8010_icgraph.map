@@ -1,5 +1,13 @@
 <map id="gg::GgPointShader::load" name="gg::GgPointShader::load">
-<area shape="rect" id="Node000001" title=" " alt="" coords="195,13,358,40"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgSimpleShader.html#acd4095770807f1c4977e6d50c06272ce" title=" " alt="" coords="5,5,147,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,29,147,29,147,24,179,24"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="406,72,569,99"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgPointShader.html#ac4b6079bd97709dc5ff161b1ea738f9e" title=" " alt="" coords="207,5,346,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="420,68,346,49,347,43,425,67"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgPointShader.html#aa087d78628364e0597217cdde75e6018" title=" " alt="" coords="195,72,358,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="388,86,359,88,358,83,393,85"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgSimpleShader.html#acd4095770807f1c4977e6d50c06272ce" title=" " alt="" coords="206,123,347,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="425,103,348,127,347,122,420,104"/>
+<area shape="rect" id="Node000005" href="$classgg_1_1GgSimpleShader.html#aa2f7e9245042f1adbc6ddd6c834022ef" title=" " alt="" coords="5,89,147,132"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="188,130,147,125,147,120,193,129"/>
+<area shape="rect" id="Node000006" href="$classgg_1_1GgSimpleShader.html#ad6900bfb221457e36108c321afc07005" title=" " alt="" coords="5,156,147,199"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="188,159,148,168,147,163,193,158"/>
 </map>

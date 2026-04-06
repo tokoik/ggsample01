@@ -29,13 +29,14 @@ var NAVTREE =
     [ "ggsample01", "md_README.html", [
       [ "ゲームグラフィックス特論A　第１回　宿題", "md_README.html#autotoc_md1", null ],
       [ "宿題プログラムの作成に必要な環境", "md_README.html#autotoc_md2", null ],
-      [ "補足", "md_README.html#autotoc_md3", null ],
-      [ "宿題プログラム用補助プログラムについて", "md_README.html#autotoc_md4", [
-        [ "補助プログラムのドキュメント", "md_README.html#autotoc_md5", null ],
-        [ "補助プログラムの使い方", "md_README.html#autotoc_md6", null ],
-        [ "Oculus Rift を使う場合", "md_README.html#autotoc_md7", null ],
-        [ "Dear ImGui を使う場合", "md_README.html#autotoc_md8", [
-          [ "imconfig.h の変更点", "md_README.html#autotoc_md9", null ]
+      [ "宿題の提出", "md_README.html#autotoc_md3", null ],
+      [ "補足", "md_README.html#autotoc_md4", null ],
+      [ "宿題プログラム用補助プログラムについて", "md_README.html#autotoc_md5", [
+        [ "補助プログラムのドキュメント", "md_README.html#autotoc_md6", null ],
+        [ "補助プログラムの使い方", "md_README.html#autotoc_md7", null ],
+        [ "Oculus Rift を使う場合", "md_README.html#autotoc_md8", null ],
+        [ "Dear ImGui を使う場合", "md_README.html#autotoc_md9", [
+          [ "imconfig.h の変更点", "md_README.html#autotoc_md10", null ]
         ] ]
       ] ]
     ] ],
@@ -80,8 +81,9 @@ var NAVTREEINDEX =
 "classgg_1_1GgQuaternion.html#a5570b27f958ccde717bc997cca85a0fd",
 "classgg_1_1GgSimpleShader.html#acd4095770807f1c4977e6d50c06272ce",
 "classgg_1_1GgVector.html#a5bac9976a7fe4be4a0e69c974153d745",
-"namespacegg.html#a010fafe70a15a0aaa10ca2cceab23305"
+"namespacegg.html#affd8bb35ddcc19b1dec8e059b2ae6061"
 ];
 
 var SYNCONMSG = 'クリックで同期表示が無効になります';
 var SYNCOFFMSG = 'クリックで同期表示が有効になります';
+var LISTOFALLMEMBERS = '全メンバ一覧';

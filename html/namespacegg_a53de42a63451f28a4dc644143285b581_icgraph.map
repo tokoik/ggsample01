@@ -1,17 +1,21 @@
 <map id="gg::ggNormalize4" name="gg::ggNormalize4">
-<area shape="rect" id="Node000001" title=" " alt="" coords="691,81,814,108"/>
-<area shape="rect" id="Node000002" href="$namespacegg.html#a873c34e94fe830ecf23c12a747b3c8ce" title=" " alt="" coords="476,5,598,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="711,76,642,47,597,33,599,28,644,41,713,71"/>
-<area shape="rect" id="Node000003" href="$namespacegg.html#ab8f809ed8f45e79d9054534d2f86f370" title=" " alt="" coords="476,56,598,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="676,88,598,79,599,74,676,83"/>
-<area shape="rect" id="Node000004" href="$classgg_1_1GgQuaternion.html#af529d76bbf4048ad56625575c7af3668" title=" " alt="" coords="430,107,643,133"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="677,106,644,110,644,105,676,101"/>
-<area shape="rect" id="Node000008" href="$classgg_1_1GgVector.html#ac71838f77dde35fdc627b96e6807462f" title=" " alt="" coords="452,157,621,184"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="713,118,644,148,606,159,604,154,642,143,711,113"/>
-<area shape="rect" id="Node000005" href="$classgg_1_1GgQuaternion.html#a7829ffa84538358008d7e37c247308e1" title=" " alt="" coords="169,81,382,108"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="414,111,382,108,383,102,415,106"/>
-<area shape="rect" id="Node000006" href="$classgg_1_1GgQuaternion.html#a8667e065b18d857126f5481d0be8d527" title=" " alt="" coords="182,132,369,159"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="415,134,370,139,369,134,414,129"/>
-<area shape="rect" id="Node000007" href="$namespacegg.html#aab31210c17598a7d14ecb3c9f461040c" title=" " alt="" coords="5,132,121,159"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="166,148,121,148,121,143,166,143"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="732,81,856,108"/>
+<area shape="rect" id="Node000002" href="$namespacegg.html#a873c34e94fe830ecf23c12a747b3c8ce" title=" " alt="" coords="516,5,639,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="751,74,683,47,639,34,639,28,685,41,757,74"/>
+<area shape="rect" id="Node000003" href="$namespacegg.html#ab8f809ed8f45e79d9054534d2f86f370" title=" " alt="" coords="516,56,639,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="714,86,639,79,639,74,720,86"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgQuaternion.html#af529d76bbf4048ad56625575c7af3668" title=" " alt="" coords="470,107,684,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="714,104,685,110,685,105,720,103"/>
+<area shape="rect" id="Node000010" href="$classgg_1_1GgVector.html#ac71838f77dde35fdc627b96e6807462f" title=" " alt="" coords="493,157,661,184"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="756,115,685,148,646,159,645,154,683,143,751,116"/>
+<area shape="rect" id="Node000005" href="$classgg_1_1GgQuaternion.html#a7829ffa84538358008d7e37c247308e1" title=" " alt="" coords="208,81,422,108"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="452,108,423,108,422,102,457,108"/>
+<area shape="rect" id="Node000006" href="$classgg_1_1GgQuaternion.html#a8667e065b18d857126f5481d0be8d527" title=" " alt="" coords="221,132,408,159"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="452,132,409,139,409,134,457,131"/>
+<area shape="rect" id="Node000007" href="$classgg_1_1GgTrackball.html#a4f56d59aadba0be3e8196971828382a1" title=" " alt="" coords="11,81,154,108"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="233,129,147,111,147,106,238,127"/>
+<area shape="rect" id="Node000008" href="$namespacegg.html#aab31210c17598a7d14ecb3c9f461040c" title=" " alt="" coords="24,132,141,159"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="203,146,142,148,141,143,208,144"/>
+<area shape="rect" id="Node000009" href="$classgg_1_1GgTrackball.html#adbf3c13a6442309c79bd3185fa74a0a4" title=" " alt="" coords="5,183,160,209"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="238,162,148,185,146,179,233,163"/>
 </map>

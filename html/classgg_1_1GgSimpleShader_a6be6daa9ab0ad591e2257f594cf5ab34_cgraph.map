@@ -1,5 +1,9 @@
 <map id="gg::GgSimpleShader::loadModelviewMatrix" name="gg::GgSimpleShader::loadModelviewMatrix">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,154,48"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgMatrix.html#a85419e1b591aa77fda6a908dab1d9468" title=" " alt="" coords="202,13,324,40"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,24,186,24,186,29,154,29"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,27,157,69"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgMatrix.html#a85419e1b591aa77fda6a908dab1d9468" title=" " alt="" coords="219,5,342,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,34,207,29,201,31,158,39"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgSimpleShader.html#a56ebe35618715b611eda5d1b3d4637da" title=" " alt="" coords="205,56,356,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="157,57,192,64,187,64,157,62"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgPointShader.html#ac6e9398fa71096e9866fcd84cb542a91" title=" " alt="" coords="404,56,547,99"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="356,75,391,77,386,77,356,80"/>
 </map>

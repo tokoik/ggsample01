@@ -1,5 +1,7 @@
 <map id="gg::GgTrackball::reset" name="gg::GgTrackball::reset">
-<area shape="rect" id="Node000001" title=" " alt="" coords="243,5,392,32"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgTrackball.html#a880dce99e0a666536802659963971c50" title=" " alt="" coords="5,5,195,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="227,21,195,21,195,16,227,16"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="469,5,619,32"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgTrackball.html#a880dce99e0a666536802659963971c50" title=" " alt="" coords="230,5,421,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="451,19,421,21,421,16,456,19"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgTrackball.html#a980a60c0d7b99d203bff8b5f1cb7eb66" title=" " alt="" coords="5,5,182,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="212,19,182,21,182,16,217,19"/>
 </map>

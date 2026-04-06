@@ -1,7 +1,13 @@
 <map id="gg::GgQuaternion::subtract" name="gg::GgQuaternion::subtract">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,184,32"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#a41eeb50036f7346680b862956a4d4116" title=" " alt="" coords="232,5,410,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,16,216,16,216,21,184,21"/>
-<area shape="rect" id="Node000003" href="$classgg_1_1GgQuaternion.html#ae4f92a1abd12399ed4dbfdfd6412b85e" title=" " alt="" coords="458,5,662,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="411,16,442,16,442,21,411,21"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,24,184,51"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#ac1c52c26e2fdfdde277f9aa714757a2f" title=" " alt="" coords="710,24,922,51"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,21,231,10,355,3,479,5,595,11,697,23,692,23,595,17,479,10,355,9,232,15,158,26"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgVector.html#a8d6fb720fb6068cd9f6cb51435cdcf58" title=" " alt="" coords="241,24,400,51"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,35,228,37,223,38,185,40"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgQuaternion.html#a41eeb50036f7346680b862956a4d4116" title=" " alt="" coords="232,75,410,102"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="158,49,246,70,241,72,157,54"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="388,72,458,60,580,48,698,42,692,43,580,53,458,66,389,77"/>
+<area shape="rect" id="Node000005" href="$classgg_1_1GgQuaternion.html#ae4f92a1abd12399ed4dbfdfd6412b85e" title=" " alt="" coords="458,75,662,102"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="411,86,445,88,440,88,411,91"/>
+<area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="631,72,727,55,733,54,632,77"/>
 </map>

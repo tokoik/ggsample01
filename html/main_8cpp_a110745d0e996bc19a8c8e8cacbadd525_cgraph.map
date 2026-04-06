@@ -1,15 +1,35 @@
 <map id="main" name="main">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,55,83"/>
-<area shape="rect" id="Node000002" href="$classGgApp.html#ad2e50a5e84d4fd6162e03039ac00c7ae" title=" " alt="" coords="103,56,200,83"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,67,87,67,87,72,55,72"/>
-<area shape="rect" id="Node000003" href="$classGgApp_1_1Window.html#a579867ae1179b9d946e2a0e34a62e830" title=" " alt="" coords="248,5,423,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="200,53,269,34,270,39,201,59"/>
-<area shape="rect" id="Node000004" href="$namespacegg.html#a2924895ad284e08b08a2cfd115c5a7bf" title=" " alt="" coords="288,56,384,83"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="200,67,272,67,272,72,200,72"/>
-<area shape="rect" id="Node000006" href="$namespacegg.html#a7dcbaa73755efd46f1f19b0b3a39b473" title=" " alt="" coords="274,107,398,133"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="201,80,270,99,269,105,200,85"/>
-<area shape="rect" id="Node000005" href="$classgg_1_1GgMatrix.html#a753d56545359ba6efc11aa9b5b3ade11" title=" " alt="" coords="485,56,653,83"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="384,67,470,67,470,72,384,72"/>
-<area shape="rect" id="Node000007" href="$classgg_1_1GgMatrix.html#a2455429beaf82954d49fa3ca25143177" title=" " alt="" coords="471,107,667,133"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="398,117,456,117,456,123,398,123"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,325,55,352"/>
+<area shape="rect" id="Node000002" href="$classGgApp.html#ad2e50a5e84d4fd6162e03039ac00c7ae" title=" " alt="" coords="103,325,200,352"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="53,336,89,337,85,341,56,341"/>
+<area shape="rect" id="Node000003" href="$classMenu.html#a2cd7ab9901a8f42a3ae977d0774398a6" title=" " alt="" coords="306,5,396,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="150,324,153,272,166,196,178,154,195,113,217,75,246,42,267,28,293,21,289,25,269,33,250,46,222,78,200,116,183,156,172,197,159,273,155,325"/>
+<area shape="rect" id="Node000004" href="$classGgApp_1_1Window.html#ac175ec3d297b415120c6cc29b6392fdd" title=" " alt="" coords="260,56,443,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="151,325,157,280,173,218,185,184,201,150,221,120,246,93,254,89,251,93,250,97,225,123,206,153,190,186,178,219,163,281,156,326"/>
+<area shape="rect" id="Node000005" href="$classConfig.html#aaa87cc9fc950c37081b7e26280d159b5" title=" " alt="" coords="290,107,413,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="153,324,162,288,180,239,207,187,225,164,246,143,277,129,273,133,250,147,229,167,211,190,184,241,167,289,158,326"/>
+<area shape="rect" id="Node000006" href="$classMenu.html#a9a4154e24d1d8e06274d5bf72ed98dce" title=" " alt="" coords="298,157,405,184"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="155,324,187,261,213,225,247,194,284,178,280,182,249,198,217,228,192,264,160,326"/>
+<area shape="rect" id="Node000007" href="$classMenu.html#af99f96bb68a2cba3c491aaa14deeffea" title=" " alt="" coords="294,208,408,235"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="161,323,196,284,220,262,247,244,281,232,277,236,249,249,223,267,200,288,165,326"/>
+<area shape="rect" id="Node000008" href="$classGgApp_1_1Window.html#ae072fc515e5a2fc54b8a11a552fc10b0" title=" " alt="" coords="256,259,447,301"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="198,323,263,305,259,308,201,327"/>
+<area shape="rect" id="Node000009" href="$classMenu.html#a7d268518ff7100fdfd5626c8aeac5eb7" title=" " alt="" coords="291,325,411,352"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="199,336,277,337,273,340,201,341"/>
+<area shape="rect" id="Node000010" href="$classGgApp_1_1Window.html#a074e392cd47e92946d23308cae934e40" title=" " alt="" coords="248,376,454,419"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="199,350,264,370,259,372,200,355"/>
+<area shape="rect" id="Node000011" href="$classGgApp.html#ad1955da79da506e73e4dabb2673e2363" title=" " alt="" coords="278,443,425,469"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="163,350,200,390,223,411,249,428,266,437,261,438,247,433,220,415,196,394,163,355"/>
+<area shape="rect" id="Node000012" href="$classConfig.html#a3dc0108805ae6c4c8d0ce90853504f1f" title=" " alt="" coords="292,493,411,520"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="158,350,192,414,217,449,250,479,279,495,274,496,246,484,213,453,187,416,157,355"/>
+<area shape="rect" id="Node000013" href="$namespacegg.html#a2924895ad284e08b08a2cfd115c5a7bf" title=" " alt="" coords="303,544,399,571"/>
+<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="156,350,167,388,184,436,211,487,229,510,250,530,268,541,290,551,285,551,266,546,246,534,225,514,207,490,180,438,162,389,155,355"/>
+<area shape="rect" id="Node000015" href="$namespacegg.html#a7dcbaa73755efd46f1f19b0b3a39b473" title=" " alt="" coords="288,595,414,621"/>
+<area shape="poly" id="edge14_Node000002_Node000015" title=" " alt="" coords="154,350,163,396,178,458,190,492,206,524,225,555,250,581,276,598,271,598,246,585,221,558,201,527,185,494,173,460,157,397,153,355"/>
+<area shape="rect" id="Node000017" href="$classGgApp_1_1Window.html#a19ae0ed75fc177b2a0672fc2af3c78a4" title=" " alt="" coords="253,645,449,672"/>
+<area shape="poly" id="edge16_Node000002_Node000017" title=" " alt="" coords="153,350,159,405,172,480,183,521,200,562,222,599,250,631,254,637,249,636,246,635,217,602,195,564,178,523,166,481,153,405,152,355"/>
+<area shape="rect" id="Node000014" href="$classgg_1_1GgMatrix.html#a753d56545359ba6efc11aa9b5b3ade11" title=" " alt="" coords="517,544,685,571"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="399,555,504,557,499,558,400,560"/>
+<area shape="rect" id="Node000016" href="$classgg_1_1GgMatrix.html#a2455429beaf82954d49fa3ca25143177" title=" " alt="" coords="502,595,700,621"/>
+<area shape="poly" id="edge15_Node000015_Node000016" title=" " alt="" coords="415,605,489,608,484,608,415,611"/>
 </map>

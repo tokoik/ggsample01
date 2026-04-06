@@ -1,5 +1,9 @@
 <map id="gg::GgTriangles::draw" name="gg::GgTriangles::draw">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,153,32"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgShape.html#adf1b1da86a75b4c74dddf6194e615f6d" title=" " alt="" coords="201,5,333,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,16,185,16,185,21,153,21"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,155,83"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgShape.html#adf1b1da86a75b4c74dddf6194e615f6d" title=" " alt="" coords="223,5,356,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,53,219,35,215,38,139,58"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgTriangles.html#a175a09c25313d9ae85bc4badf91fbfd6" title=" " alt="" coords="203,56,377,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,67,189,69,184,70,155,72"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgShape.html#a860e6671d9d80295599ed2cf9f2449bc" title=" " alt="" coords="212,107,368,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="139,81,219,102,214,103,138,86"/>
 </map>

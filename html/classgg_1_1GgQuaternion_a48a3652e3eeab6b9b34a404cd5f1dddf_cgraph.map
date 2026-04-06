@@ -1,5 +1,8 @@
 <map id="gg::GgQuaternion::loadRotate" name="gg::GgQuaternion::loadRotate">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,199,32"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#a82d0620de0f023642b08d7e0f23e0687" title=" " alt="" coords="247,5,440,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,16,231,16,231,21,199,21"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,200,32"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#ac1c52c26e2fdfdde277f9aa714757a2f" title=" " alt="" coords="490,5,701,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,16,475,16,474,21,200,21"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgQuaternion.html#a82d0620de0f023642b08d7e0f23e0687" title=" " alt="" coords="248,31,442,57"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="200,26,235,32,230,32,200,32"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="442,32,472,31,477,31,443,37"/>
 </map>

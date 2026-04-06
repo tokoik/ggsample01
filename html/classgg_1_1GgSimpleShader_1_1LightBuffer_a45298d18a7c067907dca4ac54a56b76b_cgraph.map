@@ -1,0 +1,9 @@
+<map id="gg::GgSimpleShader::LightBuffer::loadSpecular" name="gg::GgSimpleShader::LightBuffer::loadSpecular">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,72,180,115"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506" title=" " alt="" coords="228,5,368,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,69,218,52,213,55,161,74"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f" title=" " alt="" coords="228,72,368,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="179,91,215,93,210,94,180,96"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197" title=" " alt="" coords="228,139,368,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="160,113,218,133,213,134,160,118"/>
+</map>

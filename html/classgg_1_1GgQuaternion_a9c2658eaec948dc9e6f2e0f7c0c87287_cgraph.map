@@ -1,7 +1,13 @@
 <map id="gg::GgQuaternion::operator&#45;" name="gg::GgQuaternion::operator&#45;">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,188,32"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#a5c776b116c954194ba457324c36b16b2" title=" " alt="" coords="236,5,388,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,16,221,16,221,21,188,21"/>
-<area shape="rect" id="Node000003" href="$classgg_1_1GgQuaternion.html#ad0b43dbf846eb5c01192dfe63e3d131d" title=" " alt="" coords="436,5,614,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="389,16,420,16,420,21,389,21"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,74,188,100"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#a5c776b116c954194ba457324c36b16b2" title=" " alt="" coords="239,23,392,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,70,242,52,238,55,158,75"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgQuaternion.html#ac1c52c26e2fdfdde277f9aa714757a2f" title=" " alt="" coords="669,23,881,50"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="188,83,387,76,621,59,688,52,683,53,622,64,387,82,188,88"/>
+<area shape="rect" id="Node000005" href="$classgg_1_1GgVector.html#a8d6fb720fb6068cd9f6cb51435cdcf58" title=" " alt="" coords="236,124,395,151"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="158,98,243,119,237,121,157,104"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="373,20,443,8,532,3,622,8,692,20,687,20,621,14,532,8,443,14,374,25"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgQuaternion.html#ad0b43dbf846eb5c01192dfe63e3d131d" title=" " alt="" coords="443,23,621,50"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="391,34,430,36,425,37,392,39"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="622,34,656,36,651,36,622,39"/>
 </map>

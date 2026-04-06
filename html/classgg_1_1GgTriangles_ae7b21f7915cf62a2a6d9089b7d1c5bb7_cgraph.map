@@ -1,0 +1,9 @@
+<map id="gg::GgTriangles::GgTriangles" name="gg::GgTriangles::GgTriangles">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,197,57"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgTriangles.html#a5482f2023b35d5937f7a4b6da3501d44" title=" " alt="" coords="245,5,436,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,31,232,30,226,31,198,36"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgTriangles.html#a2cfa85c9ee633974e69df68d9ec588f1" title=" " alt="" coords="268,56,413,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="197,51,255,60,250,60,197,57"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgShape.html#a7e018d9755385e742455d011f2d9a685" title=" " alt="" coords="484,5,643,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="436,16,471,18,466,19,437,21"/>
+</map>

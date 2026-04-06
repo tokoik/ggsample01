@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: gg.cpp ソースファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -11,7 +11,6 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
@@ -36,28 +35,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.10.0 -->
+<!-- 構築: Doxygen 1.15.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','検索');
+  initMenu('',true,false,'search.php','検索',true);
   $(function() { init_search(); });
 });
-/* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -70,10 +63,9 @@ $(function() { codefold.init(0); });
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
-/* @license-end */
+$(function(){initNavTree('gg_8cpp_source.html','',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -123,9 +115,9 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"></span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="gg_8h.html">gg.h</a>&quot;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">// 標準ライブラリ</span></div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &lt;cfloat&gt;</span></div>
@@ -135,7 +127,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &lt;limits&gt;</span></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &lt;map&gt;</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#define READ_TEXTURE_COORDINATE_FROM_OBJ 0</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">// Windows (Visual Studio) のとき</span></div>
@@ -1435,8 +1427,8 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l01342" name="l01342"></a><span class="lineno"> 1342</span>PFNGLWEIGHTPATHSNVPROC glWeightPathsNV;</div>
 <div class="line"><a id="l01343" name="l01343"></a><span class="lineno"> 1343</span>PFNGLWINDOWRECTANGLESEXTPROC glWindowRectanglesEXT;</div>
 <div class="line"><a id="l01344" name="l01344"></a><span class="lineno"> 1344</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01345" name="l01345"></a><span class="lineno"> 1345</span> </div>
-<div class="line"><a id="l01347" name="l01347"></a><span class="lineno"> 1347</span> </div>
+<div class="line"><a id="l01345" name="l01345"></a><span class="lineno"> 1345</span></div>
+<div class="line"><a id="l01347" name="l01347"></a><span class="lineno"> 1347</span></div>
 <div class="line"><a id="l01349" name="l01349"></a><span class="lineno"> 1349</span>GLint <a class="code hl_variable" href="namespacegg.html#a3760bb8490c7d6103a5f186b705b313e">gg::ggBufferAlignment</a>(0);</div>
 <div class="line"><a id="l01350" name="l01350"></a><span class="lineno"> 1350</span> </div>
 <div class="line"><a id="l01351" name="l01351"></a><span class="lineno"> 1351</span><span class="comment">//</span></div>
@@ -3424,11 +3416,11 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l03298" name="l03298"></a><span class="lineno"> 3298</span>  {</div>
 <div class="line"><a id="l03299" name="l03299"></a><span class="lineno"> 3299</span>    <span class="keyword">const</span> <span class="keyword">auto</span> s{ sinf(a) / sqrtf(l) };</div>
 <div class="line"><a id="l03300" name="l03300"></a><span class="lineno"> 3300</span> </div>
-<div class="line"><a id="l03301" name="l03301"></a><span class="lineno"> 3301</span>    *<span class="keyword">this</span> = <a class="code hl_class" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>{ x * s, y * s, z * s, w };</div>
+<div class="line"><a id="l03301" name="l03301"></a><span class="lineno"> 3301</span>    *<span class="keyword">this</span> = <a class="code hl_function" href="classgg_1_1GgQuaternion.html#ac1c52c26e2fdfdde277f9aa714757a2f">GgQuaternion</a>{ x * s, y * s, z * s, w };</div>
 <div class="line"><a id="l03302" name="l03302"></a><span class="lineno"> 3302</span>  }</div>
 <div class="line"><a id="l03303" name="l03303"></a><span class="lineno"> 3303</span>  <span class="keywordflow">else</span></div>
 <div class="line"><a id="l03304" name="l03304"></a><span class="lineno"> 3304</span>  {</div>
-<div class="line"><a id="l03305" name="l03305"></a><span class="lineno"> 3305</span>    *<span class="keyword">this</span> = <a class="code hl_class" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>{ 0.0f, 0.0f, 0.0f, w };</div>
+<div class="line"><a id="l03305" name="l03305"></a><span class="lineno"> 3305</span>    *<span class="keyword">this</span> = <a class="code hl_function" href="classgg_1_1GgQuaternion.html#ac1c52c26e2fdfdde277f9aa714757a2f">GgQuaternion</a>{ 0.0f, 0.0f, 0.0f, w };</div>
 <div class="line"><a id="l03306" name="l03306"></a><span class="lineno"> 3306</span>  }</div>
 <div class="line"><a id="l03307" name="l03307"></a><span class="lineno"> 3307</span> </div>
 <div class="line"><a id="l03308" name="l03308"></a><span class="lineno"> 3308</span>  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
@@ -3443,7 +3435,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l03315" name="l03315"></a><span class="lineno"> 3315</span>{</div>
 <div class="line"><a id="l03316" name="l03316"></a><span class="lineno"> 3316</span>  <span class="keyword">const</span> <span class="keyword">auto</span> t{ a * 0.5f };</div>
 <div class="line"><a id="l03317" name="l03317"></a><span class="lineno"> 3317</span> </div>
-<div class="line"><a id="l03318" name="l03318"></a><span class="lineno"> 3318</span>  *<span class="keyword">this</span> = <a class="code hl_class" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>{ sinf(t), 0.0f, 0.0f, cosf(t) };</div>
+<div class="line"><a id="l03318" name="l03318"></a><span class="lineno"> 3318</span>  *<span class="keyword">this</span> = <a class="code hl_function" href="classgg_1_1GgQuaternion.html#ac1c52c26e2fdfdde277f9aa714757a2f">GgQuaternion</a>{ sinf(t), 0.0f, 0.0f, cosf(t) };</div>
 <div class="line"><a id="l03319" name="l03319"></a><span class="lineno"> 3319</span> </div>
 <div class="line"><a id="l03320" name="l03320"></a><span class="lineno"> 3320</span>  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l03321" name="l03321"></a><span class="lineno"> 3321</span>}</div>
@@ -3457,7 +3449,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l03327" name="l03327"></a><span class="lineno"> 3327</span>{</div>
 <div class="line"><a id="l03328" name="l03328"></a><span class="lineno"> 3328</span>  <span class="keyword">const</span> <span class="keyword">auto</span> t{ a * 0.5f };</div>
 <div class="line"><a id="l03329" name="l03329"></a><span class="lineno"> 3329</span> </div>
-<div class="line"><a id="l03330" name="l03330"></a><span class="lineno"> 3330</span>  *<span class="keyword">this</span> = <a class="code hl_class" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>{ 0.0f, sinf(t), 0.0f, cosf(t) };</div>
+<div class="line"><a id="l03330" name="l03330"></a><span class="lineno"> 3330</span>  *<span class="keyword">this</span> = <a class="code hl_function" href="classgg_1_1GgQuaternion.html#ac1c52c26e2fdfdde277f9aa714757a2f">GgQuaternion</a>{ 0.0f, sinf(t), 0.0f, cosf(t) };</div>
 <div class="line"><a id="l03331" name="l03331"></a><span class="lineno"> 3331</span> </div>
 <div class="line"><a id="l03332" name="l03332"></a><span class="lineno"> 3332</span>  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l03333" name="l03333"></a><span class="lineno"> 3333</span>}</div>
@@ -3471,7 +3463,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l03339" name="l03339"></a><span class="lineno"> 3339</span>{</div>
 <div class="line"><a id="l03340" name="l03340"></a><span class="lineno"> 3340</span>  <span class="keyword">const</span> <span class="keyword">auto</span> t{ a * 0.5f };</div>
 <div class="line"><a id="l03341" name="l03341"></a><span class="lineno"> 3341</span> </div>
-<div class="line"><a id="l03342" name="l03342"></a><span class="lineno"> 3342</span>  *<span class="keyword">this</span> = <a class="code hl_class" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>{ 0.0f, 0.0f, sinf(t), cosf(t) };</div>
+<div class="line"><a id="l03342" name="l03342"></a><span class="lineno"> 3342</span>  *<span class="keyword">this</span> = <a class="code hl_function" href="classgg_1_1GgQuaternion.html#ac1c52c26e2fdfdde277f9aa714757a2f">GgQuaternion</a>{ 0.0f, 0.0f, sinf(t), cosf(t) };</div>
 <div class="line"><a id="l03343" name="l03343"></a><span class="lineno"> 3343</span> </div>
 <div class="line"><a id="l03344" name="l03344"></a><span class="lineno"> 3344</span>  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l03345" name="l03345"></a><span class="lineno"> 3345</span>}</div>
@@ -3483,7 +3475,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="foldopen" id="foldopen03350" data-start="{" data-end="}">
 <div class="line"><a id="l03350" name="l03350"></a><span class="lineno"><a class="line" href="classgg_1_1GgQuaternion.html#a3a1be65570aae13d963e894f02c88beb"> 3350</a></span><a class="code hl_class" href="classgg_1_1GgQuaternion.html">gg::GgQuaternion</a>&amp; <a class="code hl_function" href="classgg_1_1GgQuaternion.html#a3a1be65570aae13d963e894f02c88beb">gg::GgQuaternion::loadEuler</a>(GLfloat heading, GLfloat pitch, GLfloat roll)</div>
 <div class="line"><a id="l03351" name="l03351"></a><span class="lineno"> 3351</span>{</div>
-<div class="line"><a id="l03352" name="l03352"></a><span class="lineno"> 3352</span>  <a class="code hl_class" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> h, p, r;</div>
+<div class="line"><a id="l03352" name="l03352"></a><span class="lineno"> 3352</span>  <a class="code hl_function" href="classgg_1_1GgQuaternion.html#ac1c52c26e2fdfdde277f9aa714757a2f">GgQuaternion</a> h, p, r;</div>
 <div class="line"><a id="l03353" name="l03353"></a><span class="lineno"> 3353</span> </div>
 <div class="line"><a id="l03354" name="l03354"></a><span class="lineno"> 3354</span>  h.<a class="code hl_function" href="classgg_1_1GgQuaternion.html#a308e08f78d2dfeadc2efbcd7a470d6bd">loadRotateY</a>(heading);</div>
 <div class="line"><a id="l03355" name="l03355"></a><span class="lineno"> 3355</span>  p.<a class="code hl_function" href="classgg_1_1GgQuaternion.html#a6f9cd8893b1adbbaf17588b1ba5ee9c3">loadRotateX</a>(pitch);</div>
@@ -3537,7 +3529,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l03397" name="l03397"></a><span class="lineno"> 3397</span>  <span class="keywordflow">if</span> (l &gt; 0.0f)</div>
 <div class="line"><a id="l03398" name="l03398"></a><span class="lineno"> 3398</span>  {</div>
 <div class="line"><a id="l03399" name="l03399"></a><span class="lineno"> 3399</span>    <span class="comment">// 共役四元数を求める</span></div>
-<div class="line"><a id="l03400" name="l03400"></a><span class="lineno"> 3400</span>    <a class="code hl_class" href="classgg_1_1GgQuaternion.html">GgQuaternion</a> r;</div>
+<div class="line"><a id="l03400" name="l03400"></a><span class="lineno"> 3400</span>    <a class="code hl_function" href="classgg_1_1GgQuaternion.html#ac1c52c26e2fdfdde277f9aa714757a2f">GgQuaternion</a> r;</div>
 <div class="line"><a id="l03401" name="l03401"></a><span class="lineno"> 3401</span>    r.<a class="code hl_function" href="classgg_1_1GgQuaternion.html#af9a9577581a5f9bbebd675998f741215">loadConjugate</a>(a);</div>
 <div class="line"><a id="l03402" name="l03402"></a><span class="lineno"> 3402</span> </div>
 <div class="line"><a id="l03403" name="l03403"></a><span class="lineno"> 3403</span>    <span class="comment">// ノルムの二乗で割る</span></div>
@@ -3555,7 +3547,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l03414" name="l03414"></a><span class="lineno"> 3414</span><span class="comment">// 簡易トラックボール処理：リセット</span></div>
 <div class="line"><a id="l03415" name="l03415"></a><span class="lineno"> 3415</span><span class="comment">//</span></div>
 <div class="foldopen" id="foldopen03416" data-start="{" data-end="}">
-<div class="line"><a id="l03416" name="l03416"></a><span class="lineno"><a class="line" href="classgg_1_1GgTrackball.html#aaaa41ddff91ff91173133d478356b836"> 3416</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classgg_1_1GgTrackball.html#aaaa41ddff91ff91173133d478356b836">gg::GgTrackball::reset</a>(<span class="keyword">const</span> <a class="code hl_class" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>&amp; q)</div>
+<div class="line"><a id="l03416" name="l03416"></a><span class="lineno"><a class="line" href="classgg_1_1GgTrackball.html#aaaa41ddff91ff91173133d478356b836"> 3416</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classgg_1_1GgTrackball.html#aaaa41ddff91ff91173133d478356b836">gg::GgTrackball::reset</a>(<span class="keyword">const</span> <a class="code hl_function" href="classgg_1_1GgQuaternion.html#ac1c52c26e2fdfdde277f9aa714757a2f">GgQuaternion</a>&amp; q)</div>
 <div class="line"><a id="l03417" name="l03417"></a><span class="lineno"> 3417</span>{</div>
 <div class="line"><a id="l03418" name="l03418"></a><span class="lineno"> 3418</span>  <span class="comment">// ドラッグ中ではない</span></div>
 <div class="line"><a id="l03419" name="l03419"></a><span class="lineno"> 3419</span>  drag = <span class="keyword">false</span>;</div>
@@ -3639,7 +3631,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l03490" name="l03490"></a><span class="lineno"> 3490</span><span class="comment">//   q 修正分の回転角を表す四元数</span></div>
 <div class="line"><a id="l03491" name="l03491"></a><span class="lineno"> 3491</span><span class="comment">//</span></div>
 <div class="foldopen" id="foldopen03492" data-start="{" data-end="}">
-<div class="line"><a id="l03492" name="l03492"></a><span class="lineno"><a class="line" href="classgg_1_1GgTrackball.html#adbf3c13a6442309c79bd3185fa74a0a4"> 3492</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classgg_1_1GgTrackball.html#adbf3c13a6442309c79bd3185fa74a0a4">gg::GgTrackball::rotate</a>(<span class="keyword">const</span> <a class="code hl_class" href="classgg_1_1GgQuaternion.html">GgQuaternion</a>&amp; q)</div>
+<div class="line"><a id="l03492" name="l03492"></a><span class="lineno"><a class="line" href="classgg_1_1GgTrackball.html#adbf3c13a6442309c79bd3185fa74a0a4"> 3492</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classgg_1_1GgTrackball.html#adbf3c13a6442309c79bd3185fa74a0a4">gg::GgTrackball::rotate</a>(<span class="keyword">const</span> <a class="code hl_function" href="classgg_1_1GgQuaternion.html#ac1c52c26e2fdfdde277f9aa714757a2f">GgQuaternion</a>&amp; q)</div>
 <div class="line"><a id="l03493" name="l03493"></a><span class="lineno"> 3493</span>{</div>
 <div class="line"><a id="l03494" name="l03494"></a><span class="lineno"> 3494</span>  <span class="comment">// ドラッグ中なら何もしない</span></div>
 <div class="line"><a id="l03495" name="l03495"></a><span class="lineno"> 3495</span>  <span class="keywordflow">if</span> (drag) <span class="keywordflow">return</span>;</div>
@@ -3651,7 +3643,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l03501" name="l03501"></a><span class="lineno"> 3501</span>  <a class="code hl_function" href="classgg_1_1GgQuaternion.html#a6e39d8318296545ba0053eda5a71a6a8">GgQuaternion::getMatrix</a>(rt);</div>
 <div class="line"><a id="l03502" name="l03502"></a><span class="lineno"> 3502</span> </div>
 <div class="line"><a id="l03503" name="l03503"></a><span class="lineno"> 3503</span>  <span class="comment">// 誤差を吸収するために正規化して保存する</span></div>
-<div class="line"><a id="l03504" name="l03504"></a><span class="lineno"> 3504</span>  cq = normalize();</div>
+<div class="line"><a id="l03504" name="l03504"></a><span class="lineno"> 3504</span>  cq = <a class="code hl_function" href="classgg_1_1GgQuaternion.html#a8667e065b18d857126f5481d0be8d527">normalize</a>();</div>
 <div class="line"><a id="l03505" name="l03505"></a><span class="lineno"> 3505</span>}</div>
 </div>
 <div class="line"><a id="l03506" name="l03506"></a><span class="lineno"> 3506</span> </div>
@@ -3665,10 +3657,10 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l03513" name="l03513"></a><span class="lineno"><a class="line" href="classgg_1_1GgTrackball.html#a4f56d59aadba0be3e8196971828382a1"> 3513</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classgg_1_1GgTrackball.html#a4f56d59aadba0be3e8196971828382a1">gg::GgTrackball::end</a>(GLfloat x, GLfloat y)</div>
 <div class="line"><a id="l03514" name="l03514"></a><span class="lineno"> 3514</span>{</div>
 <div class="line"><a id="l03515" name="l03515"></a><span class="lineno"> 3515</span>  <span class="comment">// ドラッグ終了点における回転を求める</span></div>
-<div class="line"><a id="l03516" name="l03516"></a><span class="lineno"> 3516</span>  motion(x, y);</div>
+<div class="line"><a id="l03516" name="l03516"></a><span class="lineno"> 3516</span>  <a class="code hl_function" href="classgg_1_1GgTrackball.html#a9613e5e3f4e41561938f8372ac8f55f2">motion</a>(x, y);</div>
 <div class="line"><a id="l03517" name="l03517"></a><span class="lineno"> 3517</span> </div>
 <div class="line"><a id="l03518" name="l03518"></a><span class="lineno"> 3518</span>  <span class="comment">// 誤差を吸収するために正規化して保存する</span></div>
-<div class="line"><a id="l03519" name="l03519"></a><span class="lineno"> 3519</span>  cq = normalize();</div>
+<div class="line"><a id="l03519" name="l03519"></a><span class="lineno"> 3519</span>  cq = <a class="code hl_function" href="classgg_1_1GgQuaternion.html#a8667e065b18d857126f5481d0be8d527">normalize</a>();</div>
 <div class="line"><a id="l03520" name="l03520"></a><span class="lineno"> 3520</span> </div>
 <div class="line"><a id="l03521" name="l03521"></a><span class="lineno"> 3521</span>  <span class="comment">// ドラッグ終了</span></div>
 <div class="line"><a id="l03522" name="l03522"></a><span class="lineno"> 3522</span>  drag = <span class="keyword">false</span>;</div>
@@ -3749,7 +3741,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l03595" name="l03595"></a><span class="lineno"> 3595</span>  }</div>
 <div class="line"><a id="l03596" name="l03596"></a><span class="lineno"> 3596</span> </div>
 <div class="line"><a id="l03597" name="l03597"></a><span class="lineno"> 3597</span>  <span class="comment">// フッタを書き込む</span></div>
-<div class="line"><a id="l03598" name="l03598"></a><span class="lineno"> 3598</span>  <span class="keyword">constexpr</span> <span class="keywordtype">char</span> footer[] = <span class="stringliteral">&quot;\0\0\0\0\0\0\0\0TRUEVISION-XFILE.&quot;</span>;</div>
+<div class="line"><a id="l03598" name="l03598"></a><span class="lineno"> 3598</span>  <span class="keyword">constexpr</span> <span class="keywordtype">char</span> footer[]{ <span class="stringliteral">&quot;\0\0\0\0\0\0\0\0TRUEVISION-XFILE.&quot;</span> };</div>
 <div class="line"><a id="l03599" name="l03599"></a><span class="lineno"> 3599</span>  file.write(footer, <span class="keyword">sizeof</span> footer);</div>
 <div class="line"><a id="l03600" name="l03600"></a><span class="lineno"> 3600</span> </div>
 <div class="line"><a id="l03601" name="l03601"></a><span class="lineno"> 3601</span>  <span class="comment">// データの書き込みに失敗していなければ true を返す</span></div>
@@ -4254,7 +4246,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l04080" name="l04080"></a><span class="lineno"> 4080</span>  <a class="code hl_function" href="namespacegg.html#a2cd46afb53daa13fa8bb2de14baf4e7b">ggCreateNormalMap</a>(hmap.data(), width, height, format, nz, internal, nmap);</div>
 <div class="line"><a id="l04081" name="l04081"></a><span class="lineno"> 4081</span>}</div>
 </div>
-<div class="line"><a id="l04082" name="l04082"></a><span class="lineno"> 4082</span> </div>
+<div class="line"><a id="l04082" name="l04082"></a><span class="lineno"> 4082</span></div>
 <div class="line"><a id="l04084" name="l04084"></a><span class="lineno"> 4084</span> </div>
 <div class="line"><a id="l04085" name="l04085"></a><span class="lineno"> 4085</span><span class="comment">//</span></div>
 <div class="line"><a id="l04086" name="l04086"></a><span class="lineno"> 4086</span><span class="comment">// OBJ ファイルの読み込みに使うデータ型と関数</span></div>
@@ -4291,7 +4283,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l04117" name="l04117"></a><span class="lineno"> 4117</span>  };</div>
 <div class="line"><a id="l04118" name="l04118"></a><span class="lineno"> 4118</span> </div>
 <div class="line"><a id="l04119" name="l04119"></a><span class="lineno"> 4119</span>  <span class="comment">// デフォルトの材質</span></div>
-<div class="line"><a id="l04120" name="l04120"></a><span class="lineno"> 4120</span>  <span class="keyword">constexpr</span> GgSimpleShader::Material defaultMaterial</div>
+<div class="line"><a id="l04120" name="l04120"></a><span class="lineno"> 4120</span>  <span class="keyword">constexpr</span> <a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">GgSimpleShader::Material</a> defaultMaterial</div>
 <div class="line"><a id="l04121" name="l04121"></a><span class="lineno"> 4121</span>  {</div>
 <div class="line"><a id="l04122" name="l04122"></a><span class="lineno"> 4122</span>    { 0.1f, 0.1f, 0.1f, 1.0f },</div>
 <div class="line"><a id="l04123" name="l04123"></a><span class="lineno"> 4123</span>    { 0.6f, 0.6f, 0.6f, 0.0f },</div>
@@ -4467,17 +4459,17 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l04293" name="l04293"></a><span class="lineno"> 4293</span>    <span class="comment">// 読み込みに失敗したら戻る</span></div>
 <div class="line"><a id="l04294" name="l04294"></a><span class="lineno"> 4294</span>    <span class="keywordflow">if</span> (file.fail())</div>
 <div class="line"><a id="l04295" name="l04295"></a><span class="lineno"> 4295</span>    {</div>
-<div class="line"><a id="l04296" name="l04296"></a><span class="lineno"> 4296</span><span class="preprocessor">#if defined(DEBUG)</span></div>
+<div class="line"><a id="l04296" name="l04296"></a><span class="lineno"> 4296</span>#if defined(DEBUG)</div>
 <div class="line"><a id="l04297" name="l04297"></a><span class="lineno"> 4297</span>      std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: Can&#39;t open OBJ file: &quot;</span> &lt;&lt; path &lt;&lt; std::endl;</div>
-<div class="line"><a id="l04298" name="l04298"></a><span class="lineno"> 4298</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l04299" name="l04299"></a><span class="lineno"> 4299</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l04298" name="l04298"></a><span class="lineno"> 4298</span>#endif</div>
+<div class="line"><a id="l04299" name="l04299"></a><span class="lineno"> 4299</span>      return false;</div>
 <div class="line"><a id="l04300" name="l04300"></a><span class="lineno"> 4300</span>    }</div>
 <div class="line"><a id="l04301" name="l04301"></a><span class="lineno"> 4301</span> </div>
 <div class="line"><a id="l04302" name="l04302"></a><span class="lineno"> 4302</span>    <span class="comment">// ポリゴングループの最初の三角形番号</span></div>
 <div class="line"><a id="l04303" name="l04303"></a><span class="lineno"> 4303</span>    GLsizei startgroup(<span class="keyword">static_cast&lt;</span>GLsizei<span class="keyword">&gt;</span>(group.size()));</div>
 <div class="line"><a id="l04304" name="l04304"></a><span class="lineno"> 4304</span> </div>
 <div class="line"><a id="l04305" name="l04305"></a><span class="lineno"> 4305</span>    <span class="comment">// スムーズシェーディングのスイッチ</span></div>
-<div class="line"><a id="l04306" name="l04306"></a><span class="lineno"> 4306</span>    <span class="keywordtype">bool</span> smooth{ <span class="keyword">false</span> };</div>
+<div class="line"><a id="l04306" name="l04306"></a><span class="lineno"> 4306</span>    <span class="keywordtype">bool</span> smooth{ false };</div>
 <div class="line"><a id="l04307" name="l04307"></a><span class="lineno"> 4307</span> </div>
 <div class="line"><a id="l04308" name="l04308"></a><span class="lineno"> 4308</span>    <span class="comment">// 材質のテーブル</span></div>
 <div class="line"><a id="l04309" name="l04309"></a><span class="lineno"> 4309</span>    std::map&lt;std::string, GLuint&gt; mtl;</div>
@@ -4492,7 +4484,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l04318" name="l04318"></a><span class="lineno"> 4318</span>    std::string line;</div>
 <div class="line"><a id="l04319" name="l04319"></a><span class="lineno"> 4319</span> </div>
 <div class="line"><a id="l04320" name="l04320"></a><span class="lineno"> 4320</span>    <span class="comment">// データの読み込み</span></div>
-<div class="line"><a id="l04321" name="l04321"></a><span class="lineno"> 4321</span>    <span class="keywordflow">while</span> (std::getline(file, line))</div>
+<div class="line"><a id="l04321" name="l04321"></a><span class="lineno"> 4321</span>    while (std::getline(file, line))</div>
 <div class="line"><a id="l04322" name="l04322"></a><span class="lineno"> 4322</span>    {</div>
 <div class="line"><a id="l04323" name="l04323"></a><span class="lineno"> 4323</span>      <span class="comment">// 空行は読み飛ばす</span></div>
 <div class="line"><a id="l04324" name="l04324"></a><span class="lineno"> 4324</span>      <span class="keywordflow">if</span> (line == <span class="stringliteral">&quot;&quot;</span>) <span class="keywordflow">continue</span>;</div>
@@ -4646,15 +4638,15 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l04472" name="l04472"></a><span class="lineno"> 4472</span>    <span class="comment">// OBJ ファイルの読み込みに失敗したら戻る</span></div>
 <div class="line"><a id="l04473" name="l04473"></a><span class="lineno"> 4473</span>    <span class="keywordflow">if</span> (file.bad())</div>
 <div class="line"><a id="l04474" name="l04474"></a><span class="lineno"> 4474</span>    {</div>
-<div class="line"><a id="l04475" name="l04475"></a><span class="lineno"> 4475</span><span class="preprocessor">#if defined(DEBUG)</span></div>
+<div class="line"><a id="l04475" name="l04475"></a><span class="lineno"> 4475</span>#if defined(DEBUG)</div>
 <div class="line"><a id="l04476" name="l04476"></a><span class="lineno"> 4476</span>      std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: Can&#39;t read OBJ file: &quot;</span> &lt;&lt; path &lt;&lt; std::endl;</div>
-<div class="line"><a id="l04477" name="l04477"></a><span class="lineno"> 4477</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l04478" name="l04478"></a><span class="lineno"> 4478</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l04477" name="l04477"></a><span class="lineno"> 4477</span>#endif</div>
+<div class="line"><a id="l04478" name="l04478"></a><span class="lineno"> 4478</span>      return false;</div>
 <div class="line"><a id="l04479" name="l04479"></a><span class="lineno"> 4479</span>    }</div>
 <div class="line"><a id="l04480" name="l04480"></a><span class="lineno"> 4480</span> </div>
 <div class="line"><a id="l04481" name="l04481"></a><span class="lineno"> 4481</span>    <span class="comment">// 最後のポリゴングループの次の三角形番号</span></div>
 <div class="line"><a id="l04482" name="l04482"></a><span class="lineno"> 4482</span>    <span class="keyword">const</span> GLsizei nextgroup(<span class="keyword">static_cast&lt;</span>GLsizei<span class="keyword">&gt;</span>(face.size()));</div>
-<div class="line"><a id="l04483" name="l04483"></a><span class="lineno"> 4483</span>    <span class="keywordflow">if</span> (nextgroup &gt; startgroup)</div>
+<div class="line"><a id="l04483" name="l04483"></a><span class="lineno"> 4483</span>    if (nextgroup &gt; startgroup)</div>
 <div class="line"><a id="l04484" name="l04484"></a><span class="lineno"> 4484</span>    {</div>
 <div class="line"><a id="l04485" name="l04485"></a><span class="lineno"> 4485</span>      <span class="comment">// 最後のポリゴングループの三角形数と材質を記録する</span></div>
 <div class="line"><a id="l04486" name="l04486"></a><span class="lineno"> 4486</span>      group.emplace_back(nextgroup, <span class="keyword">static_cast&lt;</span>GLuint<span class="keyword">&gt;</span>(mtl[mtlname]));</div>
@@ -5311,7 +5303,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05123" name="l05123"></a><span class="lineno"> 5123</span>  <a class="code hl_function" href="classgg_1_1GgShape.html#adf1b1da86a75b4c74dddf6194e615f6d">GgShape::draw</a>(first, count);</div>
 <div class="line"><a id="l05124" name="l05124"></a><span class="lineno"> 5124</span> </div>
 <div class="line"><a id="l05125" name="l05125"></a><span class="lineno"> 5125</span>  <span class="comment">// 図形を描画する</span></div>
-<div class="line"><a id="l05126" name="l05126"></a><span class="lineno"> 5126</span>  glDrawArrays(getMode(), first, count &gt; 0 ? count : getCount() - first);</div>
+<div class="line"><a id="l05126" name="l05126"></a><span class="lineno"> 5126</span>  glDrawArrays(<a class="code hl_function" href="classgg_1_1GgShape.html#a860e6671d9d80295599ed2cf9f2449bc">getMode</a>(), first, count &gt; 0 ? count : <a class="code hl_function" href="classgg_1_1GgPoints.html#a7f3cad112cdcb664771259eebac5874c">getCount</a>() - first);</div>
 <div class="line"><a id="l05127" name="l05127"></a><span class="lineno"> 5127</span>}</div>
 </div>
 <div class="line"><a id="l05128" name="l05128"></a><span class="lineno"> 5128</span> </div>
@@ -5346,7 +5338,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05154" name="l05154"></a><span class="lineno"> 5154</span>  <a class="code hl_function" href="classgg_1_1GgShape.html#adf1b1da86a75b4c74dddf6194e615f6d">GgShape::draw</a>(first, count);</div>
 <div class="line"><a id="l05155" name="l05155"></a><span class="lineno"> 5155</span> </div>
 <div class="line"><a id="l05156" name="l05156"></a><span class="lineno"> 5156</span>  <span class="comment">// 図形を描画する</span></div>
-<div class="line"><a id="l05157" name="l05157"></a><span class="lineno"> 5157</span>  glDrawArrays(getMode(), first, count &gt; 0 ? count : getCount() - first);</div>
+<div class="line"><a id="l05157" name="l05157"></a><span class="lineno"> 5157</span>  glDrawArrays(<a class="code hl_function" href="classgg_1_1GgShape.html#a860e6671d9d80295599ed2cf9f2449bc">getMode</a>(), first, count &gt; 0 ? count : <a class="code hl_function" href="classgg_1_1GgTriangles.html#a175a09c25313d9ae85bc4badf91fbfd6">getCount</a>() - first);</div>
 <div class="line"><a id="l05158" name="l05158"></a><span class="lineno"> 5158</span>}</div>
 </div>
 <div class="line"><a id="l05159" name="l05159"></a><span class="lineno"> 5159</span> </div>
@@ -5360,7 +5352,7 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05166" name="l05166"></a><span class="lineno"> 5166</span>  <a class="code hl_function" href="classgg_1_1GgShape.html#adf1b1da86a75b4c74dddf6194e615f6d">GgShape::draw</a>(first, count);</div>
 <div class="line"><a id="l05167" name="l05167"></a><span class="lineno"> 5167</span> </div>
 <div class="line"><a id="l05168" name="l05168"></a><span class="lineno"> 5168</span>  <span class="comment">// 図形を描画する</span></div>
-<div class="line"><a id="l05169" name="l05169"></a><span class="lineno"> 5169</span>  glDrawElements(getMode(), count &gt; 0 ? count : getIndexCount() - first,</div>
+<div class="line"><a id="l05169" name="l05169"></a><span class="lineno"> 5169</span>  glDrawElements(<a class="code hl_function" href="classgg_1_1GgShape.html#a860e6671d9d80295599ed2cf9f2449bc">getMode</a>(), count &gt; 0 ? count : <a class="code hl_function" href="classgg_1_1GgElements.html#ac4f4685a39e65aefdeacea83e02ff8f7">getIndexCount</a>() - first,</div>
 <div class="line"><a id="l05170" name="l05170"></a><span class="lineno"> 5170</span>    GL_UNSIGNED_INT, <span class="keyword">static_cast&lt;</span>GLuint*<span class="keyword">&gt;</span>(0) + first);</div>
 <div class="line"><a id="l05171" name="l05171"></a><span class="lineno"> 5171</span>}</div>
 </div>
@@ -5664,19 +5656,19 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05452" name="l05452"></a><span class="lineno"> 5452</span>  GLint first, GLsizei count)<span class="keyword"> const</span></div>
 <div class="line"><a id="l05453" name="l05453"></a><span class="lineno"> 5453</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l05454" name="l05454"></a><span class="lineno"> 5454</span>  <span class="comment">// データを格納するバッファオブジェクトの先頭のポインタ</span></div>
-<div class="line"><a id="l05455" name="l05455"></a><span class="lineno"> 5455</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(map(first, count)) };</div>
+<div class="line"><a id="l05455" name="l05455"></a><span class="lineno"> 5455</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">map</a>(first, count)) };</div>
 <div class="line"><a id="l05456" name="l05456"></a><span class="lineno"> 5456</span>  <span class="keywordflow">for</span> (GLsizei i = 0; i &lt; count; ++i)</div>
 <div class="line"><a id="l05457" name="l05457"></a><span class="lineno"> 5457</span>  {</div>
 <div class="line"><a id="l05458" name="l05458"></a><span class="lineno"> 5458</span>    <span class="comment">// バッファオブジェクトの i 番目のブロックのポインタ</span></div>
-<div class="line"><a id="l05459" name="l05459"></a><span class="lineno"> 5459</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
+<div class="line"><a id="l05459" name="l05459"></a><span class="lineno"> 5459</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506">getStride</a>() * i) };</div>
 <div class="line"><a id="l05460" name="l05460"></a><span class="lineno"> 5460</span> </div>
 <div class="line"><a id="l05461" name="l05461"></a><span class="lineno"> 5461</span>    <span class="comment">// 光源の環境光成分を設定する</span></div>
-<div class="line"><a id="l05462" name="l05462"></a><span class="lineno"> 5462</span>    light-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#a981dd763865a2aca613579df66ed4653">ambient</a>[0] = r;</div>
+<div class="line"><a id="l05462" name="l05462"></a><span class="lineno"> 5462</span>    light-&gt;ambient[0] = r;</div>
 <div class="line"><a id="l05463" name="l05463"></a><span class="lineno"> 5463</span>    light-&gt;ambient[1] = g;</div>
 <div class="line"><a id="l05464" name="l05464"></a><span class="lineno"> 5464</span>    light-&gt;ambient[2] = b;</div>
 <div class="line"><a id="l05465" name="l05465"></a><span class="lineno"> 5465</span>    light-&gt;ambient[3] = a;</div>
 <div class="line"><a id="l05466" name="l05466"></a><span class="lineno"> 5466</span>  }</div>
-<div class="line"><a id="l05467" name="l05467"></a><span class="lineno"> 5467</span>  unmap();</div>
+<div class="line"><a id="l05467" name="l05467"></a><span class="lineno"> 5467</span>  <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197">unmap</a>();</div>
 <div class="line"><a id="l05468" name="l05468"></a><span class="lineno"> 5468</span>}</div>
 </div>
 <div class="line"><a id="l05469" name="l05469"></a><span class="lineno"> 5469</span> </div>
@@ -5692,16 +5684,16 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05478" name="l05478"></a><span class="lineno"> 5478</span>  GLint first, GLsizei count)<span class="keyword"> const</span></div>
 <div class="line"><a id="l05479" name="l05479"></a><span class="lineno"> 5479</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l05480" name="l05480"></a><span class="lineno"> 5480</span>  <span class="comment">// データを格納するバッファオブジェクトの先頭のポインタ</span></div>
-<div class="line"><a id="l05481" name="l05481"></a><span class="lineno"> 5481</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(map(first, count)) };</div>
+<div class="line"><a id="l05481" name="l05481"></a><span class="lineno"> 5481</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">map</a>(first, count)) };</div>
 <div class="line"><a id="l05482" name="l05482"></a><span class="lineno"> 5482</span>  <span class="keywordflow">for</span> (GLsizei i = 0; i &lt; count; ++i)</div>
 <div class="line"><a id="l05483" name="l05483"></a><span class="lineno"> 5483</span>  {</div>
 <div class="line"><a id="l05484" name="l05484"></a><span class="lineno"> 5484</span>    <span class="comment">// バッファオブジェクトの i 番目のブロックのポインタ</span></div>
-<div class="line"><a id="l05485" name="l05485"></a><span class="lineno"> 5485</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
+<div class="line"><a id="l05485" name="l05485"></a><span class="lineno"> 5485</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506">getStride</a>() * i) };</div>
 <div class="line"><a id="l05486" name="l05486"></a><span class="lineno"> 5486</span> </div>
 <div class="line"><a id="l05487" name="l05487"></a><span class="lineno"> 5487</span>    <span class="comment">// 光源の強度の環境光成分を設定する</span></div>
-<div class="line"><a id="l05488" name="l05488"></a><span class="lineno"> 5488</span>    light-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#a981dd763865a2aca613579df66ed4653">ambient</a> = ambient;</div>
+<div class="line"><a id="l05488" name="l05488"></a><span class="lineno"> 5488</span>    light-&gt;ambient = ambient;</div>
 <div class="line"><a id="l05489" name="l05489"></a><span class="lineno"> 5489</span>  }</div>
-<div class="line"><a id="l05490" name="l05490"></a><span class="lineno"> 5490</span>  unmap();</div>
+<div class="line"><a id="l05490" name="l05490"></a><span class="lineno"> 5490</span>  <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197">unmap</a>();</div>
 <div class="line"><a id="l05491" name="l05491"></a><span class="lineno"> 5491</span>}</div>
 </div>
 <div class="line"><a id="l05492" name="l05492"></a><span class="lineno"> 5492</span> </div>
@@ -5720,19 +5712,19 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05504" name="l05504"></a><span class="lineno"> 5504</span>  GLint first, GLsizei count)<span class="keyword"> const</span></div>
 <div class="line"><a id="l05505" name="l05505"></a><span class="lineno"> 5505</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l05506" name="l05506"></a><span class="lineno"> 5506</span>  <span class="comment">// データを格納するバッファオブジェクトの先頭のポインタ</span></div>
-<div class="line"><a id="l05507" name="l05507"></a><span class="lineno"> 5507</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(map(first, count)) };</div>
+<div class="line"><a id="l05507" name="l05507"></a><span class="lineno"> 5507</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">map</a>(first, count)) };</div>
 <div class="line"><a id="l05508" name="l05508"></a><span class="lineno"> 5508</span>  <span class="keywordflow">for</span> (GLsizei i = 0; i &lt; count; ++i)</div>
 <div class="line"><a id="l05509" name="l05509"></a><span class="lineno"> 5509</span>  {</div>
 <div class="line"><a id="l05510" name="l05510"></a><span class="lineno"> 5510</span>    <span class="comment">// バッファオブジェクトの i 番目のブロックのポインタ</span></div>
-<div class="line"><a id="l05511" name="l05511"></a><span class="lineno"> 5511</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
+<div class="line"><a id="l05511" name="l05511"></a><span class="lineno"> 5511</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506">getStride</a>() * i) };</div>
 <div class="line"><a id="l05512" name="l05512"></a><span class="lineno"> 5512</span> </div>
 <div class="line"><a id="l05513" name="l05513"></a><span class="lineno"> 5513</span>    <span class="comment">// 光源の拡散反射光成分を設定する</span></div>
-<div class="line"><a id="l05514" name="l05514"></a><span class="lineno"> 5514</span>    light-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#abf0f33bcdf0da82a52c2f814ce8b71fa">diffuse</a>[0] = r;</div>
+<div class="line"><a id="l05514" name="l05514"></a><span class="lineno"> 5514</span>    light-&gt;diffuse[0] = r;</div>
 <div class="line"><a id="l05515" name="l05515"></a><span class="lineno"> 5515</span>    light-&gt;diffuse[1] = g;</div>
 <div class="line"><a id="l05516" name="l05516"></a><span class="lineno"> 5516</span>    light-&gt;diffuse[2] = b;</div>
 <div class="line"><a id="l05517" name="l05517"></a><span class="lineno"> 5517</span>    light-&gt;diffuse[3] = a;</div>
 <div class="line"><a id="l05518" name="l05518"></a><span class="lineno"> 5518</span>  }</div>
-<div class="line"><a id="l05519" name="l05519"></a><span class="lineno"> 5519</span>  unmap();</div>
+<div class="line"><a id="l05519" name="l05519"></a><span class="lineno"> 5519</span>  <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197">unmap</a>();</div>
 <div class="line"><a id="l05520" name="l05520"></a><span class="lineno"> 5520</span>}</div>
 </div>
 <div class="line"><a id="l05521" name="l05521"></a><span class="lineno"> 5521</span> </div>
@@ -5748,16 +5740,16 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05530" name="l05530"></a><span class="lineno"> 5530</span>  GLint first, GLsizei count)<span class="keyword"> const</span></div>
 <div class="line"><a id="l05531" name="l05531"></a><span class="lineno"> 5531</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l05532" name="l05532"></a><span class="lineno"> 5532</span>  <span class="comment">// データを格納するバッファオブジェクトの先頭のポインタ</span></div>
-<div class="line"><a id="l05533" name="l05533"></a><span class="lineno"> 5533</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(map(first, count)) };</div>
+<div class="line"><a id="l05533" name="l05533"></a><span class="lineno"> 5533</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">map</a>(first, count)) };</div>
 <div class="line"><a id="l05534" name="l05534"></a><span class="lineno"> 5534</span>  <span class="keywordflow">for</span> (GLsizei i = 0; i &lt; count; ++i)</div>
 <div class="line"><a id="l05535" name="l05535"></a><span class="lineno"> 5535</span>  {</div>
 <div class="line"><a id="l05536" name="l05536"></a><span class="lineno"> 5536</span>    <span class="comment">// バッファオブジェクトの i 番目のブロックのポインタ</span></div>
-<div class="line"><a id="l05537" name="l05537"></a><span class="lineno"> 5537</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
+<div class="line"><a id="l05537" name="l05537"></a><span class="lineno"> 5537</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506">getStride</a>() * i) };</div>
 <div class="line"><a id="l05538" name="l05538"></a><span class="lineno"> 5538</span> </div>
 <div class="line"><a id="l05539" name="l05539"></a><span class="lineno"> 5539</span>    <span class="comment">// 光源の強度の拡散反射光成分を設定する</span></div>
-<div class="line"><a id="l05540" name="l05540"></a><span class="lineno"> 5540</span>    light-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#abf0f33bcdf0da82a52c2f814ce8b71fa">diffuse</a> = diffuse;</div>
+<div class="line"><a id="l05540" name="l05540"></a><span class="lineno"> 5540</span>    light-&gt;diffuse = diffuse;</div>
 <div class="line"><a id="l05541" name="l05541"></a><span class="lineno"> 5541</span>  }</div>
-<div class="line"><a id="l05542" name="l05542"></a><span class="lineno"> 5542</span>  unmap();</div>
+<div class="line"><a id="l05542" name="l05542"></a><span class="lineno"> 5542</span>  <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197">unmap</a>();</div>
 <div class="line"><a id="l05543" name="l05543"></a><span class="lineno"> 5543</span>}</div>
 </div>
 <div class="line"><a id="l05544" name="l05544"></a><span class="lineno"> 5544</span> </div>
@@ -5776,19 +5768,19 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05556" name="l05556"></a><span class="lineno"> 5556</span>  GLint first, GLsizei count)<span class="keyword"> const</span></div>
 <div class="line"><a id="l05557" name="l05557"></a><span class="lineno"> 5557</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l05558" name="l05558"></a><span class="lineno"> 5558</span>  <span class="comment">// データを格納するバッファオブジェクトの先頭のポインタ</span></div>
-<div class="line"><a id="l05559" name="l05559"></a><span class="lineno"> 5559</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(map(first, count)) };</div>
+<div class="line"><a id="l05559" name="l05559"></a><span class="lineno"> 5559</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">map</a>(first, count)) };</div>
 <div class="line"><a id="l05560" name="l05560"></a><span class="lineno"> 5560</span>  <span class="keywordflow">for</span> (GLsizei i = 0; i &lt; count; ++i)</div>
 <div class="line"><a id="l05561" name="l05561"></a><span class="lineno"> 5561</span>  {</div>
 <div class="line"><a id="l05562" name="l05562"></a><span class="lineno"> 5562</span>    <span class="comment">// バッファオブジェクトの i 番目のブロックのポインタ</span></div>
-<div class="line"><a id="l05563" name="l05563"></a><span class="lineno"> 5563</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
+<div class="line"><a id="l05563" name="l05563"></a><span class="lineno"> 5563</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506">getStride</a>() * i) };</div>
 <div class="line"><a id="l05564" name="l05564"></a><span class="lineno"> 5564</span> </div>
 <div class="line"><a id="l05565" name="l05565"></a><span class="lineno"> 5565</span>    <span class="comment">// 光源の鏡面反射光成分を設定する</span></div>
-<div class="line"><a id="l05566" name="l05566"></a><span class="lineno"> 5566</span>    light-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#acd20cfb495e5923bb67686ac09ceadb9">specular</a>[0] = r;</div>
+<div class="line"><a id="l05566" name="l05566"></a><span class="lineno"> 5566</span>    light-&gt;specular[0] = r;</div>
 <div class="line"><a id="l05567" name="l05567"></a><span class="lineno"> 5567</span>    light-&gt;specular[1] = g;</div>
 <div class="line"><a id="l05568" name="l05568"></a><span class="lineno"> 5568</span>    light-&gt;specular[2] = b;</div>
 <div class="line"><a id="l05569" name="l05569"></a><span class="lineno"> 5569</span>    light-&gt;specular[3] = a;</div>
 <div class="line"><a id="l05570" name="l05570"></a><span class="lineno"> 5570</span>  }</div>
-<div class="line"><a id="l05571" name="l05571"></a><span class="lineno"> 5571</span>  unmap();</div>
+<div class="line"><a id="l05571" name="l05571"></a><span class="lineno"> 5571</span>  <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197">unmap</a>();</div>
 <div class="line"><a id="l05572" name="l05572"></a><span class="lineno"> 5572</span>}</div>
 </div>
 <div class="line"><a id="l05573" name="l05573"></a><span class="lineno"> 5573</span> </div>
@@ -5804,16 +5796,16 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05582" name="l05582"></a><span class="lineno"> 5582</span>  GLint first, GLsizei count)<span class="keyword"> const</span></div>
 <div class="line"><a id="l05583" name="l05583"></a><span class="lineno"> 5583</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l05584" name="l05584"></a><span class="lineno"> 5584</span>  <span class="comment">// データを格納するバッファオブジェクトの先頭のポインタ</span></div>
-<div class="line"><a id="l05585" name="l05585"></a><span class="lineno"> 5585</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(map(first, count)) };</div>
+<div class="line"><a id="l05585" name="l05585"></a><span class="lineno"> 5585</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">map</a>(first, count)) };</div>
 <div class="line"><a id="l05586" name="l05586"></a><span class="lineno"> 5586</span>  <span class="keywordflow">for</span> (GLsizei i = 0; i &lt; count; ++i)</div>
 <div class="line"><a id="l05587" name="l05587"></a><span class="lineno"> 5587</span>  {</div>
 <div class="line"><a id="l05588" name="l05588"></a><span class="lineno"> 5588</span>    <span class="comment">// バッファオブジェクトの i 番目のブロックのポインタ</span></div>
-<div class="line"><a id="l05589" name="l05589"></a><span class="lineno"> 5589</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
+<div class="line"><a id="l05589" name="l05589"></a><span class="lineno"> 5589</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506">getStride</a>() * i) };</div>
 <div class="line"><a id="l05590" name="l05590"></a><span class="lineno"> 5590</span> </div>
 <div class="line"><a id="l05591" name="l05591"></a><span class="lineno"> 5591</span>    <span class="comment">// 光源の強度の鏡面反射光成分を設定する</span></div>
-<div class="line"><a id="l05592" name="l05592"></a><span class="lineno"> 5592</span>    light-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#acd20cfb495e5923bb67686ac09ceadb9">specular</a> = specular;</div>
+<div class="line"><a id="l05592" name="l05592"></a><span class="lineno"> 5592</span>    light-&gt;specular = specular;</div>
 <div class="line"><a id="l05593" name="l05593"></a><span class="lineno"> 5593</span>  }</div>
-<div class="line"><a id="l05594" name="l05594"></a><span class="lineno"> 5594</span>  unmap();</div>
+<div class="line"><a id="l05594" name="l05594"></a><span class="lineno"> 5594</span>  <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197">unmap</a>();</div>
 <div class="line"><a id="l05595" name="l05595"></a><span class="lineno"> 5595</span>}</div>
 </div>
 <div class="line"><a id="l05596" name="l05596"></a><span class="lineno"> 5596</span> </div>
@@ -5829,18 +5821,18 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05605" name="l05605"></a><span class="lineno"> 5605</span>  GLint first, GLsizei count)<span class="keyword"> const</span></div>
 <div class="line"><a id="l05606" name="l05606"></a><span class="lineno"> 5606</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l05607" name="l05607"></a><span class="lineno"> 5607</span>  <span class="comment">// データを格納するバッファオブジェクトの先頭のポインタ</span></div>
-<div class="line"><a id="l05608" name="l05608"></a><span class="lineno"> 5608</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(map(first, count)) };</div>
+<div class="line"><a id="l05608" name="l05608"></a><span class="lineno"> 5608</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">map</a>(first, count)) };</div>
 <div class="line"><a id="l05609" name="l05609"></a><span class="lineno"> 5609</span>  <span class="keywordflow">for</span> (GLsizei i = 0; i &lt; count; ++i)</div>
 <div class="line"><a id="l05610" name="l05610"></a><span class="lineno"> 5610</span>  {</div>
 <div class="line"><a id="l05611" name="l05611"></a><span class="lineno"> 5611</span>    <span class="comment">// バッファオブジェクトの i 番目のブロックのポインタ</span></div>
-<div class="line"><a id="l05612" name="l05612"></a><span class="lineno"> 5612</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
+<div class="line"><a id="l05612" name="l05612"></a><span class="lineno"> 5612</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506">getStride</a>() * i) };</div>
 <div class="line"><a id="l05613" name="l05613"></a><span class="lineno"> 5613</span> </div>
 <div class="line"><a id="l05614" name="l05614"></a><span class="lineno"> 5614</span>    <span class="comment">// 光源の色を設定する</span></div>
-<div class="line"><a id="l05615" name="l05615"></a><span class="lineno"> 5615</span>    light-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#a981dd763865a2aca613579df66ed4653">ambient</a> = color.<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#a981dd763865a2aca613579df66ed4653">ambient</a>;</div>
+<div class="line"><a id="l05615" name="l05615"></a><span class="lineno"> 5615</span>    light-&gt;ambient = color.<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#a981dd763865a2aca613579df66ed4653">ambient</a>;</div>
 <div class="line"><a id="l05616" name="l05616"></a><span class="lineno"> 5616</span>    light-&gt;diffuse = color.<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#abf0f33bcdf0da82a52c2f814ce8b71fa">diffuse</a>;</div>
 <div class="line"><a id="l05617" name="l05617"></a><span class="lineno"> 5617</span>    light-&gt;specular = color.<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#acd20cfb495e5923bb67686ac09ceadb9">specular</a>;</div>
 <div class="line"><a id="l05618" name="l05618"></a><span class="lineno"> 5618</span>  }</div>
-<div class="line"><a id="l05619" name="l05619"></a><span class="lineno"> 5619</span>  unmap();</div>
+<div class="line"><a id="l05619" name="l05619"></a><span class="lineno"> 5619</span>  <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197">unmap</a>();</div>
 <div class="line"><a id="l05620" name="l05620"></a><span class="lineno"> 5620</span>}</div>
 </div>
 <div class="line"><a id="l05621" name="l05621"></a><span class="lineno"> 5621</span> </div>
@@ -5859,19 +5851,19 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05633" name="l05633"></a><span class="lineno"> 5633</span>  GLint first, GLsizei count)<span class="keyword"> const</span></div>
 <div class="line"><a id="l05634" name="l05634"></a><span class="lineno"> 5634</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l05635" name="l05635"></a><span class="lineno"> 5635</span>  <span class="comment">// データを格納するバッファオブジェクトの先頭のポインタ</span></div>
-<div class="line"><a id="l05636" name="l05636"></a><span class="lineno"> 5636</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(map(first, count)) };</div>
+<div class="line"><a id="l05636" name="l05636"></a><span class="lineno"> 5636</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">map</a>(first, count)) };</div>
 <div class="line"><a id="l05637" name="l05637"></a><span class="lineno"> 5637</span>  <span class="keywordflow">for</span> (GLsizei i = 0; i &lt; count; ++i)</div>
 <div class="line"><a id="l05638" name="l05638"></a><span class="lineno"> 5638</span>  {</div>
 <div class="line"><a id="l05639" name="l05639"></a><span class="lineno"> 5639</span>    <span class="comment">// バッファオブジェクトの i 番目のブロックのポインタ</span></div>
-<div class="line"><a id="l05640" name="l05640"></a><span class="lineno"> 5640</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
+<div class="line"><a id="l05640" name="l05640"></a><span class="lineno"> 5640</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506">getStride</a>() * i) };</div>
 <div class="line"><a id="l05641" name="l05641"></a><span class="lineno"> 5641</span> </div>
 <div class="line"><a id="l05642" name="l05642"></a><span class="lineno"> 5642</span>    <span class="comment">// 光源の位置を設定する</span></div>
-<div class="line"><a id="l05643" name="l05643"></a><span class="lineno"> 5643</span>    light-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#a5f6b1744a8c35121c8e27a6a01c8aceb">position</a>[0] = x;</div>
+<div class="line"><a id="l05643" name="l05643"></a><span class="lineno"> 5643</span>    light-&gt;position[0] = x;</div>
 <div class="line"><a id="l05644" name="l05644"></a><span class="lineno"> 5644</span>    light-&gt;position[1] = y;</div>
 <div class="line"><a id="l05645" name="l05645"></a><span class="lineno"> 5645</span>    light-&gt;position[2] = z;</div>
 <div class="line"><a id="l05646" name="l05646"></a><span class="lineno"> 5646</span>    light-&gt;position[3] = w;</div>
 <div class="line"><a id="l05647" name="l05647"></a><span class="lineno"> 5647</span>  }</div>
-<div class="line"><a id="l05648" name="l05648"></a><span class="lineno"> 5648</span>  unmap();</div>
+<div class="line"><a id="l05648" name="l05648"></a><span class="lineno"> 5648</span>  <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197">unmap</a>();</div>
 <div class="line"><a id="l05649" name="l05649"></a><span class="lineno"> 5649</span>}</div>
 </div>
 <div class="line"><a id="l05650" name="l05650"></a><span class="lineno"> 5650</span> </div>
@@ -5887,16 +5879,16 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05659" name="l05659"></a><span class="lineno"> 5659</span>  GLint first, GLsizei count)<span class="keyword"> const</span></div>
 <div class="line"><a id="l05660" name="l05660"></a><span class="lineno"> 5660</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l05661" name="l05661"></a><span class="lineno"> 5661</span>  <span class="comment">// データを格納するバッファオブジェクトの先頭のポインタ</span></div>
-<div class="line"><a id="l05662" name="l05662"></a><span class="lineno"> 5662</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(map(first, count)) };</div>
+<div class="line"><a id="l05662" name="l05662"></a><span class="lineno"> 5662</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">map</a>(first, count)) };</div>
 <div class="line"><a id="l05663" name="l05663"></a><span class="lineno"> 5663</span>  <span class="keywordflow">for</span> (GLsizei i = 0; i &lt; count; ++i)</div>
 <div class="line"><a id="l05664" name="l05664"></a><span class="lineno"> 5664</span>  {</div>
 <div class="line"><a id="l05665" name="l05665"></a><span class="lineno"> 5665</span>    <span class="comment">// バッファオブジェクトの i 番目のブロックのポインタ</span></div>
-<div class="line"><a id="l05666" name="l05666"></a><span class="lineno"> 5666</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
+<div class="line"><a id="l05666" name="l05666"></a><span class="lineno"> 5666</span>    <span class="keyword">const</span> <span class="keyword">auto</span> light{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">Light</a>*<span class="keyword">&gt;</span>(start + <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506">getStride</a>() * i) };</div>
 <div class="line"><a id="l05667" name="l05667"></a><span class="lineno"> 5667</span> </div>
 <div class="line"><a id="l05668" name="l05668"></a><span class="lineno"> 5668</span>    <span class="comment">// 光源の位置を設定する</span></div>
-<div class="line"><a id="l05669" name="l05669"></a><span class="lineno"> 5669</span>    light-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#a5f6b1744a8c35121c8e27a6a01c8aceb">position</a> = position;</div>
+<div class="line"><a id="l05669" name="l05669"></a><span class="lineno"> 5669</span>    light-&gt;position = position;</div>
 <div class="line"><a id="l05670" name="l05670"></a><span class="lineno"> 5670</span>  }</div>
-<div class="line"><a id="l05671" name="l05671"></a><span class="lineno"> 5671</span>  unmap();</div>
+<div class="line"><a id="l05671" name="l05671"></a><span class="lineno"> 5671</span>  <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197">unmap</a>();</div>
 <div class="line"><a id="l05672" name="l05672"></a><span class="lineno"> 5672</span>}</div>
 </div>
 <div class="line"><a id="l05673" name="l05673"></a><span class="lineno"> 5673</span> </div>
@@ -5915,19 +5907,19 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05685" name="l05685"></a><span class="lineno"> 5685</span>  GLint first, GLsizei count)<span class="keyword"> const</span></div>
 <div class="line"><a id="l05686" name="l05686"></a><span class="lineno"> 5686</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l05687" name="l05687"></a><span class="lineno"> 5687</span>  <span class="comment">// データを格納するバッファオブジェクトの先頭のポインタ</span></div>
-<div class="line"><a id="l05688" name="l05688"></a><span class="lineno"> 5688</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(map(first, count)) };</div>
+<div class="line"><a id="l05688" name="l05688"></a><span class="lineno"> 5688</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">map</a>(first, count)) };</div>
 <div class="line"><a id="l05689" name="l05689"></a><span class="lineno"> 5689</span>  <span class="keywordflow">for</span> (GLsizei i = 0; i &lt; count; ++i)</div>
 <div class="line"><a id="l05690" name="l05690"></a><span class="lineno"> 5690</span>  {</div>
 <div class="line"><a id="l05691" name="l05691"></a><span class="lineno"> 5691</span>    <span class="comment">// バッファオブジェクトの i 番目のブロックのポインタ</span></div>
-<div class="line"><a id="l05692" name="l05692"></a><span class="lineno"> 5692</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
+<div class="line"><a id="l05692" name="l05692"></a><span class="lineno"> 5692</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506">getStride</a>() * i) };</div>
 <div class="line"><a id="l05693" name="l05693"></a><span class="lineno"> 5693</span> </div>
 <div class="line"><a id="l05694" name="l05694"></a><span class="lineno"> 5694</span>    <span class="comment">// 環境光に対する反射係数を設定する</span></div>
-<div class="line"><a id="l05695" name="l05695"></a><span class="lineno"> 5695</span>    material-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Material.html#a6816024cb1c246f897c00e5c90c94e34">ambient</a>[0] = r;</div>
+<div class="line"><a id="l05695" name="l05695"></a><span class="lineno"> 5695</span>    material-&gt;ambient[0] = r;</div>
 <div class="line"><a id="l05696" name="l05696"></a><span class="lineno"> 5696</span>    material-&gt;ambient[1] = g;</div>
 <div class="line"><a id="l05697" name="l05697"></a><span class="lineno"> 5697</span>    material-&gt;ambient[2] = b;</div>
 <div class="line"><a id="l05698" name="l05698"></a><span class="lineno"> 5698</span>    material-&gt;ambient[3] = a;</div>
 <div class="line"><a id="l05699" name="l05699"></a><span class="lineno"> 5699</span>  }</div>
-<div class="line"><a id="l05700" name="l05700"></a><span class="lineno"> 5700</span>  unmap();</div>
+<div class="line"><a id="l05700" name="l05700"></a><span class="lineno"> 5700</span>  <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197">unmap</a>();</div>
 <div class="line"><a id="l05701" name="l05701"></a><span class="lineno"> 5701</span>}</div>
 </div>
 <div class="line"><a id="l05702" name="l05702"></a><span class="lineno"> 5702</span> </div>
@@ -5943,16 +5935,16 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05711" name="l05711"></a><span class="lineno"> 5711</span>  GLint first, GLsizei count)<span class="keyword"> const</span></div>
 <div class="line"><a id="l05712" name="l05712"></a><span class="lineno"> 5712</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l05713" name="l05713"></a><span class="lineno"> 5713</span>  <span class="comment">// データを格納するバッファオブジェクトの先頭のポインタ</span></div>
-<div class="line"><a id="l05714" name="l05714"></a><span class="lineno"> 5714</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(map(first, count)) };</div>
+<div class="line"><a id="l05714" name="l05714"></a><span class="lineno"> 5714</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">map</a>(first, count)) };</div>
 <div class="line"><a id="l05715" name="l05715"></a><span class="lineno"> 5715</span>  <span class="keywordflow">for</span> (GLsizei i = 0; i &lt; count; ++i)</div>
 <div class="line"><a id="l05716" name="l05716"></a><span class="lineno"> 5716</span>  {</div>
 <div class="line"><a id="l05717" name="l05717"></a><span class="lineno"> 5717</span>    <span class="comment">// バッファオブジェクトの i 番目のブロックのポインタ</span></div>
-<div class="line"><a id="l05718" name="l05718"></a><span class="lineno"> 5718</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
+<div class="line"><a id="l05718" name="l05718"></a><span class="lineno"> 5718</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506">getStride</a>() * i) };</div>
 <div class="line"><a id="l05719" name="l05719"></a><span class="lineno"> 5719</span> </div>
 <div class="line"><a id="l05720" name="l05720"></a><span class="lineno"> 5720</span>    <span class="comment">// 光源の強度の環境光成分を設定する</span></div>
-<div class="line"><a id="l05721" name="l05721"></a><span class="lineno"> 5721</span>    material-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Material.html#a6816024cb1c246f897c00e5c90c94e34">ambient</a> = ambient;</div>
+<div class="line"><a id="l05721" name="l05721"></a><span class="lineno"> 5721</span>    material-&gt;ambient = ambient;</div>
 <div class="line"><a id="l05722" name="l05722"></a><span class="lineno"> 5722</span>  }</div>
-<div class="line"><a id="l05723" name="l05723"></a><span class="lineno"> 5723</span>  unmap();</div>
+<div class="line"><a id="l05723" name="l05723"></a><span class="lineno"> 5723</span>  <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197">unmap</a>();</div>
 <div class="line"><a id="l05724" name="l05724"></a><span class="lineno"> 5724</span>}</div>
 </div>
 <div class="line"><a id="l05725" name="l05725"></a><span class="lineno"> 5725</span> </div>
@@ -5971,19 +5963,19 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05737" name="l05737"></a><span class="lineno"> 5737</span>  GLint first, GLsizei count)<span class="keyword"> const</span></div>
 <div class="line"><a id="l05738" name="l05738"></a><span class="lineno"> 5738</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l05739" name="l05739"></a><span class="lineno"> 5739</span>  <span class="comment">// データを格納するバッファオブジェクトの先頭のポインタ</span></div>
-<div class="line"><a id="l05740" name="l05740"></a><span class="lineno"> 5740</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(map(first, count)) };</div>
+<div class="line"><a id="l05740" name="l05740"></a><span class="lineno"> 5740</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">map</a>(first, count)) };</div>
 <div class="line"><a id="l05741" name="l05741"></a><span class="lineno"> 5741</span>  <span class="keywordflow">for</span> (GLsizei i = 0; i &lt; count; ++i)</div>
 <div class="line"><a id="l05742" name="l05742"></a><span class="lineno"> 5742</span>  {</div>
 <div class="line"><a id="l05743" name="l05743"></a><span class="lineno"> 5743</span>    <span class="comment">// バッファオブジェクトの i 番目のブロックのポインタ</span></div>
-<div class="line"><a id="l05744" name="l05744"></a><span class="lineno"> 5744</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
+<div class="line"><a id="l05744" name="l05744"></a><span class="lineno"> 5744</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506">getStride</a>() * i) };</div>
 <div class="line"><a id="l05745" name="l05745"></a><span class="lineno"> 5745</span> </div>
 <div class="line"><a id="l05746" name="l05746"></a><span class="lineno"> 5746</span>    <span class="comment">// 拡散反射係数を設定する</span></div>
-<div class="line"><a id="l05747" name="l05747"></a><span class="lineno"> 5747</span>    material-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Material.html#a68a085fbd3294ff971aa3af1ec93adf4">diffuse</a>[0] = r;</div>
+<div class="line"><a id="l05747" name="l05747"></a><span class="lineno"> 5747</span>    material-&gt;diffuse[0] = r;</div>
 <div class="line"><a id="l05748" name="l05748"></a><span class="lineno"> 5748</span>    material-&gt;diffuse[1] = g;</div>
 <div class="line"><a id="l05749" name="l05749"></a><span class="lineno"> 5749</span>    material-&gt;diffuse[2] = b;</div>
 <div class="line"><a id="l05750" name="l05750"></a><span class="lineno"> 5750</span>    material-&gt;diffuse[3] = a;</div>
 <div class="line"><a id="l05751" name="l05751"></a><span class="lineno"> 5751</span>  }</div>
-<div class="line"><a id="l05752" name="l05752"></a><span class="lineno"> 5752</span>  unmap();</div>
+<div class="line"><a id="l05752" name="l05752"></a><span class="lineno"> 5752</span>  <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197">unmap</a>();</div>
 <div class="line"><a id="l05753" name="l05753"></a><span class="lineno"> 5753</span>}</div>
 </div>
 <div class="line"><a id="l05754" name="l05754"></a><span class="lineno"> 5754</span> </div>
@@ -5999,16 +5991,16 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05763" name="l05763"></a><span class="lineno"> 5763</span>  GLint first, GLsizei count)<span class="keyword"> const</span></div>
 <div class="line"><a id="l05764" name="l05764"></a><span class="lineno"> 5764</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l05765" name="l05765"></a><span class="lineno"> 5765</span>  <span class="comment">// データを格納するバッファオブジェクトの先頭のポインタ</span></div>
-<div class="line"><a id="l05766" name="l05766"></a><span class="lineno"> 5766</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(map(first, count)) };</div>
+<div class="line"><a id="l05766" name="l05766"></a><span class="lineno"> 5766</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">map</a>(first, count)) };</div>
 <div class="line"><a id="l05767" name="l05767"></a><span class="lineno"> 5767</span>  <span class="keywordflow">for</span> (GLsizei i = 0; i &lt; count; ++i)</div>
 <div class="line"><a id="l05768" name="l05768"></a><span class="lineno"> 5768</span>  {</div>
 <div class="line"><a id="l05769" name="l05769"></a><span class="lineno"> 5769</span>    <span class="comment">// バッファオブジェクトの i 番目のブロックのポインタ</span></div>
-<div class="line"><a id="l05770" name="l05770"></a><span class="lineno"> 5770</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
+<div class="line"><a id="l05770" name="l05770"></a><span class="lineno"> 5770</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506">getStride</a>() * i) };</div>
 <div class="line"><a id="l05771" name="l05771"></a><span class="lineno"> 5771</span> </div>
 <div class="line"><a id="l05772" name="l05772"></a><span class="lineno"> 5772</span>    <span class="comment">// 光源の強度の環境光成分を設定する</span></div>
-<div class="line"><a id="l05773" name="l05773"></a><span class="lineno"> 5773</span>    material-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Material.html#a68a085fbd3294ff971aa3af1ec93adf4">diffuse</a> = diffuse;</div>
+<div class="line"><a id="l05773" name="l05773"></a><span class="lineno"> 5773</span>    material-&gt;diffuse = diffuse;</div>
 <div class="line"><a id="l05774" name="l05774"></a><span class="lineno"> 5774</span>  }</div>
-<div class="line"><a id="l05775" name="l05775"></a><span class="lineno"> 5775</span>  unmap();</div>
+<div class="line"><a id="l05775" name="l05775"></a><span class="lineno"> 5775</span>  <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197">unmap</a>();</div>
 <div class="line"><a id="l05776" name="l05776"></a><span class="lineno"> 5776</span>}</div>
 </div>
 <div class="line"><a id="l05777" name="l05777"></a><span class="lineno"> 5777</span> </div>
@@ -6027,19 +6019,19 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05789" name="l05789"></a><span class="lineno"> 5789</span>  GLint first, GLsizei count)<span class="keyword"> const</span></div>
 <div class="line"><a id="l05790" name="l05790"></a><span class="lineno"> 5790</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l05791" name="l05791"></a><span class="lineno"> 5791</span>  <span class="comment">// データを格納するバッファオブジェクトの先頭のポインタ</span></div>
-<div class="line"><a id="l05792" name="l05792"></a><span class="lineno"> 5792</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(map(first, count)) };</div>
+<div class="line"><a id="l05792" name="l05792"></a><span class="lineno"> 5792</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">map</a>(first, count)) };</div>
 <div class="line"><a id="l05793" name="l05793"></a><span class="lineno"> 5793</span>  <span class="keywordflow">for</span> (GLsizei i = 0; i &lt; count; ++i)</div>
 <div class="line"><a id="l05794" name="l05794"></a><span class="lineno"> 5794</span>  {</div>
 <div class="line"><a id="l05795" name="l05795"></a><span class="lineno"> 5795</span>    <span class="comment">// バッファオブジェクトの i 番目のブロックのポインタ</span></div>
-<div class="line"><a id="l05796" name="l05796"></a><span class="lineno"> 5796</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
+<div class="line"><a id="l05796" name="l05796"></a><span class="lineno"> 5796</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506">getStride</a>() * i) };</div>
 <div class="line"><a id="l05797" name="l05797"></a><span class="lineno"> 5797</span> </div>
 <div class="line"><a id="l05798" name="l05798"></a><span class="lineno"> 5798</span>    <span class="comment">// 環境光に対する反射係数と拡散反射係数を設定する</span></div>
-<div class="line"><a id="l05799" name="l05799"></a><span class="lineno"> 5799</span>    material-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Material.html#a6816024cb1c246f897c00e5c90c94e34">ambient</a>[0] = material-&gt;diffuse[0] = r;</div>
+<div class="line"><a id="l05799" name="l05799"></a><span class="lineno"> 5799</span>    material-&gt;ambient[0] = material-&gt;diffuse[0] = r;</div>
 <div class="line"><a id="l05800" name="l05800"></a><span class="lineno"> 5800</span>    material-&gt;ambient[1] = material-&gt;diffuse[1] = g;</div>
 <div class="line"><a id="l05801" name="l05801"></a><span class="lineno"> 5801</span>    material-&gt;ambient[2] = material-&gt;diffuse[2] = b;</div>
 <div class="line"><a id="l05802" name="l05802"></a><span class="lineno"> 5802</span>    material-&gt;ambient[3] = material-&gt;diffuse[3] = a;</div>
 <div class="line"><a id="l05803" name="l05803"></a><span class="lineno"> 5803</span>  }</div>
-<div class="line"><a id="l05804" name="l05804"></a><span class="lineno"> 5804</span>  unmap();</div>
+<div class="line"><a id="l05804" name="l05804"></a><span class="lineno"> 5804</span>  <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197">unmap</a>();</div>
 <div class="line"><a id="l05805" name="l05805"></a><span class="lineno"> 5805</span>}</div>
 </div>
 <div class="line"><a id="l05806" name="l05806"></a><span class="lineno"> 5806</span> </div>
@@ -6055,16 +6047,16 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05815" name="l05815"></a><span class="lineno"> 5815</span>  GLint first, GLsizei count)<span class="keyword"> const</span></div>
 <div class="line"><a id="l05816" name="l05816"></a><span class="lineno"> 5816</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l05817" name="l05817"></a><span class="lineno"> 5817</span>  <span class="comment">// データを格納するバッファオブジェクトの先頭のポインタ</span></div>
-<div class="line"><a id="l05818" name="l05818"></a><span class="lineno"> 5818</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(map(first, count)) };</div>
+<div class="line"><a id="l05818" name="l05818"></a><span class="lineno"> 5818</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">map</a>(first, count)) };</div>
 <div class="line"><a id="l05819" name="l05819"></a><span class="lineno"> 5819</span>  <span class="keywordflow">for</span> (GLsizei i = 0; i &lt; count; ++i)</div>
 <div class="line"><a id="l05820" name="l05820"></a><span class="lineno"> 5820</span>  {</div>
 <div class="line"><a id="l05821" name="l05821"></a><span class="lineno"> 5821</span>    <span class="comment">// バッファオブジェクトの i 番目のブロックのポインタ</span></div>
-<div class="line"><a id="l05822" name="l05822"></a><span class="lineno"> 5822</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
+<div class="line"><a id="l05822" name="l05822"></a><span class="lineno"> 5822</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506">getStride</a>() * i) };</div>
 <div class="line"><a id="l05823" name="l05823"></a><span class="lineno"> 5823</span> </div>
 <div class="line"><a id="l05824" name="l05824"></a><span class="lineno"> 5824</span>    <span class="comment">// 光源の強度の環境光成分を設定する</span></div>
-<div class="line"><a id="l05825" name="l05825"></a><span class="lineno"> 5825</span>    material-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Material.html#a6816024cb1c246f897c00e5c90c94e34">ambient</a> = material-&gt;diffuse = color;</div>
+<div class="line"><a id="l05825" name="l05825"></a><span class="lineno"> 5825</span>    material-&gt;ambient = material-&gt;diffuse = color;</div>
 <div class="line"><a id="l05826" name="l05826"></a><span class="lineno"> 5826</span>  }</div>
-<div class="line"><a id="l05827" name="l05827"></a><span class="lineno"> 5827</span>  unmap();</div>
+<div class="line"><a id="l05827" name="l05827"></a><span class="lineno"> 5827</span>  <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197">unmap</a>();</div>
 <div class="line"><a id="l05828" name="l05828"></a><span class="lineno"> 5828</span>}</div>
 </div>
 <div class="line"><a id="l05829" name="l05829"></a><span class="lineno"> 5829</span> </div>
@@ -6083,29 +6075,29 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05841" name="l05841"></a><span class="lineno"> 5841</span>  <span class="keyword">constexpr</span> <span class="keyword">auto</span> ambientOffset{ offsetof(<a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>, ambient) };</div>
 <div class="line"><a id="l05842" name="l05842"></a><span class="lineno"> 5842</span> </div>
 <div class="line"><a id="l05843" name="l05843"></a><span class="lineno"> 5843</span>  <span class="comment">// ambient 要素のバイト数</span></div>
-<div class="line"><a id="l05844" name="l05844"></a><span class="lineno"> 5844</span>  <span class="keyword">constexpr</span> <span class="keyword">auto</span> ambientSize{ <span class="keyword">sizeof</span>(Material::diffuse) };</div>
+<div class="line"><a id="l05844" name="l05844"></a><span class="lineno"> 5844</span>  <span class="keyword">constexpr</span> <span class="keyword">auto</span> ambientSize{ <span class="keyword">sizeof</span>(<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Material.html#a68a085fbd3294ff971aa3af1ec93adf4">Material::diffuse</a>) };</div>
 <div class="line"><a id="l05845" name="l05845"></a><span class="lineno"> 5845</span> </div>
 <div class="line"><a id="l05846" name="l05846"></a><span class="lineno"> 5846</span>  <span class="comment">// diffuse 要素のバイトオフセット</span></div>
 <div class="line"><a id="l05847" name="l05847"></a><span class="lineno"> 5847</span>  <span class="keyword">constexpr</span> <span class="keyword">auto</span> diffuseOffset{ offsetof(<a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>, diffuse) };</div>
 <div class="line"><a id="l05848" name="l05848"></a><span class="lineno"> 5848</span> </div>
 <div class="line"><a id="l05849" name="l05849"></a><span class="lineno"> 5849</span>  <span class="comment">// diffuse 要素のバイト数</span></div>
-<div class="line"><a id="l05850" name="l05850"></a><span class="lineno"> 5850</span>  <span class="keyword">constexpr</span> <span class="keyword">auto</span> diffuseSize{ <span class="keyword">sizeof</span>(Material::diffuse) };</div>
+<div class="line"><a id="l05850" name="l05850"></a><span class="lineno"> 5850</span>  <span class="keyword">constexpr</span> <span class="keyword">auto</span> diffuseSize{ <span class="keyword">sizeof</span>(<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Material.html#a68a085fbd3294ff971aa3af1ec93adf4">Material::diffuse</a>) };</div>
 <div class="line"><a id="l05851" name="l05851"></a><span class="lineno"> 5851</span> </div>
 <div class="line"><a id="l05852" name="l05852"></a><span class="lineno"> 5852</span>  <span class="comment">// 元のデータの先頭</span></div>
 <div class="line"><a id="l05853" name="l05853"></a><span class="lineno"> 5853</span>  <span class="keyword">const</span> <span class="keyword">auto</span>* source{ <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(color) };</div>
 <div class="line"><a id="l05854" name="l05854"></a><span class="lineno"> 5854</span> </div>
 <div class="line"><a id="l05855" name="l05855"></a><span class="lineno"> 5855</span>  <span class="comment">// first 番目のブロックから count 個の ambient 要素と diffuse 要素に値を設定する</span></div>
-<div class="line"><a id="l05856" name="l05856"></a><span class="lineno"> 5856</span>  bind();</div>
+<div class="line"><a id="l05856" name="l05856"></a><span class="lineno"> 5856</span>  <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#abcc61a088d16f53a9a51749dd34c24b8">bind</a>();</div>
 <div class="line"><a id="l05857" name="l05857"></a><span class="lineno"> 5857</span>  <span class="keywordflow">for</span> (GLsizei i = 0; i &lt; count; ++i)</div>
 <div class="line"><a id="l05858" name="l05858"></a><span class="lineno"> 5858</span>  {</div>
 <div class="line"><a id="l05859" name="l05859"></a><span class="lineno"> 5859</span>    <span class="comment">// 格納先</span></div>
-<div class="line"><a id="l05860" name="l05860"></a><span class="lineno"> 5860</span>    <span class="keyword">const</span> <span class="keyword">auto</span> destination{ getStride() * (first + i) };</div>
+<div class="line"><a id="l05860" name="l05860"></a><span class="lineno"> 5860</span>    <span class="keyword">const</span> <span class="keyword">auto</span> destination{ <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506">getStride</a>() * (first + i) };</div>
 <div class="line"><a id="l05861" name="l05861"></a><span class="lineno"> 5861</span> </div>
 <div class="line"><a id="l05862" name="l05862"></a><span class="lineno"> 5862</span>    <span class="comment">// first + i 番目のブロックの ambient 要素に値を設定する</span></div>
-<div class="line"><a id="l05863" name="l05863"></a><span class="lineno"> 5863</span>    glBufferSubData(getTarget(), destination + ambientOffset, ambientSize, source + i * ambientSize);</div>
+<div class="line"><a id="l05863" name="l05863"></a><span class="lineno"> 5863</span>    glBufferSubData(<a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#ad097650d4355144a15deb49bf78e6198">getTarget</a>(), destination + ambientOffset, ambientSize, source + i * ambientSize);</div>
 <div class="line"><a id="l05864" name="l05864"></a><span class="lineno"> 5864</span> </div>
 <div class="line"><a id="l05865" name="l05865"></a><span class="lineno"> 5865</span>    <span class="comment">// first + i 番目のブロックの diffuse 要素に値を設定する</span></div>
-<div class="line"><a id="l05866" name="l05866"></a><span class="lineno"> 5866</span>    glBufferSubData(getTarget(), destination + diffuseOffset, diffuseSize, source + i * diffuseSize);</div>
+<div class="line"><a id="l05866" name="l05866"></a><span class="lineno"> 5866</span>    glBufferSubData(<a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#ad097650d4355144a15deb49bf78e6198">getTarget</a>(), destination + diffuseOffset, diffuseSize, source + i * diffuseSize);</div>
 <div class="line"><a id="l05867" name="l05867"></a><span class="lineno"> 5867</span>  }</div>
 <div class="line"><a id="l05868" name="l05868"></a><span class="lineno"> 5868</span>}</div>
 </div>
@@ -6125,19 +6117,19 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05881" name="l05881"></a><span class="lineno"> 5881</span>  GLint first, GLsizei count)<span class="keyword"> const</span></div>
 <div class="line"><a id="l05882" name="l05882"></a><span class="lineno"> 5882</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l05883" name="l05883"></a><span class="lineno"> 5883</span>  <span class="comment">// データを格納するバッファオブジェクトの先頭のポインタ</span></div>
-<div class="line"><a id="l05884" name="l05884"></a><span class="lineno"> 5884</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(map(first, count)) };</div>
+<div class="line"><a id="l05884" name="l05884"></a><span class="lineno"> 5884</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">map</a>(first, count)) };</div>
 <div class="line"><a id="l05885" name="l05885"></a><span class="lineno"> 5885</span>  <span class="keywordflow">for</span> (GLsizei i = 0; i &lt; count; ++i)</div>
 <div class="line"><a id="l05886" name="l05886"></a><span class="lineno"> 5886</span>  {</div>
 <div class="line"><a id="l05887" name="l05887"></a><span class="lineno"> 5887</span>    <span class="comment">// バッファオブジェクトの i 番目のブロックのポインタ</span></div>
-<div class="line"><a id="l05888" name="l05888"></a><span class="lineno"> 5888</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
+<div class="line"><a id="l05888" name="l05888"></a><span class="lineno"> 5888</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506">getStride</a>() * i) };</div>
 <div class="line"><a id="l05889" name="l05889"></a><span class="lineno"> 5889</span> </div>
 <div class="line"><a id="l05890" name="l05890"></a><span class="lineno"> 5890</span>    <span class="comment">// 鏡面反射係数を設定する</span></div>
-<div class="line"><a id="l05891" name="l05891"></a><span class="lineno"> 5891</span>    material-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Material.html#a270cd1c30152ee8c29ec5a94e12ff843">specular</a>[0] = r;</div>
+<div class="line"><a id="l05891" name="l05891"></a><span class="lineno"> 5891</span>    material-&gt;specular[0] = r;</div>
 <div class="line"><a id="l05892" name="l05892"></a><span class="lineno"> 5892</span>    material-&gt;specular[1] = g;</div>
 <div class="line"><a id="l05893" name="l05893"></a><span class="lineno"> 5893</span>    material-&gt;specular[2] = b;</div>
 <div class="line"><a id="l05894" name="l05894"></a><span class="lineno"> 5894</span>    material-&gt;specular[3] = a;</div>
 <div class="line"><a id="l05895" name="l05895"></a><span class="lineno"> 5895</span>  }</div>
-<div class="line"><a id="l05896" name="l05896"></a><span class="lineno"> 5896</span>  unmap();</div>
+<div class="line"><a id="l05896" name="l05896"></a><span class="lineno"> 5896</span>  <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197">unmap</a>();</div>
 <div class="line"><a id="l05897" name="l05897"></a><span class="lineno"> 5897</span>}</div>
 </div>
 <div class="line"><a id="l05898" name="l05898"></a><span class="lineno"> 5898</span> </div>
@@ -6153,16 +6145,16 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05907" name="l05907"></a><span class="lineno"> 5907</span>  GLint first, GLsizei count)<span class="keyword"> const</span></div>
 <div class="line"><a id="l05908" name="l05908"></a><span class="lineno"> 5908</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l05909" name="l05909"></a><span class="lineno"> 5909</span>  <span class="comment">// データを格納するバッファオブジェクトの先頭のポインタ</span></div>
-<div class="line"><a id="l05910" name="l05910"></a><span class="lineno"> 5910</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(map(first, count)) };</div>
+<div class="line"><a id="l05910" name="l05910"></a><span class="lineno"> 5910</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">map</a>(first, count)) };</div>
 <div class="line"><a id="l05911" name="l05911"></a><span class="lineno"> 5911</span>  <span class="keywordflow">for</span> (GLsizei i = 0; i &lt; count; ++i)</div>
 <div class="line"><a id="l05912" name="l05912"></a><span class="lineno"> 5912</span>  {</div>
 <div class="line"><a id="l05913" name="l05913"></a><span class="lineno"> 5913</span>    <span class="comment">// バッファオブジェクトの i 番目のブロックのポインタ</span></div>
-<div class="line"><a id="l05914" name="l05914"></a><span class="lineno"> 5914</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
+<div class="line"><a id="l05914" name="l05914"></a><span class="lineno"> 5914</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506">getStride</a>() * i) };</div>
 <div class="line"><a id="l05915" name="l05915"></a><span class="lineno"> 5915</span> </div>
 <div class="line"><a id="l05916" name="l05916"></a><span class="lineno"> 5916</span>    <span class="comment">// 光源の強度の環境光成分を設定する</span></div>
-<div class="line"><a id="l05917" name="l05917"></a><span class="lineno"> 5917</span>    material-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Material.html#a270cd1c30152ee8c29ec5a94e12ff843">specular</a> = specular;</div>
+<div class="line"><a id="l05917" name="l05917"></a><span class="lineno"> 5917</span>    material-&gt;specular = specular;</div>
 <div class="line"><a id="l05918" name="l05918"></a><span class="lineno"> 5918</span>  }</div>
-<div class="line"><a id="l05919" name="l05919"></a><span class="lineno"> 5919</span>  unmap();</div>
+<div class="line"><a id="l05919" name="l05919"></a><span class="lineno"> 5919</span>  <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197">unmap</a>();</div>
 <div class="line"><a id="l05920" name="l05920"></a><span class="lineno"> 5920</span>}</div>
 </div>
 <div class="line"><a id="l05921" name="l05921"></a><span class="lineno"> 5921</span> </div>
@@ -6178,14 +6170,14 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05930" name="l05930"></a><span class="lineno"> 5930</span>  GLint first, GLsizei count)<span class="keyword"> const</span></div>
 <div class="line"><a id="l05931" name="l05931"></a><span class="lineno"> 5931</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l05932" name="l05932"></a><span class="lineno"> 5932</span>  <span class="comment">// データを格納するバッファオブジェクトの先頭のポインタ</span></div>
-<div class="line"><a id="l05933" name="l05933"></a><span class="lineno"> 5933</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(map(first, count)) };</div>
+<div class="line"><a id="l05933" name="l05933"></a><span class="lineno"> 5933</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">map</a>(first, count)) };</div>
 <div class="line"><a id="l05934" name="l05934"></a><span class="lineno"> 5934</span>  <span class="keywordflow">for</span> (GLsizei i = 0; i &lt; count; ++i)</div>
 <div class="line"><a id="l05935" name="l05935"></a><span class="lineno"> 5935</span>  {</div>
 <div class="line"><a id="l05936" name="l05936"></a><span class="lineno"> 5936</span>    <span class="comment">// バッファオブジェクトの i 番目のブロックのポインタ</span></div>
-<div class="line"><a id="l05937" name="l05937"></a><span class="lineno"> 5937</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
-<div class="line"><a id="l05938" name="l05938"></a><span class="lineno"> 5938</span>    material-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Material.html#a537c99818191226cb9ceddc7b7ff3d6c">shininess</a> = shininess;</div>
+<div class="line"><a id="l05937" name="l05937"></a><span class="lineno"> 5937</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506">getStride</a>() * i) };</div>
+<div class="line"><a id="l05938" name="l05938"></a><span class="lineno"> 5938</span>    material-&gt;shininess = shininess;</div>
 <div class="line"><a id="l05939" name="l05939"></a><span class="lineno"> 5939</span>  }</div>
-<div class="line"><a id="l05940" name="l05940"></a><span class="lineno"> 5940</span>  unmap();</div>
+<div class="line"><a id="l05940" name="l05940"></a><span class="lineno"> 5940</span>  <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197">unmap</a>();</div>
 <div class="line"><a id="l05941" name="l05941"></a><span class="lineno"> 5941</span>}</div>
 </div>
 <div class="line"><a id="l05942" name="l05942"></a><span class="lineno"> 5942</span> </div>
@@ -6201,14 +6193,14 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05951" name="l05951"></a><span class="lineno"> 5951</span>  GLint first, GLsizei count)<span class="keyword"> const</span></div>
 <div class="line"><a id="l05952" name="l05952"></a><span class="lineno"> 5952</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l05953" name="l05953"></a><span class="lineno"> 5953</span>  <span class="comment">// データを格納するバッファオブジェクトの先頭のポインタ</span></div>
-<div class="line"><a id="l05954" name="l05954"></a><span class="lineno"> 5954</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(map(first, count)) };</div>
+<div class="line"><a id="l05954" name="l05954"></a><span class="lineno"> 5954</span>  <span class="keyword">const</span> <span class="keyword">auto</span> start{ <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">map</a>(first, count)) };</div>
 <div class="line"><a id="l05955" name="l05955"></a><span class="lineno"> 5955</span>  <span class="keywordflow">for</span> (GLsizei i = 0; i &lt; count; ++i)</div>
 <div class="line"><a id="l05956" name="l05956"></a><span class="lineno"> 5956</span>  {</div>
 <div class="line"><a id="l05957" name="l05957"></a><span class="lineno"> 5957</span>    <span class="comment">// バッファオブジェクトの i 番目のブロックのポインタ</span></div>
-<div class="line"><a id="l05958" name="l05958"></a><span class="lineno"> 5958</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + getStride() * i) };</div>
-<div class="line"><a id="l05959" name="l05959"></a><span class="lineno"> 5959</span>    material-&gt;<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Material.html#a537c99818191226cb9ceddc7b7ff3d6c">shininess</a> = shininess[i];</div>
+<div class="line"><a id="l05958" name="l05958"></a><span class="lineno"> 5958</span>    <span class="keyword">const</span> <span class="keyword">auto</span> material{ <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Material.html">Material</a>*<span class="keyword">&gt;</span>(start + <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506">getStride</a>() * i) };</div>
+<div class="line"><a id="l05959" name="l05959"></a><span class="lineno"> 5959</span>    material-&gt;shininess = shininess[i];</div>
 <div class="line"><a id="l05960" name="l05960"></a><span class="lineno"> 5960</span>  }</div>
-<div class="line"><a id="l05961" name="l05961"></a><span class="lineno"> 5961</span>  unmap();</div>
+<div class="line"><a id="l05961" name="l05961"></a><span class="lineno"> 5961</span>  <a class="code hl_function" href="classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197">unmap</a>();</div>
 <div class="line"><a id="l05962" name="l05962"></a><span class="lineno"> 5962</span>}</div>
 </div>
 <div class="line"><a id="l05963" name="l05963"></a><span class="lineno"> 5963</span> </div>
@@ -6221,11 +6213,11 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l05969" name="l05969"></a><span class="lineno"> 5969</span>{</div>
 <div class="line"><a id="l05970" name="l05970"></a><span class="lineno"> 5970</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="classgg_1_1GgPointShader.html#a3e25078b5b610d7ffb00661523bf8010">GgPointShader::load</a>(vert, frag, geom, nvarying, varyings)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l05971" name="l05971"></a><span class="lineno"> 5971</span> </div>
-<div class="line"><a id="l05972" name="l05972"></a><span class="lineno"> 5972</span>  mnLoc = glGetUniformLocation(get(), <span class="stringliteral">&quot;mn&quot;</span>);</div>
-<div class="line"><a id="l05973" name="l05973"></a><span class="lineno"> 5973</span>  <span class="keyword">const</span> <span class="keyword">auto</span> lightIndex{ glGetUniformBlockIndex(get(), <span class="stringliteral">&quot;Light&quot;</span>) };</div>
-<div class="line"><a id="l05974" name="l05974"></a><span class="lineno"> 5974</span>  glUniformBlockBinding(get(), lightIndex, <a class="code hl_enumvalue" href="namespacegg.html#ae6e185ba7876df656b8d0b02819b5e49a64b69a47d95d955aed16b608baf1f68c">LightBindingPoint</a>);</div>
-<div class="line"><a id="l05975" name="l05975"></a><span class="lineno"> 5975</span>  <span class="keyword">const</span> <span class="keyword">auto</span> materialIndex{ glGetUniformBlockIndex(get(), <span class="stringliteral">&quot;Material&quot;</span>) };</div>
-<div class="line"><a id="l05976" name="l05976"></a><span class="lineno"> 5976</span>  glUniformBlockBinding(get(), materialIndex, <a class="code hl_enumvalue" href="namespacegg.html#ae6e185ba7876df656b8d0b02819b5e49a3ba0d83d74aed68d92082c2621fa2348">MaterialBindingPoint</a>);</div>
+<div class="line"><a id="l05972" name="l05972"></a><span class="lineno"> 5972</span>  mnLoc = glGetUniformLocation(<a class="code hl_function" href="classgg_1_1GgPointShader.html#a491b86fce18818a1a757bc1a81e0f60b">get</a>(), <span class="stringliteral">&quot;mn&quot;</span>);</div>
+<div class="line"><a id="l05973" name="l05973"></a><span class="lineno"> 5973</span>  <span class="keyword">const</span> <span class="keyword">auto</span> lightIndex{ glGetUniformBlockIndex(<a class="code hl_function" href="classgg_1_1GgPointShader.html#a491b86fce18818a1a757bc1a81e0f60b">get</a>(), <span class="stringliteral">&quot;Light&quot;</span>) };</div>
+<div class="line"><a id="l05974" name="l05974"></a><span class="lineno"> 5974</span>  glUniformBlockBinding(<a class="code hl_function" href="classgg_1_1GgPointShader.html#a491b86fce18818a1a757bc1a81e0f60b">get</a>(), lightIndex, <a class="code hl_enumvalue" href="namespacegg.html#ae6e185ba7876df656b8d0b02819b5e49a64b69a47d95d955aed16b608baf1f68c">LightBindingPoint</a>);</div>
+<div class="line"><a id="l05975" name="l05975"></a><span class="lineno"> 5975</span>  <span class="keyword">const</span> <span class="keyword">auto</span> materialIndex{ glGetUniformBlockIndex(<a class="code hl_function" href="classgg_1_1GgPointShader.html#a491b86fce18818a1a757bc1a81e0f60b">get</a>(), <span class="stringliteral">&quot;Material&quot;</span>) };</div>
+<div class="line"><a id="l05976" name="l05976"></a><span class="lineno"> 5976</span>  glUniformBlockBinding(<a class="code hl_function" href="classgg_1_1GgPointShader.html#a491b86fce18818a1a757bc1a81e0f60b">get</a>(), materialIndex, <a class="code hl_enumvalue" href="namespacegg.html#ae6e185ba7876df656b8d0b02819b5e49a3ba0d83d74aed68d92082c2621fa2348">MaterialBindingPoint</a>);</div>
 <div class="line"><a id="l05977" name="l05977"></a><span class="lineno"> 5977</span> </div>
 <div class="line"><a id="l05978" name="l05978"></a><span class="lineno"> 5978</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l05979" name="l05979"></a><span class="lineno"> 5979</span>}</div>
@@ -6287,9 +6279,10 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l06031" name="l06031"></a><span class="lineno"> 6031</span>  }</div>
 <div class="line"><a id="l06032" name="l06032"></a><span class="lineno"> 6032</span>}</div>
 </div>
-<div class="ttc" id="aclassgg_1_1GgColorTexture_html_aab0f5a583d503f5c94b5986781c57961"><div class="ttname"><a href="classgg_1_1GgColorTexture.html#aab0f5a583d503f5c94b5986781c57961">gg::GgColorTexture::load</a></div><div class="ttdeci">void load(const GLvoid *image, GLsizei width, GLsizei height, GLenum format=GL_RGB, GLenum type=GL_UNSIGNED_BYTE, GLenum internal=GL_RGB, GLenum wrap=GL_CLAMP_TO_EDGE, bool swizzle=true)</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l05425">gg.h:5425</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgColorTexture_html_aab0f5a583d503f5c94b5986781c57961"><div class="ttname"><a href="classgg_1_1GgColorTexture.html#aab0f5a583d503f5c94b5986781c57961">gg::GgColorTexture::load</a></div><div class="ttdeci">void load(const GLvoid *image, GLsizei width, GLsizei height, GLenum format=GL_RGB, GLenum type=GL_UNSIGNED_BYTE, GLenum internal=GL_RGB, GLenum wrap=GL_CLAMP_TO_EDGE, bool swizzle=true)</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l05431">gg.h:5431</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgElements_html_a81e0b1de878227acdea4cb4fd450c6db"><div class="ttname"><a href="classgg_1_1GgElements.html#a81e0b1de878227acdea4cb4fd450c6db">gg::GgElements::draw</a></div><div class="ttdeci">virtual void draw(GLint first=0, GLsizei count=0) const</div><div class="ttdef"><b>Definition</b> <a href="#l05163">gg.cpp:5163</a></div></div>
-<div class="ttc" id="aclassgg_1_1GgMatrix_html"><div class="ttname"><a href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l02126">gg.h:2127</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgElements_html_ac4f4685a39e65aefdeacea83e02ff8f7"><div class="ttname"><a href="classgg_1_1GgElements.html#ac4f4685a39e65aefdeacea83e02ff8f7">gg::GgElements::getIndexCount</a></div><div class="ttdeci">const GLsizei &amp; getIndexCount() const</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l06664">gg.h:6664</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgMatrix_html"><div class="ttname"><a href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l02132">gg.h:2133</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgMatrix_html_a12addc0d862d6083a82b2e082061dae3"><div class="ttname"><a href="classgg_1_1GgMatrix.html#a12addc0d862d6083a82b2e082061dae3">gg::GgMatrix::loadIdentity</a></div><div class="ttdeci">GgMatrix &amp; loadIdentity()</div><div class="ttdef"><b>Definition</b> <a href="#l02734">gg.cpp:2734</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgMatrix_html_a13f26dafecce8177574108ada080471b"><div class="ttname"><a href="classgg_1_1GgMatrix.html#a13f26dafecce8177574108ada080471b">gg::GgMatrix::loadFrustum</a></div><div class="ttdeci">GgMatrix &amp; loadFrustum(GLfloat left, GLfloat right, GLfloat bottom, GLfloat top, GLfloat zNear, GLfloat zFar)</div><div class="ttdef"><b>Definition</b> <a href="#l03123">gg.cpp:3123</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgMatrix_html_a1411224c2d99609e2a9c8753903df624"><div class="ttname"><a href="classgg_1_1GgMatrix.html#a1411224c2d99609e2a9c8753903df624">gg::GgMatrix::loadTranslate</a></div><div class="ttdeci">GgMatrix &amp; loadTranslate(GLfloat x, GLfloat y, GLfloat z, GLfloat w=1.0f)</div><div class="ttdef"><b>Definition</b> <a href="#l02750">gg.cpp:2750</a></div></div>
@@ -6304,21 +6297,26 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="ttc" id="aclassgg_1_1GgMatrix_html_ae314b688f465c548dfa4b5a5ed3a916f"><div class="ttname"><a href="classgg_1_1GgMatrix.html#ae314b688f465c548dfa4b5a5ed3a916f">gg::GgMatrix::loadRotateZ</a></div><div class="ttdeci">GgMatrix &amp; loadRotateZ(GLfloat a)</div><div class="ttdef"><b>Definition</b> <a href="#l02820">gg.cpp:2820</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgMatrix_html_aeb944e9d5e45ee4c64ad3565492b2852"><div class="ttname"><a href="classgg_1_1GgMatrix.html#aeb944e9d5e45ee4c64ad3565492b2852">gg::GgMatrix::loadTranspose</a></div><div class="ttdeci">GgMatrix &amp; loadTranspose(const GLfloat *a)</div><div class="ttdef"><b>Definition</b> <a href="#l02881">gg.cpp:2881</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgMatrix_html_afd68213cca68bbf403e86935e86b1096"><div class="ttname"><a href="classgg_1_1GgMatrix.html#afd68213cca68bbf403e86935e86b1096">gg::GgMatrix::loadNormal</a></div><div class="ttdeci">GgMatrix &amp; loadNormal(const GLfloat *a)</div><div class="ttdef"><b>Definition</b> <a href="#l02992">gg.cpp:2992</a></div></div>
-<div class="ttc" id="aclassgg_1_1GgNormalTexture_html_a4d72c9169596e2040d41388ec375d253"><div class="ttname"><a href="classgg_1_1GgNormalTexture.html#a4d72c9169596e2040d41388ec375d253">gg::GgNormalTexture::load</a></div><div class="ttdeci">void load(const GLubyte *hmap, GLsizei width, GLsizei height, GLenum format=GL_RED, GLfloat nz=1.0f, GLenum internal=GL_RGBA)</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l05531">gg.h:5531</a></div></div>
-<div class="ttc" id="aclassgg_1_1GgPointShader_html_a3e25078b5b610d7ffb00661523bf8010"><div class="ttname"><a href="classgg_1_1GgPointShader.html#a3e25078b5b610d7ffb00661523bf8010">gg::GgPointShader::load</a></div><div class="ttdeci">bool load(const std::string &amp;vert, const std::string &amp;frag=&quot;&quot;, const std::string &amp;geom=&quot;&quot;, GLint nvarying=0, const char *const *varyings=nullptr)</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07053">gg.h:7053</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgNormalTexture_html_a4d72c9169596e2040d41388ec375d253"><div class="ttname"><a href="classgg_1_1GgNormalTexture.html#a4d72c9169596e2040d41388ec375d253">gg::GgNormalTexture::load</a></div><div class="ttdeci">void load(const GLubyte *hmap, GLsizei width, GLsizei height, GLenum format=GL_RED, GLfloat nz=1.0f, GLenum internal=GL_RGBA)</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l05537">gg.h:5537</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgPointShader_html_a3e25078b5b610d7ffb00661523bf8010"><div class="ttname"><a href="classgg_1_1GgPointShader.html#a3e25078b5b610d7ffb00661523bf8010">gg::GgPointShader::load</a></div><div class="ttdeci">bool load(const std::string &amp;vert, const std::string &amp;frag=&quot;&quot;, const std::string &amp;geom=&quot;&quot;, GLint nvarying=0, const char *const *varyings=nullptr)</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07059">gg.h:7059</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgPointShader_html_a491b86fce18818a1a757bc1a81e0f60b"><div class="ttname"><a href="classgg_1_1GgPointShader.html#a491b86fce18818a1a757bc1a81e0f60b">gg::GgPointShader::get</a></div><div class="ttdeci">GLuint get() const</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07229">gg.h:7229</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgPoints_html_a132523e30fbb6afa7e27cf43d3ccaece"><div class="ttname"><a href="classgg_1_1GgPoints.html#a132523e30fbb6afa7e27cf43d3ccaece">gg::GgPoints::draw</a></div><div class="ttdeci">virtual void draw(GLint first=0, GLsizei count=0) const</div><div class="ttdef"><b>Definition</b> <a href="#l05120">gg.cpp:5120</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgPoints_html_a7f3cad112cdcb664771259eebac5874c"><div class="ttname"><a href="classgg_1_1GgPoints.html#a7f3cad112cdcb664771259eebac5874c">gg::GgPoints::getCount</a></div><div class="ttdeci">const GLsizei &amp; getCount() const</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l06406">gg.h:6406</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgPoints_html_aa1e392b623c66b9d82aaa2f899b58cfa"><div class="ttname"><a href="classgg_1_1GgPoints.html#aa1e392b623c66b9d82aaa2f899b58cfa">gg::GgPoints::load</a></div><div class="ttdeci">void load(const GgVector *pos, GLsizei count, GLenum usage=GL_STATIC_DRAW)</div><div class="ttdef"><b>Definition</b> <a href="#l05107">gg.cpp:5107</a></div></div>
-<div class="ttc" id="aclassgg_1_1GgQuaternion_html"><div class="ttname"><a href="classgg_1_1GgQuaternion.html">gg::GgQuaternion</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l03452">gg.h:3453</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgQuaternion_html"><div class="ttname"><a href="classgg_1_1GgQuaternion.html">gg::GgQuaternion</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l03458">gg.h:3459</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgQuaternion_html_a308e08f78d2dfeadc2efbcd7a470d6bd"><div class="ttname"><a href="classgg_1_1GgQuaternion.html#a308e08f78d2dfeadc2efbcd7a470d6bd">gg::GgQuaternion::loadRotateY</a></div><div class="ttdeci">GgQuaternion &amp; loadRotateY(GLfloat a)</div><div class="ttdef"><b>Definition</b> <a href="#l03326">gg.cpp:3326</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgQuaternion_html_a345f63c1d1278daece7b1a09d279d74a"><div class="ttname"><a href="classgg_1_1GgQuaternion.html#a345f63c1d1278daece7b1a09d279d74a">gg::GgQuaternion::loadRotateZ</a></div><div class="ttdeci">GgQuaternion &amp; loadRotateZ(GLfloat a)</div><div class="ttdef"><b>Definition</b> <a href="#l03338">gg.cpp:3338</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgQuaternion_html_a3a1be65570aae13d963e894f02c88beb"><div class="ttname"><a href="classgg_1_1GgQuaternion.html#a3a1be65570aae13d963e894f02c88beb">gg::GgQuaternion::loadEuler</a></div><div class="ttdeci">GgQuaternion &amp; loadEuler(GLfloat heading, GLfloat pitch, GLfloat roll)</div><div class="ttdef"><b>Definition</b> <a href="#l03350">gg.cpp:3350</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgQuaternion_html_a46f9d1612fdd1fc39db6c8ba7e574a86"><div class="ttname"><a href="classgg_1_1GgQuaternion.html#a46f9d1612fdd1fc39db6c8ba7e574a86">gg::GgQuaternion::loadInvert</a></div><div class="ttdeci">GgQuaternion &amp; loadInvert(const GLfloat *a)</div><div class="ttdef"><b>Definition</b> <a href="#l03392">gg.cpp:3392</a></div></div>
-<div class="ttc" id="aclassgg_1_1GgQuaternion_html_a6e39d8318296545ba0053eda5a71a6a8"><div class="ttname"><a href="classgg_1_1GgQuaternion.html#a6e39d8318296545ba0053eda5a71a6a8">gg::GgQuaternion::getMatrix</a></div><div class="ttdeci">GgMatrix getMatrix() const</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l04498">gg.h:4498</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgQuaternion_html_a6e39d8318296545ba0053eda5a71a6a8"><div class="ttname"><a href="classgg_1_1GgQuaternion.html#a6e39d8318296545ba0053eda5a71a6a8">gg::GgQuaternion::getMatrix</a></div><div class="ttdeci">GgMatrix getMatrix() const</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l04504">gg.h:4504</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgQuaternion_html_a6f9cd8893b1adbbaf17588b1ba5ee9c3"><div class="ttname"><a href="classgg_1_1GgQuaternion.html#a6f9cd8893b1adbbaf17588b1ba5ee9c3">gg::GgQuaternion::loadRotateX</a></div><div class="ttdeci">GgQuaternion &amp; loadRotateX(GLfloat a)</div><div class="ttdef"><b>Definition</b> <a href="#l03314">gg.cpp:3314</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgQuaternion_html_a82d0620de0f023642b08d7e0f23e0687"><div class="ttname"><a href="classgg_1_1GgQuaternion.html#a82d0620de0f023642b08d7e0f23e0687">gg::GgQuaternion::loadRotate</a></div><div class="ttdeci">GgQuaternion &amp; loadRotate(GLfloat x, GLfloat y, GLfloat z, GLfloat a)</div><div class="ttdef"><b>Definition</b> <a href="#l03292">gg.cpp:3292</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgQuaternion_html_a8667e065b18d857126f5481d0be8d527"><div class="ttname"><a href="classgg_1_1GgQuaternion.html#a8667e065b18d857126f5481d0be8d527">gg::GgQuaternion::normalize</a></div><div class="ttdeci">GgQuaternion normalize() const</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l04435">gg.h:4435</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgQuaternion_html_ac1c52c26e2fdfdde277f9aa714757a2f"><div class="ttname"><a href="classgg_1_1GgQuaternion.html#ac1c52c26e2fdfdde277f9aa714757a2f">gg::GgQuaternion::GgQuaternion</a></div><div class="ttdeci">GgQuaternion()=default</div></div>
 <div class="ttc" id="aclassgg_1_1GgQuaternion_html_af529d76bbf4048ad56625575c7af3668"><div class="ttname"><a href="classgg_1_1GgQuaternion.html#af529d76bbf4048ad56625575c7af3668">gg::GgQuaternion::loadNormalize</a></div><div class="ttdeci">GgQuaternion &amp; loadNormalize(const GLfloat *a)</div><div class="ttdef"><b>Definition</b> <a href="#l03366">gg.cpp:3366</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgQuaternion_html_af9a9577581a5f9bbebd675998f741215"><div class="ttname"><a href="classgg_1_1GgQuaternion.html#af9a9577581a5f9bbebd675998f741215">gg::GgQuaternion::loadConjugate</a></div><div class="ttdeci">GgQuaternion &amp; loadConjugate(const GLfloat *a)</div><div class="ttdef"><b>Definition</b> <a href="#l03378">gg.cpp:3378</a></div></div>
-<div class="ttc" id="aclassgg_1_1GgShape_html_adf1b1da86a75b4c74dddf6194e615f6d"><div class="ttname"><a href="classgg_1_1GgShape.html#adf1b1da86a75b4c74dddf6194e615f6d">gg::GgShape::draw</a></div><div class="ttdeci">virtual void draw(GLint first=0, GLsizei count=0) const</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l06324">gg.h:6324</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgShape_html_a860e6671d9d80295599ed2cf9f2449bc"><div class="ttname"><a href="classgg_1_1GgShape.html#a860e6671d9d80295599ed2cf9f2449bc">gg::GgShape::getMode</a></div><div class="ttdeci">const GLenum &amp; getMode() const</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l06319">gg.h:6319</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgShape_html_adf1b1da86a75b4c74dddf6194e615f6d"><div class="ttname"><a href="classgg_1_1GgShape.html#adf1b1da86a75b4c74dddf6194e615f6d">gg::GgShape::draw</a></div><div class="ttdeci">virtual void draw(GLint first=0, GLsizei count=0) const</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l06330">gg.h:6330</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgSimpleObj_html_a1c0520c2ec7c7edb38550aae324c0cd6"><div class="ttname"><a href="classgg_1_1GgSimpleObj.html#a1c0520c2ec7c7edb38550aae324c0cd6">gg::GgSimpleObj::GgSimpleObj</a></div><div class="ttdeci">GgSimpleObj(const std::string &amp;name, bool normalize=false)</div><div class="ttdef"><b>Definition</b> <a href="#l05984">gg.cpp:5984</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgSimpleObj_html_a4a23b84f66b77e8ec9a9fdd94b9e4d33"><div class="ttname"><a href="classgg_1_1GgSimpleObj.html#a4a23b84f66b77e8ec9a9fdd94b9e4d33">gg::GgSimpleObj::draw</a></div><div class="ttdeci">virtual void draw(GLint first=0, GLsizei count=0) const</div><div class="ttdef"><b>Definition</b> <a href="#l06012">gg.cpp:6012</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgSimpleShader_1_1LightBuffer_html_a45298d18a7c067907dca4ac54a56b76b"><div class="ttname"><a href="classgg_1_1GgSimpleShader_1_1LightBuffer.html#a45298d18a7c067907dca4ac54a56b76b">gg::GgSimpleShader::LightBuffer::loadSpecular</a></div><div class="ttdeci">void loadSpecular(GLfloat r, GLfloat g, GLfloat b, GLfloat a=1.0f, GLint first=0, GLsizei count=1) const</div><div class="ttdef"><b>Definition</b> <a href="#l05555">gg.cpp:5555</a></div></div>
@@ -6339,14 +6337,20 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="ttc" id="aclassgg_1_1GgTrackball_html_aaaa41ddff91ff91173133d478356b836"><div class="ttname"><a href="classgg_1_1GgTrackball.html#aaaa41ddff91ff91173133d478356b836">gg::GgTrackball::reset</a></div><div class="ttdeci">void reset(const GgQuaternion &amp;q=ggIdentityQuaternion())</div><div class="ttdef"><b>Definition</b> <a href="#l03416">gg.cpp:3416</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgTrackball_html_ab6d959db5ef9b8405da2f5ded29766d0"><div class="ttname"><a href="classgg_1_1GgTrackball.html#ab6d959db5ef9b8405da2f5ded29766d0">gg::GgTrackball::region</a></div><div class="ttdeci">void region(GLfloat w, GLfloat h)</div><div class="ttdef"><b>Definition</b> <a href="#l03434">gg.cpp:3434</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgTrackball_html_adbf3c13a6442309c79bd3185fa74a0a4"><div class="ttname"><a href="classgg_1_1GgTrackball.html#adbf3c13a6442309c79bd3185fa74a0a4">gg::GgTrackball::rotate</a></div><div class="ttdeci">void rotate(const GgQuaternion &amp;q)</div><div class="ttdef"><b>Definition</b> <a href="#l03492">gg.cpp:3492</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgTriangles_html_a175a09c25313d9ae85bc4badf91fbfd6"><div class="ttname"><a href="classgg_1_1GgTriangles.html#a175a09c25313d9ae85bc4badf91fbfd6">gg::GgTriangles::getCount</a></div><div class="ttdeci">const GLsizei &amp; getCount() const</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l06564">gg.h:6564</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgTriangles_html_a2cfa85c9ee633974e69df68d9ec588f1"><div class="ttname"><a href="classgg_1_1GgTriangles.html#a2cfa85c9ee633974e69df68d9ec588f1">gg::GgTriangles::load</a></div><div class="ttdeci">void load(const GgVertex *vert, GLsizei count, GLenum usage=GL_STATIC_DRAW)</div><div class="ttdef"><b>Definition</b> <a href="#l05132">gg.cpp:5132</a></div></div>
 <div class="ttc" id="aclassgg_1_1GgTriangles_html_ac6af2cf80311f3429271e7cbde302e02"><div class="ttname"><a href="classgg_1_1GgTriangles.html#ac6af2cf80311f3429271e7cbde302e02">gg::GgTriangles::draw</a></div><div class="ttdeci">virtual void draw(GLint first=0, GLsizei count=0) const</div><div class="ttdef"><b>Definition</b> <a href="#l05151">gg.cpp:5151</a></div></div>
-<div class="ttc" id="aclassgg_1_1GgVector_html"><div class="ttname"><a href="classgg_1_1GgVector.html">gg::GgVector</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l01571">gg.h:1572</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgUniformBuffer_html_a978849adec295afa4e8772381cbe361f"><div class="ttname"><a href="classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f">gg::GgUniformBuffer&lt; Light &gt;::map</a></div><div class="ttdeci">void * map() const</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l05939">gg.h:5939</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgUniformBuffer_html_abcc61a088d16f53a9a51749dd34c24b8"><div class="ttname"><a href="classgg_1_1GgUniformBuffer.html#abcc61a088d16f53a9a51749dd34c24b8">gg::GgUniformBuffer&lt; Material &gt;::bind</a></div><div class="ttdeci">void bind() const</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l05921">gg.h:5921</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgUniformBuffer_html_abea659ba10d6fae6677463b6d0718197"><div class="ttname"><a href="classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197">gg::GgUniformBuffer&lt; Light &gt;::unmap</a></div><div class="ttdeci">void unmap() const</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l05959">gg.h:5959</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgUniformBuffer_html_ad097650d4355144a15deb49bf78e6198"><div class="ttname"><a href="classgg_1_1GgUniformBuffer.html#ad097650d4355144a15deb49bf78e6198">gg::GgUniformBuffer&lt; Material &gt;::getTarget</a></div><div class="ttdeci">const GLuint &amp; getTarget() const</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l05883">gg.h:5883</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgUniformBuffer_html_ad4b0676ee460d8884f2f041fd2dc3506"><div class="ttname"><a href="classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506">gg::GgUniformBuffer&lt; Light &gt;::getStride</a></div><div class="ttdeci">GLsizeiptr getStride() const</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l05893">gg.h:5893</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgVector_html"><div class="ttname"><a href="classgg_1_1GgVector.html">gg::GgVector</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l01577">gg.h:1578</a></div></div>
 <div class="ttc" id="agg_8h_html"><div class="ttname"><a href="gg_8h.html">gg.h</a></div></div>
 <div class="ttc" id="agg_8h_html_a211a5875f00c0b97454d0b1e7a7a5769"><div class="ttname"><a href="gg_8h.html#a211a5875f00c0b97454d0b1e7a7a5769">TCharToUtf8</a></div><div class="ttdeci">std::string TCharToUtf8(const pathString &amp;cstring)</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l00080">gg.h:80</a></div></div>
 <div class="ttc" id="agg_8h_html_a79e8f410a97d0a6e7bf6c4d3fe6b58fb"><div class="ttname"><a href="gg_8h.html#a79e8f410a97d0a6e7bf6c4d3fe6b58fb">pathString</a></div><div class="ttdeci">std::string pathString</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l00077">gg.h:77</a></div></div>
 <div class="ttc" id="agg_8h_html_ac735c9fb18adb1f2127c90adcea87cd8"><div class="ttname"><a href="gg_8h.html#ac735c9fb18adb1f2127c90adcea87cd8">Utf8ToTChar</a></div><div class="ttdeci">pathString Utf8ToTChar(const std::string &amp;string)</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l00079">gg.h:79</a></div></div>
-<div class="ttc" id="anamespacegg_html"><div class="ttname"><a href="namespacegg.html">gg</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l01344">gg.h:1345</a></div></div>
+<div class="ttc" id="anamespacegg_html"><div class="ttname"><a href="namespacegg.html">gg</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l01350">gg.h:1351</a></div></div>
 <div class="ttc" id="anamespacegg_html_a047058f8d45e31ce77232ef66796e6b0"><div class="ttname"><a href="namespacegg.html#a047058f8d45e31ce77232ef66796e6b0">gg::ggCreateShader</a></div><div class="ttdeci">GLuint ggCreateShader(const std::string &amp;vsrc, const std::string &amp;fsrc=&quot;&quot;, const std::string &amp;gsrc=&quot;&quot;, GLint nvarying=0, const char *const *varyings=nullptr, const std::string &amp;vtext=&quot;vertex shader&quot;, const std::string &amp;ftext=&quot;fragment shader&quot;, const std::string &amp;gtext=&quot;geometry shader&quot;)</div><div class="ttdef"><b>Definition</b> <a href="#l04872">gg.cpp:4872</a></div></div>
 <div class="ttc" id="anamespacegg_html_a04c512ca7268233b59fc61573dedcf80"><div class="ttname"><a href="namespacegg.html#a04c512ca7268233b59fc61573dedcf80">gg::ggElementsSphere</a></div><div class="ttdeci">std::shared_ptr&lt; GgElements &gt; ggElementsSphere(GLfloat radius=1.0f, int slices=16, int stacks=8)</div><div class="ttdef"><b>Definition</b> <a href="#l05404">gg.cpp:5404</a></div></div>
 <div class="ttc" id="anamespacegg_html_a236701485bbc8278654781a810bf2880"><div class="ttname"><a href="namespacegg.html#a236701485bbc8278654781a810bf2880">gg::ggSaveDepth</a></div><div class="ttdeci">bool ggSaveDepth(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> <a href="#l03637">gg.cpp:3637</a></div></div>
@@ -6355,15 +6359,15 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="ttc" id="anamespacegg_html_a2cd46afb53daa13fa8bb2de14baf4e7b"><div class="ttname"><a href="namespacegg.html#a2cd46afb53daa13fa8bb2de14baf4e7b">gg::ggCreateNormalMap</a></div><div class="ttdeci">void ggCreateNormalMap(const GLubyte *hmap, GLsizei width, GLsizei height, GLenum format, GLfloat nz, GLenum internal, std::vector&lt; GgVector &gt; &amp;nmap)</div><div class="ttdef"><b>Definition</b> <a href="#l03875">gg.cpp:3875</a></div></div>
 <div class="ttc" id="anamespacegg_html_a2f5a44c7c7ee2c1095d3a659db0f530f"><div class="ttname"><a href="namespacegg.html#a2f5a44c7c7ee2c1095d3a659db0f530f">gg::ggEllipse</a></div><div class="ttdeci">std::shared_ptr&lt; GgTriangles &gt; ggEllipse(GLfloat width=1.0f, GLfloat height=1.0f, GLuint slices=16)</div><div class="ttdef"><b>Definition</b> <a href="#l05250">gg.cpp:5250</a></div></div>
 <div class="ttc" id="anamespacegg_html_a33e667c9e5de5a1185077d9858375716"><div class="ttname"><a href="namespacegg.html#a33e667c9e5de5a1185077d9858375716">gg::ggPointsSphere</a></div><div class="ttdeci">std::shared_ptr&lt; GgPoints &gt; ggPointsSphere(GLsizei countv, GLfloat radius=0.5f, GLfloat cx=0.0f, GLfloat cy=0.0f, GLfloat cz=0.0f)</div><div class="ttdef"><b>Definition</b> <a href="#l05202">gg.cpp:5202</a></div></div>
-<div class="ttc" id="anamespacegg_html_a34aa472e3f12dd5a976c090da6c1bc51"><div class="ttname"><a href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51">gg::ggDot4</a></div><div class="ttdeci">GLfloat ggDot4(const GLfloat *a, const GLfloat *b)</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l01508">gg.h:1508</a></div></div>
+<div class="ttc" id="anamespacegg_html_a34aa472e3f12dd5a976c090da6c1bc51"><div class="ttname"><a href="namespacegg.html#a34aa472e3f12dd5a976c090da6c1bc51">gg::ggDot4</a></div><div class="ttdeci">GLfloat ggDot4(const GLfloat *a, const GLfloat *b)</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l01514">gg.h:1514</a></div></div>
 <div class="ttc" id="anamespacegg_html_a3760bb8490c7d6103a5f186b705b313e"><div class="ttname"><a href="namespacegg.html#a3760bb8490c7d6103a5f186b705b313e">gg::ggBufferAlignment</a></div><div class="ttdeci">GLint ggBufferAlignment</div><div class="ttdoc">使用している GPU のバッファアライメント.</div></div>
-<div class="ttc" id="anamespacegg_html_a3bc5278bea931898a436bc4cd611a108"><div class="ttname"><a href="namespacegg.html#a3bc5278bea931898a436bc4cd611a108">gg::ggCross</a></div><div class="ttdeci">void ggCross(GLfloat *c, const GLfloat *a, const GLfloat *b)</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l01429">gg.h:1429</a></div></div>
+<div class="ttc" id="anamespacegg_html_a3bc5278bea931898a436bc4cd611a108"><div class="ttname"><a href="namespacegg.html#a3bc5278bea931898a436bc4cd611a108">gg::ggCross</a></div><div class="ttdeci">void ggCross(GLfloat *c, const GLfloat *a, const GLfloat *b)</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l01435">gg.h:1435</a></div></div>
 <div class="ttc" id="anamespacegg_html_a483abe26cc773c9c62731d911f1a1909"><div class="ttname"><a href="namespacegg.html#a483abe26cc773c9c62731d911f1a1909">gg::_ggError</a></div><div class="ttdeci">void _ggError(const std::string &amp;name=&quot;&quot;, unsigned int line=0)</div><div class="ttdef"><b>Definition</b> <a href="#l02609">gg.cpp:2609</a></div></div>
-<div class="ttc" id="anamespacegg_html_a4e49aff9138ef05a803f1ee703d0f67f"><div class="ttname"><a href="namespacegg.html#a4e49aff9138ef05a803f1ee703d0f67f">gg::ggDot3</a></div><div class="ttdeci">GLfloat ggDot3(const GLfloat *a, const GLfloat *b)</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l01443">gg.h:1443</a></div></div>
+<div class="ttc" id="anamespacegg_html_a4e49aff9138ef05a803f1ee703d0f67f"><div class="ttname"><a href="namespacegg.html#a4e49aff9138ef05a803f1ee703d0f67f">gg::ggDot3</a></div><div class="ttdeci">GLfloat ggDot3(const GLfloat *a, const GLfloat *b)</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l01449">gg.h:1449</a></div></div>
 <div class="ttc" id="anamespacegg_html_a53453ed6229bbd109c279a3765648d01"><div class="ttname"><a href="namespacegg.html#a53453ed6229bbd109c279a3765648d01">gg::ggLoadHeight</a></div><div class="ttdeci">GLuint ggLoadHeight(const std::string &amp;name, GLfloat nz, GLsizei *pWidth=nullptr, GLsizei *pHeight=nullptr, GLenum internal=GL_RGBA)</div><div class="ttdef"><b>Definition</b> <a href="#l03960">gg.cpp:3960</a></div></div>
-<div class="ttc" id="anamespacegg_html_a53de42a63451f28a4dc644143285b581"><div class="ttname"><a href="namespacegg.html#a53de42a63451f28a4dc644143285b581">gg::ggNormalize4</a></div><div class="ttdeci">void ggNormalize4(const GLfloat *a, GLfloat *b)</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l01543">gg.h:1543</a></div></div>
+<div class="ttc" id="anamespacegg_html_a53de42a63451f28a4dc644143285b581"><div class="ttname"><a href="namespacegg.html#a53de42a63451f28a4dc644143285b581">gg::ggNormalize4</a></div><div class="ttdeci">void ggNormalize4(const GLfloat *a, GLfloat *b)</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l01549">gg.h:1549</a></div></div>
 <div class="ttc" id="anamespacegg_html_a63f9b914f19cd1e877ae22730aa9581d"><div class="ttname"><a href="namespacegg.html#a63f9b914f19cd1e877ae22730aa9581d">gg::ggPointsCube</a></div><div class="ttdeci">std::shared_ptr&lt; GgPoints &gt; ggPointsCube(GLsizei countv, GLfloat length=1.0f, GLfloat cx=0.0f, GLfloat cy=0.0f, GLfloat cz=0.0f)</div><div class="ttdef"><b>Definition</b> <a href="#l05176">gg.cpp:5176</a></div></div>
-<div class="ttc" id="anamespacegg_html_a65baca1998bd9ea2b31a3fc1648d53dd"><div class="ttname"><a href="namespacegg.html#a65baca1998bd9ea2b31a3fc1648d53dd">gg::ggRotateQuaternion</a></div><div class="ttdeci">GgQuaternion ggRotateQuaternion(GLfloat x, GLfloat y, GLfloat z, GLfloat a)</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l04610">gg.h:4610</a></div></div>
+<div class="ttc" id="anamespacegg_html_a65baca1998bd9ea2b31a3fc1648d53dd"><div class="ttname"><a href="namespacegg.html#a65baca1998bd9ea2b31a3fc1648d53dd">gg::ggRotateQuaternion</a></div><div class="ttdeci">GgQuaternion ggRotateQuaternion(GLfloat x, GLfloat y, GLfloat z, GLfloat a)</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l04616">gg.h:4616</a></div></div>
 <div class="ttc" id="anamespacegg_html_a6b3f7b9af6577d60e0a6702fa7c1b3f7"><div class="ttname"><a href="namespacegg.html#a6b3f7b9af6577d60e0a6702fa7c1b3f7">gg::ggElementsObj</a></div><div class="ttdeci">std::shared_ptr&lt; GgElements &gt; ggElementsObj(const std::string &amp;name, bool normalize=false)</div><div class="ttdef"><b>Definition</b> <a href="#l05291">gg.cpp:5291</a></div></div>
 <div class="ttc" id="anamespacegg_html_a6dc1ef6d0e78a6694ae8aca973b1b9ae"><div class="ttname"><a href="namespacegg.html#a6dc1ef6d0e78a6694ae8aca973b1b9ae">gg::ggSaveColor</a></div><div class="ttdeci">bool ggSaveColor(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> <a href="#l03611">gg.cpp:3611</a></div></div>
 <div class="ttc" id="anamespacegg_html_a759d331f8d381524c40a2307dedb608a"><div class="ttname"><a href="namespacegg.html#a759d331f8d381524c40a2307dedb608a">gg::_ggFBOError</a></div><div class="ttdeci">void _ggFBOError(const std::string &amp;name=&quot;&quot;, unsigned int line=0)</div><div class="ttdef"><b>Definition</b> <a href="#l02653">gg.cpp:2653</a></div></div>
@@ -6372,34 +6376,31 @@ $(function(){initNavTree('gg_8cpp_source.html',''); initResizable(); });
 <div class="ttc" id="anamespacegg_html_abb72b124c601db7888fa70aa2d6f584f"><div class="ttname"><a href="namespacegg.html#abb72b124c601db7888fa70aa2d6f584f">gg::ggLoadImage</a></div><div class="ttdeci">GLuint ggLoadImage(const std::string &amp;name, GLsizei *pWidth=nullptr, GLsizei *pHeight=nullptr, GLenum internal=GL_RGBA, GLenum wrap=GL_CLAMP_TO_EDGE)</div><div class="ttdef"><b>Definition</b> <a href="#l03826">gg.cpp:3826</a></div></div>
 <div class="ttc" id="anamespacegg_html_abca7443a911bd290af4be190f1835cf0"><div class="ttname"><a href="namespacegg.html#abca7443a911bd290af4be190f1835cf0">gg::ggLoadComputeShader</a></div><div class="ttdeci">GLuint ggLoadComputeShader(const std::string &amp;comp)</div><div class="ttdef"><b>Definition</b> <a href="#l05089">gg.cpp:5089</a></div></div>
 <div class="ttc" id="anamespacegg_html_acbe6e5044fcf43f001242937e14b6b43"><div class="ttname"><a href="namespacegg.html#acbe6e5044fcf43f001242937e14b6b43">gg::ggLoadShader</a></div><div class="ttdeci">GLuint ggLoadShader(const std::string &amp;vert, const std::string &amp;frag=&quot;&quot;, const std::string &amp;geom=&quot;&quot;, GLint nvarying=0, const char *const *varyings=nullptr)</div><div class="ttdef"><b>Definition</b> <a href="#l05015">gg.cpp:5015</a></div></div>
-<div class="ttc" id="anamespacegg_html_accd75f02070ef57b1da0dccdec3fdd66"><div class="ttname"><a href="namespacegg.html#accd75f02070ef57b1da0dccdec3fdd66">gg::ggNormalize3</a></div><div class="ttdeci">void ggNormalize3(const GLfloat *a, GLfloat *b)</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l01478">gg.h:1478</a></div></div>
+<div class="ttc" id="anamespacegg_html_accd75f02070ef57b1da0dccdec3fdd66"><div class="ttname"><a href="namespacegg.html#accd75f02070ef57b1da0dccdec3fdd66">gg::ggNormalize3</a></div><div class="ttdeci">void ggNormalize3(const GLfloat *a, GLfloat *b)</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l01484">gg.h:1484</a></div></div>
 <div class="ttc" id="anamespacegg_html_acce00f35f4b755cda72ec9f61b726c8f"><div class="ttname"><a href="namespacegg.html#acce00f35f4b755cda72ec9f61b726c8f">gg::ggReadImage</a></div><div class="ttdeci">bool ggReadImage(const std::string &amp;name, std::vector&lt; GLubyte &gt; &amp;image, GLsizei *pWidth, GLsizei *pHeight, GLenum *pFormat)</div><div class="ttdef"><b>Definition</b> <a href="#l03667">gg.cpp:3667</a></div></div>
 <div class="ttc" id="anamespacegg_html_adda35bc52f044dc237a3632553ad9d9c"><div class="ttname"><a href="namespacegg.html#adda35bc52f044dc237a3632553ad9d9c">gg::ggCreateComputeShader</a></div><div class="ttdeci">GLuint ggCreateComputeShader(const std::string &amp;csrc, const std::string &amp;ctext=&quot;compute shader&quot;)</div><div class="ttdef"><b>Definition</b> <a href="#l05048">gg.cpp:5048</a></div></div>
 <div class="ttc" id="anamespacegg_html_ae450600cc658bd7d6b0f7ecb62156fe8"><div class="ttname"><a href="namespacegg.html#ae450600cc658bd7d6b0f7ecb62156fe8">gg::ggSaveTga</a></div><div class="ttdeci">bool ggSaveTga(const std::string &amp;name, const void *buffer, unsigned int width, unsigned int height, unsigned int depth)</div><div class="ttdef"><b>Definition</b> <a href="#l03535">gg.cpp:3535</a></div></div>
-<div class="ttc" id="anamespacegg_html_ae6e185ba7876df656b8d0b02819b5e49a3ba0d83d74aed68d92082c2621fa2348"><div class="ttname"><a href="namespacegg.html#ae6e185ba7876df656b8d0b02819b5e49a3ba0d83d74aed68d92082c2621fa2348">gg::MaterialBindingPoint</a></div><div class="ttdeci">@ MaterialBindingPoint</div><div class="ttdoc">材質の uniform buffer object の結合ポイント.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l01352">gg.h:1352</a></div></div>
-<div class="ttc" id="anamespacegg_html_ae6e185ba7876df656b8d0b02819b5e49a64b69a47d95d955aed16b608baf1f68c"><div class="ttname"><a href="namespacegg.html#ae6e185ba7876df656b8d0b02819b5e49a64b69a47d95d955aed16b608baf1f68c">gg::LightBindingPoint</a></div><div class="ttdeci">@ LightBindingPoint</div><div class="ttdoc">光源の uniform buffer object の結合ポイント.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l01351">gg.h:1351</a></div></div>
+<div class="ttc" id="anamespacegg_html_ae6e185ba7876df656b8d0b02819b5e49a3ba0d83d74aed68d92082c2621fa2348"><div class="ttname"><a href="namespacegg.html#ae6e185ba7876df656b8d0b02819b5e49a3ba0d83d74aed68d92082c2621fa2348">gg::MaterialBindingPoint</a></div><div class="ttdeci">@ MaterialBindingPoint</div><div class="ttdoc">材質の uniform buffer object の結合ポイント.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l01358">gg.h:1358</a></div></div>
+<div class="ttc" id="anamespacegg_html_ae6e185ba7876df656b8d0b02819b5e49a64b69a47d95d955aed16b608baf1f68c"><div class="ttname"><a href="namespacegg.html#ae6e185ba7876df656b8d0b02819b5e49a64b69a47d95d955aed16b608baf1f68c">gg::LightBindingPoint</a></div><div class="ttdeci">@ LightBindingPoint</div><div class="ttdoc">光源の uniform buffer object の結合ポイント.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l01357">gg.h:1357</a></div></div>
 <div class="ttc" id="anamespacegg_html_af7ab5857e56acfcf3e806f587f3737a0"><div class="ttname"><a href="namespacegg.html#af7ab5857e56acfcf3e806f587f3737a0">gg::ggInit</a></div><div class="ttdeci">void ggInit()</div><div class="ttdef"><b>Definition</b> <a href="#l01354">gg.cpp:1354</a></div></div>
 <div class="ttc" id="anamespacegg_html_afe1fcb205a0f34a31eda2d2eb4012084"><div class="ttname"><a href="namespacegg.html#afe1fcb205a0f34a31eda2d2eb4012084">gg::ggElementsMesh</a></div><div class="ttdeci">std::shared_ptr&lt; GgElements &gt; ggElementsMesh(GLuint slices, GLuint stacks, const GLfloat(*pos)[3], const GLfloat(*norm)[3]=nullptr)</div><div class="ttdef"><b>Definition</b> <a href="#l05309">gg.cpp:5309</a></div></div>
-<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Light_html"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Light.html">gg::GgSimpleShader::Light</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07446">gg.h:7447</a></div></div>
-<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Light_html_a5f6b1744a8c35121c8e27a6a01c8aceb"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Light.html#a5f6b1744a8c35121c8e27a6a01c8aceb">gg::GgSimpleShader::Light::position</a></div><div class="ttdeci">GgVector position</div><div class="ttdoc">光源の位置.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07451">gg.h:7451</a></div></div>
-<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Light_html_a981dd763865a2aca613579df66ed4653"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Light.html#a981dd763865a2aca613579df66ed4653">gg::GgSimpleShader::Light::ambient</a></div><div class="ttdeci">GgVector ambient</div><div class="ttdoc">光源強度の環境光成分.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07448">gg.h:7448</a></div></div>
-<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Light_html_abf0f33bcdf0da82a52c2f814ce8b71fa"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Light.html#abf0f33bcdf0da82a52c2f814ce8b71fa">gg::GgSimpleShader::Light::diffuse</a></div><div class="ttdeci">GgVector diffuse</div><div class="ttdoc">光源強度の拡散反射光成分.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07449">gg.h:7449</a></div></div>
-<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Light_html_acd20cfb495e5923bb67686ac09ceadb9"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Light.html#acd20cfb495e5923bb67686ac09ceadb9">gg::GgSimpleShader::Light::specular</a></div><div class="ttdeci">GgVector specular</div><div class="ttdoc">光源強度の鏡面反射光成分.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07450">gg.h:7450</a></div></div>
-<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Material_html"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Material.html">gg::GgSimpleShader::Material</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07732">gg.h:7733</a></div></div>
-<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Material_html_a270cd1c30152ee8c29ec5a94e12ff843"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Material.html#a270cd1c30152ee8c29ec5a94e12ff843">gg::GgSimpleShader::Material::specular</a></div><div class="ttdeci">GgVector specular</div><div class="ttdoc">鏡面反射係数.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07736">gg.h:7736</a></div></div>
-<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Material_html_a537c99818191226cb9ceddc7b7ff3d6c"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Material.html#a537c99818191226cb9ceddc7b7ff3d6c">gg::GgSimpleShader::Material::shininess</a></div><div class="ttdeci">GLfloat shininess</div><div class="ttdoc">輝き係数.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07737">gg.h:7737</a></div></div>
-<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Material_html_a6816024cb1c246f897c00e5c90c94e34"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Material.html#a6816024cb1c246f897c00e5c90c94e34">gg::GgSimpleShader::Material::ambient</a></div><div class="ttdeci">GgVector ambient</div><div class="ttdoc">環境光に対する反射係数.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07734">gg.h:7734</a></div></div>
-<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Material_html_a68a085fbd3294ff971aa3af1ec93adf4"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Material.html#a68a085fbd3294ff971aa3af1ec93adf4">gg::GgSimpleShader::Material::diffuse</a></div><div class="ttdeci">GgVector diffuse</div><div class="ttdoc">拡散反射係数.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07735">gg.h:7735</a></div></div>
-<div class="ttc" id="astructgg_1_1GgVertex_html"><div class="ttname"><a href="structgg_1_1GgVertex.html">gg::GgVertex</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l06448">gg.h:6449</a></div></div>
-<div class="ttc" id="astructgg_1_1GgVertex_html_a33f0042dbe503f3d31dddd2dd5af50f9"><div class="ttname"><a href="structgg_1_1GgVertex.html#a33f0042dbe503f3d31dddd2dd5af50f9">gg::GgVertex::normal</a></div><div class="ttdeci">GgVector normal</div><div class="ttdoc">法線.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l06454">gg.h:6454</a></div></div>
-<div class="ttc" id="astructgg_1_1GgVertex_html_a789c403b3289b3f8de6dec3f6a2f46d4"><div class="ttname"><a href="structgg_1_1GgVertex.html#a789c403b3289b3f8de6dec3f6a2f46d4">gg::GgVertex::position</a></div><div class="ttdeci">GgVector position</div><div class="ttdoc">位置.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l06451">gg.h:6451</a></div></div>
+<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Light_html"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Light.html">gg::GgSimpleShader::Light</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07452">gg.h:7453</a></div></div>
+<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Light_html_a981dd763865a2aca613579df66ed4653"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Light.html#a981dd763865a2aca613579df66ed4653">gg::GgSimpleShader::Light::ambient</a></div><div class="ttdeci">GgVector ambient</div><div class="ttdoc">光源強度の環境光成分.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07454">gg.h:7454</a></div></div>
+<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Light_html_abf0f33bcdf0da82a52c2f814ce8b71fa"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Light.html#abf0f33bcdf0da82a52c2f814ce8b71fa">gg::GgSimpleShader::Light::diffuse</a></div><div class="ttdeci">GgVector diffuse</div><div class="ttdoc">光源強度の拡散反射光成分.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07455">gg.h:7455</a></div></div>
+<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Light_html_acd20cfb495e5923bb67686ac09ceadb9"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Light.html#acd20cfb495e5923bb67686ac09ceadb9">gg::GgSimpleShader::Light::specular</a></div><div class="ttdeci">GgVector specular</div><div class="ttdoc">光源強度の鏡面反射光成分.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07456">gg.h:7456</a></div></div>
+<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Material_html"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Material.html">gg::GgSimpleShader::Material</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07738">gg.h:7739</a></div></div>
+<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Material_html_a68a085fbd3294ff971aa3af1ec93adf4"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Material.html#a68a085fbd3294ff971aa3af1ec93adf4">gg::GgSimpleShader::Material::diffuse</a></div><div class="ttdeci">GgVector diffuse</div><div class="ttdoc">拡散反射係数.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07741">gg.h:7741</a></div></div>
+<div class="ttc" id="astructgg_1_1GgVertex_html"><div class="ttname"><a href="structgg_1_1GgVertex.html">gg::GgVertex</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l06454">gg.h:6455</a></div></div>
+<div class="ttc" id="astructgg_1_1GgVertex_html_a33f0042dbe503f3d31dddd2dd5af50f9"><div class="ttname"><a href="structgg_1_1GgVertex.html#a33f0042dbe503f3d31dddd2dd5af50f9">gg::GgVertex::normal</a></div><div class="ttdeci">GgVector normal</div><div class="ttdoc">法線.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l06460">gg.h:6460</a></div></div>
+<div class="ttc" id="astructgg_1_1GgVertex_html_a789c403b3289b3f8de6dec3f6a2f46d4"><div class="ttname"><a href="structgg_1_1GgVertex.html#a789c403b3289b3f8de6dec3f6a2f46d4">gg::GgVertex::position</a></div><div class="ttdeci">GgVector position</div><div class="ttdoc">位置.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l06457">gg.h:6457</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="gg_8cpp.html">gg.cpp</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="navelem"><a href="gg_8cpp.html">gg.cpp</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
   </ul>
 </div>
 </body>

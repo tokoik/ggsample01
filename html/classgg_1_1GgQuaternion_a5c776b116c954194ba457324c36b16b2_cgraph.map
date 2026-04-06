@@ -1,5 +1,8 @@
 <map id="gg::GgQuaternion::add" name="gg::GgQuaternion::add">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,5,158,32"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#ad0b43dbf846eb5c01192dfe63e3d131d" title=" " alt="" coords="206,5,384,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,16,190,16,190,21,158,21"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#ac1c52c26e2fdfdde277f9aa714757a2f" title=" " alt="" coords="432,5,643,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,16,417,16,416,21,158,21"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgQuaternion.html#ad0b43dbf846eb5c01192dfe63e3d131d" title=" " alt="" coords="206,31,384,57"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="158,25,193,31,188,32,158,30"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="384,32,414,32,419,31,385,37"/>
 </map>

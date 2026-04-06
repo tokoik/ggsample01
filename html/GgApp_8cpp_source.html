@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: GgApp.cpp ソースファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -11,7 +11,6 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
@@ -36,28 +35,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.10.0 -->
+<!-- 構築: Doxygen 1.15.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','検索');
+  initMenu('',true,false,'search.php','検索',true);
   $(function() { init_search(); });
 });
-/* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -70,10 +63,9 @@ $(function() { codefold.init(0); });
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('GgApp_8cpp_source.html',''); initResizable(); });
-/* @license-end */
+$(function(){initNavTree('GgApp_8cpp_source.html','',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -123,7 +115,7 @@ $(function(){initNavTree('GgApp_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"></span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="GgApp_8h.html">GgApp.h</a>&quot;</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">//</span></div>
@@ -546,7 +538,7 @@ $(function(){initNavTree('GgApp_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span>  glfwPollEvents();</div>
 <div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span> </div>
 <div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>  <span class="comment">// ウィンドウを閉じるべきなら false を返す</span></div>
-<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>  <span class="keywordflow">if</span> (shouldClose()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="classGgApp_1_1Window.html#aa8401b4de974f114d3fb9d1ecac74eb9">shouldClose</a>()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span> </div>
 <div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>  <span class="comment">// 対象のユーザインタフェース</span></div>
 <div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>  <span class="keyword">auto</span>&amp; current_if{ interfaceData[interfaceNo] };</div>
@@ -628,7 +620,7 @@ $(function(){initNavTree('GgApp_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>  aspect = <span class="keyword">static_cast&lt;</span>GLfloat<span class="keyword">&gt;</span>(fboSize[0]) / <span class="keyword">static_cast&lt;</span>GLfloat<span class="keyword">&gt;</span>(fboSize[1]);</div>
 <div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span> </div>
 <div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>  <span class="comment">// ビューポートを設定する</span></div>
-<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>  restoreViewport();</div>
+<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>  <a class="code hl_function" href="classGgApp_1_1Window.html#a515578a995bb8d3e37ce1767f4095efd">restoreViewport</a>();</div>
 <div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>}</div>
 </div>
 <div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span> </div>
@@ -695,7 +687,7 @@ $(function(){initNavTree('GgApp_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span><span class="comment">//</span></div>
 <div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span><span class="comment">// Oculus Rift のセッションを作成する</span></div>
 <div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span><span class="comment">//</span></div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>GgApp::Oculus&amp; GgApp::Oculus::initialize(<span class="keyword">const</span> Window&amp; window)</div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>GgApp::Oculus&amp; GgApp::Oculus::initialize(<span class="keyword">const</span> <a class="code hl_class" href="classGgApp_1_1Window.html">Window</a>&amp; window)</div>
 <div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>{</div>
 <div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>  <span class="comment">// Oculus Rift のコンテキスト</span></div>
 <div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>  <span class="keyword">static</span> Oculus oculus;</div>
@@ -1155,7 +1147,7 @@ $(function(){initNavTree('GgApp_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span><span class="comment">//</span></div>
 <div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span><span class="comment">// Time Warp 処理に使う投影変換行列の成分の設定 (DK1, DK2)</span></div>
 <div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span><span class="comment">//</span></div>
-<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span><span class="keywordtype">void</span> GgApp::Oculus::timewarp(<span class="keyword">const</span> <a class="code hl_class" href="classgg_1_1GgMatrix.html">GgMatrix</a>&amp; projection)</div>
+<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span><span class="keywordtype">void</span> GgApp::Oculus::timewarp(<span class="keyword">const</span> GgMatrix&amp; projection)</div>
 <div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>{</div>
 <div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span><span class="preprocessor">#  if OVR_PRODUCT_VERSION &lt; 1</span></div>
 <div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>  <span class="comment">// TimeWarp に使う変換行列の成分を設定する</span></div>
@@ -1257,25 +1249,66 @@ $(function(){initNavTree('GgApp_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span>}</div>
 <div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01153" name="l01153"></a><span class="lineno"> 1153</span> </div>
+<div class="line"><a id="l01154" name="l01154"></a><span class="lineno"> 1154</span><span class="preprocessor">#if !defined(_MSC_VER)</span></div>
+<div class="line"><a id="l01155" name="l01155"></a><span class="lineno"> 1155</span><span class="preprocessor">#  include &lt;pwd.h&gt;</span></div>
+<div class="line"><a id="l01156" name="l01156"></a><span class="lineno"> 1156</span><span class="preprocessor">#  include &lt;unistd.h&gt;</span></div>
+<div class="line"><a id="l01157" name="l01157"></a><span class="lineno"> 1157</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01158" name="l01158"></a><span class="lineno"> 1158</span><span class="comment">//</span></div>
+<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span><span class="comment">// ユーザ名を得る</span></div>
+<div class="line"><a id="l01160" name="l01160"></a><span class="lineno"> 1160</span><span class="comment">//</span></div>
+<div class="foldopen" id="foldopen01161" data-start="{" data-end="}">
+<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"><a class="line" href="classGgApp.html#ad1955da79da506e73e4dabb2673e2363"> 1161</a></span>std::string <a class="code hl_function" href="classGgApp.html#ad1955da79da506e73e4dabb2673e2363">GgApp::getUsername</a>()</div>
+<div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span>{</div>
+<div class="line"><a id="l01163" name="l01163"></a><span class="lineno"> 1163</span>  <span class="comment">// 環境変数からユーザ名を得る</span></div>
+<div class="line"><a id="l01164" name="l01164"></a><span class="lineno"> 1164</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* user{</div>
+<div class="line"><a id="l01165" name="l01165"></a><span class="lineno"> 1165</span><span class="preprocessor">#if defined(_MSC_VER)</span></div>
+<div class="line"><a id="l01166" name="l01166"></a><span class="lineno"> 1166</span>    std::getenv(<span class="stringliteral">&quot;USERNAME&quot;</span>)</div>
+<div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span>    std::getenv(<span class="stringliteral">&quot;USER&quot;</span>)</div>
+<div class="line"><a id="l01169" name="l01169"></a><span class="lineno"> 1169</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01170" name="l01170"></a><span class="lineno"> 1170</span>  };</div>
+<div class="line"><a id="l01171" name="l01171"></a><span class="lineno"> 1171</span> </div>
+<div class="line"><a id="l01172" name="l01172"></a><span class="lineno"> 1172</span>  <span class="comment">// 環境変数からユーザ名が得られたらそれを返す</span></div>
+<div class="line"><a id="l01173" name="l01173"></a><span class="lineno"> 1173</span>  <span class="keywordflow">if</span> (user) <span class="keywordflow">return</span> user;</div>
+<div class="line"><a id="l01174" name="l01174"></a><span class="lineno"> 1174</span> </div>
+<div class="line"><a id="l01175" name="l01175"></a><span class="lineno"> 1175</span><span class="preprocessor">#if defined(_MSC_VER)</span></div>
+<div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span>  <span class="comment">// Win32 API を使ってユーザ名を得る</span></div>
+<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"> 1177</span>  <span class="keywordtype">char</span> username[256];</div>
+<div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span>  DWORD size{ <span class="keyword">sizeof</span>(username) };</div>
+<div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span>  <span class="keywordflow">if</span> (GetUserNameA(username, &amp;size)) <span class="keywordflow">return</span> std::string(username);</div>
+<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span>  <span class="keyword">struct </span>passwd* pw{ getpwuid(getuid()) };</div>
+<div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span>  <span class="keywordflow">if</span> (pw) <span class="keywordflow">return</span> std::string(pw-&gt;pw_name);</div>
+<div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01184" name="l01184"></a><span class="lineno"> 1184</span> </div>
+<div class="line"><a id="l01185" name="l01185"></a><span class="lineno"> 1185</span>  <span class="comment">// ユーザ名が得られなかった</span></div>
+<div class="line"><a id="l01186" name="l01186"></a><span class="lineno"> 1186</span>  <span class="keywordflow">return</span> <span class="stringliteral">&quot;unknown&quot;</span>;</div>
+<div class="line"><a id="l01187" name="l01187"></a><span class="lineno"> 1187</span>}</div>
+</div>
 <div class="ttc" id="aGgApp_8h_html"><div class="ttname"><a href="GgApp_8h.html">GgApp.h</a></div></div>
 <div class="ttc" id="aGgApp_8h_html_a1ed2c057903764ef8477b9da6ac4ed64"><div class="ttname"><a href="GgApp_8h.html#a1ed2c057903764ef8477b9da6ac4ed64">GG_BUTTON_COUNT</a></div><div class="ttdeci">#define GG_BUTTON_COUNT</div><div class="ttdef"><b>Definition</b> <a href="GgApp_8h_source.html#l00043">GgApp.h:43</a></div></div>
+<div class="ttc" id="aclassGgApp_1_1Window_html"><div class="ttname"><a href="classGgApp_1_1Window.html">GgApp::Window</a></div><div class="ttdef"><b>Definition</b> <a href="GgApp_8h_source.html#l00149">GgApp.h:150</a></div></div>
 <div class="ttc" id="aclassGgApp_1_1Window_html_a127c516045e716c271524fa45998cbc0"><div class="ttname"><a href="classGgApp_1_1Window.html#a127c516045e716c271524fa45998cbc0">GgApp::Window::Window</a></div><div class="ttdeci">Window(const std::string &amp;title=&quot;GLFW Window&quot;, int width=640, int height=480, int fullscreen=0, GLFWwindow *share=nullptr)</div><div class="ttdef"><b>Definition</b> <a href="#l00348">GgApp.cpp:348</a></div></div>
 <div class="ttc" id="aclassGgApp_1_1Window_html_a19ae0ed75fc177b2a0672fc2af3c78a4"><div class="ttname"><a href="classGgApp_1_1Window.html#a19ae0ed75fc177b2a0672fc2af3c78a4">GgApp::Window::swapBuffers</a></div><div class="ttdeci">void swapBuffers() const</div><div class="ttdef"><b>Definition</b> <a href="#l00492">GgApp.cpp:492</a></div></div>
+<div class="ttc" id="aclassGgApp_1_1Window_html_a515578a995bb8d3e37ce1767f4095efd"><div class="ttname"><a href="classGgApp_1_1Window.html#a515578a995bb8d3e37ce1767f4095efd">GgApp::Window::restoreViewport</a></div><div class="ttdeci">void restoreViewport() const</div><div class="ttdef"><b>Definition</b> <a href="GgApp_8h_source.html#l00354">GgApp.h:354</a></div></div>
 <div class="ttc" id="aclassGgApp_1_1Window_html_a6b349c4887749cd9e5c6e655a0eea865"><div class="ttname"><a href="classGgApp_1_1Window.html#a6b349c4887749cd9e5c6e655a0eea865">GgApp::Window::updateViewport</a></div><div class="ttdeci">void updateViewport()</div><div class="ttdef"><b>Definition</b> <a href="#l00511">GgApp.cpp:511</a></div></div>
+<div class="ttc" id="aclassGgApp_1_1Window_html_aa8401b4de974f114d3fb9d1ecac74eb9"><div class="ttname"><a href="classGgApp_1_1Window.html#aa8401b4de974f114d3fb9d1ecac74eb9">GgApp::Window::shouldClose</a></div><div class="ttdeci">bool shouldClose() const</div><div class="ttdef"><b>Definition</b> <a href="GgApp_8h_source.html#l00333">GgApp.h:333</a></div></div>
 <div class="ttc" id="aclassGgApp_html_a612eb78a646538d6441a25cfcd6d88d8"><div class="ttname"><a href="classGgApp.html#a612eb78a646538d6441a25cfcd6d88d8">GgApp::GgApp</a></div><div class="ttdeci">GgApp(int major=0, int minor=1)</div><div class="ttdef"><b>Definition</b> <a href="#l00048">GgApp.cpp:48</a></div></div>
 <div class="ttc" id="aclassGgApp_html_a9468936a1ff450fa3e0d75ef88d55c5c"><div class="ttname"><a href="classGgApp.html#a9468936a1ff450fa3e0d75ef88d55c5c">GgApp::~GgApp</a></div><div class="ttdeci">virtual ~GgApp()</div><div class="ttdef"><b>Definition</b> <a href="#l00095">GgApp.cpp:95</a></div></div>
-<div class="ttc" id="aclassgg_1_1GgMatrix_html"><div class="ttname"><a href="classgg_1_1GgMatrix.html">gg::GgMatrix</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l02126">gg.h:2127</a></div></div>
-<div class="ttc" id="aclassgg_1_1GgMatrix_html_a85419e1b591aa77fda6a908dab1d9468"><div class="ttname"><a href="classgg_1_1GgMatrix.html#a85419e1b591aa77fda6a908dab1d9468">gg::GgMatrix::get</a></div><div class="ttdeci">const GLfloat * get() const</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l03092">gg.h:3092</a></div></div>
-<div class="ttc" id="aclassgg_1_1GgVector_html"><div class="ttname"><a href="classgg_1_1GgVector.html">gg::GgVector</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l01571">gg.h:1572</a></div></div>
-<div class="ttc" id="agg_8h_html_a0c4972fb66e9d9e2ca5682621e5bde85"><div class="ttname"><a href="gg_8h.html#a0c4972fb66e9d9e2ca5682621e5bde85">ggError</a></div><div class="ttdeci">#define ggError()</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l01392">gg.h:1392</a></div></div>
+<div class="ttc" id="aclassGgApp_html_ad1955da79da506e73e4dabb2673e2363"><div class="ttname"><a href="classGgApp.html#ad1955da79da506e73e4dabb2673e2363">GgApp::getUsername</a></div><div class="ttdeci">static std::string getUsername()</div><div class="ttdef"><b>Definition</b> <a href="#l01161">GgApp.cpp:1161</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgMatrix_html_a85419e1b591aa77fda6a908dab1d9468"><div class="ttname"><a href="classgg_1_1GgMatrix.html#a85419e1b591aa77fda6a908dab1d9468">gg::GgMatrix::get</a></div><div class="ttdeci">const GLfloat * get() const</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l03098">gg.h:3098</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgVector_html"><div class="ttname"><a href="classgg_1_1GgVector.html">gg::GgVector</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l01577">gg.h:1578</a></div></div>
+<div class="ttc" id="agg_8h_html_a0c4972fb66e9d9e2ca5682621e5bde85"><div class="ttname"><a href="gg_8h.html#a0c4972fb66e9d9e2ca5682621e5bde85">ggError</a></div><div class="ttdeci">#define ggError()</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l01398">gg.h:1398</a></div></div>
 <div class="ttc" id="anamespacegg_html_af7ab5857e56acfcf3e806f587f3737a0"><div class="ttname"><a href="namespacegg.html#af7ab5857e56acfcf3e806f587f3737a0">gg::ggInit</a></div><div class="ttdeci">void ggInit()</div><div class="ttdef"><b>Definition</b> <a href="gg_8cpp_source.html#l01354">gg.cpp:1354</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="GgApp_8cpp.html">GgApp.cpp</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="navelem"><a href="GgApp_8cpp.html">GgApp.cpp</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
   </ul>
 </div>
 </body>

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: gg::GgTexture クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -11,7 +11,6 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
@@ -36,21 +35,20 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.10.0 -->
+<!-- 構築: Doxygen 1.15.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','検索');
+  initMenu('',true,false,'search.php','検索',true);
   $(function() { init_search(); });
 });
-/* @license-end */
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
@@ -65,10 +63,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('classgg_1_1GgTexture.html',''); initResizable(); });
-/* @license-end */
+$(function(){initNavTree('classgg_1_1GgTexture.html','','classgg_1_1GgTexture-members'); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -92,52 +89,35 @@ $(function(){initNavTree('classgg_1_1GgTexture.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">公開メンバ関数</a> &#124;
-<a href="classgg_1_1GgTexture-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle"><div class="title">gg::GgTexture クラス</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="gg_8h_source.html">gg.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:a928c60ee04d1253e74ab1723a8aa4c92" id="r_a928c60ee04d1253e74ab1723a8aa4c92"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a928c60ee04d1253e74ab1723a8aa4c92">GgTexture</a> (const GLvoid *image, GLsizei width, GLsizei height, GLenum format=GL_RGB, GLenum type=GL_UNSIGNED_BYTE, GLenum internal=GL_RGBA, GLenum wrap=GL_CLAMP_TO_EDGE, bool swizzle=false)</td></tr>
-<tr class="separator:a928c60ee04d1253e74ab1723a8aa4c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a229f8467a9ab478f178b4f13be519b12" id="r_a229f8467a9ab478f178b4f13be519b12"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a229f8467a9ab478f178b4f13be519b12">GgTexture</a> (const <a class="el" href="classgg_1_1GgTexture.html">GgTexture</a> &amp;texture)=delete</td></tr>
-<tr class="separator:a229f8467a9ab478f178b4f13be519b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb4d2f8852c8abe91a59e579fa205ea2" id="r_abb4d2f8852c8abe91a59e579fa205ea2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb4d2f8852c8abe91a59e579fa205ea2">GgTexture</a> (<a class="el" href="classgg_1_1GgTexture.html">GgTexture</a> &amp;&amp;texture)=default</td></tr>
-<tr class="separator:abb4d2f8852c8abe91a59e579fa205ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a229f8467a9ab478f178b4f13be519b12" id="r_a229f8467a9ab478f178b4f13be519b12"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a229f8467a9ab478f178b4f13be519b12">GgTexture</a> (const GgTexture &amp;texture)=delete</td></tr>
+<tr class="memitem:abb4d2f8852c8abe91a59e579fa205ea2" id="r_abb4d2f8852c8abe91a59e579fa205ea2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb4d2f8852c8abe91a59e579fa205ea2">GgTexture</a> (GgTexture &amp;&amp;texture)=default</td></tr>
 <tr class="memitem:ae3ee898413f36bf7000c0b7c82d22286" id="r_ae3ee898413f36bf7000c0b7c82d22286"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3ee898413f36bf7000c0b7c82d22286">~GgTexture</a> ()</td></tr>
-<tr class="separator:ae3ee898413f36bf7000c0b7c82d22286"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d2368e8364287f514b1323c10c38134" id="r_a2d2368e8364287f514b1323c10c38134"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgTexture.html">GgTexture</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d2368e8364287f514b1323c10c38134">operator=</a> (const <a class="el" href="classgg_1_1GgTexture.html">GgTexture</a> &amp;texture)=delete</td></tr>
-<tr class="separator:a2d2368e8364287f514b1323c10c38134"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39e8165a9433804b72ba64553f92d2e5" id="r_a39e8165a9433804b72ba64553f92d2e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgTexture.html">GgTexture</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39e8165a9433804b72ba64553f92d2e5">operator=</a> (<a class="el" href="classgg_1_1GgTexture.html">GgTexture</a> &amp;&amp;texture)=default</td></tr>
-<tr class="separator:a39e8165a9433804b72ba64553f92d2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d2368e8364287f514b1323c10c38134" id="r_a2d2368e8364287f514b1323c10c38134"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a928c60ee04d1253e74ab1723a8aa4c92">GgTexture</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d2368e8364287f514b1323c10c38134">operator=</a> (const <a class="el" href="#a928c60ee04d1253e74ab1723a8aa4c92">GgTexture</a> &amp;texture)=delete</td></tr>
+<tr class="memitem:a39e8165a9433804b72ba64553f92d2e5" id="r_a39e8165a9433804b72ba64553f92d2e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a928c60ee04d1253e74ab1723a8aa4c92">GgTexture</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39e8165a9433804b72ba64553f92d2e5">operator=</a> (<a class="el" href="#a928c60ee04d1253e74ab1723a8aa4c92">GgTexture</a> &amp;&amp;texture)=default</td></tr>
 <tr class="memitem:af5624464f93502a641e3a0233093d7b5" id="r_af5624464f93502a641e3a0233093d7b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5624464f93502a641e3a0233093d7b5">bind</a> () const</td></tr>
-<tr class="separator:af5624464f93502a641e3a0233093d7b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a069450f8066f3c57ae9b4a2633ea3da8" id="r_a069450f8066f3c57ae9b4a2633ea3da8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a069450f8066f3c57ae9b4a2633ea3da8">unbind</a> () const</td></tr>
-<tr class="separator:a069450f8066f3c57ae9b4a2633ea3da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52ed5cb2a58d5aa0ad3f46cc15f98a46" id="r_a52ed5cb2a58d5aa0ad3f46cc15f98a46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52ed5cb2a58d5aa0ad3f46cc15f98a46">swapRandB</a> (bool swizzle) const</td></tr>
-<tr class="separator:a52ed5cb2a58d5aa0ad3f46cc15f98a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0990799facf6f2affd41be247f5ce9f1" id="r_a0990799facf6f2affd41be247f5ce9f1"><td class="memItemLeft" align="right" valign="top">const GLsizei &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0990799facf6f2affd41be247f5ce9f1">getWidth</a> () const</td></tr>
-<tr class="separator:a0990799facf6f2affd41be247f5ce9f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a352d7fd4fa497ffe06e3d774a29735a0" id="r_a352d7fd4fa497ffe06e3d774a29735a0"><td class="memItemLeft" align="right" valign="top">const GLsizei &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a352d7fd4fa497ffe06e3d774a29735a0">getHeight</a> () const</td></tr>
-<tr class="separator:a352d7fd4fa497ffe06e3d774a29735a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af146fa5435ecf5d2b2bcc7d309d41934" id="r_af146fa5435ecf5d2b2bcc7d309d41934"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af146fa5435ecf5d2b2bcc7d309d41934">getSize</a> (GLsizei *size) const</td></tr>
-<tr class="separator:af146fa5435ecf5d2b2bcc7d309d41934"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab33080bbd6f3274eb79caea188f39cf0" id="r_ab33080bbd6f3274eb79caea188f39cf0"><td class="memItemLeft" align="right" valign="top">const GLsizei *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab33080bbd6f3274eb79caea188f39cf0">getSize</a> () const</td></tr>
-<tr class="separator:ab33080bbd6f3274eb79caea188f39cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a099c84d3d0ea7a01d0bc5acbbc7f0052" id="r_a099c84d3d0ea7a01d0bc5acbbc7f0052"><td class="memItemLeft" align="right" valign="top">const GLuint &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a099c84d3d0ea7a01d0bc5acbbc7f0052">getTexture</a> () const</td></tr>
-<tr class="separator:a099c84d3d0ea7a01d0bc5acbbc7f0052"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
 <div class="textblock"><p>テクスチャ.</p>
 <dl class="section note"><dt>覚え書き</dt><dd>画像データを読み込んでテクスチャマップを作成する. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05193">5193</a> 行目に定義があります。</p>
-</div><h2 class="groupheader">構築子と解体子</h2>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05199">5199</a> 行目に定義があります。</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
 <a id="a928c60ee04d1253e74ab1723a8aa4c92" name="a928c60ee04d1253e74ab1723a8aa4c92"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a928c60ee04d1253e74ab1723a8aa4c92">&#9670;&#160;</a></span>GgTexture() <span class="overload">[1/3]</span></h2>
 
@@ -150,47 +130,47 @@ $(function(){initNavTree('classgg_1_1GgTexture.html',''); initResizable(); });
         <tr>
           <td class="memname">gg::GgTexture::GgTexture </td>
           <td>(</td>
-          <td class="paramtype">const GLvoid *</td>          <td class="paramname"><span class="paramname"><em>image</em>, </span></td>
+          <td class="paramtype">const GLvoid *</td>          <td class="paramname"><span class="paramname"><em>image</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>width</em>, </span></td>
+          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>height</em>, </span></td>
+          <td class="paramtype">GLsizei</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>format</em><span class="paramdefsep"> = </span><span class="paramdefval">GL_RGB</span>, </span></td>
+          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>format</em></span><span class="paramdefsep"> = </span><span class="paramdefval">GL_RGB</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>type</em><span class="paramdefsep"> = </span><span class="paramdefval">GL_UNSIGNED_BYTE</span>, </span></td>
+          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>type</em></span><span class="paramdefsep"> = </span><span class="paramdefval">GL_UNSIGNED_BYTE</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>internal</em><span class="paramdefsep"> = </span><span class="paramdefval">GL_RGBA</span>, </span></td>
+          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>internal</em></span><span class="paramdefsep"> = </span><span class="paramdefval">GL_RGBA</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>wrap</em><span class="paramdefsep"> = </span><span class="paramdefval">GL_CLAMP_TO_EDGE</span>, </span></td>
+          <td class="paramtype">GLenum</td>          <td class="paramname"><span class="paramname"><em>wrap</em></span><span class="paramdefsep"> = </span><span class="paramdefval">GL_CLAMP_TO_EDGE</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>swizzle</em><span class="paramdefsep"> = </span><span class="paramdefval">false</span></span>&#160;)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>swizzle</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -209,7 +189,33 @@ $(function(){initNavTree('classgg_1_1GgTexture.html',''); initResizable(); });
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05215">5215</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05221">5221</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgTexture_a928c60ee04d1253e74ab1723a8aa4c92_cgraph.png" border="0" usemap="#aclassgg_1_1GgTexture_a928c60ee04d1253e74ab1723a8aa4c92_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassgg_1_1GgTexture_a928c60ee04d1253e74ab1723a8aa4c92_cgraph" id="aclassgg_1_1GgTexture_a928c60ee04d1253e74ab1723a8aa4c92_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,177,32"/>
+<area shape="rect" href="namespacegg.html#ab4085c8da7546d15a8e25dc2f11e79f6" title=" " alt="" coords="225,5,353,32"/>
+<area shape="poly" title=" " alt="" coords="177,16,212,19,206,19,177,21"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgTexture_a928c60ee04d1253e74ab1723a8aa4c92_icgraph.png" border="0" usemap="#aclassgg_1_1GgTexture_a928c60ee04d1253e74ab1723a8aa4c92_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassgg_1_1GgTexture_a928c60ee04d1253e74ab1723a8aa4c92_icgraph" id="aclassgg_1_1GgTexture_a928c60ee04d1253e74ab1723a8aa4c92_icgraph">
+<area shape="rect" title=" " alt="" coords="225,81,396,108"/>
+<area shape="rect" href="classgg_1_1GgTexture.html#a229f8467a9ab478f178b4f13be519b12" title=" " alt="" coords="5,5,177,32"/>
+<area shape="poly" title=" " alt="" coords="259,76,176,47,141,35,141,30,178,41,264,74"/>
+<area shape="rect" href="classgg_1_1GgTexture.html#abb4d2f8852c8abe91a59e579fa205ea2" title=" " alt="" coords="5,56,177,83"/>
+<area shape="poly" title=" " alt="" coords="207,84,178,82,177,77,212,82"/>
+<area shape="rect" href="classgg_1_1GgTexture.html#a2d2368e8364287f514b1323c10c38134" title=" " alt="" coords="8,107,174,133"/>
+<area shape="poly" title=" " alt="" coords="207,107,175,113,174,108,212,106"/>
+<area shape="rect" href="classgg_1_1GgTexture.html#a39e8165a9433804b72ba64553f92d2e5" title=" " alt="" coords="8,157,174,184"/>
+<area shape="poly" title=" " alt="" coords="264,113,178,148,142,159,140,154,176,143,258,115"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -225,13 +231,13 @@ $(function(){initNavTree('classgg_1_1GgTexture.html',''); initResizable(); });
         <tr>
           <td class="memname">gg::GgTexture::GgTexture </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgTexture.html">GgTexture</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>texture</em></span></td><td>)</td>
+          <td class="paramtype">const GgTexture &amp;</td>          <td class="paramname"><span class="paramname"><em>texture</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -242,6 +248,18 @@ $(function(){initNavTree('classgg_1_1GgTexture.html',''); initResizable(); });
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgTexture_a229f8467a9ab478f178b4f13be519b12_cgraph.png" border="0" usemap="#aclassgg_1_1GgTexture_a229f8467a9ab478f178b4f13be519b12_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassgg_1_1GgTexture_a229f8467a9ab478f178b4f13be519b12_cgraph" id="aclassgg_1_1GgTexture_a229f8467a9ab478f178b4f13be519b12_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,177,32"/>
+<area shape="rect" href="classgg_1_1GgTexture.html#a928c60ee04d1253e74ab1723a8aa4c92" title=" " alt="" coords="225,5,396,32"/>
+<area shape="poly" title=" " alt="" coords="177,16,212,19,206,19,177,21"/>
+<area shape="rect" href="namespacegg.html#ab4085c8da7546d15a8e25dc2f11e79f6" title=" " alt="" coords="444,5,572,32"/>
+<area shape="poly" title=" " alt="" coords="396,16,431,19,426,19,396,21"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -257,13 +275,13 @@ $(function(){initNavTree('classgg_1_1GgTexture.html',''); initResizable(); });
         <tr>
           <td class="memname">gg::GgTexture::GgTexture </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classgg_1_1GgTexture.html">GgTexture</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>texture</em></span></td><td>)</td>
+          <td class="paramtype">GgTexture &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>texture</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -274,6 +292,18 @@ $(function(){initNavTree('classgg_1_1GgTexture.html',''); initResizable(); });
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgTexture_abb4d2f8852c8abe91a59e579fa205ea2_cgraph.png" border="0" usemap="#aclassgg_1_1GgTexture_abb4d2f8852c8abe91a59e579fa205ea2_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassgg_1_1GgTexture_abb4d2f8852c8abe91a59e579fa205ea2_cgraph" id="aclassgg_1_1GgTexture_abb4d2f8852c8abe91a59e579fa205ea2_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,177,32"/>
+<area shape="rect" href="classgg_1_1GgTexture.html#a928c60ee04d1253e74ab1723a8aa4c92" title=" " alt="" coords="225,5,396,32"/>
+<area shape="poly" title=" " alt="" coords="177,16,212,19,206,19,177,21"/>
+<area shape="rect" href="namespacegg.html#ab4085c8da7546d15a8e25dc2f11e79f6" title=" " alt="" coords="444,5,572,32"/>
+<area shape="poly" title=" " alt="" coords="396,16,431,19,426,19,396,21"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -289,23 +319,23 @@ $(function(){initNavTree('classgg_1_1GgTexture.html',''); initResizable(); });
         <tr>
           <td class="memname">virtual gg::GgTexture::~GgTexture </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>デストラクタ. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05247">5247</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05253">5253</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<h2 class="groupheader">関数詳解</h2>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
 <a id="af5624464f93502a641e3a0233093d7b5" name="af5624464f93502a641e3a0233093d7b5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af5624464f93502a641e3a0233093d7b5">&#9670;&#160;</a></span>bind()</h2>
 
@@ -318,19 +348,19 @@ $(function(){initNavTree('classgg_1_1GgTexture.html',''); initResizable(); });
         <tr>
           <td class="memname">void gg::GgTexture::bind </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>テクスチャの使用開始 (このテクスチャを使用する際に呼び出す). </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05272">5272</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05278">5278</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -346,28 +376,28 @@ $(function(){initNavTree('classgg_1_1GgTexture.html',''); initResizable(); });
         <tr>
           <td class="memname">const GLsizei &amp; gg::GgTexture::getHeight </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>使用しているテクスチャの縦の画素数を取り出す.</p>
 <dl class="section return"><dt>戻り値</dt><dd>テクスチャの縦の画素数. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05307">5307</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05313">5313</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="classgg_1_1GgTexture_a352d7fd4fa497ffe06e3d774a29735a0_icgraph.png" border="0" usemap="#aclassgg_1_1GgTexture_a352d7fd4fa497ffe06e3d774a29735a0_icgraph" alt=""/></div>
+<div class="center"><img src="classgg_1_1GgTexture_a352d7fd4fa497ffe06e3d774a29735a0_icgraph.png" border="0" usemap="#aclassgg_1_1GgTexture_a352d7fd4fa497ffe06e3d774a29735a0_icgraph" loading="lazy" alt=""/></div>
 <map name="aclassgg_1_1GgTexture_a352d7fd4fa497ffe06e3d774a29735a0_icgraph" id="aclassgg_1_1GgTexture_a352d7fd4fa497ffe06e3d774a29735a0_icgraph">
-<area shape="rect" title=" " alt="" coords="209,5,375,32"/>
+<area shape="rect" title=" " alt="" coords="209,5,376,32"/>
 <area shape="rect" href="classgg_1_1GgTexture.html#af146fa5435ecf5d2b2bcc7d309d41934" title=" " alt="" coords="5,5,161,32"/>
-<area shape="poly" title=" " alt="" coords="193,21,161,21,161,16,193,16"/>
+<area shape="poly" title=" " alt="" coords="190,19,161,21,161,16,196,19"/>
 </map>
 </div>
 
@@ -385,20 +415,20 @@ $(function(){initNavTree('classgg_1_1GgTexture.html',''); initResizable(); });
         <tr>
           <td class="memname">const GLsizei * gg::GgTexture::getSize </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>使用しているテクスチャのサイズを取り出す.</p>
 <dl class="section return"><dt>戻り値</dt><dd>テクスチャのサイズを格納した配列へのポインタ. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05328">5328</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05334">5334</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -420,7 +450,7 @@ $(function(){initNavTree('classgg_1_1GgTexture.html',''); initResizable(); });
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -432,17 +462,17 @@ $(function(){initNavTree('classgg_1_1GgTexture.html',''); initResizable(); });
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05317">5317</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05323">5323</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="classgg_1_1GgTexture_af146fa5435ecf5d2b2bcc7d309d41934_cgraph.png" border="0" usemap="#aclassgg_1_1GgTexture_af146fa5435ecf5d2b2bcc7d309d41934_cgraph" alt=""/></div>
+<div class="center"><img src="classgg_1_1GgTexture_af146fa5435ecf5d2b2bcc7d309d41934_cgraph.png" border="0" usemap="#aclassgg_1_1GgTexture_af146fa5435ecf5d2b2bcc7d309d41934_cgraph" loading="lazy" alt=""/></div>
 <map name="aclassgg_1_1GgTexture_af146fa5435ecf5d2b2bcc7d309d41934_cgraph" id="aclassgg_1_1GgTexture_af146fa5435ecf5d2b2bcc7d309d41934_cgraph">
 <area shape="rect" title=" " alt="" coords="5,31,161,57"/>
-<area shape="rect" href="classgg_1_1GgTexture.html#a352d7fd4fa497ffe06e3d774a29735a0" title=" " alt="" coords="209,5,375,32"/>
-<area shape="poly" title=" " alt="" coords="161,32,193,28,193,33,161,37"/>
-<area shape="rect" href="classgg_1_1GgTexture.html#a0990799facf6f2affd41be247f5ce9f1" title=" " alt="" coords="210,56,374,83"/>
-<area shape="poly" title=" " alt="" coords="161,51,195,55,194,60,161,56"/>
+<area shape="rect" href="classgg_1_1GgTexture.html#a352d7fd4fa497ffe06e3d774a29735a0" title=" " alt="" coords="209,5,376,32"/>
+<area shape="poly" title=" " alt="" coords="161,32,196,30,190,31,162,37"/>
+<area shape="rect" href="classgg_1_1GgTexture.html#a0990799facf6f2affd41be247f5ce9f1" title=" " alt="" coords="211,56,374,83"/>
+<area shape="poly" title=" " alt="" coords="161,51,198,57,193,58,161,56"/>
 </map>
 </div>
 
@@ -460,20 +490,20 @@ $(function(){initNavTree('classgg_1_1GgTexture.html',''); initResizable(); });
         <tr>
           <td class="memname">const GLuint &amp; gg::GgTexture::getTexture </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>使用しているテクスチャのテクスチャ名を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>テクスチャ名. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05338">5338</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05344">5344</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -489,28 +519,28 @@ $(function(){initNavTree('classgg_1_1GgTexture.html',''); initResizable(); });
         <tr>
           <td class="memname">const GLsizei &amp; gg::GgTexture::getWidth </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>使用しているテクスチャの横の画素数を取り出す.</p>
 <dl class="section return"><dt>戻り値</dt><dd>テクスチャの横の画素数. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05297">5297</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05303">5303</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="classgg_1_1GgTexture_a0990799facf6f2affd41be247f5ce9f1_icgraph.png" border="0" usemap="#aclassgg_1_1GgTexture_a0990799facf6f2affd41be247f5ce9f1_icgraph" alt=""/></div>
+<div class="center"><img src="classgg_1_1GgTexture_a0990799facf6f2affd41be247f5ce9f1_icgraph.png" border="0" usemap="#aclassgg_1_1GgTexture_a0990799facf6f2affd41be247f5ce9f1_icgraph" loading="lazy" alt=""/></div>
 <map name="aclassgg_1_1GgTexture_a0990799facf6f2affd41be247f5ce9f1_icgraph" id="aclassgg_1_1GgTexture_a0990799facf6f2affd41be247f5ce9f1_icgraph">
 <area shape="rect" title=" " alt="" coords="209,5,372,32"/>
 <area shape="rect" href="classgg_1_1GgTexture.html#af146fa5435ecf5d2b2bcc7d309d41934" title=" " alt="" coords="5,5,161,32"/>
-<area shape="poly" title=" " alt="" coords="193,21,161,21,161,16,193,16"/>
+<area shape="poly" title=" " alt="" coords="190,19,161,21,161,16,195,19"/>
 </map>
 </div>
 
@@ -526,15 +556,15 @@ $(function(){initNavTree('classgg_1_1GgTexture.html',''); initResizable(); });
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgg_1_1GgTexture.html">GgTexture</a> &amp; gg::GgTexture::operator= </td>
+          <td class="memname"><a class="el" href="#a928c60ee04d1253e74ab1723a8aa4c92">GgTexture</a> &amp; gg::GgTexture::operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgTexture.html">GgTexture</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>texture</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="#a928c60ee04d1253e74ab1723a8aa4c92">GgTexture</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>texture</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -546,6 +576,18 @@ $(function(){initNavTree('classgg_1_1GgTexture.html',''); initResizable(); });
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>代入後のこのテクスチャの参照. </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgTexture_a2d2368e8364287f514b1323c10c38134_cgraph.png" border="0" usemap="#aclassgg_1_1GgTexture_a2d2368e8364287f514b1323c10c38134_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassgg_1_1GgTexture_a2d2368e8364287f514b1323c10c38134_cgraph" id="aclassgg_1_1GgTexture_a2d2368e8364287f514b1323c10c38134_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,172,32"/>
+<area shape="rect" href="classgg_1_1GgTexture.html#a928c60ee04d1253e74ab1723a8aa4c92" title=" " alt="" coords="220,5,391,32"/>
+<area shape="poly" title=" " alt="" coords="172,16,207,19,201,19,172,21"/>
+<area shape="rect" href="namespacegg.html#ab4085c8da7546d15a8e25dc2f11e79f6" title=" " alt="" coords="439,5,567,32"/>
+<area shape="poly" title=" " alt="" coords="391,16,426,19,421,19,391,21"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -559,15 +601,15 @@ $(function(){initNavTree('classgg_1_1GgTexture.html',''); initResizable(); });
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgg_1_1GgTexture.html">GgTexture</a> &amp; gg::GgTexture::operator= </td>
+          <td class="memname"><a class="el" href="#a928c60ee04d1253e74ab1723a8aa4c92">GgTexture</a> &amp; gg::GgTexture::operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classgg_1_1GgTexture.html">GgTexture</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>texture</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#a928c60ee04d1253e74ab1723a8aa4c92">GgTexture</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>texture</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -579,6 +621,18 @@ $(function(){initNavTree('classgg_1_1GgTexture.html',''); initResizable(); });
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>ムーブ代入後のこのテクスチャの参照. </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgTexture_a39e8165a9433804b72ba64553f92d2e5_cgraph.png" border="0" usemap="#aclassgg_1_1GgTexture_a39e8165a9433804b72ba64553f92d2e5_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassgg_1_1GgTexture_a39e8165a9433804b72ba64553f92d2e5_cgraph" id="aclassgg_1_1GgTexture_a39e8165a9433804b72ba64553f92d2e5_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,172,32"/>
+<area shape="rect" href="classgg_1_1GgTexture.html#a928c60ee04d1253e74ab1723a8aa4c92" title=" " alt="" coords="220,5,391,32"/>
+<area shape="poly" title=" " alt="" coords="172,16,207,19,201,19,172,21"/>
+<area shape="rect" href="namespacegg.html#ab4085c8da7546d15a8e25dc2f11e79f6" title=" " alt="" coords="439,5,567,32"/>
+<area shape="poly" title=" " alt="" coords="391,16,426,19,421,19,391,21"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -620,19 +674,19 @@ $(function(){initNavTree('classgg_1_1GgTexture.html',''); initResizable(); });
         <tr>
           <td class="memname">void gg::GgTexture::unbind </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>テクスチャの使用終了 (このテクスチャを使用しなくなったら呼び出す). </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05280">5280</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l05286">5286</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -642,11 +696,19 @@ $(function(){initNavTree('classgg_1_1GgTexture.html',''); initResizable(); });
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacegg.html">gg</a></li><li class="navelem"><a class="el" href="classgg_1_1GgTexture.html">GgTexture</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="navelem"><a href="namespacegg.html">gg</a></li><li class="navelem"><a href="classgg_1_1GgTexture.html">GgTexture</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
   </ul>
 </div>
 </body>

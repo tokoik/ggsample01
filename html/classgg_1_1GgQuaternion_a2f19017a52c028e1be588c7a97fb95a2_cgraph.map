@@ -1,5 +1,8 @@
 <map id="gg::GgQuaternion::loadSubtract" name="gg::GgQuaternion::loadSubtract">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,5,210,32"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#ae4f92a1abd12399ed4dbfdfd6412b85e" title=" " alt="" coords="258,5,462,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,16,242,16,242,21,210,21"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#ac1c52c26e2fdfdde277f9aa714757a2f" title=" " alt="" coords="510,5,721,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,16,495,16,494,21,210,21"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgQuaternion.html#ae4f92a1abd12399ed4dbfdfd6412b85e" title=" " alt="" coords="258,31,462,57"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="210,26,245,32,239,32,210,32"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="462,31,492,31,497,30,463,37"/>
 </map>

@@ -1,5 +1,7 @@
 <map id="gg::GgPointShader::use" name="gg::GgPointShader::use">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,166,32"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgMatrix.html#a85419e1b591aa77fda6a908dab1d9468" title=" " alt="" coords="214,5,336,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,16,198,16,198,21,166,21"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,166,57"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgMatrix.html#a85419e1b591aa77fda6a908dab1d9468" title=" " alt="" coords="233,5,355,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,32,220,27,215,29,166,37"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgPointShader.html#a6809087ef5e8a563310c3fc396246e78" title=" " alt="" coords="214,56,374,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="166,51,201,58,195,58,166,56"/>
 </map>

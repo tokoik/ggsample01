@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: gg::GgShader クラス</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -11,7 +11,6 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
@@ -36,21 +35,20 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.10.0 -->
+<!-- 構築: Doxygen 1.15.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','検索');
+  initMenu('',true,false,'search.php','検索',true);
   $(function() { init_search(); });
 });
-/* @license-end */
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
@@ -65,10 +63,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(); });
-/* @license-end */
+$(function(){initNavTree('classgg_1_1GgShader.html','','classgg_1_1GgShader-members'); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -92,44 +89,31 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(); });
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#pub-methods">公開メンバ関数</a> &#124;
-<a href="classgg_1_1GgShader-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle"><div class="title">gg::GgShader クラス</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="gg_8h_source.html">gg.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:a7908ddf4209c6b17fdb1846c65f1e384" id="r_a7908ddf4209c6b17fdb1846c65f1e384"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7908ddf4209c6b17fdb1846c65f1e384">GgShader</a> (const std::string &amp;vert, const std::string &amp;frag=&quot;&quot;, const std::string &amp;geom=&quot;&quot;, int nvarying=0, const char *const *varyings=nullptr)</td></tr>
-<tr class="separator:a7908ddf4209c6b17fdb1846c65f1e384"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e1c6570fb96bb96f5d693b55d0e0dac" id="r_a4e1c6570fb96bb96f5d693b55d0e0dac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e1c6570fb96bb96f5d693b55d0e0dac">GgShader</a> (const std::array&lt; std::string, 3 &gt; &amp;files, int nvarying=0, const char *const *varyings=nullptr)</td></tr>
-<tr class="separator:a4e1c6570fb96bb96f5d693b55d0e0dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac771bbf53f285cbaa8f2209fd8ea9850" id="r_ac771bbf53f285cbaa8f2209fd8ea9850"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac771bbf53f285cbaa8f2209fd8ea9850">GgShader</a> (const <a class="el" href="classgg_1_1GgShader.html">GgShader</a> &amp;shader)=delete</td></tr>
-<tr class="separator:ac771bbf53f285cbaa8f2209fd8ea9850"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60ea9fb2b075df815639abd4ccccb9ff" id="r_a60ea9fb2b075df815639abd4ccccb9ff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60ea9fb2b075df815639abd4ccccb9ff">GgShader</a> (<a class="el" href="classgg_1_1GgShader.html">GgShader</a> &amp;&amp;shader)=default</td></tr>
-<tr class="separator:a60ea9fb2b075df815639abd4ccccb9ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac771bbf53f285cbaa8f2209fd8ea9850" id="r_ac771bbf53f285cbaa8f2209fd8ea9850"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac771bbf53f285cbaa8f2209fd8ea9850">GgShader</a> (const GgShader &amp;shader)=delete</td></tr>
+<tr class="memitem:a60ea9fb2b075df815639abd4ccccb9ff" id="r_a60ea9fb2b075df815639abd4ccccb9ff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60ea9fb2b075df815639abd4ccccb9ff">GgShader</a> (GgShader &amp;&amp;shader)=default</td></tr>
 <tr class="memitem:af065218c76d31a9b8d90faf17c65aeb4" id="r_af065218c76d31a9b8d90faf17c65aeb4"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af065218c76d31a9b8d90faf17c65aeb4">~GgShader</a> ()</td></tr>
-<tr class="separator:af065218c76d31a9b8d90faf17c65aeb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44733c5464ecf1fb28c8ccd663589d6c" id="r_a44733c5464ecf1fb28c8ccd663589d6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgShader.html">GgShader</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44733c5464ecf1fb28c8ccd663589d6c">operator=</a> (const <a class="el" href="classgg_1_1GgShader.html">GgShader</a> &amp;shader)=delete</td></tr>
-<tr class="separator:a44733c5464ecf1fb28c8ccd663589d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ec1d033bb4bfeed7f980cb6407c2bb6" id="r_a1ec1d033bb4bfeed7f980cb6407c2bb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgg_1_1GgShader.html">GgShader</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ec1d033bb4bfeed7f980cb6407c2bb6">operator=</a> (<a class="el" href="classgg_1_1GgShader.html">GgShader</a> &amp;&amp;shader)=default</td></tr>
-<tr class="separator:a1ec1d033bb4bfeed7f980cb6407c2bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44733c5464ecf1fb28c8ccd663589d6c" id="r_a44733c5464ecf1fb28c8ccd663589d6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7908ddf4209c6b17fdb1846c65f1e384">GgShader</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44733c5464ecf1fb28c8ccd663589d6c">operator=</a> (const <a class="el" href="#a7908ddf4209c6b17fdb1846c65f1e384">GgShader</a> &amp;shader)=delete</td></tr>
+<tr class="memitem:a1ec1d033bb4bfeed7f980cb6407c2bb6" id="r_a1ec1d033bb4bfeed7f980cb6407c2bb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7908ddf4209c6b17fdb1846c65f1e384">GgShader</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ec1d033bb4bfeed7f980cb6407c2bb6">operator=</a> (<a class="el" href="#a7908ddf4209c6b17fdb1846c65f1e384">GgShader</a> &amp;&amp;shader)=default</td></tr>
 <tr class="memitem:a3adfac57f672157d521faeeccc3dd3c5" id="r_a3adfac57f672157d521faeeccc3dd3c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3adfac57f672157d521faeeccc3dd3c5">use</a> () const</td></tr>
-<tr class="separator:a3adfac57f672157d521faeeccc3dd3c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a360553a2c8e550c7b59c478995310163" id="r_a360553a2c8e550c7b59c478995310163"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a360553a2c8e550c7b59c478995310163">unuse</a> () const</td></tr>
-<tr class="separator:a360553a2c8e550c7b59c478995310163"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb49a96fa6fa7b981013ee783511b292" id="r_afb49a96fa6fa7b981013ee783511b292"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb49a96fa6fa7b981013ee783511b292">get</a> () const</td></tr>
-<tr class="separator:afb49a96fa6fa7b981013ee783511b292"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
 <div class="textblock"><p>シェーダの基底クラス.</p>
 <dl class="section note"><dt>覚え書き</dt><dd>シェーダのクラスはこのクラスを派生して作る. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06864">6864</a> 行目に定義があります。</p>
-</div><h2 class="groupheader">構築子と解体子</h2>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06870">6870</a> 行目に定義があります。</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
 <a id="a7908ddf4209c6b17fdb1846c65f1e384" name="a7908ddf4209c6b17fdb1846c65f1e384"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7908ddf4209c6b17fdb1846c65f1e384">&#9670;&#160;</a></span>GgShader() <span class="overload">[1/4]</span></h2>
 
@@ -142,32 +126,32 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(); });
         <tr>
           <td class="memname">gg::GgShader::GgShader </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>vert</em>, </span></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>vert</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>frag</em><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </span></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>frag</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>geom</em><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </span></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>geom</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nvarying</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nvarying</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *const *</td>          <td class="paramname"><span class="paramname"><em>varyings</em><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></span>&#160;)</td>
+          <td class="paramtype">const char *const *</td>          <td class="paramname"><span class="paramname"><em>varyings</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -183,17 +167,35 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(); });
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06880">6880</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06886">6886</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="classgg_1_1GgShader_a7908ddf4209c6b17fdb1846c65f1e384_cgraph.png" border="0" usemap="#aclassgg_1_1GgShader_a7908ddf4209c6b17fdb1846c65f1e384_cgraph" alt=""/></div>
+<div class="center"><img src="classgg_1_1GgShader_a7908ddf4209c6b17fdb1846c65f1e384_cgraph.png" border="0" usemap="#aclassgg_1_1GgShader_a7908ddf4209c6b17fdb1846c65f1e384_cgraph" loading="lazy" alt=""/></div>
 <map name="aclassgg_1_1GgShader_a7908ddf4209c6b17fdb1846c65f1e384_cgraph" id="aclassgg_1_1GgShader_a7908ddf4209c6b17fdb1846c65f1e384_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,173,32"/>
 <area shape="rect" href="namespacegg.html#acbe6e5044fcf43f001242937e14b6b43" title=" " alt="" coords="221,5,347,32"/>
-<area shape="poly" title=" " alt="" coords="173,16,205,16,205,21,173,21"/>
-<area shape="rect" href="namespacegg.html#a047058f8d45e31ce77232ef66796e6b0" title=" " alt="" coords="395,5,531,32"/>
-<area shape="poly" title=" " alt="" coords="347,16,380,16,380,21,347,21"/>
+<area shape="poly" title=" " alt="" coords="173,16,208,19,202,19,173,21"/>
+<area shape="rect" href="namespacegg.html#a047058f8d45e31ce77232ef66796e6b0" title=" " alt="" coords="395,5,532,32"/>
+<area shape="poly" title=" " alt="" coords="348,16,382,19,377,19,348,21"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgShader_a7908ddf4209c6b17fdb1846c65f1e384_icgraph.png" border="0" usemap="#aclassgg_1_1GgShader_a7908ddf4209c6b17fdb1846c65f1e384_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassgg_1_1GgShader_a7908ddf4209c6b17fdb1846c65f1e384_icgraph" id="aclassgg_1_1GgShader_a7908ddf4209c6b17fdb1846c65f1e384_icgraph">
+<area shape="rect" title=" " alt="" coords="221,107,388,133"/>
+<area shape="rect" href="classgg_1_1GgShader.html#ac771bbf53f285cbaa8f2209fd8ea9850" title=" " alt="" coords="5,5,173,32"/>
+<area shape="poly" title=" " alt="" coords="267,98,223,73,172,46,142,35,141,30,174,42,226,68,273,97"/>
+<area shape="rect" href="classgg_1_1GgShader.html#a4e1c6570fb96bb96f5d693b55d0e0dac" title=" " alt="" coords="5,56,173,83"/>
+<area shape="poly" title=" " alt="" coords="227,104,149,86,149,81,232,101"/>
+<area shape="rect" href="classgg_1_1GgShader.html#a60ea9fb2b075df815639abd4ccccb9ff" title=" " alt="" coords="5,107,173,133"/>
+<area shape="poly" title=" " alt="" coords="202,121,174,123,173,117,207,119"/>
+<area shape="rect" href="classgg_1_1GgShader.html#a44733c5464ecf1fb28c8ccd663589d6c" title=" " alt="" coords="7,157,171,184"/>
+<area shape="poly" title=" " alt="" coords="227,139,150,159,148,154,232,136"/>
+<area shape="rect" href="classgg_1_1GgShader.html#a1ec1d033bb4bfeed7f980cb6407c2bb6" title=" " alt="" coords="7,208,171,235"/>
+<area shape="poly" title=" " alt="" coords="272,141,226,172,174,198,143,210,141,205,172,194,223,167,267,143"/>
 </map>
 </div>
 
@@ -211,22 +213,22 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(); });
         <tr>
           <td class="memname">gg::GgShader::GgShader </td>
           <td>(</td>
-          <td class="paramtype">const std::array&lt; std::string, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>files</em>, </span></td>
+          <td class="paramtype">const std::array&lt; std::string, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>files</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nvarying</em><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </span></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nvarying</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *const *</td>          <td class="paramname"><span class="paramname"><em>varyings</em><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></span>&#160;)</td>
+          <td class="paramtype">const char *const *</td>          <td class="paramname"><span class="paramname"><em>varyings</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -240,7 +242,21 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(); });
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06898">6898</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06904">6904</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgShader_a4e1c6570fb96bb96f5d693b55d0e0dac_cgraph.png" border="0" usemap="#aclassgg_1_1GgShader_a4e1c6570fb96bb96f5d693b55d0e0dac_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassgg_1_1GgShader_a4e1c6570fb96bb96f5d693b55d0e0dac_cgraph" id="aclassgg_1_1GgShader_a4e1c6570fb96bb96f5d693b55d0e0dac_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,173,32"/>
+<area shape="rect" href="classgg_1_1GgShader.html#a7908ddf4209c6b17fdb1846c65f1e384" title=" " alt="" coords="221,5,388,32"/>
+<area shape="poly" title=" " alt="" coords="173,16,207,19,202,19,173,21"/>
+<area shape="rect" href="namespacegg.html#acbe6e5044fcf43f001242937e14b6b43" title=" " alt="" coords="436,5,562,32"/>
+<area shape="poly" title=" " alt="" coords="388,16,423,19,418,19,388,21"/>
+<area shape="rect" href="namespacegg.html#a047058f8d45e31ce77232ef66796e6b0" title=" " alt="" coords="610,5,748,32"/>
+<area shape="poly" title=" " alt="" coords="563,16,597,19,592,19,563,21"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -256,13 +272,13 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(); });
         <tr>
           <td class="memname">gg::GgShader::GgShader </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgShader.html">GgShader</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>shader</em></span></td><td>)</td>
+          <td class="paramtype">const GgShader &amp;</td>          <td class="paramname"><span class="paramname"><em>shader</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -273,6 +289,20 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(); });
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgShader_ac771bbf53f285cbaa8f2209fd8ea9850_cgraph.png" border="0" usemap="#aclassgg_1_1GgShader_ac771bbf53f285cbaa8f2209fd8ea9850_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassgg_1_1GgShader_ac771bbf53f285cbaa8f2209fd8ea9850_cgraph" id="aclassgg_1_1GgShader_ac771bbf53f285cbaa8f2209fd8ea9850_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,173,32"/>
+<area shape="rect" href="classgg_1_1GgShader.html#a7908ddf4209c6b17fdb1846c65f1e384" title=" " alt="" coords="221,5,388,32"/>
+<area shape="poly" title=" " alt="" coords="173,16,207,19,202,19,173,21"/>
+<area shape="rect" href="namespacegg.html#acbe6e5044fcf43f001242937e14b6b43" title=" " alt="" coords="436,5,562,32"/>
+<area shape="poly" title=" " alt="" coords="388,16,423,19,418,19,388,21"/>
+<area shape="rect" href="namespacegg.html#a047058f8d45e31ce77232ef66796e6b0" title=" " alt="" coords="610,5,748,32"/>
+<area shape="poly" title=" " alt="" coords="563,16,597,19,592,19,563,21"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -288,13 +318,13 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(); });
         <tr>
           <td class="memname">gg::GgShader::GgShader </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classgg_1_1GgShader.html">GgShader</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>shader</em></span></td><td>)</td>
+          <td class="paramtype">GgShader &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>shader</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -305,6 +335,20 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(); });
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgShader_a60ea9fb2b075df815639abd4ccccb9ff_cgraph.png" border="0" usemap="#aclassgg_1_1GgShader_a60ea9fb2b075df815639abd4ccccb9ff_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassgg_1_1GgShader_a60ea9fb2b075df815639abd4ccccb9ff_cgraph" id="aclassgg_1_1GgShader_a60ea9fb2b075df815639abd4ccccb9ff_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,173,32"/>
+<area shape="rect" href="classgg_1_1GgShader.html#a7908ddf4209c6b17fdb1846c65f1e384" title=" " alt="" coords="221,5,388,32"/>
+<area shape="poly" title=" " alt="" coords="173,16,207,19,202,19,173,21"/>
+<area shape="rect" href="namespacegg.html#acbe6e5044fcf43f001242937e14b6b43" title=" " alt="" coords="436,5,562,32"/>
+<area shape="poly" title=" " alt="" coords="388,16,423,19,418,19,388,21"/>
+<area shape="rect" href="namespacegg.html#a047058f8d45e31ce77232ef66796e6b0" title=" " alt="" coords="610,5,748,32"/>
+<area shape="poly" title=" " alt="" coords="563,16,597,19,592,19,563,21"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -320,23 +364,23 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(); });
         <tr>
           <td class="memname">virtual gg::GgShader::~GgShader </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>デストラクタ. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06924">6924</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06930">6930</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<h2 class="groupheader">関数詳解</h2>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
 <a id="afb49a96fa6fa7b981013ee783511b292" name="afb49a96fa6fa7b981013ee783511b292"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afb49a96fa6fa7b981013ee783511b292">&#9670;&#160;</a></span>get()</h2>
 
@@ -349,20 +393,20 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(); });
         <tr>
           <td class="memname">GLuint gg::GgShader::get </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>シェーダのプログラム名を得る.</p>
 <dl class="section return"><dt>戻り値</dt><dd>シェーダのプログラム名. </dd></dl>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06968">6968</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06974">6974</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -376,15 +420,15 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(); });
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgg_1_1GgShader.html">GgShader</a> &amp; gg::GgShader::operator= </td>
+          <td class="memname"><a class="el" href="#a7908ddf4209c6b17fdb1846c65f1e384">GgShader</a> &amp; gg::GgShader::operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgg_1_1GgShader.html">GgShader</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>shader</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="#a7908ddf4209c6b17fdb1846c65f1e384">GgShader</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>shader</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -396,6 +440,20 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(); });
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>代入後のこのシェーダの参照. </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgShader_a44733c5464ecf1fb28c8ccd663589d6c_cgraph.png" border="0" usemap="#aclassgg_1_1GgShader_a44733c5464ecf1fb28c8ccd663589d6c_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassgg_1_1GgShader_a44733c5464ecf1fb28c8ccd663589d6c_cgraph" id="aclassgg_1_1GgShader_a44733c5464ecf1fb28c8ccd663589d6c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,170,32"/>
+<area shape="rect" href="classgg_1_1GgShader.html#a7908ddf4209c6b17fdb1846c65f1e384" title=" " alt="" coords="218,5,385,32"/>
+<area shape="poly" title=" " alt="" coords="170,16,205,19,199,19,170,21"/>
+<area shape="rect" href="namespacegg.html#acbe6e5044fcf43f001242937e14b6b43" title=" " alt="" coords="433,5,559,32"/>
+<area shape="poly" title=" " alt="" coords="385,16,420,19,415,19,385,21"/>
+<area shape="rect" href="namespacegg.html#a047058f8d45e31ce77232ef66796e6b0" title=" " alt="" coords="607,5,745,32"/>
+<area shape="poly" title=" " alt="" coords="560,16,594,19,589,19,560,21"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -409,15 +467,15 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(); });
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgg_1_1GgShader.html">GgShader</a> &amp; gg::GgShader::operator= </td>
+          <td class="memname"><a class="el" href="#a7908ddf4209c6b17fdb1846c65f1e384">GgShader</a> &amp; gg::GgShader::operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classgg_1_1GgShader.html">GgShader</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>shader</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#a7908ddf4209c6b17fdb1846c65f1e384">GgShader</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>shader</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -429,6 +487,20 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(); });
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>ムーブ代入後のこのシェーダの参照. </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgg_1_1GgShader_a1ec1d033bb4bfeed7f980cb6407c2bb6_cgraph.png" border="0" usemap="#aclassgg_1_1GgShader_a1ec1d033bb4bfeed7f980cb6407c2bb6_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassgg_1_1GgShader_a1ec1d033bb4bfeed7f980cb6407c2bb6_cgraph" id="aclassgg_1_1GgShader_a1ec1d033bb4bfeed7f980cb6407c2bb6_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,170,32"/>
+<area shape="rect" href="classgg_1_1GgShader.html#a7908ddf4209c6b17fdb1846c65f1e384" title=" " alt="" coords="218,5,385,32"/>
+<area shape="poly" title=" " alt="" coords="170,16,205,19,199,19,170,21"/>
+<area shape="rect" href="namespacegg.html#acbe6e5044fcf43f001242937e14b6b43" title=" " alt="" coords="433,5,559,32"/>
+<area shape="poly" title=" " alt="" coords="385,16,420,19,415,19,385,21"/>
+<area shape="rect" href="namespacegg.html#a047058f8d45e31ce77232ef66796e6b0" title=" " alt="" coords="607,5,745,32"/>
+<area shape="poly" title=" " alt="" coords="560,16,594,19,589,19,560,21"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -444,19 +516,19 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(); });
         <tr>
           <td class="memname">void gg::GgShader::unuse </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>シェーダプログラムの使用を終了する. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06958">6958</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06964">6964</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -472,19 +544,19 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(); });
         <tr>
           <td class="memname">void gg::GgShader::use </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>シェーダプログラムの使用を開始する. </p>
 
-<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06950">6950</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="gg_8h_source.html">gg.h</a> の <a class="el" href="gg_8h_source.html#l06956">6956</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -493,11 +565,19 @@ $(function(){initNavTree('classgg_1_1GgShader.html',''); initResizable(); });
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacegg.html">gg</a></li><li class="navelem"><a class="el" href="classgg_1_1GgShader.html">GgShader</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="navelem"><a href="namespacegg.html">gg</a></li><li class="navelem"><a href="classgg_1_1GgShader.html">GgShader</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
   </ul>
 </div>
 </body>

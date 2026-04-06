@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: Menu.h ソースファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -11,7 +11,6 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
@@ -36,28 +35,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.10.0 -->
+<!-- 構築: Doxygen 1.15.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','検索');
+  initMenu('',true,false,'search.php','検索',true);
   $(function() { init_search(); });
 });
-/* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -70,10 +63,9 @@ $(function() { codefold.init(0); });
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('Menu_8h_source.html',''); initResizable(); });
-/* @license-end */
+$(function(){initNavTree('Menu_8h_source.html','',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -101,7 +93,7 @@ $(function(){initNavTree('Menu_8h_source.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <a href="Menu_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// 宿題用補助プログラムのラッパー</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="GgApp_8h.html">GgApp.h</a>&quot;</span></div>
@@ -111,9 +103,9 @@ $(function(){initNavTree('Menu_8h_source.html',''); initResizable(); });
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// ファイルダイアログ</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;nfd.h&quot;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
 <div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classMenu.html">   23</a></span><span class="keyword">class </span><a class="code hl_class" href="classMenu.html">Menu</a></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classMenu.html">   23</a></span><span class="keyword">class </span><a class="code hl_function" href="classMenu.html#af68aba17029de91b02b05f102ca63f37">Menu</a></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="comment">// 図形の描画クラスから参照する</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classMenu.html#a032858ae1fe02d2d1170981c2af2d67c">   26</a></span>  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_friend" href="classMenu.html#a032858ae1fe02d2d1170981c2af2d67c">Scene</a>;</div>
@@ -137,47 +129,46 @@ $(function(){initNavTree('Menu_8h_source.html',''); initResizable(); });
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keywordtype">bool</span> getFilePath(std::string&amp; path, <span class="keyword">const</span> nfdfilteritem_t* filter);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <a class="code hl_function" href="classMenu.html#af68aba17029de91b02b05f102ca63f37">Menu</a>(<span class="keyword">const</span> <a class="code hl_class" href="classConfig.html">Config</a>&amp; config);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classMenu.html#a1fb469a852bcd1eea11afa514aa3fed8">   56</a></span>  <a class="code hl_function" href="classMenu.html#a1fb469a852bcd1eea11afa514aa3fed8">Menu</a>(<span class="keyword">const</span> <a class="code hl_class" href="classMenu.html">Menu</a>&amp; menu) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classMenu.html#adc11dbd9f48850722354e777bc859757">   61</a></span>  <a class="code hl_function" href="classMenu.html#adc11dbd9f48850722354e777bc859757">Menu</a>(<a class="code hl_class" href="classMenu.html">Menu</a>&amp;&amp; menu) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classMenu.html#a1fb469a852bcd1eea11afa514aa3fed8">   56</a></span>  <a class="code hl_function" href="classMenu.html#a1fb469a852bcd1eea11afa514aa3fed8">Menu</a>(<span class="keyword">const</span> <a class="code hl_function" href="classMenu.html#af68aba17029de91b02b05f102ca63f37">Menu</a>&amp; menu) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classMenu.html#adc11dbd9f48850722354e777bc859757">   61</a></span>  <a class="code hl_function" href="classMenu.html#adc11dbd9f48850722354e777bc859757">Menu</a>(<a class="code hl_function" href="classMenu.html#af68aba17029de91b02b05f102ca63f37">Menu</a>&amp;&amp; menu) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keyword">virtual</span> <a class="code hl_function" href="classMenu.html#a831387f51358cfb88cd018e1777bc980">~Menu</a>();</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classMenu.html#a4959822a63a56fc22f664598ff81313a">   71</a></span>  <a class="code hl_class" href="classMenu.html">Menu</a>&amp; <a class="code hl_function" href="classMenu.html#a4959822a63a56fc22f664598ff81313a">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classMenu.html">Menu</a>&amp; menu) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classMenu.html#a1dec1c6947e9d9217fe4a0cbc0d029d3">   76</a></span>  <a class="code hl_class" href="classMenu.html">Menu</a>&amp; <a class="code hl_function" href="classMenu.html#a1dec1c6947e9d9217fe4a0cbc0d029d3">operator=</a>(<a class="code hl_class" href="classMenu.html">Menu</a>&amp;&amp; menu) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classMenu.html#a4959822a63a56fc22f664598ff81313a">   71</a></span>  <a class="code hl_function" href="classMenu.html#af68aba17029de91b02b05f102ca63f37">Menu</a>&amp; <a class="code hl_function" href="classMenu.html#a4959822a63a56fc22f664598ff81313a">operator=</a>(<span class="keyword">const</span> <a class="code hl_function" href="classMenu.html#af68aba17029de91b02b05f102ca63f37">Menu</a>&amp; menu) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classMenu.html#a1dec1c6947e9d9217fe4a0cbc0d029d3">   76</a></span>  <a class="code hl_function" href="classMenu.html#af68aba17029de91b02b05f102ca63f37">Menu</a>&amp; <a class="code hl_function" href="classMenu.html#a1dec1c6947e9d9217fe4a0cbc0d029d3">operator=</a>(<a class="code hl_function" href="classMenu.html#af68aba17029de91b02b05f102ca63f37">Menu</a>&amp;&amp; menu) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
 <div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classMenu.html#a9a4154e24d1d8e06274d5bf72ed98dce">   81</a></span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_function" href="classMenu.html#a9a4154e24d1d8e06274d5bf72ed98dce">getLight</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keyword">  </span>{</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">return</span> *light;</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  }</div>
 </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span></div>
 <div class="foldopen" id="foldopen00089" data-start="{" data-end="}">
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classMenu.html#a7d268518ff7100fdfd5626c8aeac5eb7">   89</a></span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_function" href="classMenu.html#a7d268518ff7100fdfd5626c8aeac5eb7">getShader</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keyword">  </span>{</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">return</span> *shader;</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  }</div>
 </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span></div>
 <div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classMenu.html#af99f96bb68a2cba3c491aaa14deeffea">   97</a></span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_function" href="classMenu.html#af99f96bb68a2cba3c491aaa14deeffea">getModel</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keyword">  </span>{</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">return</span> *model;</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  }</div>
 </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classMenu.html#a2cd7ab9901a8f42a3ae977d0774398a6">draw</a>();</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>};</div>
 </div>
 <div class="ttc" id="aConfig_8h_html"><div class="ttname"><a href="Config_8h.html">Config.h</a></div></div>
 <div class="ttc" id="aGgApp_8h_html"><div class="ttname"><a href="GgApp_8h.html">GgApp.h</a></div></div>
 <div class="ttc" id="aclassConfig_html"><div class="ttname"><a href="classConfig.html">Config</a></div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00021">Config.h:22</a></div></div>
-<div class="ttc" id="aclassMenu_html"><div class="ttname"><a href="classMenu.html">Menu</a></div><div class="ttdef"><b>Definition</b> <a href="#l00023">Menu.h:24</a></div></div>
 <div class="ttc" id="aclassMenu_html_a032858ae1fe02d2d1170981c2af2d67c"><div class="ttname"><a href="classMenu.html#a032858ae1fe02d2d1170981c2af2d67c">Menu::Scene</a></div><div class="ttdeci">friend class Scene</div><div class="ttdef"><b>Definition</b> <a href="#l00026">Menu.h:26</a></div></div>
 <div class="ttc" id="aclassMenu_html_a1dec1c6947e9d9217fe4a0cbc0d029d3"><div class="ttname"><a href="classMenu.html#a1dec1c6947e9d9217fe4a0cbc0d029d3">Menu::operator=</a></div><div class="ttdeci">Menu &amp; operator=(Menu &amp;&amp;menu)=default</div></div>
 <div class="ttc" id="aclassMenu_html_a1fb469a852bcd1eea11afa514aa3fed8"><div class="ttname"><a href="classMenu.html#a1fb469a852bcd1eea11afa514aa3fed8">Menu::Menu</a></div><div class="ttdeci">Menu(const Menu &amp;menu)=delete</div></div>
@@ -191,11 +182,12 @@ $(function(){initNavTree('Menu_8h_source.html',''); initResizable(); });
 <div class="ttc" id="aclassMenu_html_af99f96bb68a2cba3c491aaa14deeffea"><div class="ttname"><a href="classMenu.html#af99f96bb68a2cba3c491aaa14deeffea">Menu::getModel</a></div><div class="ttdeci">const auto &amp; getModel() const</div><div class="ttdef"><b>Definition</b> <a href="#l00097">Menu.h:97</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="Menu_8h.html">Menu.h</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="navelem"><a href="Menu_8h.html">Menu.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
   </ul>
 </div>
 </body>

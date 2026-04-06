@@ -1,0 +1,9 @@
+<map id="gg::GgSimpleShader::MaterialBuffer::loadShininess" name="gg::GgSimpleShader::MaterialBuffer::loadShininess">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,72,204,115"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506" title=" " alt="" coords="252,5,403,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,69,241,52,237,54,179,74"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgUniformBuffer.html#a978849adec295afa4e8772381cbe361f" title=" " alt="" coords="257,72,398,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="204,91,244,93,239,94,205,96"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197" title=" " alt="" coords="257,139,398,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="178,113,245,134,240,135,178,118"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="gg::GgShape::GgShape" name="gg::GgShape::GgShape">
+<area shape="rect" id="Node000001" title=" " alt="" coords="731,31,891,57"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgPoints.html#aca74376961ea4f170e83a8afc3fe4565" title=" " alt="" coords="508,5,667,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="713,33,668,30,668,25,719,33"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgTriangles.html#a5482f2023b35d5937f7a4b6da3501d44" title=" " alt="" coords="492,56,683,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="719,54,684,61,683,56,714,55"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgPoints.html#aa9170eea649cf940adc6698d98964bd4" title=" " alt="" coords="267,5,426,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="490,19,427,21,426,16,495,18"/>
+<area shape="rect" id="Node000005" href="$classgg_1_1GgElements.html#ab21f6c62f0926344e349a6e465ac8a9a" title=" " alt="" coords="249,56,444,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="474,70,445,72,444,67,479,69"/>
+<area shape="rect" id="Node000007" href="$classgg_1_1GgTriangles.html#ae7b21f7915cf62a2a6d9089b7d1c5bb7" title=" " alt="" coords="251,107,442,133"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="508,86,414,109,413,103,503,87"/>
+<area shape="rect" id="Node000006" href="$classgg_1_1GgElements.html#a131237075333f152994f818e8a17c01e" title=" " alt="" coords="5,56,201,83"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="230,70,201,72,201,67,236,69"/>
+</map>

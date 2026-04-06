@@ -1,9 +1,14 @@
 <map id="gg::GgQuaternion::operator+" name="gg::GgQuaternion::operator+">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,5,192,32"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#a4f536343e54923de7d58507a86edcde0" title=" " alt="" coords="240,5,426,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,16,224,16,224,21,192,21"/>
-<area shape="rect" id="Node000003" href="$classgg_1_1GgQuaternion.html#a5c776b116c954194ba457324c36b16b2" title=" " alt="" coords="474,5,626,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="426,16,458,16,458,21,426,21"/>
-<area shape="rect" id="Node000004" href="$classgg_1_1GgQuaternion.html#ad0b43dbf846eb5c01192dfe63e3d131d" title=" " alt="" coords="674,5,853,32"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="627,16,659,16,659,21,627,21"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgQuaternion.html#ac1c52c26e2fdfdde277f9aa714757a2f" title=" " alt="" coords="901,56,1112,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,14,487,15,670,23,853,39,927,53,922,53,852,44,669,28,487,20,192,19"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgQuaternion.html#a4f536343e54923de7d58507a86edcde0" title=" " alt="" coords="240,31,426,57"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,26,227,31,222,33,193,31"/>
+<area shape="poly" id="edge7_Node000003_Node000002" title=" " alt="" coords="426,45,886,63,883,67,426,50"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgQuaternion.html#a5c776b116c954194ba457324c36b16b2" title=" " alt="" coords="474,81,626,108"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="394,55,478,77,472,77,393,61"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="627,88,888,76,882,76,627,93"/>
+<area shape="rect" id="Node000005" href="$classgg_1_1GgQuaternion.html#ad0b43dbf846eb5c01192dfe63e3d131d" title=" " alt="" coords="674,132,853,159"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="610,106,692,128,687,128,609,111"/>
+<area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="808,129,944,88,949,87,809,134"/>
 </map>

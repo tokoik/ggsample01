@@ -1,5 +1,9 @@
 <map id="gg::GgPoints::draw" name="gg::GgPoints::draw">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,138,32"/>
-<area shape="rect" id="Node000002" href="$classgg_1_1GgShape.html#adf1b1da86a75b4c74dddf6194e615f6d" title=" " alt="" coords="186,5,318,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,16,170,16,170,21,138,21"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,139,83"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgShape.html#adf1b1da86a75b4c74dddf6194e615f6d" title=" " alt="" coords="199,5,332,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,53,200,35,195,38,127,58"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgPoints.html#a7f3cad112cdcb664771259eebac5874c" title=" " alt="" coords="187,56,345,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="139,67,174,69,168,70,140,72"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgShape.html#a860e6671d9d80295599ed2cf9f2449bc" title=" " alt="" coords="188,107,344,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="126,81,200,101,195,103,126,86"/>
 </map>

@@ -1,0 +1,9 @@
+<map id="gg::GgSimpleShader::LightBuffer::select" name="gg::GgSimpleShader::LightBuffer::select">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,72,147,115"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgUniformBuffer.html#a2b32d9bbfd87830bc2db3d4431d89176" title=" " alt="" coords="195,5,335,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,69,190,52,186,55,139,74"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgUniformBuffer.html#ad4b0676ee460d8884f2f041fd2dc3506" title=" " alt="" coords="195,72,335,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="147,91,182,92,177,94,148,96"/>
+<area shape="rect" id="Node000004" href="$classgg_1_1GgUniformBuffer.html#ad097650d4355144a15deb49bf78e6198" title=" " alt="" coords="195,139,335,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="139,113,191,132,186,134,138,118"/>
+</map>

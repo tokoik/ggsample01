@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>ゲームグラフィックス特論: Menu.cpp ソースファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -11,7 +11,6 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
@@ -36,28 +35,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.10.0 -->
+<!-- 構築: Doxygen 1.15.0 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','検索');
+  initMenu('',true,false,'search.php','検索',true);
   $(function() { init_search(); });
 });
-/* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -70,10 +63,9 @@ $(function() { codefold.init(0); });
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('Menu_8cpp_source.html',''); initResizable(); });
-/* @license-end */
+$(function(){initNavTree('Menu_8cpp_source.html','',''); });
 </script>
+<div id="container">
 <div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -100,7 +92,7 @@ $(function(){initNavTree('Menu_8cpp_source.html',''); initResizable(); });
   <div class="headertitle"><div class="title">Menu.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="Menu_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<a href="Menu_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="Menu_8h.html">Menu.h</a>&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//</span></div>
@@ -187,10 +179,10 @@ $(function(){initNavTree('Menu_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  ImGui::Begin(u8<span class="stringliteral">&quot;コントロールパネル&quot;</span>);</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="comment">// 光源</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keywordflow">if</span> (ImGui::SliderFloat3(u8<span class="stringliteral">&quot;光源位置&quot;</span>, settings.light.<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#a5f6b1744a8c35121c8e27a6a01c8aceb">position</a>.data(), -10.0f, 10.0f, <span class="stringliteral">&quot;%.2f&quot;</span>))</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    light-&gt;loadPosition(settings.light.<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#a5f6b1744a8c35121c8e27a6a01c8aceb">position</a>);</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <span class="keywordflow">if</span> (ImGui::ColorEdit3(u8<span class="stringliteral">&quot;光源色&quot;</span>, settings.light.<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#abf0f33bcdf0da82a52c2f814ce8b71fa">diffuse</a>.data(), ImGuiColorEditFlags_Float))</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    light-&gt;loadDiffuse(settings.light.<a class="code hl_variable" href="structgg_1_1GgSimpleShader_1_1Light.html#abf0f33bcdf0da82a52c2f814ce8b71fa">diffuse</a>);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keywordflow">if</span> (ImGui::SliderFloat3(u8<span class="stringliteral">&quot;光源位置&quot;</span>, settings.light.position.data(), -10.0f, 10.0f, <span class="stringliteral">&quot;%.2f&quot;</span>))</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    light-&gt;loadPosition(settings.light.position);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <span class="keywordflow">if</span> (ImGui::ColorEdit3(u8<span class="stringliteral">&quot;光源色&quot;</span>, settings.light.diffuse.data(), ImGuiColorEditFlags_Float))</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    light-&gt;loadDiffuse(settings.light.diffuse);</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="comment">// メニュー表示終了</span></div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  ImGui::End();</div>
@@ -202,18 +194,17 @@ $(function(){initNavTree('Menu_8cpp_source.html',''); initResizable(); });
 <div class="ttc" id="aclassMenu_html_a2cd7ab9901a8f42a3ae977d0774398a6"><div class="ttname"><a href="classMenu.html#a2cd7ab9901a8f42a3ae977d0774398a6">Menu::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdef"><b>Definition</b> <a href="#l00074">Menu.cpp:74</a></div></div>
 <div class="ttc" id="aclassMenu_html_a831387f51358cfb88cd018e1777bc980"><div class="ttname"><a href="classMenu.html#a831387f51358cfb88cd018e1777bc980">Menu::~Menu</a></div><div class="ttdeci">virtual ~Menu()</div><div class="ttdef"><b>Definition</b> <a href="#l00049">Menu.cpp:49</a></div></div>
 <div class="ttc" id="aclassMenu_html_af68aba17029de91b02b05f102ca63f37"><div class="ttname"><a href="classMenu.html#af68aba17029de91b02b05f102ca63f37">Menu::Menu</a></div><div class="ttdeci">Menu(const Config &amp;config)</div><div class="ttdef"><b>Definition</b> <a href="#l00013">Menu.cpp:13</a></div></div>
-<div class="ttc" id="aclassgg_1_1GgSimpleObj_html"><div class="ttname"><a href="classgg_1_1GgSimpleObj.html">gg::GgSimpleObj</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l08244">gg.h:8245</a></div></div>
-<div class="ttc" id="aclassgg_1_1GgSimpleShader_html"><div class="ttname"><a href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07232">gg.h:7234</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgSimpleObj_html"><div class="ttname"><a href="classgg_1_1GgSimpleObj.html">gg::GgSimpleObj</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l08250">gg.h:8251</a></div></div>
+<div class="ttc" id="aclassgg_1_1GgSimpleShader_html"><div class="ttname"><a href="classgg_1_1GgSimpleShader.html">gg::GgSimpleShader</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07238">gg.h:7240</a></div></div>
 <div class="ttc" id="agg_8h_html_a211a5875f00c0b97454d0b1e7a7a5769"><div class="ttname"><a href="gg_8h.html#a211a5875f00c0b97454d0b1e7a7a5769">TCharToUtf8</a></div><div class="ttdeci">std::string TCharToUtf8(const pathString &amp;cstring)</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l00080">gg.h:80</a></div></div>
-<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Light_html_a5f6b1744a8c35121c8e27a6a01c8aceb"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Light.html#a5f6b1744a8c35121c8e27a6a01c8aceb">gg::GgSimpleShader::Light::position</a></div><div class="ttdeci">GgVector position</div><div class="ttdoc">光源の位置.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07451">gg.h:7451</a></div></div>
-<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Light_html_abf0f33bcdf0da82a52c2f814ce8b71fa"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Light.html#abf0f33bcdf0da82a52c2f814ce8b71fa">gg::GgSimpleShader::Light::diffuse</a></div><div class="ttdeci">GgVector diffuse</div><div class="ttdoc">光源強度の拡散反射光成分.</div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07449">gg.h:7449</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+</div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="Menu_8cpp.html">Menu.cpp</a></li>
-    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+    <li class="navelem"><a href="Menu_8cpp.html">Menu.cpp</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
   </ul>
 </div>
 </body>

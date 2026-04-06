@@ -1,0 +1,8 @@
+<map id="gg::GgSimpleShader::GgSimpleShader" name="gg::GgSimpleShader::GgSimpleShader">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,147,48"/>
+<area shape="rect" id="Node000002" href="$classgg_1_1GgPointShader.html#a0e243c613ba8cede855c017b403927e7" title=" " alt="" coords="384,5,523,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,21,195,20,336,20,371,23,366,24,336,25,195,25,147,27"/>
+<area shape="rect" id="Node000003" href="$classgg_1_1GgSimpleShader.html#a3b01a2498e26aad446c5bb58271d3f51" title=" " alt="" coords="195,35,336,77"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="147,35,182,42,177,43,147,40"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="336,42,366,40,371,40,337,48"/>
+</map>

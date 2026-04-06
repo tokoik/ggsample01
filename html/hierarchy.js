@@ -10,7 +10,7 @@ var hierarchy =
     ] ],
     [ "Config", "classConfig.html", null ],
     [ "GgApp", "classGgApp.html", null ],
-    [ "gg::GgBuffer< T >", "classgg_1_1GgBuffer.html", null ],
+    [ "gg::GgBuffer&lt; T &gt;", "classgg_1_1GgBuffer.html", null ],
     [ "gg::GgColorTexture", "classgg_1_1GgColorTexture.html", null ],
     [ "gg::GgNormalTexture", "classgg_1_1GgNormalTexture.html", null ],
     [ "gg::GgPointShader", "classgg_1_1GgPointShader.html", [
@@ -25,11 +25,11 @@ var hierarchy =
     ] ],
     [ "gg::GgSimpleObj", "classgg_1_1GgSimpleObj.html", null ],
     [ "gg::GgTexture", "classgg_1_1GgTexture.html", null ],
-    [ "gg::GgUniformBuffer< T >", "classgg_1_1GgUniformBuffer.html", null ],
-    [ "gg::GgUniformBuffer< Light >", "classgg_1_1GgUniformBuffer.html", [
+    [ "gg::GgUniformBuffer&lt; T &gt;", "classgg_1_1GgUniformBuffer.html", null ],
+    [ "gg::GgUniformBuffer&lt; Light &gt;", "classgg_1_1GgUniformBuffer.html", [
       [ "gg::GgSimpleShader::LightBuffer", "classgg_1_1GgSimpleShader_1_1LightBuffer.html", null ]
     ] ],
-    [ "gg::GgUniformBuffer< Material >", "classgg_1_1GgUniformBuffer.html", [
+    [ "gg::GgUniformBuffer&lt; Material &gt;", "classgg_1_1GgUniformBuffer.html", [
       [ "gg::GgSimpleShader::MaterialBuffer", "classgg_1_1GgSimpleShader_1_1MaterialBuffer.html", null ]
     ] ],
     [ "gg::GgVertex", "structgg_1_1GgVertex.html", null ],
