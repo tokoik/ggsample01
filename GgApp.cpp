@@ -75,9 +75,308 @@ GgApp::GgApp(int major, int minor)
 #endif
   }
 
-#if defined(GG_USE_OCULUS_RIFT)
-  // Oculus Rift では SRGB でレンダリングする
-  glfwWindowHint(GLFW_SRGB_CAPABLE, GL_TRUE);
+#if defined(GG_USE_OPENXR)
+
+//
+// コンストラクタ
+//
+GgApp::OpenXR::OpenXR() :
+  instance{ XR_NULL_HANDLE },
+  systemId{ XR_NULL_SYSTEM_ID },
+  session{ XR_NULL_HANDLE },
+  sessionState{ XR_SESSION_STATE_UNKNOWN },
+  appSpace{ XR_NULL_HANDLE },
+  openxrFbo{ 0, 0 },
+  openxrDepth{ 0, 0 },
+  isSessionRunning{ false },
+  window{ nullptr }
+{
+  currentImageIndex[0] = 0;
+  currentImageIndex[1] = 0;
+}
+
+//
+// OpenXR のセッションを作成する
+//
+GgApp::OpenXR& GgApp::OpenXR::initialize(const Window& window)
+{
+  static OpenXR openxr;
+
+  if (openxr.instance != XR_NULL_HANDLE) return openxr;
+
+  openxr.window = &window;
+
+  // XrInstance の作成
+  XrInstanceCreateInfo createInfo{ XR_TYPE_INSTANCE_CREATE_INFO };
+  strcpy(createInfo.applicationInfo.applicationName, "ggsample01");
+  createInfo.applicationInfo.applicationVersion = 1;
+  strcpy(createInfo.applicationInfo.engineName, "GgApp");
+  createInfo.applicationInfo.engineVersion = 1;
+  createInfo.applicationInfo.apiVersion = XR_CURRENT_API_VERSION;
+  
+  const char* extensions[] = {
+    XR_KHR_OPENGL_ENABLE_EXTENSION_NAME
+  };
+  createInfo.enabledExtensionCount = 1;
+  createInfo.enabledExtensionNames = extensions;
+
+  if (XR_FAILED(xrCreateInstance(&createInfo, &openxr.instance)))
+    throw std::runtime_error("Can't create OpenXR instance");
+
+  // Get System Id
+  XrSystemGetInfo systemInfo{ XR_TYPE_SYSTEM_GET_INFO };
+  systemInfo.formFactor = XR_FORM_FACTOR_HEAD_MOUNTED_DISPLAY;
+  if (XR_FAILED(xrGetSystem(openxr.instance, &systemInfo, &openxr.systemId)))
+    throw std::runtime_error("Can't get OpenXR system");
+
+  // Require OpenGL graphics binding
+  PFN_xrGetOpenGLGraphicsRequirementsKHR pfnGetOpenGLGraphicsRequirementsKHR = nullptr;
+  xrGetInstanceProcAddr(openxr.instance, "xrGetOpenGLGraphicsRequirementsKHR", (PFN_xrVoidFunction*)&pfnGetOpenGLGraphicsRequirementsKHR);
+  
+  XrGraphicsRequirementsOpenGLKHR graphicsRequirements{ XR_TYPE_GRAPHICS_REQUIREMENTS_OPENGL_KHR };
+  pfnGetOpenGLGraphicsRequirementsKHR(openxr.instance, openxr.systemId, &graphicsRequirements);
+
+#if defined(_MSC_VER)
+  XrGraphicsBindingOpenGLWin32KHR graphicsBinding{ XR_TYPE_GRAPHICS_BINDING_OPENGL_WIN32_KHR };
+  graphicsBinding.hDC = wglGetCurrentDC();
+  graphicsBinding.hGLRC = wglGetCurrentContext();
+#else
+  XrGraphicsBindingOpenGLXlibKHR graphicsBinding{ XR_TYPE_GRAPHICS_BINDING_OPENGL_XLIB_KHR };
+  graphicsBinding.xDisplay = glXGetCurrentDisplay();
+  graphicsBinding.visualid = 0;
+  graphicsBinding.glxFBConfig = nullptr;
+  graphicsBinding.glxDrawable = glXGetCurrentDrawable();
+  graphicsBinding.glxContext = glXGetCurrentContext();
+#endif
+
+  // Create session
+  XrSessionCreateInfo sessionCreateInfo{ XR_TYPE_SESSION_CREATE_INFO };
+  sessionCreateInfo.next = &graphicsBinding;
+  sessionCreateInfo.systemId = openxr.systemId;
+  if (XR_FAILED(xrCreateSession(openxr.instance, &sessionCreateInfo, &openxr.session)))
+    throw std::runtime_error("Can't create OpenXR session");
+
+  // Create Reference Space
+  XrReferenceSpaceCreateInfo spaceCreateInfo{ XR_TYPE_REFERENCE_SPACE_CREATE_INFO };
+  spaceCreateInfo.referenceSpaceType = XR_REFERENCE_SPACE_TYPE_LOCAL;
+  spaceCreateInfo.poseInReferenceSpace.orientation.w = 1.0f;
+  if (XR_FAILED(xrCreateReferenceSpace(openxr.session, &spaceCreateInfo, &openxr.appSpace)))
+    throw std::runtime_error("Can't create OpenXR reference space");
+
+  // Enumerate views and create swapchains
+  uint32_t viewCount = 0;
+  xrEnumerateViewConfigurationViews(openxr.instance, openxr.systemId, XR_VIEW_CONFIGURATION_TYPE_PRIMARY_STEREO, 0, &viewCount, nullptr);
+  openxr.views.resize(viewCount, { XR_TYPE_VIEW_CONFIGURATION_VIEW });
+  xrEnumerateViewConfigurationViews(openxr.instance, openxr.systemId, XR_VIEW_CONFIGURATION_TYPE_PRIMARY_STEREO, viewCount, &viewCount, openxr.views.data());
+
+  openxr.viewStates.resize(viewCount, { XR_TYPE_VIEW });
+
+  glGenFramebuffers(2, openxr.openxrFbo);
+  glGenTextures(2, openxr.openxrDepth);
+
+  for (uint32_t i = 0; i < viewCount; ++i) {
+    XrSwapchainCreateInfo swapchainCreateInfo{ XR_TYPE_SWAPCHAIN_CREATE_INFO };
+    swapchainCreateInfo.arraySize = 1;
+    swapchainCreateInfo.format = GL_SRGB8_ALPHA8;
+    swapchainCreateInfo.width = openxr.views[i].recommendedImageRectWidth;
+    swapchainCreateInfo.height = openxr.views[i].recommendedImageRectHeight;
+    swapchainCreateInfo.mipCount = 1;
+    swapchainCreateInfo.faceCount = 1;
+    swapchainCreateInfo.sampleCount = 1;
+    swapchainCreateInfo.usageFlags = XR_SWAPCHAIN_USAGE_COLOR_ATTACHMENT_BIT;
+
+    XrSwapchain swapchain;
+    xrCreateSwapchain(openxr.session, &swapchainCreateInfo, &swapchain);
+    openxr.swapchains.push_back(swapchain);
+
+    uint32_t imageCount;
+    xrEnumerateSwapchainImages(swapchain, 0, &imageCount, nullptr);
+    std::vector<XrSwapchainImageOpenGLKHR> images(imageCount, { XR_TYPE_SWAPCHAIN_IMAGE_OPENGL_KHR });
+    xrEnumerateSwapchainImages(swapchain, imageCount, &imageCount, (XrSwapchainImageBaseHeader*)images.data());
+    openxr.swapchainImages.push_back(std::move(images));
+
+    glBindTexture(GL_TEXTURE_2D, openxr.openxrDepth[i]);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT32F, swapchainCreateInfo.width, swapchainCreateInfo.height, 0, GL_DEPTH_COMPONENT, GL_FLOAT, NULL);
+  }
+
+  // OpenXR にレンダリングするときは sRGB カラースペースを使う
+  glEnable(GL_FRAMEBUFFER_SRGB);
+  glDrawBuffer(GL_FRONT);
+  glfwSwapInterval(0);
+
+  return openxr;
+}
+
+//
+// OpenXR のセッションを破棄する
+//
+void GgApp::OpenXR::terminate()
+{
+  if (session != XR_NULL_HANDLE) {
+    for (auto swapchain : swapchains) xrDestroySwapchain(swapchain);
+    xrDestroySpace(appSpace);
+    xrDestroySession(session);
+    session = XR_NULL_HANDLE;
+  }
+  if (instance != XR_NULL_HANDLE) {
+    xrDestroyInstance(instance);
+    instance = XR_NULL_HANDLE;
+  }
+  glDeleteFramebuffers(2, openxrFbo);
+  glDeleteTextures(2, openxrDepth);
+
+  glDisable(GL_FRAMEBUFFER_SRGB);
+  glDrawBuffer(GL_BACK);
+  glfwSwapInterval(1);
+}
+
+//
+// OpenXR による描画開始
+//
+bool GgApp::OpenXR::begin()
+{
+  XrEventDataBuffer eventData{ XR_TYPE_EVENT_DATA_BUFFER };
+  while (xrPollEvent(instance, &eventData) == XR_SUCCESS) {
+    if (eventData.type == XR_TYPE_EVENT_DATA_SESSION_STATE_CHANGED) {
+      auto* stateChanged = reinterpret_cast<XrEventDataSessionStateChanged*>(&eventData);
+      sessionState = stateChanged->state;
+      if (sessionState == XR_SESSION_STATE_READY) {
+        XrSessionBeginInfo beginInfo{ XR_TYPE_SESSION_BEGIN_INFO };
+        beginInfo.primaryViewConfigurationType = XR_VIEW_CONFIGURATION_TYPE_PRIMARY_STEREO;
+        xrBeginSession(session, &beginInfo);
+        isSessionRunning = true;
+      } else if (sessionState == XR_SESSION_STATE_STOPPING) {
+        xrEndSession(session);
+        isSessionRunning = false;
+      } else if (sessionState == XR_SESSION_STATE_EXITING || sessionState == XR_SESSION_STATE_LOSS_PENDING) {
+        window->setClose(GLFW_TRUE);
+      }
+    }
+    eventData.type = XR_TYPE_EVENT_DATA_BUFFER;
+  }
+
+  if (!isSessionRunning || sessionState != XR_SESSION_STATE_FOCUSED) return false;
+
+  XrFrameWaitInfo waitInfo{ XR_TYPE_FRAME_WAIT_INFO };
+  frameState = { XR_TYPE_FRAME_STATE };
+  xrWaitFrame(session, &waitInfo, &frameState);
+
+  XrFrameBeginInfo beginInfo{ XR_TYPE_FRAME_BEGIN_INFO };
+  xrBeginFrame(session, &beginInfo);
+
+  XrViewLocateInfo viewLocateInfo{ XR_TYPE_VIEW_LOCATE_INFO };
+  viewLocateInfo.viewConfigurationType = XR_VIEW_CONFIGURATION_TYPE_PRIMARY_STEREO;
+  viewLocateInfo.displayTime = frameState.predictedDisplayTime;
+  viewLocateInfo.space = appSpace;
+
+  XrViewState viewState{ XR_TYPE_VIEW_STATE };
+  uint32_t viewCount;
+  xrLocateViews(session, &viewLocateInfo, &viewState, (uint32_t)viewStates.size(), &viewCount, viewStates.data());
+
+  return true;
+}
+
+//
+// OpenXR の描画する目の指定
+//
+void GgApp::OpenXR::select(int eye, GLfloat* screen, GLfloat* position, GLfloat* orientation)
+{
+  XrSwapchainImageAcquireInfo acquireInfo{ XR_TYPE_SWAPCHAIN_IMAGE_ACQUIRE_INFO };
+  xrAcquireSwapchainImage(swapchains[eye], &acquireInfo, &currentImageIndex[eye]);
+
+  XrSwapchainImageWaitInfo waitInfo{ XR_TYPE_SWAPCHAIN_IMAGE_WAIT_INFO };
+  waitInfo.timeout = XR_INFINITE_DURATION;
+  xrWaitSwapchainImage(swapchains[eye], &waitInfo);
+
+  GLuint texId = swapchainImages[eye][currentImageIndex[eye]].image;
+  glBindFramebuffer(GL_FRAMEBUFFER, openxrFbo[eye]);
+  glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, texId, 0);
+  glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, openxrDepth[eye], 0);
+
+  glViewport(0, 0, views[eye].recommendedImageRectWidth, views[eye].recommendedImageRectHeight);
+
+  const auto& pose = viewStates[eye].pose;
+  const auto& fov = viewStates[eye].fov;
+
+  screen[0] = tanf(fov.angleLeft);
+  screen[1] = tanf(fov.angleRight);
+  screen[2] = tanf(fov.angleDown);
+  screen[3] = tanf(fov.angleUp);
+
+  position[0] = pose.position.x;
+  position[1] = pose.position.y;
+  position[2] = pose.position.z;
+
+  orientation[0] = pose.orientation.x;
+  orientation[1] = pose.orientation.y;
+  orientation[2] = pose.orientation.z;
+  orientation[3] = pose.orientation.w;
+}
+
+//
+// Time Warp 処理に使う投影変換行列の成分の設定 (ダミー)
+//
+void GgApp::OpenXR::timewarp(const GgMatrix& projection)
+{
+}
+
+//
+// 図形の描画を完了する
+//
+void GgApp::OpenXR::commit(int eye)
+{
+  glBindFramebuffer(GL_FRAMEBUFFER, openxrFbo[eye]);
+  glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, 0, 0);
+
+  XrSwapchainImageReleaseInfo releaseInfo{ XR_TYPE_SWAPCHAIN_IMAGE_RELEASE_INFO };
+  xrReleaseSwapchainImage(swapchains[eye], &releaseInfo);
+}
+
+//
+// フレームを転送する
+//
+bool GgApp::OpenXR::submit(bool mirror)
+{
+  XrCompositionLayerProjectionView projectionViews[2];
+  for (int eye = 0; eye < 2; ++eye) {
+    projectionViews[eye].type = XR_TYPE_COMPOSITION_LAYER_PROJECTION_VIEW;
+    projectionViews[eye].next = nullptr;
+    projectionViews[eye].pose = viewStates[eye].pose;
+    projectionViews[eye].fov = viewStates[eye].fov;
+    projectionViews[eye].subImage.swapchain = swapchains[eye];
+    projectionViews[eye].subImage.imageRect.offset = {0, 0};
+    projectionViews[eye].subImage.imageRect.extent = {(int32_t)views[eye].recommendedImageRectWidth, (int32_t)views[eye].recommendedImageRectHeight};
+    projectionViews[eye].subImage.imageArrayIndex = 0;
+  }
+
+  XrCompositionLayerProjection layer{ XR_TYPE_COMPOSITION_LAYER_PROJECTION };
+  layer.space = appSpace;
+  layer.viewCount = 2;
+  layer.views = projectionViews;
+
+  const XrCompositionLayerBaseHeader* layers = reinterpret_cast<XrCompositionLayerBaseHeader*>(&layer);
+
+  XrFrameEndInfo endInfo{ XR_TYPE_FRAME_END_INFO };
+  endInfo.displayTime = frameState.predictedDisplayTime;
+  endInfo.environmentBlendMode = XR_ENVIRONMENT_BLEND_MODE_OPAQUE;
+  endInfo.layerCount = frameState.shouldRender ? 1 : 0;
+  endInfo.layers = &layers;
+
+  xrEndFrame(session, &endInfo);
+
+  if (mirror) {
+    GLsizei size[2];
+    window->getSize(size);
+    glBindFramebuffer(GL_READ_FRAMEBUFFER, openxrFbo[0]);
+    glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);
+    glBlitFramebuffer(0, 0, views[0].recommendedImageRectWidth, views[0].recommendedImageRectHeight,
+                      0, 0, size[0], size[1], GL_COLOR_BUFFER_BIT, GL_NEAREST);
+    glBindFramebuffer(GL_READ_FRAMEBUFFER, 0);
+    glFlush();
+  }
+
+  return true;
+}
 #endif
 
 #if defined(IMGUI_VERSION)
@@ -525,625 +824,306 @@ void GgApp::Window::updateViewport()
   restoreViewport();
 }
 
-#if defined(GG_USE_OCULUS_RIFT)
-#  if OVR_PRODUCT_VERSION > 0
-//
-// グラフィックスカードのデフォルトの LUID を得る
-//
-ovrGraphicsLuid GgApp::Oculus::GetDefaultAdapterLuid()
-{
-  ovrGraphicsLuid luid = ovrGraphicsLuid();
-
-#    if defined(_MSC_VER)
-  IDXGIFactory* factory{ nullptr };
-
-  if (SUCCEEDED(CreateDXGIFactory(IID_PPV_ARGS(&factory))))
-  {
-    IDXGIAdapter* adapter{ nullptr };
-
-    if (SUCCEEDED(factory->EnumAdapters(0, &adapter)))
-    {
-      DXGI_ADAPTER_DESC desc;
-
-      adapter->GetDesc(&desc);
-      memcpy(&luid, &desc.AdapterLuid, sizeof luid);
-      adapter->Release();
-    }
-
-    factory->Release();
-  }
-#    endif
-
-  return luid;
-}
-
-//
-// グラフィックスカードの LUID の比較
-//
-int GgApp::Oculus::Compare(const ovrGraphicsLuid& lhs, const ovrGraphicsLuid& rhs)
-{
-  return memcmp(&lhs, &rhs, sizeof(ovrGraphicsLuid));
-}
-#  endif
+#if defined(GG_USE_OPENXR)
 
 //
 // コンストラクタ
 //
-GgApp::Oculus::Oculus() :
-  session{ nullptr },
-  oculusFbo{ 0 },
-  screen{ -1.0f, 1.0f, -1.0f, 1.0f, -1.0f, 1.0f, -1.0f, },
-  mirrorFbo{ 0 },
-  window{ nullptr },
-#  if OVR_PRODUCT_VERSION > 0
-  frameIndex{ 0LL },
-  oculusDepth{ 0 },
-  mirrorWidth{ 1280 },
-  mirrorHeight{ 640 },
-#  endif
-  mirrorTexture{ nullptr }
+GgApp::OpenXR::OpenXR() :
+  instance{ XR_NULL_HANDLE },
+  systemId{ XR_NULL_SYSTEM_ID },
+  session{ XR_NULL_HANDLE },
+  sessionState{ XR_SESSION_STATE_UNKNOWN },
+  appSpace{ XR_NULL_HANDLE },
+  openxrFbo{ 0, 0 },
+  openxrDepth{ 0, 0 },
+  isSessionRunning{ false },
+  window{ nullptr }
 {
+  currentImageIndex[0] = 0;
+  currentImageIndex[1] = 0;
 }
 
 //
-// Oculus Rift のセッションを作成する
+// OpenXR のセッションを作成する
 //
-GgApp::Oculus& GgApp::Oculus::initialize(const Window& window)
+GgApp::OpenXR& GgApp::OpenXR::initialize(const Window& window)
 {
-  // Oculus Rift のコンテキスト
-  static Oculus oculus;
+  static OpenXR openxr;
 
-  // 既に Oculus Rift のセッションが作成されていたら参照を返す
-  if (oculus.session) return oculus;
+  if (openxr.instance != XR_NULL_HANDLE) return openxr;
 
-  // 最初に呼び出したときだけ実行する
-  static bool firstTime{ true };
-  if (firstTime)
-  {
-    // Oculus Rift (LibOVR) を初期化する
-    ovrInitParams initParams{ ovrInit_RequestVersion, OVR_MINOR_VERSION, NULL, 0, 0 };
-    if (OVR_FAILURE(ovr_Initialize(&initParams)))
-      throw std::runtime_error("Can't initialize LibOVR");
+  openxr.window = &window;
 
-    // アプリケーションの終了時に LibOVR を終了する
-    atexit(ovr_Shutdown);
-
-    // 実行済みであることを記録する
-    firstTime = false;
-  }
-
-  // Oculus Rift のセッションを作成する
-  ovrGraphicsLuid luid;
-  if (OVR_FAILURE(ovr_Create(&oculus.session, &luid)))
-    throw std::runtime_error("Can't create Oculus Rift session");
-
-#  if OVR_PRODUCT_VERSION > 0
-  // デフォルトのグラフィックスアダプタが使われているか確かめる
-  if (Compare(luid, GetDefaultAdapterLuid()))
-    throw std::runtime_error("Graphics adapter is not default");
-#  endif
-
-  // session が無効ならエラー
-  if (!oculus.session) std::runtime_error("Unable to use the Oculus Rift.");
-
-  // ミラー表示を行うウィンドウを設定する
-  oculus.window = &window;
-
-  // Oculus Rift の情報を取り出す
-  oculus.hmdDesc = ovr_GetHmdDesc(oculus.session);
-
-#  if defined(_DEBUG)
-  // Oculus Rift の情報を表示する
-  std::cerr
-    << "\nProduct name: " << oculus.hmdDesc.ProductName
-    << "\nResolution:   " << oculus.hmdDesc.Resolution.w << " x " << oculus.hmdDesc.Resolution.h
-    << "\nDefault Fov:  (" << oculus.hmdDesc.DefaultEyeFov[ovrEye_Left].LeftTan
-    << "," << oculus.hmdDesc.DefaultEyeFov[ovrEye_Left].DownTan
-    << ") - (" << oculus.hmdDesc.DefaultEyeFov[ovrEye_Left].RightTan
-    << "," << oculus.hmdDesc.DefaultEyeFov[ovrEye_Left].UpTan
-    << ")\n              (" << oculus.hmdDesc.DefaultEyeFov[ovrEye_Right].LeftTan
-    << "," << oculus.hmdDesc.DefaultEyeFov[ovrEye_Right].DownTan
-    << ") - (" << oculus.hmdDesc.DefaultEyeFov[ovrEye_Right].RightTan
-    << "," << oculus.hmdDesc.DefaultEyeFov[ovrEye_Right].UpTan
-    << ")\nMaximum Fov:  (" << oculus.hmdDesc.MaxEyeFov[ovrEye_Left].LeftTan
-    << "," << oculus.hmdDesc.MaxEyeFov[ovrEye_Left].DownTan
-    << ") - (" << oculus.hmdDesc.MaxEyeFov[ovrEye_Left].RightTan
-    << "," << oculus.hmdDesc.MaxEyeFov[ovrEye_Left].UpTan
-    << ")\n              (" << oculus.hmdDesc.MaxEyeFov[ovrEye_Right].LeftTan
-    << "," << oculus.hmdDesc.MaxEyeFov[ovrEye_Right].DownTan
-    << ") - (" << oculus.hmdDesc.MaxEyeFov[ovrEye_Right].RightTan
-    << "," << oculus.hmdDesc.MaxEyeFov[ovrEye_Right].UpTan
-    << ")\n" << std::endl;
-#  endif
-
-  // Oculus Rift に転送する描画データを作成する
-#  if OVR_PRODUCT_VERSION > 0
-  oculus.layerData.Header.Type = ovrLayerType_EyeFov;
-#  else
-  oculus.layerData.Header.Type = ovrLayerType_EyeFovDepth;
-#  endif
-
-  // OpenGL なので左下が原点
-  oculus.layerData.Header.Flags = ovrLayerFlag_TextureOriginAtBottomLeft;
-
-  // Oculus Rift のレンダリングに使う FBO を作成する
-  glGenFramebuffers(ovrEye_Count, oculus.oculusFbo);
-
-  // 全ての目について
-  for (int eye = 0; eye < ovrEye_Count; ++eye)
-  {
-    // Oculus Rift の視野を取得する
-    const auto& fov{ oculus.hmdDesc.DefaultEyeFov[ovrEyeType(eye)] };
-
-    // Oculus Rift 用の FBO のサイズを求める
-    const auto textureSize{ ovr_GetFovTextureSize(oculus.session, ovrEyeType(eye), fov, 1.0f) };
-
-    // Oculus Rift のスクリーンのサイズを保存する
-    oculus.screen[eye][0] = -fov.LeftTan;
-    oculus.screen[eye][1] = fov.RightTan;
-    oculus.screen[eye][2] = -fov.DownTan;
-    oculus.screen[eye][3] = fov.UpTan;
-
-#  if OVR_PRODUCT_VERSION > 0
-
-    // 描画データに視野を設定する
-    oculus.layerData.Fov[eye] = fov;
-
-    // 描画データにビューポートを設定する
-    oculus.layerData.Viewport[eye].Pos = OVR::Vector2i(0, 0);
-    oculus.layerData.Viewport[eye].Size = textureSize;
-
-    // Oculus Rift 用の FBO のカラーバッファとして使うテクスチャセットの特性
-    const ovrTextureSwapChainDesc colorDesc
-    {
-      ovrTexture_2D,                    // Type
-      OVR_FORMAT_R8G8B8A8_UNORM_SRGB,   // Format
-      1,                                // ArraySize
-      textureSize.w,                    // Width
-      textureSize.h,                    // Height
-      1,                                // MipLevels
-      1,                                // SampleCount
-      ovrFalse,                         // StaticImage
-      0, 0
-    };
-
-    // Oculus Rift 用の FBO のレンダーターゲットとして使うテクスチャチェインを作成する
-    oculus.layerData.ColorTexture[eye] = nullptr;
-    if (OVR_SUCCESS(ovr_CreateTextureSwapChainGL(oculus.session, &colorDesc, &oculus.layerData.ColorTexture[eye])))
-    {
-      // 作成したテクスチャチェインの長さを取得する
-      int length(0);
-      if (OVR_SUCCESS(ovr_GetTextureSwapChainLength(oculus.session, oculus.layerData.ColorTexture[eye], &length)))
-      {
-        // テクスチャチェインの個々の要素について
-        for (int i = 0; i < length; ++i)
-        {
-          // テクスチャのパラメータを設定する
-          GLuint texId{ 0 };
-          ovr_GetTextureSwapChainBufferGL(oculus.session, oculus.layerData.ColorTexture[eye], i, &texId);
-          glBindTexture(GL_TEXTURE_2D, texId);
-          glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-          glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-          glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-          glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-        }
-      }
-
-      // Oculus Rift 用の FBO のデプスバッファとして使うテクスチャを作成する
-      glGenTextures(1, oculus.oculusDepth + eye);
-      glBindTexture(GL_TEXTURE_2D, oculus.oculusDepth[eye]);
-      glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT32F, textureSize.w, textureSize.h, 0, GL_DEPTH_COMPONENT, GL_FLOAT, NULL);
-      glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-      glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-      glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-      glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-    }
-
-#  else
-
-    // 描画データに視野を設定する
-    oculus.layerData.EyeFov.Fov[eye] = fov;
-
-    // 描画データにビューポートを設定する
-    oculus.layerData.EyeFov.Viewport[eye].Pos = OVR::Vector2i(0, 0);
-    oculus.layerData.EyeFov.Viewport[eye].Size = textureSize;
-
-    // Oculus Rift 用の FBO のカラーバッファとして使うテクスチャセットを作成する
-    ovrSwapTextureSet* colorTexture{ nullptr };
-    ovr_CreateSwapTextureSetGL(oculus.session, GL_SRGB8_ALPHA8, textureSize.w, textureSize.h, &colorTexture);
-    oculus.layerData.EyeFov.ColorTexture[eye] = colorTexture;
-
-    // Oculus Rift 用の FBO のデプスバッファとして使うテクスチャセットを作成する
-    ovrSwapTextureSet* depthTexture{ nullptr };
-    ovr_CreateSwapTextureSetGL(oculus.session, GL_DEPTH_COMPONENT32F, textureSize.w, textureSize.h, &depthTexture);
-    oculus.layerData.EyeFovDepth.DepthTexture[eye] = depthTexture;
-
-    // Oculus Rift のレンズ補正等の設定値を取得する
-    oculus.eyeRenderDesc[eye] = ovr_GetRenderDesc(oculus.session, ovrEyeType(eye), fov);
-
-#  endif
-  }
-
-#  if OVR_PRODUCT_VERSION > 0
-
-  // 姿勢のトラッキングにおける床の高さを 0 に設定する
-  ovr_SetTrackingOriginType(oculus.session, ovrTrackingOrigin_FloorLevel);
-
-  // ミラー表示用の FBO を作成する
-  const GLsizei* size{ oculus.window->getSize() };
-  const ovrMirrorTextureDesc mirrorDesc
-  {
-    OVR_FORMAT_R8G8B8A8_UNORM_SRGB, // Format
-    oculus.mirrorWidth = size[0],   // Width
-    oculus.mirrorHeight = size[1],  // Height
-    0                               // Flags
+  // XrInstance の作成
+  XrInstanceCreateInfo createInfo{ XR_TYPE_INSTANCE_CREATE_INFO };
+  strcpy(createInfo.applicationInfo.applicationName, "ggsample01");
+  createInfo.applicationInfo.applicationVersion = 1;
+  strcpy(createInfo.applicationInfo.engineName, "GgApp");
+  createInfo.applicationInfo.engineVersion = 1;
+  createInfo.applicationInfo.apiVersion = XR_CURRENT_API_VERSION;
+  
+  const char* extensions[] = {
+    XR_KHR_OPENGL_ENABLE_EXTENSION_NAME
   };
+  createInfo.enabledExtensionCount = 1;
+  createInfo.enabledExtensionNames = extensions;
 
-  // ミラー表示用の FBO のカラーバッファとして使うテクスチャを作成する
-  if (OVR_SUCCESS(ovr_CreateMirrorTextureGL(oculus.session, &mirrorDesc, &oculus.mirrorTexture)))
-  {
-    // 作成したテクスチャのテクスチャ名を得る
-    GLuint texId{ 0 };
-    if (OVR_SUCCESS(ovr_GetMirrorTextureBufferGL(oculus.session, oculus.mirrorTexture, &texId)))
-    {
-      // ミラー表示用の FBO を作成してテクスチャをカラーバッファとして組み込む
-      glGenFramebuffers(1, &oculus.mirrorFbo);
-      glBindFramebuffer(GL_READ_FRAMEBUFFER, oculus.mirrorFbo);
-      glFramebufferTexture2D(GL_READ_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, texId, 0);
-      glFramebufferRenderbuffer(GL_READ_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, 0);
-      glBindFramebuffer(GL_READ_FRAMEBUFFER, 0);
-    }
+  if (XR_FAILED(xrCreateInstance(&createInfo, &openxr.instance)))
+    throw std::runtime_error("Can't create OpenXR instance");
+
+  // Get System Id
+  XrSystemGetInfo systemInfo{ XR_TYPE_SYSTEM_GET_INFO };
+  systemInfo.formFactor = XR_FORM_FACTOR_HEAD_MOUNTED_DISPLAY;
+  if (XR_FAILED(xrGetSystem(openxr.instance, &systemInfo, &openxr.systemId)))
+    throw std::runtime_error("Can't get OpenXR system");
+
+  // Require OpenGL graphics binding
+  PFN_xrGetOpenGLGraphicsRequirementsKHR pfnGetOpenGLGraphicsRequirementsKHR = nullptr;
+  xrGetInstanceProcAddr(openxr.instance, "xrGetOpenGLGraphicsRequirementsKHR", (PFN_xrVoidFunction*)&pfnGetOpenGLGraphicsRequirementsKHR);
+  
+  XrGraphicsRequirementsOpenGLKHR graphicsRequirements{ XR_TYPE_GRAPHICS_REQUIREMENTS_OPENGL_KHR };
+  pfnGetOpenGLGraphicsRequirementsKHR(openxr.instance, openxr.systemId, &graphicsRequirements);
+
+#if defined(_MSC_VER)
+  XrGraphicsBindingOpenGLWin32KHR graphicsBinding{ XR_TYPE_GRAPHICS_BINDING_OPENGL_WIN32_KHR };
+  graphicsBinding.hDC = wglGetCurrentDC();
+  graphicsBinding.hGLRC = wglGetCurrentContext();
+#else
+  XrGraphicsBindingOpenGLXlibKHR graphicsBinding{ XR_TYPE_GRAPHICS_BINDING_OPENGL_XLIB_KHR };
+  graphicsBinding.xDisplay = glXGetCurrentDisplay();
+  graphicsBinding.visualid = 0;
+  graphicsBinding.glxFBConfig = nullptr;
+  graphicsBinding.glxDrawable = glXGetCurrentDrawable();
+  graphicsBinding.glxContext = glXGetCurrentContext();
+#endif
+
+  // Create session
+  XrSessionCreateInfo sessionCreateInfo{ XR_TYPE_SESSION_CREATE_INFO };
+  sessionCreateInfo.next = &graphicsBinding;
+  sessionCreateInfo.systemId = openxr.systemId;
+  if (XR_FAILED(xrCreateSession(openxr.instance, &sessionCreateInfo, &openxr.session)))
+    throw std::runtime_error("Can't create OpenXR session");
+
+  // Create Reference Space (STAGE for FloorLevel, fallback to LOCAL)
+  XrReferenceSpaceCreateInfo spaceCreateInfo{ XR_TYPE_REFERENCE_SPACE_CREATE_INFO };
+  spaceCreateInfo.referenceSpaceType = XR_REFERENCE_SPACE_TYPE_STAGE;
+  spaceCreateInfo.poseInReferenceSpace.orientation.w = 1.0f;
+  if (XR_FAILED(xrCreateReferenceSpace(openxr.session, &spaceCreateInfo, &openxr.appSpace))) {
+    spaceCreateInfo.referenceSpaceType = XR_REFERENCE_SPACE_TYPE_LOCAL;
+    if (XR_FAILED(xrCreateReferenceSpace(openxr.session, &spaceCreateInfo, &openxr.appSpace)))
+      throw std::runtime_error("Can't create OpenXR reference space");
   }
 
-#  else
+  // Enumerate views and create swapchains
+  uint32_t viewCount = 0;
+  xrEnumerateViewConfigurationViews(openxr.instance, openxr.systemId, XR_VIEW_CONFIGURATION_TYPE_PRIMARY_STEREO, 0, &viewCount, nullptr);
+  openxr.views.resize(viewCount, { XR_TYPE_VIEW_CONFIGURATION_VIEW });
+  xrEnumerateViewConfigurationViews(openxr.instance, openxr.systemId, XR_VIEW_CONFIGURATION_TYPE_PRIMARY_STEREO, viewCount, &viewCount, openxr.views.data());
 
-  // 作成したテクスチャのテクスチャ名を得る
-  if (OVR_SUCCESS(ovr_CreateMirrorTextureGL(oculus.session, GL_SRGB8_ALPHA8, width, height, reinterpret_cast<ovrTexture**>(&mirrorTexture))))
-  {
-    // ミラー表示用の FBO を作成してテクスチャをカラーバッファとして組み込む
-    oculus.mirrorFbo = 0;
-    glGenFramebuffers(1, &oculus.mirrorFbo);
-    glBindFramebuffer(GL_READ_FRAMEBUFFER, oculus.mirrorFbo);
-    glFramebufferTexture2D(GL_READ_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, mirrorTexture->OGL.TexId, 0);
-    glFramebufferRenderbuffer(GL_READ_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, 0);
-    glBindFramebuffer(GL_READ_FRAMEBUFFER, 0);
+  openxr.viewStates.resize(viewCount, { XR_TYPE_VIEW });
+
+  glGenFramebuffers(2, openxr.openxrFbo);
+  glGenTextures(2, openxr.openxrDepth);
+
+  for (uint32_t i = 0; i < viewCount; ++i) {
+    XrSwapchainCreateInfo swapchainCreateInfo{ XR_TYPE_SWAPCHAIN_CREATE_INFO };
+    swapchainCreateInfo.arraySize = 1;
+    swapchainCreateInfo.format = GL_SRGB8_ALPHA8;
+    swapchainCreateInfo.width = openxr.views[i].recommendedImageRectWidth;
+    swapchainCreateInfo.height = openxr.views[i].recommendedImageRectHeight;
+    swapchainCreateInfo.mipCount = 1;
+    swapchainCreateInfo.faceCount = 1;
+    swapchainCreateInfo.sampleCount = 1;
+    swapchainCreateInfo.usageFlags = XR_SWAPCHAIN_USAGE_COLOR_ATTACHMENT_BIT;
+
+    XrSwapchain swapchain;
+    xrCreateSwapchain(openxr.session, &swapchainCreateInfo, &swapchain);
+    openxr.swapchains.push_back(swapchain);
+
+    uint32_t imageCount;
+    xrEnumerateSwapchainImages(swapchain, 0, &imageCount, nullptr);
+    std::vector<XrSwapchainImageOpenGLKHR> images(imageCount, { XR_TYPE_SWAPCHAIN_IMAGE_OPENGL_KHR });
+    xrEnumerateSwapchainImages(swapchain, imageCount, &imageCount, (XrSwapchainImageBaseHeader*)images.data());
+    openxr.swapchainImages.push_back(std::move(images));
+
+    glBindTexture(GL_TEXTURE_2D, openxr.openxrDepth[i]);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT32F, swapchainCreateInfo.width, swapchainCreateInfo.height, 0, GL_DEPTH_COMPONENT, GL_FLOAT, NULL);
   }
 
-#  endif
-
-  // Oculus Rift にレンダリングするときは sRGB カラースペースを使う
+  // OpenXR にレンダリングするときは sRGB カラースペースを使う
   glEnable(GL_FRAMEBUFFER_SRGB);
-
-  // フロントバッファに描く
   glDrawBuffer(GL_FRONT);
-
-  // Oculus Rift への表示では垂直同期タイミングに合わせない
   glfwSwapInterval(0);
 
-  return oculus;
+  return openxr;
 }
 
 //
-// Oculus Rift のセッションを破棄する
+// OpenXR のセッションを破棄する
 //
-void GgApp::Oculus::terminate()
+void GgApp::OpenXR::terminate()
 {
-  // session が無効なら何もしない
-  if (!session) return;
-
-  // ミラー表示用の FBO を作っていたら削除する
-  if (mirrorFbo)
-  {
-    glDeleteFramebuffers(1, &mirrorFbo);
-    mirrorFbo = 0;
+  if (session != XR_NULL_HANDLE) {
+    for (auto swapchain : swapchains) xrDestroySwapchain(swapchain);
+    xrDestroySpace(appSpace);
+    xrDestroySession(session);
+    session = XR_NULL_HANDLE;
   }
-
-  // ミラー表示用の FBO のカラーバッファ用のテクスチャを作っていたら削除する
-  if (mirrorTexture)
-  {
-#  if OVR_PRODUCT_VERSION > 0
-    ovr_DestroyMirrorTexture(session, mirrorTexture);
-#  else
-    glDeleteTextures(1, &mirrorTexture->OGL.TexId);
-    ovr_DestroyMirrorTexture(session, reinterpret_cast<ovrTexture*>(mirrorTexture));
-#  endif
-    mirrorTexture = nullptr;
+  if (instance != XR_NULL_HANDLE) {
+    xrDestroyInstance(instance);
+    instance = XR_NULL_HANDLE;
   }
+  glDeleteFramebuffers(2, openxrFbo);
+  glDeleteTextures(2, openxrDepth);
 
-  // 全ての目について
-  for (int eye = 0; eye < ovrEye_Count; ++eye)
-  {
-    // Oculus Rift へのレンダリング用の FBO を削除する
-    glDeleteFramebuffers(1, oculusFbo + eye);
-    oculusFbo[eye] = 0;
-
-#  if OVR_PRODUCT_VERSION > 0
-
-    // レンダリングターゲットに使ったテクスチャを削除する
-    if (layerData.ColorTexture[eye])
-    {
-      ovr_DestroyTextureSwapChain(session, layerData.ColorTexture[eye]);
-      layerData.ColorTexture[eye] = nullptr;
-    }
-
-    // デプスバッファとして使ったテクスチャを削除する
-    glDeleteTextures(1, oculusDepth + eye);
-    oculusDepth[eye] = 0;
-
-#  else
-
-    // レンダリングターゲットに使ったテクスチャを削除する
-    auto* const colorTexture(layerData.EyeFov.ColorTexture[eye]);
-    for (int i = 0; i < colorTexture->TextureCount; ++i)
-    {
-      const auto* const ctex(reinterpret_cast<ovrGLTexture*>(&colorTexture->Textures[i]));
-      glDeleteTextures(1, &ctex->OGL.TexId);
-    }
-    ovr_DestroySwapTextureSet(session, colorTexture);
-
-    // デプスバッファとして使ったテクスチャを削除する
-    auto* const depthTexture(layerData.EyeFovDepth.DepthTexture[eye]);
-    for (int i = 0; i < depthTexture->TextureCount; ++i)
-    {
-      const auto* const dtex(reinterpret_cast<ovrGLTexture*>(&depthTexture->Textures[i]));
-      glDeleteTextures(1, &dtex->OGL.TexId);
-    }
-    ovr_DestroySwapTextureSet(session, depthTexture);
-
-#  endif
-  }
-
-  // Oculus Rift のセッションを破棄する
-  ovr_Destroy(session);
-  session = nullptr;
-
-  // カラースペースを元に戻す
   glDisable(GL_FRAMEBUFFER_SRGB);
-
-  // バックバッファに描く
   glDrawBuffer(GL_BACK);
-
-  // 垂直同期タイミングに合わせる
   glfwSwapInterval(1);
 }
 
 //
-// Oculus Rift による描画開始
+// OpenXR による描画開始
 //
-bool GgApp::Oculus::begin()
+bool GgApp::OpenXR::begin()
 {
-#  if OVR_PRODUCT_VERSION > 0
+  XrEventDataBuffer eventData{ XR_TYPE_EVENT_DATA_BUFFER };
+  while (xrPollEvent(instance, &eventData) == XR_SUCCESS) {
+    if (eventData.type == XR_TYPE_EVENT_DATA_SESSION_STATE_CHANGED) {
+      auto* stateChanged = reinterpret_cast<XrEventDataSessionStateChanged*>(&eventData);
+      sessionState = stateChanged->state;
+      if (sessionState == XR_SESSION_STATE_READY) {
+        XrSessionBeginInfo beginInfo{ XR_TYPE_SESSION_BEGIN_INFO };
+        beginInfo.primaryViewConfigurationType = XR_VIEW_CONFIGURATION_TYPE_PRIMARY_STEREO;
+        xrBeginSession(session, &beginInfo);
+        isSessionRunning = true;
+      } else if (sessionState == XR_SESSION_STATE_STOPPING) {
+        xrEndSession(session);
+        isSessionRunning = false;
+      } else if (sessionState == XR_SESSION_STATE_EXITING || sessionState == XR_SESSION_STATE_LOSS_PENDING) {
+        window->setClose(GLFW_TRUE);
+      }
+    }
+    eventData.type = XR_TYPE_EVENT_DATA_BUFFER;
+  }
 
-  // セッションの状態を取得する
-  ovrSessionStatus sessionStatus;
-  ovr_GetSessionStatus(session, &sessionStatus);
+  if (!isSessionRunning || sessionState != XR_SESSION_STATE_FOCUSED) return false;
 
-  // アプリケーションが終了を要求しているときはウィンドウのクローズフラグを立てる
-  if (sessionStatus.ShouldQuit) window->setClose(GLFW_TRUE);
+  XrFrameWaitInfo waitInfo{ XR_TYPE_FRAME_WAIT_INFO };
+  frameState = { XR_TYPE_FRAME_STATE };
+  xrWaitFrame(session, &waitInfo, &frameState);
 
-  // Oculus Rift に表示されていないときは戻る
-  if (!sessionStatus.IsVisible) return false;
+  XrFrameBeginInfo beginInfo{ XR_TYPE_FRAME_BEGIN_INFO };
+  xrBeginFrame(session, &beginInfo);
 
-  // 現在の状態をトラッキングの原点にする
-  if (sessionStatus.ShouldRecenter) ovr_RecenterTrackingOrigin(session);
+  XrViewLocateInfo viewLocateInfo{ XR_TYPE_VIEW_LOCATE_INFO };
+  viewLocateInfo.viewConfigurationType = XR_VIEW_CONFIGURATION_TYPE_PRIMARY_STEREO;
+  viewLocateInfo.displayTime = frameState.predictedDisplayTime;
+  viewLocateInfo.space = appSpace;
 
-  // HmdToEyeOffset などは実行時に変化するので毎フレーム ovr_GetRenderDesc() で ovrEyeRenderDesc を取得する
-  const ovrEyeRenderDesc eyeRenderDesc[]
-  {
-    ovr_GetRenderDesc(session, ovrEyeType(0), hmdDesc.DefaultEyeFov[0]),
-    ovr_GetRenderDesc(session, ovrEyeType(1), hmdDesc.DefaultEyeFov[1])
-  };
-
-  // Oculus Rift のスクリーンのヘッドトラッキング位置からの変位を取得する
-  const ovrPosef hmdToEyePose[]
-  {
-    eyeRenderDesc[0].HmdToEyePose,
-    eyeRenderDesc[1].HmdToEyePose
-  };
-
-  // 視点の姿勢情報を取得する
-  ovr_GetEyePoses(session, frameIndex, ovrTrue, hmdToEyePose, layerData.RenderPose, &layerData.SensorSampleTime);
-
-#  else
-
-  // フレームのタイミング計測開始
-  const auto ftiming(ovr_GetPredictedDisplayTime(session, 0));
-
-  // sensorSampleTime の取得は可能な限り ovr_GetTrackingState() の近くで行う
-  layerData.EyeFov.SensorSampleTime = ovr_GetTimeInSeconds();
-
-  // ヘッドトラッキングの状態を取得する
-  const auto hmdState(ovr_GetTrackingState(session, ftiming, ovrTrue));
-
-  // Oculus Rift のスクリーンのヘッドトラッキング位置からの変位を取得する
-  const ovrVector3f hmdToEyeViewOffset[]
-  {
-    eyeRenderDesc[0].HmdToEyeViewOffset,
-    eyeRenderDesc[1].HmdToEyeViewOffset
-  };
-
-  // 視点の姿勢情報を求める
-  ovr_CalcEyePoses(hmdState.HeadPose.ThePose, hmdToEyeViewOffset, eyePose);
-
-#  endif
+  XrViewState viewState{ XR_TYPE_VIEW_STATE };
+  uint32_t viewCount;
+  xrLocateViews(session, &viewLocateInfo, &viewState, (uint32_t)viewStates.size(), &viewCount, viewStates.data());
 
   return true;
 }
 
 //
-// Oculus Rift の描画する目の指定
+// OpenXR の描画する目の指定
 //
-void GgApp::Oculus::select(int eye, GLfloat* screen, GLfloat* position, GLfloat* orientation)
+void GgApp::OpenXR::select(int eye, GLfloat* screen, GLfloat* position, GLfloat* orientation)
 {
-#  if OVR_PRODUCT_VERSION > 0
+  XrSwapchainImageAcquireInfo acquireInfo{ XR_TYPE_SWAPCHAIN_IMAGE_ACQUIRE_INFO };
+  xrAcquireSwapchainImage(swapchains[eye], &acquireInfo, &currentImageIndex[eye]);
 
-  // Oculus Rift にレンダリングする FBO に切り替える
-  if (layerData.ColorTexture[eye])
-  {
-    // FBO のカラーバッファに使う現在のテクスチャのインデックスを取得する
-    int curIndex;
-    ovr_GetTextureSwapChainCurrentIndex(session, layerData.ColorTexture[eye], &curIndex);
+  XrSwapchainImageWaitInfo waitInfo{ XR_TYPE_SWAPCHAIN_IMAGE_WAIT_INFO };
+  waitInfo.timeout = XR_INFINITE_DURATION;
+  xrWaitSwapchainImage(swapchains[eye], &waitInfo);
 
-    // FBO のカラーバッファに使うテクスチャを取得する
-    GLuint curTexId;
-    ovr_GetTextureSwapChainBufferGL(session, layerData.ColorTexture[eye], curIndex, &curTexId);
+  GLuint texId = swapchainImages[eye][currentImageIndex[eye]].image;
+  glBindFramebuffer(GL_FRAMEBUFFER, openxrFbo[eye]);
+  glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, texId, 0);
+  glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, openxrDepth[eye], 0);
 
-    // FBO を設定する
-    glBindFramebuffer(GL_FRAMEBUFFER, oculusFbo[eye]);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, curTexId, 0);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, oculusDepth[eye], 0);
+  glViewport(0, 0, views[eye].recommendedImageRectWidth, views[eye].recommendedImageRectHeight);
 
-    // ビューポートを設定する
-    const auto& vp{ layerData.Viewport[eye] };
-    glViewport(vp.Pos.x, vp.Pos.y, vp.Size.w, vp.Size.h);
-  }
+  const auto& pose = viewStates[eye].pose;
+  const auto& fov = viewStates[eye].fov;
 
-  // Oculus Rift の片目の位置と回転を取得する
-  const auto& p{ layerData.RenderPose[eye].Position };
-  const auto& o{ layerData.RenderPose[eye].Orientation };
+  screen[0] = tanf(fov.angleLeft);
+  screen[1] = tanf(fov.angleRight);
+  screen[2] = tanf(fov.angleDown);
+  screen[3] = tanf(fov.angleUp);
 
-#  else
+  position[0] = pose.position.x;
+  position[1] = pose.position.y;
+  position[2] = pose.position.z;
 
-  // レンダーターゲットに描画する前にレンダーターゲットのインデックスをインクリメントする
-  auto* const colorTexture{ layerData.EyeFov.ColorTexture[eye] };
-  colorTexture->CurrentIndex = (colorTexture->CurrentIndex + 1) % colorTexture->TextureCount;
-  auto* const depthTexture{ layerData.EyeFovDepth.DepthTexture[eye] };
-  depthTexture->CurrentIndex = (depthTexture->CurrentIndex + 1) % depthTexture->TextureCount;
-
-  // レンダーターゲットを切り替える
-  glBindFramebuffer(GL_FRAMEBUFFER, oculusFbo[eye]);
-  const auto& ctex{ reinterpret_cast<ovrGLTexture*>(&colorTexture->Textures[colorTexture->CurrentIndex]) };
-  glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, ctex->OGL.TexId, 0);
-  const auto& dtex{ reinterpret_cast<ovrGLTexture*>(&depthTexture->Textures[depthTexture->CurrentIndex]) };
-  glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, dtex->OGL.TexId, 0);
-
-  // ビューポートを設定する
-  const auto& vp{ layerData.EyeFov.Viewport[eye] };
-  glViewport(vp.Pos.x, vp.Pos.y, vp.Size.w, vp.Size.h);
-
-  // Oculus Rift の片目の位置と回転を取得する
-  const auto& p{ eyePose[eye].Position };
-  const auto& o{ eyePose[eye].Orientation };
-
-#  endif
-
-  // Oculus Rift のスクリーンの大きさを返す
-  screen[0] = this->screen[eye][0];
-  screen[1] = this->screen[eye][1];
-  screen[2] = this->screen[eye][2];
-  screen[3] = this->screen[eye][3];
-
-  // Oculus Rift の位置を返す
-  position[0] = p.x;
-  position[1] = p.y;
-  position[2] = p.z;
-
-  // Oculus Rift の方向を返す
-  orientation[0] = o.x;
-  orientation[1] = o.y;
-  orientation[2] = o.z;
-  orientation[3] = o.w;
+  orientation[0] = pose.orientation.x;
+  orientation[1] = pose.orientation.y;
+  orientation[2] = pose.orientation.z;
+  orientation[3] = pose.orientation.w;
 }
 
 //
-// Time Warp 処理に使う投影変換行列の成分の設定 (DK1, DK2)
+// Time Warp 処理に使う投影変換行列の成分の設定 (ダミー)
 //
-void GgApp::Oculus::timewarp(const GgMatrix& projection)
+void GgApp::OpenXR::timewarp(const GgMatrix& projection)
 {
-#  if OVR_PRODUCT_VERSION < 1
-  // TimeWarp に使う変換行列の成分を設定する
-  auto& posTimewarpProjectionDesc{ layerData.EyeFovDepth.ProjectionDesc };
-  posTimewarpProjectionDesc.Projection22 = (projection.get()[4 * 2 + 2] + projection.get()[4 * 3 + 2]) * 0.5f;
-  posTimewarpProjectionDesc.Projection23 = projection.get()[4 * 2 + 3] * 0.5f;
-  posTimewarpProjectionDesc.Projection32 = projection.get()[4 * 3 + 2];
-#  endif
 }
 
 //
-// 図形の描画を完了する (CV1 以降)
+// 図形の描画を完了する
 //
-void GgApp::Oculus::commit(int eye)
+void GgApp::OpenXR::commit(int eye)
 {
-#  if OVR_PRODUCT_VERSION > 0
-  // GL_COLOR_ATTACHMENT0 に割り当てられたテクスチャが wglDXUnlockObjectsNV() によって
-  // アンロックされるために次のフレームの処理において無効な GL_COLOR_ATTACHMENT0 が
-  // FBO に結合されるのを避ける
-  glBindFramebuffer(GL_FRAMEBUFFER, oculusFbo[eye]);
+  glBindFramebuffer(GL_FRAMEBUFFER, openxrFbo[eye]);
   glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, 0, 0);
-  glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, 0, 0);
 
-  // 保留中の変更を layerData.ColorTexture[eye] に反映しインデックスを更新する
-  ovr_CommitTextureSwapChain(session, layerData.ColorTexture[eye]);
-#  endif
+  XrSwapchainImageReleaseInfo releaseInfo{ XR_TYPE_SWAPCHAIN_IMAGE_RELEASE_INFO };
+  xrReleaseSwapchainImage(swapchains[eye], &releaseInfo);
 }
 
 //
 // フレームを転送する
 //
-bool GgApp::Oculus::submit(bool mirror)
+bool GgApp::OpenXR::submit(bool mirror)
 {
-  // エラーチェック
-  ggError();
+  XrCompositionLayerProjectionView projectionViews[2];
+  for (int eye = 0; eye < 2; ++eye) {
+    projectionViews[eye].type = XR_TYPE_COMPOSITION_LAYER_PROJECTION_VIEW;
+    projectionViews[eye].next = nullptr;
+    projectionViews[eye].pose = viewStates[eye].pose;
+    projectionViews[eye].fov = viewStates[eye].fov;
+    projectionViews[eye].subImage.swapchain = swapchains[eye];
+    projectionViews[eye].subImage.imageRect.offset = {0, 0};
+    projectionViews[eye].subImage.imageRect.extent = {(int32_t)views[eye].recommendedImageRectWidth, (int32_t)views[eye].recommendedImageRectHeight};
+    projectionViews[eye].subImage.imageArrayIndex = 0;
+  }
 
-#  if OVR_PRODUCT_VERSION > 0
-  // 描画データを Oculus Rift に転送する
-  const auto* const layers{ &layerData.Header };
-  if (OVR_FAILURE(ovr_SubmitFrame(session, frameIndex++, nullptr, &layers, 1))) return false;
-#  else
-  // Oculus Rift 上の描画位置と拡大率を求める
-  ovrViewScaleDesc viewScaleDesc;
-  viewScaleDesc.HmdSpaceToWorldScaleInMeters = 1.0f;
-  viewScaleDesc.HmdToEyeViewOffset[0] = eyeRenderDesc[0].HmdToEyeViewOffset;
-  viewScaleDesc.HmdToEyeViewOffset[1] = eyeRenderDesc[1].HmdToEyeViewOffset;
+  XrCompositionLayerProjection layer{ XR_TYPE_COMPOSITION_LAYER_PROJECTION };
+  layer.space = appSpace;
+  layer.viewCount = 2;
+  layer.views = projectionViews;
 
-  // 描画データを更新する
-  layerData.EyeFov.RenderPose[0] = eyePose[0];
-  layerData.EyeFov.RenderPose[1] = eyePose[1];
+  const XrCompositionLayerBaseHeader* layers = reinterpret_cast<XrCompositionLayerBaseHeader*>(&layer);
 
-  // 描画データを Oculus Rift に転送する
-  const auto* const layers{ &layerData.Header };
-  if (OVR_FAILURE(ovr_SubmitFrame(session, 0, &viewScaleDesc, &layers, 1))) return false;
-#  endif
+  XrFrameEndInfo endInfo{ XR_TYPE_FRAME_END_INFO };
+  endInfo.displayTime = frameState.predictedDisplayTime;
+  endInfo.environmentBlendMode = XR_ENVIRONMENT_BLEND_MODE_OPAQUE;
+  endInfo.layerCount = frameState.shouldRender ? 1 : 0;
+  endInfo.layers = &layers;
 
-  // ミラー表示
-  if (mirror)
-  {
-#  if OVR_PRODUCT_VERSION > 0
-    const auto& sx1{ mirrorWidth };
-    const auto& sy1{ mirrorHeight };
-#  else
-    const auto& sx1{ mirrorTexture->OGL.Header.TextureSize.w };
-    const auto& sy1{ mirrorTexture->OGL.Header.TextureSize.h };
-#  endif
+  xrEndFrame(session, &endInfo);
 
-    // ミラー表示のウィンドウのサイズ
+  if (mirror) {
     GLsizei size[2];
     window->getSize(size);
-
-    // ミラー表示の表示領域
-    GLint dx0{ 0 }, dx1{ size[0] }, dy0{ 0 }, dy1{ size[1] };
-
-    // ミラー表示がウィンドウからはみ出ないようにする
-    if ((size[0] *= sy1) < (size[1] *= sx1))
-    {
-      const GLint ty1{ size[0] / sx1 };
-      dy0 = (dy1 - ty1) / 2;
-      dy1 = dy0 + ty1;
-    }
-    else
-    {
-      const GLint tx1{ size[1] / sy1 };
-      dx0 = (dx1 - tx1) / 2;
-      dx1 = dx0 + tx1;
-    }
-
-    // レンダリング結果をミラー表示用のフレームバッファにも転送する
-    glBindFramebuffer(GL_READ_FRAMEBUFFER, mirrorFbo);
+    glBindFramebuffer(GL_READ_FRAMEBUFFER, openxrFbo[0]);
     glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);
-    glBlitFramebuffer(0, sy1, sx1, 0, dx0, dy0, dx1, dy1, GL_COLOR_BUFFER_BIT, GL_NEAREST);
+    glBlitFramebuffer(0, 0, views[0].recommendedImageRectWidth, views[0].recommendedImageRectHeight,
+                      0, 0, size[0], size[1], GL_COLOR_BUFFER_BIT, GL_NEAREST);
     glBindFramebuffer(GL_READ_FRAMEBUFFER, 0);
-
-    // 残っている OpenGL コマンドを実行する
     glFlush();
   }
 
