@@ -11,7 +11,7 @@ OpenGL の開発環境を整備してください。
 ## 宿題プログラムの作成に必要な環境
 
 * Linux Mint 22.1 (Xia), gcc 13.3.0 以降 (libglfw3-dev, libgtk-3-dev, pkg-config 必須)。
-* macOS 26.4 (Tahoe), Xcode 26.4 以降 (Intel / Apple 両対応)。
+* macOS 14 (Sonoma), Xcode 15 以降 (Intel / Apple 両対応)。
 * Windows 11 (Win32/x64), Visual Studio 2022 以降 (“C++ によるデスクトップ開発” 必須)。
 * OpenGL 4.1 以降が実行できる環境 (対応した GPU を搭載したビデオカード や CPU) が必要です。
 
@@ -74,38 +74,38 @@ int GgApp::main(int argc, const char* const* argv)
 
 ### Oculus Rift を使う場合
 
-`#include "GgApp.h"` の前に `#define USE_OCULUS_RIFT` を置いてください。DK1 / DK2 用か CV1 / S 用かは、使用する LibOVR のバージョンが 1.0 以前か以降かで判断しています。ただし DK1 / DK2 用 (LibOVR 0.8) のサポートは、今後は継続しない可能性があります。
+`#include "GgApp.h"` の前に `#define GG_USE_OCULUS_RIFT` を置いてください。DK1 / DK2 用か CV1 / S 用かは、使用する LibOVR のバージョンが 1.0 以前か以降かで判断しています。ただし DK1 / DK2 用 (LibOVR 0.8) のサポートは、今後は継続しない可能性があります。
 
 ```cpp
 // ウィンドウ関連の処理
-#define USE_OCULUS_RIFT
+#define GG_USE_OCULUS_RIFT
 #include "GgApp.h"
 ```
 
-GgApp.h の中の `//#define USE_OCULUS_RIFT` のコメント (`//`) を削除してください。
+GgApp.h の中の `//#define GG_USE_OCULUS_RIFT` のコメント (`//`) を削除してください。
 
 ```cpp
 // Oculus Rift を使うなら
-#define USE_OCULUS_RIFT
+#define GG_USE_OCULUS_RIFT
 ```
 
 実際の使い方は、「[Oculus Rift に図形を表示するプログラムを C++ で作る](http://marina.sys.wakayama-u.ac.jp/~tokoi/?date=20190602)」を参考にしてください。この記事では以前の補助プログラムを使って解説していますが、`GgApp::Window` クラスの使い方は変わりません (以前の補助プログラムでは GgApplication クラス内に置いていました)。
 
 ### Dear ImGui を使う場合
 
-すべての `#include "GgApp.h"` の前に、`#define USE_IMGUI` を置いてください。
+すべての `#include "GgApp.h"` の前に、`#define GG_USE_IMGUI` を置いてください。
 
 ```cpp
 // ウィンドウ関連の処理
-#define USE_IMGUI
+#define GG_USE_IMGUI
 #include "GgApp.h"
 ```
 
-あるいは、GgApp.h の中の `//#define USE_IMGUI` のコメント (`//`) を削除してください
+あるいは、GgApp.h の中の `//#define GG_USE_IMGUI` のコメント (`//`) を削除してください
 
 ```cpp
 // Dear ImGui を使うなら
-#define USE_IMGUI
+#define GG_USE_IMGUI
 ```
 
 Dear ImGui のウィンドウの実際のレンダリング (`ImGui_ImplOpenGL3_RenderDrawData();` の呼び出し) は `window.swapbuffers()` の中で行っているので、描画ループの中で Dear ImGui の API と OpenGL の API は混在していても構いません。
@@ -114,7 +114,7 @@ Dear ImGui のウィンドウの実際のレンダリング (`ImGui_ImplOpenGL3_
 
 ```cpp
 // ウィンドウ関連の処理
-#define USE_IMGUI
+#define GG_USE_IMGUI
 #include "GgApp.h"
 
 int GgApp::main(int argc, const char* const* argv)
