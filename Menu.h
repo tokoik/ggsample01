@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 ///
 /// メニューの描画クラスの定義
@@ -69,11 +69,6 @@ public:
   /// 代入演算子は使用しない
   ///
   Menu& operator=(const Menu& menu) = delete;
-
-  ///
-  /// ムーブ代入演算子はデフォルトのものを使用する
-  ///
-  Menu& operator=(Menu&& menu) = default;
 
   ///
   /// 光源データを取り出す

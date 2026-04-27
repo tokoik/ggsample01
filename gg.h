@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 /*!
 
@@ -6210,14 +6210,6 @@ namespace gg
     GgVertexArray& operator=(const GgVertexArray& array) = delete;
 
     ///
-    /// ムーブ代入演算子.
-    ///
-    /// @param array ムーブ代入元の頂点配列オブジェクト.
-    /// @return ムーブ代入後のこの頂点配列オブジェクトの参照.
-    ///
-    GgVertexArray& operator=(GgVertexArray&& array) = default;
-
-    ///
     /// 頂点配列オブジェクト名を取り出す.
     ///
     /// @return 頂点配列オブジェクト名.
@@ -6941,14 +6933,6 @@ namespace gg
     /// @return 代入後のこのシェーダの参照.
     ///
     GgShader& operator=(const GgShader& shader) = delete;
-
-    ///
-    /// ムーブ代入演算子.
-    ///
-    /// @param shader ムーブ代入元のシェーダ.
-    /// @return ムーブ代入後のこのシェーダの参照.
-    ///
-    GgShader& operator=(GgShader&& shader) = default;
 
     ///
     /// シェーダプログラムの使用を開始する.

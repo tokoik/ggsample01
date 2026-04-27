@@ -22,6 +22,19 @@
 //
 int main(int argc, const char* const* argv) try
 {
+#if defined(__APPLE__)
+  // バンドル内の Resources ディレクトリのパスを取得
+  CFBundleRef mainBundle{ CFBundleGetMainBundle() };
+  CFURLRef resourcesURL{ CFBundleCopyResourcesDirectoryURL(mainBundle) };
+  char path[PATH_MAX];
+  if (CFURLGetFileSystemRepresentation(resourcesURL, TRUE, (UInt8 *)path, PATH_MAX))
+  {
+    // カレントディレクトリを Resources に変更
+    chdir(path);
+  }
+  CFRelease(resourcesURL);
+#endif
+
   // アプリケーションのオブジェクトを生成する
 #if defined(GL_GLES_PROTOTYPES)
   GgApp app(3, 1);
