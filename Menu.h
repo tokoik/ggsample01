@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 ///
 /// メニューの描画クラスの定義

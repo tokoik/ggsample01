@@ -113,7 +113,7 @@ GgApp::OpenXR& GgApp::OpenXR::initialize(const Window& window)
   strcpy(createInfo.applicationInfo.engineName, "GgApp");
   createInfo.applicationInfo.engineVersion = 1;
   createInfo.applicationInfo.apiVersion = XR_CURRENT_API_VERSION;
-  
+
   const char* extensions[] = {
     XR_KHR_OPENGL_ENABLE_EXTENSION_NAME
   };
@@ -132,11 +132,11 @@ GgApp::OpenXR& GgApp::OpenXR::initialize(const Window& window)
   // Require OpenGL graphics binding
   PFN_xrGetOpenGLGraphicsRequirementsKHR pfnGetOpenGLGraphicsRequirementsKHR = nullptr;
   xrGetInstanceProcAddr(openxr.instance, "xrGetOpenGLGraphicsRequirementsKHR", (PFN_xrVoidFunction*)&pfnGetOpenGLGraphicsRequirementsKHR);
-  
+
   XrGraphicsRequirementsOpenGLKHR graphicsRequirements{ XR_TYPE_GRAPHICS_REQUIREMENTS_OPENGL_KHR };
   pfnGetOpenGLGraphicsRequirementsKHR(openxr.instance, openxr.systemId, &graphicsRequirements);
 
-#if defined(_MSC_VER)
+#if defined(_WIN32)
   XrGraphicsBindingOpenGLWin32KHR graphicsBinding{ XR_TYPE_GRAPHICS_BINDING_OPENGL_WIN32_KHR };
   graphicsBinding.hDC = wglGetCurrentDC();
   graphicsBinding.hGLRC = wglGetCurrentContext();
@@ -862,7 +862,7 @@ GgApp::OpenXR& GgApp::OpenXR::initialize(const Window& window)
   strcpy(createInfo.applicationInfo.engineName, "GgApp");
   createInfo.applicationInfo.engineVersion = 1;
   createInfo.applicationInfo.apiVersion = XR_CURRENT_API_VERSION;
-  
+
   const char* extensions[] = {
     XR_KHR_OPENGL_ENABLE_EXTENSION_NAME
   };
@@ -881,11 +881,11 @@ GgApp::OpenXR& GgApp::OpenXR::initialize(const Window& window)
   // Require OpenGL graphics binding
   PFN_xrGetOpenGLGraphicsRequirementsKHR pfnGetOpenGLGraphicsRequirementsKHR = nullptr;
   xrGetInstanceProcAddr(openxr.instance, "xrGetOpenGLGraphicsRequirementsKHR", (PFN_xrVoidFunction*)&pfnGetOpenGLGraphicsRequirementsKHR);
-  
+
   XrGraphicsRequirementsOpenGLKHR graphicsRequirements{ XR_TYPE_GRAPHICS_REQUIREMENTS_OPENGL_KHR };
   pfnGetOpenGLGraphicsRequirementsKHR(openxr.instance, openxr.systemId, &graphicsRequirements);
 
-#if defined(_MSC_VER)
+#if defined(_WIN32)
   XrGraphicsBindingOpenGLWin32KHR graphicsBinding{ XR_TYPE_GRAPHICS_BINDING_OPENGL_WIN32_KHR };
   graphicsBinding.hDC = wglGetCurrentDC();
   graphicsBinding.hGLRC = wglGetCurrentContext();
@@ -1131,7 +1131,11 @@ bool GgApp::OpenXR::submit(bool mirror)
 }
 #endif
 
-#if !defined(_MSC_VER)
+#if defined(_WIN32)
+#  if !defined(_INC_WINDOWS) && !defined(_WINDOWS_)
+#    include <windows.h>
+#  endif
+#else
 #  include <pwd.h>
 #  include <unistd.h>
 #endif
@@ -1142,7 +1146,7 @@ std::string GgApp::getUsername()
 {
   // 環境変数からユーザ名を得る
   const char* user{
-#if defined(_MSC_VER)
+#if defined(_WIN32)
     std::getenv("USERNAME")
 #else
     std::getenv("USER")
@@ -1152,7 +1156,7 @@ std::string GgApp::getUsername()
   // 環境変数からユーザ名が得られたらそれを返す
   if (user) return user;
 
-#if defined(_MSC_VER)
+#if defined(_WIN32)
   // Win32 API を使ってユーザ名を得る
   char username[256];
   DWORD size{ sizeof(username) };

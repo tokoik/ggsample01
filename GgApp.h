@@ -65,7 +65,7 @@ using namespace gg;
 
 // OpenXR ライブラリの組み込み
 #if defined(GG_USE_OPENXR)
-#  if defined(_MSC_VER)
+#  if defined(_WIN32)
 #    define XR_USE_PLATFORM_WIN32
 #    define XR_USE_GRAPHICS_API_OPENGL
 #    define GLFW_EXPOSE_NATIVE_WIN32
