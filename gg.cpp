@@ -1,4 +1,4 @@
-﻿/*
+/*
 
 ゲームグラフィックス特論用補助プログラム GLFW3 版
 
@@ -3702,29 +3702,28 @@ bool gg::ggReadImage(
 
   // 深度
   const auto depth{ header[16] / 8 };
-  if (pFormat)
+  GLenum format;
+  switch (depth)
   {
-    GLenum format;
-    switch (depth)
-    {
-    case 1:
-      format = GL_RED;
-      break;
-    case 2:
-      format = GL_RG;
-      break;
-    case 3:
-      format = GL_BGR;
-      break;
-    case 4:
-      format = GL_BGRA;
-      break;
-    default:
-      // 取り扱えないフォーマットだったら戻る
-      return false;
-    }
-    *pFormat = format;
+  case 1:
+    format = GL_RED;
+    break;
+  case 2:
+    format = GL_RG;
+    break;
+  case 3:
+    format = GL_BGR;
+    break;
+  case 4:
+    format = GL_BGRA;
+    break;
+  default:
+    // 取り扱えないフォーマットだったら戻る
+    return false;
   }
+
+  // フォーマットを格納する
+  if (pFormat) *pFormat = format;
 
   // 画像の縦横の画素数
   const auto width{ static_cast<GLsizei>(header[13] << 8 | header[12]) };
