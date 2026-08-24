@@ -46,11 +46,11 @@ OpenGL の開発環境を整備してください。
 
 また、この補助プログラムは [Dear ImGui](https://github.com/ocornut/imgui) をサポートする機能を含んでいます。このプログラム ([ggsample01](https://github.com/tokoik/ggsample01)) には、その使い方のサンプルコードを示すために、Dear ImGui のソースプログラムも含めています。日本語メニューの表示のために [M+ FONTS](https://mplusfonts.github.io/) の [Mplus1-Regular.ttf](https://github.com/coz-m/MPLUS_FONTS/blob/master/fonts/ttf/Mplus1-Regular.ttf) もリポジトリに含めています。
 
-このほか、この GgApp.h / GgApp.cpp には Oculus Rift (DK1, DK2, CV1, S) をサポートする機能を組み込んでいます。ただし、これらは既にディスコンになっています ([OpenXR](https://www.khronos.org/openxr/) に移行予定)。これら (もしくは Meta Quest 2 / 3 / 3S) を持っているなら、(かつては) この補助プログラムを使って、C++ だけで VR アプリケーション () が作れていました。
+このほか、この GgApp.h / GgApp.cpp には [OpenXR](https://www.khronos.org/openxr/) をサポートする機能を組み込んでいます。Meta Quest 2 / 3 / 3S / Pro や HTC Vive、Valve Index 等の VR デバイスを接続しているなら、この補助プログラムを使って C++ だけで VR アプリケーションが作成できます。
 
 ### 補助プログラムのドキュメント
 
-Doxygen で生成したドキュメントの [HTML 版](html/index.html)を html フォルダに、[PDF 版](pdf/refman.pdf)を pdf フォルダに置いています。
+Doxygen で生成したドキュメントの [HTML 版](html/index.html)を html フォルダに、[PDF 版](pdf/refman.pdf)を pdf フォルダに置いています。また、OpenXR の詳細なマニュアルおよび使用方法の解説は [OPENXR.md](OPENXR.md) を参照してください。
 
 ### 補助プログラムの使い方
 
@@ -72,24 +72,24 @@ int GgApp::main(int argc, const char* const* argv)
 }
 ```
 
-### Oculus Rift を使う場合
+### OpenXR を使う場合
 
-`#include "GgApp.h"` の前に `#define GG_USE_OCULUS_RIFT` を置いてください。DK1 / DK2 用か CV1 / S 用かは、使用する LibOVR のバージョンが 1.0 以前か以降かで判断しています。ただし DK1 / DK2 用 (LibOVR 0.8) のサポートは、今後は継続しない可能性があります。
+すべての `#include "GgApp.h"` の前に、`#define GG_USE_OPENXR` を置いてください。
 
 ```cpp
 // ウィンドウ関連の処理
-#define GG_USE_OCULUS_RIFT
+#define GG_USE_OPENXR
 #include "GgApp.h"
 ```
 
-GgApp.h の中の `//#define GG_USE_OCULUS_RIFT` のコメント (`//`) を削除してください。
+あるいは、GgApp.h の中の `//#define GG_USE_OPENXR` のコメント (`//`) を削除してください。
 
 ```cpp
-// Oculus Rift を使うなら
-#define GG_USE_OCULUS_RIFT
+// OpenXR を使うなら
+#define GG_USE_OPENXR
 ```
 
-実際の使い方は、「[Oculus Rift に図形を表示するプログラムを C++ で作る](http://marina.sys.wakayama-u.ac.jp/~tokoi/?date=20190602)」を参考にしてください。この記事では以前の補助プログラムを使って解説していますが、`GgApp::Window` クラスの使い方は変わりません (以前の補助プログラムでは GgApplication クラス内に置いていました)。
+OpenXR を使った VR アプリケーションの詳しい書き方、透視投影行列・ビュー変換行列の取得方法、コントローラーの姿勢取得やボタン入力、ハプティクス振動などの機能については、[OPENXR.md](OPENXR.md) を参照してください。
 
 ### Dear ImGui を使う場合
 

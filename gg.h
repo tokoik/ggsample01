@@ -1651,7 +1651,7 @@ namespace gg
     /// @param v GgVector 型のベクトル.
     /// @return オブジェクトの各要素と v の各要素の要素ごとの和のオブジェクト.
     ///
-    inline GgVector operator+(const GgVector& v) const
+    constexpr GgVector operator+(const GgVector& v) const noexcept
     {
       return GgVector{ (*this)[0] + v[0], (*this)[1] + v[1], (*this)[2] + v[2], (*this)[3] + v[3] };
     }
@@ -1662,9 +1662,9 @@ namespace gg
     /// @param c GLfloat 型の値.
     /// @return a の各要素に b を足した和のオブジェクト.
     ///
-    inline GgVector operator+(GLfloat c) const
+    constexpr GgVector operator+(GLfloat c) const noexcept
     {
-      return *this + GgVector(c);
+      return GgVector{ (*this)[0] + c, (*this)[1] + c, (*this)[2] + c, (*this)[3] + c };
     }
 
     ///
@@ -1673,9 +1673,12 @@ namespace gg
     /// @param v GgVector 型の変数.
     /// @return オブジェクトの各要素に v の各要素をそれぞれ加算したオブジェクトの参照.
     ///
-    inline GgVector& operator+=(const GgVector& v)
+    constexpr GgVector& operator+=(const GgVector& v) noexcept
     {
-      *this = *this + v;
+      (*this)[0] += v[0];
+      (*this)[1] += v[1];
+      (*this)[2] += v[2];
+      (*this)[3] += v[3];
       return *this;
     }
 
@@ -1685,9 +1688,12 @@ namespace gg
     /// @param c GLfloat 型の値.
     /// @return オブジェクトの各要素に c を足したオブジェクトの参照.
     ///
-    inline GgVector& operator+=(GLfloat c)
+    constexpr GgVector& operator+=(GLfloat c) noexcept
     {
-      *this = *this + c;
+      (*this)[0] += c;
+      (*this)[1] += c;
+      (*this)[2] += c;
+      (*this)[3] += c;
       return *this;
     }
 
@@ -1697,7 +1703,7 @@ namespace gg
     /// @param v GgVector 型の変数.
     /// @return オブジェクトの各要素と v の各要素の要素ごとの差のオブジェクト.
     ///
-    inline GgVector operator-(const GgVector& v) const
+    constexpr GgVector operator-(const GgVector& v) const noexcept
     {
       return GgVector{ (*this)[0] - v[0], (*this)[1] - v[1], (*this)[2] - v[2], (*this)[3] - v[3] };
     }
@@ -1708,9 +1714,9 @@ namespace gg
     /// @param c GLfloat 型の変数.
     /// @return オブジェクトの各要素から c を引いたオブジェクト.
     ///
-    inline GgVector operator-(GLfloat c) const
+    constexpr GgVector operator-(GLfloat c) const noexcept
     {
-      return *this - GgVector(c);
+      return GgVector{ (*this)[0] - c, (*this)[1] - c, (*this)[2] - c, (*this)[3] - c };
     }
 
     ///
@@ -1719,9 +1725,12 @@ namespace gg
     /// @param v GgVector 型の変数.
     /// @return オブジェクトの各要素に v の各要素をそれぞれ減算したオブジェクトの参照.
     ///
-    inline GgVector& operator-=(const GgVector& v)
+    constexpr GgVector& operator-=(const GgVector& v) noexcept
     {
-      *this = *this - v;
+      (*this)[0] -= v[0];
+      (*this)[1] -= v[1];
+      (*this)[2] -= v[2];
+      (*this)[3] -= v[3];
       return *this;
     }
 
@@ -1731,9 +1740,12 @@ namespace gg
     /// @param c GLfloat 型の変数.
     /// @return オブジェクトの各要素から c を引いたオブジェクトの参照.
     ///
-    inline GgVector& operator-=(GLfloat c)
+    constexpr GgVector& operator-=(GLfloat c) noexcept
     {
-      *this = *this - c;
+      (*this)[0] -= c;
+      (*this)[1] -= c;
+      (*this)[2] -= c;
+      (*this)[3] -= c;
       return *this;
     }
 
@@ -1743,7 +1755,7 @@ namespace gg
     /// @param v GgVector 型の変数.
     /// @return オブジェクトの各要素と v の各要素の要素ごとの積のオブジェクト.
     ///
-    inline GgVector operator*(const GgVector& v) const
+    constexpr GgVector operator*(const GgVector& v) const noexcept
     {
       return GgVector{ (*this)[0] * v[0], (*this)[1] * v[1], (*this)[2] * v[2], (*this)[3] * v[3] };
     }
@@ -1754,9 +1766,9 @@ namespace gg
     /// @param c GLfloat 型の変数.
     /// @return オブジェクトの各要素に c を乗じたオブジェクト.
     ///
-    inline GgVector operator*(GLfloat c) const
+    constexpr GgVector operator*(GLfloat c) const noexcept
     {
-      return *this * GgVector(c);
+      return GgVector{ (*this)[0] * c, (*this)[1] * c, (*this)[2] * c, (*this)[3] * c };
     }
 
     ///
@@ -1764,21 +1776,28 @@ namespace gg
     ///
     /// @param v GgVector 型の変数.
     /// @return オブジェクトの各要素に v の各要素をそれぞれ乗算したオブジェクトの参照.
-    inline GgVector& operator*=(const GgVector& v)
+    ///
+    constexpr GgVector& operator*=(const GgVector& v) noexcept
     {
-      *this = *this * v;
+      (*this)[0] *= v[0];
+      (*this)[1] *= v[1];
+      (*this)[2] *= v[2];
+      (*this)[3] *= v[3];
       return *this;
     }
 
     ///
     /// GgVector 型の各要素にスカラーを乗じる.
     ///
-    /// @param c GgVector 型のベクトル.
+    /// @param c GLfloat 型の値.
     /// @return オブジェクトの各要素に c を乗じたオブジェクトの参照.
     ///
-    inline GgVector& operator*=(GLfloat c)
+    constexpr GgVector& operator*=(GLfloat c) noexcept
     {
-      *this = *this * c;
+      (*this)[0] *= c;
+      (*this)[1] *= c;
+      (*this)[2] *= c;
+      (*this)[3] *= c;
       return *this;
     }
 
@@ -1788,7 +1807,7 @@ namespace gg
     /// @param v GgVector 型の変数.
     /// @return オブジェクトの各要素を v の各要素で要素ごとに割った結果のオブジェクト.
     ///
-    inline GgVector operator/(const GgVector& v) const
+    constexpr GgVector operator/(const GgVector& v) const noexcept
     {
       return GgVector{ (*this)[0] / v[0], (*this)[1] / v[1], (*this)[2] / v[2], (*this)[3] / v[3] };
     }
@@ -1799,20 +1818,23 @@ namespace gg
     /// @param c GLfloat 型の変数.
     /// @return オブジェクトの各要素を c で割ったオブジェクト.
     ///
-    inline GgVector operator/(GLfloat c) const
+    constexpr GgVector operator/(GLfloat c) const noexcept
     {
-      return *this / GgVector(c);
+      return GgVector{ (*this)[0] / c, (*this)[1] / c, (*this)[2] / c, (*this)[3] / c };
     }
 
     ///
     /// GgVector 型を除算する.
     ///
     /// @param v GgVector 型の変数.
-    /// @return オブジェクトの各要素に v の各要素をそれぞれ乗算したオブジェクトの参照.
+    /// @return オブジェクトの各要素を v の各要素でそれぞれ除算したオブジェクトの参照.
     ///
-    inline GgVector& operator/=(GgVector& v)
+    constexpr GgVector& operator/=(const GgVector& v) noexcept
     {
-      *this = *this / v;
+      (*this)[0] /= v[0];
+      (*this)[1] /= v[1];
+      (*this)[2] /= v[2];
+      (*this)[3] /= v[3];
       return *this;
     }
 
@@ -1820,11 +1842,14 @@ namespace gg
     /// GgVector 型の各要素をスカラーで割る.
     ///
     /// @param c GLfloat 型の変数.
-    /// @return オブジェクトの各要素を c で割ったオブジェクトの参照.
+    /// @return オブジェクトの各要素から c で割ったオブジェクトの参照.
     ///
-    inline GgVector& operator/=(GLfloat c)
+    constexpr GgVector& operator/=(GLfloat c) noexcept
     {
-      *this = *this / c;
+      (*this)[0] /= c;
+      (*this)[1] /= c;
+      (*this)[2] /= c;
+      (*this)[3] /= c;
       return *this;
     }
 
@@ -1842,7 +1867,7 @@ namespace gg
     ///
     /// GgVector 型の 3 要素の長さ.
     ///
-    /// @return オブジェクトの 4 要素の長さ.
+    /// @return オブジェクトの 3 要素の長さ.
     ///
     inline GLfloat length3() const
     {
@@ -1861,7 +1886,7 @@ namespace gg
     }
 
     ///
-    /// GgVector 型の 4 要素の正規化.
+    /// GgVector 型の 3 要素の正規化.
     ///
     /// @return GLfloat 型の 4 要素の配列変数.
     ///
@@ -2013,7 +2038,7 @@ namespace gg
   ///
   inline GLfloat ggDot3(const GgVector& a, const GgVector& b)
   {
-    return ggDot3(a.data(), b.data());;
+    return ggDot3(a.data(), b.data());
   }
 
   ///
@@ -2252,7 +2277,7 @@ namespace gg
     /// 変換行列に別の変換行列を加算した値を返す.
     ///
     /// @param m GgMatrix 型の変換行列.
-    /// @return 変換行列に a を加えた GgMatrix 型の変換行列.
+    /// @return 変換行列に m を加えた GgMatrix 型の変換行列.
     ///
     GgMatrix operator+(const GgMatrix& m) const
     {
@@ -2346,7 +2371,7 @@ namespace gg
     /// 変換行列に別の変換行列を乗算した値を返す.
     ///
     /// @param m GgMatrix 型の変換行列.
-    /// @return 変換行列に a を乗じた GgMatrix 型の変換行列.
+    /// @return 変換行列に m を乗じた GgMatrix 型の変換行列.
     ///
     GgMatrix operator*(const GgMatrix& m) const
     {
@@ -2394,7 +2419,7 @@ namespace gg
     /// 変換行列を変換行列で除算した値を返す.
     ///
     /// @param m GgMatrix 型の変換行列.
-    /// @return 変換行列を a で割った GgMatrix 型の変換行列.
+    /// @return 変換行列を m で割った GgMatrix 型の変換行列.
     ///
     GgMatrix operator/(const GgMatrix& m) const
     {
@@ -2636,7 +2661,7 @@ namespace gg
       GLfloat zNear, GLfloat zFar);
 
     ///
-    /// 透視透視投影変換行列を格納する.
+    /// 透視投影変換行列を格納する.
     ///
     /// @param left ウィンドウの左端の位置.
     /// @param right ウィンドウの右端の位置.
@@ -2704,7 +2729,7 @@ namespace gg
     /// 法線変換行列を格納する.
     ///
     /// @param a GLfloat 型の 16 要素の変換行列.
-    /// @return 設定した m の法線変換行列.
+    /// @return 設定した a の法線変換行列.
     ///
     GgMatrix& loadNormal(const GLfloat* a);
 
@@ -3120,7 +3145,7 @@ namespace gg
   {
     GgMatrix t;
     return t.loadIdentity();
-  };
+  }
 
   ///
   /// 平行移動の変換行列を返す.
@@ -3381,7 +3406,7 @@ namespace gg
   }
 
   ///
-  /// 透視透視投影変換行列を返す.
+  /// 透視投影変換行列を返す.
   ///
   /// @param left ウィンドウの左端の位置.
   /// @param right ウィンドウの右端の位置.
@@ -4032,11 +4057,11 @@ namespace gg
     }
     GgQuaternion operator-(const GLfloat* a) const
     {
-      return add(a);
+      return subtract(a);
     }
     GgQuaternion operator-(const GgVector& v) const
     {
-      return add(v);
+      return subtract(v);
     }
     GgQuaternion operator-(const GgQuaternion& q) const
     {
@@ -4082,7 +4107,7 @@ namespace gg
     ///
     /// 回転の変換行列 m を表す四元数を格納する.
     ///
-    /// @param m Ggmatrix 型の変換行列.
+    /// @param m GgMatrix 型の変換行列.
     /// @return m による回転の変換に相当する四元数.
     ///
     GgQuaternion& loadMatrix(const GgMatrix& m)
@@ -5455,6 +5480,102 @@ namespace gg
       GLenum internal = 0,
       GLenum wrap = GL_CLAMP_TO_EDGE
     );
+
+    ///
+    /// オブジェクトが有効かどうか調べる.
+    ///
+    /// @return オブジェクトが有効なら true.
+    ///
+    explicit operator bool() const noexcept
+    {
+      return texture != nullptr;
+    }
+
+    ///
+    /// オブジェクトが有効かどうかの結果を反転する.
+    ///
+    /// @return オブジェクトが有効なら false, 無効なら true.
+    ///
+    bool operator!() const noexcept
+    {
+      return !static_cast<bool>(*this);
+    }
+
+    ///
+    /// テクスチャオブジェクトを取り出す.
+    ///
+    /// @return GgTexture オブジェクトのポインタ.
+    ///
+    const GgTexture* get() const
+    {
+      return texture.get();
+    }
+
+    ///
+    /// 使用しているテクスチャのテクスチャ名を得る.
+    ///
+    /// @return テクスチャ名.
+    ///
+    GLuint getTexture() const
+    {
+      return texture ? texture->getTexture() : 0;
+    }
+
+    ///
+    /// 使用しているテクスチャの横の画素数を取り出す.
+    ///
+    /// @return テクスチャの横の画素数.
+    ///
+    GLsizei getWidth() const
+    {
+      return texture ? texture->getWidth() : 0;
+    }
+
+    ///
+    /// 使用しているテクスチャの縦の画素数を取り出す.
+    ///
+    /// @return テクスチャの縦の画素数.
+    ///
+    GLsizei getHeight() const
+    {
+      return texture ? texture->getHeight() : 0;
+    }
+
+    ///
+    /// 使用しているテクスチャのサイズを取り出す.
+    ///
+    /// @param size テクスチャのサイズを格納する GLsizei 型の 2 要素の配列変数.
+    ///
+    void getSize(GLsizei* size) const
+    {
+      if (texture) texture->getSize(size);
+    }
+
+    ///
+    /// 使用しているテクスチャのサイズを取り出す.
+    ///
+    /// @return テクスチャのサイズを格納した配列へのポインタ.
+    ///
+    const GLsizei* getSize() const
+    {
+      return texture ? texture->getSize() : nullptr;
+    }
+
+    ///
+    /// テクスチャの使用開始 (このテクスチャを使用する際に呼び出す).
+    ///
+    void bind() const
+    {
+      if (texture) texture->bind();
+    }
+
+    ///
+    /// テクスチャの使用終了 (このテクスチャを使用しなくなったら呼び出す).
+    ///
+    void unbind() const
+    {
+      if (texture) texture->unbind();
+    }
   };
 
   ///
@@ -5565,6 +5686,102 @@ namespace gg
       GLfloat nz = 1.0f,
       GLenum internal = GL_RGBA
     );
+
+    ///
+    /// オブジェクトが有効かどうか調べる.
+    ///
+    /// @return オブジェクトが有効なら true.
+    ///
+    explicit operator bool() const noexcept
+    {
+      return texture != nullptr;
+    }
+
+    ///
+    /// オブジェクトが有効かどうかの結果を反転する.
+    ///
+    /// @return オブジェクトが有効なら false, 無効なら true.
+    ///
+    bool operator!() const noexcept
+    {
+      return !static_cast<bool>(*this);
+    }
+
+    ///
+    /// テクスチャオブジェクトを取り出す.
+    ///
+    /// @return GgTexture オブジェクトのポインタ.
+    ///
+    const GgTexture* get() const
+    {
+      return texture.get();
+    }
+
+    ///
+    /// 使用しているテクスチャのテクスチャ名を得る.
+    ///
+    /// @return テクスチャ名.
+    ///
+    GLuint getTexture() const
+    {
+      return texture ? texture->getTexture() : 0;
+    }
+
+    ///
+    /// 使用しているテクスチャの横の画素数を取り出す.
+    ///
+    /// @return テクスチャの横の画素数.
+    ///
+    GLsizei getWidth() const
+    {
+      return texture ? texture->getWidth() : 0;
+    }
+
+    ///
+    /// 使用しているテクスチャの縦の画素数を取り出す.
+    ///
+    /// @return テクスチャの縦の画素数.
+    ///
+    GLsizei getHeight() const
+    {
+      return texture ? texture->getHeight() : 0;
+    }
+
+    ///
+    /// 使用しているテクスチャのサイズを取り出す.
+    ///
+    /// @param size テクスチャのサイズを格納する GLsizei 型の 2 要素の配列変数.
+    ///
+    void getSize(GLsizei* size) const
+    {
+      if (texture) texture->getSize(size);
+    }
+
+    ///
+    /// 使用しているテクスチャのサイズを取り出す.
+    ///
+    /// @return テクスチャのサイズを格納した配列へのポインタ.
+    ///
+    const GLsizei* getSize() const
+    {
+      return texture ? texture->getSize() : nullptr;
+    }
+
+    ///
+    /// テクスチャの使用開始 (このテクスチャを使用する際に呼び出す).
+    ///
+    void bind() const
+    {
+      if (texture) texture->bind();
+    }
+
+    ///
+    /// テクスチャの使用終了 (このテクスチャを使用しなくなったら呼び出す).
+    ///
+    void unbind() const
+    {
+      if (texture) texture->unbind();
+    }
   };
 
   ///
@@ -7812,11 +8029,11 @@ namespace gg
       ) const;
 
       ///
-      /// 三角形に単純な陰影付けを行うシェーダが参照する光源データ：光源の強度の環境光成分を設定する.
+      /// 三角形に単純な陰影付けを行うシェーダが参照する材質データ：環境光に対する反射係数を設定する.
       ///
-      /// @param ambient 光源の強度の環境光成分を格納した GgVector 型の変数.
-      /// @param first 値を設定する光源データの最初の番号, デフォルトは 0.
-      /// @param count 値を設定する光源データの数, デフォルトは 1.
+      /// @param ambient 環境光に対する反射係数を格納した GgVector 型の変数.
+      /// @param first 値を設定する材質データの最初の番号, デフォルトは 0.
+      /// @param count 値を設定する材質データの数, デフォルトは 1.
       ///
       void loadAmbient(const GgVector& ambient, GLint first = 0, GLsizei count = 1) const;
 
@@ -7849,11 +8066,11 @@ namespace gg
       ) const;
 
       ///
-      /// 三角形に単純な陰影付けを行うシェーダが参照する光源データ：光源の強度の拡散反射光成分を設定する.
+      /// 三角形に単純な陰影付けを行うシェーダが参照する材質データ：拡散反射係数を設定する.
       ///
-      /// @param diffuse 光源の強度の拡散反射光成分を格納した GgVector 型の変数.
-      /// @param first 値を設定する光源データの最初の番号, デフォルトは 0.
-      /// @param count 値を設定する光源データの数, デフォルトは 1.
+      /// @param diffuse 拡散反射係数を格納した GgVector 型の変数.
+      /// @param first 値を設定する材質データの最初の番号, デフォルトは 0.
+      /// @param count 値を設定する材質データの数, デフォルトは 1.
       ///
       void loadDiffuse(const GgVector& diffuse, GLint first = 0, GLsizei count = 1) const;
 
@@ -7889,8 +8106,8 @@ namespace gg
       /// 三角形に単純な陰影付けを行うシェーダが参照する材質データ：環境光に対する反射係数と拡散反射係数を設定する.
       ///
       /// @param color 環境光に対する反射係数と拡散反射係数を格納した GgVector 型の変数.
-      /// @param first 値を設定する光源データの最初の番号, デフォルトは 0.
-      /// @param count 値を設定する光源データの数, デフォルトは 1.
+      /// @param first 値を設定する材質データの最初の番号, デフォルトは 0.
+      /// @param count 値を設定する材質データの数, デフォルトは 1.
       ///
       void loadAmbientAndDiffuse(const GgVector& color, GLint first = 0, GLsizei count = 1) const;
 
@@ -7922,8 +8139,8 @@ namespace gg
       /// 三角形に単純な陰影付けを行うシェーダが参照する材質データ：鏡面反射係数を設定する.
       ///
       /// @param specular 鏡面反射係数を格納した GgVector 型の変数.
-      /// @param first 値を設定する光源データの最初の番号, デフォルトは 0.
-      /// @param count 値を設定する光源データの数, デフォルトは 1.
+      /// @param first 値を設定する材質データの最初の番号, デフォルトは 0.
+      /// @param count 値を設定する材質データの数, デフォルトは 1.
       ///
       void loadSpecular(const GgVector& specular, GLint first = 0, GLsizei count = 1) const;
 
@@ -7961,7 +8178,7 @@ namespace gg
       ///
       /// 材質を設定する.
       ///
-      /// @param material 光源の特性の GgSimpleShader::Material 構造体のポインタ.
+      /// @param material 材質の特性の GgSimpleShader::Material 構造体のポインタ.
       /// @param first 値を設定する材質データの最初の番号, デフォルトは 0.
       /// @param count 値を設定する材質データの数, デフォルトは 1.
       ///
@@ -7973,7 +8190,7 @@ namespace gg
       ///
       /// 材質を設定する.
       ///
-      /// @param material 光源の特性の GgSimpleShader::Material 構造体.
+      /// @param material 材質の特性の GgSimpleShader::Material 構造体.
       /// @param first 値を設定する材質データの最初の番号, デフォルトは 0.
       /// @param count 値を設定する材質データの数, デフォルトは 1.
       ///
@@ -8229,7 +8446,7 @@ namespace gg
   );
 
   ///
-  /// Wavefront OBJ 形式のファイル (Arrays 形式).
+  /// Wavefront OBJ 形式のファイル (Elements 形式).
   ///
   class GgSimpleObj
   {

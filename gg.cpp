@@ -3258,10 +3258,25 @@ void gg::GgQuaternion::toQuaternion(GLfloat* q, const GLfloat* a) const
 //
 void gg::GgQuaternion::slerp(GLfloat* p, const GLfloat* q, const GLfloat* r, GLfloat t) const
 {
-  const auto qr{ ggDot3(q, r) };
+  auto qr{ ggDot4(q, r) };
+  GLfloat s[4]{ r[0], r[1], r[2], r[3] };
+
+  // 内積が負なら最短経路を通るように符号を反転する
+  if (qr < 0.0f)
+  {
+    qr = -qr;
+    s[0] = -s[0];
+    s[1] = -s[1];
+    s[2] = -s[2];
+    s[3] = -s[3];
+  }
+
+  // 浮動小数点誤差で 1.0f を超える場合をクランプ
+  if (qr > 1.0f) qr = 1.0f;
+
   const auto ss{ 1.0f - qr * qr };
 
-  if (ss == 0.0f)
+  if (ss <= 0.0f)
   {
     if (p != q)
     {
@@ -3279,10 +3294,10 @@ void gg::GgQuaternion::slerp(GLfloat* p, const GLfloat* q, const GLfloat* r, GLf
     const auto t1{ sinf(pt) / sp };
     const auto t0{ sinf(ph - pt) / sp };
 
-    p[0] = q[0] * t0 + r[0] * t1;
-    p[1] = q[1] * t0 + r[1] * t1;
-    p[2] = q[2] * t0 + r[2] * t1;
-    p[3] = q[3] * t0 + r[3] * t1;
+    p[0] = q[0] * t0 + s[0] * t1;
+    p[1] = q[1] * t0 + s[1] * t1;
+    p[2] = q[2] * t0 + s[2] * t1;
+    p[3] = q[3] * t0 + s[3] * t1;
   }
 }
 
@@ -3599,7 +3614,7 @@ bool gg::ggSaveTga(
   file.write(footer, sizeof footer);
 
   // データの書き込みに失敗していなければ true を返す
-  return file.bad() != false;
+  return !file.bad();
 }
 
 //
@@ -3687,31 +3702,38 @@ bool gg::ggReadImage(
 
   // 深度
   const auto depth{ header[16] / 8 };
-  switch (depth)
+  if (pFormat)
   {
-  case 1:
-    *pFormat = GL_RED;
-    break;
-  case 2:
-    *pFormat = GL_RG;
-    break;
-  case 3:
-    *pFormat = GL_BGR;
-    break;
-  case 4:
-    *pFormat = GL_BGRA;
-    break;
-  default:
-    // 取り扱えないフォーマットだったら戻る
-    return false;
+    GLenum format;
+    switch (depth)
+    {
+    case 1:
+      format = GL_RED;
+      break;
+    case 2:
+      format = GL_RG;
+      break;
+    case 3:
+      format = GL_BGR;
+      break;
+    case 4:
+      format = GL_BGRA;
+      break;
+    default:
+      // 取り扱えないフォーマットだったら戻る
+      return false;
+    }
+    *pFormat = format;
   }
 
   // 画像の縦横の画素数
-  *pWidth = header[13] << 8 | header[12];
-  *pHeight = header[15] << 8 | header[14];
+  const auto width{ static_cast<GLsizei>(header[13] << 8 | header[12]) };
+  if (pWidth) *pWidth = width;
+  const auto height{ static_cast<GLsizei>(header[15] << 8 | header[14]) };
+  if (pHeight) *pHeight = height;
 
   // データサイズ
-  const auto size{ *pWidth * *pHeight * depth };
+  const auto size{ width * height * depth };
 
   // サイズが小さすぎたら戻る
   if (size < 2) return false;
@@ -3756,7 +3778,7 @@ bool gg::ggReadImage(
   }
 
   // 読み込みに失敗していなければ true を返す
-  return file.bad() != false;
+  return !file.bad();
 }
 
 //
@@ -3804,7 +3826,7 @@ GLuint gg::ggLoadTexture(
 
   if (swizzle)
   {
-    // テクスチャのサンプリング時に赤とと青を入れ替える
+    // テクスチャのサンプリング時に赤と青を入れ替える
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_SWIZZLE_R, GL_BLUE);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_SWIZZLE_B, GL_RED);
   }
@@ -4078,6 +4100,9 @@ void gg::GgNormalTexture::load(
 
   // 法線マップを作成する
   ggCreateNormalMap(hmap.data(), width, height, format, nz, internal, nmap);
+
+  // テクスチャを作成する
+  texture = std::make_shared<GgTexture>(nmap.data(), width, height, GL_RGBA, GL_FLOAT, internal, GL_REPEAT);
 }
 
 /// @cond
@@ -5176,7 +5201,8 @@ void gg::GgElements::draw(GLint first, GLsizei count) const
 std::shared_ptr<gg::GgPoints> gg::ggPointsCube(GLsizei count, GLfloat length, GLfloat cx, GLfloat cy, GLfloat cz)
 {
   // メモリを確保する
-  std::vector<GgVector> pos(count);
+  std::vector<GgVector> pos;
+  pos.reserve(count);
 
   // 点を生成する
   for (GLsizei v = 0; v < count; ++v)
@@ -5203,7 +5229,8 @@ std::shared_ptr<gg::GgPoints> gg::ggPointsSphere(GLsizei count, GLfloat radius,
   GLfloat cx, GLfloat cy, GLfloat cz)
 {
   // メモリを確保する
-  std::vector<GgVector> pos(count);
+  std::vector<GgVector> pos;
+  pos.reserve(count);
 
   // 点を生成する
   for (GLsizei v = 0; v < count; ++v)
@@ -5366,7 +5393,7 @@ std::shared_ptr<gg::GgElements> gg::ggElementsMesh(GLuint slices, GLuint stacks,
       const gg::GgVector tpos{ pos[k][0], pos[k][1], pos[k][2], 1.0f };
 
       // 頂点属性の保存
-      vert.emplace_back(tpos, tnorm);
+      vert[k] = gg::GgVertex{ tpos, tnorm };
     }
   }
 
@@ -5386,7 +5413,7 @@ std::shared_ptr<gg::GgElements> gg::ggElementsMesh(GLuint slices, GLuint stacks,
       face.emplace_back(k + slices + 2);
       face.emplace_back(k + 1);
 
-      // マスのお下半分の三角形
+      // マスの下半分の三角形
       face.emplace_back(k);
       face.emplace_back(k + slices + 1);
       face.emplace_back(k + slices + 2);
