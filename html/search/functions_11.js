@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['unbind_0',['unbind',['../classgg_1_1GgTexture.html#a069450f8066f3c57ae9b4a2633ea3da8',1,'gg::GgTexture::unbind()'],['../classgg_1_1GgBuffer.html#a83a3b8f42aceb85122012bf465ee7ff2',1,'gg::GgBuffer::unbind()'],['../classgg_1_1GgUniformBuffer.html#a4152f1f30958abd2af56ffb27fa8de04',1,'gg::GgUniformBuffer::unbind()']]],
+  ['unbind_0',['unbind',['../classgg_1_1GgTexture.html#a069450f8066f3c57ae9b4a2633ea3da8',1,'gg::GgTexture::unbind()'],['../classgg_1_1GgColorTexture.html#ac0ff431b6fb95af5aae485a6c42ff4fa',1,'gg::GgColorTexture::unbind()'],['../classgg_1_1GgNormalTexture.html#ab9055260ab0d8307483bdcf8bfa37248',1,'gg::GgNormalTexture::unbind()'],['../classgg_1_1GgBuffer.html#a83a3b8f42aceb85122012bf465ee7ff2',1,'gg::GgBuffer::unbind()'],['../classgg_1_1GgUniformBuffer.html#a4152f1f30958abd2af56ffb27fa8de04',1,'gg::GgUniformBuffer::unbind()']]],
   ['unmap_1',['unmap',['../classgg_1_1GgBuffer.html#a1cccc78c9f67538ef7bdcffa3e292d2a',1,'gg::GgBuffer::unmap()'],['../classgg_1_1GgUniformBuffer.html#abea659ba10d6fae6677463b6d0718197',1,'gg::GgUniformBuffer::unmap()']]],
   ['unuse_2',['unuse',['../classgg_1_1GgShader.html#a360553a2c8e550c7b59c478995310163',1,'gg::GgShader::unuse()'],['../classgg_1_1GgPointShader.html#a72f2255985115d2bd171eaf0b3b6948e',1,'gg::GgPointShader::unuse()']]],
   ['updateviewport_3',['updateViewport',['../classGgApp_1_1Window.html#a6b349c4887749cd9e5c6e655a0eea865',1,'GgApp::Window']]],

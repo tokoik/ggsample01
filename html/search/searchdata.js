@@ -1,9 +1,9 @@
 var indexSectionsWithContent =
 {
-  0: "_abcdefghilmnoprstuw~のをゲ宿版補",
+  0: "0123456_abcdefghilmnoprstuvwxz~とのをウカクゲコスフプマラリ主初動参型基実宿床必旧最概版目補",
   1: "cglmw",
   2: "g",
-  3: "cgmpr",
+  3: "cgmopr",
   4: "_abcdefgilmnoprstuw~",
   5: "adgnps",
   6: "p",
@@ -11,7 +11,7 @@ var indexSectionsWithContent =
   8: "lm",
   9: "ms",
   10: "cghp",
-  11: "dghiorのをゲ宿版補"
+  11: "0123456abcdefghilmopstuvwxzとのをウカクゲコスフプマラリ主初動参型基実宿床必旧最概版目補"
 };
 
 var indexSectionNames =

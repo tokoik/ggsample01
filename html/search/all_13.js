@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['window_0',['Window',['../classGgApp_1_1Window.html',1,'GgApp::Window'],['../classGgApp_1_1Window.html#a127c516045e716c271524fa45998cbc0',1,'GgApp::Window::Window(const std::string &amp;title=&quot;GLFW Window&quot;, int width=640, int height=480, int fullscreen=0, GLFWwindow *share=nullptr)'],['../classGgApp_1_1Window.html#ae5d861cc5384a9345370038451126247',1,'GgApp::Window::Window(const Window &amp;w)=delete'],['../classGgApp_1_1Window.html#ae00316789fab8d4d5d9f824a3569df10',1,'GgApp::Window::Window(Window &amp;&amp;w)=default']]]
+  ['norm_0',['norm',['../classgg_1_1GgQuaternion.html#a7948622a1020c4b8cff6a699cbea8696',1,'gg::GgQuaternion']]],
+  ['normal_1',['normal',['../structgg_1_1GgVertex.html#a33f0042dbe503f3d31dddd2dd5af50f9',1,'gg::GgVertex::normal'],['../classgg_1_1GgMatrix.html#a738782ec492a8ec7927de80c1de4c820',1,'gg::GgMatrix::normal()']]],
+  ['normalize_2',['normalize',['../classgg_1_1GgQuaternion.html#a8667e065b18d857126f5481d0be8d527',1,'gg::GgQuaternion']]],
+  ['normalize3_3',['normalize3',['../classgg_1_1GgVector.html#a5bac9976a7fe4be4a0e69c974153d745',1,'gg::GgVector']]],
+  ['normalize4_4',['normalize4',['../classgg_1_1GgVector.html#ac71838f77dde35fdc627b96e6807462f',1,'gg::GgVector']]]
 ];

@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['補助プログラムのドキュメント_0',['補助プログラムのドキュメント',['../md_README.html#autotoc_md6',1,'']]],
-  ['補助プログラムの使い方_1',['補助プログラムの使い方',['../md_README.html#autotoc_md7',1,'']]],
-  ['補足_2',['補足',['../md_README.html#autotoc_md4',1,'']]]
+  ['eye_0',['eye',['../md_OPENXR.html#autotoc_md20',1,'&lt;span class=&quot;tt&quot;&gt;void commit(int eye)&lt;/span&gt;'],['../md_OPENXR.html#autotoc_md18',1,'&lt;span class=&quot;tt&quot;&gt;void select(int eye)&lt;/span&gt;']]],
+  ['eye_200_20const_1',['eye 0 const',['../md_OPENXR.html#autotoc_md32',1,'&lt;span class=&quot;tt&quot;&gt;GLfloat getAspect(int eye = 0) const&lt;/span&gt;'],['../md_OPENXR.html#autotoc_md31',1,'&lt;span class=&quot;tt&quot;&gt;GLsizei getWidth(int eye = 0) const&lt;/span&gt; / &lt;span class=&quot;tt&quot;&gt;GLsizei getHeight(int eye = 0) const&lt;/span&gt;']]],
+  ['eye_200_20const_20glsizei_20getheight_20int_20eye_200_20const_2',['&lt;span class=&quot;tt&quot;&gt;GLsizei getWidth(int eye = 0) const&lt;/span&gt; / &lt;span class=&quot;tt&quot;&gt;GLsizei getHeight(int eye = 0) const&lt;/span&gt;',['../md_OPENXR.html#autotoc_md31',1,'']]],
+  ['eye_20const_3',['eye const',['../md_OPENXR.html#autotoc_md29',1,'&lt;span class=&quot;tt&quot;&gt;const XrFovf&amp;amp; getFov(int eye) const&lt;/span&gt;'],['../md_OPENXR.html#autotoc_md30',1,'&lt;span class=&quot;tt&quot;&gt;const XrPosef&amp;amp; getPose(int eye) const&lt;/span&gt;'],['../md_OPENXR.html#autotoc_md26',1,'&lt;span class=&quot;tt&quot;&gt;GgMatrix getPoseMatrix(int eye) const&lt;/span&gt;'],['../md_OPENXR.html#autotoc_md25',1,'&lt;span class=&quot;tt&quot;&gt;GgMatrix getViewMatrix(int eye) const&lt;/span&gt;'],['../md_OPENXR.html#autotoc_md28',1,'&lt;span class=&quot;tt&quot;&gt;GgQuaternion getOrientation(int eye) const&lt;/span&gt;'],['../md_OPENXR.html#autotoc_md27',1,'&lt;span class=&quot;tt&quot;&gt;GgVector getPosition(int eye) const&lt;/span&gt;']]],
+  ['eye_20glfloat_20screen_20glfloat_20position_20glfloat_20orientation_4',['&lt;span class=&quot;tt&quot;&gt;void select(int eye, GLfloat* screen, GLfloat* position, GLfloat* orientation)&lt;/span&gt;',['../md_OPENXR.html#autotoc_md19',1,'']]],
+  ['eye_20glfloat_20znear_200_201f_20glfloat_20zfar_20100_200f_20const_5',['&lt;span class=&quot;tt&quot;&gt;GgMatrix getProjectionMatrix(int eye, GLfloat zNear = 0.1f, GLfloat zFar = 100.0f) const&lt;/span&gt;',['../md_OPENXR.html#autotoc_md24',1,'']]]
 ];

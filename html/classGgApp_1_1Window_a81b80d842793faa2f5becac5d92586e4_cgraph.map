@@ -1,0 +1,10 @@
+<map id="GgApp::Window::getAltArrow" name="GgApp::Window::getAltArrow">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,198,57"/>
+<area shape="rect" id="Node000002" href="$classGgApp_1_1Window.html#ac41a2596b28817ae5f807af75d451121" title=" " alt="" coords="246,5,447,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,31,233,30,228,31,199,37"/>
+<area shape="rect" id="Node000004" href="$classGgApp_1_1Window.html#abf24b249cfff5f6df4f05e3454ef5822" title=" " alt="" coords="246,56,447,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="198,51,233,57,228,57,198,57"/>
+<area shape="rect" id="Node000003" href="$classGgApp_1_1Window.html#affa358bdcc627505e042577790c8444a" title=" " alt="" coords="495,31,671,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="448,27,482,33,477,33,448,32"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="447,56,477,55,482,55,448,61"/>
+</map>

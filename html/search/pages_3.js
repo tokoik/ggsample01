@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['imconfig_20h_20の変更点_0',['imconfig.h の変更点',['../md_README.html#autotoc_md10',1,'']]],
-  ['imgui_20を使う場合_1',['Dear ImGui を使う場合',['../md_README.html#autotoc_md9',1,'']]]
+  ['3_20スティック入力による移動とトリガー入力_0',['4.3 スティック入力による移動とトリガー入力',['../md_OPENXR.html#autotoc_md60',1,'']]],
+  ['3_20api_20リファレンス_1',['3. API リファレンス',['../md_OPENXR.html#autotoc_md9',1,'']]]
 ];

@@ -97,73 +97,71 @@ $(function(){initNavTree('Config_8h_source.html','',''); });
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// 補助プログラム</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="gg_8h.html">gg.h</a>&quot;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacegg.html">gg</a>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// 構成ファイルの読み取り補助</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="parseconfig_8h.html">parseconfig.h</a>&quot;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
-<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classConfig.html">   21</a></span><span class="keyword">class </span><a class="code hl_function" href="classConfig.html#abd0c571c116924871e30444b192b792a">Config</a></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="comment">// メニュークラスから参照する</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classConfig.html#a834cec0fab7efabab3cd53540e4d466d">   24</a></span>  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_friend" href="classConfig.html#a834cec0fab7efabab3cd53540e4d466d">Menu</a>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="comment">// ウィンドウサイズ</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  std::array&lt;GLsizei, 2&gt; winSize;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="comment">// メニューフォント名</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  std::string menuFont;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="comment">// メニューフォントサイズ</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="keywordtype">float</span> menuFontSize;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="comment">// 光源</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">GgSimpleShader::Light</a> light;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="comment">// 形状ファイル名</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  std::string model;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="comment">// シェーダのソースファイル名</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  std::array&lt;std::string, 3&gt; shader;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <a class="code hl_function" href="classConfig.html#abd0c571c116924871e30444b192b792a">Config</a>();</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <a class="code hl_function" href="classConfig.html#abd0c571c116924871e30444b192b792a">Config</a>(<span class="keyword">const</span> std::string&amp; filename);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keyword">virtual</span> <a class="code hl_function" href="classConfig.html#a543dce59b66475c5108088ee4ce1cdfc">~Config</a>();</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
-<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classConfig.html#a3dc0108805ae6c4c8d0ce90853504f1f">   68</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="classConfig.html#a3dc0108805ae6c4c8d0ce90853504f1f">getWidth</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">  </span>{</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordflow">return</span> winSize[0];</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  }</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// 構成ファイルの読み取り補助</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="parseconfig_8h.html">parseconfig.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classConfig.html">   20</a></span><span class="keyword">class </span><a class="code hl_function" href="classConfig.html#abd0c571c116924871e30444b192b792a">Config</a></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="comment">// メニュークラスから参照する</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classConfig.html#a834cec0fab7efabab3cd53540e4d466d">   23</a></span>  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_friend" href="classConfig.html#a834cec0fab7efabab3cd53540e4d466d">Menu</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="comment">// ウィンドウサイズ</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  std::array&lt;GLsizei, 2&gt; winSize;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="comment">// メニューフォント名</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  std::string menuFont;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="comment">// メニューフォントサイズ</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keywordtype">float</span> menuFontSize;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="comment">// 光源</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <a class="code hl_struct" href="structgg_1_1GgSimpleShader_1_1Light.html">gg::GgSimpleShader::Light</a> light;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="comment">// 形状ファイル名</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  std::string model;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="comment">// シェーダのソースファイル名</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  std::array&lt;std::string, 3&gt; shader;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <a class="code hl_function" href="classConfig.html#abd0c571c116924871e30444b192b792a">Config</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <a class="code hl_function" href="classConfig.html#abd0c571c116924871e30444b192b792a">Config</a>(<span class="keyword">const</span> std::string&amp; filename);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keyword">virtual</span> <a class="code hl_function" href="classConfig.html#a543dce59b66475c5108088ee4ce1cdfc">~Config</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classConfig.html#a3dc0108805ae6c4c8d0ce90853504f1f">   67</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="classConfig.html#a3dc0108805ae6c4c8d0ce90853504f1f">getWidth</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">return</span> winSize[0];</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  }</div>
 </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
-<div class="foldopen" id="foldopen00078" data-start="{" data-end="}">
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classConfig.html#aaa87cc9fc950c37081b7e26280d159b5">   78</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="classConfig.html#aaa87cc9fc950c37081b7e26280d159b5">getHeight</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keyword">  </span>{</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">return</span> winSize[1];</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classConfig.html#aaa87cc9fc950c37081b7e26280d159b5">   77</a></span>  <span class="keyword">auto</span> <a class="code hl_function" href="classConfig.html#aaa87cc9fc950c37081b7e26280d159b5">getHeight</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">return</span> winSize[1];</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  }</div>
 </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classConfig.html#a5e3336e5f83b8cea516039537861e9e6">load</a>(<span class="keyword">const</span> std::string&amp; filename);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classConfig.html#a817566065d6f1d047c96b94fc596830c">save</a>(<span class="keyword">const</span> std::string&amp; filename) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>};</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classConfig.html#a5e3336e5f83b8cea516039537861e9e6">load</a>(<span class="keyword">const</span> std::string&amp; filename);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classConfig.html#a817566065d6f1d047c96b94fc596830c">save</a>(<span class="keyword">const</span> std::string&amp; filename) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>};</div>
 </div>
-<div class="ttc" id="aclassConfig_html_a3dc0108805ae6c4c8d0ce90853504f1f"><div class="ttname"><a href="classConfig.html#a3dc0108805ae6c4c8d0ce90853504f1f">Config::getWidth</a></div><div class="ttdeci">auto getWidth() const</div><div class="ttdef"><b>Definition</b> <a href="#l00068">Config.h:68</a></div></div>
-<div class="ttc" id="aclassConfig_html_a543dce59b66475c5108088ee4ce1cdfc"><div class="ttname"><a href="classConfig.html#a543dce59b66475c5108088ee4ce1cdfc">Config::~Config</a></div><div class="ttdeci">virtual ~Config()</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00052">Config.cpp:52</a></div></div>
-<div class="ttc" id="aclassConfig_html_a5e3336e5f83b8cea516039537861e9e6"><div class="ttname"><a href="classConfig.html#a5e3336e5f83b8cea516039537861e9e6">Config::load</a></div><div class="ttdeci">bool load(const std::string &amp;filename)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00059">Config.cpp:59</a></div></div>
-<div class="ttc" id="aclassConfig_html_a817566065d6f1d047c96b94fc596830c"><div class="ttname"><a href="classConfig.html#a817566065d6f1d047c96b94fc596830c">Config::save</a></div><div class="ttdeci">bool save(const std::string &amp;filename) const</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00109">Config.cpp:109</a></div></div>
-<div class="ttc" id="aclassConfig_html_a834cec0fab7efabab3cd53540e4d466d"><div class="ttname"><a href="classConfig.html#a834cec0fab7efabab3cd53540e4d466d">Config::Menu</a></div><div class="ttdeci">friend class Menu</div><div class="ttdef"><b>Definition</b> <a href="#l00024">Config.h:24</a></div></div>
-<div class="ttc" id="aclassConfig_html_aaa87cc9fc950c37081b7e26280d159b5"><div class="ttname"><a href="classConfig.html#aaa87cc9fc950c37081b7e26280d159b5">Config::getHeight</a></div><div class="ttdeci">auto getHeight() const</div><div class="ttdef"><b>Definition</b> <a href="#l00078">Config.h:78</a></div></div>
-<div class="ttc" id="aclassConfig_html_abd0c571c116924871e30444b192b792a"><div class="ttname"><a href="classConfig.html#abd0c571c116924871e30444b192b792a">Config::Config</a></div><div class="ttdeci">Config()</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00025">Config.cpp:25</a></div></div>
+<div class="ttc" id="aclassConfig_html_a3dc0108805ae6c4c8d0ce90853504f1f"><div class="ttname"><a href="classConfig.html#a3dc0108805ae6c4c8d0ce90853504f1f">Config::getWidth</a></div><div class="ttdeci">auto getWidth() const</div><div class="ttdef"><b>Definition</b> <a href="#l00067">Config.h:67</a></div></div>
+<div class="ttc" id="aclassConfig_html_a543dce59b66475c5108088ee4ce1cdfc"><div class="ttname"><a href="classConfig.html#a543dce59b66475c5108088ee4ce1cdfc">Config::~Config</a></div><div class="ttdeci">virtual ~Config()</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00055">Config.cpp:55</a></div></div>
+<div class="ttc" id="aclassConfig_html_a5e3336e5f83b8cea516039537861e9e6"><div class="ttname"><a href="classConfig.html#a5e3336e5f83b8cea516039537861e9e6">Config::load</a></div><div class="ttdeci">bool load(const std::string &amp;filename)</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00062">Config.cpp:62</a></div></div>
+<div class="ttc" id="aclassConfig_html_a817566065d6f1d047c96b94fc596830c"><div class="ttname"><a href="classConfig.html#a817566065d6f1d047c96b94fc596830c">Config::save</a></div><div class="ttdeci">bool save(const std::string &amp;filename) const</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00115">Config.cpp:115</a></div></div>
+<div class="ttc" id="aclassConfig_html_a834cec0fab7efabab3cd53540e4d466d"><div class="ttname"><a href="classConfig.html#a834cec0fab7efabab3cd53540e4d466d">Config::Menu</a></div><div class="ttdeci">friend class Menu</div><div class="ttdef"><b>Definition</b> <a href="#l00023">Config.h:23</a></div></div>
+<div class="ttc" id="aclassConfig_html_aaa87cc9fc950c37081b7e26280d159b5"><div class="ttname"><a href="classConfig.html#aaa87cc9fc950c37081b7e26280d159b5">Config::getHeight</a></div><div class="ttdeci">auto getHeight() const</div><div class="ttdef"><b>Definition</b> <a href="#l00077">Config.h:77</a></div></div>
+<div class="ttc" id="aclassConfig_html_abd0c571c116924871e30444b192b792a"><div class="ttname"><a href="classConfig.html#abd0c571c116924871e30444b192b792a">Config::Config</a></div><div class="ttdeci">Config()</div><div class="ttdef"><b>Definition</b> <a href="Config_8cpp_source.html#l00028">Config.cpp:28</a></div></div>
 <div class="ttc" id="agg_8h_html"><div class="ttname"><a href="gg_8h.html">gg.h</a></div></div>
-<div class="ttc" id="anamespacegg_html"><div class="ttname"><a href="namespacegg.html">gg</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l01350">gg.h:1351</a></div></div>
 <div class="ttc" id="aparseconfig_8h_html"><div class="ttname"><a href="parseconfig_8h.html">parseconfig.h</a></div></div>
-<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Light_html"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Light.html">gg::GgSimpleShader::Light</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07452">gg.h:7453</a></div></div>
+<div class="ttc" id="astructgg_1_1GgSimpleShader_1_1Light_html"><div class="ttname"><a href="structgg_1_1GgSimpleShader_1_1Light.html">gg::GgSimpleShader::Light</a></div><div class="ttdef"><b>Definition</b> <a href="gg_8h_source.html#l07653">gg.h:7654</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
