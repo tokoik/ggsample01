@@ -645,21 +645,8 @@ void GgApp::Window::wheel(GLFWwindow* window, double x, double y)
 // Window クラスのコンストラクタ
 //
 GgApp::Window::Window(const std::string& title, int width, int height, int fullscreen, GLFWwindow* share) :
-  window{ nullptr },
   size{ width, height },
-  fboSize{ width, height },
-#if defined(IMGUI_VERSION)
-  menubarHeight{ 0 },
-#endif
-  aspect{ 1.0f },
-  velocity{ 1.0f, 1.0f, 0.1f },
-  status{ false },
-  interfaceNo{ 0 },
-  userPointer{ nullptr },
-  resizeFunc{ nullptr },
-  keyboardFunc{ nullptr },
-  mouseFunc{ nullptr },
-  wheelFunc{ nullptr }
+  fboSize{ width, height }
 {
   // ディスプレイの情報
   GLFWmonitor* monitor{ nullptr };
