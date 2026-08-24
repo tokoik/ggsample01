@@ -21,6 +21,9 @@
 // メニューの描画
 #include "Menu.h"
 
+// 補助プログラム
+using namespace gg;
+
 //
 // アプリケーション本体
 //

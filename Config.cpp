@@ -7,6 +7,9 @@
 ///
 #include "Config.h"
 
+// 補助プログラム
+using namespace gg;
+
 // 標準ライブラリ
 #include <fstream>
 
@@ -68,6 +71,9 @@ bool Config::load(const std::string& filename)
   picojson::value value;
   file >> value;
   file.close();
+
+  // JSON のパースに失敗しているかオブジェクトでなかったら戻る
+  if (!value.is<picojson::object>()) return false;
 
   // 構成データの取り出し
   const auto& object{ value.get<picojson::object>() };

@@ -10,7 +10,6 @@
 
 // 補助プログラム
 #include "gg.h"
-using namespace gg;
 
 // 構成ファイルの読み取り補助
 #include "parseconfig.h"
@@ -33,7 +32,7 @@ class Config
   float menuFontSize;
 
   // 光源
-  GgSimpleShader::Light light;
+  gg::GgSimpleShader::Light light;
 
   // 形状ファイル名
   std::string model;

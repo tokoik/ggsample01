@@ -7,6 +7,9 @@
 ///
 #include "Menu.h"
 
+// 補助プログラム
+using namespace gg;
+
 //
 // コンストラクタ
 //
@@ -48,6 +51,10 @@ Menu::Menu(const Config& config) :
 //
 Menu::~Menu()
 {
+#if defined(IMGUI_VERSION)
+  // ファイルダイアログ (Native File Dialog Extended) を終了する
+  NFD_Quit();
+#endif
 }
 
 //
@@ -62,6 +69,7 @@ bool Menu::getFilePath(std::string& path, const nfdfilteritem_t* filter)
   if (NFD_OpenDialog(&filepath, filter, 1, nullptr) == NFD_OKAY)
   {
     path = TCharToUtf8(filepath);
+    NFD_FreePath(filepath);
     return true;
   }
 
