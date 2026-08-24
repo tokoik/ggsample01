@@ -25,9 +25,6 @@ Menu::Menu(const Config& config) :
   // ImGui の初期設定
   //
 
-  // ファイルダイアログ (Native File Dialog Extended) を初期化する
-  NFD_Init();
-
   // Dear ImGui の入力デバイス
   //io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // キーボードコントロールを使う
   //io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // ゲームパッドを使う
@@ -51,10 +48,26 @@ Menu::Menu(const Config& config) :
 //
 Menu::~Menu()
 {
+}
+
+//
+// ファイルダイアログのコンストラクタ
+//
+Menu::FileDialog::FileDialog()
+{
 #if defined(IMGUI_VERSION)
-  // ファイルダイアログ (Native File Dialog Extended) を終了する
-  NFD_Quit();
+  // ファイルダイアログ (Native File Dialog Extended) を初期化する
+  initialized = NFD_Init() == NFD_OKAY;
 #endif
+}
+
+//
+// ファイルダイアログのデストラクタ
+//
+Menu::FileDialog::~FileDialog()
+{
+  // 初期化に成功していたときだけ終了処理を行う
+  if (initialized) NFD_Quit();
 }
 
 //
@@ -62,6 +75,9 @@ Menu::~Menu()
 //
 bool Menu::getFilePath(std::string& path, const nfdfilteritem_t* filter)
 {
+  // ファイルダイアログが初期化されていなければ何もしない
+  if (!fileDialog) return false;
+
   // ファイルダイアログから得るパス
   nfdchar_t* filepath{ nullptr };
 

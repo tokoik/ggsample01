@@ -74,20 +74,16 @@ int GgApp::main(int argc, const char* const* argv)
 
 ### OpenXR を使う場合
 
-すべての `#include "GgApp.h"` の前に、`#define GG_USE_OPENXR` を置いてください。
-
-```cpp
-// ウィンドウ関連の処理
-#define GG_USE_OPENXR
-#include "GgApp.h"
-```
-
-あるいは、GgApp.h の中の `//#define GG_USE_OPENXR` のコメント (`//`) を削除してください。
+GgApp.h の中の `//#define GG_USE_OPENXR` のコメント (`//`) を削除してください。
 
 ```cpp
 // OpenXR を使うなら
 #define GG_USE_OPENXR
 ```
+
+`GG_USE_OPENXR` は **GgApp.cpp を含むすべてのソースファイルで同じように定義されている必要があります**。個々のソースファイルの先頭で `#define GG_USE_OPENXR` してから `#include "GgApp.h"` しても、GgApp.cpp 側では定義されないため、`GgApp::OpenXR` のメンバ関数の実体が生成されずリンクエラーになります。GgApp.h を書き換えたくない場合は、プロジェクト全体のプリプロセッサ定義 (Visual Studio) あるいは `CXXFLAGS` の `-DGG_USE_OPENXR` (Makefile) で定義してください。
+
+OpenXR SDK のヘッダとローダ (`openxr_loader.lib` / `libopenxr_loader`) が別に必要です。Linux では `libopenxr-dev` をインストールすれば、同梱の Makefile が `pkg-config` 経由で参照します。macOS には OpenXR のランタイムがないため利用できません。
 
 OpenXR を使った VR アプリケーションの詳しい書き方、透視投影行列・ビュー変換行列の取得方法、コントローラーの姿勢取得やボタン入力、ハプティクス振動などの機能については、[OPENXR.md](OPENXR.md) を参照してください。
 

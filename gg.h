@@ -5268,9 +5268,18 @@ namespace gg
     ///
     /// ムーブコンストラクタ.
     ///
-    /// @param texture ムーブ元のテクスチャ.
+    /// @param o ムーブ元のテクスチャ.
     ///
-    GgTexture(GgTexture&& texture) = default;
+    /// @note
+    /// テクスチャ名の所有権を移動し, ムーブ元のテクスチャ名を 0 にする.
+    /// ムーブ元のデストラクタが同じテクスチャを削除しないようにするため.
+    ///
+    GgTexture(GgTexture&& o) noexcept :
+      texture{ o.texture },
+      size{ o.size[0], o.size[1] }
+    {
+      o.texture = 0;
+    }
 
     ///
     /// デストラクタ.
@@ -5292,10 +5301,29 @@ namespace gg
     ///
     /// ムーブ代入演算子.
     ///
-    /// @param texture ムーブ代入元のテクスチャ.
+    /// @param o ムーブ代入元のテクスチャ.
     /// @return ムーブ代入後のこのテクスチャの参照.
     ///
-    GgTexture& operator=(GgTexture&& texture) = default;
+    /// @note
+    /// 元々保持していたテクスチャを削除してから所有権を移動する.
+    ///
+    GgTexture& operator=(GgTexture&& o) noexcept
+    {
+      if (&o != this)
+      {
+        // 保持しているテクスチャを削除する
+        glBindTexture(GL_TEXTURE_2D, 0);
+        glDeleteTextures(1, &texture);
+
+        // テクスチャ名の所有権を移動する
+        texture = o.texture;
+        size[0] = o.size[0];
+        size[1] = o.size[1];
+        o.texture = 0;
+      }
+
+      return *this;
+    }
 
     ///
     /// テクスチャの使用開始 (このテクスチャを使用する際に呼び出す).
@@ -5802,8 +5830,8 @@ namespace gg
     // データの数
     const GLsizei count;
 
-    // バッファオブジェクト
-    const GLuint buffer;
+    // バッファオブジェクト (ムーブしたら 0 になる)
+    GLuint buffer;
 
   public:
 
@@ -5843,16 +5871,28 @@ namespace gg
     ///
     /// ムーブコンストラクタ.
     ///
-    /// @param buffer ムーブ元のバッファ.
+    /// @param o ムーブ元のバッファ.
     ///
-    GgBuffer(GgBuffer<T>&& buffer) = default;
+    /// @note
+    /// バッファオブジェクト名の所有権を移動し, ムーブ元のバッファオブジェクト名を
+    /// 0 にする. ムーブ元のデストラクタが同じバッファオブジェクトを
+    /// 削除しないようにするため.
+    ///
+    GgBuffer(GgBuffer<T>&& o) noexcept :
+      target{ o.target },
+      stride{ o.stride },
+      count{ o.count },
+      buffer{ o.buffer }
+    {
+      o.buffer = 0;
+    }
 
     ///
     /// デストラクタ.
     ///
     virtual ~GgBuffer()
     {
-      // バッファオブジェクトを削除する
+      // バッファオブジェクトを削除する (ムーブ済みなら buffer は 0 で無視される)
       glBindBuffer(target, 0);
       glDeleteBuffers(1, &buffer);
     }
@@ -5864,14 +5904,6 @@ namespace gg
     /// @return 代入後のこのバッファの参照.
     ///
     GgBuffer<T>& operator=(const GgBuffer<T>& buffer) = delete;
-
-    ///
-    /// ムーブ代入演算子.
-    ///
-    /// @param buffer ムーブ代入元のバッファ.
-    /// @return ムーブ代入後のこのバッファの参照.
-    ///
-    GgBuffer<T>& operator=(GgBuffer<T>&& buffer) = default;
 
     ///
     /// バッファオブジェクトのターゲットを取り出す.
@@ -6379,8 +6411,8 @@ namespace gg
   ///
   class GgVertexArray
   {
-    // 頂点配列オブジェクト
-    const GLuint vao;
+    // 頂点配列オブジェクト (ムーブしたら 0 になる)
+    GLuint vao;
 
   public:
 
@@ -6405,15 +6437,25 @@ namespace gg
     ///
     /// ムーブコンストラクタ.
     ///
-    /// @param array ムーブ元の頂点配列オブジェクト.
+    /// @param o ムーブ元の頂点配列オブジェクト.
     ///
-    GgVertexArray(GgVertexArray&& array) = default;
+    /// @note
+    /// 頂点配列オブジェクト名の所有権を移動し, ムーブ元の頂点配列オブジェクト名を
+    /// 0 にする. ムーブ元のデストラクタが同じ頂点配列オブジェクトを
+    /// 削除しないようにするため.
+    ///
+    GgVertexArray(GgVertexArray&& o) noexcept :
+      vao{ o.vao }
+    {
+      o.vao = 0;
+    }
 
     ///
     /// デストラクタ.
     ///
     virtual ~GgVertexArray()
     {
+      // 頂点配列オブジェクトを削除する (ムーブ済みなら vao は 0 で無視される)
       glBindVertexArray(0);
       glDeleteVertexArrays(1, &vao);
     }
@@ -6425,6 +6467,32 @@ namespace gg
     /// @return 代入後のこの頂点配列オブジェクトの参照.
     ///
     GgVertexArray& operator=(const GgVertexArray& array) = delete;
+
+    ///
+    /// ムーブ代入演算子.
+    ///
+    /// @param o ムーブ代入元の頂点配列オブジェクト.
+    /// @return ムーブ代入後のこの頂点配列オブジェクトの参照.
+    ///
+    /// @note
+    /// 元々保持していた頂点配列オブジェクトを削除してから所有権を移動し,
+    /// ムーブ代入元の頂点配列オブジェクト名を 0 にする.
+    ///
+    GgVertexArray& operator=(GgVertexArray&& o) noexcept
+    {
+      if (&o != this)
+      {
+        // 保持している頂点配列オブジェクトを削除する
+        glBindVertexArray(0);
+        glDeleteVertexArrays(1, &vao);
+
+        // 頂点配列オブジェクト名の所有権を移動する
+        vao = o.vao;
+        o.vao = 0;
+      }
+
+      return *this;
+    }
 
     ///
     /// 頂点配列オブジェクト名を取り出す.
@@ -7078,8 +7146,8 @@ namespace gg
   ///
   class GgShader
   {
-    // プログラム名
-    const GLuint program;
+    // プログラム名 (ムーブしたら 0 になる)
+    GLuint program;
 
   public:
 
@@ -7129,16 +7197,24 @@ namespace gg
     ///
     /// ムーブコンストラクタ.
     ///
-    /// @param shader ムーブ元のシェーダ.
+    /// @param o ムーブ元のシェーダ.
     ///
-    GgShader(GgShader&& shader) = default;
+    /// @note
+    /// プログラム名の所有権を移動し, ムーブ元のプログラム名を 0 にする.
+    /// ムーブ元のデストラクタが同じシェーダプログラムを削除しないようにするため.
+    ///
+    GgShader(GgShader&& o) noexcept :
+      program{ o.program }
+    {
+      o.program = 0;
+    }
 
     ///
     /// デストラクタ.
     ///
     virtual ~GgShader()
     {
-      // 参照しているオブジェクトが一つだけならシェーダを削除する
+      // シェーダプログラムを削除する (ムーブ済みなら program は 0 で無視される)
       glUseProgram(0);
       glDeleteProgram(program);
     }
@@ -7150,6 +7226,32 @@ namespace gg
     /// @return 代入後のこのシェーダの参照.
     ///
     GgShader& operator=(const GgShader& shader) = delete;
+
+    ///
+    /// ムーブ代入演算子.
+    ///
+    /// @param o ムーブ代入元のシェーダ.
+    /// @return ムーブ代入後のこのシェーダの参照.
+    ///
+    /// @note
+    /// 元々保持していたシェーダプログラムを削除してから所有権を移動し,
+    /// ムーブ代入元のプログラム名を 0 にする.
+    ///
+    GgShader& operator=(GgShader&& o) noexcept
+    {
+      if (&o != this)
+      {
+        // 保持しているシェーダプログラムを削除する
+        glUseProgram(0);
+        glDeleteProgram(program);
+
+        // プログラム名の所有権を移動する
+        program = o.program;
+        o.program = 0;
+      }
+
+      return *this;
+    }
 
     ///
     /// シェーダプログラムの使用を開始する.

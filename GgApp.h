@@ -74,7 +74,13 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #    include <GLFW/glfw3native.h>
 #    include <windows.h>
 #    include <unknwn.h>
+#    if defined(_MSC_VER)
+#      pragma comment(lib, "openxr_loader.lib")
+#    endif
 #  else
+#    if !defined(__gl_h_)
+#      define __gl_h_
+#    endif
 #    define XR_USE_PLATFORM_XLIB
 #    define XR_USE_GRAPHICS_API_OPENGL
 #    define GLFW_EXPOSE_NATIVE_X11
@@ -83,8 +89,12 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #  endif
 #  include <openxr/openxr.h>
 #  include <openxr/openxr_platform.h>
-#  include <vector>
+#  include <algorithm>
+#  include <cstdio>
 #  include <cstring>
+#  include <string>
+#  include <utility>
+#  include <vector>
 #endif
 
 ///
@@ -957,6 +967,8 @@ public:
   ///
   /// @note
   /// OpenXR を操作するラッパークラス（シングルトン）.
+  /// OpenGL のコンテキストを使うので, GgApp::Window を作成した後に
+  /// initialize() を呼び, ウィンドウを破棄する前に terminate() を呼ぶこと.
   ///
   class OpenXR
   {
@@ -978,6 +990,9 @@ public:
     XrInstance instance{ XR_NULL_HANDLE };
     XrSystemId systemId{ XR_NULL_SYSTEM_ID };
 
+    // OpenXR のシステムの名前
+    std::string systemName;
+
     // OpenXR のセッション
     XrSession session{ XR_NULL_HANDLE };
     XrSessionState sessionState{ XR_SESSION_STATE_UNKNOWN };
@@ -994,16 +1009,37 @@ public:
     std::vector<XrSwapchain> swapchains;
     std::vector<std::vector<XrSwapchainImageOpenGLKHR>> swapchainImages;
 
-    // OpenXR へのレンダリングに使う FBO とデプステクスチャ
-    GLuint openxrFbo[2]{ 0, 0 };
-    GLuint openxrDepth[2]{ 0, 0 };
+    // OpenXR へのレンダリングに使う FBO とデプスバッファ (ビューの数だけ確保する)
+    std::vector<GLuint> openxrFbo;
+    std::vector<GLuint> openxrDepth;
+
+    // スワップチェーンのカラーフォーマットが sRGB なら true
+    bool swapchainIsSrgb{ true };
+
+    // 環境の合成方法
+    XrEnvironmentBlendMode blendMode{ XR_ENVIRONMENT_BLEND_MODE_OPAQUE };
 
     // フレームの同期状態
     XrFrameState frameState{ XR_TYPE_FRAME_STATE };
     bool isSessionRunning{ false };
 
+    // xrBeginFrame() を呼んで xrEndFrame() を呼んでいない状態なら true
+    bool frameBegun{ false };
+
+    // 視点の姿勢が取得できていれば true
+    bool viewPoseValid{ false };
+
+    // 初期化が完了していれば true
+    bool initialized{ false };
+
     // 各フレームで取得したスワップチェーンイメージのインデックス
-    uint32_t currentImageIndex[2]{ 0, 0 };
+    std::vector<uint32_t> currentImageIndex;
+
+    // スワップチェーンイメージを取得中のビューなら true
+    std::vector<bool> imageAcquired;
+
+    // ミラー表示を行うビューの番号, ミラー表示を行わないなら -1
+    int mirrorView{ 0 };
 
     // OpenXR のミラー表示を行うウィンドウ
     const Window* window{ nullptr };
@@ -1057,6 +1093,31 @@ public:
     void pollActions();
 
     //
+    // OpenXR のイベントを処理する
+    //
+    void pollEvents();
+
+    //
+    // スワップチェーンを作成する
+    //
+    void createSwapchains();
+
+    //
+    // 描画中のフレームを合成器に転送する
+    //
+    void endFrame();
+
+    //
+    // OpenXR のハンドルを破棄する (OpenGL の資源には触れない)
+    //
+    void destroyXr();
+
+    //
+    // ミラー表示を行う
+    //
+    void blitMirror() const;
+
+    //
     // コンストラクタ
     //
     OpenXR();
@@ -1064,7 +1125,7 @@ public:
     //
     // デストラクタ
     //
-    virtual ~OpenXR() = default;
+    virtual ~OpenXR();
 
   public:
 
@@ -1076,21 +1137,41 @@ public:
 
     ///
     /// OpenXR のセッションを作成する.
+    ///
     /// @param window ミラー表示を行うウィンドウ.
     /// @param spaceType 使用する参照空間のタイプ（デフォルトは XR_REFERENCE_SPACE_TYPE_STAGE）.
+    /// @param appName OpenXR のランタイムに通知するアプリケーション名.
     /// @return OpenXR の static object の参照.
     ///
-    static OpenXR& initialize(const Window& window, XrReferenceSpaceType spaceType = XR_REFERENCE_SPACE_TYPE_STAGE);
+    /// @note
+    /// 初期化に失敗したときは確保した資源を解放したうえで
+    /// std::runtime_error を投げる. 二度目以降の呼び出しは
+    /// 初期化済みのオブジェクトをそのまま返す.
+    ///
+    static OpenXR& initialize(const Window& window,
+      XrReferenceSpaceType spaceType = XR_REFERENCE_SPACE_TYPE_STAGE,
+      const char* appName = "GgApp");
 
     ///
     /// OpenXR のセッションを破棄する.
+    ///
+    /// @note
+    /// 何度呼んでも安全である. OpenGL の資源を解放するので,
+    /// ウィンドウ (OpenGL のコンテキスト) が有効なうちに呼ぶこと.
     ///
     void terminate();
 
     ///
     /// OpenXR による描画開始.
     ///
-    /// @return 描画可能なら true.
+    /// @return このフレームで描画を行うべきなら true.
+    ///
+    /// @note
+    /// イベントの処理, フレームの同期 (xrWaitFrame / xrBeginFrame),
+    /// 視点の姿勢の取得 (xrLocateViews), コントローラの状態の更新を行う.
+    /// 描画が不要なフレームでは内部で xrEndFrame() まで済ませて false を
+    /// 返すので, false のときは select() / commit() / submit() を
+    /// 呼んではならない (呼んでも安全に無視される).
     ///
     bool begin();
 
@@ -1112,9 +1193,13 @@ public:
     void select(int eye, GLfloat* screen, GLfloat* position, GLfloat* orientation);
 
     ///
-    /// 描画した目のスワップチェーンイメージを解放する.
+    /// 指定した目の描画を完了する.
     ///
-    /// @param eye 表示する目 (0: 左目, 1: 右目).
+    /// @param eye 完了した目のインデックス (0: 左目, 1: 右目).
+    ///
+    /// @note
+    /// 描画先をウィンドウに戻す. スワップチェーンイメージの解放は
+    /// ミラー表示を行った後の submit() の中で行う.
     ///
     void commit(int eye);
 
@@ -1124,7 +1209,47 @@ public:
     /// @param mirror true ならウィンドウへのミラー表示を行う, デフォルトは true.
     /// @return フレームの転送に成功したら true.
     ///
+    /// @note
+    /// ミラー表示を行ってからスワップチェーンイメージを解放し,
+    /// 合成レイヤを組み立てて xrEndFrame() を呼ぶ.
+    /// ミラー表示するビューの番号は setMirror() で変更できる.
+    ///
     bool submit(bool mirror = true);
+
+    ///
+    /// ミラー表示を行うビューの番号を設定する.
+    ///
+    /// @param eye ミラー表示を行うビューの番号, -1 ならミラー表示を行わない.
+    ///
+    void setMirror(int eye);
+
+    ///
+    /// ミラー表示を行うビューの番号を取得する.
+    ///
+    /// @return ミラー表示を行うビューの番号, ミラー表示を行わないなら -1.
+    ///
+    int getMirror() const;
+
+    ///
+    /// セッションが実行中かどうか調べる.
+    ///
+    /// @return セッションが実行中なら true.
+    ///
+    bool isRunning() const;
+
+    ///
+    /// アプリケーションが入力を受け付けているかどうか調べる.
+    ///
+    /// @return XR_SESSION_STATE_FOCUSED なら true.
+    ///
+    bool isFocused() const;
+
+    ///
+    /// OpenXR のシステム (HMD) の名前を取得する.
+    ///
+    /// @return システムの名前の文字列.
+    ///
+    const std::string& getSystemName() const;
 
     ///
     /// 指定した目の透視投影変換行列を取得する.
@@ -1183,6 +1308,13 @@ public:
     /// @return 姿勢構造体の参照.
     ///
     const XrPosef& getPose(int eye) const;
+
+    ///
+    /// 視点の姿勢が有効かどうか調べる.
+    ///
+    /// @return 直前の begin() で視点の位置と向きが取得できていれば true.
+    ///
+    bool isPoseValid() const;
 
     ///
     /// レンダリング推奨解像度の横幅を取得する.
@@ -1331,6 +1463,11 @@ public:
     ///
     /// @param hand 対象の手 (デフォルトは 0: 左手 Hand::Left).
     /// @return 押されていれば true.
+    ///
+    /// @note
+    /// Meta Touch と Valve Index の対話プロファイルには右手のメニューボタンが
+    /// 存在しない (システムに予約されている) ため, これらでは右手を指定しても
+    /// 常に false になる.
     ///
     bool getMenuButton(int hand = Hand::Left) const;
 
