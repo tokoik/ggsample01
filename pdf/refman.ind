@@ -1,0 +1,1281 @@
+\begin{theindex}
+
+  \item {\_ggError}
+    \subitem {gg}, \hyperpage{28}
+  \item {\_ggFBOError}
+    \subitem {gg}, \hyperpage{28}
+  \item {\texorpdfstring{$\sim$}{\string~}Config}
+    \subitem {Config}, \hyperpage{90}
+  \item {\texorpdfstring{$\sim$}{\string~}GgApp}
+    \subitem {GgApp}, \hyperpage{95}
+  \item {\texorpdfstring{$\sim$}{\string~}GgBuffer}
+    \subitem {gg::GgBuffer$<$ T $>$}, \hyperpage{101}
+  \item {\texorpdfstring{$\sim$}{\string~}GgColorTexture}
+    \subitem {gg::GgColorTexture}, \hyperpage{110}
+  \item {\texorpdfstring{$\sim$}{\string~}GgElements}
+    \subitem {gg::GgElements}, \hyperpage{116}
+  \item {\texorpdfstring{$\sim$}{\string~}GgMatrix}
+    \subitem {gg::GgMatrix}, \hyperpage{124}
+  \item {\texorpdfstring{$\sim$}{\string~}GgNormalTexture}
+    \subitem {gg::GgNormalTexture}, \hyperpage{177}
+  \item {\texorpdfstring{$\sim$}{\string~}GgPointShader}
+    \subitem {gg::GgPointShader}, \hyperpage{188}
+  \item {\texorpdfstring{$\sim$}{\string~}GgPoints}
+    \subitem {gg::GgPoints}, \hyperpage{183}
+  \item {\texorpdfstring{$\sim$}{\string~}GgQuaternion}
+    \subitem {gg::GgQuaternion}, \hyperpage{204}
+  \item {\texorpdfstring{$\sim$}{\string~}GgShader}
+    \subitem {gg::GgShader}, \hyperpage{266}
+  \item {\texorpdfstring{$\sim$}{\string~}GgShape}
+    \subitem {gg::GgShape}, \hyperpage{268}
+  \item {\texorpdfstring{$\sim$}{\string~}GgSimpleObj}
+    \subitem {gg::GgSimpleObj}, \hyperpage{271}
+  \item {\texorpdfstring{$\sim$}{\string~}GgSimpleShader}
+    \subitem {gg::GgSimpleShader}, \hyperpage{277}
+  \item {\texorpdfstring{$\sim$}{\string~}GgTexture}
+    \subitem {gg::GgTexture}, \hyperpage{295}
+  \item {\texorpdfstring{$\sim$}{\string~}GgTrackball}
+    \subitem {gg::GgTrackball}, \hyperpage{303}
+  \item {\texorpdfstring{$\sim$}{\string~}GgTriangles}
+    \subitem {gg::GgTriangles}, \hyperpage{312}
+  \item {\texorpdfstring{$\sim$}{\string~}GgUniformBuffer}
+    \subitem {gg::GgUniformBuffer$<$ T $>$}, \hyperpage{316}
+  \item {\texorpdfstring{$\sim$}{\string~}GgVector}
+    \subitem {gg::GgVector}, \hyperpage{331}
+  \item {\texorpdfstring{$\sim$}{\string~}GgVertexArray}
+    \subitem {gg::GgVertexArray}, \hyperpage{348}
+  \item {\texorpdfstring{$\sim$}{\string~}LightBuffer}
+    \subitem {gg::GgSimpleShader::LightBuffer}, \hyperpage{354}
+  \item {\texorpdfstring{$\sim$}{\string~}MaterialBuffer}
+    \subitem {gg::GgSimpleShader::MaterialBuffer}, \hyperpage{372}
+  \item {\texorpdfstring{$\sim$}{\string~}Menu}
+    \subitem {Menu}, \hyperpage{385}
+  \item {\texorpdfstring{$\sim$}{\string~}Window}
+    \subitem {GgApp::Window}, \hyperpage{391}
+
+  \indexspace
+
+  \item {add}
+    \subitem {gg::GgQuaternion}, \hyperpage{204, 205}
+  \item {ambient}
+    \subitem {gg::GgSimpleShader::Light}, \hyperpage{350}
+    \subitem {gg::GgSimpleShader::Material}, \hyperpage{367}
+
+  \indexspace
+
+  \item {begin}
+    \subitem {gg::GgTrackball}, \hyperpage{303}
+  \item {bind}
+    \subitem {gg::GgBuffer$<$ T $>$}, \hyperpage{101}
+    \subitem {gg::GgColorTexture}, \hyperpage{110}
+    \subitem {gg::GgNormalTexture}, \hyperpage{177}
+    \subitem {gg::GgTexture}, \hyperpage{295}
+    \subitem {gg::GgUniformBuffer$<$ T $>$}, \hyperpage{317}
+    \subitem {gg::GgVertexArray}, \hyperpage{348}
+  \item {BindingPoints}
+    \subitem {gg}, \hyperpage{28}
+
+  \indexspace
+
+  \item {Config}, \hyperpage{89}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Config}, \hyperpage{90}
+    \subitem {Config}, \hyperpage{89}
+    \subitem {getHeight}, \hyperpage{90}
+    \subitem {getWidth}, \hyperpage{91}
+    \subitem {load}, \hyperpage{91}
+    \subitem {Menu}, \hyperpage{93}
+    \subitem {save}, \hyperpage{92}
+  \item {Config.cpp}, \hyperpage{415}
+    \subitem {defaultLight}, \hyperpage{416}
+  \item {Config.h}, \hyperpage{418}
+  \item {CONFIG\_FILE}
+    \subitem {ggsample01.cpp}, \hyperpage{587}
+  \item {conjugate}
+    \subitem {gg::GgQuaternion}, \hyperpage{207}
+  \item {copy}
+    \subitem {gg::GgBuffer$<$ T $>$}, \hyperpage{101}
+    \subitem {gg::GgUniformBuffer$<$ T $>$}, \hyperpage{317}
+
+  \indexspace
+
+  \item {defaultLight}
+    \subitem {Config.cpp}, \hyperpage{416}
+  \item {diffuse}
+    \subitem {gg::GgSimpleShader::Light}, \hyperpage{350}
+    \subitem {gg::GgSimpleShader::Material}, \hyperpage{367}
+  \item {distance3}
+    \subitem {gg::GgVector}, \hyperpage{331}
+  \item {distance4}
+    \subitem {gg::GgVector}, \hyperpage{332}
+  \item {divide}
+    \subitem {gg::GgQuaternion}, \hyperpage{208, 209}
+  \item {dot3}
+    \subitem {gg::GgVector}, \hyperpage{332}
+  \item {dot4}
+    \subitem {gg::GgVector}, \hyperpage{333}
+  \item {draw}
+    \subitem {gg::GgElements}, \hyperpage{116}
+    \subitem {gg::GgPoints}, \hyperpage{183}
+    \subitem {gg::GgShape}, \hyperpage{268}
+    \subitem {gg::GgSimpleObj}, \hyperpage{272}
+    \subitem {gg::GgTriangles}, \hyperpage{312}
+    \subitem {Menu}, \hyperpage{386}
+
+  \indexspace
+
+  \item {end}
+    \subitem {gg::GgTrackball}, \hyperpage{303}
+  \item {euler}
+    \subitem {gg::GgQuaternion}, \hyperpage{210, 211}
+
+  \indexspace
+
+  \item {fill}
+    \subitem {gg::GgUniformBuffer$<$ T $>$}, \hyperpage{318}
+  \item {frustum}
+    \subitem {gg::GgMatrix}, \hyperpage{124}
+
+  \indexspace
+
+  \item {get}
+    \subitem {gg::GgColorTexture}, \hyperpage{110}
+    \subitem {gg::GgMatrix}, \hyperpage{125, 126}
+    \subitem {gg::GgNormalTexture}, \hyperpage{177}
+    \subitem {gg::GgPointShader}, \hyperpage{188}
+    \subitem {gg::GgQuaternion}, \hyperpage{212}
+    \subitem {gg::GgShader}, \hyperpage{266}
+    \subitem {gg::GgShape}, \hyperpage{269}
+    \subitem {gg::GgSimpleObj}, \hyperpage{272}
+    \subitem {gg::GgTrackball}, \hyperpage{304}
+    \subitem {gg::GgVertexArray}, \hyperpage{348}
+    \subitem {GgApp::Window}, \hyperpage{391}
+  \item {getAltArrow}
+    \subitem {GgApp::Window}, \hyperpage{391}
+  \item {getAltArrowX}
+    \subitem {GgApp::Window}, \hyperpage{391}
+  \item {getAltArrowY}
+    \subitem {GgApp::Window}, \hyperpage{392}
+  \item {getArrow}
+    \subitem {GgApp::Window}, \hyperpage{393}
+  \item {getArrowX}
+    \subitem {GgApp::Window}, \hyperpage{394}
+  \item {getArrowY}
+    \subitem {GgApp::Window}, \hyperpage{395}
+  \item {getAspect}
+    \subitem {GgApp::Window}, \hyperpage{395}
+  \item {getBuffer}
+    \subitem {gg::GgBuffer$<$ T $>$}, \hyperpage{102}
+    \subitem {gg::GgPoints}, \hyperpage{183}
+    \subitem {gg::GgTriangles}, \hyperpage{313}
+    \subitem {gg::GgUniformBuffer$<$ T $>$}, \hyperpage{319}
+  \item {getConjugateMatrix}
+    \subitem {gg::GgQuaternion}, \hyperpage{213, 214}
+  \item {getControlArrow}
+    \subitem {GgApp::Window}, \hyperpage{396}
+  \item {getControlArrowX}
+    \subitem {GgApp::Window}, \hyperpage{396}
+  \item {getControlArrowY}
+    \subitem {GgApp::Window}, \hyperpage{397}
+  \item {getCount}
+    \subitem {gg::GgBuffer$<$ T $>$}, \hyperpage{102}
+    \subitem {gg::GgPoints}, \hyperpage{184}
+    \subitem {gg::GgTriangles}, \hyperpage{313}
+    \subitem {gg::GgUniformBuffer$<$ T $>$}, \hyperpage{320}
+  \item {getFboHeight}
+    \subitem {GgApp::Window}, \hyperpage{398}
+  \item {getFboSize}
+    \subitem {GgApp::Window}, \hyperpage{398}
+  \item {getFboWidth}
+    \subitem {GgApp::Window}, \hyperpage{399}
+  \item {getHeight}
+    \subitem {Config}, \hyperpage{90}
+    \subitem {gg::GgColorTexture}, \hyperpage{110}
+    \subitem {gg::GgNormalTexture}, \hyperpage{178}
+    \subitem {gg::GgTexture}, \hyperpage{295}
+    \subitem {GgApp::Window}, \hyperpage{399}
+  \item {getIndexBuffer}
+    \subitem {gg::GgElements}, \hyperpage{116}
+  \item {getIndexCount}
+    \subitem {gg::GgElements}, \hyperpage{117}
+  \item {getKey}
+    \subitem {GgApp::Window}, \hyperpage{399}
+  \item {getLastKey}
+    \subitem {GgApp::Window}, \hyperpage{400}
+  \item {getLight}
+    \subitem {Menu}, \hyperpage{386}
+  \item {getMatrix}
+    \subitem {gg::GgQuaternion}, \hyperpage{214, 215}
+    \subitem {gg::GgTrackball}, \hyperpage{304}
+  \item {getMode}
+    \subitem {gg::GgShape}, \hyperpage{269}
+  \item {getModel}
+    \subitem {Menu}, \hyperpage{386}
+  \item {getMouse}
+    \subitem {GgApp::Window}, \hyperpage{400}
+  \item {getMouseX}
+    \subitem {GgApp::Window}, \hyperpage{400}
+  \item {getMouseY}
+    \subitem {GgApp::Window}, \hyperpage{401}
+  \item {getQuaternion}
+    \subitem {gg::GgTrackball}, \hyperpage{304}
+  \item {getRotation}
+    \subitem {GgApp::Window}, \hyperpage{401}
+  \item {getRotationMatrix}
+    \subitem {GgApp::Window}, \hyperpage{401}
+  \item {getScale}
+    \subitem {gg::GgTrackball}, \hyperpage{304, 305}
+  \item {getScrollMatrix}
+    \subitem {GgApp::Window}, \hyperpage{402}
+  \item {getShader}
+    \subitem {Menu}, \hyperpage{386}
+  \item {getShiftArrow}
+    \subitem {GgApp::Window}, \hyperpage{402}
+  \item {getShiftArrowX}
+    \subitem {GgApp::Window}, \hyperpage{402}
+  \item {getShiftArrowY}
+    \subitem {GgApp::Window}, \hyperpage{403}
+  \item {getSize}
+    \subitem {gg::GgColorTexture}, \hyperpage{110}
+    \subitem {gg::GgNormalTexture}, \hyperpage{178}
+    \subitem {gg::GgTexture}, \hyperpage{295}
+    \subitem {GgApp::Window}, \hyperpage{404}
+  \item {getStart}
+    \subitem {gg::GgTrackball}, \hyperpage{305}
+  \item {getStride}
+    \subitem {gg::GgBuffer$<$ T $>$}, \hyperpage{102}
+    \subitem {gg::GgUniformBuffer$<$ T $>$}, \hyperpage{320}
+  \item {getString}
+    \subitem {parseconfig.h}, \hyperpage{597, 598}
+  \item {getTarget}
+    \subitem {gg::GgBuffer$<$ T $>$}, \hyperpage{103}
+    \subitem {gg::GgUniformBuffer$<$ T $>$}, \hyperpage{321}
+  \item {getTexture}
+    \subitem {gg::GgColorTexture}, \hyperpage{111}
+    \subitem {gg::GgNormalTexture}, \hyperpage{178}
+    \subitem {gg::GgTexture}, \hyperpage{296}
+  \item {getTranslation}
+    \subitem {GgApp::Window}, \hyperpage{404}
+  \item {getTranslationMatrix}
+    \subitem {GgApp::Window}, \hyperpage{405}
+  \item {getUsername}
+    \subitem {GgApp}, \hyperpage{95}
+  \item {getUserPointer}
+    \subitem {GgApp::Window}, \hyperpage{405}
+  \item {getValue}
+    \subitem {parseconfig.h}, \hyperpage{598, 599}
+  \item {getVector}
+    \subitem {parseconfig.h}, \hyperpage{600}
+  \item {getWheel}
+    \subitem {GgApp::Window}, \hyperpage{405, 406}
+  \item {getWheelX}
+    \subitem {GgApp::Window}, \hyperpage{406}
+  \item {getWheelY}
+    \subitem {GgApp::Window}, \hyperpage{406}
+  \item {getWidth}
+    \subitem {Config}, \hyperpage{91}
+    \subitem {gg::GgColorTexture}, \hyperpage{111}
+    \subitem {gg::GgNormalTexture}, \hyperpage{178}
+    \subitem {gg::GgTexture}, \hyperpage{296}
+    \subitem {GgApp::Window}, \hyperpage{406}
+  \item {gg}, \hyperpage{25}
+    \subitem {\_ggError}, \hyperpage{28}
+    \subitem {\_ggFBOError}, \hyperpage{28}
+    \subitem {BindingPoints}, \hyperpage{28}
+    \subitem {ggArraysObj}, \hyperpage{28}
+    \subitem {ggBufferAlignment}, \hyperpage{87}
+    \subitem {ggConjugate}, \hyperpage{29}
+    \subitem {ggCreateComputeShader}, \hyperpage{29}
+    \subitem {ggCreateNormalMap}, \hyperpage{30}
+    \subitem {ggCreateShader}, \hyperpage{31}
+    \subitem {ggCross}, \hyperpage{32}
+    \subitem {ggDistance3}, \hyperpage{33}
+    \subitem {ggDistance4}, \hyperpage{34, 35}
+    \subitem {ggDot3}, \hyperpage{35, 36}
+    \subitem {ggDot4}, \hyperpage{37}
+    \subitem {ggElementsMesh}, \hyperpage{38}
+    \subitem {ggElementsObj}, \hyperpage{39}
+    \subitem {ggElementsSphere}, \hyperpage{40}
+    \subitem {ggEllipse}, \hyperpage{40}
+    \subitem {ggEulerQuaternion}, \hyperpage{42, 43}
+    \subitem {ggFrustum}, \hyperpage{44}
+    \subitem {ggIdentity}, \hyperpage{44}
+    \subitem {ggIdentityQuaternion}, \hyperpage{45}
+    \subitem {ggInit}, \hyperpage{45}
+    \subitem {ggInvert}, \hyperpage{46}
+    \subitem {ggLength3}, \hyperpage{47}
+    \subitem {ggLength4}, \hyperpage{48, 49}
+    \subitem {ggLoadComputeShader}, \hyperpage{49}
+    \subitem {ggLoadHeight}, \hyperpage{50}
+    \subitem {ggLoadImage}, \hyperpage{51}
+    \subitem {ggLoadShader}, \hyperpage{51, 52}
+    \subitem {ggLoadSimpleObj}, \hyperpage{53, 54}
+    \subitem {ggLoadTexture}, \hyperpage{54}
+    \subitem {ggLookat}, \hyperpage{55, 56}
+    \subitem {ggMatrixQuaternion}, \hyperpage{57, 58}
+    \subitem {ggNorm}, \hyperpage{59}
+    \subitem {ggNormal}, \hyperpage{59}
+    \subitem {ggNormalize}, \hyperpage{59}
+    \subitem {ggNormalize3}, \hyperpage{60--62}
+    \subitem {ggNormalize4}, \hyperpage{62--64}
+    \subitem {ggOrthogonal}, \hyperpage{64}
+    \subitem {ggPerspective}, \hyperpage{65}
+    \subitem {ggPointsCube}, \hyperpage{66}
+    \subitem {ggPointsSphere}, \hyperpage{66}
+    \subitem {ggQuaternionMatrix}, \hyperpage{67}
+    \subitem {ggQuaternionTransposeMatrix}, \hyperpage{67}
+    \subitem {ggReadImage}, \hyperpage{68}
+    \subitem {ggRectangle}, \hyperpage{69}
+    \subitem {ggRotate}, \hyperpage{69--71}
+    \subitem {ggRotateQuaternion}, \hyperpage{72, 73}
+    \subitem {ggRotateX}, \hyperpage{74}
+    \subitem {ggRotateY}, \hyperpage{74}
+    \subitem {ggRotateZ}, \hyperpage{75}
+    \subitem {ggSaveColor}, \hyperpage{75}
+    \subitem {ggSaveDepth}, \hyperpage{76}
+    \subitem {ggSaveTga}, \hyperpage{76}
+    \subitem {ggScale}, \hyperpage{77, 78}
+    \subitem {ggSlerp}, \hyperpage{79, 80}
+    \subitem {ggTranslate}, \hyperpage{81, 82}
+    \subitem {ggTranspose}, \hyperpage{84}
+    \subitem {LightBindingPoint}, \hyperpage{28}
+    \subitem {MaterialBindingPoint}, \hyperpage{28}
+    \subitem {operator+}, \hyperpage{86}
+    \subitem {operator-\/}, \hyperpage{86, 87}
+    \subitem {operator/}, \hyperpage{87}
+    \subitem {operator\texorpdfstring{$\ast$}{*}}, \hyperpage{84}
+  \item {gg.cpp}, \hyperpage{420}
+  \item {gg.h}, \hyperpage{496}
+    \subitem {ggError}, \hyperpage{501}
+    \subitem {ggFBOError}, \hyperpage{501}
+    \subitem {pathChar}, \hyperpage{501}
+    \subitem {pathString}, \hyperpage{501}
+    \subitem {TCharToUtf8}, \hyperpage{501}
+    \subitem {Utf8ToTChar}, \hyperpage{501}
+  \item {gg::GgBuffer$<$ T $>$}, \hyperpage{98}
+    \subitem {\texorpdfstring{$\sim$}{\string~}GgBuffer}, 
+		\hyperpage{101}
+    \subitem {bind}, \hyperpage{101}
+    \subitem {copy}, \hyperpage{101}
+    \subitem {getBuffer}, \hyperpage{102}
+    \subitem {getCount}, \hyperpage{102}
+    \subitem {getStride}, \hyperpage{102}
+    \subitem {getTarget}, \hyperpage{103}
+    \subitem {GgBuffer}, \hyperpage{99, 100}
+    \subitem {map}, \hyperpage{103, 104}
+    \subitem {operator=}, \hyperpage{104}, \hyperpage{106}
+    \subitem {read}, \hyperpage{106}
+    \subitem {send}, \hyperpage{107}
+    \subitem {unbind}, \hyperpage{107}
+    \subitem {unmap}, \hyperpage{108}
+  \item {gg::GgColorTexture}, \hyperpage{108}
+    \subitem {\texorpdfstring{$\sim$}{\string~}GgColorTexture}, 
+		\hyperpage{110}
+    \subitem {bind}, \hyperpage{110}
+    \subitem {get}, \hyperpage{110}
+    \subitem {getHeight}, \hyperpage{110}
+    \subitem {getSize}, \hyperpage{110}
+    \subitem {getTexture}, \hyperpage{111}
+    \subitem {getWidth}, \hyperpage{111}
+    \subitem {GgColorTexture}, \hyperpage{108, 109}
+    \subitem {load}, \hyperpage{111, 112}
+    \subitem {operator bool}, \hyperpage{112}
+    \subitem {operator!}, \hyperpage{113}
+    \subitem {unbind}, \hyperpage{113}
+  \item {gg::GgElements}, \hyperpage{113}
+    \subitem {\texorpdfstring{$\sim$}{\string~}GgElements}, 
+		\hyperpage{116}
+    \subitem {draw}, \hyperpage{116}
+    \subitem {getIndexBuffer}, \hyperpage{116}
+    \subitem {getIndexCount}, \hyperpage{117}
+    \subitem {GgElements}, \hyperpage{115}
+    \subitem {load}, \hyperpage{117}
+    \subitem {send}, \hyperpage{118}
+  \item {gg::GgMatrix}, \hyperpage{119}
+    \subitem {\texorpdfstring{$\sim$}{\string~}GgMatrix}, 
+		\hyperpage{124}
+    \subitem {frustum}, \hyperpage{124}
+    \subitem {get}, \hyperpage{125, 126}
+    \subitem {GgMatrix}, \hyperpage{121--124}
+    \subitem {invert}, \hyperpage{127}
+    \subitem {loadFrustum}, \hyperpage{127}
+    \subitem {loadIdentity}, \hyperpage{128}
+    \subitem {loadInvert}, \hyperpage{128, 129}
+    \subitem {loadLookat}, \hyperpage{129}, \hyperpage{131, 132}
+    \subitem {loadNormal}, \hyperpage{133}
+    \subitem {loadOrthogonal}, \hyperpage{134}
+    \subitem {loadPerspective}, \hyperpage{135}
+    \subitem {loadRotate}, \hyperpage{135}, \hyperpage{137--139}
+    \subitem {loadRotateX}, \hyperpage{140}
+    \subitem {loadRotateY}, \hyperpage{141}
+    \subitem {loadRotateZ}, \hyperpage{141}
+    \subitem {loadScale}, \hyperpage{142, 143}
+    \subitem {loadTranslate}, \hyperpage{144, 145}
+    \subitem {loadTranspose}, \hyperpage{146}
+    \subitem {lookat}, \hyperpage{147, 148}
+    \subitem {normal}, \hyperpage{149}
+    \subitem {operator+}, \hyperpage{153}, \hyperpage{155}
+    \subitem {operator+=}, \hyperpage{155, 156}
+    \subitem {operator-\/}, \hyperpage{157}
+    \subitem {operator-\/=}, \hyperpage{158}
+    \subitem {operator/}, \hyperpage{160, 161}
+    \subitem {operator/=}, \hyperpage{161, 162}
+    \subitem {operator=}, \hyperpage{162, 163}
+    \subitem {operator\texorpdfstring{$\ast$}{*}}, \hyperpage{150, 151}
+    \subitem {operator\texorpdfstring{$\ast$}{*}=}, 
+		\hyperpage{152, 153}
+    \subitem {orthogonal}, \hyperpage{164}
+    \subitem {perspective}, \hyperpage{164}
+    \subitem {projection}, \hyperpage{165, 166}
+    \subitem {rotate}, \hyperpage{166--168}
+    \subitem {rotateX}, \hyperpage{169}
+    \subitem {rotateY}, \hyperpage{170}
+    \subitem {rotateZ}, \hyperpage{170}
+    \subitem {scale}, \hyperpage{171, 172}
+    \subitem {translate}, \hyperpage{173, 174}
+    \subitem {transpose}, \hyperpage{175}
+  \item {gg::GgNormalTexture}, \hyperpage{176}
+    \subitem {\texorpdfstring{$\sim$}{\string~}GgNormalTexture}, 
+		\hyperpage{177}
+    \subitem {bind}, \hyperpage{177}
+    \subitem {get}, \hyperpage{177}
+    \subitem {getHeight}, \hyperpage{178}
+    \subitem {getSize}, \hyperpage{178}
+    \subitem {getTexture}, \hyperpage{178}
+    \subitem {getWidth}, \hyperpage{178}
+    \subitem {GgNormalTexture}, \hyperpage{176, 177}
+    \subitem {load}, \hyperpage{178, 179}
+    \subitem {operator bool}, \hyperpage{180}
+    \subitem {operator!}, \hyperpage{180}
+    \subitem {unbind}, \hyperpage{180}
+  \item {gg::GgPoints}, \hyperpage{180}
+    \subitem {\texorpdfstring{$\sim$}{\string~}GgPoints}, 
+		\hyperpage{183}
+    \subitem {draw}, \hyperpage{183}
+    \subitem {getBuffer}, \hyperpage{183}
+    \subitem {getCount}, \hyperpage{184}
+    \subitem {GgPoints}, \hyperpage{182}
+    \subitem {load}, \hyperpage{184}
+    \subitem {operator bool}, \hyperpage{184}
+    \subitem {operator!}, \hyperpage{185}
+    \subitem {send}, \hyperpage{185}
+  \item {gg::GgPointShader}, \hyperpage{185}
+    \subitem {\texorpdfstring{$\sim$}{\string~}GgPointShader}, 
+		\hyperpage{188}
+    \subitem {get}, \hyperpage{188}
+    \subitem {GgPointShader}, \hyperpage{186--188}
+    \subitem {load}, \hyperpage{189}
+    \subitem {loadMatrix}, \hyperpage{190, 191}
+    \subitem {loadModelviewMatrix}, \hyperpage{192}
+    \subitem {loadProjectionMatrix}, \hyperpage{193}
+    \subitem {unuse}, \hyperpage{194}
+    \subitem {use}, \hyperpage{194--197}
+  \item {gg::GgQuaternion}, \hyperpage{197}
+    \subitem {\texorpdfstring{$\sim$}{\string~}GgQuaternion}, 
+		\hyperpage{204}
+    \subitem {add}, \hyperpage{204, 205}
+    \subitem {conjugate}, \hyperpage{207}
+    \subitem {divide}, \hyperpage{208, 209}
+    \subitem {euler}, \hyperpage{210, 211}
+    \subitem {get}, \hyperpage{212}
+    \subitem {getConjugateMatrix}, \hyperpage{213, 214}
+    \subitem {getMatrix}, \hyperpage{214, 215}
+    \subitem {GgQuaternion}, \hyperpage{201--203}
+    \subitem {invert}, \hyperpage{216}
+    \subitem {loadAdd}, \hyperpage{217, 218}
+    \subitem {loadConjugate}, \hyperpage{219, 220}
+    \subitem {loadDivide}, \hyperpage{220--222}
+    \subitem {loadEuler}, \hyperpage{223}
+    \subitem {loadIdentity}, \hyperpage{224}
+    \subitem {loadInvert}, \hyperpage{225}
+    \subitem {loadMatrix}, \hyperpage{226, 227}
+    \subitem {loadMultiply}, \hyperpage{227, 228}, \hyperpage{230}
+    \subitem {loadNormalize}, \hyperpage{231}
+    \subitem {loadRotate}, \hyperpage{232}, \hyperpage{234}
+    \subitem {loadRotateX}, \hyperpage{235}
+    \subitem {loadRotateY}, \hyperpage{235}
+    \subitem {loadRotateZ}, \hyperpage{236}
+    \subitem {loadSlerp}, \hyperpage{237--239}
+    \subitem {loadSubtract}, \hyperpage{240, 241}
+    \subitem {multiply}, \hyperpage{242--244}
+    \subitem {norm}, \hyperpage{244}
+    \subitem {normalize}, \hyperpage{245}
+    \subitem {operator+}, \hyperpage{248}
+    \subitem {operator+=}, \hyperpage{249}
+    \subitem {operator-\/}, \hyperpage{250}
+    \subitem {operator-\/=}, \hyperpage{251}
+    \subitem {operator/}, \hyperpage{252}
+    \subitem {operator/=}, \hyperpage{253, 254}
+    \subitem {operator=}, \hyperpage{254--256}
+    \subitem {operator\texorpdfstring{$\ast$}{*}}, \hyperpage{246}
+    \subitem {operator\texorpdfstring{$\ast$}{*}=}, \hyperpage{247}
+    \subitem {rotate}, \hyperpage{256, 257}
+    \subitem {rotateX}, \hyperpage{258}
+    \subitem {rotateY}, \hyperpage{259}
+    \subitem {rotateZ}, \hyperpage{259}
+    \subitem {slerp}, \hyperpage{260}
+    \subitem {subtract}, \hyperpage{261, 262}
+  \item {gg::GgShader}, \hyperpage{263}
+    \subitem {\texorpdfstring{$\sim$}{\string~}GgShader}, 
+		\hyperpage{266}
+    \subitem {get}, \hyperpage{266}
+    \subitem {GgShader}, \hyperpage{264--266}
+    \subitem {operator=}, \hyperpage{266}
+    \subitem {unuse}, \hyperpage{267}
+    \subitem {use}, \hyperpage{267}
+  \item {gg::GgShape}, \hyperpage{267}
+    \subitem {\texorpdfstring{$\sim$}{\string~}GgShape}, 
+		\hyperpage{268}
+    \subitem {draw}, \hyperpage{268}
+    \subitem {get}, \hyperpage{269}
+    \subitem {getMode}, \hyperpage{269}
+    \subitem {GgShape}, \hyperpage{268}
+    \subitem {operator bool}, \hyperpage{270}
+    \subitem {operator!}, \hyperpage{270}
+    \subitem {setMode}, \hyperpage{270}
+  \item {gg::GgSimpleObj}, \hyperpage{271}
+    \subitem {\texorpdfstring{$\sim$}{\string~}GgSimpleObj}, 
+		\hyperpage{271}
+    \subitem {draw}, \hyperpage{272}
+    \subitem {get}, \hyperpage{272}
+    \subitem {GgSimpleObj}, \hyperpage{271}
+    \subitem {operator bool}, \hyperpage{272}
+    \subitem {operator!}, \hyperpage{272}
+  \item {gg::GgSimpleShader}, \hyperpage{273}
+    \subitem {\texorpdfstring{$\sim$}{\string~}GgSimpleShader}, 
+		\hyperpage{277}
+    \subitem {GgSimpleShader}, \hyperpage{274--276}
+    \subitem {load}, \hyperpage{277}
+    \subitem {loadMatrix}, \hyperpage{278--280}
+    \subitem {loadModelviewMatrix}, \hyperpage{281, 282}
+    \subitem {operator=}, \hyperpage{283}
+    \subitem {use}, \hyperpage{284--291}
+  \item {gg::GgSimpleShader::Light}, \hyperpage{349}
+    \subitem {ambient}, \hyperpage{350}
+    \subitem {diffuse}, \hyperpage{350}
+    \subitem {position}, \hyperpage{350}
+    \subitem {specular}, \hyperpage{350}
+  \item {gg::GgSimpleShader::LightBuffer}, \hyperpage{350}
+    \subitem {\texorpdfstring{$\sim$}{\string~}LightBuffer}, 
+		\hyperpage{354}
+    \subitem {LightBuffer}, \hyperpage{352, 353}
+    \subitem {load}, \hyperpage{354, 355}
+    \subitem {loadAmbient}, \hyperpage{355, 356}
+    \subitem {loadColor}, \hyperpage{357}
+    \subitem {loadDiffuse}, \hyperpage{358, 359}
+    \subitem {loadPosition}, \hyperpage{360--362}
+    \subitem {loadSpecular}, \hyperpage{363, 364}
+    \subitem {select}, \hyperpage{365}
+  \item {gg::GgSimpleShader::Material}, \hyperpage{366}
+    \subitem {ambient}, \hyperpage{367}
+    \subitem {diffuse}, \hyperpage{367}
+    \subitem {shininess}, \hyperpage{367}
+    \subitem {specular}, \hyperpage{368}
+  \item {gg::GgSimpleShader::MaterialBuffer}, \hyperpage{368}
+    \subitem {\texorpdfstring{$\sim$}{\string~}MaterialBuffer}, 
+		\hyperpage{372}
+    \subitem {load}, \hyperpage{372, 373}
+    \subitem {loadAmbient}, \hyperpage{373--375}
+    \subitem {loadAmbientAndDiffuse}, \hyperpage{375--377}
+    \subitem {loadDiffuse}, \hyperpage{378, 379}
+    \subitem {loadShininess}, \hyperpage{380}
+    \subitem {loadSpecular}, \hyperpage{381, 382}
+    \subitem {MaterialBuffer}, \hyperpage{370, 371}
+    \subitem {select}, \hyperpage{383}
+  \item {gg::GgTexture}, \hyperpage{292}
+    \subitem {\texorpdfstring{$\sim$}{\string~}GgTexture}, 
+		\hyperpage{295}
+    \subitem {bind}, \hyperpage{295}
+    \subitem {getHeight}, \hyperpage{295}
+    \subitem {getSize}, \hyperpage{295}
+    \subitem {getTexture}, \hyperpage{296}
+    \subitem {getWidth}, \hyperpage{296}
+    \subitem {GgTexture}, \hyperpage{293, 294}
+    \subitem {operator=}, \hyperpage{296, 297}
+    \subitem {swapRandB}, \hyperpage{297}
+    \subitem {unbind}, \hyperpage{298}
+  \item {gg::GgTrackball}, \hyperpage{298}
+    \subitem {\texorpdfstring{$\sim$}{\string~}GgTrackball}, 
+		\hyperpage{303}
+    \subitem {begin}, \hyperpage{303}
+    \subitem {end}, \hyperpage{303}
+    \subitem {get}, \hyperpage{304}
+    \subitem {getMatrix}, \hyperpage{304}
+    \subitem {getQuaternion}, \hyperpage{304}
+    \subitem {getScale}, \hyperpage{304, 305}
+    \subitem {getStart}, \hyperpage{305}
+    \subitem {GgTrackball}, \hyperpage{302}
+    \subitem {motion}, \hyperpage{306}
+    \subitem {operator=}, \hyperpage{306}
+    \subitem {region}, \hyperpage{307}
+    \subitem {reset}, \hyperpage{308}
+    \subitem {rotate}, \hyperpage{309}
+  \item {gg::GgTriangles}, \hyperpage{309}
+    \subitem {\texorpdfstring{$\sim$}{\string~}GgTriangles}, 
+		\hyperpage{312}
+    \subitem {draw}, \hyperpage{312}
+    \subitem {getBuffer}, \hyperpage{313}
+    \subitem {getCount}, \hyperpage{313}
+    \subitem {GgTriangles}, \hyperpage{311}
+    \subitem {load}, \hyperpage{313}
+    \subitem {send}, \hyperpage{314}
+  \item {gg::GgUniformBuffer$<$ T $>$}, \hyperpage{314}
+    \subitem {\texorpdfstring{$\sim$}{\string~}GgUniformBuffer}, 
+		\hyperpage{316}
+    \subitem {bind}, \hyperpage{317}
+    \subitem {copy}, \hyperpage{317}
+    \subitem {fill}, \hyperpage{318}
+    \subitem {getBuffer}, \hyperpage{319}
+    \subitem {getCount}, \hyperpage{320}
+    \subitem {getStride}, \hyperpage{320}
+    \subitem {getTarget}, \hyperpage{321}
+    \subitem {GgUniformBuffer}, \hyperpage{315, 316}
+    \subitem {load}, \hyperpage{321, 322}
+    \subitem {map}, \hyperpage{323}
+    \subitem {read}, \hyperpage{324}
+    \subitem {send}, \hyperpage{325}
+    \subitem {unbind}, \hyperpage{326}
+    \subitem {unmap}, \hyperpage{326}
+  \item {gg::GgVector}, \hyperpage{327}
+    \subitem {\texorpdfstring{$\sim$}{\string~}GgVector}, 
+		\hyperpage{331}
+    \subitem {distance3}, \hyperpage{331}
+    \subitem {distance4}, \hyperpage{332}
+    \subitem {dot3}, \hyperpage{332}
+    \subitem {dot4}, \hyperpage{333}
+    \subitem {GgVector}, \hyperpage{328--331}
+    \subitem {length3}, \hyperpage{333}
+    \subitem {length4}, \hyperpage{334}
+    \subitem {normalize3}, \hyperpage{334}
+    \subitem {normalize4}, \hyperpage{335}
+    \subitem {operator+}, \hyperpage{337}
+    \subitem {operator+=}, \hyperpage{338}
+    \subitem {operator-\/}, \hyperpage{339}
+    \subitem {operator-\/=}, \hyperpage{340}
+    \subitem {operator/}, \hyperpage{341}
+    \subitem {operator/=}, \hyperpage{342}
+    \subitem {operator=}, \hyperpage{343}
+    \subitem {operator\texorpdfstring{$\ast$}{*}}, \hyperpage{335}
+    \subitem {operator\texorpdfstring{$\ast$}{*}=}, \hyperpage{336}
+  \item {gg::GgVertex}, \hyperpage{344}
+    \subitem {GgVertex}, \hyperpage{344, 345}
+    \subitem {normal}, \hyperpage{346}
+    \subitem {position}, \hyperpage{346}
+  \item {gg::GgVertexArray}, \hyperpage{346}
+    \subitem {\texorpdfstring{$\sim$}{\string~}GgVertexArray}, 
+		\hyperpage{348}
+    \subitem {bind}, \hyperpage{348}
+    \subitem {get}, \hyperpage{348}
+    \subitem {GgVertexArray}, \hyperpage{347, 348}
+    \subitem {operator=}, \hyperpage{348}
+  \item {GG\_BUTTON\_COUNT}
+    \subitem {GgApp.h}, \hyperpage{578}
+  \item {GG\_INTERFACE\_COUNT}
+    \subitem {GgApp.h}, \hyperpage{578}
+  \item {GG\_USE\_IMGUI}
+    \subitem {GgApp.h}, \hyperpage{578}
+  \item {GgApp}, \hyperpage{93}
+    \subitem {\texorpdfstring{$\sim$}{\string~}GgApp}, \hyperpage{95}
+    \subitem {getUsername}, \hyperpage{95}
+    \subitem {GgApp}, \hyperpage{94, 95}
+    \subitem {main}, \hyperpage{96}
+    \subitem {operator=}, \hyperpage{97, 98}
+  \item {GgApp.cpp}, \hyperpage{558}
+  \item {GgApp.h}, \hyperpage{577}
+    \subitem {GG\_BUTTON\_COUNT}, \hyperpage{578}
+    \subitem {GG\_INTERFACE\_COUNT}, \hyperpage{578}
+    \subitem {GG\_USE\_IMGUI}, \hyperpage{578}
+  \item {GgApp::Window}, \hyperpage{387}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Window}, \hyperpage{391}
+    \subitem {get}, \hyperpage{391}
+    \subitem {getAltArrow}, \hyperpage{391}
+    \subitem {getAltArrowX}, \hyperpage{391}
+    \subitem {getAltArrowY}, \hyperpage{392}
+    \subitem {getArrow}, \hyperpage{393}
+    \subitem {getArrowX}, \hyperpage{394}
+    \subitem {getArrowY}, \hyperpage{395}
+    \subitem {getAspect}, \hyperpage{395}
+    \subitem {getControlArrow}, \hyperpage{396}
+    \subitem {getControlArrowX}, \hyperpage{396}
+    \subitem {getControlArrowY}, \hyperpage{397}
+    \subitem {getFboHeight}, \hyperpage{398}
+    \subitem {getFboSize}, \hyperpage{398}
+    \subitem {getFboWidth}, \hyperpage{399}
+    \subitem {getHeight}, \hyperpage{399}
+    \subitem {getKey}, \hyperpage{399}
+    \subitem {getLastKey}, \hyperpage{400}
+    \subitem {getMouse}, \hyperpage{400}
+    \subitem {getMouseX}, \hyperpage{400}
+    \subitem {getMouseY}, \hyperpage{401}
+    \subitem {getRotation}, \hyperpage{401}
+    \subitem {getRotationMatrix}, \hyperpage{401}
+    \subitem {getScrollMatrix}, \hyperpage{402}
+    \subitem {getShiftArrow}, \hyperpage{402}
+    \subitem {getShiftArrowX}, \hyperpage{402}
+    \subitem {getShiftArrowY}, \hyperpage{403}
+    \subitem {getSize}, \hyperpage{404}
+    \subitem {getTranslation}, \hyperpage{404}
+    \subitem {getTranslationMatrix}, \hyperpage{405}
+    \subitem {getUserPointer}, \hyperpage{405}
+    \subitem {getWheel}, \hyperpage{405, 406}
+    \subitem {getWheelX}, \hyperpage{406}
+    \subitem {getWheelY}, \hyperpage{406}
+    \subitem {getWidth}, \hyperpage{406}
+    \subitem {operator bool}, \hyperpage{407}
+    \subitem {operator=}, \hyperpage{407, 408}
+    \subitem {reset}, \hyperpage{408}
+    \subitem {resetRotation}, \hyperpage{408}
+    \subitem {resetTranslation}, \hyperpage{409}
+    \subitem {restoreViewport}, \hyperpage{409}
+    \subitem {selectInterface}, \hyperpage{409}
+    \subitem {setClose}, \hyperpage{410}
+    \subitem {setKeyboardFunc}, \hyperpage{410}
+    \subitem {setMouseFunc}, \hyperpage{410}
+    \subitem {setResizeFunc}, \hyperpage{411}
+    \subitem {setUserPointer}, \hyperpage{411}
+    \subitem {setVelocity}, \hyperpage{411}
+    \subitem {setWheelFunc}, \hyperpage{412}
+    \subitem {shouldClose}, \hyperpage{412}
+    \subitem {swapBuffers}, \hyperpage{412}
+    \subitem {updateViewport}, \hyperpage{413}
+    \subitem {Window}, \hyperpage{389, 390}
+  \item {ggArraysObj}
+    \subitem {gg}, \hyperpage{28}
+  \item {GgBuffer}
+    \subitem {gg::GgBuffer$<$ T $>$}, \hyperpage{99, 100}
+  \item {ggBufferAlignment}
+    \subitem {gg}, \hyperpage{87}
+  \item {GgColorTexture}
+    \subitem {gg::GgColorTexture}, \hyperpage{108, 109}
+  \item {ggConjugate}
+    \subitem {gg}, \hyperpage{29}
+  \item {ggCreateComputeShader}
+    \subitem {gg}, \hyperpage{29}
+  \item {ggCreateNormalMap}
+    \subitem {gg}, \hyperpage{30}
+  \item {ggCreateShader}
+    \subitem {gg}, \hyperpage{31}
+  \item {ggCross}
+    \subitem {gg}, \hyperpage{32}
+  \item {ggDistance3}
+    \subitem {gg}, \hyperpage{33}
+  \item {ggDistance4}
+    \subitem {gg}, \hyperpage{34, 35}
+  \item {ggDot3}
+    \subitem {gg}, \hyperpage{35, 36}
+  \item {ggDot4}
+    \subitem {gg}, \hyperpage{37}
+  \item {GgElements}
+    \subitem {gg::GgElements}, \hyperpage{115}
+  \item {ggElementsMesh}
+    \subitem {gg}, \hyperpage{38}
+  \item {ggElementsObj}
+    \subitem {gg}, \hyperpage{39}
+  \item {ggElementsSphere}
+    \subitem {gg}, \hyperpage{40}
+  \item {ggEllipse}
+    \subitem {gg}, \hyperpage{40}
+  \item {ggError}
+    \subitem {gg.h}, \hyperpage{501}
+  \item {ggEulerQuaternion}
+    \subitem {gg}, \hyperpage{42, 43}
+  \item {ggFBOError}
+    \subitem {gg.h}, \hyperpage{501}
+  \item {ggFrustum}
+    \subitem {gg}, \hyperpage{44}
+  \item {ggIdentity}
+    \subitem {gg}, \hyperpage{44}
+  \item {ggIdentityQuaternion}
+    \subitem {gg}, \hyperpage{45}
+  \item {ggInit}
+    \subitem {gg}, \hyperpage{45}
+  \item {ggInvert}
+    \subitem {gg}, \hyperpage{46}
+  \item {ggLength3}
+    \subitem {gg}, \hyperpage{47}
+  \item {ggLength4}
+    \subitem {gg}, \hyperpage{48, 49}
+  \item {ggLoadComputeShader}
+    \subitem {gg}, \hyperpage{49}
+  \item {ggLoadHeight}
+    \subitem {gg}, \hyperpage{50}
+  \item {ggLoadImage}
+    \subitem {gg}, \hyperpage{51}
+  \item {ggLoadShader}
+    \subitem {gg}, \hyperpage{51, 52}
+  \item {ggLoadSimpleObj}
+    \subitem {gg}, \hyperpage{53, 54}
+  \item {ggLoadTexture}
+    \subitem {gg}, \hyperpage{54}
+  \item {ggLookat}
+    \subitem {gg}, \hyperpage{55, 56}
+  \item {GgMatrix}
+    \subitem {gg::GgMatrix}, \hyperpage{121--124}
+  \item {ggMatrixQuaternion}
+    \subitem {gg}, \hyperpage{57, 58}
+  \item {ggNorm}
+    \subitem {gg}, \hyperpage{59}
+  \item {ggNormal}
+    \subitem {gg}, \hyperpage{59}
+  \item {ggNormalize}
+    \subitem {gg}, \hyperpage{59}
+  \item {ggNormalize3}
+    \subitem {gg}, \hyperpage{60--62}
+  \item {ggNormalize4}
+    \subitem {gg}, \hyperpage{62--64}
+  \item {GgNormalTexture}
+    \subitem {gg::GgNormalTexture}, \hyperpage{176, 177}
+  \item {ggOrthogonal}
+    \subitem {gg}, \hyperpage{64}
+  \item {ggPerspective}
+    \subitem {gg}, \hyperpage{65}
+  \item {GgPoints}
+    \subitem {gg::GgPoints}, \hyperpage{182}
+  \item {ggPointsCube}
+    \subitem {gg}, \hyperpage{66}
+  \item {GgPointShader}
+    \subitem {gg::GgPointShader}, \hyperpage{186--188}
+  \item {ggPointsSphere}
+    \subitem {gg}, \hyperpage{66}
+  \item {GgQuaternion}
+    \subitem {gg::GgQuaternion}, \hyperpage{201--203}
+  \item {ggQuaternionMatrix}
+    \subitem {gg}, \hyperpage{67}
+  \item {ggQuaternionTransposeMatrix}
+    \subitem {gg}, \hyperpage{67}
+  \item {ggReadImage}
+    \subitem {gg}, \hyperpage{68}
+  \item {ggRectangle}
+    \subitem {gg}, \hyperpage{69}
+  \item {ggRotate}
+    \subitem {gg}, \hyperpage{69--71}
+  \item {ggRotateQuaternion}
+    \subitem {gg}, \hyperpage{72, 73}
+  \item {ggRotateX}
+    \subitem {gg}, \hyperpage{74}
+  \item {ggRotateY}
+    \subitem {gg}, \hyperpage{74}
+  \item {ggRotateZ}
+    \subitem {gg}, \hyperpage{75}
+  \item {ggsample01}, \hyperpage{13}
+  \item {ggsample01.cpp}, \hyperpage{587}
+    \subitem {CONFIG\_FILE}, \hyperpage{587}
+    \subitem {PROJECT\_NAME}, \hyperpage{587}
+  \item {ggSaveColor}
+    \subitem {gg}, \hyperpage{75}
+  \item {ggSaveDepth}
+    \subitem {gg}, \hyperpage{76}
+  \item {ggSaveTga}
+    \subitem {gg}, \hyperpage{76}
+  \item {ggScale}
+    \subitem {gg}, \hyperpage{77, 78}
+  \item {GgShader}
+    \subitem {gg::GgShader}, \hyperpage{264--266}
+  \item {GgShape}
+    \subitem {gg::GgShape}, \hyperpage{268}
+  \item {GgSimpleObj}
+    \subitem {gg::GgSimpleObj}, \hyperpage{271}
+  \item {GgSimpleShader}
+    \subitem {gg::GgSimpleShader}, \hyperpage{274--276}
+  \item {ggSlerp}
+    \subitem {gg}, \hyperpage{79, 80}
+  \item {GgTexture}
+    \subitem {gg::GgTexture}, \hyperpage{293, 294}
+  \item {GgTrackball}
+    \subitem {gg::GgTrackball}, \hyperpage{302}
+  \item {ggTranslate}
+    \subitem {gg}, \hyperpage{81, 82}
+  \item {ggTranspose}
+    \subitem {gg}, \hyperpage{84}
+  \item {GgTriangles}
+    \subitem {gg::GgTriangles}, \hyperpage{311}
+  \item {GgUniformBuffer}
+    \subitem {gg::GgUniformBuffer$<$ T $>$}, \hyperpage{315, 316}
+  \item {GgVector}
+    \subitem {gg::GgVector}, \hyperpage{328--331}
+  \item {GgVertex}
+    \subitem {gg::GgVertex}, \hyperpage{344, 345}
+  \item {GgVertexArray}
+    \subitem {gg::GgVertexArray}, \hyperpage{347, 348}
+
+  \indexspace
+
+  \item {HEADER\_STR}
+    \subitem {main.cpp}, \hyperpage{589}
+
+  \indexspace
+
+  \item {invert}
+    \subitem {gg::GgMatrix}, \hyperpage{127}
+    \subitem {gg::GgQuaternion}, \hyperpage{216}
+
+  \indexspace
+
+  \item {length3}
+    \subitem {gg::GgVector}, \hyperpage{333}
+  \item {length4}
+    \subitem {gg::GgVector}, \hyperpage{334}
+  \item {LightBindingPoint}
+    \subitem {gg}, \hyperpage{28}
+  \item {LightBuffer}
+    \subitem {gg::GgSimpleShader::LightBuffer}, \hyperpage{352, 353}
+  \item {load}
+    \subitem {Config}, \hyperpage{91}
+    \subitem {gg::GgColorTexture}, \hyperpage{111, 112}
+    \subitem {gg::GgElements}, \hyperpage{117}
+    \subitem {gg::GgNormalTexture}, \hyperpage{178, 179}
+    \subitem {gg::GgPoints}, \hyperpage{184}
+    \subitem {gg::GgPointShader}, \hyperpage{189}
+    \subitem {gg::GgSimpleShader}, \hyperpage{277}
+    \subitem {gg::GgSimpleShader::LightBuffer}, \hyperpage{354, 355}
+    \subitem {gg::GgSimpleShader::MaterialBuffer}, \hyperpage{372, 373}
+    \subitem {gg::GgTriangles}, \hyperpage{313}
+    \subitem {gg::GgUniformBuffer$<$ T $>$}, \hyperpage{321, 322}
+  \item {loadAdd}
+    \subitem {gg::GgQuaternion}, \hyperpage{217, 218}
+  \item {loadAmbient}
+    \subitem {gg::GgSimpleShader::LightBuffer}, \hyperpage{355, 356}
+    \subitem {gg::GgSimpleShader::MaterialBuffer}, \hyperpage{373--375}
+  \item {loadAmbientAndDiffuse}
+    \subitem {gg::GgSimpleShader::MaterialBuffer}, \hyperpage{375--377}
+  \item {loadColor}
+    \subitem {gg::GgSimpleShader::LightBuffer}, \hyperpage{357}
+  \item {loadConjugate}
+    \subitem {gg::GgQuaternion}, \hyperpage{219, 220}
+  \item {loadDiffuse}
+    \subitem {gg::GgSimpleShader::LightBuffer}, \hyperpage{358, 359}
+    \subitem {gg::GgSimpleShader::MaterialBuffer}, \hyperpage{378, 379}
+  \item {loadDivide}
+    \subitem {gg::GgQuaternion}, \hyperpage{220--222}
+  \item {loadEuler}
+    \subitem {gg::GgQuaternion}, \hyperpage{223}
+  \item {loadFrustum}
+    \subitem {gg::GgMatrix}, \hyperpage{127}
+  \item {loadIdentity}
+    \subitem {gg::GgMatrix}, \hyperpage{128}
+    \subitem {gg::GgQuaternion}, \hyperpage{224}
+  \item {loadInvert}
+    \subitem {gg::GgMatrix}, \hyperpage{128, 129}
+    \subitem {gg::GgQuaternion}, \hyperpage{225}
+  \item {loadLookat}
+    \subitem {gg::GgMatrix}, \hyperpage{129}, \hyperpage{131, 132}
+  \item {loadMatrix}
+    \subitem {gg::GgPointShader}, \hyperpage{190, 191}
+    \subitem {gg::GgQuaternion}, \hyperpage{226, 227}
+    \subitem {gg::GgSimpleShader}, \hyperpage{278--280}
+  \item {loadModelviewMatrix}
+    \subitem {gg::GgPointShader}, \hyperpage{192}
+    \subitem {gg::GgSimpleShader}, \hyperpage{281, 282}
+  \item {loadMultiply}
+    \subitem {gg::GgQuaternion}, \hyperpage{227, 228}, \hyperpage{230}
+  \item {loadNormal}
+    \subitem {gg::GgMatrix}, \hyperpage{133}
+  \item {loadNormalize}
+    \subitem {gg::GgQuaternion}, \hyperpage{231}
+  \item {loadOrthogonal}
+    \subitem {gg::GgMatrix}, \hyperpage{134}
+  \item {loadPerspective}
+    \subitem {gg::GgMatrix}, \hyperpage{135}
+  \item {loadPosition}
+    \subitem {gg::GgSimpleShader::LightBuffer}, \hyperpage{360--362}
+  \item {loadProjectionMatrix}
+    \subitem {gg::GgPointShader}, \hyperpage{193}
+  \item {loadRotate}
+    \subitem {gg::GgMatrix}, \hyperpage{135}, \hyperpage{137--139}
+    \subitem {gg::GgQuaternion}, \hyperpage{232}, \hyperpage{234}
+  \item {loadRotateX}
+    \subitem {gg::GgMatrix}, \hyperpage{140}
+    \subitem {gg::GgQuaternion}, \hyperpage{235}
+  \item {loadRotateY}
+    \subitem {gg::GgMatrix}, \hyperpage{141}
+    \subitem {gg::GgQuaternion}, \hyperpage{235}
+  \item {loadRotateZ}
+    \subitem {gg::GgMatrix}, \hyperpage{141}
+    \subitem {gg::GgQuaternion}, \hyperpage{236}
+  \item {loadScale}
+    \subitem {gg::GgMatrix}, \hyperpage{142, 143}
+  \item {loadShininess}
+    \subitem {gg::GgSimpleShader::MaterialBuffer}, \hyperpage{380}
+  \item {loadSlerp}
+    \subitem {gg::GgQuaternion}, \hyperpage{237--239}
+  \item {loadSpecular}
+    \subitem {gg::GgSimpleShader::LightBuffer}, \hyperpage{363, 364}
+    \subitem {gg::GgSimpleShader::MaterialBuffer}, \hyperpage{381, 382}
+  \item {loadSubtract}
+    \subitem {gg::GgQuaternion}, \hyperpage{240, 241}
+  \item {loadTranslate}
+    \subitem {gg::GgMatrix}, \hyperpage{144, 145}
+  \item {loadTranspose}
+    \subitem {gg::GgMatrix}, \hyperpage{146}
+  \item {lookat}
+    \subitem {gg::GgMatrix}, \hyperpage{147, 148}
+
+  \indexspace
+
+  \item {main}
+    \subitem {GgApp}, \hyperpage{96}
+    \subitem {main.cpp}, \hyperpage{589}
+  \item {main.cpp}, \hyperpage{589}
+    \subitem {HEADER\_STR}, \hyperpage{589}
+    \subitem {main}, \hyperpage{589}
+  \item {map}
+    \subitem {gg::GgBuffer$<$ T $>$}, \hyperpage{103, 104}
+    \subitem {gg::GgUniformBuffer$<$ T $>$}, \hyperpage{323}
+  \item {MaterialBindingPoint}
+    \subitem {gg}, \hyperpage{28}
+  \item {MaterialBuffer}
+    \subitem {gg::GgSimpleShader::MaterialBuffer}, \hyperpage{370, 371}
+  \item {Menu}, \hyperpage{384}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Menu}, \hyperpage{385}
+    \subitem {Config}, \hyperpage{93}
+    \subitem {draw}, \hyperpage{386}
+    \subitem {getLight}, \hyperpage{386}
+    \subitem {getModel}, \hyperpage{386}
+    \subitem {getShader}, \hyperpage{386}
+    \subitem {Menu}, \hyperpage{384, 385}
+    \subitem {operator=}, \hyperpage{387}
+    \subitem {Scene}, \hyperpage{387}
+  \item {Menu.cpp}, \hyperpage{591}
+  \item {Menu.h}, \hyperpage{593}
+  \item {motion}
+    \subitem {gg::GgTrackball}, \hyperpage{306}
+  \item {multiply}
+    \subitem {gg::GgQuaternion}, \hyperpage{242--244}
+
+  \indexspace
+
+  \item {norm}
+    \subitem {gg::GgQuaternion}, \hyperpage{244}
+  \item {normal}
+    \subitem {gg::GgMatrix}, \hyperpage{149}
+    \subitem {gg::GgVertex}, \hyperpage{346}
+  \item {normalize}
+    \subitem {gg::GgQuaternion}, \hyperpage{245}
+  \item {normalize3}
+    \subitem {gg::GgVector}, \hyperpage{334}
+  \item {normalize4}
+    \subitem {gg::GgVector}, \hyperpage{335}
+
+  \indexspace
+
+  \item {OpenXR ラッパー ($<$tt$>$GgApp::OpenXR$<$/tt$>$) マニュアル＆使用方法解説}, 
+		\hyperpage{3}
+  \item {OPENXR.md}, \hyperpage{595}
+  \item {operator bool}
+    \subitem {gg::GgColorTexture}, \hyperpage{112}
+    \subitem {gg::GgNormalTexture}, \hyperpage{180}
+    \subitem {gg::GgPoints}, \hyperpage{184}
+    \subitem {gg::GgShape}, \hyperpage{270}
+    \subitem {gg::GgSimpleObj}, \hyperpage{272}
+    \subitem {GgApp::Window}, \hyperpage{407}
+  \item {operator!}
+    \subitem {gg::GgColorTexture}, \hyperpage{113}
+    \subitem {gg::GgNormalTexture}, \hyperpage{180}
+    \subitem {gg::GgPoints}, \hyperpage{185}
+    \subitem {gg::GgShape}, \hyperpage{270}
+    \subitem {gg::GgSimpleObj}, \hyperpage{272}
+  \item {operator+}
+    \subitem {gg}, \hyperpage{86}
+    \subitem {gg::GgMatrix}, \hyperpage{153}, \hyperpage{155}
+    \subitem {gg::GgQuaternion}, \hyperpage{248}
+    \subitem {gg::GgVector}, \hyperpage{337}
+  \item {operator+=}
+    \subitem {gg::GgMatrix}, \hyperpage{155, 156}
+    \subitem {gg::GgQuaternion}, \hyperpage{249}
+    \subitem {gg::GgVector}, \hyperpage{338}
+  \item {operator-\/}
+    \subitem {gg}, \hyperpage{86, 87}
+    \subitem {gg::GgMatrix}, \hyperpage{157}
+    \subitem {gg::GgQuaternion}, \hyperpage{250}
+    \subitem {gg::GgVector}, \hyperpage{339}
+  \item {operator-\/=}
+    \subitem {gg::GgMatrix}, \hyperpage{158}
+    \subitem {gg::GgQuaternion}, \hyperpage{251}
+    \subitem {gg::GgVector}, \hyperpage{340}
+  \item {operator/}
+    \subitem {gg}, \hyperpage{87}
+    \subitem {gg::GgMatrix}, \hyperpage{160, 161}
+    \subitem {gg::GgQuaternion}, \hyperpage{252}
+    \subitem {gg::GgVector}, \hyperpage{341}
+  \item {operator/=}
+    \subitem {gg::GgMatrix}, \hyperpage{161, 162}
+    \subitem {gg::GgQuaternion}, \hyperpage{253, 254}
+    \subitem {gg::GgVector}, \hyperpage{342}
+  \item {operator=}
+    \subitem {gg::GgBuffer$<$ T $>$}, \hyperpage{104}, \hyperpage{106}
+    \subitem {gg::GgMatrix}, \hyperpage{162, 163}
+    \subitem {gg::GgQuaternion}, \hyperpage{254--256}
+    \subitem {gg::GgShader}, \hyperpage{266}
+    \subitem {gg::GgSimpleShader}, \hyperpage{283}
+    \subitem {gg::GgTexture}, \hyperpage{296, 297}
+    \subitem {gg::GgTrackball}, \hyperpage{306}
+    \subitem {gg::GgVector}, \hyperpage{343}
+    \subitem {gg::GgVertexArray}, \hyperpage{348}
+    \subitem {GgApp}, \hyperpage{97, 98}
+    \subitem {GgApp::Window}, \hyperpage{407, 408}
+    \subitem {Menu}, \hyperpage{387}
+  \item {operator\texorpdfstring{$\ast$}{*}}
+    \subitem {gg}, \hyperpage{84}
+    \subitem {gg::GgMatrix}, \hyperpage{150, 151}
+    \subitem {gg::GgQuaternion}, \hyperpage{246}
+    \subitem {gg::GgVector}, \hyperpage{335}
+  \item {operator\texorpdfstring{$\ast$}{*}=}
+    \subitem {gg::GgMatrix}, \hyperpage{152, 153}
+    \subitem {gg::GgQuaternion}, \hyperpage{247}
+    \subitem {gg::GgVector}, \hyperpage{336}
+  \item {orthogonal}
+    \subitem {gg::GgMatrix}, \hyperpage{164}
+
+  \indexspace
+
+  \item {parseconfig.h}, \hyperpage{595}
+    \subitem {getString}, \hyperpage{597, 598}
+    \subitem {getValue}, \hyperpage{598, 599}
+    \subitem {getVector}, \hyperpage{600}
+    \subitem {setString}, \hyperpage{601, 602}
+    \subitem {setValue}, \hyperpage{602, 603}
+    \subitem {setVector}, \hyperpage{604}
+  \item {pathChar}
+    \subitem {gg.h}, \hyperpage{501}
+  \item {pathString}
+    \subitem {gg.h}, \hyperpage{501}
+  \item {perspective}
+    \subitem {gg::GgMatrix}, \hyperpage{164}
+  \item {position}
+    \subitem {gg::GgSimpleShader::Light}, \hyperpage{350}
+    \subitem {gg::GgVertex}, \hyperpage{346}
+  \item {PROJECT\_NAME}
+    \subitem {ggsample01.cpp}, \hyperpage{587}
+  \item {projection}
+    \subitem {gg::GgMatrix}, \hyperpage{165, 166}
+
+  \indexspace
+
+  \item {read}
+    \subitem {gg::GgBuffer$<$ T $>$}, \hyperpage{106}
+    \subitem {gg::GgUniformBuffer$<$ T $>$}, \hyperpage{324}
+  \item {README.md}, \hyperpage{608}
+  \item {region}
+    \subitem {gg::GgTrackball}, \hyperpage{307}
+  \item {reset}
+    \subitem {gg::GgTrackball}, \hyperpage{308}
+    \subitem {GgApp::Window}, \hyperpage{408}
+  \item {resetRotation}
+    \subitem {GgApp::Window}, \hyperpage{408}
+  \item {resetTranslation}
+    \subitem {GgApp::Window}, \hyperpage{409}
+  \item {restoreViewport}
+    \subitem {GgApp::Window}, \hyperpage{409}
+  \item {rotate}
+    \subitem {gg::GgMatrix}, \hyperpage{166--168}
+    \subitem {gg::GgQuaternion}, \hyperpage{256, 257}
+    \subitem {gg::GgTrackball}, \hyperpage{309}
+  \item {rotateX}
+    \subitem {gg::GgMatrix}, \hyperpage{169}
+    \subitem {gg::GgQuaternion}, \hyperpage{258}
+  \item {rotateY}
+    \subitem {gg::GgMatrix}, \hyperpage{170}
+    \subitem {gg::GgQuaternion}, \hyperpage{259}
+  \item {rotateZ}
+    \subitem {gg::GgMatrix}, \hyperpage{170}
+    \subitem {gg::GgQuaternion}, \hyperpage{259}
+
+  \indexspace
+
+  \item {save}
+    \subitem {Config}, \hyperpage{92}
+  \item {scale}
+    \subitem {gg::GgMatrix}, \hyperpage{171, 172}
+  \item {Scene}
+    \subitem {Menu}, \hyperpage{387}
+  \item {select}
+    \subitem {gg::GgSimpleShader::LightBuffer}, \hyperpage{365}
+    \subitem {gg::GgSimpleShader::MaterialBuffer}, \hyperpage{383}
+  \item {selectInterface}
+    \subitem {GgApp::Window}, \hyperpage{409}
+  \item {send}
+    \subitem {gg::GgBuffer$<$ T $>$}, \hyperpage{107}
+    \subitem {gg::GgElements}, \hyperpage{118}
+    \subitem {gg::GgPoints}, \hyperpage{185}
+    \subitem {gg::GgTriangles}, \hyperpage{314}
+    \subitem {gg::GgUniformBuffer$<$ T $>$}, \hyperpage{325}
+  \item {setClose}
+    \subitem {GgApp::Window}, \hyperpage{410}
+  \item {setKeyboardFunc}
+    \subitem {GgApp::Window}, \hyperpage{410}
+  \item {setMode}
+    \subitem {gg::GgShape}, \hyperpage{270}
+  \item {setMouseFunc}
+    \subitem {GgApp::Window}, \hyperpage{410}
+  \item {setResizeFunc}
+    \subitem {GgApp::Window}, \hyperpage{411}
+  \item {setString}
+    \subitem {parseconfig.h}, \hyperpage{601, 602}
+  \item {setUserPointer}
+    \subitem {GgApp::Window}, \hyperpage{411}
+  \item {setValue}
+    \subitem {parseconfig.h}, \hyperpage{602, 603}
+  \item {setVector}
+    \subitem {parseconfig.h}, \hyperpage{604}
+  \item {setVelocity}
+    \subitem {GgApp::Window}, \hyperpage{411}
+  \item {setWheelFunc}
+    \subitem {GgApp::Window}, \hyperpage{412}
+  \item {shininess}
+    \subitem {gg::GgSimpleShader::Material}, \hyperpage{367}
+  \item {shouldClose}
+    \subitem {GgApp::Window}, \hyperpage{412}
+  \item {slerp}
+    \subitem {gg::GgQuaternion}, \hyperpage{260}
+  \item {specular}
+    \subitem {gg::GgSimpleShader::Light}, \hyperpage{350}
+    \subitem {gg::GgSimpleShader::Material}, \hyperpage{368}
+  \item {subtract}
+    \subitem {gg::GgQuaternion}, \hyperpage{261, 262}
+  \item {swapBuffers}
+    \subitem {GgApp::Window}, \hyperpage{412}
+  \item {swapRandB}
+    \subitem {gg::GgTexture}, \hyperpage{297}
+
+  \indexspace
+
+  \item {TCharToUtf8}
+    \subitem {gg.h}, \hyperpage{501}
+  \item {translate}
+    \subitem {gg::GgMatrix}, \hyperpage{173, 174}
+  \item {transpose}
+    \subitem {gg::GgMatrix}, \hyperpage{175}
+
+  \indexspace
+
+  \item {unbind}
+    \subitem {gg::GgBuffer$<$ T $>$}, \hyperpage{107}
+    \subitem {gg::GgColorTexture}, \hyperpage{113}
+    \subitem {gg::GgNormalTexture}, \hyperpage{180}
+    \subitem {gg::GgTexture}, \hyperpage{298}
+    \subitem {gg::GgUniformBuffer$<$ T $>$}, \hyperpage{326}
+  \item {unmap}
+    \subitem {gg::GgBuffer$<$ T $>$}, \hyperpage{108}
+    \subitem {gg::GgUniformBuffer$<$ T $>$}, \hyperpage{326}
+  \item {unuse}
+    \subitem {gg::GgPointShader}, \hyperpage{194}
+    \subitem {gg::GgShader}, \hyperpage{267}
+  \item {updateViewport}
+    \subitem {GgApp::Window}, \hyperpage{413}
+  \item {use}
+    \subitem {gg::GgPointShader}, \hyperpage{194--197}
+    \subitem {gg::GgShader}, \hyperpage{267}
+    \subitem {gg::GgSimpleShader}, \hyperpage{284--291}
+  \item {Utf8ToTChar}
+    \subitem {gg.h}, \hyperpage{501}
+
+  \indexspace
+
+  \item {Window}
+    \subitem {GgApp::Window}, \hyperpage{389, 390}
+
+  \indexspace
+
+  \item {ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版.}, 
+		\hyperpage{1}
+
+\end{theindex}

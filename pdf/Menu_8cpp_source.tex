@@ -1,0 +1,104 @@
+\doxysection{Menu.\+cpp}
+\hypertarget{Menu_8cpp_source}{}\label{Menu_8cpp_source}\mbox{\hyperlink{Menu_8cpp}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Menu_8h}{Menu.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00010}00010\ \textcolor{comment}{//\ 補助プログラム}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00011}00011\ \textcolor{keyword}{using\ namespace\ }\mbox{\hyperlink{namespacegg}{gg}};}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00013}00013\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00014}00014\ \textcolor{comment}{//\ コンストラクタ}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00015}00015\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00016}\mbox{\hyperlink{classMenu_af68aba17029de91b02b05f102ca63f37}{00016}}\ \mbox{\hyperlink{classMenu_af68aba17029de91b02b05f102ca63f37}{Menu::Menu}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classConfig}{Config}}\&\ config)\ :}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00017}00017\ \ \ defaults\{\ config\ \},}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00018}00018\ \ \ settings\{\ config\ \},}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00019}00019\ \ \ light\{\ std::make\_unique<\mbox{\hyperlink{classgg_1_1GgSimpleShader}{GgSimpleShader}}::LightBuffer>(config.light)\ \},}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00020}00020\ \ \ shader\{\ std::make\_unique<\mbox{\hyperlink{classgg_1_1GgSimpleShader}{GgSimpleShader}}>(config.shader)\ \},}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00021}00021\ \ \ model\{\ std::make\_unique<\mbox{\hyperlink{classgg_1_1GgSimpleObj}{GgSimpleObj}}>(config.model,\ true)\ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00022}00022\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00023}00023\ \textcolor{preprocessor}{\#if\ defined(IMGUI\_VERSION)}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00024}00024\ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00025}00025\ \ \ \textcolor{comment}{//\ ImGui\ の初期設定}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00026}00026\ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00028}00028\ \ \ \textcolor{comment}{//\ ファイルダイアログ\ (Native\ File\ Dialog\ Extended)\ を初期化する}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00029}00029\ \ \ NFD\_Init();}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00031}00031\ \ \ \textcolor{comment}{//\ Dear\ ImGui\ の入力デバイス}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00032}00032\ \ \ \textcolor{comment}{//io.ConfigFlags\ |=\ ImGuiConfigFlags\_NavEnableKeyboard;\ \ \ \ \ //\ キーボードコントロールを使う}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00033}00033\ \ \ \textcolor{comment}{//io.ConfigFlags\ |=\ ImGuiConfigFlags\_NavEnableGamepad;\ \ \ \ \ \ //\ ゲームパッドを使う}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00035}00035\ \ \ \textcolor{comment}{//\ Dear\ ImGui\ のスタイル}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00036}00036\ \ \ \textcolor{comment}{//ImGui::StyleColorsDark();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ 暗めのスタイル}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00037}00037\ \ \ \textcolor{comment}{//ImGui::StyleColorsClassic();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ 以前のスタイル}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00039}00039\ \ \ \textcolor{comment}{//\ 日本語を表示できるメニューフォントを読み込む}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00040}00040\ \ \ \textcolor{keywordflow}{if}\ (!ImGui::GetIO().Fonts-\/>AddFontFromFileTTF(config.menuFont.c\_str(),\ config.menuFontSize,\ \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00041}00041\ \ \ \ \ ImGui::GetIO().Fonts-\/>GetGlyphRangesJapanese()))}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00042}00042\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00043}00043\ \ \ \ \ \textcolor{comment}{//\ メニューフォントが読み込めなかったらエラーにする}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Cannot\ find\ any\ menu\ fonts."{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00045}00045\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00046}00046\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00047}00047\ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00049}00049\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00050}00050\ \textcolor{comment}{//\ デストラクタ}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00051}00051\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00052}\mbox{\hyperlink{classMenu_a831387f51358cfb88cd018e1777bc980}{00052}}\ \mbox{\hyperlink{classMenu_a831387f51358cfb88cd018e1777bc980}{Menu::\string~Menu}}()}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00053}00053\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00054}00054\ \textcolor{preprocessor}{\#if\ defined(IMGUI\_VERSION)}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00055}00055\ \ \ \textcolor{comment}{//\ ファイルダイアログ\ (Native\ File\ Dialog\ Extended)\ を終了する}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00056}00056\ \ \ NFD\_Quit();}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00057}00057\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00058}00058\ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00060}00060\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00061}00061\ \textcolor{comment}{//\ ファイルパスを取得する}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00062}00062\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00063}00063\ \textcolor{keywordtype}{bool}\ Menu::getFilePath(std::string\&\ path,\ \textcolor{keyword}{const}\ nfdfilteritem\_t*\ filter)}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00064}00064\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00065}00065\ \ \ \textcolor{comment}{//\ ファイルダイアログから得るパス}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00066}00066\ \ \ nfdchar\_t*\ filepath\{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00068}00068\ \ \ \textcolor{comment}{//\ ファイルダイアログを開く}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00069}00069\ \ \ \textcolor{keywordflow}{if}\ (NFD\_OpenDialog(\&filepath,\ filter,\ 1,\ \textcolor{keyword}{nullptr})\ ==\ NFD\_OKAY)}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00070}00070\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00071}00071\ \ \ \ \ path\ =\ \mbox{\hyperlink{gg_8h_a211a5875f00c0b97454d0b1e7a7a5769}{TCharToUtf8}}(filepath);}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00072}00072\ \ \ \ \ NFD\_FreePath(filepath);}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00073}00073\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00074}00074\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00076}00076\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00077}00077\ \}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00079}00079\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00080}00080\ \textcolor{comment}{//\ 描画する}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00081}00081\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00082}\mbox{\hyperlink{classMenu_a2cd7ab9901a8f42a3ae977d0774398a6}{00082}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMenu_a2cd7ab9901a8f42a3ae977d0774398a6}{Menu::draw}}()}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00083}00083\ \{}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00084}00084\ \textcolor{preprocessor}{\#if\ defined(IMGUI\_VERSION)}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00085}00085\ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00086}00086\ \ \ \textcolor{comment}{//\ ImGui\ によるユーザインタフェース}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00087}00087\ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00089}00089\ \ \ \textcolor{comment}{//\ メニューの表示位置を決定する}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00090}00090\ \ \ ImGui::SetNextWindowPos(ImVec2(4,\ 4),\ ImGuiCond\_Once);}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00091}00091\ \ \ ImGui::SetNextWindowSize(ImVec2(320,\ 98),\ ImGuiCond\_Once);}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00093}00093\ \ \ \textcolor{comment}{//\ メニュー表示開始}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00094}00094\ \ \ ImGui::Begin(u8\textcolor{stringliteral}{"{}コントロールパネル"{}});}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00096}00096\ \ \ \textcolor{comment}{//\ 光源}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00097}00097\ \ \ \textcolor{keywordflow}{if}\ (ImGui::SliderFloat3(u8\textcolor{stringliteral}{"{}光源位置"{}},\ settings.light.position.data(),\ -\/10.0f,\ 10.0f,\ \textcolor{stringliteral}{"{}\%.2f"{}}))}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00098}00098\ \ \ \ \ light-\/>loadPosition(settings.light.position);}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00099}00099\ \ \ \textcolor{keywordflow}{if}\ (ImGui::ColorEdit3(u8\textcolor{stringliteral}{"{}光源色"{}},\ settings.light.diffuse.data(),\ ImGuiColorEditFlags\_Float))}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00100}00100\ \ \ \ \ light-\/>loadDiffuse(settings.light.diffuse);}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00102}00102\ \ \ \textcolor{comment}{//\ メニュー表示終了}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00103}00103\ \ \ ImGui::End();}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00104}00104\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{Menu_8cpp_source_l00105}00105\ \}}
+
+\end{DoxyCode}

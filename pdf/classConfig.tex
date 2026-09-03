@@ -1,0 +1,231 @@
+\doxysection{Config クラス}
+\hypertarget{classConfig}{}\label{classConfig}\index{Config@{Config}}
+
+
+{\ttfamily \#include $<$Config.\+h$>$}
+
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classConfig_abd0c571c116924871e30444b192b792a}{Config}} ()
+\item 
+\mbox{\hyperlink{classConfig_abc51a2c710c8666d27b53cc03597201d}{Config}} (const std\+::string \&filename)
+\item 
+virtual \mbox{\hyperlink{classConfig_a543dce59b66475c5108088ee4ce1cdfc}{\texorpdfstring{$\sim$}{\string~}\+Config}} ()
+\item 
+auto \mbox{\hyperlink{classConfig_a3dc0108805ae6c4c8d0ce90853504f1f}{get\+Width}} () const
+\item 
+auto \mbox{\hyperlink{classConfig_aaa87cc9fc950c37081b7e26280d159b5}{get\+Height}} () const
+\item 
+bool \mbox{\hyperlink{classConfig_a5e3336e5f83b8cea516039537861e9e6}{load}} (const std\+::string \&filename)
+\item 
+bool \mbox{\hyperlink{classConfig_a817566065d6f1d047c96b94fc596830c}{save}} (const std\+::string \&filename) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classConfig_a834cec0fab7efabab3cd53540e4d466d}{Menu}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+構成データ 
+
+ \mbox{\hyperlink{Config_8h_source}{Config.\+h}} の \mbox{\hyperlink{Config_8h_source_l00020}{20}} 行目に定義があります。
+
+
+
+\label{doc-constructors}
+\Hypertarget{classConfig_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{classConfig_abd0c571c116924871e30444b192b792a}\index{Config@{Config}!Config@{Config}}
+\index{Config@{Config}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{Config()}{Config()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classConfig_abd0c571c116924871e30444b192b792a} 
+Config\+::\+Config (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+コンストラクタ 
+
+ \mbox{\hyperlink{Config_8cpp_source}{Config.\+cpp}} の \mbox{\hyperlink{Config_8cpp_source_l00028}{28}} 行目に定義があります。
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{classConfig_abd0c571c116924871e30444b192b792a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classConfig_abc51a2c710c8666d27b53cc03597201d}\index{Config@{Config}!Config@{Config}}
+\index{Config@{Config}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{Config()}{Config()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classConfig_abc51a2c710c8666d27b53cc03597201d} 
+Config\+::\+Config (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{}\end{DoxyParamCaption})}
+
+ファイルから構成データを読み込むコンストラクタ
+
+
+\begin{DoxyParams}{引数}
+{\em filename} & 読み込む構成ファイル名 \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{Config_8cpp_source}{Config.\+cpp}} の \mbox{\hyperlink{Config_8cpp_source_l00045}{45}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classConfig_abc51a2c710c8666d27b53cc03597201d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classConfig_a543dce59b66475c5108088ee4ce1cdfc}\index{Config@{Config}!````~Config@{\texorpdfstring{$\sim$}{\string~}Config}}
+\index{````~Config@{\texorpdfstring{$\sim$}{\string~}Config}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Config()}{\string~Config()}}
+{\footnotesize\ttfamily \label{classConfig_a543dce59b66475c5108088ee4ce1cdfc} 
+Config\+::\texorpdfstring{$\sim$}{\string~}\+Config (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+デストラクタ 
+
+ \mbox{\hyperlink{Config_8cpp_source}{Config.\+cpp}} の \mbox{\hyperlink{Config_8cpp_source_l00055}{55}} 行目に定義があります。
+
+
+
+\label{doc-func-members}
+\Hypertarget{classConfig_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{classConfig_aaa87cc9fc950c37081b7e26280d159b5}\index{Config@{Config}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
+{\footnotesize\ttfamily \label{classConfig_aaa87cc9fc950c37081b7e26280d159b5} 
+auto Config\+::get\+Height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+ウィンドウの高さを得る
+
+\begin{DoxyReturn}{戻り値}
+ウィンドウの高さ 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{Config_8h_source}{Config.\+h}} の \mbox{\hyperlink{Config_8h_source_l00077}{77}} 行目に定義があります。
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classConfig_aaa87cc9fc950c37081b7e26280d159b5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classConfig_a3dc0108805ae6c4c8d0ce90853504f1f}\index{Config@{Config}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily \label{classConfig_a3dc0108805ae6c4c8d0ce90853504f1f} 
+auto Config\+::get\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+ウィンドウの横幅を得る
+
+\begin{DoxyReturn}{戻り値}
+ウィンドウの横幅 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{Config_8h_source}{Config.\+h}} の \mbox{\hyperlink{Config_8h_source_l00067}{67}} 行目に定義があります。
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classConfig_a3dc0108805ae6c4c8d0ce90853504f1f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classConfig_a5e3336e5f83b8cea516039537861e9e6}\index{Config@{Config}!load@{load}}
+\index{load@{load}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily \label{classConfig_a5e3336e5f83b8cea516039537861e9e6} 
+bool Config\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{}\end{DoxyParamCaption})}
+
+構成ファイルを読み込む
+
+
+\begin{DoxyParams}{引数}
+{\em filename} & 読み込む構成ファイル名 \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{Config_8cpp_source}{Config.\+cpp}} の \mbox{\hyperlink{Config_8cpp_source_l00062}{62}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{classConfig_a5e3336e5f83b8cea516039537861e9e6_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{classConfig_a5e3336e5f83b8cea516039537861e9e6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classConfig_a817566065d6f1d047c96b94fc596830c}\index{Config@{Config}!save@{save}}
+\index{save@{save}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily \label{classConfig_a817566065d6f1d047c96b94fc596830c} 
+bool Config\+::save (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{}\end{DoxyParamCaption}) const}
+
+構成ファイルを書き出す
+
+
+\begin{DoxyParams}{引数}
+{\em 書き出す構成ファイル名} & \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{Config_8cpp_source}{Config.\+cpp}} の \mbox{\hyperlink{Config_8cpp_source_l00115}{115}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{classConfig_a817566065d6f1d047c96b94fc596830c_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{classConfig_a817566065d6f1d047c96b94fc596830c_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-related-members}
+\Hypertarget{classConfig_doc-related-members}
+\doxysubsection{フレンドと関連関数の詳解}
+\Hypertarget{classConfig_a834cec0fab7efabab3cd53540e4d466d}\index{Config@{Config}!Menu@{Menu}}
+\index{Menu@{Menu}!Config@{Config}}
+\doxysubsubsection{\texorpdfstring{Menu}{Menu}}
+{\footnotesize\ttfamily \label{classConfig_a834cec0fab7efabab3cd53540e4d466d} 
+friend class \mbox{\hyperlink{classMenu}{Menu}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+ \mbox{\hyperlink{Config_8h_source}{Config.\+h}} の \mbox{\hyperlink{Config_8h_source_l00023}{23}} 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Config_8h}{Config.\+h}}\item 
+\mbox{\hyperlink{Config_8cpp}{Config.\+cpp}}\end{DoxyCompactItemize}

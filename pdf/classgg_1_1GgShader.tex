@@ -1,0 +1,235 @@
+\doxysection{gg\+::Gg\+Shader クラス}
+\hypertarget{classgg_1_1GgShader}{}\label{classgg_1_1GgShader}\index{gg::GgShader@{gg::GgShader}}
+
+
+{\ttfamily \#include $<$gg.\+h$>$}
+
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgg_1_1GgShader_a7908ddf4209c6b17fdb1846c65f1e384}{Gg\+Shader}} (const std\+::string \&vert, const std\+::string \&frag="{}"{}, const std\+::string \&geom="{}"{}, int nvarying=0, const char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}varyings=nullptr)
+\item 
+\mbox{\hyperlink{classgg_1_1GgShader_a4e1c6570fb96bb96f5d693b55d0e0dac}{Gg\+Shader}} (const std\+::array$<$ std\+::string, 3 $>$ \&files, int nvarying=0, const char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}varyings=nullptr)
+\item 
+\mbox{\hyperlink{classgg_1_1GgShader_ac771bbf53f285cbaa8f2209fd8ea9850}{Gg\+Shader}} (const Gg\+Shader \&shader)=delete
+\item 
+\mbox{\hyperlink{classgg_1_1GgShader_a60ea9fb2b075df815639abd4ccccb9ff}{Gg\+Shader}} (Gg\+Shader \&\&shader)=default
+\item 
+virtual \mbox{\hyperlink{classgg_1_1GgShader_af065218c76d31a9b8d90faf17c65aeb4}{\texorpdfstring{$\sim$}{\string~}\+Gg\+Shader}} ()
+\item 
+\mbox{\hyperlink{classgg_1_1GgShader_a7908ddf4209c6b17fdb1846c65f1e384}{Gg\+Shader}} \& \mbox{\hyperlink{classgg_1_1GgShader_a44733c5464ecf1fb28c8ccd663589d6c}{operator=}} (const \mbox{\hyperlink{classgg_1_1GgShader_a7908ddf4209c6b17fdb1846c65f1e384}{Gg\+Shader}} \&shader)=delete
+\item 
+void \mbox{\hyperlink{classgg_1_1GgShader_a3adfac57f672157d521faeeccc3dd3c5}{use}} () const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgShader_a360553a2c8e550c7b59c478995310163}{unuse}} () const
+\item 
+GLuint \mbox{\hyperlink{classgg_1_1GgShader_afb49a96fa6fa7b981013ee783511b292}{get}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+シェーダの基底クラス.
+
+\begin{DoxyNote}{覚え書き}
+シェーダのクラスはこのクラスを派生して作る. 
+\end{DoxyNote}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07079}{7079}} 行目に定義があります。
+
+
+
+\label{doc-constructors}
+\Hypertarget{classgg_1_1GgShader_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{classgg_1_1GgShader_a7908ddf4209c6b17fdb1846c65f1e384}\index{gg::GgShader@{gg::GgShader}!GgShader@{GgShader}}
+\index{GgShader@{GgShader}!gg::GgShader@{gg::GgShader}}
+\doxysubsubsection{\texorpdfstring{GgShader()}{GgShader()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgShader_a7908ddf4209c6b17fdb1846c65f1e384} 
+gg\+::\+Gg\+Shader\+::\+Gg\+Shader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{vert}{, }\item[{const std\+::string \&}]{frag}{ = {\ttfamily "{}"{}}, }\item[{const std\+::string \&}]{geom}{ = {\ttfamily "{}"{}}, }\item[{int}]{nvarying}{ = {\ttfamily 0}, }\item[{const char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}}]{varyings}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+コンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em vert} & バーテックスシェーダのソースファイル名. \\
+\hline
+{\em frag} & フラグメントシェーダのソースファイル名 (空文字列なら不使用). \\
+\hline
+{\em geom} & ジオメトリシェーダのソースファイル名 (空文字列なら不使用). \\
+\hline
+{\em nvarying} & フィードバックする varying 変数の数 (0 なら不使用). \\
+\hline
+{\em varyings} & フィードバックする varying 変数のリスト. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07095}{7095}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgShader_a7908ddf4209c6b17fdb1846c65f1e384_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgShader_a7908ddf4209c6b17fdb1846c65f1e384_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgShader_a4e1c6570fb96bb96f5d693b55d0e0dac}\index{gg::GgShader@{gg::GgShader}!GgShader@{GgShader}}
+\index{GgShader@{GgShader}!gg::GgShader@{gg::GgShader}}
+\doxysubsubsection{\texorpdfstring{GgShader()}{GgShader()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgShader_a4e1c6570fb96bb96f5d693b55d0e0dac} 
+gg\+::\+Gg\+Shader\+::\+Gg\+Shader (\begin{DoxyParamCaption}\item[{const std\+::array$<$ std\+::string, 3 $>$ \&}]{files}{, }\item[{int}]{nvarying}{ = {\ttfamily 0}, }\item[{const char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}}]{varyings}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+コンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em files} & バーテックスシェーダのソースファイル名の配列. \\
+\hline
+{\em nvarying} & フィードバックする varying 変数の数 (0 なら不使用). \\
+\hline
+{\em varyings} & フィードバックする varying 変数のリスト (nullptr なら不使用). \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07113}{7113}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgShader_a4e1c6570fb96bb96f5d693b55d0e0dac_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgShader_ac771bbf53f285cbaa8f2209fd8ea9850}\index{gg::GgShader@{gg::GgShader}!GgShader@{GgShader}}
+\index{GgShader@{GgShader}!gg::GgShader@{gg::GgShader}}
+\doxysubsubsection{\texorpdfstring{GgShader()}{GgShader()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgShader_ac771bbf53f285cbaa8f2209fd8ea9850} 
+gg\+::\+Gg\+Shader\+::\+Gg\+Shader (\begin{DoxyParamCaption}\item[{const Gg\+Shader \&}]{shader}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+コピーコンストラクタは使用しない.
+
+
+\begin{DoxyParams}{引数}
+{\em shader} & コピー元のシェーダ. \\
+\hline
+\end{DoxyParams}
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgShader_ac771bbf53f285cbaa8f2209fd8ea9850_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgShader_a60ea9fb2b075df815639abd4ccccb9ff}\index{gg::GgShader@{gg::GgShader}!GgShader@{GgShader}}
+\index{GgShader@{GgShader}!gg::GgShader@{gg::GgShader}}
+\doxysubsubsection{\texorpdfstring{GgShader()}{GgShader()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgShader_a60ea9fb2b075df815639abd4ccccb9ff} 
+gg\+::\+Gg\+Shader\+::\+Gg\+Shader (\begin{DoxyParamCaption}\item[{Gg\+Shader \&\&}]{shader}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+ムーブコンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em shader} & ムーブ元のシェーダ. \\
+\hline
+\end{DoxyParams}
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgShader_a60ea9fb2b075df815639abd4ccccb9ff_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgShader_af065218c76d31a9b8d90faf17c65aeb4}\index{gg::GgShader@{gg::GgShader}!````~GgShader@{\texorpdfstring{$\sim$}{\string~}GgShader}}
+\index{````~GgShader@{\texorpdfstring{$\sim$}{\string~}GgShader}!gg::GgShader@{gg::GgShader}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GgShader()}{\string~GgShader()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgShader_af065218c76d31a9b8d90faf17c65aeb4} 
+virtual gg\+::\+Gg\+Shader\+::\texorpdfstring{$\sim$}{\string~}\+Gg\+Shader (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+デストラクタ. 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07139}{7139}} 行目に定義があります。
+
+
+
+\label{doc-func-members}
+\Hypertarget{classgg_1_1GgShader_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{classgg_1_1GgShader_afb49a96fa6fa7b981013ee783511b292}\index{gg::GgShader@{gg::GgShader}!get@{get}}
+\index{get@{get}!gg::GgShader@{gg::GgShader}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgShader_afb49a96fa6fa7b981013ee783511b292} 
+GLuint gg\+::\+Gg\+Shader\+::get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+シェーダのプログラム名を得る.
+
+\begin{DoxyReturn}{戻り値}
+シェーダのプログラム名. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07175}{7175}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgShader_a44733c5464ecf1fb28c8ccd663589d6c}\index{gg::GgShader@{gg::GgShader}!operator=@{operator=}}
+\index{operator=@{operator=}!gg::GgShader@{gg::GgShader}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgShader_a44733c5464ecf1fb28c8ccd663589d6c} 
+\mbox{\hyperlink{classgg_1_1GgShader_a7908ddf4209c6b17fdb1846c65f1e384}{Gg\+Shader}} \& gg\+::\+Gg\+Shader\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgShader_a7908ddf4209c6b17fdb1846c65f1e384}{Gg\+Shader}} \&}]{shader}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+代入演算子は使用しない.
+
+
+\begin{DoxyParams}{引数}
+{\em shader} & 代入元のシェーダ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+代入後のこのシェーダの参照. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgShader_a44733c5464ecf1fb28c8ccd663589d6c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgShader_a360553a2c8e550c7b59c478995310163}\index{gg::GgShader@{gg::GgShader}!unuse@{unuse}}
+\index{unuse@{unuse}!gg::GgShader@{gg::GgShader}}
+\doxysubsubsection{\texorpdfstring{unuse()}{unuse()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgShader_a360553a2c8e550c7b59c478995310163} 
+void gg\+::\+Gg\+Shader\+::unuse (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+シェーダプログラムの使用を終了する. 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07165}{7165}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgShader_a3adfac57f672157d521faeeccc3dd3c5}\index{gg::GgShader@{gg::GgShader}!use@{use}}
+\index{use@{use}!gg::GgShader@{gg::GgShader}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgShader_a3adfac57f672157d521faeeccc3dd3c5} 
+void gg\+::\+Gg\+Shader\+::use (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+シェーダプログラムの使用を開始する. 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07157}{7157}} 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gg_8h}{gg.\+h}}\end{DoxyCompactItemize}

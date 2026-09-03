@@ -1,177 +1,59 @@
-# ggsample01
+# ggsample01 - Dear ImGui を統合したモダン OpenGL アプリケーション
 
-## ゲームグラフィックス特論A　第１回　宿題
+## 1. 概要
 
-OpenGL の開発環境を整備してください。
+本プログラムは、GLFW 3 と Dear ImGui、および Native File Dialog Extended (NFD) を統合したモダン OpenGL のベースアプリケーションフレームワークです。
 
-* 宿題のひな形は [GitHub](https://github.com/tokoik/ggsample01) にあります
- (宿題のひな形で使っている[補助プログラムの解説](https://tokoik.github.io/gg/html/annotated.html))。
-* 詳しくは[講義のスライド](https://tokoik.github.io/gg/ggnote01.pdf)を参照してください。
+- 移行元ブログ記事:
+  - [ゲームグラフィックス特論 (2018) - 床井研究室](https://tokoik.github.io/blog/2018/10/14/)
 
-## 宿題プログラムの作成に必要な環境
+## 2. 対応環境
 
-* Linux Mint 22.1 (Xia), gcc 13.3.0 以降 (libglfw3-dev, libgtk-3-dev, pkg-config 必須)。
-* macOS 14 (Sonoma), Xcode 15 以降 (Intel / Apple 両対応)。
-* Windows 11 (Win32/x64), Visual Studio 2022 以降 (“C++ によるデスクトップ開発” 必須)。
-* OpenGL 4.1 以降が実行できる環境 (対応した GPU を搭載したビデオカード や CPU) が必要です。
+- **Windows**: Visual Studio 2019 / 2022 / 2026 (CMake 経由で GLFW, ImGui, NFD, picojson を自動構成)
+- **macOS**: Xcode (GLFW, ImGui, NFD を自動ダウンロード、OpenGL Framework を使用)
+- **Ubuntu Linux**: GCC / Make (システム標準の libglfw3-dev, libgl1-mesa-dev, libgtk-3-dev を使用)
 
-## 宿題の提出
+## 3. ビルド手順
 
-* このプロジェクトをビルド・実行して表示されたウィンドウのスクリーンショットを Moodle にアップロードしてください。
-* 気力があったら表示図形が回転するようにして (AI 使用可)、そのムービー (10MB 以下) を送ってください。
+### Windows (Visual Studio)
 
-## 補足
-
-このプログラムを実行すると、次のような図形が表示されます。
-
-![このプログラムによる生成画像](images/ggsample01a.png "このプログラムによる生成画像") 
-
-* macOS では Intel CPU と Apple Silicon の両方に対応した Universal Binary を作成するようにしています。
-* Raspberry Pi 4B にも対応しました。`make -f Makefile.rpi` でビルドしてください。
-* ひな形プログラムがコンパイル／実行できなかったら知らせてください。
-* fork 推奨ですが解答を PR で受け取る**気力はありません**。
-
-## 宿題プログラム用補助プログラムについて
-
-ゲームグラフィックス特論 A / B で課す宿題プログラムでは、専用の補助プログラムを用意しています。これは以下の 5 つのファイルで構成されています。
-
-* [gg.h](https://github.com/tokoik/ggsample01/blob/master/gg.h) / [gg.cpp](https://github.com/tokoik/ggsample01/blob/master/gg.cpp)
-  * GLFW での利用を想定した OpenGL のローダとユーティリティ
-* [GgApp.h](https://github.com/tokoik/ggsample01/blob/master/GgApp.h) / [GgApp.cpp](https://github.com/tokoik/ggsample01/blob/master/GgApp.cpp)
-  * ウィンドウやマウス関連のユーザインタフェースを管理する GLFW のラッパー
-* [main.cpp](https://github.com/tokoik/ggsample01/blob/master/main.cpp)
-  * メインプログラム
-
-[GLFW](https://www.glfw.org/) は [OpenGL](https://www.opengl.org/) や、その後継の [Vulkan](https://www.vulkan.org/) を使用したアプリケーションを作成するための、非常にコンパクトなフレームワークです。本当はこれだけで簡単にアプリケーションが作れるのですが、授業内容とはあまり関係のない処理を分離するために、屋上屋ながら**この授業専用の**フレームワークを用意しました。なお、gg.h / gg.cpp には OpenGL の拡張機能を使用可能にする機能を含んでいるので、別に [GLEW](http://glew.sourceforge.net/) や [glad](https://github.com/Dav1dde/glad)、[GL3W](https://github.com/skaslev/gl3w) などを導入する必要はありません。
-
-また、この補助プログラムは [Dear ImGui](https://github.com/ocornut/imgui) をサポートする機能を含んでいます。このプログラム ([ggsample01](https://github.com/tokoik/ggsample01)) には、その使い方のサンプルコードを示すために、Dear ImGui のソースプログラムも含めています。日本語メニューの表示のために [M+ FONTS](https://mplusfonts.github.io/) の [Mplus1-Regular.ttf](https://github.com/coz-m/MPLUS_FONTS/blob/master/fonts/ttf/Mplus1-Regular.ttf) もリポジトリに含めています。
-
-このほか、この GgApp.h / GgApp.cpp には [OpenXR](https://www.khronos.org/openxr/) をサポートする機能を組み込んでいます。Meta Quest 2 / 3 / 3S / Pro や HTC Vive、Valve Index 等の VR デバイスを接続しているなら、この補助プログラムを使って C++ だけで VR アプリケーションが作成できます。
-
-### 補助プログラムのドキュメント
-
-Doxygen で生成したドキュメントの [HTML 版](html/index.html)を html フォルダに、[PDF 版](pdf/refman.pdf)を pdf フォルダに置いています。また、OpenXR の詳細なマニュアルおよび使用方法の解説は [OPENXR.md](OPENXR.md) を参照してください。
-
-### 補助プログラムの使い方
-
-補助プログラムを使用するには、最小限、GLFW が使える環境が必要です。ゲームグラフィックス特論 A / B の宿題のリポジトリには Windows 用および macOS 用にコンパイルしたライブラリファイル一式を含めていますので、これらについては宿題のために別に用意する必要はありません。Linux (および Raspberry Pi) では libglfw3-dev、libgtk-3-dev、および pkg-config パッケージをインストールしておいてください (`% sudo apt-get install libglfw3-dev libgtk-3-dev pkg-config`)。gg.h、gg.cpp、GgApp.h、GgApp.cpp および main.cpp だけを使うときは、それぞれの環境で GLFW をインストールしておいてください。この補助プログラムを使用した最小のプログラムは、多分こんな感じになります。このソースファイルと同じところに gg.h、gg.cpp、GgApp.h、GgApp.cpp、および main.cpp を置き、gg.cpp、GgApp.cpp、main.cpp と一緒にコンパイルして、GLFW のライブラリファイルをリンクしてください。
-
-```cpp
-#include "GgApp.h"
-
-int GgApp::main(int argc, const char* const* argv)
-{
-    Window window;
-
-    while (window)
-    {
-        //
-        // ここで OpenGL による描画を行う
-        //
-    }
-}
+```pwsh
+cmake -B build -S .
+cmake --build build --config Release
 ```
 
-### OpenXR を使う場合
+### macOS (Xcode)
 
-GgApp.h の中の `//#define GG_USE_OPENXR` のコメント (`//`) を削除してください。
-
-```cpp
-// OpenXR を使うなら
-#define GG_USE_OPENXR
+```bash
+cmake -B build -G Xcode
+cmake --build build --config Release
 ```
 
-`GG_USE_OPENXR` は **GgApp.cpp を含むすべてのソースファイルで同じように定義されている必要があります**。個々のソースファイルの先頭で `#define GG_USE_OPENXR` してから `#include "GgApp.h"` しても、GgApp.cpp 側では定義されないため、`GgApp::OpenXR` のメンバ関数の実体が生成されずリンクエラーになります。GgApp.h を書き換えたくない場合は、プロジェクト全体のプリプロセッサ定義 (Visual Studio) あるいは `CXXFLAGS` の `-DGG_USE_OPENXR` (Makefile) で定義してください。
+### Ubuntu Linux (Makefile)
 
-OpenXR SDK のヘッダとローダ (`openxr_loader.lib` / `libopenxr_loader`) が別に必要です。Linux では `libopenxr-dev` をインストールすれば、同梱の Makefile が `pkg-config` 経由で参照します。macOS には OpenXR のランタイムがないため利用できません。
-
-OpenXR を使った VR アプリケーションの詳しい書き方、透視投影行列・ビュー変換行列の取得方法、コントローラーの姿勢取得やボタン入力、ハプティクス振動などの機能については、[OPENXR.md](OPENXR.md) を参照してください。
-
-### Dear ImGui を使う場合
-
-すべての `#include "GgApp.h"` の前に、`#define GG_USE_IMGUI` を置いてください。
-
-```cpp
-// ウィンドウ関連の処理
-#define GG_USE_IMGUI
-#include "GgApp.h"
+```bash
+sudo apt-get update
+sudo apt-get install -y libglfw3-dev libgl1-mesa-dev libgtk-3-dev
+cmake -B build -S .
+cmake --build build
 ```
 
-あるいは、GgApp.h の中の `//#define GG_USE_IMGUI` のコメント (`//`) を削除してください
+## 4. 起動方法
 
-```cpp
-// Dear ImGui を使うなら
-#define GG_USE_IMGUI
-```
+ビルド完了後、生成された実行ファイルを実行します。
 
-Dear ImGui のウィンドウの実際のレンダリング (`ImGui_ImplOpenGL3_RenderDrawData();` の呼び出し) は `window.swapbuffers()` の中で行っているので、描画ループの中で Dear ImGui の API と OpenGL の API は混在していても構いません。
+- **Windows**: `build/Release/ggsample01.exe`
+- **macOS**: `build/Release/ggsample01.app`
+- **Linux**: `build/ggsample01`
 
-なお、Dear ImGui を有効にした場合は、Dear ImGui がマウスを使っているとき (`io.WantCaptureMouse == true`) に、Window クラスが保持しているマウスカーソルの位置を更新しないようにしています。また、Dear ImGui がキーボードを使っているとき (`io.WantCaptureKeyboard == true`) には、`GgApp::Window` クラスはキーボードのイベントを処理しないようにしています。
+## 5. 操作方法
 
-```cpp
-// ウィンドウ関連の処理
-#define GG_USE_IMGUI
-#include "GgApp.h"
+- **マウス左ドラッグ**: シーンの視点回転
+- **マウス右ドラッグ**: 視点の平行移動
+- **マウスホイール**: 視点のズームイン / ズームアウト
+- **ImGui メニューパネル**: 光源位置・拡散反射光色のリアルタイム調整
+- **[q] / [Q] / [ESC]**: プログラムの終了
 
-int GgApp::main(int argc, const char* const* argv)
-{
-  // ウィンドウを作成する
-  Window window("Window Title", 1280, 720);
+## 6. プログラムの解説
 
-  // ImGui の初期設定
-  ImGui::StyleColorsDark();
-
-  // 背景色を指定する
-  glClearColor(1.0f, 1.0f, 1.0f, 0.0f);
-
-  // ウィンドウが開いている間繰り返す
-  while (window)
-  {
-    // ImGui のフレームに一つ目の ImGui のウィンドウを描く
-    ImGui::Begin("Control panel");
-    ImGui::Text("Frame rate: %6.2f fps", ImGui::GetIO().Framerate);
-    if (ImGui::Button("Quit")) window.setClose();
-    ImGui::End();
-
-    // ウィンドウを消去する
-    glClear(GL_COLOR_BUFFER_BIT);
-
-    //
-    // ここで OpenGL による描画を行う
-    //
-
-    // カラーバッファを入れ替えてイベントを取り出す
-    window.swapBuffers();
-  }
-}
-```
-
-このソースファイルと Dear ImGui に含まれる以下のファイル、および gg.h、gg.cpp、GgApp.h、GgApp.cpp および main.cpp を同じところに置き、gg.cpp、GgApp.cpp、main.cpp と以下のうちの *.cpp ファイルと一緒にコンパイルして、GLFW のライブラリファイルをリンクしてください。
-
-> imconfig.h  
-> imgui.h  
-> imgui_impl_glfw.h  
-> imgui_impl_opengl3.h  
-> imgui_impl_opengl3_loader.h  
-> imgui_internal.h  
-> imstb_rectpack.h  
-> imstb_textedit.h  
-> imstb_truetype.h  
-
-> imgui.cpp  
-> imgui_draw.cpp  
-> imgui_impl_glfw.cpp  
-> imgui_impl_opengl3.cpp  
-> imgui_tables.cpp  
-> imgui_widgets.cpp  
-
-#### imconfig.h の変更点
-
-Dear ImGui はバージョン 1.86 から独自のローダを使用するようになったので、`IMGUI_IMPL_OPENGL_LOADER_CUSTOM` にこの授業オリジナルのローダ `gg.h` / `gg.cpp` を指定する必要はありません。ただし、Raspberry Pi では imconfig.h の**最後**で記号定数 `IMGUI_IMPL_OPENGL_ES3` を明示的に定義する必要があります。
-
-```cpp
-// The Raspberry Pi needs to explicitly define the symbolic constant IMGUI_IMPL_OPENGL_ES3. 
-#if defined(__RASPBERRY_PI__)
-#  define IMGUI_IMPL_OPENGL_ES3
-#endif
-```
+`Menu.cpp` で Dear ImGui の GUI ウィジェットを構築し、光源パラメータを直接操作して `simple.vert` および `simple.frag` にユニフォーム変数として転送します。設定情報は `Config.cpp` および `picojson.h` により `ggsample01_config.json` へ保存・復元が可能です。

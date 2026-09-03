@@ -1,0 +1,350 @@
+\doxysection{gg\+::Gg\+Texture クラス}
+\hypertarget{classgg_1_1GgTexture}{}\label{classgg_1_1GgTexture}\index{gg::GgTexture@{gg::GgTexture}}
+
+
+{\ttfamily \#include $<$gg.\+h$>$}
+
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgg_1_1GgTexture_a928c60ee04d1253e74ab1723a8aa4c92}{Gg\+Texture}} (const GLvoid \texorpdfstring{$\ast$}{*}image, GLsizei width, GLsizei height, GLenum format=GL\+\_\+\+RGB, GLenum type=GL\+\_\+\+UNSIGNED\+\_\+\+BYTE, GLenum internal=GL\+\_\+\+RGBA, GLenum wrap=GL\+\_\+\+CLAMP\+\_\+\+TO\+\_\+\+EDGE, bool swizzle=false)
+\item 
+\mbox{\hyperlink{classgg_1_1GgTexture_a229f8467a9ab478f178b4f13be519b12}{Gg\+Texture}} (const Gg\+Texture \&texture)=delete
+\item 
+\mbox{\hyperlink{classgg_1_1GgTexture_abb4d2f8852c8abe91a59e579fa205ea2}{Gg\+Texture}} (Gg\+Texture \&\&texture)=default
+\item 
+virtual \mbox{\hyperlink{classgg_1_1GgTexture_ae3ee898413f36bf7000c0b7c82d22286}{\texorpdfstring{$\sim$}{\string~}\+Gg\+Texture}} ()
+\item 
+\mbox{\hyperlink{classgg_1_1GgTexture_a928c60ee04d1253e74ab1723a8aa4c92}{Gg\+Texture}} \& \mbox{\hyperlink{classgg_1_1GgTexture_a2d2368e8364287f514b1323c10c38134}{operator=}} (const \mbox{\hyperlink{classgg_1_1GgTexture_a928c60ee04d1253e74ab1723a8aa4c92}{Gg\+Texture}} \&texture)=delete
+\item 
+\mbox{\hyperlink{classgg_1_1GgTexture_a928c60ee04d1253e74ab1723a8aa4c92}{Gg\+Texture}} \& \mbox{\hyperlink{classgg_1_1GgTexture_a39e8165a9433804b72ba64553f92d2e5}{operator=}} (\mbox{\hyperlink{classgg_1_1GgTexture_a928c60ee04d1253e74ab1723a8aa4c92}{Gg\+Texture}} \&\&texture)=default
+\item 
+void \mbox{\hyperlink{classgg_1_1GgTexture_af5624464f93502a641e3a0233093d7b5}{bind}} () const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgTexture_a069450f8066f3c57ae9b4a2633ea3da8}{unbind}} () const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgTexture_a52ed5cb2a58d5aa0ad3f46cc15f98a46}{swap\+RandB}} (bool swizzle) const
+\item 
+const GLsizei \& \mbox{\hyperlink{classgg_1_1GgTexture_a0990799facf6f2affd41be247f5ce9f1}{get\+Width}} () const
+\item 
+const GLsizei \& \mbox{\hyperlink{classgg_1_1GgTexture_a352d7fd4fa497ffe06e3d774a29735a0}{get\+Height}} () const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgTexture_af146fa5435ecf5d2b2bcc7d309d41934}{get\+Size}} (GLsizei \texorpdfstring{$\ast$}{*}size) const
+\item 
+const GLsizei \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classgg_1_1GgTexture_ab33080bbd6f3274eb79caea188f39cf0}{get\+Size}} () const
+\item 
+const GLuint \& \mbox{\hyperlink{classgg_1_1GgTexture_a099c84d3d0ea7a01d0bc5acbbc7f0052}{get\+Texture}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+テクスチャ.
+
+\begin{DoxyNote}{覚え書き}
+画像データを読み込んでテクスチャマップを作成する. 
+\end{DoxyNote}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05224}{5224}} 行目に定義があります。
+
+
+
+\label{doc-constructors}
+\Hypertarget{classgg_1_1GgTexture_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{classgg_1_1GgTexture_a928c60ee04d1253e74ab1723a8aa4c92}\index{gg::GgTexture@{gg::GgTexture}!GgTexture@{GgTexture}}
+\index{GgTexture@{GgTexture}!gg::GgTexture@{gg::GgTexture}}
+\doxysubsubsection{\texorpdfstring{GgTexture()}{GgTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgTexture_a928c60ee04d1253e74ab1723a8aa4c92} 
+gg\+::\+Gg\+Texture\+::\+Gg\+Texture (\begin{DoxyParamCaption}\item[{const GLvoid \texorpdfstring{$\ast$}{*}}]{image}{, }\item[{GLsizei}]{width}{, }\item[{GLsizei}]{height}{, }\item[{GLenum}]{format}{ = {\ttfamily GL\+\_\+RGB}, }\item[{GLenum}]{type}{ = {\ttfamily GL\+\_\+UNSIGNED\+\_\+BYTE}, }\item[{GLenum}]{internal}{ = {\ttfamily GL\+\_\+RGBA}, }\item[{GLenum}]{wrap}{ = {\ttfamily GL\+\_\+CLAMP\+\_\+TO\+\_\+EDGE}, }\item[{bool}]{swizzle}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+メモリ上のデータからテクスチャを作成するコンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em image} & テクスチャとして用いる画像データ, nullptr ならデータを読み込まない. \\
+\hline
+{\em width} & テクスチャの横の画素数. \\
+\hline
+{\em height} & テクスチャの縦の画素数. \\
+\hline
+{\em format} & 読み込む画像のフォーマット. \\
+\hline
+{\em type} & 画像のデータ型. \\
+\hline
+{\em internal} & テクスチャの内部フォーマット. \\
+\hline
+{\em wrap} & テクスチャのラッピングモード, デフォルトは GL\+\_\+\+CLAMP\+\_\+\+TO\+\_\+\+EDGE. \\
+\hline
+{\em swizzle} & true ならテクスチャの赤と青を入れ替える, デフォルトは false. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05246}{5246}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classgg_1_1GgTexture_a928c60ee04d1253e74ab1723a8aa4c92_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgTexture_a928c60ee04d1253e74ab1723a8aa4c92_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgTexture_a229f8467a9ab478f178b4f13be519b12}\index{gg::GgTexture@{gg::GgTexture}!GgTexture@{GgTexture}}
+\index{GgTexture@{GgTexture}!gg::GgTexture@{gg::GgTexture}}
+\doxysubsubsection{\texorpdfstring{GgTexture()}{GgTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgTexture_a229f8467a9ab478f178b4f13be519b12} 
+gg\+::\+Gg\+Texture\+::\+Gg\+Texture (\begin{DoxyParamCaption}\item[{const Gg\+Texture \&}]{texture}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+コピーコンストラクタは使用しない.
+
+
+\begin{DoxyParams}{引数}
+{\em texture} & コピー元のテクスチャ. \\
+\hline
+\end{DoxyParams}
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgTexture_a229f8467a9ab478f178b4f13be519b12_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgTexture_abb4d2f8852c8abe91a59e579fa205ea2}\index{gg::GgTexture@{gg::GgTexture}!GgTexture@{GgTexture}}
+\index{GgTexture@{GgTexture}!gg::GgTexture@{gg::GgTexture}}
+\doxysubsubsection{\texorpdfstring{GgTexture()}{GgTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgTexture_abb4d2f8852c8abe91a59e579fa205ea2} 
+gg\+::\+Gg\+Texture\+::\+Gg\+Texture (\begin{DoxyParamCaption}\item[{Gg\+Texture \&\&}]{texture}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+ムーブコンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em texture} & ムーブ元のテクスチャ. \\
+\hline
+\end{DoxyParams}
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgTexture_abb4d2f8852c8abe91a59e579fa205ea2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgTexture_ae3ee898413f36bf7000c0b7c82d22286}\index{gg::GgTexture@{gg::GgTexture}!````~GgTexture@{\texorpdfstring{$\sim$}{\string~}GgTexture}}
+\index{````~GgTexture@{\texorpdfstring{$\sim$}{\string~}GgTexture}!gg::GgTexture@{gg::GgTexture}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GgTexture()}{\string~GgTexture()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgTexture_ae3ee898413f36bf7000c0b7c82d22286} 
+virtual gg\+::\+Gg\+Texture\+::\texorpdfstring{$\sim$}{\string~}\+Gg\+Texture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+デストラクタ. 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05278}{5278}} 行目に定義があります。
+
+
+
+\label{doc-func-members}
+\Hypertarget{classgg_1_1GgTexture_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{classgg_1_1GgTexture_af5624464f93502a641e3a0233093d7b5}\index{gg::GgTexture@{gg::GgTexture}!bind@{bind}}
+\index{bind@{bind}!gg::GgTexture@{gg::GgTexture}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgTexture_af5624464f93502a641e3a0233093d7b5} 
+void gg\+::\+Gg\+Texture\+::bind (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+テクスチャの使用開始 (このテクスチャを使用する際に呼び出す). 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05303}{5303}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgTexture_a352d7fd4fa497ffe06e3d774a29735a0}\index{gg::GgTexture@{gg::GgTexture}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!gg::GgTexture@{gg::GgTexture}}
+\doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgTexture_a352d7fd4fa497ffe06e3d774a29735a0} 
+const GLsizei \& gg\+::\+Gg\+Texture\+::get\+Height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+使用しているテクスチャの縦の画素数を取り出す.
+
+\begin{DoxyReturn}{戻り値}
+テクスチャの縦の画素数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05338}{5338}} 行目に定義があります。
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgTexture_a352d7fd4fa497ffe06e3d774a29735a0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgTexture_ab33080bbd6f3274eb79caea188f39cf0}\index{gg::GgTexture@{gg::GgTexture}!getSize@{getSize}}
+\index{getSize@{getSize}!gg::GgTexture@{gg::GgTexture}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgTexture_ab33080bbd6f3274eb79caea188f39cf0} 
+const GLsizei \texorpdfstring{$\ast$}{*} gg\+::\+Gg\+Texture\+::get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+使用しているテクスチャのサイズを取り出す.
+
+\begin{DoxyReturn}{戻り値}
+テクスチャのサイズを格納した配列へのポインタ. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05359}{5359}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgTexture_af146fa5435ecf5d2b2bcc7d309d41934}\index{gg::GgTexture@{gg::GgTexture}!getSize@{getSize}}
+\index{getSize@{getSize}!gg::GgTexture@{gg::GgTexture}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgTexture_af146fa5435ecf5d2b2bcc7d309d41934} 
+void gg\+::\+Gg\+Texture\+::get\+Size (\begin{DoxyParamCaption}\item[{GLsizei \texorpdfstring{$\ast$}{*}}]{size}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+使用しているテクスチャのサイズを取り出す.
+
+
+\begin{DoxyParams}{引数}
+{\em size} & テクスチャのサイズを格納する GLsizei 型の 2 要素の配列変数. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05348}{5348}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgTexture_af146fa5435ecf5d2b2bcc7d309d41934_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgTexture_a099c84d3d0ea7a01d0bc5acbbc7f0052}\index{gg::GgTexture@{gg::GgTexture}!getTexture@{getTexture}}
+\index{getTexture@{getTexture}!gg::GgTexture@{gg::GgTexture}}
+\doxysubsubsection{\texorpdfstring{getTexture()}{getTexture()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgTexture_a099c84d3d0ea7a01d0bc5acbbc7f0052} 
+const GLuint \& gg\+::\+Gg\+Texture\+::get\+Texture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+使用しているテクスチャのテクスチャ名を得る.
+
+\begin{DoxyReturn}{戻り値}
+テクスチャ名. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05369}{5369}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgTexture_a0990799facf6f2affd41be247f5ce9f1}\index{gg::GgTexture@{gg::GgTexture}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!gg::GgTexture@{gg::GgTexture}}
+\doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgTexture_a0990799facf6f2affd41be247f5ce9f1} 
+const GLsizei \& gg\+::\+Gg\+Texture\+::get\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+使用しているテクスチャの横の画素数を取り出す.
+
+\begin{DoxyReturn}{戻り値}
+テクスチャの横の画素数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05328}{5328}} 行目に定義があります。
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgTexture_a0990799facf6f2affd41be247f5ce9f1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgTexture_a2d2368e8364287f514b1323c10c38134}\index{gg::GgTexture@{gg::GgTexture}!operator=@{operator=}}
+\index{operator=@{operator=}!gg::GgTexture@{gg::GgTexture}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgTexture_a2d2368e8364287f514b1323c10c38134} 
+\mbox{\hyperlink{classgg_1_1GgTexture_a928c60ee04d1253e74ab1723a8aa4c92}{Gg\+Texture}} \& gg\+::\+Gg\+Texture\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgTexture_a928c60ee04d1253e74ab1723a8aa4c92}{Gg\+Texture}} \&}]{texture}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+代入演算子は使用しない.
+
+
+\begin{DoxyParams}{引数}
+{\em texture} & 代入元のテクスチャ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+代入後のこのテクスチャの参照. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgTexture_a2d2368e8364287f514b1323c10c38134_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgTexture_a39e8165a9433804b72ba64553f92d2e5}\index{gg::GgTexture@{gg::GgTexture}!operator=@{operator=}}
+\index{operator=@{operator=}!gg::GgTexture@{gg::GgTexture}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgTexture_a39e8165a9433804b72ba64553f92d2e5} 
+\mbox{\hyperlink{classgg_1_1GgTexture_a928c60ee04d1253e74ab1723a8aa4c92}{Gg\+Texture}} \& gg\+::\+Gg\+Texture\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgg_1_1GgTexture_a928c60ee04d1253e74ab1723a8aa4c92}{Gg\+Texture}} \&\&}]{texture}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+ムーブ代入演算子.
+
+
+\begin{DoxyParams}{引数}
+{\em texture} & ムーブ代入元のテクスチャ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+ムーブ代入後のこのテクスチャの参照. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgTexture_a39e8165a9433804b72ba64553f92d2e5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgTexture_a52ed5cb2a58d5aa0ad3f46cc15f98a46}\index{gg::GgTexture@{gg::GgTexture}!swapRandB@{swapRandB}}
+\index{swapRandB@{swapRandB}!gg::GgTexture@{gg::GgTexture}}
+\doxysubsubsection{\texorpdfstring{swapRandB()}{swapRandB()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgTexture_a52ed5cb2a58d5aa0ad3f46cc15f98a46} 
+void gg\+::\+Gg\+Texture\+::swap\+RandB (\begin{DoxyParamCaption}\item[{bool}]{swizzle}{}\end{DoxyParamCaption}) const}
+
+テクスチャの赤と青を交換する
+
+
+\begin{DoxyParams}{引数}
+{\em swizzle} & 赤と青を交換するなら true \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l04022}{4022}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgTexture_a069450f8066f3c57ae9b4a2633ea3da8}\index{gg::GgTexture@{gg::GgTexture}!unbind@{unbind}}
+\index{unbind@{unbind}!gg::GgTexture@{gg::GgTexture}}
+\doxysubsubsection{\texorpdfstring{unbind()}{unbind()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgTexture_a069450f8066f3c57ae9b4a2633ea3da8} 
+void gg\+::\+Gg\+Texture\+::unbind (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+テクスチャの使用終了 (このテクスチャを使用しなくなったら呼び出す). 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05311}{5311}} 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gg_8h}{gg.\+h}}\item 
+\mbox{\hyperlink{gg_8cpp}{gg.\+cpp}}\end{DoxyCompactItemize}

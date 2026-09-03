@@ -1,0 +1,945 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版. }{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Open\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}XR ラッパー ({\ttfamily Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}App\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Open\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}XR}) マニュアル＆使用方法解説 }{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}目次}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}1. 概要と特徴}{3}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}主な特徴}{4}{subsection.2.2.1}%
+\contentsline {section}{\numberline {2.3}2. クイックスタート（最小の VR プログラム）}{4}{section.2.3}%
+\contentsline {section}{\numberline {2.4}3. API リファレンス}{5}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}型定義・定数}{5}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}初期化と終了処理}{5}{subsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.2.1}{\ttfamily static Open\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}XR\& initialize(const Window\& window, Xr\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Reference\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Space\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type space\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type = XR\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}REFERENCE\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SPACE\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}TYPE\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}STAGE)}}{5}{subsubsection.2.4.2.1}%
+\contentsline {subsubsection}{\numberline {2.4.2.2}{\ttfamily void terminate()}}{5}{subsubsection.2.4.2.2}%
+\contentsline {subsection}{\numberline {2.4.3}フレーム描画ループ}{5}{subsection.2.4.3}%
+\contentsline {subsubsection}{\numberline {2.4.3.1}{\ttfamily bool begin()}}{5}{subsubsection.2.4.3.1}%
+\contentsline {subsubsection}{\numberline {2.4.3.2}{\ttfamily void select(int eye)}}{5}{subsubsection.2.4.3.2}%
+\contentsline {subsubsection}{\numberline {2.4.3.3}{\ttfamily void select(int eye, GLfloat$\ast $ screen, GLfloat$\ast $ position, GLfloat$\ast $ orientation)}}{6}{subsubsection.2.4.3.3}%
+\contentsline {subsubsection}{\numberline {2.4.3.4}{\ttfamily void commit(int eye)}}{6}{subsubsection.2.4.3.4}%
+\contentsline {subsubsection}{\numberline {2.4.3.5}{\ttfamily bool submit(bool mirror = true)}}{6}{subsubsection.2.4.3.5}%
+\contentsline {subsection}{\numberline {2.4.4}カメラ・投影変換・視点情報}{6}{subsection.2.4.4}%
+\contentsline {subsubsection}{\numberline {2.4.4.1}{\ttfamily Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Matrix get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projection\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Matrix(int eye, GLfloat z\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Near = 0.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1f, GLfloat z\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Far = 100.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}0f) const}}{6}{subsubsection.2.4.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.4.2}{\ttfamily Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Matrix get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}View\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Matrix(int eye) const}}{6}{subsubsection.2.4.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.4.3}{\ttfamily Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Matrix get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pose\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Matrix(int eye) const}}{6}{subsubsection.2.4.4.3}%
+\contentsline {subsubsection}{\numberline {2.4.4.4}{\ttfamily Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vector get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Position(int eye) const}}{6}{subsubsection.2.4.4.4}%
+\contentsline {subsubsection}{\numberline {2.4.4.5}{\ttfamily Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Quaternion get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Orientation(int eye) const}}{7}{subsubsection.2.4.4.5}%
+\contentsline {subsubsection}{\numberline {2.4.4.6}{\ttfamily const Xr\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Fovf\& get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Fov(int eye) const}}{7}{subsubsection.2.4.4.6}%
+\contentsline {subsubsection}{\numberline {2.4.4.7}{\ttfamily const Xr\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Posef\& get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pose(int eye) const}}{7}{subsubsection.2.4.4.7}%
+\contentsline {subsubsection}{\numberline {2.4.4.8}{\ttfamily GLsizei get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Width(int eye = 0) const} / {\ttfamily GLsizei get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Height(int eye = 0) const}}{7}{subsubsection.2.4.4.8}%
+\contentsline {subsubsection}{\numberline {2.4.4.9}{\ttfamily GLfloat get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Aspect(int eye = 0) const}}{7}{subsubsection.2.4.4.9}%
+\contentsline {subsubsection}{\numberline {2.4.4.10}{\ttfamily uint32\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}View\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Count() const}}{7}{subsubsection.2.4.4.10}%
+\contentsline {subsection}{\numberline {2.4.5}コントローラートラッキング・姿勢}{7}{subsection.2.4.5}%
+\contentsline {subsubsection}{\numberline {2.4.5.1}{\ttfamily bool is\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tracked(int hand) const}}{7}{subsubsection.2.4.5.1}%
+\contentsline {subsubsection}{\numberline {2.4.5.2}{\ttfamily Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Matrix get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Grip\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Matrix(int hand) const}}{7}{subsubsection.2.4.5.2}%
+\contentsline {subsubsection}{\numberline {2.4.5.3}{\ttfamily Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Matrix get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Aim\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Matrix(int hand) const}}{7}{subsubsection.2.4.5.3}%
+\contentsline {subsubsection}{\numberline {2.4.5.4}{\ttfamily Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vector get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Grip\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Position(int hand) const} / {\ttfamily Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Quaternion get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Grip\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Orientation(int hand) const}}{7}{subsubsection.2.4.5.4}%
+\contentsline {subsubsection}{\numberline {2.4.5.5}{\ttfamily Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vector get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Aim\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Position(int hand) const} / {\ttfamily Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Quaternion get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Aim\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Orientation(int hand) const}}{7}{subsubsection.2.4.5.5}%
+\contentsline {subsection}{\numberline {2.4.6}コントローラーボタン・スティック入力・振動}{7}{subsection.2.4.6}%
+\contentsline {subsubsection}{\numberline {2.4.6.1}{\ttfamily float get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Trigger(int hand) const}}{7}{subsubsection.2.4.6.1}%
+\contentsline {subsubsection}{\numberline {2.4.6.2}{\ttfamily float get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Grip(int hand) const}}{7}{subsubsection.2.4.6.2}%
+\contentsline {subsubsection}{\numberline {2.4.6.3}{\ttfamily std\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::array$<$float, 2$>$ get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Thumbstick(int hand) const}}{8}{subsubsection.2.4.6.3}%
+\contentsline {subsubsection}{\numberline {2.4.6.4}{\ttfamily bool get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Thumbstick\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Click(int hand) const}}{8}{subsubsection.2.4.6.4}%
+\contentsline {subsubsection}{\numberline {2.4.6.5}{\ttfamily bool get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Primary\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Button(int hand) const}}{8}{subsubsection.2.4.6.5}%
+\contentsline {subsubsection}{\numberline {2.4.6.6}{\ttfamily bool get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Secondary\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Button(int hand) const}}{8}{subsubsection.2.4.6.6}%
+\contentsline {subsubsection}{\numberline {2.4.6.7}{\ttfamily bool get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Button(int hand = Hand\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Left) const}}{8}{subsubsection.2.4.6.7}%
+\contentsline {subsubsection}{\numberline {2.4.6.8}{\ttfamily void apply\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Haptic\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vibration(int hand, float duration\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Seconds = 0.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1f, float frequency = XR\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}FREQUENCY\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UNSPECIFIED, float amplitude = 0.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}5f)}}{8}{subsubsection.2.4.6.8}%
+\contentsline {subsection}{\numberline {2.4.7}参照空間（空間座標系）}{8}{subsection.2.4.7}%
+\contentsline {subsubsection}{\numberline {2.4.7.1}{\ttfamily Xr\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Reference\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Space\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Reference\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Space\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type() const}}{8}{subsubsection.2.4.7.1}%
+\contentsline {section}{\numberline {2.5}4. 実践チュートリアル＆使用例}{8}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}4.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1 基本的なステレオレンダリング}{8}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}4.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2 コントローラーの姿勢取得とモデル描画}{9}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}4.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}3 スティック入力による移動とトリガー入力}{9}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}4.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}4 床面基準 (STAGE) と着席基準 (LOCAL) の切り替え}{9}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.5.5}4.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}5 PC ウィンドウへのミラー表示}{9}{subsection.2.5.5}%
+\contentsline {section}{\numberline {2.6}5. 旧 Oculus SDK (Lib\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}OVR) ラッパーからの移行ガイド}{10}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}コードの対比（\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Before / After）}{10}{subsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.1.1}\mbox {[}Before\mbox {]} 旧 API}{10}{subsubsection.2.6.1.1}%
+\contentsline {subsubsection}{\numberline {2.6.1.2}\mbox {[}After\mbox {]} 最適化版 API}{10}{subsubsection.2.6.1.2}%
+\contentsline {section}{\numberline {2.7}6. 動作環境とセットアップ}{11}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}必要な環境}{11}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}プロジェクトへの組み込み}{11}{subsection.2.7.2}%
+\contentsline {chapter}{\numberline {3}ggsample01 }{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}ゲームグラフィックス特論\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A　第１回　宿題}{13}{section.3.1}%
+\contentsline {section}{\numberline {3.2}宿題プログラムの作成に必要な環境}{13}{section.3.2}%
+\contentsline {section}{\numberline {3.3}宿題の提出}{13}{section.3.3}%
+\contentsline {section}{\numberline {3.4}補足}{13}{section.3.4}%
+\contentsline {section}{\numberline {3.5}宿題プログラム用補助プログラムについて}{14}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}補助プログラムのドキュメント}{14}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}補助プログラムの使い方}{14}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Open\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}XR を使う場合}{15}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Dear Im\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Gui を使う場合}{15}{subsection.3.5.4}%
+\contentsline {subsubsection}{\numberline {3.5.4.1}imconfig.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h の変更点}{16}{subsubsection.3.5.4.1}%
+\contentsline {chapter}{\numberline {4}名前空間索引}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}名前空間一覧}{17}{section.4.1}%
+\contentsline {chapter}{\numberline {5}階層索引}{19}{chapter.5}%
+\contentsline {section}{\numberline {5.1}クラス階層}{19}{section.5.1}%
+\contentsline {chapter}{\numberline {6}クラス索引}{21}{chapter.6}%
+\contentsline {section}{\numberline {6.1}クラス一覧}{21}{section.6.1}%
+\contentsline {chapter}{\numberline {7}ファイル索引}{23}{chapter.7}%
+\contentsline {section}{\numberline {7.1}ファイル一覧}{23}{section.7.1}%
+\contentsline {chapter}{\numberline {8}名前空間詳解}{25}{chapter.8}%
+\contentsline {section}{\numberline {8.1}gg 名前空間}{25}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}詳解}{27}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}列挙型詳解}{28}{subsection.8.1.2}%
+\contentsline {subsubsection}{\numberline {8.1.2.1}BindingPoints}{28}{subsubsection.8.1.2.1}%
+\contentsline {subsection}{\numberline {8.1.3}関数詳解}{28}{subsection.8.1.3}%
+\contentsline {subsubsection}{\numberline {8.1.3.1}\_ggError()}{28}{subsubsection.8.1.3.1}%
+\contentsline {subsubsection}{\numberline {8.1.3.2}\_ggFBOError()}{28}{subsubsection.8.1.3.2}%
+\contentsline {subsubsection}{\numberline {8.1.3.3}ggArraysObj()}{28}{subsubsection.8.1.3.3}%
+\contentsline {subsubsection}{\numberline {8.1.3.4}ggConjugate()}{29}{subsubsection.8.1.3.4}%
+\contentsline {subsubsection}{\numberline {8.1.3.5}ggCreateComputeShader()}{30}{subsubsection.8.1.3.5}%
+\contentsline {subsubsection}{\numberline {8.1.3.6}ggCreateNormalMap()}{30}{subsubsection.8.1.3.6}%
+\contentsline {subsubsection}{\numberline {8.1.3.7}ggCreateShader()}{31}{subsubsection.8.1.3.7}%
+\contentsline {subsubsection}{\numberline {8.1.3.8}ggCross()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{32}{subsubsection.8.1.3.8}%
+\contentsline {subsubsection}{\numberline {8.1.3.9}ggCross()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{32}{subsubsection.8.1.3.9}%
+\contentsline {subsubsection}{\numberline {8.1.3.10}ggDistance3()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{33}{subsubsection.8.1.3.10}%
+\contentsline {subsubsection}{\numberline {8.1.3.11}ggDistance3()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{33}{subsubsection.8.1.3.11}%
+\contentsline {subsubsection}{\numberline {8.1.3.12}ggDistance4()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{34}{subsubsection.8.1.3.12}%
+\contentsline {subsubsection}{\numberline {8.1.3.13}ggDistance4()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{35}{subsubsection.8.1.3.13}%
+\contentsline {subsubsection}{\numberline {8.1.3.14}ggDot3()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{36}{subsubsection.8.1.3.14}%
+\contentsline {subsubsection}{\numberline {8.1.3.15}ggDot3()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{36}{subsubsection.8.1.3.15}%
+\contentsline {subsubsection}{\numberline {8.1.3.16}ggDot4()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{37}{subsubsection.8.1.3.16}%
+\contentsline {subsubsection}{\numberline {8.1.3.17}ggDot4()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{37}{subsubsection.8.1.3.17}%
+\contentsline {subsubsection}{\numberline {8.1.3.18}ggElementsMesh()}{38}{subsubsection.8.1.3.18}%
+\contentsline {subsubsection}{\numberline {8.1.3.19}ggElementsObj()}{39}{subsubsection.8.1.3.19}%
+\contentsline {subsubsection}{\numberline {8.1.3.20}ggElementsSphere()}{40}{subsubsection.8.1.3.20}%
+\contentsline {subsubsection}{\numberline {8.1.3.21}ggEllipse()}{40}{subsubsection.8.1.3.21}%
+\contentsline {subsubsection}{\numberline {8.1.3.22}ggEulerQuaternion()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{42}{subsubsection.8.1.3.22}%
+\contentsline {subsubsection}{\numberline {8.1.3.23}ggEulerQuaternion()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{42}{subsubsection.8.1.3.23}%
+\contentsline {subsubsection}{\numberline {8.1.3.24}ggEulerQuaternion()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{43}{subsubsection.8.1.3.24}%
+\contentsline {subsubsection}{\numberline {8.1.3.25}ggFrustum()}{44}{subsubsection.8.1.3.25}%
+\contentsline {subsubsection}{\numberline {8.1.3.26}ggIdentity()}{45}{subsubsection.8.1.3.26}%
+\contentsline {subsubsection}{\numberline {8.1.3.27}ggIdentityQuaternion()}{45}{subsubsection.8.1.3.27}%
+\contentsline {subsubsection}{\numberline {8.1.3.28}ggInit()}{45}{subsubsection.8.1.3.28}%
+\contentsline {subsubsection}{\numberline {8.1.3.29}ggInvert()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{46}{subsubsection.8.1.3.29}%
+\contentsline {subsubsection}{\numberline {8.1.3.30}ggInvert()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{47}{subsubsection.8.1.3.30}%
+\contentsline {subsubsection}{\numberline {8.1.3.31}ggLength3()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{47}{subsubsection.8.1.3.31}%
+\contentsline {subsubsection}{\numberline {8.1.3.32}ggLength3()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{48}{subsubsection.8.1.3.32}%
+\contentsline {subsubsection}{\numberline {8.1.3.33}ggLength4()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{48}{subsubsection.8.1.3.33}%
+\contentsline {subsubsection}{\numberline {8.1.3.34}ggLength4()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{49}{subsubsection.8.1.3.34}%
+\contentsline {subsubsection}{\numberline {8.1.3.35}ggLoadComputeShader()}{50}{subsubsection.8.1.3.35}%
+\contentsline {subsubsection}{\numberline {8.1.3.36}ggLoadHeight()}{50}{subsubsection.8.1.3.36}%
+\contentsline {subsubsection}{\numberline {8.1.3.37}ggLoadImage()}{51}{subsubsection.8.1.3.37}%
+\contentsline {subsubsection}{\numberline {8.1.3.38}ggLoadShader()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{52}{subsubsection.8.1.3.38}%
+\contentsline {subsubsection}{\numberline {8.1.3.39}ggLoadShader()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{52}{subsubsection.8.1.3.39}%
+\contentsline {subsubsection}{\numberline {8.1.3.40}ggLoadSimpleObj()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{53}{subsubsection.8.1.3.40}%
+\contentsline {subsubsection}{\numberline {8.1.3.41}ggLoadSimpleObj()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{54}{subsubsection.8.1.3.41}%
+\contentsline {subsubsection}{\numberline {8.1.3.42}ggLoadTexture()}{54}{subsubsection.8.1.3.42}%
+\contentsline {subsubsection}{\numberline {8.1.3.43}ggLookat()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{55}{subsubsection.8.1.3.43}%
+\contentsline {subsubsection}{\numberline {8.1.3.44}ggLookat()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{56}{subsubsection.8.1.3.44}%
+\contentsline {subsubsection}{\numberline {8.1.3.45}ggLookat()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{56}{subsubsection.8.1.3.45}%
+\contentsline {subsubsection}{\numberline {8.1.3.46}ggMatrixQuaternion()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{57}{subsubsection.8.1.3.46}%
+\contentsline {subsubsection}{\numberline {8.1.3.47}ggMatrixQuaternion()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{58}{subsubsection.8.1.3.47}%
+\contentsline {subsubsection}{\numberline {8.1.3.48}ggNorm()}{59}{subsubsection.8.1.3.48}%
+\contentsline {subsubsection}{\numberline {8.1.3.49}ggNormal()}{59}{subsubsection.8.1.3.49}%
+\contentsline {subsubsection}{\numberline {8.1.3.50}ggNormalize()}{59}{subsubsection.8.1.3.50}%
+\contentsline {subsubsection}{\numberline {8.1.3.51}ggNormalize3()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{60}{subsubsection.8.1.3.51}%
+\contentsline {subsubsection}{\numberline {8.1.3.52}ggNormalize3()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{60}{subsubsection.8.1.3.52}%
+\contentsline {subsubsection}{\numberline {8.1.3.53}ggNormalize3()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{61}{subsubsection.8.1.3.53}%
+\contentsline {subsubsection}{\numberline {8.1.3.54}ggNormalize3()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{62}{subsubsection.8.1.3.54}%
+\contentsline {subsubsection}{\numberline {8.1.3.55}ggNormalize4()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{62}{subsubsection.8.1.3.55}%
+\contentsline {subsubsection}{\numberline {8.1.3.56}ggNormalize4()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{63}{subsubsection.8.1.3.56}%
+\contentsline {subsubsection}{\numberline {8.1.3.57}ggNormalize4()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{63}{subsubsection.8.1.3.57}%
+\contentsline {subsubsection}{\numberline {8.1.3.58}ggNormalize4()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{64}{subsubsection.8.1.3.58}%
+\contentsline {subsubsection}{\numberline {8.1.3.59}ggOrthogonal()}{64}{subsubsection.8.1.3.59}%
+\contentsline {subsubsection}{\numberline {8.1.3.60}ggPerspective()}{65}{subsubsection.8.1.3.60}%
+\contentsline {subsubsection}{\numberline {8.1.3.61}ggPointsCube()}{66}{subsubsection.8.1.3.61}%
+\contentsline {subsubsection}{\numberline {8.1.3.62}ggPointsSphere()}{66}{subsubsection.8.1.3.62}%
+\contentsline {subsubsection}{\numberline {8.1.3.63}ggQuaternionMatrix()}{67}{subsubsection.8.1.3.63}%
+\contentsline {subsubsection}{\numberline {8.1.3.64}ggQuaternionTransposeMatrix()}{67}{subsubsection.8.1.3.64}%
+\contentsline {subsubsection}{\numberline {8.1.3.65}ggReadImage()}{68}{subsubsection.8.1.3.65}%
+\contentsline {subsubsection}{\numberline {8.1.3.66}ggRectangle()}{69}{subsubsection.8.1.3.66}%
+\contentsline {subsubsection}{\numberline {8.1.3.67}ggRotate()\hspace {0.1cm}{\footnotesize \ttfamily [1/5]}}{69}{subsubsection.8.1.3.67}%
+\contentsline {subsubsection}{\numberline {8.1.3.68}ggRotate()\hspace {0.1cm}{\footnotesize \ttfamily [2/5]}}{70}{subsubsection.8.1.3.68}%
+\contentsline {subsubsection}{\numberline {8.1.3.69}ggRotate()\hspace {0.1cm}{\footnotesize \ttfamily [3/5]}}{70}{subsubsection.8.1.3.69}%
+\contentsline {subsubsection}{\numberline {8.1.3.70}ggRotate()\hspace {0.1cm}{\footnotesize \ttfamily [4/5]}}{71}{subsubsection.8.1.3.70}%
+\contentsline {subsubsection}{\numberline {8.1.3.71}ggRotate()\hspace {0.1cm}{\footnotesize \ttfamily [5/5]}}{71}{subsubsection.8.1.3.71}%
+\contentsline {subsubsection}{\numberline {8.1.3.72}ggRotateQuaternion()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{72}{subsubsection.8.1.3.72}%
+\contentsline {subsubsection}{\numberline {8.1.3.73}ggRotateQuaternion()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{73}{subsubsection.8.1.3.73}%
+\contentsline {subsubsection}{\numberline {8.1.3.74}ggRotateQuaternion()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{73}{subsubsection.8.1.3.74}%
+\contentsline {subsubsection}{\numberline {8.1.3.75}ggRotateX()}{74}{subsubsection.8.1.3.75}%
+\contentsline {subsubsection}{\numberline {8.1.3.76}ggRotateY()}{74}{subsubsection.8.1.3.76}%
+\contentsline {subsubsection}{\numberline {8.1.3.77}ggRotateZ()}{75}{subsubsection.8.1.3.77}%
+\contentsline {subsubsection}{\numberline {8.1.3.78}ggSaveColor()}{75}{subsubsection.8.1.3.78}%
+\contentsline {subsubsection}{\numberline {8.1.3.79}ggSaveDepth()}{76}{subsubsection.8.1.3.79}%
+\contentsline {subsubsection}{\numberline {8.1.3.80}ggSaveTga()}{76}{subsubsection.8.1.3.80}%
+\contentsline {subsubsection}{\numberline {8.1.3.81}ggScale()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{77}{subsubsection.8.1.3.81}%
+\contentsline {subsubsection}{\numberline {8.1.3.82}ggScale()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{78}{subsubsection.8.1.3.82}%
+\contentsline {subsubsection}{\numberline {8.1.3.83}ggScale()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{78}{subsubsection.8.1.3.83}%
+\contentsline {subsubsection}{\numberline {8.1.3.84}ggSlerp()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{79}{subsubsection.8.1.3.84}%
+\contentsline {subsubsection}{\numberline {8.1.3.85}ggSlerp()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{79}{subsubsection.8.1.3.85}%
+\contentsline {subsubsection}{\numberline {8.1.3.86}ggSlerp()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{80}{subsubsection.8.1.3.86}%
+\contentsline {subsubsection}{\numberline {8.1.3.87}ggSlerp()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{81}{subsubsection.8.1.3.87}%
+\contentsline {subsubsection}{\numberline {8.1.3.88}ggTranslate()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{81}{subsubsection.8.1.3.88}%
+\contentsline {subsubsection}{\numberline {8.1.3.89}ggTranslate()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{82}{subsubsection.8.1.3.89}%
+\contentsline {subsubsection}{\numberline {8.1.3.90}ggTranslate()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{82}{subsubsection.8.1.3.90}%
+\contentsline {subsubsection}{\numberline {8.1.3.91}ggTranspose()}{84}{subsubsection.8.1.3.91}%
+\contentsline {subsubsection}{\numberline {8.1.3.92}operator$\ast $()}{84}{subsubsection.8.1.3.92}%
+\contentsline {subsubsection}{\numberline {8.1.3.93}operator+()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{86}{subsubsection.8.1.3.93}%
+\contentsline {subsubsection}{\numberline {8.1.3.94}operator+()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{86}{subsubsection.8.1.3.94}%
+\contentsline {subsubsection}{\numberline {8.1.3.95}operator-\/()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{86}{subsubsection.8.1.3.95}%
+\contentsline {subsubsection}{\numberline {8.1.3.96}operator-\/()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{87}{subsubsection.8.1.3.96}%
+\contentsline {subsubsection}{\numberline {8.1.3.97}operator/()}{87}{subsubsection.8.1.3.97}%
+\contentsline {subsection}{\numberline {8.1.4}変数詳解}{87}{subsection.8.1.4}%
+\contentsline {subsubsection}{\numberline {8.1.4.1}ggBufferAlignment}{87}{subsubsection.8.1.4.1}%
+\contentsline {chapter}{\numberline {9}クラス詳解}{89}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Config クラス}{89}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}詳解}{89}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}構築子と解体子}{89}{subsection.9.1.2}%
+\contentsline {subsubsection}{\numberline {9.1.2.1}Config()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{89}{subsubsection.9.1.2.1}%
+\contentsline {subsubsection}{\numberline {9.1.2.2}Config()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{90}{subsubsection.9.1.2.2}%
+\contentsline {subsubsection}{\numberline {9.1.2.3}$\sim $Config()}{90}{subsubsection.9.1.2.3}%
+\contentsline {subsection}{\numberline {9.1.3}関数詳解}{90}{subsection.9.1.3}%
+\contentsline {subsubsection}{\numberline {9.1.3.1}getHeight()}{90}{subsubsection.9.1.3.1}%
+\contentsline {subsubsection}{\numberline {9.1.3.2}getWidth()}{91}{subsubsection.9.1.3.2}%
+\contentsline {subsubsection}{\numberline {9.1.3.3}load()}{91}{subsubsection.9.1.3.3}%
+\contentsline {subsubsection}{\numberline {9.1.3.4}save()}{92}{subsubsection.9.1.3.4}%
+\contentsline {subsection}{\numberline {9.1.4}フレンドと関連関数の詳解}{93}{subsection.9.1.4}%
+\contentsline {subsubsection}{\numberline {9.1.4.1}Menu}{93}{subsubsection.9.1.4.1}%
+\contentsline {section}{\numberline {9.2}Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}App クラス}{93}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}詳解}{94}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}構築子と解体子}{94}{subsection.9.2.2}%
+\contentsline {subsubsection}{\numberline {9.2.2.1}GgApp()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{94}{subsubsection.9.2.2.1}%
+\contentsline {subsubsection}{\numberline {9.2.2.2}GgApp()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{94}{subsubsection.9.2.2.2}%
+\contentsline {subsubsection}{\numberline {9.2.2.3}GgApp()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{95}{subsubsection.9.2.2.3}%
+\contentsline {subsubsection}{\numberline {9.2.2.4}$\sim $GgApp()}{95}{subsubsection.9.2.2.4}%
+\contentsline {subsection}{\numberline {9.2.3}関数詳解}{95}{subsection.9.2.3}%
+\contentsline {subsubsection}{\numberline {9.2.3.1}getUsername()}{95}{subsubsection.9.2.3.1}%
+\contentsline {subsubsection}{\numberline {9.2.3.2}main()}{96}{subsubsection.9.2.3.2}%
+\contentsline {subsubsection}{\numberline {9.2.3.3}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{97}{subsubsection.9.2.3.3}%
+\contentsline {subsubsection}{\numberline {9.2.3.4}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{98}{subsubsection.9.2.3.4}%
+\contentsline {section}{\numberline {9.3}gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Buffer$<$ T $>$ クラステンプレート}{98}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}詳解}{99}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}構築子と解体子}{99}{subsection.9.3.2}%
+\contentsline {subsubsection}{\numberline {9.3.2.1}GgBuffer()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{99}{subsubsection.9.3.2.1}%
+\contentsline {subsubsection}{\numberline {9.3.2.2}GgBuffer()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{100}{subsubsection.9.3.2.2}%
+\contentsline {subsubsection}{\numberline {9.3.2.3}GgBuffer()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{100}{subsubsection.9.3.2.3}%
+\contentsline {subsubsection}{\numberline {9.3.2.4}$\sim $GgBuffer()}{101}{subsubsection.9.3.2.4}%
+\contentsline {subsection}{\numberline {9.3.3}関数詳解}{101}{subsection.9.3.3}%
+\contentsline {subsubsection}{\numberline {9.3.3.1}bind()}{101}{subsubsection.9.3.3.1}%
+\contentsline {subsubsection}{\numberline {9.3.3.2}copy()}{101}{subsubsection.9.3.3.2}%
+\contentsline {subsubsection}{\numberline {9.3.3.3}getBuffer()}{102}{subsubsection.9.3.3.3}%
+\contentsline {subsubsection}{\numberline {9.3.3.4}getCount()}{102}{subsubsection.9.3.3.4}%
+\contentsline {subsubsection}{\numberline {9.3.3.5}getStride()}{103}{subsubsection.9.3.3.5}%
+\contentsline {subsubsection}{\numberline {9.3.3.6}getTarget()}{103}{subsubsection.9.3.3.6}%
+\contentsline {subsubsection}{\numberline {9.3.3.7}map()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{103}{subsubsection.9.3.3.7}%
+\contentsline {subsubsection}{\numberline {9.3.3.8}map()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{104}{subsubsection.9.3.3.8}%
+\contentsline {subsubsection}{\numberline {9.3.3.9}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{104}{subsubsection.9.3.3.9}%
+\contentsline {subsubsection}{\numberline {9.3.3.10}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{106}{subsubsection.9.3.3.10}%
+\contentsline {subsubsection}{\numberline {9.3.3.11}read()}{106}{subsubsection.9.3.3.11}%
+\contentsline {subsubsection}{\numberline {9.3.3.12}send()}{107}{subsubsection.9.3.3.12}%
+\contentsline {subsubsection}{\numberline {9.3.3.13}unbind()}{108}{subsubsection.9.3.3.13}%
+\contentsline {subsubsection}{\numberline {9.3.3.14}unmap()}{108}{subsubsection.9.3.3.14}%
+\contentsline {section}{\numberline {9.4}gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Color\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Texture クラス}{108}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}詳解}{108}{subsection.9.4.1}%
+\contentsline {subsection}{\numberline {9.4.2}構築子と解体子}{108}{subsection.9.4.2}%
+\contentsline {subsubsection}{\numberline {9.4.2.1}GgColorTexture()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{108}{subsubsection.9.4.2.1}%
+\contentsline {subsubsection}{\numberline {9.4.2.2}GgColorTexture()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{109}{subsubsection.9.4.2.2}%
+\contentsline {subsubsection}{\numberline {9.4.2.3}GgColorTexture()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{109}{subsubsection.9.4.2.3}%
+\contentsline {subsubsection}{\numberline {9.4.2.4}$\sim $GgColorTexture()}{110}{subsubsection.9.4.2.4}%
+\contentsline {subsection}{\numberline {9.4.3}関数詳解}{110}{subsection.9.4.3}%
+\contentsline {subsubsection}{\numberline {9.4.3.1}bind()}{110}{subsubsection.9.4.3.1}%
+\contentsline {subsubsection}{\numberline {9.4.3.2}get()}{110}{subsubsection.9.4.3.2}%
+\contentsline {subsubsection}{\numberline {9.4.3.3}getHeight()}{110}{subsubsection.9.4.3.3}%
+\contentsline {subsubsection}{\numberline {9.4.3.4}getSize()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{110}{subsubsection.9.4.3.4}%
+\contentsline {subsubsection}{\numberline {9.4.3.5}getSize()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{111}{subsubsection.9.4.3.5}%
+\contentsline {subsubsection}{\numberline {9.4.3.6}getTexture()}{111}{subsubsection.9.4.3.6}%
+\contentsline {subsubsection}{\numberline {9.4.3.7}getWidth()}{111}{subsubsection.9.4.3.7}%
+\contentsline {subsubsection}{\numberline {9.4.3.8}load()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{111}{subsubsection.9.4.3.8}%
+\contentsline {subsubsection}{\numberline {9.4.3.9}load()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{112}{subsubsection.9.4.3.9}%
+\contentsline {subsubsection}{\numberline {9.4.3.10}operator bool()}{112}{subsubsection.9.4.3.10}%
+\contentsline {subsubsection}{\numberline {9.4.3.11}operator"!()}{113}{subsubsection.9.4.3.11}%
+\contentsline {subsubsection}{\numberline {9.4.3.12}unbind()}{113}{subsubsection.9.4.3.12}%
+\contentsline {section}{\numberline {9.5}gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Elements クラス}{113}{section.9.5}%
+\contentsline {subsection}{\numberline {9.5.1}詳解}{115}{subsection.9.5.1}%
+\contentsline {subsection}{\numberline {9.5.2}構築子と解体子}{115}{subsection.9.5.2}%
+\contentsline {subsubsection}{\numberline {9.5.2.1}GgElements()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{115}{subsubsection.9.5.2.1}%
+\contentsline {subsubsection}{\numberline {9.5.2.2}GgElements()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{115}{subsubsection.9.5.2.2}%
+\contentsline {subsubsection}{\numberline {9.5.2.3}$\sim $GgElements()}{116}{subsubsection.9.5.2.3}%
+\contentsline {subsection}{\numberline {9.5.3}関数詳解}{116}{subsection.9.5.3}%
+\contentsline {subsubsection}{\numberline {9.5.3.1}draw()}{116}{subsubsection.9.5.3.1}%
+\contentsline {subsubsection}{\numberline {9.5.3.2}getIndexBuffer()}{117}{subsubsection.9.5.3.2}%
+\contentsline {subsubsection}{\numberline {9.5.3.3}getIndexCount()}{117}{subsubsection.9.5.3.3}%
+\contentsline {subsubsection}{\numberline {9.5.3.4}load()}{117}{subsubsection.9.5.3.4}%
+\contentsline {subsubsection}{\numberline {9.5.3.5}send()}{118}{subsubsection.9.5.3.5}%
+\contentsline {section}{\numberline {9.6}gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Matrix クラス}{119}{section.9.6}%
+\contentsline {subsection}{\numberline {9.6.1}詳解}{121}{subsection.9.6.1}%
+\contentsline {subsection}{\numberline {9.6.2}構築子と解体子}{121}{subsection.9.6.2}%
+\contentsline {subsubsection}{\numberline {9.6.2.1}GgMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [1/6]}}{121}{subsubsection.9.6.2.1}%
+\contentsline {subsubsection}{\numberline {9.6.2.2}GgMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [2/6]}}{121}{subsubsection.9.6.2.2}%
+\contentsline {subsubsection}{\numberline {9.6.2.3}GgMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [3/6]}}{122}{subsubsection.9.6.2.3}%
+\contentsline {subsubsection}{\numberline {9.6.2.4}GgMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [4/6]}}{123}{subsubsection.9.6.2.4}%
+\contentsline {subsubsection}{\numberline {9.6.2.5}GgMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [5/6]}}{123}{subsubsection.9.6.2.5}%
+\contentsline {subsubsection}{\numberline {9.6.2.6}GgMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [6/6]}}{124}{subsubsection.9.6.2.6}%
+\contentsline {subsubsection}{\numberline {9.6.2.7}$\sim $GgMatrix()}{124}{subsubsection.9.6.2.7}%
+\contentsline {subsection}{\numberline {9.6.3}関数詳解}{124}{subsection.9.6.3}%
+\contentsline {subsubsection}{\numberline {9.6.3.1}frustum()}{124}{subsubsection.9.6.3.1}%
+\contentsline {subsubsection}{\numberline {9.6.3.2}get()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{125}{subsubsection.9.6.3.2}%
+\contentsline {subsubsection}{\numberline {9.6.3.3}get()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{126}{subsubsection.9.6.3.3}%
+\contentsline {subsubsection}{\numberline {9.6.3.4}invert()}{127}{subsubsection.9.6.3.4}%
+\contentsline {subsubsection}{\numberline {9.6.3.5}loadFrustum()}{127}{subsubsection.9.6.3.5}%
+\contentsline {subsubsection}{\numberline {9.6.3.6}loadIdentity()}{128}{subsubsection.9.6.3.6}%
+\contentsline {subsubsection}{\numberline {9.6.3.7}loadInvert()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{128}{subsubsection.9.6.3.7}%
+\contentsline {subsubsection}{\numberline {9.6.3.8}loadInvert()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{129}{subsubsection.9.6.3.8}%
+\contentsline {subsubsection}{\numberline {9.6.3.9}loadLookat()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{129}{subsubsection.9.6.3.9}%
+\contentsline {subsubsection}{\numberline {9.6.3.10}loadLookat()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{131}{subsubsection.9.6.3.10}%
+\contentsline {subsubsection}{\numberline {9.6.3.11}loadLookat()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{132}{subsubsection.9.6.3.11}%
+\contentsline {subsubsection}{\numberline {9.6.3.12}loadNormal()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{133}{subsubsection.9.6.3.12}%
+\contentsline {subsubsection}{\numberline {9.6.3.13}loadNormal()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{134}{subsubsection.9.6.3.13}%
+\contentsline {subsubsection}{\numberline {9.6.3.14}loadOrthogonal()}{134}{subsubsection.9.6.3.14}%
+\contentsline {subsubsection}{\numberline {9.6.3.15}loadPerspective()}{135}{subsubsection.9.6.3.15}%
+\contentsline {subsubsection}{\numberline {9.6.3.16}loadRotate()\hspace {0.1cm}{\footnotesize \ttfamily [1/5]}}{135}{subsubsection.9.6.3.16}%
+\contentsline {subsubsection}{\numberline {9.6.3.17}loadRotate()\hspace {0.1cm}{\footnotesize \ttfamily [2/5]}}{137}{subsubsection.9.6.3.17}%
+\contentsline {subsubsection}{\numberline {9.6.3.18}loadRotate()\hspace {0.1cm}{\footnotesize \ttfamily [3/5]}}{138}{subsubsection.9.6.3.18}%
+\contentsline {subsubsection}{\numberline {9.6.3.19}loadRotate()\hspace {0.1cm}{\footnotesize \ttfamily [4/5]}}{138}{subsubsection.9.6.3.19}%
+\contentsline {subsubsection}{\numberline {9.6.3.20}loadRotate()\hspace {0.1cm}{\footnotesize \ttfamily [5/5]}}{139}{subsubsection.9.6.3.20}%
+\contentsline {subsubsection}{\numberline {9.6.3.21}loadRotateX()}{140}{subsubsection.9.6.3.21}%
+\contentsline {subsubsection}{\numberline {9.6.3.22}loadRotateY()}{141}{subsubsection.9.6.3.22}%
+\contentsline {subsubsection}{\numberline {9.6.3.23}loadRotateZ()}{141}{subsubsection.9.6.3.23}%
+\contentsline {subsubsection}{\numberline {9.6.3.24}loadScale()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{142}{subsubsection.9.6.3.24}%
+\contentsline {subsubsection}{\numberline {9.6.3.25}loadScale()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{143}{subsubsection.9.6.3.25}%
+\contentsline {subsubsection}{\numberline {9.6.3.26}loadScale()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{143}{subsubsection.9.6.3.26}%
+\contentsline {subsubsection}{\numberline {9.6.3.27}loadTranslate()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{144}{subsubsection.9.6.3.27}%
+\contentsline {subsubsection}{\numberline {9.6.3.28}loadTranslate()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{145}{subsubsection.9.6.3.28}%
+\contentsline {subsubsection}{\numberline {9.6.3.29}loadTranslate()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{145}{subsubsection.9.6.3.29}%
+\contentsline {subsubsection}{\numberline {9.6.3.30}loadTranspose()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{146}{subsubsection.9.6.3.30}%
+\contentsline {subsubsection}{\numberline {9.6.3.31}loadTranspose()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{147}{subsubsection.9.6.3.31}%
+\contentsline {subsubsection}{\numberline {9.6.3.32}lookat()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{147}{subsubsection.9.6.3.32}%
+\contentsline {subsubsection}{\numberline {9.6.3.33}lookat()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{148}{subsubsection.9.6.3.33}%
+\contentsline {subsubsection}{\numberline {9.6.3.34}lookat()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{148}{subsubsection.9.6.3.34}%
+\contentsline {subsubsection}{\numberline {9.6.3.35}normal()}{149}{subsubsection.9.6.3.35}%
+\contentsline {subsubsection}{\numberline {9.6.3.36}operator$\ast $()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{150}{subsubsection.9.6.3.36}%
+\contentsline {subsubsection}{\numberline {9.6.3.37}operator$\ast $()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{151}{subsubsection.9.6.3.37}%
+\contentsline {subsubsection}{\numberline {9.6.3.38}operator$\ast $()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{151}{subsubsection.9.6.3.38}%
+\contentsline {subsubsection}{\numberline {9.6.3.39}operator$\ast $=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{152}{subsubsection.9.6.3.39}%
+\contentsline {subsubsection}{\numberline {9.6.3.40}operator$\ast $=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{153}{subsubsection.9.6.3.40}%
+\contentsline {subsubsection}{\numberline {9.6.3.41}operator+()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{153}{subsubsection.9.6.3.41}%
+\contentsline {subsubsection}{\numberline {9.6.3.42}operator+()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{155}{subsubsection.9.6.3.42}%
+\contentsline {subsubsection}{\numberline {9.6.3.43}operator+=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{156}{subsubsection.9.6.3.43}%
+\contentsline {subsubsection}{\numberline {9.6.3.44}operator+=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{156}{subsubsection.9.6.3.44}%
+\contentsline {subsubsection}{\numberline {9.6.3.45}operator-\/()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{157}{subsubsection.9.6.3.45}%
+\contentsline {subsubsection}{\numberline {9.6.3.46}operator-\/()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{157}{subsubsection.9.6.3.46}%
+\contentsline {subsubsection}{\numberline {9.6.3.47}operator-\/=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{158}{subsubsection.9.6.3.47}%
+\contentsline {subsubsection}{\numberline {9.6.3.48}operator-\/=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{158}{subsubsection.9.6.3.48}%
+\contentsline {subsubsection}{\numberline {9.6.3.49}operator/()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{160}{subsubsection.9.6.3.49}%
+\contentsline {subsubsection}{\numberline {9.6.3.50}operator/()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{161}{subsubsection.9.6.3.50}%
+\contentsline {subsubsection}{\numberline {9.6.3.51}operator/=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{161}{subsubsection.9.6.3.51}%
+\contentsline {subsubsection}{\numberline {9.6.3.52}operator/=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{162}{subsubsection.9.6.3.52}%
+\contentsline {subsubsection}{\numberline {9.6.3.53}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{163}{subsubsection.9.6.3.53}%
+\contentsline {subsubsection}{\numberline {9.6.3.54}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{163}{subsubsection.9.6.3.54}%
+\contentsline {subsubsection}{\numberline {9.6.3.55}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{163}{subsubsection.9.6.3.55}%
+\contentsline {subsubsection}{\numberline {9.6.3.56}orthogonal()}{164}{subsubsection.9.6.3.56}%
+\contentsline {subsubsection}{\numberline {9.6.3.57}perspective()}{164}{subsubsection.9.6.3.57}%
+\contentsline {subsubsection}{\numberline {9.6.3.58}projection()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{165}{subsubsection.9.6.3.58}%
+\contentsline {subsubsection}{\numberline {9.6.3.59}projection()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{165}{subsubsection.9.6.3.59}%
+\contentsline {subsubsection}{\numberline {9.6.3.60}projection()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{166}{subsubsection.9.6.3.60}%
+\contentsline {subsubsection}{\numberline {9.6.3.61}projection()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{166}{subsubsection.9.6.3.61}%
+\contentsline {subsubsection}{\numberline {9.6.3.62}rotate()\hspace {0.1cm}{\footnotesize \ttfamily [1/5]}}{166}{subsubsection.9.6.3.62}%
+\contentsline {subsubsection}{\numberline {9.6.3.63}rotate()\hspace {0.1cm}{\footnotesize \ttfamily [2/5]}}{167}{subsubsection.9.6.3.63}%
+\contentsline {subsubsection}{\numberline {9.6.3.64}rotate()\hspace {0.1cm}{\footnotesize \ttfamily [3/5]}}{167}{subsubsection.9.6.3.64}%
+\contentsline {subsubsection}{\numberline {9.6.3.65}rotate()\hspace {0.1cm}{\footnotesize \ttfamily [4/5]}}{168}{subsubsection.9.6.3.65}%
+\contentsline {subsubsection}{\numberline {9.6.3.66}rotate()\hspace {0.1cm}{\footnotesize \ttfamily [5/5]}}{168}{subsubsection.9.6.3.66}%
+\contentsline {subsubsection}{\numberline {9.6.3.67}rotateX()}{169}{subsubsection.9.6.3.67}%
+\contentsline {subsubsection}{\numberline {9.6.3.68}rotateY()}{170}{subsubsection.9.6.3.68}%
+\contentsline {subsubsection}{\numberline {9.6.3.69}rotateZ()}{170}{subsubsection.9.6.3.69}%
+\contentsline {subsubsection}{\numberline {9.6.3.70}scale()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{171}{subsubsection.9.6.3.70}%
+\contentsline {subsubsection}{\numberline {9.6.3.71}scale()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{171}{subsubsection.9.6.3.71}%
+\contentsline {subsubsection}{\numberline {9.6.3.72}scale()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{172}{subsubsection.9.6.3.72}%
+\contentsline {subsubsection}{\numberline {9.6.3.73}translate()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{173}{subsubsection.9.6.3.73}%
+\contentsline {subsubsection}{\numberline {9.6.3.74}translate()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{173}{subsubsection.9.6.3.74}%
+\contentsline {subsubsection}{\numberline {9.6.3.75}translate()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{174}{subsubsection.9.6.3.75}%
+\contentsline {subsubsection}{\numberline {9.6.3.76}transpose()}{175}{subsubsection.9.6.3.76}%
+\contentsline {section}{\numberline {9.7}gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Normal\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Texture クラス}{176}{section.9.7}%
+\contentsline {subsection}{\numberline {9.7.1}詳解}{176}{subsection.9.7.1}%
+\contentsline {subsection}{\numberline {9.7.2}構築子と解体子}{176}{subsection.9.7.2}%
+\contentsline {subsubsection}{\numberline {9.7.2.1}GgNormalTexture()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{176}{subsubsection.9.7.2.1}%
+\contentsline {subsubsection}{\numberline {9.7.2.2}GgNormalTexture()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{176}{subsubsection.9.7.2.2}%
+\contentsline {subsubsection}{\numberline {9.7.2.3}GgNormalTexture()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{177}{subsubsection.9.7.2.3}%
+\contentsline {subsubsection}{\numberline {9.7.2.4}$\sim $GgNormalTexture()}{177}{subsubsection.9.7.2.4}%
+\contentsline {subsection}{\numberline {9.7.3}関数詳解}{177}{subsection.9.7.3}%
+\contentsline {subsubsection}{\numberline {9.7.3.1}bind()}{177}{subsubsection.9.7.3.1}%
+\contentsline {subsubsection}{\numberline {9.7.3.2}get()}{178}{subsubsection.9.7.3.2}%
+\contentsline {subsubsection}{\numberline {9.7.3.3}getHeight()}{178}{subsubsection.9.7.3.3}%
+\contentsline {subsubsection}{\numberline {9.7.3.4}getSize()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{178}{subsubsection.9.7.3.4}%
+\contentsline {subsubsection}{\numberline {9.7.3.5}getSize()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{178}{subsubsection.9.7.3.5}%
+\contentsline {subsubsection}{\numberline {9.7.3.6}getTexture()}{178}{subsubsection.9.7.3.6}%
+\contentsline {subsubsection}{\numberline {9.7.3.7}getWidth()}{178}{subsubsection.9.7.3.7}%
+\contentsline {subsubsection}{\numberline {9.7.3.8}load()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{179}{subsubsection.9.7.3.8}%
+\contentsline {subsubsection}{\numberline {9.7.3.9}load()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{179}{subsubsection.9.7.3.9}%
+\contentsline {subsubsection}{\numberline {9.7.3.10}operator bool()}{180}{subsubsection.9.7.3.10}%
+\contentsline {subsubsection}{\numberline {9.7.3.11}operator"!()}{180}{subsubsection.9.7.3.11}%
+\contentsline {subsubsection}{\numberline {9.7.3.12}unbind()}{180}{subsubsection.9.7.3.12}%
+\contentsline {section}{\numberline {9.8}gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Points クラス}{180}{section.9.8}%
+\contentsline {subsection}{\numberline {9.8.1}詳解}{182}{subsection.9.8.1}%
+\contentsline {subsection}{\numberline {9.8.2}構築子と解体子}{182}{subsection.9.8.2}%
+\contentsline {subsubsection}{\numberline {9.8.2.1}GgPoints()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{182}{subsubsection.9.8.2.1}%
+\contentsline {subsubsection}{\numberline {9.8.2.2}GgPoints()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{182}{subsubsection.9.8.2.2}%
+\contentsline {subsubsection}{\numberline {9.8.2.3}$\sim $GgPoints()}{183}{subsubsection.9.8.2.3}%
+\contentsline {subsection}{\numberline {9.8.3}関数詳解}{183}{subsection.9.8.3}%
+\contentsline {subsubsection}{\numberline {9.8.3.1}draw()}{183}{subsubsection.9.8.3.1}%
+\contentsline {subsubsection}{\numberline {9.8.3.2}getBuffer()}{183}{subsubsection.9.8.3.2}%
+\contentsline {subsubsection}{\numberline {9.8.3.3}getCount()}{184}{subsubsection.9.8.3.3}%
+\contentsline {subsubsection}{\numberline {9.8.3.4}load()}{184}{subsubsection.9.8.3.4}%
+\contentsline {subsubsection}{\numberline {9.8.3.5}operator bool()}{185}{subsubsection.9.8.3.5}%
+\contentsline {subsubsection}{\numberline {9.8.3.6}operator"!()}{185}{subsubsection.9.8.3.6}%
+\contentsline {subsubsection}{\numberline {9.8.3.7}send()}{185}{subsubsection.9.8.3.7}%
+\contentsline {section}{\numberline {9.9}gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Point\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shader クラス}{185}{section.9.9}%
+\contentsline {subsection}{\numberline {9.9.1}詳解}{186}{subsection.9.9.1}%
+\contentsline {subsection}{\numberline {9.9.2}構築子と解体子}{186}{subsection.9.9.2}%
+\contentsline {subsubsection}{\numberline {9.9.2.1}GgPointShader()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{186}{subsubsection.9.9.2.1}%
+\contentsline {subsubsection}{\numberline {9.9.2.2}GgPointShader()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{187}{subsubsection.9.9.2.2}%
+\contentsline {subsubsection}{\numberline {9.9.2.3}GgPointShader()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{188}{subsubsection.9.9.2.3}%
+\contentsline {subsubsection}{\numberline {9.9.2.4}$\sim $GgPointShader()}{188}{subsubsection.9.9.2.4}%
+\contentsline {subsection}{\numberline {9.9.3}関数詳解}{188}{subsection.9.9.3}%
+\contentsline {subsubsection}{\numberline {9.9.3.1}get()}{188}{subsubsection.9.9.3.1}%
+\contentsline {subsubsection}{\numberline {9.9.3.2}load()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{189}{subsubsection.9.9.3.2}%
+\contentsline {subsubsection}{\numberline {9.9.3.3}load()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{190}{subsubsection.9.9.3.3}%
+\contentsline {subsubsection}{\numberline {9.9.3.4}loadMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{190}{subsubsection.9.9.3.4}%
+\contentsline {subsubsection}{\numberline {9.9.3.5}loadMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{191}{subsubsection.9.9.3.5}%
+\contentsline {subsubsection}{\numberline {9.9.3.6}loadModelviewMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{192}{subsubsection.9.9.3.6}%
+\contentsline {subsubsection}{\numberline {9.9.3.7}loadModelviewMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{192}{subsubsection.9.9.3.7}%
+\contentsline {subsubsection}{\numberline {9.9.3.8}loadProjectionMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{193}{subsubsection.9.9.3.8}%
+\contentsline {subsubsection}{\numberline {9.9.3.9}loadProjectionMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{194}{subsubsection.9.9.3.9}%
+\contentsline {subsubsection}{\numberline {9.9.3.10}unuse()}{194}{subsubsection.9.9.3.10}%
+\contentsline {subsubsection}{\numberline {9.9.3.11}use()\hspace {0.1cm}{\footnotesize \ttfamily [1/5]}}{194}{subsubsection.9.9.3.11}%
+\contentsline {subsubsection}{\numberline {9.9.3.12}use()\hspace {0.1cm}{\footnotesize \ttfamily [2/5]}}{195}{subsubsection.9.9.3.12}%
+\contentsline {subsubsection}{\numberline {9.9.3.13}use()\hspace {0.1cm}{\footnotesize \ttfamily [3/5]}}{196}{subsubsection.9.9.3.13}%
+\contentsline {subsubsection}{\numberline {9.9.3.14}use()\hspace {0.1cm}{\footnotesize \ttfamily [4/5]}}{196}{subsubsection.9.9.3.14}%
+\contentsline {subsubsection}{\numberline {9.9.3.15}use()\hspace {0.1cm}{\footnotesize \ttfamily [5/5]}}{197}{subsubsection.9.9.3.15}%
+\contentsline {section}{\numberline {9.10}gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Quaternion クラス}{197}{section.9.10}%
+\contentsline {subsection}{\numberline {9.10.1}詳解}{201}{subsection.9.10.1}%
+\contentsline {subsection}{\numberline {9.10.2}構築子と解体子}{201}{subsection.9.10.2}%
+\contentsline {subsubsection}{\numberline {9.10.2.1}GgQuaternion()\hspace {0.1cm}{\footnotesize \ttfamily [1/7]}}{201}{subsubsection.9.10.2.1}%
+\contentsline {subsubsection}{\numberline {9.10.2.2}GgQuaternion()\hspace {0.1cm}{\footnotesize \ttfamily [2/7]}}{201}{subsubsection.9.10.2.2}%
+\contentsline {subsubsection}{\numberline {9.10.2.3}GgQuaternion()\hspace {0.1cm}{\footnotesize \ttfamily [3/7]}}{202}{subsubsection.9.10.2.3}%
+\contentsline {subsubsection}{\numberline {9.10.2.4}GgQuaternion()\hspace {0.1cm}{\footnotesize \ttfamily [4/7]}}{202}{subsubsection.9.10.2.4}%
+\contentsline {subsubsection}{\numberline {9.10.2.5}GgQuaternion()\hspace {0.1cm}{\footnotesize \ttfamily [5/7]}}{203}{subsubsection.9.10.2.5}%
+\contentsline {subsubsection}{\numberline {9.10.2.6}GgQuaternion()\hspace {0.1cm}{\footnotesize \ttfamily [6/7]}}{203}{subsubsection.9.10.2.6}%
+\contentsline {subsubsection}{\numberline {9.10.2.7}GgQuaternion()\hspace {0.1cm}{\footnotesize \ttfamily [7/7]}}{204}{subsubsection.9.10.2.7}%
+\contentsline {subsubsection}{\numberline {9.10.2.8}$\sim $GgQuaternion()}{204}{subsubsection.9.10.2.8}%
+\contentsline {subsection}{\numberline {9.10.3}関数詳解}{204}{subsection.9.10.3}%
+\contentsline {subsubsection}{\numberline {9.10.3.1}add()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{204}{subsubsection.9.10.3.1}%
+\contentsline {subsubsection}{\numberline {9.10.3.2}add()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{204}{subsubsection.9.10.3.2}%
+\contentsline {subsubsection}{\numberline {9.10.3.3}add()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{205}{subsubsection.9.10.3.3}%
+\contentsline {subsubsection}{\numberline {9.10.3.4}add()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{205}{subsubsection.9.10.3.4}%
+\contentsline {subsubsection}{\numberline {9.10.3.5}conjugate()}{207}{subsubsection.9.10.3.5}%
+\contentsline {subsubsection}{\numberline {9.10.3.6}divide()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{208}{subsubsection.9.10.3.6}%
+\contentsline {subsubsection}{\numberline {9.10.3.7}divide()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{209}{subsubsection.9.10.3.7}%
+\contentsline {subsubsection}{\numberline {9.10.3.8}divide()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{209}{subsubsection.9.10.3.8}%
+\contentsline {subsubsection}{\numberline {9.10.3.9}divide()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{210}{subsubsection.9.10.3.9}%
+\contentsline {subsubsection}{\numberline {9.10.3.10}euler()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{210}{subsubsection.9.10.3.10}%
+\contentsline {subsubsection}{\numberline {9.10.3.11}euler()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{211}{subsubsection.9.10.3.11}%
+\contentsline {subsubsection}{\numberline {9.10.3.12}euler()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{212}{subsubsection.9.10.3.12}%
+\contentsline {subsubsection}{\numberline {9.10.3.13}get()}{212}{subsubsection.9.10.3.13}%
+\contentsline {subsubsection}{\numberline {9.10.3.14}getConjugateMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{213}{subsubsection.9.10.3.14}%
+\contentsline {subsubsection}{\numberline {9.10.3.15}getConjugateMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{213}{subsubsection.9.10.3.15}%
+\contentsline {subsubsection}{\numberline {9.10.3.16}getConjugateMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{214}{subsubsection.9.10.3.16}%
+\contentsline {subsubsection}{\numberline {9.10.3.17}getMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{214}{subsubsection.9.10.3.17}%
+\contentsline {subsubsection}{\numberline {9.10.3.18}getMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{215}{subsubsection.9.10.3.18}%
+\contentsline {subsubsection}{\numberline {9.10.3.19}getMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{216}{subsubsection.9.10.3.19}%
+\contentsline {subsubsection}{\numberline {9.10.3.20}invert()}{216}{subsubsection.9.10.3.20}%
+\contentsline {subsubsection}{\numberline {9.10.3.21}loadAdd()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{217}{subsubsection.9.10.3.21}%
+\contentsline {subsubsection}{\numberline {9.10.3.22}loadAdd()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{217}{subsubsection.9.10.3.22}%
+\contentsline {subsubsection}{\numberline {9.10.3.23}loadAdd()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{218}{subsubsection.9.10.3.23}%
+\contentsline {subsubsection}{\numberline {9.10.3.24}loadAdd()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{218}{subsubsection.9.10.3.24}%
+\contentsline {subsubsection}{\numberline {9.10.3.25}loadConjugate()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{219}{subsubsection.9.10.3.25}%
+\contentsline {subsubsection}{\numberline {9.10.3.26}loadConjugate()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{220}{subsubsection.9.10.3.26}%
+\contentsline {subsubsection}{\numberline {9.10.3.27}loadDivide()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{220}{subsubsection.9.10.3.27}%
+\contentsline {subsubsection}{\numberline {9.10.3.28}loadDivide()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{221}{subsubsection.9.10.3.28}%
+\contentsline {subsubsection}{\numberline {9.10.3.29}loadDivide()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{221}{subsubsection.9.10.3.29}%
+\contentsline {subsubsection}{\numberline {9.10.3.30}loadDivide()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{222}{subsubsection.9.10.3.30}%
+\contentsline {subsubsection}{\numberline {9.10.3.31}loadEuler()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{223}{subsubsection.9.10.3.31}%
+\contentsline {subsubsection}{\numberline {9.10.3.32}loadEuler()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{223}{subsubsection.9.10.3.32}%
+\contentsline {subsubsection}{\numberline {9.10.3.33}loadIdentity()}{224}{subsubsection.9.10.3.33}%
+\contentsline {subsubsection}{\numberline {9.10.3.34}loadInvert()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{225}{subsubsection.9.10.3.34}%
+\contentsline {subsubsection}{\numberline {9.10.3.35}loadInvert()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{225}{subsubsection.9.10.3.35}%
+\contentsline {subsubsection}{\numberline {9.10.3.36}loadMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{226}{subsubsection.9.10.3.36}%
+\contentsline {subsubsection}{\numberline {9.10.3.37}loadMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{227}{subsubsection.9.10.3.37}%
+\contentsline {subsubsection}{\numberline {9.10.3.38}loadMultiply()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{228}{subsubsection.9.10.3.38}%
+\contentsline {subsubsection}{\numberline {9.10.3.39}loadMultiply()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{228}{subsubsection.9.10.3.39}%
+\contentsline {subsubsection}{\numberline {9.10.3.40}loadMultiply()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{228}{subsubsection.9.10.3.40}%
+\contentsline {subsubsection}{\numberline {9.10.3.41}loadMultiply()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{230}{subsubsection.9.10.3.41}%
+\contentsline {subsubsection}{\numberline {9.10.3.42}loadNormalize()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{231}{subsubsection.9.10.3.42}%
+\contentsline {subsubsection}{\numberline {9.10.3.43}loadNormalize()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{231}{subsubsection.9.10.3.43}%
+\contentsline {subsubsection}{\numberline {9.10.3.44}loadRotate()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{232}{subsubsection.9.10.3.44}%
+\contentsline {subsubsection}{\numberline {9.10.3.45}loadRotate()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{232}{subsubsection.9.10.3.45}%
+\contentsline {subsubsection}{\numberline {9.10.3.46}loadRotate()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{234}{subsubsection.9.10.3.46}%
+\contentsline {subsubsection}{\numberline {9.10.3.47}loadRotateX()}{235}{subsubsection.9.10.3.47}%
+\contentsline {subsubsection}{\numberline {9.10.3.48}loadRotateY()}{236}{subsubsection.9.10.3.48}%
+\contentsline {subsubsection}{\numberline {9.10.3.49}loadRotateZ()}{236}{subsubsection.9.10.3.49}%
+\contentsline {subsubsection}{\numberline {9.10.3.50}loadSlerp()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{237}{subsubsection.9.10.3.50}%
+\contentsline {subsubsection}{\numberline {9.10.3.51}loadSlerp()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{238}{subsubsection.9.10.3.51}%
+\contentsline {subsubsection}{\numberline {9.10.3.52}loadSlerp()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{238}{subsubsection.9.10.3.52}%
+\contentsline {subsubsection}{\numberline {9.10.3.53}loadSlerp()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{239}{subsubsection.9.10.3.53}%
+\contentsline {subsubsection}{\numberline {9.10.3.54}loadSubtract()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{240}{subsubsection.9.10.3.54}%
+\contentsline {subsubsection}{\numberline {9.10.3.55}loadSubtract()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{240}{subsubsection.9.10.3.55}%
+\contentsline {subsubsection}{\numberline {9.10.3.56}loadSubtract()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{241}{subsubsection.9.10.3.56}%
+\contentsline {subsubsection}{\numberline {9.10.3.57}loadSubtract()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{241}{subsubsection.9.10.3.57}%
+\contentsline {subsubsection}{\numberline {9.10.3.58}multiply()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{242}{subsubsection.9.10.3.58}%
+\contentsline {subsubsection}{\numberline {9.10.3.59}multiply()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{243}{subsubsection.9.10.3.59}%
+\contentsline {subsubsection}{\numberline {9.10.3.60}multiply()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{243}{subsubsection.9.10.3.60}%
+\contentsline {subsubsection}{\numberline {9.10.3.61}multiply()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{244}{subsubsection.9.10.3.61}%
+\contentsline {subsubsection}{\numberline {9.10.3.62}norm()}{244}{subsubsection.9.10.3.62}%
+\contentsline {subsubsection}{\numberline {9.10.3.63}normalize()}{245}{subsubsection.9.10.3.63}%
+\contentsline {subsubsection}{\numberline {9.10.3.64}operator$\ast $()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{246}{subsubsection.9.10.3.64}%
+\contentsline {subsubsection}{\numberline {9.10.3.65}operator$\ast $()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{246}{subsubsection.9.10.3.65}%
+\contentsline {subsubsection}{\numberline {9.10.3.66}operator$\ast $()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{246}{subsubsection.9.10.3.66}%
+\contentsline {subsubsection}{\numberline {9.10.3.67}operator$\ast $=()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{247}{subsubsection.9.10.3.67}%
+\contentsline {subsubsection}{\numberline {9.10.3.68}operator$\ast $=()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{247}{subsubsection.9.10.3.68}%
+\contentsline {subsubsection}{\numberline {9.10.3.69}operator$\ast $=()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{248}{subsubsection.9.10.3.69}%
+\contentsline {subsubsection}{\numberline {9.10.3.70}operator+()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{248}{subsubsection.9.10.3.70}%
+\contentsline {subsubsection}{\numberline {9.10.3.71}operator+()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{248}{subsubsection.9.10.3.71}%
+\contentsline {subsubsection}{\numberline {9.10.3.72}operator+()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{249}{subsubsection.9.10.3.72}%
+\contentsline {subsubsection}{\numberline {9.10.3.73}operator+=()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{249}{subsubsection.9.10.3.73}%
+\contentsline {subsubsection}{\numberline {9.10.3.74}operator+=()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{249}{subsubsection.9.10.3.74}%
+\contentsline {subsubsection}{\numberline {9.10.3.75}operator+=()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{250}{subsubsection.9.10.3.75}%
+\contentsline {subsubsection}{\numberline {9.10.3.76}operator-\/()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{250}{subsubsection.9.10.3.76}%
+\contentsline {subsubsection}{\numberline {9.10.3.77}operator-\/()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{250}{subsubsection.9.10.3.77}%
+\contentsline {subsubsection}{\numberline {9.10.3.78}operator-\/()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{250}{subsubsection.9.10.3.78}%
+\contentsline {subsubsection}{\numberline {9.10.3.79}operator-\/=()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{251}{subsubsection.9.10.3.79}%
+\contentsline {subsubsection}{\numberline {9.10.3.80}operator-\/=()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{251}{subsubsection.9.10.3.80}%
+\contentsline {subsubsection}{\numberline {9.10.3.81}operator-\/=()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{251}{subsubsection.9.10.3.81}%
+\contentsline {subsubsection}{\numberline {9.10.3.82}operator/()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{252}{subsubsection.9.10.3.82}%
+\contentsline {subsubsection}{\numberline {9.10.3.83}operator/()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{252}{subsubsection.9.10.3.83}%
+\contentsline {subsubsection}{\numberline {9.10.3.84}operator/()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{253}{subsubsection.9.10.3.84}%
+\contentsline {subsubsection}{\numberline {9.10.3.85}operator/=()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{253}{subsubsection.9.10.3.85}%
+\contentsline {subsubsection}{\numberline {9.10.3.86}operator/=()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{253}{subsubsection.9.10.3.86}%
+\contentsline {subsubsection}{\numberline {9.10.3.87}operator/=()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{254}{subsubsection.9.10.3.87}%
+\contentsline {subsubsection}{\numberline {9.10.3.88}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{254}{subsubsection.9.10.3.88}%
+\contentsline {subsubsection}{\numberline {9.10.3.89}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{255}{subsubsection.9.10.3.89}%
+\contentsline {subsubsection}{\numberline {9.10.3.90}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{255}{subsubsection.9.10.3.90}%
+\contentsline {subsubsection}{\numberline {9.10.3.91}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{256}{subsubsection.9.10.3.91}%
+\contentsline {subsubsection}{\numberline {9.10.3.92}rotate()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{256}{subsubsection.9.10.3.92}%
+\contentsline {subsubsection}{\numberline {9.10.3.93}rotate()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{257}{subsubsection.9.10.3.93}%
+\contentsline {subsubsection}{\numberline {9.10.3.94}rotate()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{257}{subsubsection.9.10.3.94}%
+\contentsline {subsubsection}{\numberline {9.10.3.95}rotateX()}{258}{subsubsection.9.10.3.95}%
+\contentsline {subsubsection}{\numberline {9.10.3.96}rotateY()}{259}{subsubsection.9.10.3.96}%
+\contentsline {subsubsection}{\numberline {9.10.3.97}rotateZ()}{259}{subsubsection.9.10.3.97}%
+\contentsline {subsubsection}{\numberline {9.10.3.98}slerp()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{260}{subsubsection.9.10.3.98}%
+\contentsline {subsubsection}{\numberline {9.10.3.99}slerp()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{260}{subsubsection.9.10.3.99}%
+\contentsline {subsubsection}{\numberline {9.10.3.100}subtract()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{261}{subsubsection.9.10.3.100}%
+\contentsline {subsubsection}{\numberline {9.10.3.101}subtract()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{261}{subsubsection.9.10.3.101}%
+\contentsline {subsubsection}{\numberline {9.10.3.102}subtract()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{262}{subsubsection.9.10.3.102}%
+\contentsline {subsubsection}{\numberline {9.10.3.103}subtract()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{262}{subsubsection.9.10.3.103}%
+\contentsline {section}{\numberline {9.11}gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shader クラス}{263}{section.9.11}%
+\contentsline {subsection}{\numberline {9.11.1}詳解}{264}{subsection.9.11.1}%
+\contentsline {subsection}{\numberline {9.11.2}構築子と解体子}{264}{subsection.9.11.2}%
+\contentsline {subsubsection}{\numberline {9.11.2.1}GgShader()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{264}{subsubsection.9.11.2.1}%
+\contentsline {subsubsection}{\numberline {9.11.2.2}GgShader()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{265}{subsubsection.9.11.2.2}%
+\contentsline {subsubsection}{\numberline {9.11.2.3}GgShader()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{265}{subsubsection.9.11.2.3}%
+\contentsline {subsubsection}{\numberline {9.11.2.4}GgShader()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{266}{subsubsection.9.11.2.4}%
+\contentsline {subsubsection}{\numberline {9.11.2.5}$\sim $GgShader()}{266}{subsubsection.9.11.2.5}%
+\contentsline {subsection}{\numberline {9.11.3}関数詳解}{266}{subsection.9.11.3}%
+\contentsline {subsubsection}{\numberline {9.11.3.1}get()}{266}{subsubsection.9.11.3.1}%
+\contentsline {subsubsection}{\numberline {9.11.3.2}operator=()}{266}{subsubsection.9.11.3.2}%
+\contentsline {subsubsection}{\numberline {9.11.3.3}unuse()}{267}{subsubsection.9.11.3.3}%
+\contentsline {subsubsection}{\numberline {9.11.3.4}use()}{267}{subsubsection.9.11.3.4}%
+\contentsline {section}{\numberline {9.12}gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shape クラス}{267}{section.9.12}%
+\contentsline {subsection}{\numberline {9.12.1}詳解}{268}{subsection.9.12.1}%
+\contentsline {subsection}{\numberline {9.12.2}構築子と解体子}{268}{subsection.9.12.2}%
+\contentsline {subsubsection}{\numberline {9.12.2.1}GgShape()}{268}{subsubsection.9.12.2.1}%
+\contentsline {subsubsection}{\numberline {9.12.2.2}$\sim $GgShape()}{268}{subsubsection.9.12.2.2}%
+\contentsline {subsection}{\numberline {9.12.3}関数詳解}{268}{subsection.9.12.3}%
+\contentsline {subsubsection}{\numberline {9.12.3.1}draw()}{268}{subsubsection.9.12.3.1}%
+\contentsline {subsubsection}{\numberline {9.12.3.2}get()}{269}{subsubsection.9.12.3.2}%
+\contentsline {subsubsection}{\numberline {9.12.3.3}getMode()}{269}{subsubsection.9.12.3.3}%
+\contentsline {subsubsection}{\numberline {9.12.3.4}operator bool()}{270}{subsubsection.9.12.3.4}%
+\contentsline {subsubsection}{\numberline {9.12.3.5}operator"!()}{270}{subsubsection.9.12.3.5}%
+\contentsline {subsubsection}{\numberline {9.12.3.6}setMode()}{270}{subsubsection.9.12.3.6}%
+\contentsline {section}{\numberline {9.13}gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Simple\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Obj クラス}{271}{section.9.13}%
+\contentsline {subsection}{\numberline {9.13.1}詳解}{271}{subsection.9.13.1}%
+\contentsline {subsection}{\numberline {9.13.2}構築子と解体子}{271}{subsection.9.13.2}%
+\contentsline {subsubsection}{\numberline {9.13.2.1}GgSimpleObj()}{271}{subsubsection.9.13.2.1}%
+\contentsline {subsubsection}{\numberline {9.13.2.2}$\sim $GgSimpleObj()}{271}{subsubsection.9.13.2.2}%
+\contentsline {subsection}{\numberline {9.13.3}関数詳解}{272}{subsection.9.13.3}%
+\contentsline {subsubsection}{\numberline {9.13.3.1}draw()}{272}{subsubsection.9.13.3.1}%
+\contentsline {subsubsection}{\numberline {9.13.3.2}get()}{272}{subsubsection.9.13.3.2}%
+\contentsline {subsubsection}{\numberline {9.13.3.3}operator bool()}{272}{subsubsection.9.13.3.3}%
+\contentsline {subsubsection}{\numberline {9.13.3.4}operator"!()}{272}{subsubsection.9.13.3.4}%
+\contentsline {section}{\numberline {9.14}gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Simple\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shader クラス}{273}{section.9.14}%
+\contentsline {subsection}{\numberline {9.14.1}詳解}{274}{subsection.9.14.1}%
+\contentsline {subsection}{\numberline {9.14.2}構築子と解体子}{274}{subsection.9.14.2}%
+\contentsline {subsubsection}{\numberline {9.14.2.1}GgSimpleShader()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{274}{subsubsection.9.14.2.1}%
+\contentsline {subsubsection}{\numberline {9.14.2.2}GgSimpleShader()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{275}{subsubsection.9.14.2.2}%
+\contentsline {subsubsection}{\numberline {9.14.2.3}GgSimpleShader()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{276}{subsubsection.9.14.2.3}%
+\contentsline {subsubsection}{\numberline {9.14.2.4}GgSimpleShader()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{276}{subsubsection.9.14.2.4}%
+\contentsline {subsubsection}{\numberline {9.14.2.5}$\sim $GgSimpleShader()}{277}{subsubsection.9.14.2.5}%
+\contentsline {subsection}{\numberline {9.14.3}関数詳解}{277}{subsection.9.14.3}%
+\contentsline {subsubsection}{\numberline {9.14.3.1}load()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{277}{subsubsection.9.14.3.1}%
+\contentsline {subsubsection}{\numberline {9.14.3.2}load()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{277}{subsubsection.9.14.3.2}%
+\contentsline {subsubsection}{\numberline {9.14.3.3}loadMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{278}{subsubsection.9.14.3.3}%
+\contentsline {subsubsection}{\numberline {9.14.3.4}loadMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{279}{subsubsection.9.14.3.4}%
+\contentsline {subsubsection}{\numberline {9.14.3.5}loadMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{279}{subsubsection.9.14.3.5}%
+\contentsline {subsubsection}{\numberline {9.14.3.6}loadMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{280}{subsubsection.9.14.3.6}%
+\contentsline {subsubsection}{\numberline {9.14.3.7}loadModelviewMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{281}{subsubsection.9.14.3.7}%
+\contentsline {subsubsection}{\numberline {9.14.3.8}loadModelviewMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{281}{subsubsection.9.14.3.8}%
+\contentsline {subsubsection}{\numberline {9.14.3.9}loadModelviewMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{282}{subsubsection.9.14.3.9}%
+\contentsline {subsubsection}{\numberline {9.14.3.10}loadModelviewMatrix()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{282}{subsubsection.9.14.3.10}%
+\contentsline {subsubsection}{\numberline {9.14.3.11}operator=()}{283}{subsubsection.9.14.3.11}%
+\contentsline {subsubsection}{\numberline {9.14.3.12}use()\hspace {0.1cm}{\footnotesize \ttfamily [1/13]}}{284}{subsubsection.9.14.3.12}%
+\contentsline {subsubsection}{\numberline {9.14.3.13}use()\hspace {0.1cm}{\footnotesize \ttfamily [2/13]}}{285}{subsubsection.9.14.3.13}%
+\contentsline {subsubsection}{\numberline {9.14.3.14}use()\hspace {0.1cm}{\footnotesize \ttfamily [3/13]}}{286}{subsubsection.9.14.3.14}%
+\contentsline {subsubsection}{\numberline {9.14.3.15}use()\hspace {0.1cm}{\footnotesize \ttfamily [4/13]}}{286}{subsubsection.9.14.3.15}%
+\contentsline {subsubsection}{\numberline {9.14.3.16}use()\hspace {0.1cm}{\footnotesize \ttfamily [5/13]}}{287}{subsubsection.9.14.3.16}%
+\contentsline {subsubsection}{\numberline {9.14.3.17}use()\hspace {0.1cm}{\footnotesize \ttfamily [6/13]}}{288}{subsubsection.9.14.3.17}%
+\contentsline {subsubsection}{\numberline {9.14.3.18}use()\hspace {0.1cm}{\footnotesize \ttfamily [7/13]}}{288}{subsubsection.9.14.3.18}%
+\contentsline {subsubsection}{\numberline {9.14.3.19}use()\hspace {0.1cm}{\footnotesize \ttfamily [8/13]}}{289}{subsubsection.9.14.3.19}%
+\contentsline {subsubsection}{\numberline {9.14.3.20}use()\hspace {0.1cm}{\footnotesize \ttfamily [9/13]}}{289}{subsubsection.9.14.3.20}%
+\contentsline {subsubsection}{\numberline {9.14.3.21}use()\hspace {0.1cm}{\footnotesize \ttfamily [10/13]}}{290}{subsubsection.9.14.3.21}%
+\contentsline {subsubsection}{\numberline {9.14.3.22}use()\hspace {0.1cm}{\footnotesize \ttfamily [11/13]}}{290}{subsubsection.9.14.3.22}%
+\contentsline {subsubsection}{\numberline {9.14.3.23}use()\hspace {0.1cm}{\footnotesize \ttfamily [12/13]}}{291}{subsubsection.9.14.3.23}%
+\contentsline {subsubsection}{\numberline {9.14.3.24}use()\hspace {0.1cm}{\footnotesize \ttfamily [13/13]}}{291}{subsubsection.9.14.3.24}%
+\contentsline {section}{\numberline {9.15}gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Texture クラス}{292}{section.9.15}%
+\contentsline {subsection}{\numberline {9.15.1}詳解}{292}{subsection.9.15.1}%
+\contentsline {subsection}{\numberline {9.15.2}構築子と解体子}{293}{subsection.9.15.2}%
+\contentsline {subsubsection}{\numberline {9.15.2.1}GgTexture()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{293}{subsubsection.9.15.2.1}%
+\contentsline {subsubsection}{\numberline {9.15.2.2}GgTexture()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{294}{subsubsection.9.15.2.2}%
+\contentsline {subsubsection}{\numberline {9.15.2.3}GgTexture()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{294}{subsubsection.9.15.2.3}%
+\contentsline {subsubsection}{\numberline {9.15.2.4}$\sim $GgTexture()}{295}{subsubsection.9.15.2.4}%
+\contentsline {subsection}{\numberline {9.15.3}関数詳解}{295}{subsection.9.15.3}%
+\contentsline {subsubsection}{\numberline {9.15.3.1}bind()}{295}{subsubsection.9.15.3.1}%
+\contentsline {subsubsection}{\numberline {9.15.3.2}getHeight()}{295}{subsubsection.9.15.3.2}%
+\contentsline {subsubsection}{\numberline {9.15.3.3}getSize()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{295}{subsubsection.9.15.3.3}%
+\contentsline {subsubsection}{\numberline {9.15.3.4}getSize()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{296}{subsubsection.9.15.3.4}%
+\contentsline {subsubsection}{\numberline {9.15.3.5}getTexture()}{296}{subsubsection.9.15.3.5}%
+\contentsline {subsubsection}{\numberline {9.15.3.6}getWidth()}{296}{subsubsection.9.15.3.6}%
+\contentsline {subsubsection}{\numberline {9.15.3.7}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{297}{subsubsection.9.15.3.7}%
+\contentsline {subsubsection}{\numberline {9.15.3.8}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{297}{subsubsection.9.15.3.8}%
+\contentsline {subsubsection}{\numberline {9.15.3.9}swapRandB()}{297}{subsubsection.9.15.3.9}%
+\contentsline {subsubsection}{\numberline {9.15.3.10}unbind()}{298}{subsubsection.9.15.3.10}%
+\contentsline {section}{\numberline {9.16}gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Trackball クラス}{298}{section.9.16}%
+\contentsline {subsection}{\numberline {9.16.1}詳解}{302}{subsection.9.16.1}%
+\contentsline {subsection}{\numberline {9.16.2}構築子と解体子}{302}{subsection.9.16.2}%
+\contentsline {subsubsection}{\numberline {9.16.2.1}GgTrackball()}{302}{subsubsection.9.16.2.1}%
+\contentsline {subsubsection}{\numberline {9.16.2.2}$\sim $GgTrackball()}{303}{subsubsection.9.16.2.2}%
+\contentsline {subsection}{\numberline {9.16.3}関数詳解}{303}{subsection.9.16.3}%
+\contentsline {subsubsection}{\numberline {9.16.3.1}begin()}{303}{subsubsection.9.16.3.1}%
+\contentsline {subsubsection}{\numberline {9.16.3.2}end()}{303}{subsubsection.9.16.3.2}%
+\contentsline {subsubsection}{\numberline {9.16.3.3}get()}{304}{subsubsection.9.16.3.3}%
+\contentsline {subsubsection}{\numberline {9.16.3.4}getMatrix()}{304}{subsubsection.9.16.3.4}%
+\contentsline {subsubsection}{\numberline {9.16.3.5}getQuaternion()}{304}{subsubsection.9.16.3.5}%
+\contentsline {subsubsection}{\numberline {9.16.3.6}getScale()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{305}{subsubsection.9.16.3.6}%
+\contentsline {subsubsection}{\numberline {9.16.3.7}getScale()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{305}{subsubsection.9.16.3.7}%
+\contentsline {subsubsection}{\numberline {9.16.3.8}getScale()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{305}{subsubsection.9.16.3.8}%
+\contentsline {subsubsection}{\numberline {9.16.3.9}getStart()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{305}{subsubsection.9.16.3.9}%
+\contentsline {subsubsection}{\numberline {9.16.3.10}getStart()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{305}{subsubsection.9.16.3.10}%
+\contentsline {subsubsection}{\numberline {9.16.3.11}getStart()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{306}{subsubsection.9.16.3.11}%
+\contentsline {subsubsection}{\numberline {9.16.3.12}motion()}{306}{subsubsection.9.16.3.12}%
+\contentsline {subsubsection}{\numberline {9.16.3.13}operator=()}{306}{subsubsection.9.16.3.13}%
+\contentsline {subsubsection}{\numberline {9.16.3.14}region()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{307}{subsubsection.9.16.3.14}%
+\contentsline {subsubsection}{\numberline {9.16.3.15}region()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{307}{subsubsection.9.16.3.15}%
+\contentsline {subsubsection}{\numberline {9.16.3.16}reset()}{308}{subsubsection.9.16.3.16}%
+\contentsline {subsubsection}{\numberline {9.16.3.17}rotate()}{309}{subsubsection.9.16.3.17}%
+\contentsline {section}{\numberline {9.17}gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Triangles クラス}{309}{section.9.17}%
+\contentsline {subsection}{\numberline {9.17.1}詳解}{311}{subsection.9.17.1}%
+\contentsline {subsection}{\numberline {9.17.2}構築子と解体子}{311}{subsection.9.17.2}%
+\contentsline {subsubsection}{\numberline {9.17.2.1}GgTriangles()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{311}{subsubsection.9.17.2.1}%
+\contentsline {subsubsection}{\numberline {9.17.2.2}GgTriangles()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{311}{subsubsection.9.17.2.2}%
+\contentsline {subsubsection}{\numberline {9.17.2.3}$\sim $GgTriangles()}{312}{subsubsection.9.17.2.3}%
+\contentsline {subsection}{\numberline {9.17.3}関数詳解}{312}{subsection.9.17.3}%
+\contentsline {subsubsection}{\numberline {9.17.3.1}draw()}{312}{subsubsection.9.17.3.1}%
+\contentsline {subsubsection}{\numberline {9.17.3.2}getBuffer()}{313}{subsubsection.9.17.3.2}%
+\contentsline {subsubsection}{\numberline {9.17.3.3}getCount()}{313}{subsubsection.9.17.3.3}%
+\contentsline {subsubsection}{\numberline {9.17.3.4}load()}{313}{subsubsection.9.17.3.4}%
+\contentsline {subsubsection}{\numberline {9.17.3.5}send()}{314}{subsubsection.9.17.3.5}%
+\contentsline {section}{\numberline {9.18}gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Uniform\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Buffer$<$ T $>$ クラステンプレート}{314}{section.9.18}%
+\contentsline {subsection}{\numberline {9.18.1}詳解}{315}{subsection.9.18.1}%
+\contentsline {subsection}{\numberline {9.18.2}構築子と解体子}{315}{subsection.9.18.2}%
+\contentsline {subsubsection}{\numberline {9.18.2.1}GgUniformBuffer()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{315}{subsubsection.9.18.2.1}%
+\contentsline {subsubsection}{\numberline {9.18.2.2}GgUniformBuffer()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{315}{subsubsection.9.18.2.2}%
+\contentsline {subsubsection}{\numberline {9.18.2.3}GgUniformBuffer()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{316}{subsubsection.9.18.2.3}%
+\contentsline {subsubsection}{\numberline {9.18.2.4}$\sim $GgUniformBuffer()}{316}{subsubsection.9.18.2.4}%
+\contentsline {subsection}{\numberline {9.18.3}関数詳解}{317}{subsection.9.18.3}%
+\contentsline {subsubsection}{\numberline {9.18.3.1}bind()}{317}{subsubsection.9.18.3.1}%
+\contentsline {subsubsection}{\numberline {9.18.3.2}copy()}{317}{subsubsection.9.18.3.2}%
+\contentsline {subsubsection}{\numberline {9.18.3.3}fill()}{318}{subsubsection.9.18.3.3}%
+\contentsline {subsubsection}{\numberline {9.18.3.4}getBuffer()}{319}{subsubsection.9.18.3.4}%
+\contentsline {subsubsection}{\numberline {9.18.3.5}getCount()}{320}{subsubsection.9.18.3.5}%
+\contentsline {subsubsection}{\numberline {9.18.3.6}getStride()}{320}{subsubsection.9.18.3.6}%
+\contentsline {subsubsection}{\numberline {9.18.3.7}getTarget()}{321}{subsubsection.9.18.3.7}%
+\contentsline {subsubsection}{\numberline {9.18.3.8}load()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{321}{subsubsection.9.18.3.8}%
+\contentsline {subsubsection}{\numberline {9.18.3.9}load()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{322}{subsubsection.9.18.3.9}%
+\contentsline {subsubsection}{\numberline {9.18.3.10}map()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{323}{subsubsection.9.18.3.10}%
+\contentsline {subsubsection}{\numberline {9.18.3.11}map()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{323}{subsubsection.9.18.3.11}%
+\contentsline {subsubsection}{\numberline {9.18.3.12}read()}{324}{subsubsection.9.18.3.12}%
+\contentsline {subsubsection}{\numberline {9.18.3.13}send()}{325}{subsubsection.9.18.3.13}%
+\contentsline {subsubsection}{\numberline {9.18.3.14}unbind()}{326}{subsubsection.9.18.3.14}%
+\contentsline {subsubsection}{\numberline {9.18.3.15}unmap()}{326}{subsubsection.9.18.3.15}%
+\contentsline {section}{\numberline {9.19}gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vector クラス}{327}{section.9.19}%
+\contentsline {subsection}{\numberline {9.19.1}詳解}{328}{subsection.9.19.1}%
+\contentsline {subsection}{\numberline {9.19.2}構築子と解体子}{328}{subsection.9.19.2}%
+\contentsline {subsubsection}{\numberline {9.19.2.1}GgVector()\hspace {0.1cm}{\footnotesize \ttfamily [1/6]}}{328}{subsubsection.9.19.2.1}%
+\contentsline {subsubsection}{\numberline {9.19.2.2}GgVector()\hspace {0.1cm}{\footnotesize \ttfamily [2/6]}}{329}{subsubsection.9.19.2.2}%
+\contentsline {subsubsection}{\numberline {9.19.2.3}GgVector()\hspace {0.1cm}{\footnotesize \ttfamily [3/6]}}{330}{subsubsection.9.19.2.3}%
+\contentsline {subsubsection}{\numberline {9.19.2.4}GgVector()\hspace {0.1cm}{\footnotesize \ttfamily [4/6]}}{330}{subsubsection.9.19.2.4}%
+\contentsline {subsubsection}{\numberline {9.19.2.5}GgVector()\hspace {0.1cm}{\footnotesize \ttfamily [5/6]}}{331}{subsubsection.9.19.2.5}%
+\contentsline {subsubsection}{\numberline {9.19.2.6}GgVector()\hspace {0.1cm}{\footnotesize \ttfamily [6/6]}}{331}{subsubsection.9.19.2.6}%
+\contentsline {subsubsection}{\numberline {9.19.2.7}$\sim $GgVector()}{331}{subsubsection.9.19.2.7}%
+\contentsline {subsection}{\numberline {9.19.3}関数詳解}{331}{subsection.9.19.3}%
+\contentsline {subsubsection}{\numberline {9.19.3.1}distance3()}{331}{subsubsection.9.19.3.1}%
+\contentsline {subsubsection}{\numberline {9.19.3.2}distance4()}{332}{subsubsection.9.19.3.2}%
+\contentsline {subsubsection}{\numberline {9.19.3.3}dot3()}{332}{subsubsection.9.19.3.3}%
+\contentsline {subsubsection}{\numberline {9.19.3.4}dot4()}{333}{subsubsection.9.19.3.4}%
+\contentsline {subsubsection}{\numberline {9.19.3.5}length3()}{334}{subsubsection.9.19.3.5}%
+\contentsline {subsubsection}{\numberline {9.19.3.6}length4()}{334}{subsubsection.9.19.3.6}%
+\contentsline {subsubsection}{\numberline {9.19.3.7}normalize3()}{334}{subsubsection.9.19.3.7}%
+\contentsline {subsubsection}{\numberline {9.19.3.8}normalize4()}{335}{subsubsection.9.19.3.8}%
+\contentsline {subsubsection}{\numberline {9.19.3.9}operator$\ast $()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{335}{subsubsection.9.19.3.9}%
+\contentsline {subsubsection}{\numberline {9.19.3.10}operator$\ast $()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{335}{subsubsection.9.19.3.10}%
+\contentsline {subsubsection}{\numberline {9.19.3.11}operator$\ast $=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{336}{subsubsection.9.19.3.11}%
+\contentsline {subsubsection}{\numberline {9.19.3.12}operator$\ast $=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{336}{subsubsection.9.19.3.12}%
+\contentsline {subsubsection}{\numberline {9.19.3.13}operator+()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{337}{subsubsection.9.19.3.13}%
+\contentsline {subsubsection}{\numberline {9.19.3.14}operator+()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{337}{subsubsection.9.19.3.14}%
+\contentsline {subsubsection}{\numberline {9.19.3.15}operator+=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{338}{subsubsection.9.19.3.15}%
+\contentsline {subsubsection}{\numberline {9.19.3.16}operator+=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{338}{subsubsection.9.19.3.16}%
+\contentsline {subsubsection}{\numberline {9.19.3.17}operator-\/()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{339}{subsubsection.9.19.3.17}%
+\contentsline {subsubsection}{\numberline {9.19.3.18}operator-\/()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{339}{subsubsection.9.19.3.18}%
+\contentsline {subsubsection}{\numberline {9.19.3.19}operator-\/=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{340}{subsubsection.9.19.3.19}%
+\contentsline {subsubsection}{\numberline {9.19.3.20}operator-\/=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{340}{subsubsection.9.19.3.20}%
+\contentsline {subsubsection}{\numberline {9.19.3.21}operator/()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{341}{subsubsection.9.19.3.21}%
+\contentsline {subsubsection}{\numberline {9.19.3.22}operator/()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{341}{subsubsection.9.19.3.22}%
+\contentsline {subsubsection}{\numberline {9.19.3.23}operator/=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{342}{subsubsection.9.19.3.23}%
+\contentsline {subsubsection}{\numberline {9.19.3.24}operator/=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{342}{subsubsection.9.19.3.24}%
+\contentsline {subsubsection}{\numberline {9.19.3.25}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{343}{subsubsection.9.19.3.25}%
+\contentsline {subsubsection}{\numberline {9.19.3.26}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{343}{subsubsection.9.19.3.26}%
+\contentsline {section}{\numberline {9.20}gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vertex 構造体}{344}{section.9.20}%
+\contentsline {subsection}{\numberline {9.20.1}詳解}{344}{subsection.9.20.1}%
+\contentsline {subsection}{\numberline {9.20.2}構築子と解体子}{344}{subsection.9.20.2}%
+\contentsline {subsubsection}{\numberline {9.20.2.1}GgVertex()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{344}{subsubsection.9.20.2.1}%
+\contentsline {subsubsection}{\numberline {9.20.2.2}GgVertex()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{345}{subsubsection.9.20.2.2}%
+\contentsline {subsubsection}{\numberline {9.20.2.3}GgVertex()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{345}{subsubsection.9.20.2.3}%
+\contentsline {subsubsection}{\numberline {9.20.2.4}GgVertex()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{345}{subsubsection.9.20.2.4}%
+\contentsline {subsection}{\numberline {9.20.3}メンバ詳解}{346}{subsection.9.20.3}%
+\contentsline {subsubsection}{\numberline {9.20.3.1}normal}{346}{subsubsection.9.20.3.1}%
+\contentsline {subsubsection}{\numberline {9.20.3.2}position}{346}{subsubsection.9.20.3.2}%
+\contentsline {section}{\numberline {9.21}gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Vertex\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Array クラス}{346}{section.9.21}%
+\contentsline {subsection}{\numberline {9.21.1}詳解}{346}{subsection.9.21.1}%
+\contentsline {subsection}{\numberline {9.21.2}構築子と解体子}{347}{subsection.9.21.2}%
+\contentsline {subsubsection}{\numberline {9.21.2.1}GgVertexArray()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{347}{subsubsection.9.21.2.1}%
+\contentsline {subsubsection}{\numberline {9.21.2.2}GgVertexArray()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{347}{subsubsection.9.21.2.2}%
+\contentsline {subsubsection}{\numberline {9.21.2.3}GgVertexArray()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{348}{subsubsection.9.21.2.3}%
+\contentsline {subsubsection}{\numberline {9.21.2.4}$\sim $GgVertexArray()}{348}{subsubsection.9.21.2.4}%
+\contentsline {subsection}{\numberline {9.21.3}関数詳解}{348}{subsection.9.21.3}%
+\contentsline {subsubsection}{\numberline {9.21.3.1}bind()}{348}{subsubsection.9.21.3.1}%
+\contentsline {subsubsection}{\numberline {9.21.3.2}get()}{348}{subsubsection.9.21.3.2}%
+\contentsline {subsubsection}{\numberline {9.21.3.3}operator=()}{348}{subsubsection.9.21.3.3}%
+\contentsline {section}{\numberline {9.22}gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Simple\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shader\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Light 構造体}{349}{section.9.22}%
+\contentsline {subsection}{\numberline {9.22.1}詳解}{350}{subsection.9.22.1}%
+\contentsline {subsection}{\numberline {9.22.2}メンバ詳解}{350}{subsection.9.22.2}%
+\contentsline {subsubsection}{\numberline {9.22.2.1}ambient}{350}{subsubsection.9.22.2.1}%
+\contentsline {subsubsection}{\numberline {9.22.2.2}diffuse}{350}{subsubsection.9.22.2.2}%
+\contentsline {subsubsection}{\numberline {9.22.2.3}position}{350}{subsubsection.9.22.2.3}%
+\contentsline {subsubsection}{\numberline {9.22.2.4}specular}{350}{subsubsection.9.22.2.4}%
+\contentsline {section}{\numberline {9.23}gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Simple\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shader\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Light\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Buffer クラス}{350}{section.9.23}%
+\contentsline {subsection}{\numberline {9.23.1}詳解}{352}{subsection.9.23.1}%
+\contentsline {subsection}{\numberline {9.23.2}構築子と解体子}{352}{subsection.9.23.2}%
+\contentsline {subsubsection}{\numberline {9.23.2.1}LightBuffer()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{352}{subsubsection.9.23.2.1}%
+\contentsline {subsubsection}{\numberline {9.23.2.2}LightBuffer()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{353}{subsubsection.9.23.2.2}%
+\contentsline {subsubsection}{\numberline {9.23.2.3}LightBuffer()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{353}{subsubsection.9.23.2.3}%
+\contentsline {subsubsection}{\numberline {9.23.2.4}$\sim $LightBuffer()}{354}{subsubsection.9.23.2.4}%
+\contentsline {subsection}{\numberline {9.23.3}関数詳解}{354}{subsection.9.23.3}%
+\contentsline {subsubsection}{\numberline {9.23.3.1}load()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{354}{subsubsection.9.23.3.1}%
+\contentsline {subsubsection}{\numberline {9.23.3.2}load()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{355}{subsubsection.9.23.3.2}%
+\contentsline {subsubsection}{\numberline {9.23.3.3}loadAmbient()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{355}{subsubsection.9.23.3.3}%
+\contentsline {subsubsection}{\numberline {9.23.3.4}loadAmbient()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{356}{subsubsection.9.23.3.4}%
+\contentsline {subsubsection}{\numberline {9.23.3.5}loadAmbient()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{356}{subsubsection.9.23.3.5}%
+\contentsline {subsubsection}{\numberline {9.23.3.6}loadColor()}{357}{subsubsection.9.23.3.6}%
+\contentsline {subsubsection}{\numberline {9.23.3.7}loadDiffuse()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{358}{subsubsection.9.23.3.7}%
+\contentsline {subsubsection}{\numberline {9.23.3.8}loadDiffuse()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{359}{subsubsection.9.23.3.8}%
+\contentsline {subsubsection}{\numberline {9.23.3.9}loadDiffuse()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{359}{subsubsection.9.23.3.9}%
+\contentsline {subsubsection}{\numberline {9.23.3.10}loadPosition()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{360}{subsubsection.9.23.3.10}%
+\contentsline {subsubsection}{\numberline {9.23.3.11}loadPosition()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{361}{subsubsection.9.23.3.11}%
+\contentsline {subsubsection}{\numberline {9.23.3.12}loadPosition()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{361}{subsubsection.9.23.3.12}%
+\contentsline {subsubsection}{\numberline {9.23.3.13}loadPosition()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{362}{subsubsection.9.23.3.13}%
+\contentsline {subsubsection}{\numberline {9.23.3.14}loadSpecular()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{363}{subsubsection.9.23.3.14}%
+\contentsline {subsubsection}{\numberline {9.23.3.15}loadSpecular()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{364}{subsubsection.9.23.3.15}%
+\contentsline {subsubsection}{\numberline {9.23.3.16}loadSpecular()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{364}{subsubsection.9.23.3.16}%
+\contentsline {subsubsection}{\numberline {9.23.3.17}select()}{365}{subsubsection.9.23.3.17}%
+\contentsline {section}{\numberline {9.24}gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Simple\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shader\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Material 構造体}{366}{section.9.24}%
+\contentsline {subsection}{\numberline {9.24.1}詳解}{367}{subsection.9.24.1}%
+\contentsline {subsection}{\numberline {9.24.2}メンバ詳解}{367}{subsection.9.24.2}%
+\contentsline {subsubsection}{\numberline {9.24.2.1}ambient}{367}{subsubsection.9.24.2.1}%
+\contentsline {subsubsection}{\numberline {9.24.2.2}diffuse}{367}{subsubsection.9.24.2.2}%
+\contentsline {subsubsection}{\numberline {9.24.2.3}shininess}{368}{subsubsection.9.24.2.3}%
+\contentsline {subsubsection}{\numberline {9.24.2.4}specular}{368}{subsubsection.9.24.2.4}%
+\contentsline {section}{\numberline {9.25}gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Simple\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Shader\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Material\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Buffer クラス}{368}{section.9.25}%
+\contentsline {subsection}{\numberline {9.25.1}詳解}{369}{subsection.9.25.1}%
+\contentsline {subsection}{\numberline {9.25.2}構築子と解体子}{370}{subsection.9.25.2}%
+\contentsline {subsubsection}{\numberline {9.25.2.1}MaterialBuffer()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{370}{subsubsection.9.25.2.1}%
+\contentsline {subsubsection}{\numberline {9.25.2.2}MaterialBuffer()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{371}{subsubsection.9.25.2.2}%
+\contentsline {subsubsection}{\numberline {9.25.2.3}MaterialBuffer()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{371}{subsubsection.9.25.2.3}%
+\contentsline {subsubsection}{\numberline {9.25.2.4}$\sim $MaterialBuffer()}{372}{subsubsection.9.25.2.4}%
+\contentsline {subsection}{\numberline {9.25.3}関数詳解}{372}{subsection.9.25.3}%
+\contentsline {subsubsection}{\numberline {9.25.3.1}load()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{372}{subsubsection.9.25.3.1}%
+\contentsline {subsubsection}{\numberline {9.25.3.2}load()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{373}{subsubsection.9.25.3.2}%
+\contentsline {subsubsection}{\numberline {9.25.3.3}loadAmbient()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{373}{subsubsection.9.25.3.3}%
+\contentsline {subsubsection}{\numberline {9.25.3.4}loadAmbient()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{374}{subsubsection.9.25.3.4}%
+\contentsline {subsubsection}{\numberline {9.25.3.5}loadAmbient()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{375}{subsubsection.9.25.3.5}%
+\contentsline {subsubsection}{\numberline {9.25.3.6}loadAmbientAndDiffuse()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{376}{subsubsection.9.25.3.6}%
+\contentsline {subsubsection}{\numberline {9.25.3.7}loadAmbientAndDiffuse()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{376}{subsubsection.9.25.3.7}%
+\contentsline {subsubsection}{\numberline {9.25.3.8}loadAmbientAndDiffuse()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{377}{subsubsection.9.25.3.8}%
+\contentsline {subsubsection}{\numberline {9.25.3.9}loadDiffuse()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{378}{subsubsection.9.25.3.9}%
+\contentsline {subsubsection}{\numberline {9.25.3.10}loadDiffuse()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{379}{subsubsection.9.25.3.10}%
+\contentsline {subsubsection}{\numberline {9.25.3.11}loadDiffuse()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{379}{subsubsection.9.25.3.11}%
+\contentsline {subsubsection}{\numberline {9.25.3.12}loadShininess()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{380}{subsubsection.9.25.3.12}%
+\contentsline {subsubsection}{\numberline {9.25.3.13}loadShininess()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{381}{subsubsection.9.25.3.13}%
+\contentsline {subsubsection}{\numberline {9.25.3.14}loadSpecular()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{381}{subsubsection.9.25.3.14}%
+\contentsline {subsubsection}{\numberline {9.25.3.15}loadSpecular()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{382}{subsubsection.9.25.3.15}%
+\contentsline {subsubsection}{\numberline {9.25.3.16}loadSpecular()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{382}{subsubsection.9.25.3.16}%
+\contentsline {subsubsection}{\numberline {9.25.3.17}select()}{383}{subsubsection.9.25.3.17}%
+\contentsline {section}{\numberline {9.26}Menu クラス}{384}{section.9.26}%
+\contentsline {subsection}{\numberline {9.26.1}詳解}{384}{subsection.9.26.1}%
+\contentsline {subsection}{\numberline {9.26.2}構築子と解体子}{384}{subsection.9.26.2}%
+\contentsline {subsubsection}{\numberline {9.26.2.1}Menu()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{384}{subsubsection.9.26.2.1}%
+\contentsline {subsubsection}{\numberline {9.26.2.2}Menu()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{385}{subsubsection.9.26.2.2}%
+\contentsline {subsubsection}{\numberline {9.26.2.3}Menu()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{385}{subsubsection.9.26.2.3}%
+\contentsline {subsubsection}{\numberline {9.26.2.4}$\sim $Menu()}{385}{subsubsection.9.26.2.4}%
+\contentsline {subsection}{\numberline {9.26.3}関数詳解}{386}{subsection.9.26.3}%
+\contentsline {subsubsection}{\numberline {9.26.3.1}draw()}{386}{subsubsection.9.26.3.1}%
+\contentsline {subsubsection}{\numberline {9.26.3.2}getLight()}{386}{subsubsection.9.26.3.2}%
+\contentsline {subsubsection}{\numberline {9.26.3.3}getModel()}{386}{subsubsection.9.26.3.3}%
+\contentsline {subsubsection}{\numberline {9.26.3.4}getShader()}{387}{subsubsection.9.26.3.4}%
+\contentsline {subsubsection}{\numberline {9.26.3.5}operator=()}{387}{subsubsection.9.26.3.5}%
+\contentsline {subsection}{\numberline {9.26.4}フレンドと関連関数の詳解}{387}{subsection.9.26.4}%
+\contentsline {subsubsection}{\numberline {9.26.4.1}Scene}{387}{subsubsection.9.26.4.1}%
+\contentsline {section}{\numberline {9.27}Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}App\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Window クラス}{387}{section.9.27}%
+\contentsline {subsection}{\numberline {9.27.1}詳解}{389}{subsection.9.27.1}%
+\contentsline {subsection}{\numberline {9.27.2}構築子と解体子}{389}{subsection.9.27.2}%
+\contentsline {subsubsection}{\numberline {9.27.2.1}Window()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{389}{subsubsection.9.27.2.1}%
+\contentsline {subsubsection}{\numberline {9.27.2.2}Window()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{390}{subsubsection.9.27.2.2}%
+\contentsline {subsubsection}{\numberline {9.27.2.3}Window()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{390}{subsubsection.9.27.2.3}%
+\contentsline {subsubsection}{\numberline {9.27.2.4}$\sim $Window()}{391}{subsubsection.9.27.2.4}%
+\contentsline {subsection}{\numberline {9.27.3}関数詳解}{391}{subsection.9.27.3}%
+\contentsline {subsubsection}{\numberline {9.27.3.1}get()}{391}{subsubsection.9.27.3.1}%
+\contentsline {subsubsection}{\numberline {9.27.3.2}getAltArrow()}{391}{subsubsection.9.27.3.2}%
+\contentsline {subsubsection}{\numberline {9.27.3.3}getAltArrowX()}{392}{subsubsection.9.27.3.3}%
+\contentsline {subsubsection}{\numberline {9.27.3.4}getAltArrowY()}{392}{subsubsection.9.27.3.4}%
+\contentsline {subsubsection}{\numberline {9.27.3.5}getArrow()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{393}{subsubsection.9.27.3.5}%
+\contentsline {subsubsection}{\numberline {9.27.3.6}getArrow()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{393}{subsubsection.9.27.3.6}%
+\contentsline {subsubsection}{\numberline {9.27.3.7}getArrowX()}{394}{subsubsection.9.27.3.7}%
+\contentsline {subsubsection}{\numberline {9.27.3.8}getArrowY()}{395}{subsubsection.9.27.3.8}%
+\contentsline {subsubsection}{\numberline {9.27.3.9}getAspect()}{395}{subsubsection.9.27.3.9}%
+\contentsline {subsubsection}{\numberline {9.27.3.10}getControlArrow()}{396}{subsubsection.9.27.3.10}%
+\contentsline {subsubsection}{\numberline {9.27.3.11}getControlArrowX()}{396}{subsubsection.9.27.3.11}%
+\contentsline {subsubsection}{\numberline {9.27.3.12}getControlArrowY()}{397}{subsubsection.9.27.3.12}%
+\contentsline {subsubsection}{\numberline {9.27.3.13}getFboHeight()}{398}{subsubsection.9.27.3.13}%
+\contentsline {subsubsection}{\numberline {9.27.3.14}getFboSize()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{398}{subsubsection.9.27.3.14}%
+\contentsline {subsubsection}{\numberline {9.27.3.15}getFboSize()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{398}{subsubsection.9.27.3.15}%
+\contentsline {subsubsection}{\numberline {9.27.3.16}getFboWidth()}{399}{subsubsection.9.27.3.16}%
+\contentsline {subsubsection}{\numberline {9.27.3.17}getHeight()}{399}{subsubsection.9.27.3.17}%
+\contentsline {subsubsection}{\numberline {9.27.3.18}getKey()}{400}{subsubsection.9.27.3.18}%
+\contentsline {subsubsection}{\numberline {9.27.3.19}getLastKey()}{400}{subsubsection.9.27.3.19}%
+\contentsline {subsubsection}{\numberline {9.27.3.20}getMouse()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{400}{subsubsection.9.27.3.20}%
+\contentsline {subsubsection}{\numberline {9.27.3.21}getMouse()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{400}{subsubsection.9.27.3.21}%
+\contentsline {subsubsection}{\numberline {9.27.3.22}getMouse()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{400}{subsubsection.9.27.3.22}%
+\contentsline {subsubsection}{\numberline {9.27.3.23}getMouseX()}{401}{subsubsection.9.27.3.23}%
+\contentsline {subsubsection}{\numberline {9.27.3.24}getMouseY()}{401}{subsubsection.9.27.3.24}%
+\contentsline {subsubsection}{\numberline {9.27.3.25}getRotation()}{401}{subsubsection.9.27.3.25}%
+\contentsline {subsubsection}{\numberline {9.27.3.26}getRotationMatrix()}{401}{subsubsection.9.27.3.26}%
+\contentsline {subsubsection}{\numberline {9.27.3.27}getScrollMatrix()}{402}{subsubsection.9.27.3.27}%
+\contentsline {subsubsection}{\numberline {9.27.3.28}getShiftArrow()}{402}{subsubsection.9.27.3.28}%
+\contentsline {subsubsection}{\numberline {9.27.3.29}getShiftArrowX()}{403}{subsubsection.9.27.3.29}%
+\contentsline {subsubsection}{\numberline {9.27.3.30}getShiftArrowY()}{403}{subsubsection.9.27.3.30}%
+\contentsline {subsubsection}{\numberline {9.27.3.31}getSize()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{404}{subsubsection.9.27.3.31}%
+\contentsline {subsubsection}{\numberline {9.27.3.32}getSize()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{404}{subsubsection.9.27.3.32}%
+\contentsline {subsubsection}{\numberline {9.27.3.33}getTranslation()}{404}{subsubsection.9.27.3.33}%
+\contentsline {subsubsection}{\numberline {9.27.3.34}getTranslationMatrix()}{405}{subsubsection.9.27.3.34}%
+\contentsline {subsubsection}{\numberline {9.27.3.35}getUserPointer()}{405}{subsubsection.9.27.3.35}%
+\contentsline {subsubsection}{\numberline {9.27.3.36}getWheel()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{405}{subsubsection.9.27.3.36}%
+\contentsline {subsubsection}{\numberline {9.27.3.37}getWheel()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{406}{subsubsection.9.27.3.37}%
+\contentsline {subsubsection}{\numberline {9.27.3.38}getWheel()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{406}{subsubsection.9.27.3.38}%
+\contentsline {subsubsection}{\numberline {9.27.3.39}getWheelX()}{406}{subsubsection.9.27.3.39}%
+\contentsline {subsubsection}{\numberline {9.27.3.40}getWheelY()}{406}{subsubsection.9.27.3.40}%
+\contentsline {subsubsection}{\numberline {9.27.3.41}getWidth()}{406}{subsubsection.9.27.3.41}%
+\contentsline {subsubsection}{\numberline {9.27.3.42}operator bool()}{407}{subsubsection.9.27.3.42}%
+\contentsline {subsubsection}{\numberline {9.27.3.43}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{407}{subsubsection.9.27.3.43}%
+\contentsline {subsubsection}{\numberline {9.27.3.44}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{408}{subsubsection.9.27.3.44}%
+\contentsline {subsubsection}{\numberline {9.27.3.45}reset()}{408}{subsubsection.9.27.3.45}%
+\contentsline {subsubsection}{\numberline {9.27.3.46}resetRotation()}{409}{subsubsection.9.27.3.46}%
+\contentsline {subsubsection}{\numberline {9.27.3.47}resetTranslation()}{409}{subsubsection.9.27.3.47}%
+\contentsline {subsubsection}{\numberline {9.27.3.48}restoreViewport()}{409}{subsubsection.9.27.3.48}%
+\contentsline {subsubsection}{\numberline {9.27.3.49}selectInterface()}{409}{subsubsection.9.27.3.49}%
+\contentsline {subsubsection}{\numberline {9.27.3.50}setClose()}{410}{subsubsection.9.27.3.50}%
+\contentsline {subsubsection}{\numberline {9.27.3.51}setKeyboardFunc()}{410}{subsubsection.9.27.3.51}%
+\contentsline {subsubsection}{\numberline {9.27.3.52}setMouseFunc()}{410}{subsubsection.9.27.3.52}%
+\contentsline {subsubsection}{\numberline {9.27.3.53}setResizeFunc()}{411}{subsubsection.9.27.3.53}%
+\contentsline {subsubsection}{\numberline {9.27.3.54}setUserPointer()}{411}{subsubsection.9.27.3.54}%
+\contentsline {subsubsection}{\numberline {9.27.3.55}setVelocity()}{411}{subsubsection.9.27.3.55}%
+\contentsline {subsubsection}{\numberline {9.27.3.56}setWheelFunc()}{412}{subsubsection.9.27.3.56}%
+\contentsline {subsubsection}{\numberline {9.27.3.57}shouldClose()}{412}{subsubsection.9.27.3.57}%
+\contentsline {subsubsection}{\numberline {9.27.3.58}swapBuffers()}{412}{subsubsection.9.27.3.58}%
+\contentsline {subsubsection}{\numberline {9.27.3.59}updateViewport()}{413}{subsubsection.9.27.3.59}%
+\contentsline {chapter}{\numberline {10}ファイル詳解}{415}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Config.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp ファイル}{415}{section.10.1}%
+\contentsline {subsection}{\numberline {10.1.1}詳解}{415}{subsection.10.1.1}%
+\contentsline {subsection}{\numberline {10.1.2}変数詳解}{416}{subsection.10.1.2}%
+\contentsline {subsubsection}{\numberline {10.1.2.1}defaultLight}{416}{subsubsection.10.1.2.1}%
+\contentsline {section}{\numberline {10.2}Config.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{416}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Config.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h ファイル}{418}{section.10.3}%
+\contentsline {subsection}{\numberline {10.3.1}詳解}{418}{subsection.10.3.1}%
+\contentsline {section}{\numberline {10.4}Config.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{419}{section.10.4}%
+\contentsline {section}{\numberline {10.5}gg.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp ファイル}{420}{section.10.5}%
+\contentsline {subsection}{\numberline {10.5.1}詳解}{420}{subsection.10.5.1}%
+\contentsline {section}{\numberline {10.6}gg.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{420}{section.10.6}%
+\contentsline {section}{\numberline {10.7}gg.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h ファイル}{496}{section.10.7}%
+\contentsline {subsection}{\numberline {10.7.1}詳解}{500}{subsection.10.7.1}%
+\contentsline {subsection}{\numberline {10.7.2}マクロ定義詳解}{501}{subsection.10.7.2}%
+\contentsline {subsubsection}{\numberline {10.7.2.1}ggError}{501}{subsubsection.10.7.2.1}%
+\contentsline {subsubsection}{\numberline {10.7.2.2}ggFBOError}{501}{subsubsection.10.7.2.2}%
+\contentsline {subsection}{\numberline {10.7.3}型定義詳解}{501}{subsection.10.7.3}%
+\contentsline {subsubsection}{\numberline {10.7.3.1}pathChar}{501}{subsubsection.10.7.3.1}%
+\contentsline {subsubsection}{\numberline {10.7.3.2}pathString}{501}{subsubsection.10.7.3.2}%
+\contentsline {subsection}{\numberline {10.7.4}関数詳解}{501}{subsection.10.7.4}%
+\contentsline {subsubsection}{\numberline {10.7.4.1}TCharToUtf8()}{501}{subsubsection.10.7.4.1}%
+\contentsline {subsubsection}{\numberline {10.7.4.2}Utf8ToTChar()}{501}{subsubsection.10.7.4.2}%
+\contentsline {section}{\numberline {10.8}gg.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{502}{section.10.8}%
+\contentsline {section}{\numberline {10.9}Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}App.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp ファイル}{558}{section.10.9}%
+\contentsline {subsection}{\numberline {10.9.1}詳解}{558}{subsection.10.9.1}%
+\contentsline {section}{\numberline {10.10}Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}App.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{559}{section.10.10}%
+\contentsline {section}{\numberline {10.11}Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}App.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h ファイル}{577}{section.10.11}%
+\contentsline {subsection}{\numberline {10.11.1}詳解}{578}{subsection.10.11.1}%
+\contentsline {subsection}{\numberline {10.11.2}マクロ定義詳解}{578}{subsection.10.11.2}%
+\contentsline {subsubsection}{\numberline {10.11.2.1}GG\_BUTTON\_COUNT}{578}{subsubsection.10.11.2.1}%
+\contentsline {subsubsection}{\numberline {10.11.2.2}GG\_INTERFACE\_COUNT}{578}{subsubsection.10.11.2.2}%
+\contentsline {subsubsection}{\numberline {10.11.2.3}GG\_USE\_IMGUI}{578}{subsubsection.10.11.2.3}%
+\contentsline {section}{\numberline {10.12}Gg\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}App.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{578}{section.10.12}%
+\contentsline {section}{\numberline {10.13}ggsample01.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp ファイル}{587}{section.10.13}%
+\contentsline {subsection}{\numberline {10.13.1}マクロ定義詳解}{587}{subsection.10.13.1}%
+\contentsline {subsubsection}{\numberline {10.13.1.1}CONFIG\_FILE}{587}{subsubsection.10.13.1.1}%
+\contentsline {subsubsection}{\numberline {10.13.1.2}PROJECT\_NAME}{587}{subsubsection.10.13.1.2}%
+\contentsline {section}{\numberline {10.14}ggsample01.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{588}{section.10.14}%
+\contentsline {section}{\numberline {10.15}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp ファイル}{589}{section.10.15}%
+\contentsline {subsection}{\numberline {10.15.1}詳解}{589}{subsection.10.15.1}%
+\contentsline {subsection}{\numberline {10.15.2}マクロ定義詳解}{589}{subsection.10.15.2}%
+\contentsline {subsubsection}{\numberline {10.15.2.1}HEADER\_STR}{589}{subsubsection.10.15.2.1}%
+\contentsline {subsection}{\numberline {10.15.3}関数詳解}{589}{subsection.10.15.3}%
+\contentsline {subsubsection}{\numberline {10.15.3.1}main()}{589}{subsubsection.10.15.3.1}%
+\contentsline {section}{\numberline {10.16}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{590}{section.10.16}%
+\contentsline {section}{\numberline {10.17}Menu.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp ファイル}{591}{section.10.17}%
+\contentsline {subsection}{\numberline {10.17.1}詳解}{591}{subsection.10.17.1}%
+\contentsline {section}{\numberline {10.18}Menu.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{592}{section.10.18}%
+\contentsline {section}{\numberline {10.19}Menu.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h ファイル}{593}{section.10.19}%
+\contentsline {subsection}{\numberline {10.19.1}詳解}{594}{subsection.10.19.1}%
+\contentsline {section}{\numberline {10.20}Menu.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{594}{section.10.20}%
+\contentsline {section}{\numberline {10.21}OPENXR.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md ファイル}{595}{section.10.21}%
+\contentsline {section}{\numberline {10.22}parseconfig.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h ファイル}{595}{section.10.22}%
+\contentsline {subsection}{\numberline {10.22.1}詳解}{596}{subsection.10.22.1}%
+\contentsline {subsection}{\numberline {10.22.2}関数詳解}{597}{subsection.10.22.2}%
+\contentsline {subsubsection}{\numberline {10.22.2.1}getString()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{597}{subsubsection.10.22.2.1}%
+\contentsline {subsubsection}{\numberline {10.22.2.2}getString()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{597}{subsubsection.10.22.2.2}%
+\contentsline {subsubsection}{\numberline {10.22.2.3}getString()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{598}{subsubsection.10.22.2.3}%
+\contentsline {subsubsection}{\numberline {10.22.2.4}getValue()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{598}{subsubsection.10.22.2.4}%
+\contentsline {subsubsection}{\numberline {10.22.2.5}getValue()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{599}{subsubsection.10.22.2.5}%
+\contentsline {subsubsection}{\numberline {10.22.2.6}getValue()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{599}{subsubsection.10.22.2.6}%
+\contentsline {subsubsection}{\numberline {10.22.2.7}getValue()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{600}{subsubsection.10.22.2.7}%
+\contentsline {subsubsection}{\numberline {10.22.2.8}getVector()}{600}{subsubsection.10.22.2.8}%
+\contentsline {subsubsection}{\numberline {10.22.2.9}setString()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{601}{subsubsection.10.22.2.9}%
+\contentsline {subsubsection}{\numberline {10.22.2.10}setString()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{601}{subsubsection.10.22.2.10}%
+\contentsline {subsubsection}{\numberline {10.22.2.11}setString()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{602}{subsubsection.10.22.2.11}%
+\contentsline {subsubsection}{\numberline {10.22.2.12}setValue()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{602}{subsubsection.10.22.2.12}%
+\contentsline {subsubsection}{\numberline {10.22.2.13}setValue()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{602}{subsubsection.10.22.2.13}%
+\contentsline {subsubsection}{\numberline {10.22.2.14}setValue()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{603}{subsubsection.10.22.2.14}%
+\contentsline {subsubsection}{\numberline {10.22.2.15}setValue()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{603}{subsubsection.10.22.2.15}%
+\contentsline {subsubsection}{\numberline {10.22.2.16}setVector()}{604}{subsubsection.10.22.2.16}%
+\contentsline {section}{\numberline {10.23}parseconfig.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{604}{section.10.23}%
+\contentsline {section}{\numberline {10.24}README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md ファイル}{608}{section.10.24}%
+\contentsline {chapter}{Index}{609}{section*.741}%

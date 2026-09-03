@@ -1,0 +1,346 @@
+\doxysection{parseconfig.\+h}
+\hypertarget{parseconfig_8h_source}{}\label{parseconfig_8h_source}\mbox{\hyperlink{parseconfig_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00011}00011\ \textcolor{comment}{//\ 補助プログラム}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gg_8h}{gg.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00014}00014\ \textcolor{comment}{//\ JSON}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}picojson.h"{}}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00017}00017\ \textcolor{comment}{//\ 標準ライブラリ}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00019}00019\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00020}00020\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00021}00021\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00032}00032\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00033}\mbox{\hyperlink{parseconfig_8h_ad7387beefe783ec9f01caa7ee49e60db}{00033}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{parseconfig_8h_ad7387beefe783ec9f01caa7ee49e60db}{getValue}}(\textcolor{keyword}{const}\ picojson::object\&\ \textcolor{keywordtype}{object},}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00034}00034\ \ \ \textcolor{keyword}{const}\ std::string\&\ key,\ T\&\ scalar)}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00035}00035\ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00036}00036\ \ \ \textcolor{comment}{//\ key\ に一致するオブジェクトを探す}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00037}00037\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ value\{\ \textcolor{keywordtype}{object}.find(key)\ \};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00039}00039\ \ \ \textcolor{comment}{//\ オブジェクトが無かったら戻る}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00040}00040\ \ \ \textcolor{keywordflow}{if}\ (value\ ==\ \textcolor{keywordtype}{object}.end())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00042}00042\ \ \ \textcolor{comment}{//\ 数値または真偽値として格納する}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00043}00043\ \ \ \textcolor{keywordflow}{if}\ (value-\/>second.is<\textcolor{keywordtype}{double}>())}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00044}00044\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00045}00045\ \ \ \ \ scalar\ =\ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(value-\/>second.get<\textcolor{keywordtype}{double}>());}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00047}00047\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00048}00048\ \ \ \textcolor{keywordflow}{if}\ (value-\/>second.is<\textcolor{keywordtype}{bool}>())}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00049}00049\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00050}00050\ \ \ \ \ scalar\ =\ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(value-\/>second.get<\textcolor{keywordtype}{bool}>());}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00052}00052\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00054}00054\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00055}00055\ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00065}00065\ \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00066}\mbox{\hyperlink{parseconfig_8h_a3416f2dbe0e69290247b268594e44ae8}{00066}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{parseconfig_8h_ad7387beefe783ec9f01caa7ee49e60db}{getValue}}(\textcolor{keyword}{const}\ picojson::object\&\ \textcolor{keywordtype}{object},}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00067}00067\ \ \ \textcolor{keyword}{const}\ std::string\&\ key,\ \textcolor{keywordtype}{bool}\&\ \textcolor{keywordtype}{boolean})}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00068}00068\ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00069}00069\ \ \ \textcolor{comment}{//\ key\ に一致するオブジェクトを探す}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00070}00070\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ value\{\ \textcolor{keywordtype}{object}.find(key)\ \};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00072}00072\ \ \ \textcolor{comment}{//\ オブジェクトが無かったら戻る}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00073}00073\ \ \ \textcolor{keywordflow}{if}\ (value\ ==\ \textcolor{keywordtype}{object}.end())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00075}00075\ \ \ \textcolor{comment}{//\ 真偽値または数値として格納する}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00076}00076\ \ \ \textcolor{keywordflow}{if}\ (value-\/>second.is<\textcolor{keywordtype}{bool}>())}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00077}00077\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00078}00078\ \ \ \ \ \textcolor{keywordtype}{boolean}\ =\ value-\/>second.get<\textcolor{keywordtype}{bool}>();}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00079}00079\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00080}00080\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00081}00081\ \ \ \textcolor{keywordflow}{if}\ (value-\/>second.is<\textcolor{keywordtype}{double}>())}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00082}00082\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00083}00083\ \ \ \ \ \textcolor{keywordtype}{boolean}\ =\ value-\/>second.get<\textcolor{keywordtype}{double}>()\ !=\ 0.0;}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00084}00084\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00085}00085\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00087}00087\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00088}00088\ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00100}00100\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ U>}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00101}\mbox{\hyperlink{parseconfig_8h_a472b54f6db40dac853feeca79826be6f}{00101}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{parseconfig_8h_ad7387beefe783ec9f01caa7ee49e60db}{getValue}}(\textcolor{keyword}{const}\ picojson::object\&\ \textcolor{keywordtype}{object},}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00102}00102\ \ \ \textcolor{keyword}{const}\ std::string\&\ key,\ std::array<T,\ U>\&\ vector)}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00103}00103\ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00104}00104\ \ \ \textcolor{comment}{//\ key\ に一致するオブジェクトを探す}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00105}00105\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ value\{\ \textcolor{keywordtype}{object}.find(key)\ \};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00107}00107\ \ \ \textcolor{comment}{//\ オブジェクトが無いか配列でなかったら戻る}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00108}00108\ \ \ \textcolor{keywordflow}{if}\ (value\ ==\ \textcolor{keywordtype}{object}.end()\ ||\ !value-\/>second.is<picojson::array>())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00110}00110\ \ \ \textcolor{comment}{//\ 配列を取り出す}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00111}00111\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ array\{\ value-\/>second.get<picojson::array>()\ \};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00113}00113\ \ \ \textcolor{comment}{//\ 配列の要素数とデータの格納先の要素数の少ない方の数}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00114}00114\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ n\{\ std::min(U,\ array.size())\ \};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00116}00116\ \ \ \textcolor{comment}{//\ 配列の要素について}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00117}00117\ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ i\ =\ 0;\ i\ <\ n;\ ++i)}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00118}00118\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00119}00119\ \ \ \ \ \textcolor{comment}{//\ 要素が数値なら格納する}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00120}00120\ \ \ \ \ \textcolor{keywordflow}{if}\ (array[i].is<double>())}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00121}00121\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00122}00122\ \ \ \ \ \ \ vector[i]\ =\ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(array[i].get<\textcolor{keywordtype}{double}>());}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00123}00123\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00124}00124\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (array[i].is<bool>())}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00125}00125\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00126}00126\ \ \ \ \ \ \ vector[i]\ =\ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(array[i].get<\textcolor{keywordtype}{bool}>());}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00127}00127\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00128}00128\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00130}00130\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00131}00131\ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00142}00142\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00143}\mbox{\hyperlink{parseconfig_8h_a42be64ebba5f8cc64e8dbda218d8351e}{00143}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{parseconfig_8h_ad7387beefe783ec9f01caa7ee49e60db}{getValue}}(\textcolor{keyword}{const}\ picojson::object\&\ \textcolor{keywordtype}{object},}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00144}00144\ \ \ \textcolor{keyword}{const}\ std::string\&\ key,\ std::vector<T>\&\ vector)}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00145}00145\ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00146}00146\ \ \ \textcolor{comment}{//\ key\ に一致するオブジェクトを探す}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00147}00147\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ value\{\ \textcolor{keywordtype}{object}.find(key)\ \};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00149}00149\ \ \ \textcolor{comment}{//\ オブジェクトが無いか配列でなかったら戻る}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00150}00150\ \ \ \textcolor{keywordflow}{if}\ (value\ ==\ \textcolor{keywordtype}{object}.end()\ ||\ !value-\/>second.is<picojson::array>())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00152}00152\ \ \ \textcolor{comment}{//\ 配列を取り出す}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00153}00153\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ array\{\ value-\/>second.get<picojson::array>()\ \};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00155}00155\ \ \ \textcolor{comment}{//\ メモリを確保してクリア}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00156}00156\ \ \ vector.clear();}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00157}00157\ \ \ vector.reserve(array.size());}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00158}00158\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00159}00159\ \ \ \textcolor{comment}{//\ 配列の要素について}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00160}00160\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ element\ :\ array)}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00161}00161\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00162}00162\ \ \ \ \ \textcolor{keywordflow}{if}\ (element.is<\textcolor{keywordtype}{double}>())}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00163}00163\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00164}00164\ \ \ \ \ \ \ vector.push\_back(\textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(element.get<\textcolor{keywordtype}{double}>()));}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00165}00165\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00166}00166\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (element.is<\textcolor{keywordtype}{bool}>())}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00167}00167\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00168}00168\ \ \ \ \ \ \ vector.push\_back(\textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(element.get<\textcolor{keywordtype}{bool}>()));}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00169}00169\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00170}00170\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00172}00172\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00173}00173\ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00174}00174\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00183}00183\ \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00184}\mbox{\hyperlink{parseconfig_8h_a6d057d6a5b59526429befae28a4684d3}{00184}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{parseconfig_8h_a6d057d6a5b59526429befae28a4684d3}{getVector}}(\textcolor{keyword}{const}\ picojson::object\&\ \textcolor{keywordtype}{object},}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00185}00185\ \ \ \textcolor{keyword}{const}\ std::string\&\ key,\ \mbox{\hyperlink{classgg_1_1GgVector}{gg::GgVector}}\&\ vector)}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00186}00186\ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00187}00187\ \ \ \textcolor{comment}{//\ key\ に一致するオブジェクトを探す}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00188}00188\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ value\{\ \textcolor{keywordtype}{object}.find(key)\ \};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00189}00189\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00190}00190\ \ \ \textcolor{comment}{//\ オブジェクトが無いか配列でなかったら戻る}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00191}00191\ \ \ \textcolor{keywordflow}{if}\ (value\ ==\ \textcolor{keywordtype}{object}.end()\ ||\ !value-\/>second.is<picojson::array>())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00192}00192\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00193}00193\ \ \ \textcolor{comment}{//\ 配列を取り出す}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00194}00194\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ array\{\ value-\/>second.get<picojson::array>()\ \};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00195}00195\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00196}00196\ \ \ \textcolor{comment}{//\ 配列の要素数とデータの格納先の要素数の少ない方の数}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00197}00197\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ n\{\ std::min(vector.size(),\ array.size())\ \};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00198}00198\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00199}00199\ \ \ \textcolor{comment}{//\ 配列の要素について}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00200}00200\ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ i\ =\ 0;\ i\ <\ n;\ ++i)}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00201}00201\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00202}00202\ \ \ \ \ \textcolor{comment}{//\ 要素が数値なら格納する}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00203}00203\ \ \ \ \ \textcolor{keywordflow}{if}\ (array[i].is<double>())\ vector[i]\ =\ \textcolor{keyword}{static\_cast<}GLfloat\textcolor{keyword}{>}(array[i].get<\textcolor{keywordtype}{double}>());}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00204}00204\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00205}00205\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00206}00206\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00207}00207\ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00208}00208\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00217}00217\ \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00218}\mbox{\hyperlink{parseconfig_8h_aa526c0c2f6ac0f2d8e25de0a8a1300ff}{00218}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{parseconfig_8h_aa526c0c2f6ac0f2d8e25de0a8a1300ff}{getString}}(\textcolor{keyword}{const}\ picojson::object\&\ \textcolor{keywordtype}{object},}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00219}00219\ \ \ \textcolor{keyword}{const}\ std::string\&\ key,\ std::string\&\ \textcolor{keywordtype}{string})}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00220}00220\ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00221}00221\ \ \ \textcolor{comment}{//\ key\ に一致するオブジェクトを探す}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00222}00222\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ value\{\ \textcolor{keywordtype}{object}.find(key)\ \};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00223}00223\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00224}00224\ \ \ \textcolor{comment}{//\ オブジェクトが無いか文字列でなかったら戻る}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00225}00225\ \ \ \textcolor{keywordflow}{if}\ (value\ ==\ \textcolor{keywordtype}{object}.end()\ ||\ !value-\/>second.is<std::string>())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00226}00226\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00227}00227\ \ \ \textcolor{comment}{//\ 文字列として格納する}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00228}00228\ \ \ \textcolor{keywordtype}{string}\ =\ value-\/>second.get<std::string>();}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00229}00229\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00230}00230\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00231}00231\ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00232}00232\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00242}00242\ \textcolor{keyword}{template}\ <std::\textcolor{keywordtype}{size\_t}\ U>}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00243}\mbox{\hyperlink{parseconfig_8h_a700d3523bb3bad5f952ca1fc2b5744aa}{00243}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{parseconfig_8h_aa526c0c2f6ac0f2d8e25de0a8a1300ff}{getString}}(\textcolor{keyword}{const}\ picojson::object\&\ \textcolor{keywordtype}{object},}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00244}00244\ \ \ \textcolor{keyword}{const}\ std::string\&\ key,\ std::array<std::string,\ U>\&\ strings)}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00245}00245\ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00246}00246\ \ \ \textcolor{comment}{//\ key\ に一致するオブジェクトを探す}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00247}00247\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ value\{\ \textcolor{keywordtype}{object}.find(key)\ \};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00248}00248\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00249}00249\ \ \ \textcolor{comment}{//\ オブジェクトが無いか配列でなかったら戻る}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00250}00250\ \ \ \textcolor{keywordflow}{if}\ (value\ ==\ \textcolor{keywordtype}{object}.end()\ ||\ !value-\/>second.is<picojson::array>())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00251}00251\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00252}00252\ \ \ \textcolor{comment}{//\ 配列を取り出す}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00253}00253\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ array\{\ value-\/>second.get<picojson::array>()\ \};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00254}00254\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00255}00255\ \ \ \textcolor{comment}{//\ 配列の要素数とデータの格納先の要素数の少ない方の数}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00256}00256\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ n\{\ std::min(U,\ array.size())\ \};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00257}00257\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00258}00258\ \ \ \textcolor{comment}{//\ 配列の要素について}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00259}00259\ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ i\ =\ 0;\ i\ <\ n;\ ++i)}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00260}00260\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00261}00261\ \ \ \ \ \textcolor{comment}{//\ 要素が文字列なら文字列として格納する}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00262}00262\ \ \ \ \ strings[i]\ =\ array[i].is<std::string>()\ ?\ array[i].get<std::string>()\ :\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00263}00263\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00264}00264\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00265}00265\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00266}00266\ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00267}00267\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00276}00276\ \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00277}\mbox{\hyperlink{parseconfig_8h_a41ddce214cad1ed0bf389012a589f0c5}{00277}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{parseconfig_8h_aa526c0c2f6ac0f2d8e25de0a8a1300ff}{getString}}(\textcolor{keyword}{const}\ picojson::object\&\ \textcolor{keywordtype}{object},}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00278}00278\ \ \ \textcolor{keyword}{const}\ std::string\&\ key,\ std::vector<std::string>\&\ strings)}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00279}00279\ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00280}00280\ \ \ \textcolor{comment}{//\ key\ に一致するオブジェクトを探す}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00281}00281\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ value\{\ \textcolor{keywordtype}{object}.find(key)\ \};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00282}00282\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00283}00283\ \ \ \textcolor{comment}{//\ オブジェクトが無いか配列でなかったら戻る}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00284}00284\ \ \ \textcolor{keywordflow}{if}\ (value\ ==\ \textcolor{keywordtype}{object}.end()\ ||\ !value-\/>second.is<picojson::array>())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00285}00285\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00286}00286\ \ \ \textcolor{comment}{//\ 配列を取り出す}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00287}00287\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ array\{\ value-\/>second.get<picojson::array>()\ \};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00288}00288\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00289}00289\ \ \ \textcolor{comment}{//\ メモリを確保してクリア}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00290}00290\ \ \ strings.clear();}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00291}00291\ \ \ strings.reserve(array.size());}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00292}00292\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00293}00293\ \ \ \textcolor{comment}{//\ 配列のすべての要素について}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00294}00294\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ element\ :\ array)}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00295}00295\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00296}00296\ \ \ \ \ \textcolor{comment}{//\ 要素が文字列なら文字列として格納する}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00297}00297\ \ \ \ \ strings.emplace\_back(element.is<std::string>()\ ?\ element.get<std::string>()\ :\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00298}00298\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00299}00299\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00300}00300\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00301}00301\ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00302}00302\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00311}00311\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00312}\mbox{\hyperlink{parseconfig_8h_ab6753f500daf700e3db65f17b841ce2d}{00312}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{parseconfig_8h_ab6753f500daf700e3db65f17b841ce2d}{setValue}}(picojson::object\&\ \textcolor{keywordtype}{object},}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00313}00313\ \ \ \textcolor{keyword}{const}\ std::string\&\ key,\ \textcolor{keyword}{const}\ T\&\ scalar)}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00314}00314\ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00315}00315\ \ \ \textcolor{keywordtype}{object}[key]\ =\ picojson::value(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(scalar));}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00316}00316\ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00317}00317\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00325}00325\ \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00326}\mbox{\hyperlink{parseconfig_8h_a9ce3a2be1feb43bf5a4f98c013ba61ce}{00326}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{parseconfig_8h_ab6753f500daf700e3db65f17b841ce2d}{setValue}}(picojson::object\&\ \textcolor{keywordtype}{object},}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00327}00327\ \ \ \textcolor{keyword}{const}\ std::string\&\ key,\ \textcolor{keywordtype}{bool}\ \textcolor{keywordtype}{boolean})}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00328}00328\ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00329}00329\ \ \ \textcolor{keywordtype}{object}[key]\ =\ picojson::value(\textcolor{keywordtype}{boolean});}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00330}00330\ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00331}00331\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00341}00341\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ std::\textcolor{keywordtype}{size\_t}\ U>}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00342}\mbox{\hyperlink{parseconfig_8h_a88f3cec9a5d43c9a4292b9768daf67f7}{00342}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{parseconfig_8h_ab6753f500daf700e3db65f17b841ce2d}{setValue}}(picojson::object\&\ \textcolor{keywordtype}{object},}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00343}00343\ \ \ \textcolor{keyword}{const}\ std::string\&\ key,\ \textcolor{keyword}{const}\ std::array<T,\ U>\&\ vector)}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00344}00344\ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00345}00345\ \ \ \textcolor{comment}{//\ picojson\ の配列}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00346}00346\ \ \ picojson::array\ array;}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00347}00347\ \ \ array.reserve(vector.size());}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00348}00348\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00349}00349\ \ \ \textcolor{comment}{//\ 配列のすべての要素について}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00350}00350\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ element\ :\ vector)}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00351}00351\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00352}00352\ \ \ \ \ \textcolor{comment}{//\ 要素を\ picojson::array\ に追加する}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00353}00353\ \ \ \ \ array.emplace\_back(picojson::value(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(element)));}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00354}00354\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00355}00355\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00356}00356\ \ \ \textcolor{comment}{//\ オブジェクトに設定する}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00357}00357\ \ \ \textcolor{keywordtype}{object}[key]\ =\ picojson::value(std::move(array));}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00358}00358\ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00359}00359\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00368}00368\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00369}\mbox{\hyperlink{parseconfig_8h_addca24da2c782d1d6f7d231d55dda445}{00369}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{parseconfig_8h_ab6753f500daf700e3db65f17b841ce2d}{setValue}}(picojson::object\&\ \textcolor{keywordtype}{object},}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00370}00370\ \ \ \textcolor{keyword}{const}\ std::string\&\ key,\ \textcolor{keyword}{const}\ std::vector<T>\&\ vector)}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00371}00371\ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00372}00372\ \ \ \textcolor{comment}{//\ picojson\ の配列}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00373}00373\ \ \ picojson::array\ array;}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00374}00374\ \ \ array.reserve(vector.size());}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00375}00375\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00376}00376\ \ \ \textcolor{comment}{//\ 配列のすべての要素について}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00377}00377\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ element\ :\ vector)}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00378}00378\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00379}00379\ \ \ \ \ \textcolor{comment}{//\ 要素を\ picojson::array\ に追加する}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00380}00380\ \ \ \ \ array.emplace\_back(picojson::value(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(element)));}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00381}00381\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00382}00382\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00383}00383\ \ \ \textcolor{comment}{//\ オブジェクトに設定する}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00384}00384\ \ \ \textcolor{keywordtype}{object}[key]\ =\ picojson::value(std::move(array));}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00385}00385\ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00386}00386\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00394}00394\ \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00395}\mbox{\hyperlink{parseconfig_8h_a11f7f0ff52a57a4f2b4efb52a212ef69}{00395}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{parseconfig_8h_a11f7f0ff52a57a4f2b4efb52a212ef69}{setVector}}(picojson::object\&\ \textcolor{keywordtype}{object},}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00396}00396\ \ \ \textcolor{keyword}{const}\ std::string\&\ key,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classgg_1_1GgVector}{gg::GgVector}}\&\ vector)}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00397}00397\ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00398}00398\ \ \ \textcolor{comment}{//\ picojson\ の配列}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00399}00399\ \ \ picojson::array\ array;}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00400}00400\ \ \ array.reserve(vector.size());}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00401}00401\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00402}00402\ \ \ \textcolor{comment}{//\ ベクトルのすべての要素について}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00403}00403\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ element\ :\ vector)}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00404}00404\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00405}00405\ \ \ \ \ \textcolor{comment}{//\ 要素を\ picojson::array\ に追加する}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00406}00406\ \ \ \ \ array.emplace\_back(picojson::value(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(element)));}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00407}00407\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00408}00408\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00409}00409\ \ \ \textcolor{comment}{//\ オブジェクトに設定する}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00410}00410\ \ \ \textcolor{keywordtype}{object}[key]\ =\ picojson::value(std::move(array));}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00411}00411\ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00412}00412\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00420}00420\ \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00421}\mbox{\hyperlink{parseconfig_8h_a6d1cf7a5f56fa09883319b5afb48502f}{00421}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{parseconfig_8h_a6d1cf7a5f56fa09883319b5afb48502f}{setString}}(picojson::object\&\ \textcolor{keywordtype}{object},}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00422}00422\ \ \ \textcolor{keyword}{const}\ std::string\&\ key,\ \textcolor{keyword}{const}\ std::string\&\ \textcolor{keywordtype}{string})}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00423}00423\ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00424}00424\ \ \ \textcolor{keywordtype}{object}[key]\ =\ picojson::value(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00425}00425\ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00426}00426\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00435}00435\ \textcolor{keyword}{template}\ <std::\textcolor{keywordtype}{size\_t}\ U>}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00436}\mbox{\hyperlink{parseconfig_8h_a47ae8a74b49d33f074ebfa150204ec95}{00436}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{parseconfig_8h_a6d1cf7a5f56fa09883319b5afb48502f}{setString}}(picojson::object\&\ \textcolor{keywordtype}{object},}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00437}00437\ \ \ \textcolor{keyword}{const}\ std::string\&\ key,\ \textcolor{keyword}{const}\ std::array<std::string,\ U>\&\ strings)}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00438}00438\ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00439}00439\ \ \ \textcolor{comment}{//\ picojson\ の配列}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00440}00440\ \ \ picojson::array\ array;}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00441}00441\ \ \ array.reserve(strings.size());}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00442}00442\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00443}00443\ \ \ \textcolor{comment}{//\ 配列のすべての要素について}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00444}00444\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ \textcolor{keywordtype}{string}\ :\ strings)}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00445}00445\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00446}00446\ \ \ \ \ \textcolor{comment}{//\ 要素を\ picojson::array\ に追加する}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00447}00447\ \ \ \ \ array.emplace\_back(picojson::value(\textcolor{keywordtype}{string}));}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00448}00448\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00449}00449\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00450}00450\ \ \ \textcolor{comment}{//\ オブジェクトに設定する}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00451}00451\ \ \ \textcolor{keywordtype}{object}[key]\ =\ picojson::value(std::move(array));}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00452}00452\ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00453}00453\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00461}00461\ \textcolor{keyword}{inline}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00462}\mbox{\hyperlink{parseconfig_8h_a4cad273831a9de460651017a9bfe6500}{00462}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{parseconfig_8h_a6d1cf7a5f56fa09883319b5afb48502f}{setString}}(picojson::object\&\ \textcolor{keywordtype}{object},}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00463}00463\ \ \ \textcolor{keyword}{const}\ std::string\&\ key,\ \textcolor{keyword}{const}\ std::vector<std::string>\&\ strings)}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00464}00464\ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00465}00465\ \ \ \textcolor{comment}{//\ picojson\ の配列}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00466}00466\ \ \ picojson::array\ array;}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00467}00467\ \ \ array.reserve(strings.size());}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00468}00468\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00469}00469\ \ \ \textcolor{comment}{//\ 配列のすべての要素について}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00470}00470\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ \textcolor{keywordtype}{string}\ :\ strings)}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00471}00471\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00472}00472\ \ \ \ \ \textcolor{comment}{//\ 要素を\ picojson::array\ に追加する}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00473}00473\ \ \ \ \ array.emplace\_back(picojson::value(\textcolor{keywordtype}{string}));}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00474}00474\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00475}00475\ }
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00476}00476\ \ \ \textcolor{comment}{//\ オブジェクトに設定する}}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00477}00477\ \ \ \textcolor{keywordtype}{object}[key]\ =\ picojson::value(std::move(array));}
+\DoxyCodeLine{\Hypertarget{parseconfig_8h_source_l00478}00478\ \}}
+
+\end{DoxyCode}

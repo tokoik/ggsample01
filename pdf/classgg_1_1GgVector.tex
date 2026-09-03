@@ -1,0 +1,932 @@
+\doxysection{gg\+::Gg\+Vector クラス}
+\hypertarget{classgg_1_1GgVector}{}\label{classgg_1_1GgVector}\index{gg::GgVector@{gg::GgVector}}
+
+
+{\ttfamily \#include $<$gg.\+h$>$}
+
+
+
+gg\+::Gg\+Vector の継承関係図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classgg_1_1GgVector__inherit__graph}
+\end{center}
+\end{figure}
+
+
+gg\+::Gg\+Vector 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classgg_1_1GgVector__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} ()=default
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_aafd0d0934ac3dd51f6e7160abc6d4363}{Gg\+Vector}} (GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3)
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_ace37bc353956e5299419b639ff1c0c01}{Gg\+Vector}} (const GLfloat \texorpdfstring{$\ast$}{*}a)
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_aced648e19ce3203bbe2db19026a59a33}{Gg\+Vector}} (GLfloat c)
+\item 
+\mbox{\hyperlink{classgg_1_1GgVector_a40c847639889f357bd233553fc3ace51}{Gg\+Vector}} (const Gg\+Vector \&v)=default
+\item 
+\mbox{\hyperlink{classgg_1_1GgVector_afd8ceac14ec84418fc17ad0174e699bb}{Gg\+Vector}} (Gg\+Vector \&\&v)=default
+\item 
+\mbox{\hyperlink{classgg_1_1GgVector_a14e101a2316d7ef891457a4063159c7e}{\texorpdfstring{$\sim$}{\string~}\+Gg\+Vector}} ()=default
+\item 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& \mbox{\hyperlink{classgg_1_1GgVector_aa87eb7621081b5fe44d14a806321aabb}{operator=}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v)=default
+\item 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& \mbox{\hyperlink{classgg_1_1GgVector_a2ac14c5d810fd71e75eb6e55ea693e2c}{operator=}} (\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&\&v)=default
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \mbox{\hyperlink{classgg_1_1GgVector_a3541ecc1ce62af143781ae38205ef3e1}{operator+}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) const noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \mbox{\hyperlink{classgg_1_1GgVector_a01f8d79e117ad206036977d4852ea029}{operator+}} (GLfloat c) const noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& \mbox{\hyperlink{classgg_1_1GgVector_a8de773ae73cb085e6b39c99487f96f5c}{operator+=}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& \mbox{\hyperlink{classgg_1_1GgVector_a353526d269de6158d965a189460c98da}{operator+=}} (GLfloat c) noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \mbox{\hyperlink{classgg_1_1GgVector_a0cbe7dd6b3b9d100f5c047d131a5bf1e}{operator-\/}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) const noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \mbox{\hyperlink{classgg_1_1GgVector_a1704e6bce7cd7a04f104581e6e2f53f3}{operator-\/}} (GLfloat c) const noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& \mbox{\hyperlink{classgg_1_1GgVector_affaaa87dd6c4bc0bfb85c7fe7aab551a}{operator-\/=}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& \mbox{\hyperlink{classgg_1_1GgVector_aff355bf227aca1811c778db78039d3fa}{operator-\/=}} (GLfloat c) noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \mbox{\hyperlink{classgg_1_1GgVector_a0614bb695e1712ffc0e0069772c8cf2c}{operator\texorpdfstring{$\ast$}{*}}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) const noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \mbox{\hyperlink{classgg_1_1GgVector_ae12b1a0f9757176da0d989173b51dd6d}{operator\texorpdfstring{$\ast$}{*}}} (GLfloat c) const noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& \mbox{\hyperlink{classgg_1_1GgVector_a6cb521386dc208b0c5028882d81d3454}{operator\texorpdfstring{$\ast$}{*}=}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& \mbox{\hyperlink{classgg_1_1GgVector_ad41359371e949f95ac6c4ca3efaa1239}{operator\texorpdfstring{$\ast$}{*}=}} (GLfloat c) noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \mbox{\hyperlink{classgg_1_1GgVector_a3c9ec6fecc079e33a8cc6be5b2a4b7d0}{operator/}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) const noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \mbox{\hyperlink{classgg_1_1GgVector_a4f5537eca7159ad4b5faf3877102a692}{operator/}} (GLfloat c) const noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& \mbox{\hyperlink{classgg_1_1GgVector_ac049e36760f62d4ebd1ffc2df552814b}{operator/=}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& \mbox{\hyperlink{classgg_1_1GgVector_a7324171edeb2a4efc29c57e1e81058ab}{operator/=}} (GLfloat c) noexcept
+\item 
+GLfloat \mbox{\hyperlink{classgg_1_1GgVector_a82f2282affb26a02e7251a012e26f5fd}{dot3}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) const
+\item 
+GLfloat \mbox{\hyperlink{classgg_1_1GgVector_a00aad8dbf2cd33361e2b0e495f7f4b0d}{length3}} () const
+\item 
+GLfloat \mbox{\hyperlink{classgg_1_1GgVector_a784cd4bc882511beb2953014de7ba573}{distance3}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \mbox{\hyperlink{classgg_1_1GgVector_a5bac9976a7fe4be4a0e69c974153d745}{normalize3}} () const
+\item 
+GLfloat \mbox{\hyperlink{classgg_1_1GgVector_ad8d01932d2a37cd0cbbff0314857118d}{dot4}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) const
+\item 
+GLfloat \mbox{\hyperlink{classgg_1_1GgVector_a8b3b6d897a0ac8aa92d9f5cf20e628d3}{length4}} () const
+\item 
+GLfloat \mbox{\hyperlink{classgg_1_1GgVector_aa533c2f61342d5091ebb7802b11169f7}{distance4}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \mbox{\hyperlink{classgg_1_1GgVector_ac71838f77dde35fdc627b96e6807462f}{normalize4}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+単精度実数の 4 要素のベクトル. 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01577}{1577}} 行目に定義があります。
+
+
+
+\label{doc-constructors}
+\Hypertarget{classgg_1_1GgVector_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}\index{gg::GgVector@{gg::GgVector}!GgVector@{GgVector}}
+\index{GgVector@{GgVector}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{GgVector()}{GgVector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58} 
+gg\+::\+Gg\+Vector\+::\+Gg\+Vector (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+コンストラクタ. 被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_aafd0d0934ac3dd51f6e7160abc6d4363}\index{gg::GgVector@{gg::GgVector}!GgVector@{GgVector}}
+\index{GgVector@{GgVector}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{GgVector()}{GgVector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_aafd0d0934ac3dd51f6e7160abc6d4363} 
+gg\+::\+Gg\+Vector\+::\+Gg\+Vector (\begin{DoxyParamCaption}\item[{GLfloat}]{v0}{, }\item[{GLfloat}]{v1}{, }\item[{GLfloat}]{v2}{, }\item[{GLfloat}]{v3}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+コンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em v0} & GLfloat 型の値. \\
+\hline
+{\em v1} & GLfloat 型の値. \\
+\hline
+{\em v2} & GLfloat 型の値. \\
+\hline
+{\em v3} & GLfloat 型の値. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01594}{1594}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgVector_ace37bc353956e5299419b639ff1c0c01}\index{gg::GgVector@{gg::GgVector}!GgVector@{GgVector}}
+\index{GgVector@{GgVector}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{GgVector()}{GgVector()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_ace37bc353956e5299419b639ff1c0c01} 
+gg\+::\+Gg\+Vector\+::\+Gg\+Vector (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+コンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & GLfloat 型の 4 要素の配列変数. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01604}{1604}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_ace37bc353956e5299419b639ff1c0c01_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_aced648e19ce3203bbe2db19026a59a33}\index{gg::GgVector@{gg::GgVector}!GgVector@{GgVector}}
+\index{GgVector@{GgVector}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{GgVector()}{GgVector()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_aced648e19ce3203bbe2db19026a59a33} 
+gg\+::\+Gg\+Vector\+::\+Gg\+Vector (\begin{DoxyParamCaption}\item[{GLfloat}]{c}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+コンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em c} & GLfloat 型の値. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01614}{1614}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_aced648e19ce3203bbe2db19026a59a33_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_a40c847639889f357bd233553fc3ace51}\index{gg::GgVector@{gg::GgVector}!GgVector@{GgVector}}
+\index{GgVector@{GgVector}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{GgVector()}{GgVector()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_a40c847639889f357bd233553fc3ace51} 
+gg\+::\+Gg\+Vector\+::\+Gg\+Vector (\begin{DoxyParamCaption}\item[{const Gg\+Vector \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+コピーコンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & コピー元のベクトル. \\
+\hline
+\end{DoxyParams}
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_a40c847639889f357bd233553fc3ace51_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_afd8ceac14ec84418fc17ad0174e699bb}\index{gg::GgVector@{gg::GgVector}!GgVector@{GgVector}}
+\index{GgVector@{GgVector}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{GgVector()}{GgVector()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_afd8ceac14ec84418fc17ad0174e699bb} 
+gg\+::\+Gg\+Vector\+::\+Gg\+Vector (\begin{DoxyParamCaption}\item[{Gg\+Vector \&\&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+ムーブコンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & ムーブ元のベクトル. \\
+\hline
+\end{DoxyParams}
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_afd8ceac14ec84418fc17ad0174e699bb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_a14e101a2316d7ef891457a4063159c7e}\index{gg::GgVector@{gg::GgVector}!````~GgVector@{\texorpdfstring{$\sim$}{\string~}GgVector}}
+\index{````~GgVector@{\texorpdfstring{$\sim$}{\string~}GgVector}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GgVector()}{\string~GgVector()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_a14e101a2316d7ef891457a4063159c7e} 
+gg\+::\+Gg\+Vector\+::\texorpdfstring{$\sim$}{\string~}\+Gg\+Vector (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+デストラクタ. 
+
+\label{doc-func-members}
+\Hypertarget{classgg_1_1GgVector_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{classgg_1_1GgVector_a784cd4bc882511beb2953014de7ba573}\index{gg::GgVector@{gg::GgVector}!distance3@{distance3}}
+\index{distance3@{distance3}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{distance3()}{distance3()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_a784cd4bc882511beb2953014de7ba573} 
+GLfloat gg\+::\+Gg\+Vector\+::distance3 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の 3 要素の距離.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型のベクトル. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+オブジェクトと v の 3 要素の距離. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01883}{1883}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_a784cd4bc882511beb2953014de7ba573_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_aa533c2f61342d5091ebb7802b11169f7}\index{gg::GgVector@{gg::GgVector}!distance4@{distance4}}
+\index{distance4@{distance4}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{distance4()}{distance4()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_aa533c2f61342d5091ebb7802b11169f7} 
+GLfloat gg\+::\+Gg\+Vector\+::distance4 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の 4 要素の距離.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型のベクトル. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+オブジェクトと v の 4 要素の距離. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01927}{1927}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_aa533c2f61342d5091ebb7802b11169f7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_a82f2282affb26a02e7251a012e26f5fd}\index{gg::GgVector@{gg::GgVector}!dot3@{dot3}}
+\index{dot3@{dot3}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{dot3()}{dot3()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_a82f2282affb26a02e7251a012e26f5fd} 
+GLfloat gg\+::\+Gg\+Vector\+::dot3 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の 3 要素の内積.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型のベクトル. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+オブジェクトと v のそれぞれの 3 要素の内積. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01862}{1862}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classgg_1_1GgVector_a82f2282affb26a02e7251a012e26f5fd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_ad8d01932d2a37cd0cbbff0314857118d}\index{gg::GgVector@{gg::GgVector}!dot4@{dot4}}
+\index{dot4@{dot4}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{dot4()}{dot4()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_ad8d01932d2a37cd0cbbff0314857118d} 
+GLfloat gg\+::\+Gg\+Vector\+::dot4 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の 4 要素の内積.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型のベクトル. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+オブジェクトと v のそれぞれの 4 要素の内積. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01906}{1906}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classgg_1_1GgVector_ad8d01932d2a37cd0cbbff0314857118d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_a00aad8dbf2cd33361e2b0e495f7f4b0d}\index{gg::GgVector@{gg::GgVector}!length3@{length3}}
+\index{length3@{length3}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{length3()}{length3()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_a00aad8dbf2cd33361e2b0e495f7f4b0d} 
+GLfloat gg\+::\+Gg\+Vector\+::length3 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の 3 要素の長さ.
+
+\begin{DoxyReturn}{戻り値}
+オブジェクトの 3 要素の長さ. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01872}{1872}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_a00aad8dbf2cd33361e2b0e495f7f4b0d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_a8b3b6d897a0ac8aa92d9f5cf20e628d3}\index{gg::GgVector@{gg::GgVector}!length4@{length4}}
+\index{length4@{length4}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{length4()}{length4()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_a8b3b6d897a0ac8aa92d9f5cf20e628d3} 
+GLfloat gg\+::\+Gg\+Vector\+::length4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の 4 要素の長さ.
+
+\begin{DoxyReturn}{戻り値}
+オブジェクトの 4 要素の長さ. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01916}{1916}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_a8b3b6d897a0ac8aa92d9f5cf20e628d3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_a5bac9976a7fe4be4a0e69c974153d745}\index{gg::GgVector@{gg::GgVector}!normalize3@{normalize3}}
+\index{normalize3@{normalize3}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{normalize3()}{normalize3()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_a5bac9976a7fe4be4a0e69c974153d745} 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} gg\+::\+Gg\+Vector\+::normalize3 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の 3 要素の正規化.
+
+\begin{DoxyReturn}{戻り値}
+GLfloat 型の 4 要素の配列変数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01893}{1893}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_a5bac9976a7fe4be4a0e69c974153d745_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_ac71838f77dde35fdc627b96e6807462f}\index{gg::GgVector@{gg::GgVector}!normalize4@{normalize4}}
+\index{normalize4@{normalize4}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{normalize4()}{normalize4()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_ac71838f77dde35fdc627b96e6807462f} 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} gg\+::\+Gg\+Vector\+::normalize4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の 4 要素の正規化.
+
+\begin{DoxyReturn}{戻り値}
+GLfloat 型の 4 要素の配列変数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01937}{1937}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_ac71838f77dde35fdc627b96e6807462f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_a0614bb695e1712ffc0e0069772c8cf2c}\index{gg::GgVector@{gg::GgVector}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_a0614bb695e1712ffc0e0069772c8cf2c} 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} gg\+::\+Gg\+Vector\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の積を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+オブジェクトの各要素と v の各要素の要素ごとの積のオブジェクト. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01758}{1758}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_a0614bb695e1712ffc0e0069772c8cf2c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_ae12b1a0f9757176da0d989173b51dd6d}\index{gg::GgVector@{gg::GgVector}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_ae12b1a0f9757176da0d989173b51dd6d} 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} gg\+::\+Gg\+Vector\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{GLfloat}]{c}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の各要素にスカラーを乗じた積を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em c} & GLfloat 型の変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+オブジェクトの各要素に c を乗じたオブジェクト. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01769}{1769}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_ae12b1a0f9757176da0d989173b51dd6d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_a6cb521386dc208b0c5028882d81d3454}\index{gg::GgVector@{gg::GgVector}!operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}}
+\index{operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_a6cb521386dc208b0c5028882d81d3454} 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& gg\+::\+Gg\+Vector\+::operator\texorpdfstring{$\ast$}{*}= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\doxylink{classgg_1_1GgVector}{Gg\+Vector} 型を乗算する.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+オブジェクトの各要素に v の各要素をそれぞれ乗算したオブジェクトの参照. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01780}{1780}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_a6cb521386dc208b0c5028882d81d3454_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_ad41359371e949f95ac6c4ca3efaa1239}\index{gg::GgVector@{gg::GgVector}!operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}}
+\index{operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_ad41359371e949f95ac6c4ca3efaa1239} 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& gg\+::\+Gg\+Vector\+::operator\texorpdfstring{$\ast$}{*}= (\begin{DoxyParamCaption}\item[{GLfloat}]{c}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の各要素にスカラーを乗じる.
+
+
+\begin{DoxyParams}{引数}
+{\em c} & GLfloat 型の値. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+オブジェクトの各要素に c を乗じたオブジェクトの参照. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01795}{1795}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_ad41359371e949f95ac6c4ca3efaa1239_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_a3541ecc1ce62af143781ae38205ef3e1}\index{gg::GgVector@{gg::GgVector}!operator+@{operator+}}
+\index{operator+@{operator+}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_a3541ecc1ce62af143781ae38205ef3e1} 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} gg\+::\+Gg\+Vector\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の和を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型のベクトル. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+オブジェクトの各要素と v の各要素の要素ごとの和のオブジェクト. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01654}{1654}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_a3541ecc1ce62af143781ae38205ef3e1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_a01f8d79e117ad206036977d4852ea029}\index{gg::GgVector@{gg::GgVector}!operator+@{operator+}}
+\index{operator+@{operator+}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_a01f8d79e117ad206036977d4852ea029} 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} gg\+::\+Gg\+Vector\+::operator+ (\begin{DoxyParamCaption}\item[{GLfloat}]{c}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の各要素にスカラーを足した和を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em c} & GLfloat 型の値. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+a の各要素に b を足した和のオブジェクト. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01665}{1665}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_a01f8d79e117ad206036977d4852ea029_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_a8de773ae73cb085e6b39c99487f96f5c}\index{gg::GgVector@{gg::GgVector}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_a8de773ae73cb085e6b39c99487f96f5c} 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& gg\+::\+Gg\+Vector\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\doxylink{classgg_1_1GgVector}{Gg\+Vector} 型を加算する.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+オブジェクトの各要素に v の各要素をそれぞれ加算したオブジェクトの参照. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01676}{1676}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_a8de773ae73cb085e6b39c99487f96f5c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_a353526d269de6158d965a189460c98da}\index{gg::GgVector@{gg::GgVector}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_a353526d269de6158d965a189460c98da} 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& gg\+::\+Gg\+Vector\+::operator+= (\begin{DoxyParamCaption}\item[{GLfloat}]{c}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の各要素にスカラーを加算する.
+
+
+\begin{DoxyParams}{引数}
+{\em c} & GLfloat 型の値. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+オブジェクトの各要素に c を足したオブジェクトの参照. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01691}{1691}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_a353526d269de6158d965a189460c98da_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_a0cbe7dd6b3b9d100f5c047d131a5bf1e}\index{gg::GgVector@{gg::GgVector}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_a0cbe7dd6b3b9d100f5c047d131a5bf1e} 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} gg\+::\+Gg\+Vector\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の差を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+オブジェクトの各要素と v の各要素の要素ごとの差のオブジェクト. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01706}{1706}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_a0cbe7dd6b3b9d100f5c047d131a5bf1e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_a1704e6bce7cd7a04f104581e6e2f53f3}\index{gg::GgVector@{gg::GgVector}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_a1704e6bce7cd7a04f104581e6e2f53f3} 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} gg\+::\+Gg\+Vector\+::operator-\/ (\begin{DoxyParamCaption}\item[{GLfloat}]{c}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の各要素からスカラーを引いた差を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em c} & GLfloat 型の変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+オブジェクトの各要素から c を引いたオブジェクト. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01717}{1717}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_a1704e6bce7cd7a04f104581e6e2f53f3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_affaaa87dd6c4bc0bfb85c7fe7aab551a}\index{gg::GgVector@{gg::GgVector}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_affaaa87dd6c4bc0bfb85c7fe7aab551a} 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& gg\+::\+Gg\+Vector\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\doxylink{classgg_1_1GgVector}{Gg\+Vector} 型を減算する.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+オブジェクトの各要素に v の各要素をそれぞれ減算したオブジェクトの参照. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01728}{1728}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_affaaa87dd6c4bc0bfb85c7fe7aab551a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_aff355bf227aca1811c778db78039d3fa}\index{gg::GgVector@{gg::GgVector}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_aff355bf227aca1811c778db78039d3fa} 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& gg\+::\+Gg\+Vector\+::operator-\/= (\begin{DoxyParamCaption}\item[{GLfloat}]{c}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の各要素からスカラーを引く.
+
+
+\begin{DoxyParams}{引数}
+{\em c} & GLfloat 型の変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+オブジェクトの各要素から c を引いたオブジェクトの参照. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01743}{1743}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_aff355bf227aca1811c778db78039d3fa_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_a3c9ec6fecc079e33a8cc6be5b2a4b7d0}\index{gg::GgVector@{gg::GgVector}!operator/@{operator/}}
+\index{operator/@{operator/}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_a3c9ec6fecc079e33a8cc6be5b2a4b7d0} 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} gg\+::\+Gg\+Vector\+::operator/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の商を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+オブジェクトの各要素を v の各要素で要素ごとに割った結果のオブジェクト. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01810}{1810}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_a3c9ec6fecc079e33a8cc6be5b2a4b7d0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_a4f5537eca7159ad4b5faf3877102a692}\index{gg::GgVector@{gg::GgVector}!operator/@{operator/}}
+\index{operator/@{operator/}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_a4f5537eca7159ad4b5faf3877102a692} 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} gg\+::\+Gg\+Vector\+::operator/ (\begin{DoxyParamCaption}\item[{GLfloat}]{c}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の各要素をスカラーで割った商を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em c} & GLfloat 型の変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+オブジェクトの各要素を c で割ったオブジェクト. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01821}{1821}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_a4f5537eca7159ad4b5faf3877102a692_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_ac049e36760f62d4ebd1ffc2df552814b}\index{gg::GgVector@{gg::GgVector}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{operator/=()}{operator/=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_ac049e36760f62d4ebd1ffc2df552814b} 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& gg\+::\+Gg\+Vector\+::operator/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\doxylink{classgg_1_1GgVector}{Gg\+Vector} 型を除算する.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+オブジェクトの各要素を v の各要素でそれぞれ除算したオブジェクトの参照. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01832}{1832}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_ac049e36760f62d4ebd1ffc2df552814b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_a7324171edeb2a4efc29c57e1e81058ab}\index{gg::GgVector@{gg::GgVector}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{operator/=()}{operator/=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_a7324171edeb2a4efc29c57e1e81058ab} 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& gg\+::\+Gg\+Vector\+::operator/= (\begin{DoxyParamCaption}\item[{GLfloat}]{c}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の各要素をスカラーで割る.
+
+
+\begin{DoxyParams}{引数}
+{\em c} & GLfloat 型の変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+オブジェクトの各要素から c で割ったオブジェクトの参照. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01847}{1847}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_a7324171edeb2a4efc29c57e1e81058ab_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_aa87eb7621081b5fe44d14a806321aabb}\index{gg::GgVector@{gg::GgVector}!operator=@{operator=}}
+\index{operator=@{operator=}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_aa87eb7621081b5fe44d14a806321aabb} 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& gg\+::\+Gg\+Vector\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+代入演算子. 呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_aa87eb7621081b5fe44d14a806321aabb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgVector_a2ac14c5d810fd71e75eb6e55ea693e2c}\index{gg::GgVector@{gg::GgVector}!operator=@{operator=}}
+\index{operator=@{operator=}!gg::GgVector@{gg::GgVector}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgVector_a2ac14c5d810fd71e75eb6e55ea693e2c} 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& gg\+::\+Gg\+Vector\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&\&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+ムーブ代入演算子. 呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgVector_a2ac14c5d810fd71e75eb6e55ea693e2c_cgraph}
+\end{center}
+\end{figure}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gg_8h}{gg.\+h}}\end{DoxyCompactItemize}

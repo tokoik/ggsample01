@@ -1,0 +1,574 @@
+\doxysection{gg\+::Gg\+Point\+Shader クラス}
+\hypertarget{classgg_1_1GgPointShader}{}\label{classgg_1_1GgPointShader}\index{gg::GgPointShader@{gg::GgPointShader}}
+
+
+{\ttfamily \#include $<$gg.\+h$>$}
+
+
+
+gg\+::Gg\+Point\+Shader の継承関係図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classgg_1_1GgPointShader__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgg_1_1GgPointShader_a0e243c613ba8cede855c017b403927e7}{Gg\+Point\+Shader}} ()
+\item 
+\mbox{\hyperlink{classgg_1_1GgPointShader_ac4b6079bd97709dc5ff161b1ea738f9e}{Gg\+Point\+Shader}} (const std\+::string \&vert, const std\+::string \&frag="{}"{}, const std\+::string \&geom="{}"{}, GLint nvarying=0, const char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}varyings=nullptr)
+\item 
+\mbox{\hyperlink{classgg_1_1GgPointShader_a5c1dbc75d1854329692a5cc361a17402}{Gg\+Point\+Shader}} (const std\+::array$<$ std\+::string, 3 $>$ \&files, int nvarying=0, const char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}varyings=nullptr)
+\item 
+virtual \mbox{\hyperlink{classgg_1_1GgPointShader_a824b38f7511fe905f0a130dbd7edb7e0}{\texorpdfstring{$\sim$}{\string~}\+Gg\+Point\+Shader}} ()
+\item 
+bool \mbox{\hyperlink{classgg_1_1GgPointShader_a3e25078b5b610d7ffb00661523bf8010}{load}} (const std\+::string \&vert, const std\+::string \&frag="{}"{}, const std\+::string \&geom="{}"{}, GLint nvarying=0, const char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}varyings=nullptr)
+\item 
+bool \mbox{\hyperlink{classgg_1_1GgPointShader_aa087d78628364e0597217cdde75e6018}{load}} (const std\+::array$<$ std\+::string, 3 $>$ \&files, GLint nvarying=0, const char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}varyings=nullptr)
+\item 
+virtual void \mbox{\hyperlink{classgg_1_1GgPointShader_a35ef8670f580eb11d40386aa63ac615b}{load\+Projection\+Matrix}} (const GLfloat \texorpdfstring{$\ast$}{*}mp) const
+\item 
+virtual void \mbox{\hyperlink{classgg_1_1GgPointShader_a634da09936448435b4d9b162d9ec28c1}{load\+Projection\+Matrix}} (const \mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \&mp) const
+\item 
+virtual void \mbox{\hyperlink{classgg_1_1GgPointShader_ac6e9398fa71096e9866fcd84cb542a91}{load\+Modelview\+Matrix}} (const GLfloat \texorpdfstring{$\ast$}{*}mv) const
+\item 
+virtual void \mbox{\hyperlink{classgg_1_1GgPointShader_ad3d2435dbea4708f95d26a5f85a3b28b}{load\+Modelview\+Matrix}} (const \mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \&mv) const
+\item 
+virtual void \mbox{\hyperlink{classgg_1_1GgPointShader_aa852790b42b43a23161fb86d551cb33b}{load\+Matrix}} (const GLfloat \texorpdfstring{$\ast$}{*}mp, const GLfloat \texorpdfstring{$\ast$}{*}mv) const
+\item 
+virtual void \mbox{\hyperlink{classgg_1_1GgPointShader_a58d95699d054dd86c0a54846c00f691a}{load\+Matrix}} (const \mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \&mp, const \mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \&mv) const
+\item 
+virtual void \mbox{\hyperlink{classgg_1_1GgPointShader_a6809087ef5e8a563310c3fc396246e78}{use}} () const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgPointShader_a2a41d6e019fea4ac9e8633b988f5fa91}{use}} (const GLfloat \texorpdfstring{$\ast$}{*}mp) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgPointShader_a8d46e3571f4ffdb85368e8b438baa09f}{use}} (const \mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \&mp) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgPointShader_ab6ebf90fca8545b5ea896ee5b19a2722}{use}} (const GLfloat \texorpdfstring{$\ast$}{*}mp, const GLfloat \texorpdfstring{$\ast$}{*}mv) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgPointShader_a7108b9cd35e312266adfc40af1d658ca}{use}} (const \mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \&mp, const \mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \&mv) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgPointShader_a72f2255985115d2bd171eaf0b3b6948e}{unuse}} () const
+\item 
+GLuint \mbox{\hyperlink{classgg_1_1GgPointShader_a491b86fce18818a1a757bc1a81e0f60b}{get}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+点のシェーダ. 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07184}{7184}} 行目に定義があります。
+
+
+
+\label{doc-constructors}
+\Hypertarget{classgg_1_1GgPointShader_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{classgg_1_1GgPointShader_a0e243c613ba8cede855c017b403927e7}\index{gg::GgPointShader@{gg::GgPointShader}!GgPointShader@{GgPointShader}}
+\index{GgPointShader@{GgPointShader}!gg::GgPointShader@{gg::GgPointShader}}
+\doxysubsubsection{\texorpdfstring{GgPointShader()}{GgPointShader()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgPointShader_a0e243c613ba8cede855c017b403927e7} 
+gg\+::\+Gg\+Point\+Shader\+::\+Gg\+Point\+Shader (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+コンストラクタ. 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07200}{7200}} 行目に定義があります。
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgPointShader_a0e243c613ba8cede855c017b403927e7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgPointShader_ac4b6079bd97709dc5ff161b1ea738f9e}\index{gg::GgPointShader@{gg::GgPointShader}!GgPointShader@{GgPointShader}}
+\index{GgPointShader@{GgPointShader}!gg::GgPointShader@{gg::GgPointShader}}
+\doxysubsubsection{\texorpdfstring{GgPointShader()}{GgPointShader()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgPointShader_ac4b6079bd97709dc5ff161b1ea738f9e} 
+gg\+::\+Gg\+Point\+Shader\+::\+Gg\+Point\+Shader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{vert}{, }\item[{const std\+::string \&}]{frag}{ = {\ttfamily "{}"{}}, }\item[{const std\+::string \&}]{geom}{ = {\ttfamily "{}"{}}, }\item[{GLint}]{nvarying}{ = {\ttfamily 0}, }\item[{const char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}}]{varyings}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+コンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em vert} & バーテックスシェーダのソースファイル名. \\
+\hline
+{\em frag} & フラグメントシェーダのソースファイル名 (空文字列なら不使用). \\
+\hline
+{\em geom} & ジオメトリシェーダのソースファイル名 (空文字列なら不使用). \\
+\hline
+{\em nvarying} & フィードバックする varying 変数の数 (0 なら不使用). \\
+\hline
+{\em varyings} & フィードバックする varying 変数のリスト. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07215}{7215}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{classgg_1_1GgPointShader_ac4b6079bd97709dc5ff161b1ea738f9e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgPointShader_a5c1dbc75d1854329692a5cc361a17402}\index{gg::GgPointShader@{gg::GgPointShader}!GgPointShader@{GgPointShader}}
+\index{GgPointShader@{GgPointShader}!gg::GgPointShader@{gg::GgPointShader}}
+\doxysubsubsection{\texorpdfstring{GgPointShader()}{GgPointShader()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgPointShader_a5c1dbc75d1854329692a5cc361a17402} 
+gg\+::\+Gg\+Point\+Shader\+::\+Gg\+Point\+Shader (\begin{DoxyParamCaption}\item[{const std\+::array$<$ std\+::string, 3 $>$ \&}]{files}{, }\item[{int}]{nvarying}{ = {\ttfamily 0}, }\item[{const char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}}]{varyings}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+コンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em files} & バーテックスシェーダのソースファイル名の配列. \\
+\hline
+{\em nvarying} & フィードバックする varying 変数の数 (0 なら不使用). \\
+\hline
+{\em varyings} & フィードバックする varying 変数のリスト (nullptr なら不使用). \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07234}{7234}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{classgg_1_1GgPointShader_a5c1dbc75d1854329692a5cc361a17402_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgPointShader_a824b38f7511fe905f0a130dbd7edb7e0}\index{gg::GgPointShader@{gg::GgPointShader}!````~GgPointShader@{\texorpdfstring{$\sim$}{\string~}GgPointShader}}
+\index{````~GgPointShader@{\texorpdfstring{$\sim$}{\string~}GgPointShader}!gg::GgPointShader@{gg::GgPointShader}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GgPointShader()}{\string~GgPointShader()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgPointShader_a824b38f7511fe905f0a130dbd7edb7e0} 
+virtual gg\+::\+Gg\+Point\+Shader\+::\texorpdfstring{$\sim$}{\string~}\+Gg\+Point\+Shader (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+デストラクタ. 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07246}{7246}} 行目に定義があります。
+
+
+
+\label{doc-func-members}
+\Hypertarget{classgg_1_1GgPointShader_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{classgg_1_1GgPointShader_a491b86fce18818a1a757bc1a81e0f60b}\index{gg::GgPointShader@{gg::GgPointShader}!get@{get}}
+\index{get@{get}!gg::GgPointShader@{gg::GgPointShader}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgPointShader_a491b86fce18818a1a757bc1a81e0f60b} 
+GLuint gg\+::\+Gg\+Point\+Shader\+::get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+シェーダのプログラム名を得る.
+
+\begin{DoxyReturn}{戻り値}
+シェーダのプログラム名. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07430}{7430}} 行目に定義があります。
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgPointShader_a491b86fce18818a1a757bc1a81e0f60b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgPointShader_aa087d78628364e0597217cdde75e6018}\index{gg::GgPointShader@{gg::GgPointShader}!load@{load}}
+\index{load@{load}!gg::GgPointShader@{gg::GgPointShader}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgPointShader_aa087d78628364e0597217cdde75e6018} 
+bool gg\+::\+Gg\+Point\+Shader\+::load (\begin{DoxyParamCaption}\item[{const std\+::array$<$ std\+::string, 3 $>$ \&}]{files}{, }\item[{GLint}]{nvarying}{ = {\ttfamily 0}, }\item[{const char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}}]{varyings}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+シェーダのソースファイルを読み込んでプログラムオブジェクトを作成する.
+
+
+\begin{DoxyParams}{引数}
+{\em files} & バーテックスシェーダのソースファイル名の配列. \\
+\hline
+{\em nvarying} & フィードバックする varying 変数の数 (0 なら不使用). \\
+\hline
+{\em varyings} & フィードバックする varying 変数のリスト (nullptr なら不使用). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+プログラムオブジェクトの作成に成功したら true. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07293}{7293}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgPointShader_aa087d78628364e0597217cdde75e6018_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgPointShader_a3e25078b5b610d7ffb00661523bf8010}\index{gg::GgPointShader@{gg::GgPointShader}!load@{load}}
+\index{load@{load}!gg::GgPointShader@{gg::GgPointShader}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgPointShader_a3e25078b5b610d7ffb00661523bf8010} 
+bool gg\+::\+Gg\+Point\+Shader\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{vert}{, }\item[{const std\+::string \&}]{frag}{ = {\ttfamily "{}"{}}, }\item[{const std\+::string \&}]{geom}{ = {\ttfamily "{}"{}}, }\item[{GLint}]{nvarying}{ = {\ttfamily 0}, }\item[{const char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}}]{varyings}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+シェーダのソースファイルを読み込む.
+
+
+\begin{DoxyParams}{引数}
+{\em vert} & バーテックスシェーダのソースファイル名. \\
+\hline
+{\em frag} & フラグメントシェーダのソースファイル名 (空文字列なら不使用). \\
+\hline
+{\em geom} & ジオメトリシェーダのソースファイル名 (空文字列なら不使用). \\
+\hline
+{\em nvarying} & フィードバックする varying 変数の数 (0 なら不使用). \\
+\hline
+{\em varyings} & フィードバックする varying 変数のリスト.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+プログラムオブジェクトが作成できれば true. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07260}{7260}} 行目に定義があります。
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgPointShader_a3e25078b5b610d7ffb00661523bf8010_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgPointShader_a58d95699d054dd86c0a54846c00f691a}\index{gg::GgPointShader@{gg::GgPointShader}!loadMatrix@{loadMatrix}}
+\index{loadMatrix@{loadMatrix}!gg::GgPointShader@{gg::GgPointShader}}
+\doxysubsubsection{\texorpdfstring{loadMatrix()}{loadMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgPointShader_a58d95699d054dd86c0a54846c00f691a} 
+virtual void gg\+::\+Gg\+Point\+Shader\+::load\+Matrix (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \&}]{mp}{, }\item[{const \mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \&}]{mv}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+投影変換行列とモデルビュー変換行列を設定する.
+
+
+\begin{DoxyParams}{引数}
+{\em mp} & \doxylink{classgg_1_1GgMatrix}{Gg\+Matrix} 型の投影変換行列. \\
+\hline
+{\em mv} & \doxylink{classgg_1_1GgMatrix}{Gg\+Matrix} 型のモデルビュー変換行列. \\
+\hline
+\end{DoxyParams}
+
+
+\mbox{\hyperlink{classgg_1_1GgSimpleShader_a9ff06e613dce7235db2ec0c9efe23ba7}{gg\+::\+Gg\+Simple\+Shader}}で再実装されています。
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07360}{7360}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgPointShader_a58d95699d054dd86c0a54846c00f691a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgPointShader_aa852790b42b43a23161fb86d551cb33b}\index{gg::GgPointShader@{gg::GgPointShader}!loadMatrix@{loadMatrix}}
+\index{loadMatrix@{loadMatrix}!gg::GgPointShader@{gg::GgPointShader}}
+\doxysubsubsection{\texorpdfstring{loadMatrix()}{loadMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgPointShader_aa852790b42b43a23161fb86d551cb33b} 
+virtual void gg\+::\+Gg\+Point\+Shader\+::load\+Matrix (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{mp}{, }\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{mv}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+投影変換行列とモデルビュー変換行列を設定する.
+
+
+\begin{DoxyParams}{引数}
+{\em mp} & GLfloat 型の 16 要素の配列変数に格納された投影変換行列. \\
+\hline
+{\em mv} & GLfloat 型の 16 要素の配列変数に格納されたモデルビュー変換行列. \\
+\hline
+\end{DoxyParams}
+
+
+\mbox{\hyperlink{classgg_1_1GgSimpleShader_abc5a17dcbd9815579f08eb21f48d6fe3}{gg\+::\+Gg\+Simple\+Shader}}で再実装されています。
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07348}{7348}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classgg_1_1GgPointShader_aa852790b42b43a23161fb86d551cb33b_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgPointShader_aa852790b42b43a23161fb86d551cb33b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgPointShader_ad3d2435dbea4708f95d26a5f85a3b28b}\index{gg::GgPointShader@{gg::GgPointShader}!loadModelviewMatrix@{loadModelviewMatrix}}
+\index{loadModelviewMatrix@{loadModelviewMatrix}!gg::GgPointShader@{gg::GgPointShader}}
+\doxysubsubsection{\texorpdfstring{loadModelviewMatrix()}{loadModelviewMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgPointShader_ad3d2435dbea4708f95d26a5f85a3b28b} 
+virtual void gg\+::\+Gg\+Point\+Shader\+::load\+Modelview\+Matrix (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \&}]{mv}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+モデルビュー変換行列を設定する.
+
+
+\begin{DoxyParams}{引数}
+{\em mv} & \doxylink{classgg_1_1GgMatrix}{Gg\+Matrix} 型のモデルビュー変換行列. \\
+\hline
+\end{DoxyParams}
+
+
+\mbox{\hyperlink{classgg_1_1GgSimpleShader_a6be6daa9ab0ad591e2257f594cf5ab34}{gg\+::\+Gg\+Simple\+Shader}}で再実装されています。
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07337}{7337}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{classgg_1_1GgPointShader_ad3d2435dbea4708f95d26a5f85a3b28b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgPointShader_ac6e9398fa71096e9866fcd84cb542a91}\index{gg::GgPointShader@{gg::GgPointShader}!loadModelviewMatrix@{loadModelviewMatrix}}
+\index{loadModelviewMatrix@{loadModelviewMatrix}!gg::GgPointShader@{gg::GgPointShader}}
+\doxysubsubsection{\texorpdfstring{loadModelviewMatrix()}{loadModelviewMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgPointShader_ac6e9398fa71096e9866fcd84cb542a91} 
+virtual void gg\+::\+Gg\+Point\+Shader\+::load\+Modelview\+Matrix (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{mv}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+モデルビュー変換行列を設定する.
+
+
+\begin{DoxyParams}{引数}
+{\em mv} & GLfloat 型の 16 要素の配列変数に格納されたモデルビュー変換行列. \\
+\hline
+\end{DoxyParams}
+
+
+\mbox{\hyperlink{classgg_1_1GgSimpleShader_a3745eedb23842a6849b05b6107dca6ba}{gg\+::\+Gg\+Simple\+Shader}}で再実装されています。
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07327}{7327}} 行目に定義があります。
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgPointShader_ac6e9398fa71096e9866fcd84cb542a91_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgPointShader_a634da09936448435b4d9b162d9ec28c1}\index{gg::GgPointShader@{gg::GgPointShader}!loadProjectionMatrix@{loadProjectionMatrix}}
+\index{loadProjectionMatrix@{loadProjectionMatrix}!gg::GgPointShader@{gg::GgPointShader}}
+\doxysubsubsection{\texorpdfstring{loadProjectionMatrix()}{loadProjectionMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgPointShader_a634da09936448435b4d9b162d9ec28c1} 
+virtual void gg\+::\+Gg\+Point\+Shader\+::load\+Projection\+Matrix (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \&}]{mp}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+投影変換行列を設定する.
+
+
+\begin{DoxyParams}{引数}
+{\em mp} & \doxylink{classgg_1_1GgMatrix}{Gg\+Matrix} 型の投影変換行列. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07317}{7317}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{classgg_1_1GgPointShader_a634da09936448435b4d9b162d9ec28c1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgPointShader_a35ef8670f580eb11d40386aa63ac615b}\index{gg::GgPointShader@{gg::GgPointShader}!loadProjectionMatrix@{loadProjectionMatrix}}
+\index{loadProjectionMatrix@{loadProjectionMatrix}!gg::GgPointShader@{gg::GgPointShader}}
+\doxysubsubsection{\texorpdfstring{loadProjectionMatrix()}{loadProjectionMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgPointShader_a35ef8670f580eb11d40386aa63ac615b} 
+virtual void gg\+::\+Gg\+Point\+Shader\+::load\+Projection\+Matrix (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{mp}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+投影変換行列を設定する.
+
+
+\begin{DoxyParams}{引数}
+{\em mp} & GLfloat 型の 16 要素の配列変数に格納された投影変換行列. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07307}{7307}} 行目に定義があります。
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgPointShader_a35ef8670f580eb11d40386aa63ac615b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgPointShader_a72f2255985115d2bd171eaf0b3b6948e}\index{gg::GgPointShader@{gg::GgPointShader}!unuse@{unuse}}
+\index{unuse@{unuse}!gg::GgPointShader@{gg::GgPointShader}}
+\doxysubsubsection{\texorpdfstring{unuse()}{unuse()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgPointShader_a72f2255985115d2bd171eaf0b3b6948e} 
+void gg\+::\+Gg\+Point\+Shader\+::unuse (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+シェーダプログラムの使用を終了する. 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07420}{7420}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgPointShader_a6809087ef5e8a563310c3fc396246e78}\index{gg::GgPointShader@{gg::GgPointShader}!use@{use}}
+\index{use@{use}!gg::GgPointShader@{gg::GgPointShader}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgPointShader_a6809087ef5e8a563310c3fc396246e78} 
+virtual void gg\+::\+Gg\+Point\+Shader\+::use (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+シェーダプログラムの使用を開始する. 
+
+\mbox{\hyperlink{classgg_1_1GgSimpleShader_aaa721d9ae49296194f949d6ba2f927db}{gg\+::\+Gg\+Simple\+Shader}}で再実装されています。
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07368}{7368}} 行目に定義があります。
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgPointShader_a6809087ef5e8a563310c3fc396246e78_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgPointShader_a8d46e3571f4ffdb85368e8b438baa09f}\index{gg::GgPointShader@{gg::GgPointShader}!use@{use}}
+\index{use@{use}!gg::GgPointShader@{gg::GgPointShader}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgPointShader_a8d46e3571f4ffdb85368e8b438baa09f} 
+void gg\+::\+Gg\+Point\+Shader\+::use (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \&}]{mp}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+投影変換行列を設定してシェーダプログラムの使用を開始する.
+
+
+\begin{DoxyParams}{引数}
+{\em mp} & \doxylink{classgg_1_1GgMatrix}{Gg\+Matrix} 型の投影変換行列. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07389}{7389}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgPointShader_a8d46e3571f4ffdb85368e8b438baa09f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgPointShader_a7108b9cd35e312266adfc40af1d658ca}\index{gg::GgPointShader@{gg::GgPointShader}!use@{use}}
+\index{use@{use}!gg::GgPointShader@{gg::GgPointShader}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgPointShader_a7108b9cd35e312266adfc40af1d658ca} 
+void gg\+::\+Gg\+Point\+Shader\+::use (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \&}]{mp}{, }\item[{const \mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \&}]{mv}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+投影変換行列とモデルビューを設定してシェーダプログラムの使用を開始する.
+
+
+\begin{DoxyParams}{引数}
+{\em mp} & \doxylink{classgg_1_1GgMatrix}{Gg\+Matrix} 型の投影変換行列. \\
+\hline
+{\em mv} & \doxylink{classgg_1_1GgMatrix}{Gg\+Matrix} 型のモデルビュー変換行列. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07412}{7412}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgPointShader_a7108b9cd35e312266adfc40af1d658ca_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgPointShader_a2a41d6e019fea4ac9e8633b988f5fa91}\index{gg::GgPointShader@{gg::GgPointShader}!use@{use}}
+\index{use@{use}!gg::GgPointShader@{gg::GgPointShader}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgPointShader_a2a41d6e019fea4ac9e8633b988f5fa91} 
+void gg\+::\+Gg\+Point\+Shader\+::use (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{mp}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+投影変換行列を設定してシェーダプログラムの使用を開始する.
+
+
+\begin{DoxyParams}{引数}
+{\em mp} & GLfloat 型の 16 要素の配列変数に格納された投影変換行列. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07378}{7378}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgPointShader_a2a41d6e019fea4ac9e8633b988f5fa91_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgPointShader_ab6ebf90fca8545b5ea896ee5b19a2722}\index{gg::GgPointShader@{gg::GgPointShader}!use@{use}}
+\index{use@{use}!gg::GgPointShader@{gg::GgPointShader}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgPointShader_ab6ebf90fca8545b5ea896ee5b19a2722} 
+void gg\+::\+Gg\+Point\+Shader\+::use (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{mp}{, }\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{mv}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+投影変換行列とモデルビューを設定してシェーダプログラムの使用を開始する.
+
+
+\begin{DoxyParams}{引数}
+{\em mp} & GLfloat 型の 16 要素の配列変数に格納された投影変換行列. \\
+\hline
+{\em mv} & GLfloat 型の 16 要素の配列変数に格納されたモデルビュー変換行列. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07400}{7400}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgPointShader_ab6ebf90fca8545b5ea896ee5b19a2722_cgraph}
+\end{center}
+\end{figure}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gg_8h}{gg.\+h}}\end{DoxyCompactItemize}

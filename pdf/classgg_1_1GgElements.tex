@@ -1,0 +1,325 @@
+\doxysection{gg\+::Gg\+Elements クラス}
+\hypertarget{classgg_1_1GgElements}{}\label{classgg_1_1GgElements}\index{gg::GgElements@{gg::GgElements}}
+
+
+{\ttfamily \#include $<$gg.\+h$>$}
+
+
+
+gg\+::Gg\+Elements の継承関係図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{classgg_1_1GgElements__inherit__graph}
+\end{center}
+\end{figure}
+
+
+gg\+::Gg\+Elements 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{classgg_1_1GgElements__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgg_1_1GgElements_ab21f6c62f0926344e349a6e465ac8a9a}{Gg\+Elements}} (GLenum mode=GL\+\_\+\+TRIANGLES)
+\item 
+\mbox{\hyperlink{classgg_1_1GgElements_a131237075333f152994f818e8a17c01e}{Gg\+Elements}} (const \mbox{\hyperlink{structgg_1_1GgVertex}{Gg\+Vertex}} \texorpdfstring{$\ast$}{*}vert, GLsizei countv, const GLuint \texorpdfstring{$\ast$}{*}face, GLsizei countf, GLenum mode=GL\+\_\+\+TRIANGLES, GLenum usage=GL\+\_\+\+STATIC\+\_\+\+DRAW)
+\item 
+virtual \mbox{\hyperlink{classgg_1_1GgElements_ab43b5b2169686f788637982be15da46f}{\texorpdfstring{$\sim$}{\string~}\+Gg\+Elements}} ()
+\item 
+const GLsizei \& \mbox{\hyperlink{classgg_1_1GgElements_ac4f4685a39e65aefdeacea83e02ff8f7}{get\+Index\+Count}} () const
+\item 
+const GLuint \& \mbox{\hyperlink{classgg_1_1GgElements_a85f222278214bcb5359666bf765ce1e3}{get\+Index\+Buffer}} () const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgElements_aad52368bf713e03ef748dbeddf469ea3}{send}} (const \mbox{\hyperlink{structgg_1_1GgVertex}{Gg\+Vertex}} \texorpdfstring{$\ast$}{*}vert, GLuint firstv, GLsizei countv, const GLuint \texorpdfstring{$\ast$}{*}face=nullptr, GLuint firstf=0, GLsizei countf=0) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgElements_ac604938bb52d8a29accf636b89479f31}{load}} (const \mbox{\hyperlink{structgg_1_1GgVertex}{Gg\+Vertex}} \texorpdfstring{$\ast$}{*}vert, GLsizei countv, const GLuint \texorpdfstring{$\ast$}{*}face, GLsizei countf, GLenum usage=GL\+\_\+\+STATIC\+\_\+\+DRAW)
+\item 
+virtual void \mbox{\hyperlink{classgg_1_1GgElements_a81e0b1de878227acdea4cb4fd450c6db}{draw}} (GLint first=0, GLsizei count=0) const
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{classgg_1_1GgTriangles}{gg\+::\+Gg\+Triangles}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgg_1_1GgTriangles_a5482f2023b35d5937f7a4b6da3501d44}{Gg\+Triangles}} (GLenum mode=GL\+\_\+\+TRIANGLES)
+\item 
+\mbox{\hyperlink{classgg_1_1GgTriangles_ae7b21f7915cf62a2a6d9089b7d1c5bb7}{Gg\+Triangles}} (const \mbox{\hyperlink{structgg_1_1GgVertex}{Gg\+Vertex}} \texorpdfstring{$\ast$}{*}vert, GLsizei count, GLenum mode=GL\+\_\+\+TRIANGLES, GLenum usage=GL\+\_\+\+STATIC\+\_\+\+DRAW)
+\item 
+virtual \mbox{\hyperlink{classgg_1_1GgTriangles_a43ae036c4906d95a450cda3724cb6062}{\texorpdfstring{$\sim$}{\string~}\+Gg\+Triangles}} ()
+\item 
+const GLsizei \& \mbox{\hyperlink{classgg_1_1GgTriangles_a175a09c25313d9ae85bc4badf91fbfd6}{get\+Count}} () const
+\item 
+const GLuint \& \mbox{\hyperlink{classgg_1_1GgTriangles_ae1d7136c6e49274ce5063ea096d44a6f}{get\+Buffer}} () const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgTriangles_ad692daaef1ab57862918178636375328}{send}} (const \mbox{\hyperlink{structgg_1_1GgVertex}{Gg\+Vertex}} \texorpdfstring{$\ast$}{*}vert, GLint first=0, GLsizei count=0) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgTriangles_a2cfa85c9ee633974e69df68d9ec588f1}{load}} (const \mbox{\hyperlink{structgg_1_1GgVertex}{Gg\+Vertex}} \texorpdfstring{$\ast$}{*}vert, GLsizei count, GLenum usage=GL\+\_\+\+STATIC\+\_\+\+DRAW)
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{classgg_1_1GgShape}{gg\+::\+Gg\+Shape}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgg_1_1GgShape_a7e018d9755385e742455d011f2d9a685}{Gg\+Shape}} (GLenum mode=0)
+\item 
+virtual \mbox{\hyperlink{classgg_1_1GgShape_a9f879032d9c86b0b9e6cf14f76223162}{\texorpdfstring{$\sim$}{\string~}\+Gg\+Shape}} ()
+\item 
+virtual \mbox{\hyperlink{classgg_1_1GgShape_a721bb786cc7ab8873aeffbb33216fe2b}{operator bool}} () const noexcept
+\item 
+virtual bool \mbox{\hyperlink{classgg_1_1GgShape_a9728d042512e5f21d585614dce7db872}{operator!}} () const noexcept
+\item 
+const GLuint \& \mbox{\hyperlink{classgg_1_1GgShape_ab49c0caf80cc1154aaa442704abc561d}{get}} () const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgShape_a4aa6e7ea313bf3ef47b7a6e5b88ed13d}{set\+Mode}} (GLenum mode)
+\item 
+const GLenum \& \mbox{\hyperlink{classgg_1_1GgShape_a860e6671d9d80295599ed2cf9f2449bc}{get\+Mode}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+三角形で表した形状データ (Elements 形式). 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06821}{6821}} 行目に定義があります。
+
+
+
+\label{doc-constructors}
+\Hypertarget{classgg_1_1GgElements_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{classgg_1_1GgElements_ab21f6c62f0926344e349a6e465ac8a9a}\index{gg::GgElements@{gg::GgElements}!GgElements@{GgElements}}
+\index{GgElements@{GgElements}!gg::GgElements@{gg::GgElements}}
+\doxysubsubsection{\texorpdfstring{GgElements()}{GgElements()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgElements_ab21f6c62f0926344e349a6e465ac8a9a} 
+gg\+::\+Gg\+Elements\+::\+Gg\+Elements (\begin{DoxyParamCaption}\item[{GLenum}]{mode}{ = {\ttfamily GL\+\_\+TRIANGLES}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+コンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em mode} & 描画する基本図形の種類. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06834}{6834}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgElements_ab21f6c62f0926344e349a6e465ac8a9a_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgElements_ab21f6c62f0926344e349a6e465ac8a9a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgElements_a131237075333f152994f818e8a17c01e}\index{gg::GgElements@{gg::GgElements}!GgElements@{GgElements}}
+\index{GgElements@{GgElements}!gg::GgElements@{gg::GgElements}}
+\doxysubsubsection{\texorpdfstring{GgElements()}{GgElements()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgElements_a131237075333f152994f818e8a17c01e} 
+gg\+::\+Gg\+Elements\+::\+Gg\+Elements (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structgg_1_1GgVertex}{Gg\+Vertex}} \texorpdfstring{$\ast$}{*}}]{vert}{, }\item[{GLsizei}]{countv}{, }\item[{const GLuint \texorpdfstring{$\ast$}{*}}]{face}{, }\item[{GLsizei}]{countf}{, }\item[{GLenum}]{mode}{ = {\ttfamily GL\+\_\+TRIANGLES}, }\item[{GLenum}]{usage}{ = {\ttfamily GL\+\_\+STATIC\+\_\+DRAW}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+コンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em vert} & この図形の頂点属性の配列 (nullptr ならデータを転送しない). \\
+\hline
+{\em countv} & 頂点数. \\
+\hline
+{\em face} & 三角形の頂点インデックス. \\
+\hline
+{\em countf} & 三角形の頂点数. \\
+\hline
+{\em mode} & 描画する基本図形の種類. \\
+\hline
+{\em usage} & バッファオブジェクトの使い方. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06849}{6849}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgElements_a131237075333f152994f818e8a17c01e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgElements_ab43b5b2169686f788637982be15da46f}\index{gg::GgElements@{gg::GgElements}!````~GgElements@{\texorpdfstring{$\sim$}{\string~}GgElements}}
+\index{````~GgElements@{\texorpdfstring{$\sim$}{\string~}GgElements}!gg::GgElements@{gg::GgElements}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GgElements()}{\string~GgElements()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgElements_ab43b5b2169686f788637982be15da46f} 
+virtual gg\+::\+Gg\+Elements\+::\texorpdfstring{$\sim$}{\string~}\+Gg\+Elements (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+デストラクタ. 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06865}{6865}} 行目に定義があります。
+
+
+
+\label{doc-func-members}
+\Hypertarget{classgg_1_1GgElements_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{classgg_1_1GgElements_a81e0b1de878227acdea4cb4fd450c6db}\index{gg::GgElements@{gg::GgElements}!draw@{draw}}
+\index{draw@{draw}!gg::GgElements@{gg::GgElements}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgElements_a81e0b1de878227acdea4cb4fd450c6db} 
+void gg\+::\+Gg\+Elements\+::draw (\begin{DoxyParamCaption}\item[{GLint}]{first}{ = {\ttfamily 0}, }\item[{GLsizei}]{count}{ = {\ttfamily 0}}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+インデックスを使った三角形の描画.
+
+
+\begin{DoxyParams}{引数}
+{\em first} & 描画を開始する最初の三角形番号. \\
+\hline
+{\em count} & 描画する三角形数, 0 なら全部の三角形を描く. \\
+\hline
+\end{DoxyParams}
+
+
+\mbox{\hyperlink{classgg_1_1GgTriangles_ac6af2cf80311f3429271e7cbde302e02}{gg\+::\+Gg\+Triangles}}を再実装しています。
+
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l05188}{5188}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgElements_a81e0b1de878227acdea4cb4fd450c6db_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgElements_a85f222278214bcb5359666bf765ce1e3}\index{gg::GgElements@{gg::GgElements}!getIndexBuffer@{getIndexBuffer}}
+\index{getIndexBuffer@{getIndexBuffer}!gg::GgElements@{gg::GgElements}}
+\doxysubsubsection{\texorpdfstring{getIndexBuffer()}{getIndexBuffer()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgElements_a85f222278214bcb5359666bf765ce1e3} 
+const GLuint \& gg\+::\+Gg\+Elements\+::get\+Index\+Buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+三角形の頂点インデックスデータを格納した頂点バッファオブジェクト名を取り出す.
+
+\begin{DoxyReturn}{戻り値}
+この図形の三角形の頂点インデックスデータを格納した頂点バッファオブジェクト名. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06883}{6883}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgElements_ac4f4685a39e65aefdeacea83e02ff8f7}\index{gg::GgElements@{gg::GgElements}!getIndexCount@{getIndexCount}}
+\index{getIndexCount@{getIndexCount}!gg::GgElements@{gg::GgElements}}
+\doxysubsubsection{\texorpdfstring{getIndexCount()}{getIndexCount()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgElements_ac4f4685a39e65aefdeacea83e02ff8f7} 
+const GLsizei \& gg\+::\+Gg\+Elements\+::get\+Index\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+データの数を取り出す.
+
+\begin{DoxyReturn}{戻り値}
+この図形の三角形数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06873}{6873}} 行目に定義があります。
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgElements_ac4f4685a39e65aefdeacea83e02ff8f7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgElements_ac604938bb52d8a29accf636b89479f31}\index{gg::GgElements@{gg::GgElements}!load@{load}}
+\index{load@{load}!gg::GgElements@{gg::GgElements}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgElements_ac604938bb52d8a29accf636b89479f31} 
+void gg\+::\+Gg\+Elements\+::load (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structgg_1_1GgVertex}{Gg\+Vertex}} \texorpdfstring{$\ast$}{*}}]{vert}{, }\item[{GLsizei}]{countv}{, }\item[{const GLuint \texorpdfstring{$\ast$}{*}}]{face}{, }\item[{GLsizei}]{countf}{, }\item[{GLenum}]{usage}{ = {\ttfamily GL\+\_\+STATIC\+\_\+DRAW}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+バッファオブジェクトを確保して頂点属性と三角形の頂点インデックスデータを格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em vert} & 頂点属性が格納されている領域の先頭のポインタ. \\
+\hline
+{\em countv} & 頂点のデータの数 (頂点数). \\
+\hline
+{\em face} & 三角形の頂点インデックスデータ. \\
+\hline
+{\em countf} & 三角形の頂点数. \\
+\hline
+{\em usage} & バッファオブジェクトの使い方. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06920}{6920}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classgg_1_1GgElements_ac604938bb52d8a29accf636b89479f31_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgElements_ac604938bb52d8a29accf636b89479f31_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgElements_aad52368bf713e03ef748dbeddf469ea3}\index{gg::GgElements@{gg::GgElements}!send@{send}}
+\index{send@{send}!gg::GgElements@{gg::GgElements}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgElements_aad52368bf713e03ef748dbeddf469ea3} 
+void gg\+::\+Gg\+Elements\+::send (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structgg_1_1GgVertex}{Gg\+Vertex}} \texorpdfstring{$\ast$}{*}}]{vert}{, }\item[{GLuint}]{firstv}{, }\item[{GLsizei}]{countv}{, }\item[{const GLuint \texorpdfstring{$\ast$}{*}}]{face}{ = {\ttfamily nullptr}, }\item[{GLuint}]{firstf}{ = {\ttfamily 0}, }\item[{GLsizei}]{countf}{ = {\ttfamily 0}}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+既存のバッファオブジェクトに頂点属性と三角形の頂点インデックスデータを転送する.
+
+
+\begin{DoxyParams}{引数}
+{\em vert} & 頂点属性が格納されている領域の先頭のポインタ. \\
+\hline
+{\em firstv} & 頂点属性の転送先のバッファオブジェクトの先頭の要素番号. \\
+\hline
+{\em countv} & 頂点のデータの数 (頂点数). \\
+\hline
+{\em face} & 三角形の頂点インデックスデータ. \\
+\hline
+{\em firstf} & インデックスの転送先のバッファオブジェクトの先頭の要素番号. \\
+\hline
+{\em countf} & 三角形の頂点数. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06898}{6898}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classgg_1_1GgElements_aad52368bf713e03ef748dbeddf469ea3_cgraph}
+\end{center}
+\end{figure}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gg_8h}{gg.\+h}}\item 
+\mbox{\hyperlink{gg_8cpp}{gg.\+cpp}}\end{DoxyCompactItemize}

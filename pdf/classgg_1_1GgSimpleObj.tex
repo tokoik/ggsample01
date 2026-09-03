@@ -1,0 +1,157 @@
+\doxysection{gg\+::Gg\+Simple\+Obj クラス}
+\hypertarget{classgg_1_1GgSimpleObj}{}\label{classgg_1_1GgSimpleObj}\index{gg::GgSimpleObj@{gg::GgSimpleObj}}
+
+
+{\ttfamily \#include $<$gg.\+h$>$}
+
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgg_1_1GgSimpleObj_a1c0520c2ec7c7edb38550aae324c0cd6}{Gg\+Simple\+Obj}} (const std\+::string \&name, bool normalize=false)
+\item 
+virtual \mbox{\hyperlink{classgg_1_1GgSimpleObj_a58cf9f0e19d46d92c716bd3db4efbd30}{\texorpdfstring{$\sim$}{\string~}\+Gg\+Simple\+Obj}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgg_1_1GgSimpleObj_ab55e44d075f8958fb77a117ec9c0465d}{operator bool}} () const noexcept
+\item 
+bool \mbox{\hyperlink{classgg_1_1GgSimpleObj_aee8ba368aefded4514ad3adf475c4bd2}{operator!}} () const noexcept
+\item 
+const \mbox{\hyperlink{classgg_1_1GgTriangles}{Gg\+Triangles}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classgg_1_1GgSimpleObj_a3430f6cd39786c49cc3270afaba9a890}{get}} () const
+\item 
+virtual void \mbox{\hyperlink{classgg_1_1GgSimpleObj_a4a23b84f66b77e8ec9a9fdd94b9e4d33}{draw}} (GLint first=0, GLsizei count=0) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+Wavefront OBJ 形式のファイル (Elements 形式). 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l08451}{8451}} 行目に定義があります。
+
+
+
+\label{doc-constructors}
+\Hypertarget{classgg_1_1GgSimpleObj_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{classgg_1_1GgSimpleObj_a1c0520c2ec7c7edb38550aae324c0cd6}\index{gg::GgSimpleObj@{gg::GgSimpleObj}!GgSimpleObj@{GgSimpleObj}}
+\index{GgSimpleObj@{GgSimpleObj}!gg::GgSimpleObj@{gg::GgSimpleObj}}
+\doxysubsubsection{\texorpdfstring{GgSimpleObj()}{GgSimpleObj()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleObj_a1c0520c2ec7c7edb38550aae324c0cd6} 
+gg\+::\+Gg\+Simple\+Obj\+::\+Gg\+Simple\+Obj (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{bool}]{normalize}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+コンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em name} & 三角形分割された Alias OBJ 形式のファイルのファイル名. \\
+\hline
+{\em normalize} & true なら図形のサイズを \mbox{[}-\/1, 1\mbox{]} に正規化する. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l06011}{6011}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgSimpleObj_a1c0520c2ec7c7edb38550aae324c0cd6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgSimpleObj_a58cf9f0e19d46d92c716bd3db4efbd30}\index{gg::GgSimpleObj@{gg::GgSimpleObj}!````~GgSimpleObj@{\texorpdfstring{$\sim$}{\string~}GgSimpleObj}}
+\index{````~GgSimpleObj@{\texorpdfstring{$\sim$}{\string~}GgSimpleObj}!gg::GgSimpleObj@{gg::GgSimpleObj}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GgSimpleObj()}{\string~GgSimpleObj()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleObj_a58cf9f0e19d46d92c716bd3db4efbd30} 
+virtual gg\+::\+Gg\+Simple\+Obj\+::\texorpdfstring{$\sim$}{\string~}\+Gg\+Simple\+Obj (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+デストラクタ. 
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l08474}{8474}} 行目に定義があります。
+
+
+
+\label{doc-func-members}
+\Hypertarget{classgg_1_1GgSimpleObj_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{classgg_1_1GgSimpleObj_a4a23b84f66b77e8ec9a9fdd94b9e4d33}\index{gg::GgSimpleObj@{gg::GgSimpleObj}!draw@{draw}}
+\index{draw@{draw}!gg::GgSimpleObj@{gg::GgSimpleObj}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleObj_a4a23b84f66b77e8ec9a9fdd94b9e4d33} 
+void gg\+::\+Gg\+Simple\+Obj\+::draw (\begin{DoxyParamCaption}\item[{GLint}]{first}{ = {\ttfamily 0}, }\item[{GLsizei}]{count}{ = {\ttfamily 0}}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Wavefront OBJ 形式のデータを描画する手続き.
+
+
+\begin{DoxyParams}{引数}
+{\em first} & 描画する最初のパーツ番号. \\
+\hline
+{\em count} & 描画するパーツの数, 0 なら全部のパーツを描く. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l06039}{6039}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgSimpleObj_a3430f6cd39786c49cc3270afaba9a890}\index{gg::GgSimpleObj@{gg::GgSimpleObj}!get@{get}}
+\index{get@{get}!gg::GgSimpleObj@{gg::GgSimpleObj}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleObj_a3430f6cd39786c49cc3270afaba9a890} 
+const \mbox{\hyperlink{classgg_1_1GgTriangles}{Gg\+Triangles}} \texorpdfstring{$\ast$}{*} gg\+::\+Gg\+Simple\+Obj\+::get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+形状データの取り出し.
+
+\begin{DoxyReturn}{戻り値}
+\doxylink{classgg_1_1GgTriangles}{Gg\+Triangles} 型の形状データのポインタ. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l08503}{8503}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classgg_1_1GgSimpleObj_a3430f6cd39786c49cc3270afaba9a890_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgSimpleObj_ab55e44d075f8958fb77a117ec9c0465d}\index{gg::GgSimpleObj@{gg::GgSimpleObj}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!gg::GgSimpleObj@{gg::GgSimpleObj}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleObj_ab55e44d075f8958fb77a117ec9c0465d} 
+gg\+::\+Gg\+Simple\+Obj\+::operator bool (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+オブジェクトが有効かどうか調べる.
+
+\begin{DoxyReturn}{戻り値}
+オブジェクトが有効なら true 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l08483}{8483}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgSimpleObj_aee8ba368aefded4514ad3adf475c4bd2}\index{gg::GgSimpleObj@{gg::GgSimpleObj}!operator"!@{operator"!}}
+\index{operator"!@{operator"!}!gg::GgSimpleObj@{gg::GgSimpleObj}}
+\doxysubsubsection{\texorpdfstring{operator"!()}{operator!()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleObj_aee8ba368aefded4514ad3adf475c4bd2} 
+bool gg\+::\+Gg\+Simple\+Obj\+::operator! (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+オブジェクトが有効かどうかの結果を反転する.
+
+\begin{DoxyReturn}{戻り値}
+オブジェクトが有効なら false, 無効なら true. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l08493}{8493}} 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gg_8h}{gg.\+h}}\item 
+\mbox{\hyperlink{gg_8cpp}{gg.\+cpp}}\end{DoxyCompactItemize}

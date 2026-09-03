@@ -1,0 +1,245 @@
+\doxysection{Gg\+App クラス}
+\hypertarget{classGgApp}{}\label{classGgApp}\index{GgApp@{GgApp}}
+
+
+{\ttfamily \#include $<$Gg\+App.\+h$>$}
+
+\doxysubsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classGgApp_1_1Window}{Window}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGgApp_a612eb78a646538d6441a25cfcd6d88d8}{Gg\+App}} (int major=0, int minor=1)
+\item 
+\mbox{\hyperlink{classGgApp_af905bd13f79aa30dd7f0a55ce9b67526}{Gg\+App}} (const \mbox{\hyperlink{classGgApp}{Gg\+App}} \&w)=delete
+\item 
+\mbox{\hyperlink{classGgApp_a3dcd6fed8efd0db4dd882ab59d3d5a30}{Gg\+App}} (\mbox{\hyperlink{classGgApp}{Gg\+App}} \&\&w)=default
+\item 
+virtual \mbox{\hyperlink{classGgApp_a9468936a1ff450fa3e0d75ef88d55c5c}{\texorpdfstring{$\sim$}{\string~}\+Gg\+App}} ()
+\item 
+\mbox{\hyperlink{classGgApp}{Gg\+App}} \& \mbox{\hyperlink{classGgApp_a29bae97040d59fbf2a046c4e47e99de2}{operator=}} (const \mbox{\hyperlink{classGgApp}{Gg\+App}} \&w)=delete
+\item 
+\mbox{\hyperlink{classGgApp}{Gg\+App}} \& \mbox{\hyperlink{classGgApp_a8772cedbd09638d96a55e434e8bd1430}{operator=}} (\mbox{\hyperlink{classGgApp}{Gg\+App}} \&\&w)=default
+\item 
+int \mbox{\hyperlink{classGgApp_ad2e50a5e84d4fd6162e03039ac00c7ae}{main}} (int argc, const char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}argv)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classGgApp_ad1955da79da506e73e4dabb2673e2363}{get\+Username}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+ゲームグラフィックス特論宿題アプリケーションクラス. 
+
+ \mbox{\hyperlink{GgApp_8h_source}{Gg\+App.\+h}} の \mbox{\hyperlink{GgApp_8h_source_l00093}{93}} 行目に定義があります。
+
+
+
+\label{doc-constructors}
+\Hypertarget{classGgApp_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{classGgApp_a612eb78a646538d6441a25cfcd6d88d8}\index{GgApp@{GgApp}!GgApp@{GgApp}}
+\index{GgApp@{GgApp}!GgApp@{GgApp}}
+\doxysubsubsection{\texorpdfstring{GgApp()}{GgApp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classGgApp_a612eb78a646538d6441a25cfcd6d88d8} 
+Gg\+App\+::\+Gg\+App (\begin{DoxyParamCaption}\item[{int}]{major}{ = {\ttfamily 0}, }\item[{int}]{minor}{ = {\ttfamily 1}}\end{DoxyParamCaption})}
+
+コンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em major} & 使用する Open\+GL の major 番号, 0 なら無指定. \\
+\hline
+{\em minor} & 使用する Open\+GL の minor 番号, major 番号が 0 なら無視. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{GgApp_8cpp_source}{Gg\+App.\+cpp}} の \mbox{\hyperlink{GgApp_8cpp_source_l00049}{49}} 行目に定義があります。
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{classGgApp_a612eb78a646538d6441a25cfcd6d88d8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGgApp_af905bd13f79aa30dd7f0a55ce9b67526}\index{GgApp@{GgApp}!GgApp@{GgApp}}
+\index{GgApp@{GgApp}!GgApp@{GgApp}}
+\doxysubsubsection{\texorpdfstring{GgApp()}{GgApp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classGgApp_af905bd13f79aa30dd7f0a55ce9b67526} 
+Gg\+App\+::\+Gg\+App (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGgApp}{Gg\+App}} \&}]{w}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+コピーコンストラクタは使用しない.
+
+
+\begin{DoxyParams}{引数}
+{\em w} & コピー元のオブジェクト. \\
+\hline
+\end{DoxyParams}
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{classGgApp_af905bd13f79aa30dd7f0a55ce9b67526_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGgApp_a3dcd6fed8efd0db4dd882ab59d3d5a30}\index{GgApp@{GgApp}!GgApp@{GgApp}}
+\index{GgApp@{GgApp}!GgApp@{GgApp}}
+\doxysubsubsection{\texorpdfstring{GgApp()}{GgApp()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classGgApp_a3dcd6fed8efd0db4dd882ab59d3d5a30} 
+Gg\+App\+::\+Gg\+App (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGgApp}{Gg\+App}} \&\&}]{w}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+ムーブコンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em w} & ムーブ元のオブジェクト. \\
+\hline
+\end{DoxyParams}
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{classGgApp_a3dcd6fed8efd0db4dd882ab59d3d5a30_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGgApp_a9468936a1ff450fa3e0d75ef88d55c5c}\index{GgApp@{GgApp}!````~GgApp@{\texorpdfstring{$\sim$}{\string~}GgApp}}
+\index{````~GgApp@{\texorpdfstring{$\sim$}{\string~}GgApp}!GgApp@{GgApp}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GgApp()}{\string~GgApp()}}
+{\footnotesize\ttfamily \label{classGgApp_a9468936a1ff450fa3e0d75ef88d55c5c} 
+Gg\+App\+::\texorpdfstring{$\sim$}{\string~}\+Gg\+App (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+デストラクタ. 
+
+ \mbox{\hyperlink{GgApp_8cpp_source}{Gg\+App.\+cpp}} の \mbox{\hyperlink{GgApp_8cpp_source_l00091}{91}} 行目に定義があります。
+
+
+
+\label{doc-func-members}
+\Hypertarget{classGgApp_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{classGgApp_ad1955da79da506e73e4dabb2673e2363}\index{GgApp@{GgApp}!getUsername@{getUsername}}
+\index{getUsername@{getUsername}!GgApp@{GgApp}}
+\doxysubsubsection{\texorpdfstring{getUsername()}{getUsername()}}
+{\footnotesize\ttfamily \label{classGgApp_ad1955da79da506e73e4dabb2673e2363} 
+std\+::string Gg\+App\+::get\+Username (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+ユーザ名を得る.
+
+\begin{DoxyReturn}{戻り値}
+ユーザ名の文字列. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{GgApp_8cpp_source}{Gg\+App.\+cpp}} の \mbox{\hyperlink{GgApp_8cpp_source_l01515}{1515}} 行目に定義があります。
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGgApp_ad1955da79da506e73e4dabb2673e2363_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGgApp_ad2e50a5e84d4fd6162e03039ac00c7ae}\index{GgApp@{GgApp}!main@{main}}
+\index{main@{main}!GgApp@{GgApp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{classGgApp_ad2e50a5e84d4fd6162e03039ac00c7ae} 
+int Gg\+App\+::main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{const char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}}]{argv}{}\end{DoxyParamCaption})}
+
+アプリケーション本体.
+
+
+\begin{DoxyParams}{引数}
+{\em argc} & コマンドライン引数の数. \\
+\hline
+{\em argv} & コマンドライン引数の配列. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+アプリケーションの終了ステータス. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{ggsample01_8cpp_source}{ggsample01.\+cpp}} の \mbox{\hyperlink{ggsample01_8cpp_source_l00030}{30}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGgApp_ad2e50a5e84d4fd6162e03039ac00c7ae_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classGgApp_ad2e50a5e84d4fd6162e03039ac00c7ae_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGgApp_a29bae97040d59fbf2a046c4e47e99de2}\index{GgApp@{GgApp}!operator=@{operator=}}
+\index{operator=@{operator=}!GgApp@{GgApp}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classGgApp_a29bae97040d59fbf2a046c4e47e99de2} 
+\mbox{\hyperlink{classGgApp}{Gg\+App}} \& Gg\+App\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGgApp}{Gg\+App}} \&}]{w}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+代入演算子は使用しない.
+
+
+\begin{DoxyParams}{引数}
+{\em w} & 代入元のオブジェクト. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+代入後のこのオブジェクトの参照. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{classGgApp_a29bae97040d59fbf2a046c4e47e99de2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGgApp_a8772cedbd09638d96a55e434e8bd1430}\index{GgApp@{GgApp}!operator=@{operator=}}
+\index{operator=@{operator=}!GgApp@{GgApp}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classGgApp_a8772cedbd09638d96a55e434e8bd1430} 
+\mbox{\hyperlink{classGgApp}{Gg\+App}} \& Gg\+App\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGgApp}{Gg\+App}} \&\&}]{w}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+ムーブ代入演算子.
+
+
+\begin{DoxyParams}{引数}
+{\em w} & ムーブ代入元のオブジェクト. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+ムーブ代入後のこのオブジェクトの参照. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{classGgApp_a8772cedbd09638d96a55e434e8bd1430_cgraph}
+\end{center}
+\end{figure}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{GgApp_8h}{Gg\+App.\+h}}\item 
+\mbox{\hyperlink{GgApp_8cpp}{Gg\+App.\+cpp}}\item 
+\mbox{\hyperlink{ggsample01_8cpp}{ggsample01.\+cpp}}\end{DoxyCompactItemize}

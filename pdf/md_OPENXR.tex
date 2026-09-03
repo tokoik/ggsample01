@@ -1,0 +1,471 @@
+\chapter{Open\+XR ラッパー ({\ttfamily Gg\+App\+::\+Open\+XR}) マニュアル＆使用方法解説 }
+\hypertarget{md_OPENXR}{}\label{md_OPENXR}\index{OpenXR ラッパー ($<$tt$>$GgApp::OpenXR$<$/tt$>$) マニュアル＆使用方法解説@{OpenXR ラッパー ($<$tt$>$GgApp::OpenXR$<$/tt$>$) マニュアル＆使用方法解説}}
+\label{md_OPENXR_autotoc_md0}%
+\Hypertarget{md_OPENXR_autotoc_md0}%
+
+
+本書は、ゲームグラフィックス特論用補助プログラム ({\ttfamily \doxylink{classGgApp}{Gg\+App}}) に組み込まれた {\bfseries{Open\+XR ラッパークラス ({\ttfamily Gg\+App\+::\+Open\+XR})}} の仕様、\+API リファレンス、および実践的な使用方法についての解説ドキュメントです。
+
+\DoxyHorRuler{0}
+\hypertarget{md_OPENXR_autotoc_md2}{}\doxysection{\texorpdfstring{目次}{目次}}\label{md_OPENXR_autotoc_md2}
+
+\begin{DoxyEnumerate}
+\item 概要と特徴
+\item クイックスタート（最小の VR プログラム）
+\item API リファレンス
+\begin{DoxyItemize}
+\item 初期化と終了処理
+\item フレーム描画ループ
+\item カメラ・投影変換・視点情報
+\item コントローラートラッキング・姿勢
+\item コントローラーボタン・スティック入力・振動
+\item 参照空間（空間座標系）
+\end{DoxyItemize}
+\item 実践チュートリアル＆使用例
+\begin{DoxyItemize}
+\item 4.1 基本的なステレオレンダリング
+\item 4.2 コントローラーの姿勢取得とモデル描画
+\item 4.3 スティック入力による移動とトリガー入力
+\item 4.4 床面基準 (STAGE) と着席基準 (LOCAL) の切り替え
+\item 4.5 PC ウィンドウへのミラー表示
+\end{DoxyItemize}
+\item 旧 Oculus SDK (Lib\+OVR) ラッパーからの移行ガイド
+\item 動作環境とセットアップ
+\end{DoxyEnumerate}
+
+\DoxyHorRuler{0}
+\hypertarget{md_OPENXR_autotoc_md4}{}\doxysection{\texorpdfstring{1. 概要と特徴}{1. 概要と特徴}}\label{md_OPENXR_autotoc_md4}
+{\ttfamily Gg\+App\+::\+Open\+XR} は、業界標準の XR 規格である {\bfseries{\href{https://www.khronos.org/openxr/}{\texttt{Open\+XR}}}} を用いて、\+Open\+GL による VR アプリケーションを極めてシンプルかつ直感的に開発できるように設計された C++ ラッパークラスです。\hypertarget{md_OPENXR_autotoc_md5}{}\doxysubsection{\texorpdfstring{主な特徴}{主な特徴}}\label{md_OPENXR_autotoc_md5}
+
+\begin{DoxyItemize}
+\item {\bfseries{{\ttfamily \doxylink{gg_8h}{gg.\+h}} 数学ライブラリとのシームレスな統合}}\+:
+\begin{DoxyItemize}
+\item {\ttfamily get\+Projection\+Matrix(eye, z\+Near, z\+Far)} を呼ぶだけで、\+HMD 特有の非対称視野角（\+Off-\/\+Center Frustum）に対応した正確な透視投影変換行列 ({\ttfamily Gg\+Matrix}) を直接取得できます。
+\item {\ttfamily get\+View\+Matrix(eye)} により、\+HMD の頭部トラッキング姿勢からワールド座標系に対するビュー変換行列 ({\ttfamily Gg\+Matrix}) を 1 行で取得できます。
+\end{DoxyItemize}
+\item {\bfseries{標準化されたコントローラー（入力・トラッキング）の統合サポート}}\+:
+\begin{DoxyItemize}
+\item Meta Quest Touch、\+HTC Vive、\+Valve Index、\+Windows Mixed Reality などの主要な VR コントローラーを標準でサポート。
+\item 手のグリップ姿勢 ({\ttfamily get\+Grip\+Matrix})、エイム（ポインティング）姿勢 ({\ttfamily get\+Aim\+Matrix})、各種ボタン（\+Trigger, Grip, Thumbstick, Primary/\+Secondary, Menu）やハプティクス振動を即座に利用可能。
+\end{DoxyItemize}
+\item {\bfseries{シンプルなフレームライフサイクル}}\+:
+\begin{DoxyItemize}
+\item {\ttfamily begin()} -\/\texorpdfstring{$>$}{>} {\ttfamily select(eye)} -\/\texorpdfstring{$>$}{>} {\ttfamily commit(eye)} -\/\texorpdfstring{$>$}{>} {\ttfamily submit(mirror)} の分かりやすいループ構成。\+FBO バインド、スワップチェーン管理、ビューポート設定、s\+RGB カラースペース処理を内部で自動処理。
+\end{DoxyItemize}
+\item {\bfseries{柔軟な空間座標系}}\+:
+\begin{DoxyItemize}
+\item ルームスケール・床面基準の {\ttfamily XR\+\_\+\+REFERENCE\+\_\+\+SPACE\+\_\+\+TYPE\+\_\+\+STAGE} と、着席・頭部原点基準の {\ttfamily XR\+\_\+\+REFERENCE\+\_\+\+SPACE\+\_\+\+TYPE\+\_\+\+LOCAL} に両対応。
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md_OPENXR_autotoc_md7}{}\doxysection{\texorpdfstring{2. クイックスタート（最小の VR プログラム）}{2. クイックスタート（最小の VR プログラム）}}\label{md_OPENXR_autotoc_md7}
+Open\+XR を有効にするには、{\ttfamily \#include "{}\doxylink{GgApp_8h}{Gg\+App.\+h}"{}} の前に {\ttfamily \#define GG\+\_\+\+USE\+\_\+\+OPENXR} を定義します。
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ GG\_USE\_OPENXR}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{GgApp_8h}{GgApp.h}}"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classGgApp_ad2e50a5e84d4fd6162e03039ac00c7ae}{GgApp::main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \textcolor{keyword}{const}*\ argv)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ ミラー表示用のウィンドウを作成}}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{classGgApp_1_1Window}{Window}}\ window(\textcolor{stringliteral}{"{}OpenXR\ Sample"{}},\ 1280,\ 720);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ OpenXR\ を初期化}}
+\DoxyCodeLine{\ \ \textcolor{keyword}{auto}\&\ openxr\ =\ OpenXR::initialize(window);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ 物体の回転・配置行列}}
+\DoxyCodeLine{\ \ \textcolor{keyword}{const}\ GgMatrix\ modelMatrix\ =\ \mbox{\hyperlink{namespacegg_a1c44cf87582b032f9eeac980ed17f73b}{ggTranslate}}(0.0f,\ 1.2f,\ -\/2.0f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ ウィンドウが開いている間ループ}}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{while}\ (window)}
+\DoxyCodeLine{\ \ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ OpenXR\ のフレーム開始}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (openxr.begin())}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{comment}{//\ 左右の目を順にレンダリング\ (通常\ 2\ 回)}}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ eye\ =\ 0;\ eye\ <\ openxr.getViewCount();\ ++eye)}
+\DoxyCodeLine{\ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ 描画対象の目を指定\ (FBO\ のバインドとビューポート設定が自動で行われる)}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ openxr.select(eye);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ バッファの消去}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ glClear(GL\_COLOR\_BUFFER\_BIT\ |\ GL\_DEPTH\_BUFFER\_BIT);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ 投影変換行列とビュー変換行列を直接取得}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ GgMatrix\ mp\ =\ openxr.getProjectionMatrix(eye,\ 0.1f,\ 100.0f);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ GgMatrix\ mv\ =\ openxr.getViewMatrix(eye);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ ここでシェーダに\ mp,\ mv\ *\ modelMatrix\ を渡してオブジェクトを描画}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ 描画の完了\ (スワップチェーンイメージの解放)}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ openxr.commit(eye);}
+\DoxyCodeLine{\ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{comment}{//\ HMD\ へフレームを転送し、ウィンドウへミラー表示}}
+\DoxyCodeLine{\ \ \ \ \ \ openxr.submit(\textcolor{keyword}{true});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ 終了処理}}
+\DoxyCodeLine{\ \ openxr.terminate();}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_OPENXR_autotoc_md9}{}\doxysection{\texorpdfstring{3. API リファレンス}{3. API リファレンス}}\label{md_OPENXR_autotoc_md9}
+クラス定義\+: {\ttfamily Gg\+App\+::\+Open\+XR}（シングルトン）\hypertarget{md_OPENXR_autotoc_md10}{}\doxysubsection{\texorpdfstring{型定義・定数}{型定義・定数}}\label{md_OPENXR_autotoc_md10}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{enum}\ Hand}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ Left\ \ =\ 0,\ \ \textcolor{comment}{//\ 左手}}
+\DoxyCodeLine{\ \ Right\ =\ 1,\ \ \textcolor{comment}{//\ 右手}}
+\DoxyCodeLine{\ \ Count\ =\ 2\ \ \ \textcolor{comment}{//\ 手の総数}}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_OPENXR_autotoc_md12}{}\doxysubsection{\texorpdfstring{初期化と終了処理}{初期化と終了処理}}\label{md_OPENXR_autotoc_md12}
+\hypertarget{md_OPENXR_autotoc_md13}{}\doxysubsubsection{\texorpdfstring{{\ttfamily static Open\+XR\& initialize(const Window\& window, Xr\+Reference\+Space\+Type space\+Type = XR\+\_\+\+REFERENCE\+\_\+\+SPACE\+\_\+\+TYPE\+\_\+\+STAGE)}}{{\ttfamily static Open\+XR\& initialize(const Window\& window, Xr\+Reference\+Space\+Type space\+Type = XR\+\_\+\+REFERENCE\+\_\+\+SPACE\+\_\+\+TYPE\+\_\+\+STAGE)}}}\label{md_OPENXR_autotoc_md13}
+Open\+XR インスタンス、システム、\+Open\+GL バインディング、セッション、参照空間、スワップチェーン、アクションセットを初期化します。
+\begin{DoxyItemize}
+\item {\bfseries{引数}}\+:
+\begin{DoxyItemize}
+\item {\ttfamily window}\+: ミラー表示を行う {\ttfamily \doxylink{classGgApp_1_1Window}{Gg\+App\+::\+Window}} オブジェクト。
+\item {\ttfamily space\+Type}\+: 参照空間タイプ（{\ttfamily XR\+\_\+\+REFERENCE\+\_\+\+SPACE\+\_\+\+TYPE\+\_\+\+STAGE}\+: 床面基準、{\ttfamily XR\+\_\+\+REFERENCE\+\_\+\+SPACE\+\_\+\+TYPE\+\_\+\+LOCAL}\+: 頭部基準）。\+STAGE がサポートされない環境では自動的に LOCAL にフォールバックします。
+\end{DoxyItemize}
+\item {\bfseries{戻り値}}\+: 初期化された {\ttfamily Open\+XR} クラスの静的参照。
+\end{DoxyItemize}\hypertarget{md_OPENXR_autotoc_md14}{}\doxysubsubsection{\texorpdfstring{{\ttfamily void terminate()}}{{\ttfamily void terminate()}}}\label{md_OPENXR_autotoc_md14}
+作成したすべての Open\+XR リソース（セッション、スワップチェーン、スペース、アクション、\+FBO、デプステクスチャ）を安全に破棄します。
+
+\DoxyHorRuler{0}
+\hypertarget{md_OPENXR_autotoc_md16}{}\doxysubsection{\texorpdfstring{フレーム描画ループ}{フレーム描画ループ}}\label{md_OPENXR_autotoc_md16}
+\hypertarget{md_OPENXR_autotoc_md17}{}\doxysubsubsection{\texorpdfstring{{\ttfamily bool begin()}}{{\ttfamily bool begin()}}}\label{md_OPENXR_autotoc_md17}
+Open\+XR イベントをポーリングし、セッション状態の遷移、フレーム同期（{\ttfamily xr\+Wait\+Frame} / {\ttfamily xr\+Begin\+Frame}）、視点位置・コントローラー入力状態の同期（{\ttfamily xr\+Locate\+Views} / {\ttfamily poll\+Actions}）を行います。
+\begin{DoxyItemize}
+\item {\bfseries{戻り値}}\+: レンダリングを実行すべきフレームであれば {\ttfamily true}、描画が不要（またはセッション非アクティブ）であれば {\ttfamily false}。
+\end{DoxyItemize}\hypertarget{md_OPENXR_autotoc_md18}{}\doxysubsubsection{\texorpdfstring{{\ttfamily void select(int eye)}}{{\ttfamily void select(int eye)}}}\label{md_OPENXR_autotoc_md18}
+指定した目（{\ttfamily 0}\+: 左目、{\ttfamily 1}\+: 右目）のレンダリング用 FBO にスワップチェーンイメージとデプステクスチャをアタッチ・バインドし、ビューポート（{\ttfamily gl\+Viewport}）を推奨解像度に自動設定します。
+\begin{DoxyItemize}
+\item {\bfseries{引数}}\+:
+\begin{DoxyItemize}
+\item {\ttfamily eye}\+: 表示する目のインデックス ({\ttfamily 0} または {\ttfamily 1})。
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_OPENXR_autotoc_md19}{}\doxysubsubsection{\texorpdfstring{{\ttfamily void select(int eye, GLfloat\texorpdfstring{$\ast$}{*} screen, GLfloat\texorpdfstring{$\ast$}{*} position, GLfloat\texorpdfstring{$\ast$}{*} orientation)}}{{\ttfamily void select(int eye, GLfloat\texorpdfstring{$\ast$}{*} screen, GLfloat\texorpdfstring{$\ast$}{*} position, GLfloat\texorpdfstring{$\ast$}{*} orientation)}}}\label{md_OPENXR_autotoc_md19}
+旧 Lib\+OVR 仕様からの移行用オーバーロードです。\+FBO バインドに加えて、視野のタンジェント境界値、視点位置、回転四元数を生配列に代入します。\hypertarget{md_OPENXR_autotoc_md20}{}\doxysubsubsection{\texorpdfstring{{\ttfamily void commit(int eye)}}{{\ttfamily void commit(int eye)}}}\label{md_OPENXR_autotoc_md20}
+レンダリング完了後、\+FBO バインドを解除し、現在のスワップチェーンイメージを Open\+XR ランタイムへ解放（\+Release）します。
+\begin{DoxyItemize}
+\item {\bfseries{引数}}\+:
+\begin{DoxyItemize}
+\item {\ttfamily eye}\+: 完了した目のインデックス ({\ttfamily 0} または {\ttfamily 1})。
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_OPENXR_autotoc_md21}{}\doxysubsubsection{\texorpdfstring{{\ttfamily bool submit(bool mirror = true)}}{{\ttfamily bool submit(bool mirror = true)}}}\label{md_OPENXR_autotoc_md21}
+左右両眼のレンダリング結果を合成レイヤー（{\ttfamily Xr\+Composition\+Layer\+Projection}）として Open\+XR ランタイムへ転送（{\ttfamily xr\+End\+Frame}）します。
+\begin{DoxyItemize}
+\item {\bfseries{引数}}\+:
+\begin{DoxyItemize}
+\item {\ttfamily mirror}\+: {\ttfamily true} の場合、\+PC のウィンドウ（{\ttfamily \doxylink{classGgApp_1_1Window}{Gg\+App\+::\+Window}}）へ左目画像を {\ttfamily gl\+Blit\+Framebuffer} でミラー転送します。
+\end{DoxyItemize}
+\item {\bfseries{戻り値}}\+: 成功時に {\ttfamily true}。
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md_OPENXR_autotoc_md23}{}\doxysubsection{\texorpdfstring{カメラ・投影変換・視点情報}{カメラ・投影変換・視点情報}}\label{md_OPENXR_autotoc_md23}
+\hypertarget{md_OPENXR_autotoc_md24}{}\doxysubsubsection{\texorpdfstring{{\ttfamily Gg\+Matrix get\+Projection\+Matrix(int eye, GLfloat z\+Near = 0.\+1f, GLfloat z\+Far = 100.\+0f) const}}{{\ttfamily Gg\+Matrix get\+Projection\+Matrix(int eye, GLfloat z\+Near = 0.\+1f, GLfloat z\+Far = 100.\+0f) const}}}\label{md_OPENXR_autotoc_md24}
+指定した目の視野角情報（{\ttfamily Xr\+Fovf}）から、オフセンター視錐台に対応した透視投影変換行列を生成して返します。
+\begin{DoxyItemize}
+\item {\bfseries{引数}}\+:
+\begin{DoxyItemize}
+\item {\ttfamily eye}\+: 目のインデックス ({\ttfamily 0}\+: 左目, {\ttfamily 1}\+: 右目)。
+\item {\ttfamily z\+Near}\+: 前方面の位置（メートル、デフォルト {\ttfamily 0.\+1f}）。
+\item {\ttfamily z\+Far}\+: 後方面の位置（メートル、デフォルト {\ttfamily 100.\+0f}）。
+\end{DoxyItemize}
+\item {\bfseries{戻り値}}\+: {\ttfamily Gg\+Matrix} 型の透視投影変換行列。
+\end{DoxyItemize}\hypertarget{md_OPENXR_autotoc_md25}{}\doxysubsubsection{\texorpdfstring{{\ttfamily Gg\+Matrix get\+View\+Matrix(int eye) const}}{{\ttfamily Gg\+Matrix get\+View\+Matrix(int eye) const}}}\label{md_OPENXR_autotoc_md25}
+トラッキングされた視点位置と頭部回転から、ワールド座標系から視点（カメラ）座標系への変換を行うビュー変換行列を計算して返します。
+\begin{DoxyItemize}
+\item {\bfseries{計算式}}\+: \$V = R\texorpdfstring{$^\wedge$}{\string^}\textbackslash{}top \textbackslash{}cdot T(-\/p) = \textbackslash{}text\{conjugate\}(q) \textbackslash{}cdot \textbackslash{}text\{translate\}(-\/p)\$
+\item {\bfseries{戻り値}}\+: {\ttfamily Gg\+Matrix} 型のビュー変換行列。
+\end{DoxyItemize}\hypertarget{md_OPENXR_autotoc_md26}{}\doxysubsubsection{\texorpdfstring{{\ttfamily Gg\+Matrix get\+Pose\+Matrix(int eye) const}}{{\ttfamily Gg\+Matrix get\+Pose\+Matrix(int eye) const}}}\label{md_OPENXR_autotoc_md26}
+ワールド座標系における各眼のローカル座標系変換行列（カメラのモデル変換行列 / 位置と向き）を返します。
+\begin{DoxyItemize}
+\item {\bfseries{計算式}}\+: \$M = T(p) \textbackslash{}cdot R(q)\$
+\item {\bfseries{戻り値}}\+: {\ttfamily Gg\+Matrix} 型の姿勢行列。
+\end{DoxyItemize}\hypertarget{md_OPENXR_autotoc_md27}{}\doxysubsubsection{\texorpdfstring{{\ttfamily Gg\+Vector get\+Position(int eye) const}}{{\ttfamily Gg\+Vector get\+Position(int eye) const}}}\label{md_OPENXR_autotoc_md27}
+指定した目の視点位置 \$(x, y, z, 1.\+0)\$ を {\ttfamily Gg\+Vector} で返します。\hypertarget{md_OPENXR_autotoc_md28}{}\doxysubsubsection{\texorpdfstring{{\ttfamily Gg\+Quaternion get\+Orientation(int eye) const}}{{\ttfamily Gg\+Quaternion get\+Orientation(int eye) const}}}\label{md_OPENXR_autotoc_md28}
+指定した目の回転四元数 \$(x, y, z, w)\$ を {\ttfamily Gg\+Quaternion} で返します。\hypertarget{md_OPENXR_autotoc_md29}{}\doxysubsubsection{\texorpdfstring{{\ttfamily const Xr\+Fovf\& get\+Fov(int eye) const}}{{\ttfamily const Xr\+Fovf\& get\+Fov(int eye) const}}}\label{md_OPENXR_autotoc_md29}
+指定した目の Open\+XR 視野角構造体（{\ttfamily angle\+Left}, {\ttfamily angle\+Right}, {\ttfamily angle\+Up}, {\ttfamily angle\+Down} \mbox{[}ラジアン\mbox{]}）の参照を返します。\hypertarget{md_OPENXR_autotoc_md30}{}\doxysubsubsection{\texorpdfstring{{\ttfamily const Xr\+Posef\& get\+Pose(int eye) const}}{{\ttfamily const Xr\+Posef\& get\+Pose(int eye) const}}}\label{md_OPENXR_autotoc_md30}
+指定した目の Open\+XR 姿勢構造体（{\ttfamily position}, {\ttfamily orientation}）の参照を返します。\hypertarget{md_OPENXR_autotoc_md31}{}\doxysubsubsection{\texorpdfstring{{\ttfamily GLsizei get\+Width(int eye = 0) const} / {\ttfamily GLsizei get\+Height(int eye = 0) const}}{{\ttfamily GLsizei get\+Width(int eye = 0) const} / {\ttfamily GLsizei get\+Height(int eye = 0) const}}}\label{md_OPENXR_autotoc_md31}
+Open\+XR ランタイムが推奨するレンダリング解像度の幅および高さをピクセル単位で返します。\hypertarget{md_OPENXR_autotoc_md32}{}\doxysubsubsection{\texorpdfstring{{\ttfamily GLfloat get\+Aspect(int eye = 0) const}}{{\ttfamily GLfloat get\+Aspect(int eye = 0) const}}}\label{md_OPENXR_autotoc_md32}
+推奨解像度のアスペクト比（幅 / 高さ）を返します。\hypertarget{md_OPENXR_autotoc_md33}{}\doxysubsubsection{\texorpdfstring{{\ttfamily uint32\+\_\+t get\+View\+Count() const}}{{\ttfamily uint32\+\_\+t get\+View\+Count() const}}}\label{md_OPENXR_autotoc_md33}
+ビューの総数（通常ステレオ表示で {\ttfamily 2}）を返します。
+
+\DoxyHorRuler{0}
+\hypertarget{md_OPENXR_autotoc_md35}{}\doxysubsection{\texorpdfstring{コントローラートラッキング・姿勢}{コントローラートラッキング・姿勢}}\label{md_OPENXR_autotoc_md35}
+\hypertarget{md_OPENXR_autotoc_md36}{}\doxysubsubsection{\texorpdfstring{{\ttfamily bool is\+Tracked(int hand) const}}{{\ttfamily bool is\+Tracked(int hand) const}}}\label{md_OPENXR_autotoc_md36}
+指定した手（{\ttfamily Hand\+::\+Left} または {\ttfamily Hand\+::\+Right}）のコントローラーが現在有効にトラッキングされているかを判定します。\hypertarget{md_OPENXR_autotoc_md37}{}\doxysubsubsection{\texorpdfstring{{\ttfamily Gg\+Matrix get\+Grip\+Matrix(int hand) const}}{{\ttfamily Gg\+Matrix get\+Grip\+Matrix(int hand) const}}}\label{md_OPENXR_autotoc_md37}
+コントローラーのグリップ位置・姿勢を表すモデル変換行列（位置と回転）を返します。コントローラーの 3D モデルを描画する際の配置行列として使用できます。\hypertarget{md_OPENXR_autotoc_md38}{}\doxysubsubsection{\texorpdfstring{{\ttfamily Gg\+Matrix get\+Aim\+Matrix(int hand) const}}{{\ttfamily Gg\+Matrix get\+Aim\+Matrix(int hand) const}}}\label{md_OPENXR_autotoc_md38}
+コントローラーのポインティング（エイム）方向を表すモデル変換行列を返します。レーザーポインターや銃の照準ベクトルを描画・計算する際に適しています。\hypertarget{md_OPENXR_autotoc_md39}{}\doxysubsubsection{\texorpdfstring{{\ttfamily Gg\+Vector get\+Grip\+Position(int hand) const} / {\ttfamily Gg\+Quaternion get\+Grip\+Orientation(int hand) const}}{{\ttfamily Gg\+Vector get\+Grip\+Position(int hand) const} / {\ttfamily Gg\+Quaternion get\+Grip\+Orientation(int hand) const}}}\label{md_OPENXR_autotoc_md39}
+グリップのワールド位置座標および回転四元数を取得します。\hypertarget{md_OPENXR_autotoc_md40}{}\doxysubsubsection{\texorpdfstring{{\ttfamily Gg\+Vector get\+Aim\+Position(int hand) const} / {\ttfamily Gg\+Quaternion get\+Aim\+Orientation(int hand) const}}{{\ttfamily Gg\+Vector get\+Aim\+Position(int hand) const} / {\ttfamily Gg\+Quaternion get\+Aim\+Orientation(int hand) const}}}\label{md_OPENXR_autotoc_md40}
+エイムのワールド位置座標および回転四元数を取得します。
+
+\DoxyHorRuler{0}
+\hypertarget{md_OPENXR_autotoc_md42}{}\doxysubsection{\texorpdfstring{コントローラーボタン・スティック入力・振動}{コントローラーボタン・スティック入力・振動}}\label{md_OPENXR_autotoc_md42}
+\hypertarget{md_OPENXR_autotoc_md43}{}\doxysubsubsection{\texorpdfstring{{\ttfamily float get\+Trigger(int hand) const}}{{\ttfamily float get\+Trigger(int hand) const}}}\label{md_OPENXR_autotoc_md43}
+人差し指トリガーのアナログ押し込み量（{\ttfamily 0.\+0f} ～ {\ttfamily 1.\+0f}）を返します。\hypertarget{md_OPENXR_autotoc_md44}{}\doxysubsubsection{\texorpdfstring{{\ttfamily float get\+Grip(int hand) const}}{{\ttfamily float get\+Grip(int hand) const}}}\label{md_OPENXR_autotoc_md44}
+中指グリップ（スクイーズ）のアナログ押し込み量（{\ttfamily 0.\+0f} ～ {\ttfamily 1.\+0f}）を返します。\hypertarget{md_OPENXR_autotoc_md45}{}\doxysubsubsection{\texorpdfstring{{\ttfamily std\+::array\texorpdfstring{$<$}{<}float, 2\texorpdfstring{$>$}{>} get\+Thumbstick(int hand) const}}{{\ttfamily std\+::array\texorpdfstring{$<$}{<}float, 2\texorpdfstring{$>$}{>} get\+Thumbstick(int hand) const}}}\label{md_OPENXR_autotoc_md45}
+アナログスティック（またはトラックパッド）の 2 次元入力値 \$(x, y)\$（各 {\ttfamily -\/1.\+0f} ～ {\ttfamily 1.\+0f}）を返します。\hypertarget{md_OPENXR_autotoc_md46}{}\doxysubsubsection{\texorpdfstring{{\ttfamily bool get\+Thumbstick\+Click(int hand) const}}{{\ttfamily bool get\+Thumbstick\+Click(int hand) const}}}\label{md_OPENXR_autotoc_md46}
+アナログスティックを押し込んだクリック状態（押されていれば {\ttfamily true}）を返します。\hypertarget{md_OPENXR_autotoc_md47}{}\doxysubsubsection{\texorpdfstring{{\ttfamily bool get\+Primary\+Button(int hand) const}}{{\ttfamily bool get\+Primary\+Button(int hand) const}}}\label{md_OPENXR_autotoc_md47}
+プライマリボタン（左手\+: {\ttfamily X} ボタン、右手\+: {\ttfamily A} ボタン）の押下状態を返します。\hypertarget{md_OPENXR_autotoc_md48}{}\doxysubsubsection{\texorpdfstring{{\ttfamily bool get\+Secondary\+Button(int hand) const}}{{\ttfamily bool get\+Secondary\+Button(int hand) const}}}\label{md_OPENXR_autotoc_md48}
+セカンダリボタン（左手\+: {\ttfamily Y} ボタン、右手\+: {\ttfamily B} ボタン）の押下状態を返します。\hypertarget{md_OPENXR_autotoc_md49}{}\doxysubsubsection{\texorpdfstring{{\ttfamily bool get\+Menu\+Button(int hand = Hand\+::\+Left) const}}{{\ttfamily bool get\+Menu\+Button(int hand = Hand\+::\+Left) const}}}\label{md_OPENXR_autotoc_md49}
+メニューボタンの押下状態を返します。\hypertarget{md_OPENXR_autotoc_md50}{}\doxysubsubsection{\texorpdfstring{{\ttfamily void apply\+Haptic\+Vibration(int hand, float duration\+Seconds = 0.\+1f, float frequency = XR\+\_\+\+FREQUENCY\+\_\+\+UNSPECIFIED, float amplitude = 0.\+5f)}}{{\ttfamily void apply\+Haptic\+Vibration(int hand, float duration\+Seconds = 0.\+1f, float frequency = XR\+\_\+\+FREQUENCY\+\_\+\+UNSPECIFIED, float amplitude = 0.\+5f)}}}\label{md_OPENXR_autotoc_md50}
+コントローラーに触覚フィードバック（振動）を出力します。
+\begin{DoxyItemize}
+\item {\bfseries{引数}}\+:
+\begin{DoxyItemize}
+\item {\ttfamily hand}\+: 対象の手 ({\ttfamily Hand\+::\+Left} または {\ttfamily Hand\+::\+Right})。
+\item {\ttfamily duration\+Seconds}\+: 振動の持続時間（秒）。
+\item {\ttfamily frequency}\+: 振動周波数（\+Hz、デフォルト {\ttfamily XR\+\_\+\+FREQUENCY\+\_\+\+UNSPECIFIED}）。
+\item {\ttfamily amplitude}\+: 振動の強さ（{\ttfamily 0.\+0f} ～ {\ttfamily 1.\+0f}、デフォルト {\ttfamily 0.\+5f}）。
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md_OPENXR_autotoc_md52}{}\doxysubsection{\texorpdfstring{参照空間（空間座標系）}{参照空間（空間座標系）}}\label{md_OPENXR_autotoc_md52}
+\hypertarget{md_OPENXR_autotoc_md53}{}\doxysubsubsection{\texorpdfstring{{\ttfamily Xr\+Reference\+Space\+Type get\+Reference\+Space\+Type() const}}{{\ttfamily Xr\+Reference\+Space\+Type get\+Reference\+Space\+Type() const}}}\label{md_OPENXR_autotoc_md53}
+現在有効な参照空間のタイプ（{\ttfamily XR\+\_\+\+REFERENCE\+\_\+\+SPACE\+\_\+\+TYPE\+\_\+\+STAGE} または {\ttfamily XR\+\_\+\+REFERENCE\+\_\+\+SPACE\+\_\+\+TYPE\+\_\+\+LOCAL}）を返します。
+
+\DoxyHorRuler{0}
+\hypertarget{md_OPENXR_autotoc_md55}{}\doxysection{\texorpdfstring{4. 実践チュートリアル＆使用例}{4. 実践チュートリアル＆使用例}}\label{md_OPENXR_autotoc_md55}
+\hypertarget{md_OPENXR_autotoc_md56}{}\doxysubsection{\texorpdfstring{4.\+1 基本的なステレオレンダリング}{4.\+1 基本的なステレオレンダリング}}\label{md_OPENXR_autotoc_md56}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ GG\_USE\_OPENXR}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{GgApp_8h}{GgApp.h}}"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classGgApp_ad2e50a5e84d4fd6162e03039ac00c7ae}{GgApp::main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \textcolor{keyword}{const}*\ argv)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{classGgApp_1_1Window}{Window}}\ window(\textcolor{stringliteral}{"{}OpenXR\ Basic"{}},\ 1280,\ 720);}
+\DoxyCodeLine{\ \ \textcolor{keyword}{auto}\&\ openxr\ =\ OpenXR::initialize(window);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ 描画設定}}
+\DoxyCodeLine{\ \ glEnable(GL\_DEPTH\_TEST);}
+\DoxyCodeLine{\ \ glEnable(GL\_CULL\_FACE);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{while}\ (window)}
+\DoxyCodeLine{\ \ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (openxr.begin())}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ eye\ =\ 0;\ eye\ <\ openxr.getViewCount();\ ++eye)}
+\DoxyCodeLine{\ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ openxr.select(eye);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ glClearColor(0.2f,\ 0.3f,\ 0.4f,\ 1.0f);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ glClear(GL\_COLOR\_BUFFER\_BIT\ |\ GL\_DEPTH\_BUFFER\_BIT);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ 透視投影行列\ (Near:\ 0.05m,\ Far:\ 50.0m)}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ GgMatrix\ mp\ =\ openxr.getProjectionMatrix(eye,\ 0.05f,\ 50.0f);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ 頭部姿勢に追従するビュー行列}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ GgMatrix\ mv\ =\ openxr.getViewMatrix(eye);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ シーンを描画}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ myShader.use(mp,\ mv\ *\ myObjectMatrix);}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ myObject.draw();}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ openxr.commit(eye);}
+\DoxyCodeLine{\ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ openxr.submit(\textcolor{keyword}{true});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ openxr.terminate();}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_OPENXR_autotoc_md58}{}\doxysubsection{\texorpdfstring{4.\+2 コントローラーの姿勢取得とモデル描画}{4.\+2 コントローラーの姿勢取得とモデル描画}}\label{md_OPENXR_autotoc_md58}
+コントローラーの位置・向きに合わせて手のオブジェクトや武器モデルを配置・描画します。
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ hand\ =\ 0;\ hand\ <\ OpenXR::Hand::Count;\ ++hand)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{if}\ (openxr.isTracked(hand))}
+\DoxyCodeLine{\ \ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ コントローラーのグリップ位置・向きのモデル行列を取得}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ GgMatrix\ mg\ =\ openxr.getGripMatrix(hand);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ ビュー変換と掛け合わせて描画}}
+\DoxyCodeLine{\ \ \ \ handShader.use(mp,\ mv\ *\ mg,\ light);}
+\DoxyCodeLine{\ \ \ \ handModel.draw();}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_OPENXR_autotoc_md60}{}\doxysubsection{\texorpdfstring{4.\+3 スティック入力による移動とトリガー入力}{4.\+3 スティック入力による移動とトリガー入力}}\label{md_OPENXR_autotoc_md60}
+左スティックでプレイヤーを前後左右に移動させ、右トリガーでオブジェクトを掴む・発射する例です。
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ プレイヤーのワールド座標位置}}
+\DoxyCodeLine{\textcolor{keyword}{static}\ GgVector\ playerPos\{\ 0.0f,\ 0.0f,\ 0.0f,\ 1.0f\ \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ 左スティックの入力を取得}}
+\DoxyCodeLine{\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ stick\ =\ openxr.getThumbstick(OpenXR::Hand::Left);}
+\DoxyCodeLine{\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ moveSpeed\ =\ 0.05f;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ スティックの傾きに応じて移動}}
+\DoxyCodeLine{playerPos[0]\ +=\ stick[0]\ *\ moveSpeed;}
+\DoxyCodeLine{playerPos[2]\ -\/=\ stick[1]\ *\ moveSpeed;\ \textcolor{comment}{//\ 前後移動}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ プレイヤーの平行移動行列}}
+\DoxyCodeLine{\textcolor{keyword}{const}\ GgMatrix\ playerMatrix\ =\ \mbox{\hyperlink{namespacegg_a1c44cf87582b032f9eeac980ed17f73b}{ggTranslate}}(playerPos[0],\ playerPos[1],\ playerPos[2]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ 右トリガーの押し込みをチェック}}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (openxr.getTrigger(OpenXR::Hand::Right)\ >\ 0.8f)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ トリガーが深く引かれたときに右手に振動を与える}}
+\DoxyCodeLine{\ \ openxr.applyHapticVibration(OpenXR::Hand::Right,\ 0.05f,\ XR\_FREQUENCY\_UNSPECIFIED,\ 0.8f);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ レンダリングループ内でのビュー行列適用}}
+\DoxyCodeLine{\textcolor{keyword}{const}\ GgMatrix\ mv\ =\ openxr.getViewMatrix(eye)\ *\ playerMatrix.inverse();}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_OPENXR_autotoc_md62}{}\doxysubsection{\texorpdfstring{4.\+4 床面基準 (STAGE) と着席基準 (LOCAL) の切り替え}{4.\+4 床面基準 (STAGE) と着席基準 (LOCAL) の切り替え}}\label{md_OPENXR_autotoc_md62}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ ルームスケール（床面が\ Y=0\ となる座標系、立ち位置・歩行用）}}
+\DoxyCodeLine{\textcolor{keyword}{auto}\&\ openxr\ =\ OpenXR::initialize(window,\ XR\_REFERENCE\_SPACE\_TYPE\_STAGE);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ または着席プレイ（HMD\ の起動位置が原点となる座標系、フライトシムやドライブゲーム用）}}
+\DoxyCodeLine{\textcolor{keyword}{auto}\&\ openxr\ =\ OpenXR::initialize(window,\ XR\_REFERENCE\_SPACE\_TYPE\_LOCAL);}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_OPENXR_autotoc_md64}{}\doxysubsection{\texorpdfstring{4.\+5 PC ウィンドウへのミラー表示}{4.\+5 PC ウィンドウへのミラー表示}}\label{md_OPENXR_autotoc_md64}
+{\ttfamily openxr.\+submit(mirror)} の引数でミラー表示の有無を切り替えられます。
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ PC\ 画面に\ HMD\ の左目視界をフルスクリーン／ウィンドウサイズに合わせて表示}}
+\DoxyCodeLine{openxr.submit(\textcolor{keyword}{true});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ ミラー表示をオフにしてパフォーマンスを最優先する場合}}
+\DoxyCodeLine{openxr.submit(\textcolor{keyword}{false});}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_OPENXR_autotoc_md66}{}\doxysection{\texorpdfstring{5. 旧 Oculus SDK (Lib\+OVR) ラッパーからの移行ガイド}{5. 旧 Oculus SDK (Lib\+OVR) ラッパーからの移行ガイド}}\label{md_OPENXR_autotoc_md66}
+旧 {\ttfamily Gg\+App\+::\+Oculus} (Lib\+OVR) および旧 {\ttfamily Gg\+App\+::\+Open\+XR} から、最適化版 API への対応表です。
+
+
+\begin{DoxyTable}{3}{}{}{1}
+\SetCell{bg=\tableheadbgcolor,font=\bfseries}処理内容  &\SetCell{bg=\tableheadbgcolor,font=\bfseries}旧 API (Lib\+OVR ラッパー互換)  &\SetCell{bg=\tableheadbgcolor,font=\bfseries}最適化版 Open\+XR API  \\
+{\bfseries{初期化}}  &{\ttfamily Oculus\+::initialize(window)}  &{\ttfamily Open\+XR\+::initialize(window, space\+Type)}  \\
+{\bfseries{目の指定と\+FBOバインド}}  &{\ttfamily openxr.\+select(eye, screen, pos, ori)}  &{\ttfamily openxr.\+select(eye)}  \\
+{\bfseries{透視投影行列の生成}}  &手動で {\ttfamily gg\+Frustum(screen\mbox{[}0\mbox{]}\texorpdfstring{$\ast$}{*}n, ...)}  &{\ttfamily openxr.\+get\+Projection\+Matrix(eye, z\+Near, z\+Far)}  \\
+{\bfseries{ビュー行列の生成}}  &手動で {\ttfamily Gg\+Quaternion(ori).get\+Conjugate\+Matrix() \texorpdfstring{$\ast$}{*} gg\+Translate(-\/pos)}  &{\ttfamily openxr.\+get\+View\+Matrix(eye)}  \\
+{\bfseries{カメラ姿勢行列}}  &手動で合成  &{\ttfamily openxr.\+get\+Pose\+Matrix(eye)}  \\
+{\bfseries{Time\+Warp 設定}}  &{\ttfamily openxr.\+timewarp(mp)} (空ダミー)  &{\bfseries{不要 (削除)}}  \\
+{\bfseries{フレーム完了}}  &{\ttfamily openxr.\+commit(eye)}  &{\ttfamily openxr.\+commit(eye)}  \\
+{\bfseries{フレーム転送}}  &{\ttfamily openxr.\+submit(mirror)}  &{\ttfamily openxr.\+submit(mirror)}  \\
+{\bfseries{コントローラー姿勢}}  &なし  &{\ttfamily openxr.\+get\+Grip\+Matrix(hand)}, {\ttfamily get\+Aim\+Matrix(hand)}  \\
+{\bfseries{ボタン・スティック入力}}  &なし  &{\ttfamily get\+Trigger}, {\ttfamily get\+Grip}, {\ttfamily get\+Thumbstick}, {\ttfamily get\+Primary\+Button} など  \\
+{\bfseries{ハプティクス振動}}  &なし  &{\ttfamily openxr.\+apply\+Haptic\+Vibration(hand, ...)}  \\
+\end{DoxyTable}
+\hypertarget{md_OPENXR_autotoc_md67}{}\doxysubsection{\texorpdfstring{コードの対比（\+Before / After）}{コードの対比（\+Before / After）}}\label{md_OPENXR_autotoc_md67}
+\hypertarget{md_OPENXR_autotoc_md68}{}\doxysubsubsection{\texorpdfstring{\mbox{[}Before\mbox{]} 旧 API}{\mbox{[}Before\mbox{]} 旧 API}}\label{md_OPENXR_autotoc_md68}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{GLfloat\ screen[4],\ position[3],\ orientation[4];}
+\DoxyCodeLine{openxr.select(eye,\ screen,\ position,\ orientation);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ 面倒な手動計算が必要だった}}
+\DoxyCodeLine{\textcolor{keyword}{const}\ GgMatrix\ mp\ =\ \mbox{\hyperlink{namespacegg_a6045dfb6776b306492ac593db94be7ab}{ggFrustum}}(}
+\DoxyCodeLine{\ \ screen[0]\ *\ zNear,\ screen[1]\ *\ zNear,}
+\DoxyCodeLine{\ \ screen[2]\ *\ zNear,\ screen[3]\ *\ zNear,}
+\DoxyCodeLine{\ \ zNear,\ zFar);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{const}\ GgMatrix\ mv\ =\ GgQuaternion(orientation).getConjugateMatrix()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *\ \mbox{\hyperlink{namespacegg_a1c44cf87582b032f9eeac980ed17f73b}{ggTranslate}}(-\/position[0],\ -\/position[1],\ -\/position[2]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{shader.use(mp,\ mv\ *\ model,\ light);}
+\DoxyCodeLine{model.draw();}
+\DoxyCodeLine{openxr.commit(eye);}
+
+\end{DoxyCode}
+\hypertarget{md_OPENXR_autotoc_md69}{}\doxysubsubsection{\texorpdfstring{\mbox{[}After\mbox{]} 最適化版 API}{\mbox{[}After\mbox{]} 最適化版 API}}\label{md_OPENXR_autotoc_md69}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{openxr.select(eye);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ 1行で直感的に取得可能！}}
+\DoxyCodeLine{\textcolor{keyword}{const}\ GgMatrix\ mp\ =\ openxr.getProjectionMatrix(eye,\ zNear,\ zFar);}
+\DoxyCodeLine{\textcolor{keyword}{const}\ GgMatrix\ mv\ =\ openxr.getViewMatrix(eye);}
+\DoxyCodeLine{}
+\DoxyCodeLine{shader.use(mp,\ mv\ *\ model,\ light);}
+\DoxyCodeLine{model.draw();}
+\DoxyCodeLine{openxr.commit(eye);}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_OPENXR_autotoc_md71}{}\doxysection{\texorpdfstring{6. 動作環境とセットアップ}{6. 動作環境とセットアップ}}\label{md_OPENXR_autotoc_md71}
+\hypertarget{md_OPENXR_autotoc_md72}{}\doxysubsection{\texorpdfstring{必要な環境}{必要な環境}}\label{md_OPENXR_autotoc_md72}
+
+\begin{DoxyItemize}
+\item {\bfseries{OS}}\+:
+\begin{DoxyItemize}
+\item Windows 10 / 11 (64bit)
+\item Linux (Ubuntu / Linux Mint 等、\+X11 環境)
+\end{DoxyItemize}
+\item {\bfseries{VR ハードウェア}}\+:
+\begin{DoxyItemize}
+\item Meta Quest 2 / 3 / 3S / Pro (Quest Link / Air Link / Virtual Desktop / Steam Link)
+\item HTC Vive / Vive Pro / Focus 3
+\item Valve Index
+\item Windows Mixed Reality 各種 HMD
+\item Bigscreen Beyond, Pico 4 等
+\end{DoxyItemize}
+\item {\bfseries{Open\+XR ランタイム}}\+:
+\begin{DoxyItemize}
+\item Meta Quest Link アプリ（\+Oculus ランタイムをアクティブに設定）
+\item Steam\+VR（\+Steam\+VR 設定 -\/\texorpdfstring{$>$}{>} Open\+XR -\/\texorpdfstring{$>$}{>}「\+Steam\+VR をアクティブな Open\+XR ランタイムとして設定」）
+\item Monado (Linux 用オープンソースランタイム)
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_OPENXR_autotoc_md73}{}\doxysubsection{\texorpdfstring{プロジェクトへの組み込み}{プロジェクトへの組み込み}}\label{md_OPENXR_autotoc_md73}
+
+\begin{DoxyEnumerate}
+\item ソースコード冒頭で Open\+XR を有効化： 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ GG\_USE\_OPENXR}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{GgApp_8h}{GgApp.h}}"{}}}
+
+\end{DoxyCode}
+
+\item Open\+XR SDK のヘッダー ({\ttfamily \texorpdfstring{$<$}{<}openxr/openxr.\+h\texorpdfstring{$>$}{>}}, {\ttfamily \texorpdfstring{$<$}{<}openxr/openxr\+\_\+platform.\+h\texorpdfstring{$>$}{>}}) およびローダーライブラリ ({\ttfamily openxr\+\_\+loader.\+lib} または {\ttfamily -\/lopenxr\+\_\+loader}) をプロジェクトにリンクします。 
+\end{DoxyEnumerate}

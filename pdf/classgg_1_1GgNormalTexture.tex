@@ -1,0 +1,367 @@
+\doxysection{gg\+::Gg\+Normal\+Texture クラス}
+\hypertarget{classgg_1_1GgNormalTexture}{}\label{classgg_1_1GgNormalTexture}\index{gg::GgNormalTexture@{gg::GgNormalTexture}}
+
+
+{\ttfamily \#include $<$gg.\+h$>$}
+
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgg_1_1GgNormalTexture_a4a1c88d5b2e5a2263695a47e808476e6}{Gg\+Normal\+Texture}} ()
+\item 
+\mbox{\hyperlink{classgg_1_1GgNormalTexture_a3388010b4affdc12eef3a13f5e3ac38d}{Gg\+Normal\+Texture}} (const GLubyte \texorpdfstring{$\ast$}{*}image, GLsizei width, GLsizei height, GLenum format=GL\+\_\+\+RED, GLfloat nz=1.\+0f, GLenum internal=GL\+\_\+\+RGBA)
+\item 
+\mbox{\hyperlink{classgg_1_1GgNormalTexture_a1e9944398bead9cf4f3631c217b77900}{Gg\+Normal\+Texture}} (const std\+::string \&name, GLfloat nz=1.\+0f, GLenum internal=GL\+\_\+\+RGBA)
+\item 
+virtual \mbox{\hyperlink{classgg_1_1GgNormalTexture_a817981def26fb1f9f5f35a06105b4929}{\texorpdfstring{$\sim$}{\string~}\+Gg\+Normal\+Texture}} ()
+\item 
+void \mbox{\hyperlink{classgg_1_1GgNormalTexture_a4d72c9169596e2040d41388ec375d253}{load}} (const GLubyte \texorpdfstring{$\ast$}{*}hmap, GLsizei width, GLsizei height, GLenum format=GL\+\_\+\+RED, GLfloat nz=1.\+0f, GLenum internal=GL\+\_\+\+RGBA)
+\item 
+void \mbox{\hyperlink{classgg_1_1GgNormalTexture_adca09b7af04c1a58703fbafcea758671}{load}} (const std\+::string \&name, GLfloat nz=1.\+0f, GLenum internal=GL\+\_\+\+RGBA)
+\item 
+\mbox{\hyperlink{classgg_1_1GgNormalTexture_a82548de8f6f46895ecb7c28623c8f87b}{operator bool}} () const noexcept
+\item 
+bool \mbox{\hyperlink{classgg_1_1GgNormalTexture_ae46949a7c925dac57928b62c02b1ee77}{operator!}} () const noexcept
+\item 
+const \mbox{\hyperlink{classgg_1_1GgTexture}{Gg\+Texture}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classgg_1_1GgNormalTexture_a1757ae708bf0277fc9796bb8c80580da}{get}} () const
+\item 
+GLuint \mbox{\hyperlink{classgg_1_1GgNormalTexture_a19f8bbe5878912b1247282fb4193dd5d}{get\+Texture}} () const
+\item 
+GLsizei \mbox{\hyperlink{classgg_1_1GgNormalTexture_af2ff8ab0c950791b1140a286cb966bb9}{get\+Width}} () const
+\item 
+GLsizei \mbox{\hyperlink{classgg_1_1GgNormalTexture_a324a395356e53766cd19b79b53d1fe97}{get\+Height}} () const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgNormalTexture_a77462039923211833190aa2bca88ab11}{get\+Size}} (GLsizei \texorpdfstring{$\ast$}{*}size) const
+\item 
+const GLsizei \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classgg_1_1GgNormalTexture_af0d0478e0ae04c0ffeeea82c33a4d9d5}{get\+Size}} () const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgNormalTexture_aaeccaf4a0651cd6157473c1678e7910a}{bind}} () const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgNormalTexture_ab9055260ab0d8307483bdcf8bfa37248}{unbind}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+法線マップ.
+
+\begin{DoxyNote}{覚え書き}
+高さマップ（グレイスケール画像）を読み込んで法線マップのテクスチャを作成する. 
+\end{DoxyNote}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05587}{5587}} 行目に定義があります。
+
+
+
+\label{doc-constructors}
+\Hypertarget{classgg_1_1GgNormalTexture_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{classgg_1_1GgNormalTexture_a4a1c88d5b2e5a2263695a47e808476e6}\index{gg::GgNormalTexture@{gg::GgNormalTexture}!GgNormalTexture@{GgNormalTexture}}
+\index{GgNormalTexture@{GgNormalTexture}!gg::GgNormalTexture@{gg::GgNormalTexture}}
+\doxysubsubsection{\texorpdfstring{GgNormalTexture()}{GgNormalTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgNormalTexture_a4a1c88d5b2e5a2263695a47e808476e6} 
+gg\+::\+Gg\+Normal\+Texture\+::\+Gg\+Normal\+Texture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+コンストラクタ. 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05597}{5597}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgNormalTexture_a3388010b4affdc12eef3a13f5e3ac38d}\index{gg::GgNormalTexture@{gg::GgNormalTexture}!GgNormalTexture@{GgNormalTexture}}
+\index{GgNormalTexture@{GgNormalTexture}!gg::GgNormalTexture@{gg::GgNormalTexture}}
+\doxysubsubsection{\texorpdfstring{GgNormalTexture()}{GgNormalTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgNormalTexture_a3388010b4affdc12eef3a13f5e3ac38d} 
+gg\+::\+Gg\+Normal\+Texture\+::\+Gg\+Normal\+Texture (\begin{DoxyParamCaption}\item[{const GLubyte \texorpdfstring{$\ast$}{*}}]{image}{, }\item[{GLsizei}]{width}{, }\item[{GLsizei}]{height}{, }\item[{GLenum}]{format}{ = {\ttfamily GL\+\_\+RED}, }\item[{GLfloat}]{nz}{ = {\ttfamily 1.0f}, }\item[{GLenum}]{internal}{ = {\ttfamily GL\+\_\+RGBA}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+メモリ上のデータから法線マップのテクスチャを作成するコンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em image} & テクスチャとして用いる画像データ, nullptr ならデータを読み込まない. \\
+\hline
+{\em width} & テクスチャとして用いる画像データの横幅. \\
+\hline
+{\em height} & テクスチャとして用いる画像データの高さ. \\
+\hline
+{\em format} & テクスチャとして用いる画像データのフォーマット (GL\+\_\+\+RED, GL\+\_\+\+RG, GL\+\_\+\+RGB, GL\+\_\+\+RGBA). \\
+\hline
+{\em nz} & 法線マップの z 成分の値. \\
+\hline
+{\em internal} & テクスチャの内部フォーマット. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05611}{5611}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgNormalTexture_a3388010b4affdc12eef3a13f5e3ac38d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgNormalTexture_a1e9944398bead9cf4f3631c217b77900}\index{gg::GgNormalTexture@{gg::GgNormalTexture}!GgNormalTexture@{GgNormalTexture}}
+\index{GgNormalTexture@{GgNormalTexture}!gg::GgNormalTexture@{gg::GgNormalTexture}}
+\doxysubsubsection{\texorpdfstring{GgNormalTexture()}{GgNormalTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgNormalTexture_a1e9944398bead9cf4f3631c217b77900} 
+gg\+::\+Gg\+Normal\+Texture\+::\+Gg\+Normal\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{GLfloat}]{nz}{ = {\ttfamily 1.0f}, }\item[{GLenum}]{internal}{ = {\ttfamily GL\+\_\+RGBA}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+ファイルからデータを読み込んで法線マップのテクスチャを作成するコンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em name} & 画像ファイル名. \\
+\hline
+{\em nz} & 法線マップの z 成分の値. \\
+\hline
+{\em internal} & テクスチャの内部フォーマット. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05631}{5631}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgNormalTexture_a1e9944398bead9cf4f3631c217b77900_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgNormalTexture_a817981def26fb1f9f5f35a06105b4929}\index{gg::GgNormalTexture@{gg::GgNormalTexture}!````~GgNormalTexture@{\texorpdfstring{$\sim$}{\string~}GgNormalTexture}}
+\index{````~GgNormalTexture@{\texorpdfstring{$\sim$}{\string~}GgNormalTexture}!gg::GgNormalTexture@{gg::GgNormalTexture}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GgNormalTexture()}{\string~GgNormalTexture()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgNormalTexture_a817981def26fb1f9f5f35a06105b4929} 
+virtual gg\+::\+Gg\+Normal\+Texture\+::\texorpdfstring{$\sim$}{\string~}\+Gg\+Normal\+Texture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+デストラクタ. 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05644}{5644}} 行目に定義があります。
+
+
+
+\label{doc-func-members}
+\Hypertarget{classgg_1_1GgNormalTexture_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{classgg_1_1GgNormalTexture_aaeccaf4a0651cd6157473c1678e7910a}\index{gg::GgNormalTexture@{gg::GgNormalTexture}!bind@{bind}}
+\index{bind@{bind}!gg::GgNormalTexture@{gg::GgNormalTexture}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgNormalTexture_aaeccaf4a0651cd6157473c1678e7910a} 
+void gg\+::\+Gg\+Normal\+Texture\+::bind (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+テクスチャの使用開始 (このテクスチャを使用する際に呼び出す). 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05773}{5773}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgNormalTexture_a1757ae708bf0277fc9796bb8c80580da}\index{gg::GgNormalTexture@{gg::GgNormalTexture}!get@{get}}
+\index{get@{get}!gg::GgNormalTexture@{gg::GgNormalTexture}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgNormalTexture_a1757ae708bf0277fc9796bb8c80580da} 
+const \mbox{\hyperlink{classgg_1_1GgTexture}{Gg\+Texture}} \texorpdfstring{$\ast$}{*} gg\+::\+Gg\+Normal\+Texture\+::get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+テクスチャオブジェクトを取り出す.
+
+\begin{DoxyReturn}{戻り値}
+\doxylink{classgg_1_1GgTexture}{Gg\+Texture} オブジェクトのポインタ. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05715}{5715}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgNormalTexture_a324a395356e53766cd19b79b53d1fe97}\index{gg::GgNormalTexture@{gg::GgNormalTexture}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!gg::GgNormalTexture@{gg::GgNormalTexture}}
+\doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgNormalTexture_a324a395356e53766cd19b79b53d1fe97} 
+GLsizei gg\+::\+Gg\+Normal\+Texture\+::get\+Height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+使用しているテクスチャの縦の画素数を取り出す.
+
+\begin{DoxyReturn}{戻り値}
+テクスチャの縦の画素数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05745}{5745}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgNormalTexture_af0d0478e0ae04c0ffeeea82c33a4d9d5}\index{gg::GgNormalTexture@{gg::GgNormalTexture}!getSize@{getSize}}
+\index{getSize@{getSize}!gg::GgNormalTexture@{gg::GgNormalTexture}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgNormalTexture_af0d0478e0ae04c0ffeeea82c33a4d9d5} 
+const GLsizei \texorpdfstring{$\ast$}{*} gg\+::\+Gg\+Normal\+Texture\+::get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+使用しているテクスチャのサイズを取り出す.
+
+\begin{DoxyReturn}{戻り値}
+テクスチャのサイズを格納した配列へのポインタ. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05765}{5765}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgNormalTexture_a77462039923211833190aa2bca88ab11}\index{gg::GgNormalTexture@{gg::GgNormalTexture}!getSize@{getSize}}
+\index{getSize@{getSize}!gg::GgNormalTexture@{gg::GgNormalTexture}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgNormalTexture_a77462039923211833190aa2bca88ab11} 
+void gg\+::\+Gg\+Normal\+Texture\+::get\+Size (\begin{DoxyParamCaption}\item[{GLsizei \texorpdfstring{$\ast$}{*}}]{size}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+使用しているテクスチャのサイズを取り出す.
+
+
+\begin{DoxyParams}{引数}
+{\em size} & テクスチャのサイズを格納する GLsizei 型の 2 要素の配列変数. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05755}{5755}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgNormalTexture_a19f8bbe5878912b1247282fb4193dd5d}\index{gg::GgNormalTexture@{gg::GgNormalTexture}!getTexture@{getTexture}}
+\index{getTexture@{getTexture}!gg::GgNormalTexture@{gg::GgNormalTexture}}
+\doxysubsubsection{\texorpdfstring{getTexture()}{getTexture()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgNormalTexture_a19f8bbe5878912b1247282fb4193dd5d} 
+GLuint gg\+::\+Gg\+Normal\+Texture\+::get\+Texture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+使用しているテクスチャのテクスチャ名を得る.
+
+\begin{DoxyReturn}{戻り値}
+テクスチャ名. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05725}{5725}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgNormalTexture_af2ff8ab0c950791b1140a286cb966bb9}\index{gg::GgNormalTexture@{gg::GgNormalTexture}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!gg::GgNormalTexture@{gg::GgNormalTexture}}
+\doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgNormalTexture_af2ff8ab0c950791b1140a286cb966bb9} 
+GLsizei gg\+::\+Gg\+Normal\+Texture\+::get\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+使用しているテクスチャの横の画素数を取り出す.
+
+\begin{DoxyReturn}{戻り値}
+テクスチャの横の画素数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05735}{5735}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgNormalTexture_a4d72c9169596e2040d41388ec375d253}\index{gg::GgNormalTexture@{gg::GgNormalTexture}!load@{load}}
+\index{load@{load}!gg::GgNormalTexture@{gg::GgNormalTexture}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgNormalTexture_a4d72c9169596e2040d41388ec375d253} 
+void gg\+::\+Gg\+Normal\+Texture\+::load (\begin{DoxyParamCaption}\item[{const GLubyte \texorpdfstring{$\ast$}{*}}]{hmap}{, }\item[{GLsizei}]{width}{, }\item[{GLsizei}]{height}{, }\item[{GLenum}]{format}{ = {\ttfamily GL\+\_\+RED}, }\item[{GLfloat}]{nz}{ = {\ttfamily 1.0f}, }\item[{GLenum}]{internal}{ = {\ttfamily GL\+\_\+RGBA}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+メモリ上のデータから法線マップのテクスチャを作成する.
+
+
+\begin{DoxyParams}{引数}
+{\em hmap} & テクスチャとして用いる画像データ, nullptr ならデータを読み込まない. \\
+\hline
+{\em width} & テクスチャとして用いる画像データの横幅. \\
+\hline
+{\em height} & テクスチャとして用いる画像データの高さ. \\
+\hline
+{\em format} & テクスチャとして用いる画像データのフォーマット (GL\+\_\+\+RED, GL\+\_\+\+RG, GL\+\_\+\+RGB, GL\+\_\+\+RGBA). \\
+\hline
+{\em nz} & 法線マップの z 成分の値. \\
+\hline
+{\em internal} & テクスチャの内部フォーマット. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05658}{5658}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgNormalTexture_a4d72c9169596e2040d41388ec375d253_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classgg_1_1GgNormalTexture_a4d72c9169596e2040d41388ec375d253_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgNormalTexture_adca09b7af04c1a58703fbafcea758671}\index{gg::GgNormalTexture@{gg::GgNormalTexture}!load@{load}}
+\index{load@{load}!gg::GgNormalTexture@{gg::GgNormalTexture}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgNormalTexture_adca09b7af04c1a58703fbafcea758671} 
+void gg\+::\+Gg\+Normal\+Texture\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{GLfloat}]{nz}{ = {\ttfamily 1.0f}, }\item[{GLenum}]{internal}{ = {\ttfamily GL\+\_\+RGBA}}\end{DoxyParamCaption})}
+
+TGA フォーマットの画像ファイルから高さマップ読み込んで法線マップのテクスチャを作成する.
+
+
+\begin{DoxyParams}{引数}
+{\em name} & 画像ファイル名 (1 チャネルの TGA 画像). \\
+\hline
+{\em nz} & 法線マップの z 成分の値. \\
+\hline
+{\em internal} & テクスチャの内部フォーマット. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l04080}{4080}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgNormalTexture_adca09b7af04c1a58703fbafcea758671_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgNormalTexture_a82548de8f6f46895ecb7c28623c8f87b}\index{gg::GgNormalTexture@{gg::GgNormalTexture}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!gg::GgNormalTexture@{gg::GgNormalTexture}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgNormalTexture_a82548de8f6f46895ecb7c28623c8f87b} 
+gg\+::\+Gg\+Normal\+Texture\+::operator bool (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+オブジェクトが有効かどうか調べる.
+
+\begin{DoxyReturn}{戻り値}
+オブジェクトが有効なら true. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05695}{5695}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgNormalTexture_ae46949a7c925dac57928b62c02b1ee77}\index{gg::GgNormalTexture@{gg::GgNormalTexture}!operator"!@{operator"!}}
+\index{operator"!@{operator"!}!gg::GgNormalTexture@{gg::GgNormalTexture}}
+\doxysubsubsection{\texorpdfstring{operator"!()}{operator!()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgNormalTexture_ae46949a7c925dac57928b62c02b1ee77} 
+bool gg\+::\+Gg\+Normal\+Texture\+::operator! (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+オブジェクトが有効かどうかの結果を反転する.
+
+\begin{DoxyReturn}{戻り値}
+オブジェクトが有効なら false, 無効なら true. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05705}{5705}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgNormalTexture_ab9055260ab0d8307483bdcf8bfa37248}\index{gg::GgNormalTexture@{gg::GgNormalTexture}!unbind@{unbind}}
+\index{unbind@{unbind}!gg::GgNormalTexture@{gg::GgNormalTexture}}
+\doxysubsubsection{\texorpdfstring{unbind()}{unbind()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgNormalTexture_ab9055260ab0d8307483bdcf8bfa37248} 
+void gg\+::\+Gg\+Normal\+Texture\+::unbind (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+テクスチャの使用終了 (このテクスチャを使用しなくなったら呼び出す). 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05781}{5781}} 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gg_8h}{gg.\+h}}\item 
+\mbox{\hyperlink{gg_8cpp}{gg.\+cpp}}\end{DoxyCompactItemize}

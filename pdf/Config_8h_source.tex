@@ -1,0 +1,59 @@
+\doxysection{Config.\+h}
+\hypertarget{Config_8h_source}{}\label{Config_8h_source}\mbox{\hyperlink{Config_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00011}00011\ \textcolor{comment}{//\ 補助プログラム}}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gg_8h}{gg.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00014}00014\ \textcolor{comment}{//\ 構成ファイルの読み取り補助}}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{parseconfig_8h}{parseconfig.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00020}\mbox{\hyperlink{classConfig}{00020}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classConfig_abd0c571c116924871e30444b192b792a}{Config}}}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00022}00022\ \ \ \textcolor{comment}{//\ メニュークラスから参照する}}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00023}\mbox{\hyperlink{classConfig_a834cec0fab7efabab3cd53540e4d466d}{00023}}\ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classConfig_a834cec0fab7efabab3cd53540e4d466d}{Menu}};}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00025}00025\ \ \ \textcolor{comment}{//\ ウィンドウサイズ}}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00026}00026\ \ \ std::array<GLsizei,\ 2>\ winSize;}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00028}00028\ \ \ \textcolor{comment}{//\ メニューフォント名}}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00029}00029\ \ \ std::string\ menuFont;}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00031}00031\ \ \ \textcolor{comment}{//\ メニューフォントサイズ}}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00032}00032\ \ \ \textcolor{keywordtype}{float}\ menuFontSize;}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00034}00034\ \ \ \textcolor{comment}{//\ 光源}}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00035}00035\ \ \ \mbox{\hyperlink{structgg_1_1GgSimpleShader_1_1Light}{gg::GgSimpleShader::Light}}\ light;}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00037}00037\ \ \ \textcolor{comment}{//\ 形状ファイル名}}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00038}00038\ \ \ std::string\ model;}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00040}00040\ \ \ \textcolor{comment}{//\ シェーダのソースファイル名}}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00041}00041\ \ \ std::array<std::string,\ 3>\ shader;}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00043}00043\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00048}00048\ \ \ \mbox{\hyperlink{classConfig_abd0c571c116924871e30444b192b792a}{Config}}();}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00055}00055\ \ \ \mbox{\hyperlink{classConfig_abd0c571c116924871e30444b192b792a}{Config}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00060}00060\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classConfig_a543dce59b66475c5108088ee4ce1cdfc}{\string~Config}}();}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00067}\mbox{\hyperlink{classConfig_a3dc0108805ae6c4c8d0ce90853504f1f}{00067}}\ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classConfig_a3dc0108805ae6c4c8d0ce90853504f1f}{getWidth}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00068}00068\ \textcolor{keyword}{\ \ }\{}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00069}00069\ \ \ \ \ \textcolor{keywordflow}{return}\ winSize[0];}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00070}00070\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00077}\mbox{\hyperlink{classConfig_aaa87cc9fc950c37081b7e26280d159b5}{00077}}\ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classConfig_aaa87cc9fc950c37081b7e26280d159b5}{getHeight}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00078}00078\ \textcolor{keyword}{\ \ }\{}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00079}00079\ \ \ \ \ \textcolor{keywordflow}{return}\ winSize[1];}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00080}00080\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00087}00087\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classConfig_a5e3336e5f83b8cea516039537861e9e6}{load}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00094}00094\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classConfig_a817566065d6f1d047c96b94fc596830c}{save}}(\textcolor{keyword}{const}\ std::string\&\ filename)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Config_8h_source_l00095}00095\ \};}
+
+\end{DoxyCode}

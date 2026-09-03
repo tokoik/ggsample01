@@ -1,0 +1,3420 @@
+\doxysection{gg\+::Gg\+Quaternion クラス}
+\hypertarget{classgg_1_1GgQuaternion}{}\label{classgg_1_1GgQuaternion}\index{gg::GgQuaternion@{gg::GgQuaternion}}
+
+
+{\ttfamily \#include $<$gg.\+h$>$}
+
+
+
+gg\+::Gg\+Quaternion の継承関係図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classgg_1_1GgQuaternion__inherit__graph}
+\end{center}
+\end{figure}
+
+
+gg\+::Gg\+Quaternion 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classgg_1_1GgQuaternion__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} ()=default
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgQuaternion_afb2520684171465ad9ce63ae102b21b4}{Gg\+Quaternion}} (GLfloat x, GLfloat y, GLfloat z, GLfloat w)
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgQuaternion_ad283030bd29ee3806192b2048abe6901}{Gg\+Quaternion}} (GLfloat c)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac796a2450075b410ca26b57b0ea0e2e7}{Gg\+Quaternion}} (const GLfloat \texorpdfstring{$\ast$}{*}a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_a4704246cdfc0f5046fa44b1f090984ae}{Gg\+Quaternion}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_a22620f1559247cf092b086511f410a24}{Gg\+Quaternion}} (const Gg\+Quaternion \&q)=default
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_a33ff51ae28bd45ba34b41d29259a9cef}{Gg\+Quaternion}} (Gg\+Quaternion \&\&q)=default
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_a07f4a39c091d932ad8d5e37a4c0331c1}{\texorpdfstring{$\sim$}{\string~}\+Gg\+Quaternion}} ()=default
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_ade4e8ace3b9839738eea02c4e2be70a1}{operator=}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&q)=default
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_aedf5714476151289c6c41d50c5507c2b}{operator=}} (\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&\&q)=default
+\item 
+GLfloat \mbox{\hyperlink{classgg_1_1GgQuaternion_a7948622a1020c4b8cff6a699cbea8696}{norm}} () const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_ad0b43dbf846eb5c01192dfe63e3d131d}{load\+Add}} (GLfloat x, GLfloat y, GLfloat z, GLfloat w)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_affe2fa2c0d88961b5af9259ece604ff1}{load\+Add}} (const GLfloat \texorpdfstring{$\ast$}{*}a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a482ad92d4b0edc0ff941146d3c692abd}{load\+Add}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a69f0f7d0a100bd3fa8ca71728bd02ec0}{load\+Add}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&q)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_ae4f92a1abd12399ed4dbfdfd6412b85e}{load\+Subtract}} (GLfloat x, GLfloat y, GLfloat z, GLfloat w)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a2f19017a52c028e1be588c7a97fb95a2}{load\+Subtract}} (const GLfloat \texorpdfstring{$\ast$}{*}a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_aff9fb59fc88f68cf0d595b27aab31e8b}{load\+Subtract}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_aea8fb5c63a8ef3c656e69022bdaeeb55}{load\+Subtract}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&q)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a62e4b4ebf3eeca028c2a085d3d407553}{load\+Multiply}} (GLfloat x, GLfloat y, GLfloat z, GLfloat w)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a619f0507b382522d4bd262699c49e8fe}{load\+Multiply}} (const GLfloat \texorpdfstring{$\ast$}{*}a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a28466c146ec1217765b028025a001777}{load\+Multiply}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a518c5ce498e0375156b494091670aa59}{load\+Multiply}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&q)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_ab212808c51a79a9bf730acebd4225247}{load\+Divide}} (GLfloat x, GLfloat y, GLfloat z, GLfloat w)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a7491c56443f52e93324f75485983cd3a}{load\+Divide}} (const GLfloat \texorpdfstring{$\ast$}{*}a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_ac26325cc6cb393f6632f7e854a9df643}{load\+Divide}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a90f272d2f0306a012f574f2b710fea44}{load\+Divide}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&q)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a5c776b116c954194ba457324c36b16b2}{add}} (GLfloat x, GLfloat y, GLfloat z, GLfloat w) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a2a80ad1641502997b6cec18590bbb830}{add}} (const GLfloat \texorpdfstring{$\ast$}{*}a) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_ac38b2eb455f09133dfb7113b620658cd}{add}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a9f0d6f91c003bcf99fc222ddd3c7b828}{add}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&q) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a41eeb50036f7346680b862956a4d4116}{subtract}} (GLfloat x, GLfloat y, GLfloat z, GLfloat w) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a5240a31507b906e03592a4f6a6ca8f7a}{subtract}} (const GLfloat \texorpdfstring{$\ast$}{*}a) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_ac9508f66048530280e06759e80625c44}{subtract}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a5a6d9fdec45ba96a6226b9a5a9e145b8}{subtract}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&q) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a010873f8c906d3c878529d7fccc5e654}{multiply}} (GLfloat x, GLfloat y, GLfloat z, GLfloat w) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_afb6e7a2b4e80ab9720a07d5b030daa9a}{multiply}} (const GLfloat \texorpdfstring{$\ast$}{*}a) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a0cd304d7225291c1aa18e84075ba30e7}{multiply}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a27839a23639579fda888036fce688d94}{multiply}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&q) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a0d9f4c9b28fc3424ef26aed061448287}{divide}} (GLfloat x, GLfloat y, GLfloat z, GLfloat w) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a0d70c27c7840e8bcb1031e12669a9405}{divide}} (const GLfloat \texorpdfstring{$\ast$}{*}a) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a4b44a2db7bfe4c0aa27358c2011360ec}{divide}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a3b79aae4f347fe8020f90260c81878f8}{divide}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&q) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_aec921491e40e285733f049306c816838}{operator=}} (const GLfloat \texorpdfstring{$\ast$}{*}a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_ae1e4c3e0920aca13ab3085eea15e576e}{operator=}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_aa3cfaae9bec190c2201663cd810de9a1}{operator+=}} (const GLfloat \texorpdfstring{$\ast$}{*}a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a1c60aac088934be6a86e18a98ec7a426}{operator+=}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_aa86d4c5f3e16b44741cd5b8c6b8237ba}{operator+=}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&q)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a19849468f39f0371884696892578b52f}{operator-\/=}} (const GLfloat \texorpdfstring{$\ast$}{*}a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_ae8da90eb5a723a60397bd584bc4feb76}{operator-\/=}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_aa1379091e843a1672a8aeae250a7abb1}{operator-\/=}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&q)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a497525637b98332b7571b57c319f672d}{operator\texorpdfstring{$\ast$}{*}=}} (const GLfloat \texorpdfstring{$\ast$}{*}a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_aacf8bcdfdee4ddff74b8d6dad1a05ecb}{operator\texorpdfstring{$\ast$}{*}=}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a59c994d71db6de3acf9ce85ab351e170}{operator\texorpdfstring{$\ast$}{*}=}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&q)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_acb443d6b9fd2cf90942ec8b77172528c}{operator/=}} (const GLfloat \texorpdfstring{$\ast$}{*}a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a9eb399ffee386f8e80b44e942a4b11ea}{operator/=}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a26c2bb3780f51dcc7a20ccbbc4865b90}{operator/=}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&q)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a4f536343e54923de7d58507a86edcde0}{operator+}} (const GLfloat \texorpdfstring{$\ast$}{*}a) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_ade17d80d5e710bf94f0d4061df507d93}{operator+}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_ac3c2cbeb20d1ab86e8900cef918718b3}{operator+}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&q) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_ab7f35213532d8d0d57fd2667388626f8}{operator-\/}} (const GLfloat \texorpdfstring{$\ast$}{*}a) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a9c2658eaec948dc9e6f2e0f7c0c87287}{operator-\/}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a6f252e4145c521b3203c5aa55efad565}{operator-\/}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&q) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_af9f61507e493e0953c12eeac5856a211}{operator\texorpdfstring{$\ast$}{*}}} (const GLfloat \texorpdfstring{$\ast$}{*}a) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a4734934212e1a68561a53a5b6afc2284}{operator\texorpdfstring{$\ast$}{*}}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a27ecd995d49c45f327b929245209e5d5}{operator\texorpdfstring{$\ast$}{*}}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&q) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a9a390b8f63028ecd4c79b95f7eb0515f}{operator/}} (const GLfloat \texorpdfstring{$\ast$}{*}a) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_af2046f124013908bbc115020b4573fb8}{operator/}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a824ab3b06f1194f5f43f343596113ca7}{operator/}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&q) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_ad0f6e1a2521ec6594818f67eda133c3d}{load\+Matrix}} (const GLfloat \texorpdfstring{$\ast$}{*}a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a267f6a8171f8676956833ff1cb98878f}{load\+Matrix}} (const \mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \&m)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a5570b27f958ccde717bc997cca85a0fd}{load\+Identity}} ()
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a82d0620de0f023642b08d7e0f23e0687}{load\+Rotate}} (GLfloat x, GLfloat y, GLfloat z, GLfloat a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a48a3652e3eeab6b9b34a404cd5f1dddf}{load\+Rotate}} (const GLfloat \texorpdfstring{$\ast$}{*}v, GLfloat a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a4400b1921ecc23b0607e9800742342e6}{load\+Rotate}} (const GLfloat \texorpdfstring{$\ast$}{*}v)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a6f9cd8893b1adbbaf17588b1ba5ee9c3}{load\+RotateX}} (GLfloat a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a308e08f78d2dfeadc2efbcd7a470d6bd}{load\+RotateY}} (GLfloat a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a345f63c1d1278daece7b1a09d279d74a}{load\+RotateZ}} (GLfloat a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_ab0bf5792aa2d8f141e90a0f37ea2ff2a}{rotate}} (GLfloat x, GLfloat y, GLfloat z, GLfloat a) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a76e923f92644fa559d24040ff994ea08}{rotate}} (const GLfloat \texorpdfstring{$\ast$}{*}v, GLfloat a) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a95b9078ffd6b9724aff62e9628f09b4c}{rotate}} (const GLfloat \texorpdfstring{$\ast$}{*}v) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_ab9eaade499ecbc3a8de7dea494f3b7c6}{rotateX}} (GLfloat a) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a014d3ef2b47e5981860388ef3119077a}{rotateY}} (GLfloat a) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a5640308c334e9de115adc573ac33f3ce}{rotateZ}} (GLfloat a) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a3a1be65570aae13d963e894f02c88beb}{load\+Euler}} (GLfloat heading, GLfloat pitch, GLfloat roll)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a471642fc24c7f2af4c7d587eb079c0cd}{load\+Euler}} (const GLfloat \texorpdfstring{$\ast$}{*}e)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_abdbd693a6cd020ed36293d3aec1b528c}{euler}} (GLfloat heading, GLfloat pitch, GLfloat roll) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a65a6c0126b5f8a857046f8e1defca7cc}{euler}} (const GLfloat \texorpdfstring{$\ast$}{*}e) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a67653ac2a70b598147b4f2b1fd9cccab}{euler}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&e) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_aa2ca6c2380083877c0d1014650f91d77}{load\+Slerp}} (const GLfloat \texorpdfstring{$\ast$}{*}a, const GLfloat \texorpdfstring{$\ast$}{*}b, GLfloat t)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_aff9ca9585790c621dec95e18aa7c9c57}{load\+Slerp}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&q, const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&r, GLfloat t)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_aeacb9e8dbdcc7854fca46b7b88ec9d57}{load\+Slerp}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&q, const GLfloat \texorpdfstring{$\ast$}{*}a, GLfloat t)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_aec0568f0aa49b7038eee69c3fec3f510}{load\+Slerp}} (const GLfloat \texorpdfstring{$\ast$}{*}a, const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&q, GLfloat t)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_af529d76bbf4048ad56625575c7af3668}{load\+Normalize}} (const GLfloat \texorpdfstring{$\ast$}{*}a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a7829ffa84538358008d7e37c247308e1}{load\+Normalize}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&q)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_af9a9577581a5f9bbebd675998f741215}{load\+Conjugate}} (const GLfloat \texorpdfstring{$\ast$}{*}a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a43b85fc04b7be9fa39859ecac808009d}{load\+Conjugate}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&q)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a46f9d1612fdd1fc39db6c8ba7e574a86}{load\+Invert}} (const GLfloat \texorpdfstring{$\ast$}{*}a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& \mbox{\hyperlink{classgg_1_1GgQuaternion_a78779d311b64b91e00bdee479fd490ca}{load\+Invert}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&q)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_ae87cd428f7803b83a0ef4f1464128a2d}{slerp}} (GLfloat \texorpdfstring{$\ast$}{*}a, GLfloat t) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_af5e931d94ea34b3c63d79b081e594b95}{slerp}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&q, GLfloat t) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a8667e065b18d857126f5481d0be8d527}{normalize}} () const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_aa6149d5fc7b04e147179857ada502d51}{conjugate}} () const
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \mbox{\hyperlink{classgg_1_1GgQuaternion_ae76a0626497b4b3c203be499169a49af}{invert}} () const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgQuaternion_a694406f9dd114d0d804f33528db3c854}{get}} (GLfloat \texorpdfstring{$\ast$}{*}a) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgQuaternion_a605ed85eaa2a82e0d3e2097002d5c583}{get\+Matrix}} (GLfloat \texorpdfstring{$\ast$}{*}a) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgQuaternion_a7a551bed8460169b910c5a6c7fdc389a}{get\+Matrix}} (\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \&m) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{classgg_1_1GgQuaternion_a6e39d8318296545ba0053eda5a71a6a8}{get\+Matrix}} () const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgQuaternion_a1c213182c3dd309dc27b189ff4800603}{get\+Conjugate\+Matrix}} (GLfloat \texorpdfstring{$\ast$}{*}a) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgQuaternion_a9bfa877fdb7e650afd1f5d760e510c4d}{get\+Conjugate\+Matrix}} (\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \&m) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{classgg_1_1GgQuaternion_ac7a0d84adeee39ee8b04327c4f3add36}{get\+Conjugate\+Matrix}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{classgg_1_1GgVector}{gg\+::\+Gg\+Vector}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} ()=default
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_aafd0d0934ac3dd51f6e7160abc6d4363}{Gg\+Vector}} (GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3)
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_ace37bc353956e5299419b639ff1c0c01}{Gg\+Vector}} (const GLfloat \texorpdfstring{$\ast$}{*}a)
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_aced648e19ce3203bbe2db19026a59a33}{Gg\+Vector}} (GLfloat c)
+\item 
+\mbox{\hyperlink{classgg_1_1GgVector_a40c847639889f357bd233553fc3ace51}{Gg\+Vector}} (const Gg\+Vector \&v)=default
+\item 
+\mbox{\hyperlink{classgg_1_1GgVector_afd8ceac14ec84418fc17ad0174e699bb}{Gg\+Vector}} (Gg\+Vector \&\&v)=default
+\item 
+\mbox{\hyperlink{classgg_1_1GgVector_a14e101a2316d7ef891457a4063159c7e}{\texorpdfstring{$\sim$}{\string~}\+Gg\+Vector}} ()=default
+\item 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& \mbox{\hyperlink{classgg_1_1GgVector_aa87eb7621081b5fe44d14a806321aabb}{operator=}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v)=default
+\item 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& \mbox{\hyperlink{classgg_1_1GgVector_a2ac14c5d810fd71e75eb6e55ea693e2c}{operator=}} (\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&\&v)=default
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \mbox{\hyperlink{classgg_1_1GgVector_a3541ecc1ce62af143781ae38205ef3e1}{operator+}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) const noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \mbox{\hyperlink{classgg_1_1GgVector_a01f8d79e117ad206036977d4852ea029}{operator+}} (GLfloat c) const noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& \mbox{\hyperlink{classgg_1_1GgVector_a8de773ae73cb085e6b39c99487f96f5c}{operator+=}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& \mbox{\hyperlink{classgg_1_1GgVector_a353526d269de6158d965a189460c98da}{operator+=}} (GLfloat c) noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \mbox{\hyperlink{classgg_1_1GgVector_a0cbe7dd6b3b9d100f5c047d131a5bf1e}{operator-\/}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) const noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \mbox{\hyperlink{classgg_1_1GgVector_a1704e6bce7cd7a04f104581e6e2f53f3}{operator-\/}} (GLfloat c) const noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& \mbox{\hyperlink{classgg_1_1GgVector_affaaa87dd6c4bc0bfb85c7fe7aab551a}{operator-\/=}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& \mbox{\hyperlink{classgg_1_1GgVector_aff355bf227aca1811c778db78039d3fa}{operator-\/=}} (GLfloat c) noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \mbox{\hyperlink{classgg_1_1GgVector_a0614bb695e1712ffc0e0069772c8cf2c}{operator\texorpdfstring{$\ast$}{*}}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) const noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \mbox{\hyperlink{classgg_1_1GgVector_ae12b1a0f9757176da0d989173b51dd6d}{operator\texorpdfstring{$\ast$}{*}}} (GLfloat c) const noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& \mbox{\hyperlink{classgg_1_1GgVector_a6cb521386dc208b0c5028882d81d3454}{operator\texorpdfstring{$\ast$}{*}=}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& \mbox{\hyperlink{classgg_1_1GgVector_ad41359371e949f95ac6c4ca3efaa1239}{operator\texorpdfstring{$\ast$}{*}=}} (GLfloat c) noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \mbox{\hyperlink{classgg_1_1GgVector_a3c9ec6fecc079e33a8cc6be5b2a4b7d0}{operator/}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) const noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \mbox{\hyperlink{classgg_1_1GgVector_a4f5537eca7159ad4b5faf3877102a692}{operator/}} (GLfloat c) const noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& \mbox{\hyperlink{classgg_1_1GgVector_ac049e36760f62d4ebd1ffc2df552814b}{operator/=}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) noexcept
+\item 
+constexpr \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \& \mbox{\hyperlink{classgg_1_1GgVector_a7324171edeb2a4efc29c57e1e81058ab}{operator/=}} (GLfloat c) noexcept
+\item 
+GLfloat \mbox{\hyperlink{classgg_1_1GgVector_a82f2282affb26a02e7251a012e26f5fd}{dot3}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) const
+\item 
+GLfloat \mbox{\hyperlink{classgg_1_1GgVector_a00aad8dbf2cd33361e2b0e495f7f4b0d}{length3}} () const
+\item 
+GLfloat \mbox{\hyperlink{classgg_1_1GgVector_a784cd4bc882511beb2953014de7ba573}{distance3}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \mbox{\hyperlink{classgg_1_1GgVector_a5bac9976a7fe4be4a0e69c974153d745}{normalize3}} () const
+\item 
+GLfloat \mbox{\hyperlink{classgg_1_1GgVector_ad8d01932d2a37cd0cbbff0314857118d}{dot4}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) const
+\item 
+GLfloat \mbox{\hyperlink{classgg_1_1GgVector_a8b3b6d897a0ac8aa92d9f5cf20e628d3}{length4}} () const
+\item 
+GLfloat \mbox{\hyperlink{classgg_1_1GgVector_aa533c2f61342d5091ebb7802b11169f7}{distance4}} (const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&v) const
+\item 
+\mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \mbox{\hyperlink{classgg_1_1GgVector_ac71838f77dde35fdc627b96e6807462f}{normalize4}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+四元数. 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03483}{3483}} 行目に定義があります。
+
+
+
+\label{doc-constructors}
+\Hypertarget{classgg_1_1GgQuaternion_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}\index{gg::GgQuaternion@{gg::GgQuaternion}!GgQuaternion@{GgQuaternion}}
+\index{GgQuaternion@{GgQuaternion}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{GgQuaternion()}{GgQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f} 
+gg\+::\+Gg\+Quaternion\+::\+Gg\+Quaternion (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+コンストラクタ. \Hypertarget{classgg_1_1GgQuaternion_afb2520684171465ad9ce63ae102b21b4}\index{gg::GgQuaternion@{gg::GgQuaternion}!GgQuaternion@{GgQuaternion}}
+\index{GgQuaternion@{GgQuaternion}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{GgQuaternion()}{GgQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_afb2520684171465ad9ce63ae102b21b4} 
+gg\+::\+Gg\+Quaternion\+::\+Gg\+Quaternion (\begin{DoxyParamCaption}\item[{GLfloat}]{x}{, }\item[{GLfloat}]{y}{, }\item[{GLfloat}]{z}{, }\item[{GLfloat}]{w}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+コンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em x} & 四元数の x 要素. \\
+\hline
+{\em y} & 四元数の y 要素. \\
+\hline
+{\em z} & 四元数の z 要素. \\
+\hline
+{\em w} & 四元数の w 要素. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03512}{3512}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_afb2520684171465ad9ce63ae102b21b4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_ad283030bd29ee3806192b2048abe6901}\index{gg::GgQuaternion@{gg::GgQuaternion}!GgQuaternion@{GgQuaternion}}
+\index{GgQuaternion@{GgQuaternion}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{GgQuaternion()}{GgQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_ad283030bd29ee3806192b2048abe6901} 
+gg\+::\+Gg\+Quaternion\+::\+Gg\+Quaternion (\begin{DoxyParamCaption}\item[{GLfloat}]{c}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+コンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em c} & GLfloat 型の値. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03522}{3522}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ad283030bd29ee3806192b2048abe6901_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_ac796a2450075b410ca26b57b0ea0e2e7}\index{gg::GgQuaternion@{gg::GgQuaternion}!GgQuaternion@{GgQuaternion}}
+\index{GgQuaternion@{GgQuaternion}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{GgQuaternion()}{GgQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_ac796a2450075b410ca26b57b0ea0e2e7} 
+gg\+::\+Gg\+Quaternion\+::\+Gg\+Quaternion (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+コンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & 四元数を格納した GLfloat 型の 4 要素の配列変数. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03532}{3532}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ac796a2450075b410ca26b57b0ea0e2e7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a4704246cdfc0f5046fa44b1f090984ae}\index{gg::GgQuaternion@{gg::GgQuaternion}!GgQuaternion@{GgQuaternion}}
+\index{GgQuaternion@{GgQuaternion}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{GgQuaternion()}{GgQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a4704246cdfc0f5046fa44b1f090984ae} 
+gg\+::\+Gg\+Quaternion\+::\+Gg\+Quaternion (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+コンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & 四元数を格納した \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の変数. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03542}{3542}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a4704246cdfc0f5046fa44b1f090984ae_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a22620f1559247cf092b086511f410a24}\index{gg::GgQuaternion@{gg::GgQuaternion}!GgQuaternion@{GgQuaternion}}
+\index{GgQuaternion@{GgQuaternion}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{GgQuaternion()}{GgQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a22620f1559247cf092b086511f410a24} 
+gg\+::\+Gg\+Quaternion\+::\+Gg\+Quaternion (\begin{DoxyParamCaption}\item[{const Gg\+Quaternion \&}]{q}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+コピーコンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em q} & コピー元の四元数. \\
+\hline
+\end{DoxyParams}
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a22620f1559247cf092b086511f410a24_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a33ff51ae28bd45ba34b41d29259a9cef}\index{gg::GgQuaternion@{gg::GgQuaternion}!GgQuaternion@{GgQuaternion}}
+\index{GgQuaternion@{GgQuaternion}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{GgQuaternion()}{GgQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a33ff51ae28bd45ba34b41d29259a9cef} 
+gg\+::\+Gg\+Quaternion\+::\+Gg\+Quaternion (\begin{DoxyParamCaption}\item[{Gg\+Quaternion \&\&}]{q}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+ムーブコンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em q} & ムーブ元の四元数. \\
+\hline
+\end{DoxyParams}
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a33ff51ae28bd45ba34b41d29259a9cef_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a07f4a39c091d932ad8d5e37a4c0331c1}\index{gg::GgQuaternion@{gg::GgQuaternion}!````~GgQuaternion@{\texorpdfstring{$\sim$}{\string~}GgQuaternion}}
+\index{````~GgQuaternion@{\texorpdfstring{$\sim$}{\string~}GgQuaternion}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GgQuaternion()}{\string~GgQuaternion()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a07f4a39c091d932ad8d5e37a4c0331c1} 
+gg\+::\+Gg\+Quaternion\+::\texorpdfstring{$\sim$}{\string~}\+Gg\+Quaternion (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+デストラクタ. 
+
+\label{doc-func-members}
+\Hypertarget{classgg_1_1GgQuaternion_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{classgg_1_1GgQuaternion_a9f0d6f91c003bcf99fc222ddd3c7b828}\index{gg::GgQuaternion@{gg::GgQuaternion}!add@{add}}
+\index{add@{add}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a9f0d6f91c003bcf99fc222ddd3c7b828} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{q}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数に別の四元数を加算した結果を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em q} & \doxylink{classgg_1_1GgQuaternion}{Gg\+Quaternion} 型の四元数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+q を加えた四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03835}{3835}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a9f0d6f91c003bcf99fc222ddd3c7b828_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_ac38b2eb455f09133dfb7113b620658cd}\index{gg::GgQuaternion@{gg::GgQuaternion}!add@{add}}
+\index{add@{add}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_ac38b2eb455f09133dfb7113b620658cd} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数に別の四元数を加算した結果を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & 四元数を格納した \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+v を加えた四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03824}{3824}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ac38b2eb455f09133dfb7113b620658cd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a2a80ad1641502997b6cec18590bbb830}\index{gg::GgQuaternion@{gg::GgQuaternion}!add@{add}}
+\index{add@{add}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a2a80ad1641502997b6cec18590bbb830} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::add (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数に別の四元数を加算した結果を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & 四元数を格納した GLfloat 型の 4 要素の配列変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+a を加えた四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03813}{3813}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a2a80ad1641502997b6cec18590bbb830_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a5c776b116c954194ba457324c36b16b2}\index{gg::GgQuaternion@{gg::GgQuaternion}!add@{add}}
+\index{add@{add}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a5c776b116c954194ba457324c36b16b2} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::add (\begin{DoxyParamCaption}\item[{GLfloat}]{x}{, }\item[{GLfloat}]{y}{, }\item[{GLfloat}]{z}{, }\item[{GLfloat}]{w}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数に別の四元数を加算した結果を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em x} & 加える四元数の x 要素. \\
+\hline
+{\em y} & 加える四元数の y 要素. \\
+\hline
+{\em z} & 加える四元数の z 要素. \\
+\hline
+{\em w} & 加える四元数の w 要素. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+(x, y, z, w) を加えた四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03801}{3801}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a5c776b116c954194ba457324c36b16b2_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a5c776b116c954194ba457324c36b16b2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_aa6149d5fc7b04e147179857ada502d51}\index{gg::GgQuaternion@{gg::GgQuaternion}!conjugate@{conjugate}}
+\index{conjugate@{conjugate}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{conjugate()}{conjugate()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_aa6149d5fc7b04e147179857ada502d51} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::conjugate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+共役四元数に変換する.
+
+\begin{DoxyReturn}{戻り値}
+共役四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04472}{4472}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_aa6149d5fc7b04e147179857ada502d51_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classgg_1_1GgQuaternion_aa6149d5fc7b04e147179857ada502d51_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a3b79aae4f347fe8020f90260c81878f8}\index{gg::GgQuaternion@{gg::GgQuaternion}!divide@{divide}}
+\index{divide@{divide}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{divide()}{divide()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a3b79aae4f347fe8020f90260c81878f8} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::divide (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{q}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数を別の四元数で除算した結果を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em q} & \doxylink{classgg_1_1GgQuaternion}{Gg\+Quaternion} 型の四元数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+q で割った四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03984}{3984}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a3b79aae4f347fe8020f90260c81878f8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a4b44a2db7bfe4c0aa27358c2011360ec}\index{gg::GgQuaternion@{gg::GgQuaternion}!divide@{divide}}
+\index{divide@{divide}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{divide()}{divide()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a4b44a2db7bfe4c0aa27358c2011360ec} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::divide (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数を別の四元数で除算した結果を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & 四元数を格納した \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+v で割った四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03973}{3973}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a4b44a2db7bfe4c0aa27358c2011360ec_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a0d70c27c7840e8bcb1031e12669a9405}\index{gg::GgQuaternion@{gg::GgQuaternion}!divide@{divide}}
+\index{divide@{divide}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{divide()}{divide()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a0d70c27c7840e8bcb1031e12669a9405} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::divide (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数を別の四元数で除算した結果を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & 四元数を格納した GLfloat 型の 4 要素の配列変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+a で割った四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03959}{3959}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a0d70c27c7840e8bcb1031e12669a9405_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a0d9f4c9b28fc3424ef26aed061448287}\index{gg::GgQuaternion@{gg::GgQuaternion}!divide@{divide}}
+\index{divide@{divide}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{divide()}{divide()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a0d9f4c9b28fc3424ef26aed061448287} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::divide (\begin{DoxyParamCaption}\item[{GLfloat}]{x}{, }\item[{GLfloat}]{y}{, }\item[{GLfloat}]{z}{, }\item[{GLfloat}]{w}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数を別の四元数で除算した結果を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em x} & 割る四元数の x 要素. \\
+\hline
+{\em y} & 割る四元数の y 要素. \\
+\hline
+{\em z} & 割る四元数の z 要素. \\
+\hline
+{\em w} & 割る四元数の w 要素. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+(x, y, z, w) を割った四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03947}{3947}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a0d9f4c9b28fc3424ef26aed061448287_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a0d9f4c9b28fc3424ef26aed061448287_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a67653ac2a70b598147b4f2b1fd9cccab}\index{gg::GgQuaternion@{gg::GgQuaternion}!euler@{euler}}
+\index{euler@{euler}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{euler()}{euler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a67653ac2a70b598147b4f2b1fd9cccab} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::euler (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{e}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数をオイラー角 (e\mbox{[}0\mbox{]}, e\mbox{[}1\mbox{]}, e\mbox{[}2\mbox{]}) で回転した四元数を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em e} & オイラー角を表す \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の変数 (heading, pitch, roll) の参照. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+回転した四元数.
+\end{DoxyReturn}
+\begin{DoxyNote}{覚え書き}
+第 4 要素は無視する. 
+\end{DoxyNote}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04312}{4312}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a67653ac2a70b598147b4f2b1fd9cccab_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a65a6c0126b5f8a857046f8e1defca7cc}\index{gg::GgQuaternion@{gg::GgQuaternion}!euler@{euler}}
+\index{euler@{euler}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{euler()}{euler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a65a6c0126b5f8a857046f8e1defca7cc} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::euler (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{e}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数をオイラー角 (e\mbox{[}0\mbox{]}, e\mbox{[}1\mbox{]}, e\mbox{[}2\mbox{]}) で回転した四元数を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em e} & オイラー角を表す GLfloat 型の 3 要素の配列変数 (heading, pitch, roll). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+回転した四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04298}{4298}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a65a6c0126b5f8a857046f8e1defca7cc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_abdbd693a6cd020ed36293d3aec1b528c}\index{gg::GgQuaternion@{gg::GgQuaternion}!euler@{euler}}
+\index{euler@{euler}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{euler()}{euler()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_abdbd693a6cd020ed36293d3aec1b528c} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::euler (\begin{DoxyParamCaption}\item[{GLfloat}]{heading}{, }\item[{GLfloat}]{pitch}{, }\item[{GLfloat}]{roll}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数をオイラー角 (heading, pitch, roll) で回転した四元数を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em heading} & y 軸中心の回転角. \\
+\hline
+{\em pitch} & x 軸中心の回転角. \\
+\hline
+{\em roll} & z 軸中心の回転角. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+回転した四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04286}{4286}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_abdbd693a6cd020ed36293d3aec1b528c_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_abdbd693a6cd020ed36293d3aec1b528c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a694406f9dd114d0d804f33528db3c854}\index{gg::GgQuaternion@{gg::GgQuaternion}!get@{get}}
+\index{get@{get}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a694406f9dd114d0d804f33528db3c854} 
+void gg\+::\+Gg\+Quaternion\+::get (\begin{DoxyParamCaption}\item[{GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数を取り出す.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & 四元数を格納する GLfloat 型の 4 要素の配列変数. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04496}{4496}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgQuaternion_ac7a0d84adeee39ee8b04327c4f3add36}\index{gg::GgQuaternion@{gg::GgQuaternion}!getConjugateMatrix@{getConjugateMatrix}}
+\index{getConjugateMatrix@{getConjugateMatrix}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{getConjugateMatrix()}{getConjugateMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_ac7a0d84adeee39ee8b04327c4f3add36} 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} gg\+::\+Gg\+Quaternion\+::get\+Conjugate\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数の共役が表す回転の変換行列を取り出す.
+
+\begin{DoxyReturn}{戻り値}
+回転の変換を表す \doxylink{classgg_1_1GgMatrix}{Gg\+Matrix} 型の変換行列. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04563}{4563}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classgg_1_1GgQuaternion_ac7a0d84adeee39ee8b04327c4f3add36_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ac7a0d84adeee39ee8b04327c4f3add36_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a9bfa877fdb7e650afd1f5d760e510c4d}\index{gg::GgQuaternion@{gg::GgQuaternion}!getConjugateMatrix@{getConjugateMatrix}}
+\index{getConjugateMatrix@{getConjugateMatrix}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{getConjugateMatrix()}{getConjugateMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a9bfa877fdb7e650afd1f5d760e510c4d} 
+void gg\+::\+Gg\+Quaternion\+::get\+Conjugate\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \&}]{m}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数の共役が表す回転の変換行列を m に求める.
+
+
+\begin{DoxyParams}{引数}
+{\em m} & 回転の変換行列を格納する \doxylink{classgg_1_1GgMatrix}{Gg\+Matrix} 型の変数. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04553}{4553}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a9bfa877fdb7e650afd1f5d760e510c4d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a1c213182c3dd309dc27b189ff4800603}\index{gg::GgQuaternion@{gg::GgQuaternion}!getConjugateMatrix@{getConjugateMatrix}}
+\index{getConjugateMatrix@{getConjugateMatrix}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{getConjugateMatrix()}{getConjugateMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a1c213182c3dd309dc27b189ff4800603} 
+void gg\+::\+Gg\+Quaternion\+::get\+Conjugate\+Matrix (\begin{DoxyParamCaption}\item[{GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数の共役が表す回転の変換行列を a に求める.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & 回転の変換行列を格納する GLfloat 型の 16 要素の配列変数. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04541}{4541}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a1c213182c3dd309dc27b189ff4800603_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a6e39d8318296545ba0053eda5a71a6a8}\index{gg::GgQuaternion@{gg::GgQuaternion}!getMatrix@{getMatrix}}
+\index{getMatrix@{getMatrix}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{getMatrix()}{getMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a6e39d8318296545ba0053eda5a71a6a8} 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} gg\+::\+Gg\+Quaternion\+::get\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数が表す回転の変換行列を取り出す.
+
+\begin{DoxyReturn}{戻り値}
+回転の変換を表す \doxylink{classgg_1_1GgMatrix}{Gg\+Matrix} 型の変換行列. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04529}{4529}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classgg_1_1GgQuaternion_a6e39d8318296545ba0053eda5a71a6a8_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a6e39d8318296545ba0053eda5a71a6a8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a7a551bed8460169b910c5a6c7fdc389a}\index{gg::GgQuaternion@{gg::GgQuaternion}!getMatrix@{getMatrix}}
+\index{getMatrix@{getMatrix}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{getMatrix()}{getMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a7a551bed8460169b910c5a6c7fdc389a} 
+void gg\+::\+Gg\+Quaternion\+::get\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \&}]{m}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数が表す回転の変換行列を m に求める.
+
+
+\begin{DoxyParams}{引数}
+{\em m} & 回転の変換行列を格納する \doxylink{classgg_1_1GgMatrix}{Gg\+Matrix} 型の変数. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04519}{4519}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a7a551bed8460169b910c5a6c7fdc389a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a605ed85eaa2a82e0d3e2097002d5c583}\index{gg::GgQuaternion@{gg::GgQuaternion}!getMatrix@{getMatrix}}
+\index{getMatrix@{getMatrix}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{getMatrix()}{getMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a605ed85eaa2a82e0d3e2097002d5c583} 
+void gg\+::\+Gg\+Quaternion\+::get\+Matrix (\begin{DoxyParamCaption}\item[{GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数が表す回転の変換行列を a に求める.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & 回転の変換行列を格納する GLfloat 型の 16 要素の配列変数. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04509}{4509}} 行目に定義があります。
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a605ed85eaa2a82e0d3e2097002d5c583_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_ae76a0626497b4b3c203be499169a49af}\index{gg::GgQuaternion@{gg::GgQuaternion}!invert@{invert}}
+\index{invert@{invert}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{invert()}{invert()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_ae76a0626497b4b3c203be499169a49af} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::invert (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+逆元に変換する.
+
+\begin{DoxyReturn}{戻り値}
+四元数の逆元. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04484}{4484}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ae76a0626497b4b3c203be499169a49af_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classgg_1_1GgQuaternion_ae76a0626497b4b3c203be499169a49af_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a69f0f7d0a100bd3fa8ca71728bd02ec0}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadAdd@{loadAdd}}
+\index{loadAdd@{loadAdd}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadAdd()}{loadAdd()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a69f0f7d0a100bd3fa8ca71728bd02ec0} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{q}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数に別の四元数を加算した結果を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em q} & \doxylink{classgg_1_1GgQuaternion}{Gg\+Quaternion} 型の四元数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+q を加えた四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03639}{3639}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a69f0f7d0a100bd3fa8ca71728bd02ec0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a482ad92d4b0edc0ff941146d3c692abd}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadAdd@{loadAdd}}
+\index{loadAdd@{loadAdd}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadAdd()}{loadAdd()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a482ad92d4b0edc0ff941146d3c692abd} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数に別の四元数を加算した結果を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & 四元数を格納した \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+v を加えた四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03628}{3628}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a482ad92d4b0edc0ff941146d3c692abd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_affe2fa2c0d88961b5af9259ece604ff1}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadAdd@{loadAdd}}
+\index{loadAdd@{loadAdd}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadAdd()}{loadAdd()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_affe2fa2c0d88961b5af9259ece604ff1} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Add (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数に別の四元数を加算した結果を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & 四元数を格納した GLfloat 型の 4 要素の配列変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+a を加えた四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03617}{3617}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_affe2fa2c0d88961b5af9259ece604ff1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_ad0b43dbf846eb5c01192dfe63e3d131d}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadAdd@{loadAdd}}
+\index{loadAdd@{loadAdd}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadAdd()}{loadAdd()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_ad0b43dbf846eb5c01192dfe63e3d131d} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Add (\begin{DoxyParamCaption}\item[{GLfloat}]{x}{, }\item[{GLfloat}]{y}{, }\item[{GLfloat}]{z}{, }\item[{GLfloat}]{w}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数に別の四元数を加算した結果を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em x} & 加える四元数の x 要素. \\
+\hline
+{\em y} & 加える四元数の y 要素. \\
+\hline
+{\em z} & 加える四元数の z 要素. \\
+\hline
+{\em w} & 加える四元数の w 要素. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+(x, y, z, w) を加えた四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03601}{3601}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ad0b43dbf846eb5c01192dfe63e3d131d_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ad0b43dbf846eb5c01192dfe63e3d131d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a43b85fc04b7be9fa39859ecac808009d}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadConjugate@{loadConjugate}}
+\index{loadConjugate@{loadConjugate}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadConjugate()}{loadConjugate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a43b85fc04b7be9fa39859ecac808009d} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Conjugate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{q}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+引数に指定した四元数の共役四元数を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em q} & \doxylink{classgg_1_1GgQuaternion}{Gg\+Quaternion} 型の四元数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+共役四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04403}{4403}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a43b85fc04b7be9fa39859ecac808009d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_af9a9577581a5f9bbebd675998f741215}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadConjugate@{loadConjugate}}
+\index{loadConjugate@{loadConjugate}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadConjugate()}{loadConjugate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_af9a9577581a5f9bbebd675998f741215} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion}{gg\+::\+Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Conjugate (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption})}
+
+引数に指定した四元数の共役四元数を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & 四元数を格納した GLfloat 型の 4 要素の配列変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+共役四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l03393}{3393}} 行目に定義があります。
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_af9a9577581a5f9bbebd675998f741215_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a90f272d2f0306a012f574f2b710fea44}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadDivide@{loadDivide}}
+\index{loadDivide@{loadDivide}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadDivide()}{loadDivide()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a90f272d2f0306a012f574f2b710fea44} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Divide (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{q}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元を別の四元数で除算した結果を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em q} & \doxylink{classgg_1_1GgQuaternion}{Gg\+Quaternion} 型の四元数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+q で割った四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03787}{3787}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a90f272d2f0306a012f574f2b710fea44_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_ac26325cc6cb393f6632f7e854a9df643}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadDivide@{loadDivide}}
+\index{loadDivide@{loadDivide}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadDivide()}{loadDivide()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_ac26325cc6cb393f6632f7e854a9df643} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Divide (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元を別の四元数で除算した結果を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & 四元数を格納した \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+v で割った四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03776}{3776}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ac26325cc6cb393f6632f7e854a9df643_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a7491c56443f52e93324f75485983cd3a}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadDivide@{loadDivide}}
+\index{loadDivide@{loadDivide}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadDivide()}{loadDivide()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a7491c56443f52e93324f75485983cd3a} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Divide (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元を別の四元数で除算した結果を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & 四元数を格納した GLfloat 型の 4 要素の配列変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+a で割った四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03765}{3765}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a7491c56443f52e93324f75485983cd3a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_ab212808c51a79a9bf730acebd4225247}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadDivide@{loadDivide}}
+\index{loadDivide@{loadDivide}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadDivide()}{loadDivide()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_ab212808c51a79a9bf730acebd4225247} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Divide (\begin{DoxyParamCaption}\item[{GLfloat}]{x}{, }\item[{GLfloat}]{y}{, }\item[{GLfloat}]{z}{, }\item[{GLfloat}]{w}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元を別の四元数で除算した結果を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em x} & 割る四元数の x 要素. \\
+\hline
+{\em y} & 割る四元数の y 要素. \\
+\hline
+{\em z} & 割る四元数の z 要素. \\
+\hline
+{\em w} & 割る四元数の w 要素. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+(x, y, z, w) を割った四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03753}{3753}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ab212808c51a79a9bf730acebd4225247_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ab212808c51a79a9bf730acebd4225247_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a471642fc24c7f2af4c7d587eb079c0cd}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadEuler@{loadEuler}}
+\index{loadEuler@{loadEuler}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadEuler()}{loadEuler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a471642fc24c7f2af4c7d587eb079c0cd} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Euler (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{e}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+オイラー角 (e\mbox{[}0\mbox{]}, e\mbox{[}1\mbox{]}, e\mbox{[}2\mbox{]}) で与えられた回転を表す四元数を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em e} & オイラー角を表す GLfloat 型の 3 要素の配列変数 (heading, pitch, roll). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+格納した回転を表す四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04273}{4273}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a471642fc24c7f2af4c7d587eb079c0cd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a3a1be65570aae13d963e894f02c88beb}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadEuler@{loadEuler}}
+\index{loadEuler@{loadEuler}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadEuler()}{loadEuler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a3a1be65570aae13d963e894f02c88beb} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion}{gg\+::\+Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Euler (\begin{DoxyParamCaption}\item[{GLfloat}]{heading}{, }\item[{GLfloat}]{pitch}{, }\item[{GLfloat}]{roll}{}\end{DoxyParamCaption})}
+
+オイラー角 (heading, pitch, roll) で与えられた回転を表す四元数を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em heading} & y 軸中心の回転角. \\
+\hline
+{\em pitch} & x 軸中心の回転角. \\
+\hline
+{\em roll} & z 軸中心の回転角. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+格納した回転を表す四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l03365}{3365}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a3a1be65570aae13d963e894f02c88beb_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a3a1be65570aae13d963e894f02c88beb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a5570b27f958ccde717bc997cca85a0fd}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadIdentity@{loadIdentity}}
+\index{loadIdentity@{loadIdentity}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadIdentity()}{loadIdentity()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a5570b27f958ccde717bc997cca85a0fd} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Identity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+単位元を格納する.
+
+\begin{DoxyReturn}{戻り値}
+格納された単位元. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04123}{4123}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a5570b27f958ccde717bc997cca85a0fd_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a5570b27f958ccde717bc997cca85a0fd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a78779d311b64b91e00bdee479fd490ca}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadInvert@{loadInvert}}
+\index{loadInvert@{loadInvert}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadInvert()}{loadInvert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a78779d311b64b91e00bdee479fd490ca} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Invert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{q}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+引数に指定した四元数の逆元を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em q} & \doxylink{classgg_1_1GgQuaternion}{Gg\+Quaternion} 型の四元数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+四元数の逆元. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04422}{4422}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a78779d311b64b91e00bdee479fd490ca_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a46f9d1612fdd1fc39db6c8ba7e574a86}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadInvert@{loadInvert}}
+\index{loadInvert@{loadInvert}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadInvert()}{loadInvert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a46f9d1612fdd1fc39db6c8ba7e574a86} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion}{gg\+::\+Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Invert (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption})}
+
+引数に指定した四元数の逆元を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & 四元数を格納した GLfloat 型の 4 要素の配列変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+四元数の逆元. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l03407}{3407}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a46f9d1612fdd1fc39db6c8ba7e574a86_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a46f9d1612fdd1fc39db6c8ba7e574a86_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a267f6a8171f8676956833ff1cb98878f}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadMatrix@{loadMatrix}}
+\index{loadMatrix@{loadMatrix}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadMatrix()}{loadMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a267f6a8171f8676956833ff1cb98878f} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Matrix (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \&}]{m}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+回転の変換行列 m を表す四元数を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em m} & \doxylink{classgg_1_1GgMatrix}{Gg\+Matrix} 型の変換行列. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+m による回転の変換に相当する四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04113}{4113}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a267f6a8171f8676956833ff1cb98878f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_ad0f6e1a2521ec6594818f67eda133c3d}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadMatrix@{loadMatrix}}
+\index{loadMatrix@{loadMatrix}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadMatrix()}{loadMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_ad0f6e1a2521ec6594818f67eda133c3d} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Matrix (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+回転の変換行列を表す四元数を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & GLfloat 型の 16 要素の変換行列. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+a による回転の変換に相当する四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04101}{4101}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ad0f6e1a2521ec6594818f67eda133c3d_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ad0f6e1a2521ec6594818f67eda133c3d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a518c5ce498e0375156b494091670aa59}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadMultiply@{loadMultiply}}
+\index{loadMultiply@{loadMultiply}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadMultiply()}{loadMultiply()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a518c5ce498e0375156b494091670aa59} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{q}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数に別の四元数を乗算した結果を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em q} & \doxylink{classgg_1_1GgQuaternion}{Gg\+Quaternion} 型の四元数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+q を乗じた四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03739}{3739}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a518c5ce498e0375156b494091670aa59_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a28466c146ec1217765b028025a001777}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadMultiply@{loadMultiply}}
+\index{loadMultiply@{loadMultiply}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadMultiply()}{loadMultiply()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a28466c146ec1217765b028025a001777} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数に別の四元数を乗算した結果を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & 四元数を格納した \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+v を乗じた四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03728}{3728}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a28466c146ec1217765b028025a001777_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a619f0507b382522d4bd262699c49e8fe}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadMultiply@{loadMultiply}}
+\index{loadMultiply@{loadMultiply}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadMultiply()}{loadMultiply()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a619f0507b382522d4bd262699c49e8fe} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Multiply (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数に別の四元数を乗算した結果を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & 四元数を格納した GLfloat 型の 4 要素の配列変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+a を乗じた四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03717}{3717}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a619f0507b382522d4bd262699c49e8fe_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a62e4b4ebf3eeca028c2a085d3d407553}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadMultiply@{loadMultiply}}
+\index{loadMultiply@{loadMultiply}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadMultiply()}{loadMultiply()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a62e4b4ebf3eeca028c2a085d3d407553} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Multiply (\begin{DoxyParamCaption}\item[{GLfloat}]{x}{, }\item[{GLfloat}]{y}{, }\item[{GLfloat}]{z}{, }\item[{GLfloat}]{w}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数に別の四元数を乗算した結果を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em x} & 掛ける四元数の x 要素. \\
+\hline
+{\em y} & 掛ける四元数の y 要素. \\
+\hline
+{\em z} & 掛ける四元数の z 要素. \\
+\hline
+{\em w} & 掛ける四元数の w 要素. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+(x, y, z, w) を掛けた四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03705}{3705}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a62e4b4ebf3eeca028c2a085d3d407553_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a62e4b4ebf3eeca028c2a085d3d407553_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a7829ffa84538358008d7e37c247308e1}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadNormalize@{loadNormalize}}
+\index{loadNormalize@{loadNormalize}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadNormalize()}{loadNormalize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a7829ffa84538358008d7e37c247308e1} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Normalize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{q}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+引数に指定した四元数を正規化して格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em q} & \doxylink{classgg_1_1GgQuaternion}{Gg\+Quaternion} 型の四元数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+正規化された四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04384}{4384}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a7829ffa84538358008d7e37c247308e1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_af529d76bbf4048ad56625575c7af3668}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadNormalize@{loadNormalize}}
+\index{loadNormalize@{loadNormalize}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadNormalize()}{loadNormalize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_af529d76bbf4048ad56625575c7af3668} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion}{gg\+::\+Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Normalize (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption})}
+
+引数に指定した四元数を正規化して格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & 四元数を格納した GLfloat 型の 4 要素の配列変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+正規化された四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l03381}{3381}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_af529d76bbf4048ad56625575c7af3668_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_af529d76bbf4048ad56625575c7af3668_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a4400b1921ecc23b0607e9800742342e6}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadRotate@{loadRotate}}
+\index{loadRotate@{loadRotate}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadRotate()}{loadRotate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a4400b1921ecc23b0607e9800742342e6} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Rotate (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+(v\mbox{[}0\mbox{]}, v\mbox{[}1\mbox{]}, v\mbox{[}2\mbox{]}) を軸として角度 v\mbox{[}3\mbox{]} 回転する四元数を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & 軸ベクトルと回転角を格納した GLfloat 型の 4 要素の配列変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+格納された回転を表す四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04157}{4157}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a4400b1921ecc23b0607e9800742342e6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a48a3652e3eeab6b9b34a404cd5f1dddf}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadRotate@{loadRotate}}
+\index{loadRotate@{loadRotate}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadRotate()}{loadRotate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a48a3652e3eeab6b9b34a404cd5f1dddf} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Rotate (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{v}{, }\item[{GLfloat}]{a}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+(v\mbox{[}0\mbox{]}, v\mbox{[}1\mbox{]}, v\mbox{[}2\mbox{]}) を軸として角度 a 回転する四元数を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & 軸ベクトルを表す GLfloat 型の 3 要素の配列変数. \\
+\hline
+{\em a} & 回転角. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+格納された回転を表す四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04146}{4146}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a48a3652e3eeab6b9b34a404cd5f1dddf_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a82d0620de0f023642b08d7e0f23e0687}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadRotate@{loadRotate}}
+\index{loadRotate@{loadRotate}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadRotate()}{loadRotate()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a82d0620de0f023642b08d7e0f23e0687} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion}{gg\+::\+Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Rotate (\begin{DoxyParamCaption}\item[{GLfloat}]{x}{, }\item[{GLfloat}]{y}{, }\item[{GLfloat}]{z}{, }\item[{GLfloat}]{a}{}\end{DoxyParamCaption})}
+
+(x, y, z) を軸として角度 a 回転する四元数を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em x} & 軸ベクトルの x 成分. \\
+\hline
+{\em y} & 軸ベクトルの y 成分. \\
+\hline
+{\em z} & 軸ベクトルの z 成分. \\
+\hline
+{\em a} & 回転角. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+格納された回転を表す四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l03307}{3307}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a82d0620de0f023642b08d7e0f23e0687_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a82d0620de0f023642b08d7e0f23e0687_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a6f9cd8893b1adbbaf17588b1ba5ee9c3}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadRotateX@{loadRotateX}}
+\index{loadRotateX@{loadRotateX}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadRotateX()}{loadRotateX()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a6f9cd8893b1adbbaf17588b1ba5ee9c3} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion}{gg\+::\+Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+RotateX (\begin{DoxyParamCaption}\item[{GLfloat}]{a}{}\end{DoxyParamCaption})}
+
+x 軸中心に角度 a 回転する四元数を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & 回転角. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+格納された回転を表す四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l03329}{3329}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a6f9cd8893b1adbbaf17588b1ba5ee9c3_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a6f9cd8893b1adbbaf17588b1ba5ee9c3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a308e08f78d2dfeadc2efbcd7a470d6bd}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadRotateY@{loadRotateY}}
+\index{loadRotateY@{loadRotateY}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadRotateY()}{loadRotateY()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a308e08f78d2dfeadc2efbcd7a470d6bd} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion}{gg\+::\+Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+RotateY (\begin{DoxyParamCaption}\item[{GLfloat}]{a}{}\end{DoxyParamCaption})}
+
+y 軸中心に角度 a 回転する四元数を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & 回転角. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+格納された回転を表す四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l03341}{3341}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a308e08f78d2dfeadc2efbcd7a470d6bd_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a308e08f78d2dfeadc2efbcd7a470d6bd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a345f63c1d1278daece7b1a09d279d74a}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadRotateZ@{loadRotateZ}}
+\index{loadRotateZ@{loadRotateZ}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadRotateZ()}{loadRotateZ()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a345f63c1d1278daece7b1a09d279d74a} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion}{gg\+::\+Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+RotateZ (\begin{DoxyParamCaption}\item[{GLfloat}]{a}{}\end{DoxyParamCaption})}
+
+z 軸中心に角度 a 回転する四元数を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & 回転角. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+格納された回転を表す四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l03353}{3353}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a345f63c1d1278daece7b1a09d279d74a_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a345f63c1d1278daece7b1a09d279d74a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_aff9ca9585790c621dec95e18aa7c9c57}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadSlerp@{loadSlerp}}
+\index{loadSlerp@{loadSlerp}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadSlerp()}{loadSlerp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_aff9ca9585790c621dec95e18aa7c9c57} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Slerp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{q}{, }\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{r}{, }\item[{GLfloat}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+球面線形補間の結果を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em q} & \doxylink{classgg_1_1GgQuaternion}{Gg\+Quaternion} 型の四元数. \\
+\hline
+{\em r} & \doxylink{classgg_1_1GgQuaternion}{Gg\+Quaternion} 型の四元数. \\
+\hline
+{\em t} & 補間パラメータ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+格納した q, r を t で内分した四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04339}{4339}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_aff9ca9585790c621dec95e18aa7c9c57_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_aeacb9e8dbdcc7854fca46b7b88ec9d57}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadSlerp@{loadSlerp}}
+\index{loadSlerp@{loadSlerp}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadSlerp()}{loadSlerp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_aeacb9e8dbdcc7854fca46b7b88ec9d57} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Slerp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{q}{, }\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{, }\item[{GLfloat}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+球面線形補間の結果を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em q} & \doxylink{classgg_1_1GgQuaternion}{Gg\+Quaternion} 型の四元数. \\
+\hline
+{\em a} & 四元数を格納した GLfloat 型の 4 要素の配列変数. \\
+\hline
+{\em t} & 補間パラメータ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+格納した q, a を t で内分した四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04352}{4352}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_aeacb9e8dbdcc7854fca46b7b88ec9d57_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_aec0568f0aa49b7038eee69c3fec3f510}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadSlerp@{loadSlerp}}
+\index{loadSlerp@{loadSlerp}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadSlerp()}{loadSlerp()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_aec0568f0aa49b7038eee69c3fec3f510} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Slerp (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{, }\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{q}{, }\item[{GLfloat}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+球面線形補間の結果を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & 四元数を格納した GLfloat 型の 4 要素の配列変数. \\
+\hline
+{\em q} & \doxylink{classgg_1_1GgQuaternion}{Gg\+Quaternion} 型の四元数. \\
+\hline
+{\em t} & 補間パラメータ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+格納した a, q を t で内分した四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04365}{4365}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_aec0568f0aa49b7038eee69c3fec3f510_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_aa2ca6c2380083877c0d1014650f91d77}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadSlerp@{loadSlerp}}
+\index{loadSlerp@{loadSlerp}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadSlerp()}{loadSlerp()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_aa2ca6c2380083877c0d1014650f91d77} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Slerp (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{, }\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{b}{, }\item[{GLfloat}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+球面線形補間の結果を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & 四元数を格納した GLfloat 型の 4 要素の配列変数. \\
+\hline
+{\em b} & 四元数を格納した GLfloat 型の 4 要素の配列変数. \\
+\hline
+{\em t} & 補間パラメータ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+格納した a, b を t で内分した四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04325}{4325}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_aa2ca6c2380083877c0d1014650f91d77_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_aa2ca6c2380083877c0d1014650f91d77_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_aea8fb5c63a8ef3c656e69022bdaeeb55}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadSubtract@{loadSubtract}}
+\index{loadSubtract@{loadSubtract}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadSubtract()}{loadSubtract()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_aea8fb5c63a8ef3c656e69022bdaeeb55} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{q}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数から別の四元数を減算した結果を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em q} & \doxylink{classgg_1_1GgQuaternion}{Gg\+Quaternion} 型の四元数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+q を引いた四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03691}{3691}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_aea8fb5c63a8ef3c656e69022bdaeeb55_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_aff9fb59fc88f68cf0d595b27aab31e8b}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadSubtract@{loadSubtract}}
+\index{loadSubtract@{loadSubtract}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadSubtract()}{loadSubtract()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_aff9fb59fc88f68cf0d595b27aab31e8b} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数から別の四元数を減算した結果を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & 四元数を格納した \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+v を引いた四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03680}{3680}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_aff9fb59fc88f68cf0d595b27aab31e8b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a2f19017a52c028e1be588c7a97fb95a2}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadSubtract@{loadSubtract}}
+\index{loadSubtract@{loadSubtract}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadSubtract()}{loadSubtract()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a2f19017a52c028e1be588c7a97fb95a2} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Subtract (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数から別の四元数を減算した結果を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & 四元数を格納した GLfloat 型の 4 要素の配列変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+a を引いた四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03669}{3669}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a2f19017a52c028e1be588c7a97fb95a2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_ae4f92a1abd12399ed4dbfdfd6412b85e}\index{gg::GgQuaternion@{gg::GgQuaternion}!loadSubtract@{loadSubtract}}
+\index{loadSubtract@{loadSubtract}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{loadSubtract()}{loadSubtract()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_ae4f92a1abd12399ed4dbfdfd6412b85e} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::load\+Subtract (\begin{DoxyParamCaption}\item[{GLfloat}]{x}{, }\item[{GLfloat}]{y}{, }\item[{GLfloat}]{z}{, }\item[{GLfloat}]{w}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数から別の四元数を減算した結果を格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em x} & 引く四元数の x 要素. \\
+\hline
+{\em y} & 引く四元数の y 要素. \\
+\hline
+{\em z} & 引く四元数の z 要素. \\
+\hline
+{\em w} & 引く四元数の w 要素. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+(x, y, z, w) を引いた四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03653}{3653}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ae4f92a1abd12399ed4dbfdfd6412b85e_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ae4f92a1abd12399ed4dbfdfd6412b85e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a27839a23639579fda888036fce688d94}\index{gg::GgQuaternion@{gg::GgQuaternion}!multiply@{multiply}}
+\index{multiply@{multiply}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{multiply()}{multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a27839a23639579fda888036fce688d94} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{q}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数に別の四元数を乗算した結果を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em q} & \doxylink{classgg_1_1GgQuaternion}{Gg\+Quaternion} 型の四元数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+q を掛けた四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03933}{3933}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a27839a23639579fda888036fce688d94_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a0cd304d7225291c1aa18e84075ba30e7}\index{gg::GgQuaternion@{gg::GgQuaternion}!multiply@{multiply}}
+\index{multiply@{multiply}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{multiply()}{multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a0cd304d7225291c1aa18e84075ba30e7} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数に別の四元数を乗算した結果を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & 四元数を格納した \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+v を掛けた四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03922}{3922}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a0cd304d7225291c1aa18e84075ba30e7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_afb6e7a2b4e80ab9720a07d5b030daa9a}\index{gg::GgQuaternion@{gg::GgQuaternion}!multiply@{multiply}}
+\index{multiply@{multiply}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{multiply()}{multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_afb6e7a2b4e80ab9720a07d5b030daa9a} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::multiply (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数に別の四元数を乗算した結果を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & 四元数を格納した GLfloat 型の 4 要素の配列変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+a を掛けた四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03909}{3909}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_afb6e7a2b4e80ab9720a07d5b030daa9a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a010873f8c906d3c878529d7fccc5e654}\index{gg::GgQuaternion@{gg::GgQuaternion}!multiply@{multiply}}
+\index{multiply@{multiply}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{multiply()}{multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a010873f8c906d3c878529d7fccc5e654} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::multiply (\begin{DoxyParamCaption}\item[{GLfloat}]{x}{, }\item[{GLfloat}]{y}{, }\item[{GLfloat}]{z}{, }\item[{GLfloat}]{w}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数に別の四元数を乗算した結果を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em x} & 掛ける四元数の x 要素. \\
+\hline
+{\em y} & 掛ける四元数の y 要素. \\
+\hline
+{\em z} & 掛ける四元数の z 要素. \\
+\hline
+{\em w} & 掛ける四元数の w 要素. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+(x, y, z, w) を掛けた四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03897}{3897}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a010873f8c906d3c878529d7fccc5e654_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a7948622a1020c4b8cff6a699cbea8696}\index{gg::GgQuaternion@{gg::GgQuaternion}!norm@{norm}}
+\index{norm@{norm}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{norm()}{norm()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a7948622a1020c4b8cff6a699cbea8696} 
+GLfloat gg\+::\+Gg\+Quaternion\+::norm (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数のノルムを求める.
+
+\begin{DoxyReturn}{戻り値}
+四元数のノルム. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03587}{3587}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a7948622a1020c4b8cff6a699cbea8696_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{classgg_1_1GgQuaternion_a7948622a1020c4b8cff6a699cbea8696_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a8667e065b18d857126f5481d0be8d527}\index{gg::GgQuaternion@{gg::GgQuaternion}!normalize@{normalize}}
+\index{normalize@{normalize}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a8667e065b18d857126f5481d0be8d527} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::normalize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+正規化する.
+
+\begin{DoxyReturn}{戻り値}
+正規化された四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04460}{4460}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a8667e065b18d857126f5481d0be8d527_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a8667e065b18d857126f5481d0be8d527_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a27ecd995d49c45f327b929245209e5d5}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a27ecd995d49c45f327b929245209e5d5} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{q}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04078}{4078}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a27ecd995d49c45f327b929245209e5d5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a4734934212e1a68561a53a5b6afc2284}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a4734934212e1a68561a53a5b6afc2284} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04074}{4074}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a4734934212e1a68561a53a5b6afc2284_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_af9f61507e493e0953c12eeac5856a211}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_af9f61507e493e0953c12eeac5856a211} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04070}{4070}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_af9f61507e493e0953c12eeac5856a211_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_af9f61507e493e0953c12eeac5856a211_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a59c994d71db6de3acf9ce85ab351e170}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}}
+\index{operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a59c994d71db6de3acf9ce85ab351e170} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::operator\texorpdfstring{$\ast$}{*}= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{q}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04030}{4030}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a59c994d71db6de3acf9ce85ab351e170_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_aacf8bcdfdee4ddff74b8d6dad1a05ecb}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}}
+\index{operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_aacf8bcdfdee4ddff74b8d6dad1a05ecb} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::operator\texorpdfstring{$\ast$}{*}= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04026}{4026}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_aacf8bcdfdee4ddff74b8d6dad1a05ecb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a497525637b98332b7571b57c319f672d}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}}
+\index{operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a497525637b98332b7571b57c319f672d} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::operator\texorpdfstring{$\ast$}{*}= (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04022}{4022}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a497525637b98332b7571b57c319f672d_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a497525637b98332b7571b57c319f672d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_ac3c2cbeb20d1ab86e8900cef918718b3}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator+@{operator+}}
+\index{operator+@{operator+}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_ac3c2cbeb20d1ab86e8900cef918718b3} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{q}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04054}{4054}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ac3c2cbeb20d1ab86e8900cef918718b3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_ade17d80d5e710bf94f0d4061df507d93}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator+@{operator+}}
+\index{operator+@{operator+}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_ade17d80d5e710bf94f0d4061df507d93} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04050}{4050}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ade17d80d5e710bf94f0d4061df507d93_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a4f536343e54923de7d58507a86edcde0}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator+@{operator+}}
+\index{operator+@{operator+}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a4f536343e54923de7d58507a86edcde0} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::operator+ (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04046}{4046}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a4f536343e54923de7d58507a86edcde0_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a4f536343e54923de7d58507a86edcde0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_aa86d4c5f3e16b44741cd5b8c6b8237ba}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_aa86d4c5f3e16b44741cd5b8c6b8237ba} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{q}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04006}{4006}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_aa86d4c5f3e16b44741cd5b8c6b8237ba_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a1c60aac088934be6a86e18a98ec7a426}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a1c60aac088934be6a86e18a98ec7a426} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04002}{4002}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a1c60aac088934be6a86e18a98ec7a426_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_aa3cfaae9bec190c2201663cd810de9a1}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_aa3cfaae9bec190c2201663cd810de9a1} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::operator+= (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03998}{3998}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_aa3cfaae9bec190c2201663cd810de9a1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a6f252e4145c521b3203c5aa55efad565}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a6f252e4145c521b3203c5aa55efad565} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{q}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04066}{4066}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a6f252e4145c521b3203c5aa55efad565_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a9c2658eaec948dc9e6f2e0f7c0c87287}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a9c2658eaec948dc9e6f2e0f7c0c87287} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04062}{4062}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a9c2658eaec948dc9e6f2e0f7c0c87287_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_ab7f35213532d8d0d57fd2667388626f8}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_ab7f35213532d8d0d57fd2667388626f8} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::operator-\/ (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04058}{4058}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ab7f35213532d8d0d57fd2667388626f8_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ab7f35213532d8d0d57fd2667388626f8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_aa1379091e843a1672a8aeae250a7abb1}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_aa1379091e843a1672a8aeae250a7abb1} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{q}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04018}{4018}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_aa1379091e843a1672a8aeae250a7abb1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_ae8da90eb5a723a60397bd584bc4feb76}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_ae8da90eb5a723a60397bd584bc4feb76} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04014}{4014}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ae8da90eb5a723a60397bd584bc4feb76_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a19849468f39f0371884696892578b52f}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a19849468f39f0371884696892578b52f} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::operator-\/= (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04010}{4010}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a19849468f39f0371884696892578b52f_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a19849468f39f0371884696892578b52f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a824ab3b06f1194f5f43f343596113ca7}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator/@{operator/}}
+\index{operator/@{operator/}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a824ab3b06f1194f5f43f343596113ca7} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::operator/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{q}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04090}{4090}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a824ab3b06f1194f5f43f343596113ca7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_af2046f124013908bbc115020b4573fb8}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator/@{operator/}}
+\index{operator/@{operator/}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_af2046f124013908bbc115020b4573fb8} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::operator/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04086}{4086}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_af2046f124013908bbc115020b4573fb8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a9a390b8f63028ecd4c79b95f7eb0515f}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator/@{operator/}}
+\index{operator/@{operator/}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a9a390b8f63028ecd4c79b95f7eb0515f} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::operator/ (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04082}{4082}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a9a390b8f63028ecd4c79b95f7eb0515f_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a9a390b8f63028ecd4c79b95f7eb0515f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a26c2bb3780f51dcc7a20ccbbc4865b90}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator/=()}{operator/=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a26c2bb3780f51dcc7a20ccbbc4865b90} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::operator/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{q}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04042}{4042}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a26c2bb3780f51dcc7a20ccbbc4865b90_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a9eb399ffee386f8e80b44e942a4b11ea}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator/=()}{operator/=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a9eb399ffee386f8e80b44e942a4b11ea} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::operator/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04038}{4038}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a9eb399ffee386f8e80b44e942a4b11ea_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_acb443d6b9fd2cf90942ec8b77172528c}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator/=()}{operator/=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_acb443d6b9fd2cf90942ec8b77172528c} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::operator/= (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04034}{4034}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_acb443d6b9fd2cf90942ec8b77172528c_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_acb443d6b9fd2cf90942ec8b77172528c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_ade4e8ace3b9839738eea02c4e2be70a1}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator=@{operator=}}
+\index{operator=@{operator=}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_ade4e8ace3b9839738eea02c4e2be70a1} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{q}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+代入演算子.
+
+
+\begin{DoxyParams}{引数}
+{\em q} & 代入元の四元数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+代入後のこの四元数の参照. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ade4e8ace3b9839738eea02c4e2be70a1_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ade4e8ace3b9839738eea02c4e2be70a1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_ae1e4c3e0920aca13ab3085eea15e576e}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator=@{operator=}}
+\index{operator=@{operator=}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_ae1e4c3e0920aca13ab3085eea15e576e} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03994}{3994}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ae1e4c3e0920aca13ab3085eea15e576e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_aec921491e40e285733f049306c816838}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator=@{operator=}}
+\index{operator=@{operator=}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_aec921491e40e285733f049306c816838} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::operator= (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03990}{3990}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_aec921491e40e285733f049306c816838_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_aedf5714476151289c6c41d50c5507c2b}\index{gg::GgQuaternion@{gg::GgQuaternion}!operator=@{operator=}}
+\index{operator=@{operator=}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_aedf5714476151289c6c41d50c5507c2b} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \& gg\+::\+Gg\+Quaternion\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&\&}]{q}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+ムーブ代入演算子.
+
+
+\begin{DoxyParams}{引数}
+{\em q} & ムーブ代入元の四元数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+ムーブ代入後のこの四元数の参照. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_aedf5714476151289c6c41d50c5507c2b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a95b9078ffd6b9724aff62e9628f09b4c}\index{gg::GgQuaternion@{gg::GgQuaternion}!rotate@{rotate}}
+\index{rotate@{rotate}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a95b9078ffd6b9724aff62e9628f09b4c} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::rotate (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{v}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数を (v\mbox{[}0\mbox{]}, v\mbox{[}1\mbox{]}, v\mbox{[}2\mbox{]}) を軸として角度 v\mbox{[}3\mbox{]} 回転した四元数を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & 軸ベクトルを表す GLfloat 型の 4 要素の配列変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+回転した四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04219}{4219}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a95b9078ffd6b9724aff62e9628f09b4c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a76e923f92644fa559d24040ff994ea08}\index{gg::GgQuaternion@{gg::GgQuaternion}!rotate@{rotate}}
+\index{rotate@{rotate}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a76e923f92644fa559d24040ff994ea08} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::rotate (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{v}{, }\item[{GLfloat}]{a}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数を (v\mbox{[}0\mbox{]}, v\mbox{[}1\mbox{]}, v\mbox{[}2\mbox{]}) を軸として角度 a 回転した四元数を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & 軸ベクトルを表す GLfloat 型の 3 要素の配列変数. \\
+\hline
+{\em a} & 回転角. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+回転した四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04208}{4208}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a76e923f92644fa559d24040ff994ea08_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_ab0bf5792aa2d8f141e90a0f37ea2ff2a}\index{gg::GgQuaternion@{gg::GgQuaternion}!rotate@{rotate}}
+\index{rotate@{rotate}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_ab0bf5792aa2d8f141e90a0f37ea2ff2a} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::rotate (\begin{DoxyParamCaption}\item[{GLfloat}]{x}{, }\item[{GLfloat}]{y}{, }\item[{GLfloat}]{z}{, }\item[{GLfloat}]{a}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数を (x, y, z) を軸として角度 a 回転した四元数を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em x} & 軸ベクトルの x 成分. \\
+\hline
+{\em y} & 軸ベクトルの y 成分. \\
+\hline
+{\em z} & 軸ベクトルの z 成分. \\
+\hline
+{\em a} & 回転角. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+回転した四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04195}{4195}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ab0bf5792aa2d8f141e90a0f37ea2ff2a_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ab0bf5792aa2d8f141e90a0f37ea2ff2a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_ab9eaade499ecbc3a8de7dea494f3b7c6}\index{gg::GgQuaternion@{gg::GgQuaternion}!rotateX@{rotateX}}
+\index{rotateX@{rotateX}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{rotateX()}{rotateX()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_ab9eaade499ecbc3a8de7dea494f3b7c6} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::rotateX (\begin{DoxyParamCaption}\item[{GLfloat}]{a}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数を x 軸中心に角度 a 回転した四元数を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & 回転角. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+回転した四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04230}{4230}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ab9eaade499ecbc3a8de7dea494f3b7c6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a014d3ef2b47e5981860388ef3119077a}\index{gg::GgQuaternion@{gg::GgQuaternion}!rotateY@{rotateY}}
+\index{rotateY@{rotateY}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{rotateY()}{rotateY()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a014d3ef2b47e5981860388ef3119077a} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::rotateY (\begin{DoxyParamCaption}\item[{GLfloat}]{a}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数を y 軸中心に角度 a 回転した四元数を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & 回転角. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+回転した四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04241}{4241}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a014d3ef2b47e5981860388ef3119077a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a5640308c334e9de115adc573ac33f3ce}\index{gg::GgQuaternion@{gg::GgQuaternion}!rotateZ@{rotateZ}}
+\index{rotateZ@{rotateZ}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{rotateZ()}{rotateZ()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a5640308c334e9de115adc573ac33f3ce} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::rotateZ (\begin{DoxyParamCaption}\item[{GLfloat}]{a}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数を z 軸中心に角度 a 回転した四元数を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & 回転角. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+回転した四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04252}{4252}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a5640308c334e9de115adc573ac33f3ce_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_af5e931d94ea34b3c63d79b081e594b95}\index{gg::GgQuaternion@{gg::GgQuaternion}!slerp@{slerp}}
+\index{slerp@{slerp}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{slerp()}{slerp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_af5e931d94ea34b3c63d79b081e594b95} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::slerp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{q}{, }\item[{GLfloat}]{t}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+球面線形補間の結果を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em q} & \doxylink{classgg_1_1GgQuaternion}{Gg\+Quaternion} 型の四元数. \\
+\hline
+{\em t} & 補間パラメータ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+四元数を q に対して t で内分した結果. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04448}{4448}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_af5e931d94ea34b3c63d79b081e594b95_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_ae87cd428f7803b83a0ef4f1464128a2d}\index{gg::GgQuaternion@{gg::GgQuaternion}!slerp@{slerp}}
+\index{slerp@{slerp}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{slerp()}{slerp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_ae87cd428f7803b83a0ef4f1464128a2d} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::slerp (\begin{DoxyParamCaption}\item[{GLfloat \texorpdfstring{$\ast$}{*}}]{a}{, }\item[{GLfloat}]{t}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+球面線形補間の結果を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & 四元数を格納した GLfloat 型の 4 要素の配列変数. \\
+\hline
+{\em t} & 補間パラメータ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+四元数を a に対して t で内分した結果. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l04434}{4434}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ae87cd428f7803b83a0ef4f1464128a2d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a5a6d9fdec45ba96a6226b9a5a9e145b8}\index{gg::GgQuaternion@{gg::GgQuaternion}!subtract@{subtract}}
+\index{subtract@{subtract}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{subtract()}{subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a5a6d9fdec45ba96a6226b9a5a9e145b8} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} \&}]{q}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数から別の四元数を減算した結果を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em q} & \doxylink{classgg_1_1GgQuaternion}{Gg\+Quaternion} 型の四元数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+q を引いた四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03883}{3883}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a5a6d9fdec45ba96a6226b9a5a9e145b8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_ac9508f66048530280e06759e80625c44}\index{gg::GgQuaternion@{gg::GgQuaternion}!subtract@{subtract}}
+\index{subtract@{subtract}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{subtract()}{subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_ac9508f66048530280e06759e80625c44} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector_a8d6fb720fb6068cd9f6cb51435cdcf58}{Gg\+Vector}} \&}]{v}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数から別の四元数を減算した結果を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em v} & 四元数を格納した \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+v を引いた四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03872}{3872}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_ac9508f66048530280e06759e80625c44_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a5240a31507b906e03592a4f6a6ca8f7a}\index{gg::GgQuaternion@{gg::GgQuaternion}!subtract@{subtract}}
+\index{subtract@{subtract}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{subtract()}{subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a5240a31507b906e03592a4f6a6ca8f7a} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::subtract (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{a}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数から別の四元数を減算した結果を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em a} & 四元数を格納した GLfloat 型の 4 要素の配列変数. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+a を引いた四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03861}{3861}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a5240a31507b906e03592a4f6a6ca8f7a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgQuaternion_a41eeb50036f7346680b862956a4d4116}\index{gg::GgQuaternion@{gg::GgQuaternion}!subtract@{subtract}}
+\index{subtract@{subtract}!gg::GgQuaternion@{gg::GgQuaternion}}
+\doxysubsubsection{\texorpdfstring{subtract()}{subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgQuaternion_a41eeb50036f7346680b862956a4d4116} 
+\mbox{\hyperlink{classgg_1_1GgQuaternion_ac1c52c26e2fdfdde277f9aa714757a2f}{Gg\+Quaternion}} gg\+::\+Gg\+Quaternion\+::subtract (\begin{DoxyParamCaption}\item[{GLfloat}]{x}{, }\item[{GLfloat}]{y}{, }\item[{GLfloat}]{z}{, }\item[{GLfloat}]{w}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+四元数から別の四元数を減算した結果を返す.
+
+
+\begin{DoxyParams}{引数}
+{\em x} & 引く四元数の x 要素. \\
+\hline
+{\em y} & 引く四元数の y 要素. \\
+\hline
+{\em z} & 引く四元数の z 要素. \\
+\hline
+{\em w} & 引く四元数の w 要素. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+(x, y, z, w) を引いた四元数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l03849}{3849}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a41eeb50036f7346680b862956a4d4116_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgQuaternion_a41eeb50036f7346680b862956a4d4116_icgraph}
+\end{center}
+\end{figure}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gg_8h}{gg.\+h}}\item 
+\mbox{\hyperlink{gg_8cpp}{gg.\+cpp}}\end{DoxyCompactItemize}

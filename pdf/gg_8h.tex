@@ -1,0 +1,413 @@
+\doxysection{gg.\+h ファイル}
+\hypertarget{gg_8h}{}\label{gg_8h}\index{gg.h@{gg.h}}
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+gg.\+h の依存先関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gg_8h__incl}
+\end{center}
+\end{figure}
+被依存関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gg_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classgg_1_1GgVector}{gg\+::\+Gg\+Vector}}
+\item 
+class \mbox{\hyperlink{classgg_1_1GgMatrix}{gg\+::\+Gg\+Matrix}}
+\item 
+class \mbox{\hyperlink{classgg_1_1GgQuaternion}{gg\+::\+Gg\+Quaternion}}
+\item 
+class \mbox{\hyperlink{classgg_1_1GgTrackball}{gg\+::\+Gg\+Trackball}}
+\item 
+class \mbox{\hyperlink{classgg_1_1GgTexture}{gg\+::\+Gg\+Texture}}
+\item 
+class \mbox{\hyperlink{classgg_1_1GgColorTexture}{gg\+::\+Gg\+Color\+Texture}}
+\item 
+class \mbox{\hyperlink{classgg_1_1GgNormalTexture}{gg\+::\+Gg\+Normal\+Texture}}
+\item 
+class \mbox{\hyperlink{classgg_1_1GgBuffer}{gg\+::\+Gg\+Buffer$<$ T $>$}}
+\item 
+class \mbox{\hyperlink{classgg_1_1GgUniformBuffer}{gg\+::\+Gg\+Uniform\+Buffer$<$ T $>$}}
+\item 
+class \mbox{\hyperlink{classgg_1_1GgVertexArray}{gg\+::\+Gg\+Vertex\+Array}}
+\item 
+class \mbox{\hyperlink{classgg_1_1GgShape}{gg\+::\+Gg\+Shape}}
+\item 
+class \mbox{\hyperlink{classgg_1_1GgPoints}{gg\+::\+Gg\+Points}}
+\item 
+struct \mbox{\hyperlink{structgg_1_1GgVertex}{gg\+::\+Gg\+Vertex}}
+\item 
+class \mbox{\hyperlink{classgg_1_1GgTriangles}{gg\+::\+Gg\+Triangles}}
+\item 
+class \mbox{\hyperlink{classgg_1_1GgElements}{gg\+::\+Gg\+Elements}}
+\item 
+class \mbox{\hyperlink{classgg_1_1GgShader}{gg\+::\+Gg\+Shader}}
+\item 
+class \mbox{\hyperlink{classgg_1_1GgPointShader}{gg\+::\+Gg\+Point\+Shader}}
+\item 
+class \mbox{\hyperlink{classgg_1_1GgSimpleShader}{gg\+::\+Gg\+Simple\+Shader}}
+\item 
+struct \mbox{\hyperlink{structgg_1_1GgSimpleShader_1_1Light}{gg\+::\+Gg\+Simple\+Shader\+::\+Light}}
+\item 
+class \mbox{\hyperlink{classgg_1_1GgSimpleShader_1_1LightBuffer}{gg\+::\+Gg\+Simple\+Shader\+::\+Light\+Buffer}}
+\item 
+struct \mbox{\hyperlink{structgg_1_1GgSimpleShader_1_1Material}{gg\+::\+Gg\+Simple\+Shader\+::\+Material}}
+\item 
+class \mbox{\hyperlink{classgg_1_1GgSimpleShader_1_1MaterialBuffer}{gg\+::\+Gg\+Simple\+Shader\+::\+Material\+Buffer}}
+\item 
+class \mbox{\hyperlink{classgg_1_1GgSimpleObj}{gg\+::\+Gg\+Simple\+Obj}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacegg}{gg}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{gg_8h_a0c4972fb66e9d9e2ca5682621e5bde85}{gg\+Error}}()
+\item 
+\#define \mbox{\hyperlink{gg_8h_a0bf8b0b52d88e682da02e818adb4d16a}{gg\+FBOError}}()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{gg_8h_a79e8f410a97d0a6e7bf6c4d3fe6b58fb}{path\+String}} = std\+::string
+\item 
+using \mbox{\hyperlink{gg_8h_af70ef6365a062670f496b86f311000cf}{path\+Char}} = char
+\end{DoxyCompactItemize}
+\doxysubsubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacegg_ae6e185ba7876df656b8d0b02819b5e49}{gg\+::\+Binding\+Points}} \{ \mbox{\hyperlink{namespacegg_ae6e185ba7876df656b8d0b02819b5e49a64b69a47d95d955aed16b608baf1f68c}{gg\+::\+Light\+Binding\+Point}} = 0
+, \mbox{\hyperlink{namespacegg_ae6e185ba7876df656b8d0b02819b5e49a3ba0d83d74aed68d92082c2621fa2348}{gg\+::\+Material\+Binding\+Point}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gg_8h_a79e8f410a97d0a6e7bf6c4d3fe6b58fb}{path\+String}} \mbox{\hyperlink{gg_8h_ac735c9fb18adb1f2127c90adcea87cd8}{Utf8\+To\+TChar}} (const std\+::string \&string)
+\item 
+std\+::string \mbox{\hyperlink{gg_8h_a211a5875f00c0b97454d0b1e7a7a5769}{TChar\+To\+Utf8}} (const \mbox{\hyperlink{gg_8h_a79e8f410a97d0a6e7bf6c4d3fe6b58fb}{path\+String}} \&cstring)
+\item 
+void \mbox{\hyperlink{namespacegg_af7ab5857e56acfcf3e806f587f3737a0}{gg\+::gg\+Init}} ()
+\item 
+void \mbox{\hyperlink{namespacegg_a483abe26cc773c9c62731d911f1a1909}{gg\+::\+\_\+gg\+Error}} (const std\+::string \&name="{}"{}, unsigned int line=0)
+\item 
+void \mbox{\hyperlink{namespacegg_a759d331f8d381524c40a2307dedb608a}{gg\+::\+\_\+gg\+FBOError}} (const std\+::string \&name="{}"{}, unsigned int line=0)
+\item 
+void \mbox{\hyperlink{namespacegg_a3bc5278bea931898a436bc4cd611a108}{gg\+::gg\+Cross}} (GLfloat \texorpdfstring{$\ast$}{*}c, const GLfloat \texorpdfstring{$\ast$}{*}a, const GLfloat \texorpdfstring{$\ast$}{*}b)
+\item 
+GLfloat \mbox{\hyperlink{namespacegg_a4e49aff9138ef05a803f1ee703d0f67f}{gg\+::gg\+Dot3}} (const GLfloat \texorpdfstring{$\ast$}{*}a, const GLfloat \texorpdfstring{$\ast$}{*}b)
+\item 
+GLfloat \mbox{\hyperlink{namespacegg_a837850150a8293353ade7900452955b2}{gg\+::gg\+Length3}} (const GLfloat \texorpdfstring{$\ast$}{*}a)
+\item 
+GLfloat \mbox{\hyperlink{namespacegg_a1c20fea9c5d29d82ceabb41c12b2a831}{gg\+::gg\+Distance3}} (const GLfloat \texorpdfstring{$\ast$}{*}a, const GLfloat \texorpdfstring{$\ast$}{*}b)
+\item 
+void \mbox{\hyperlink{namespacegg_accd75f02070ef57b1da0dccdec3fdd66}{gg\+::gg\+Normalize3}} (const GLfloat \texorpdfstring{$\ast$}{*}a, GLfloat \texorpdfstring{$\ast$}{*}b)
+\item 
+void \mbox{\hyperlink{namespacegg_af6a03a10f9a4d01016db6dceb0cc338d}{gg\+::gg\+Normalize3}} (GLfloat \texorpdfstring{$\ast$}{*}a)
+\item 
+GLfloat \mbox{\hyperlink{namespacegg_a34aa472e3f12dd5a976c090da6c1bc51}{gg\+::gg\+Dot4}} (const GLfloat \texorpdfstring{$\ast$}{*}a, const GLfloat \texorpdfstring{$\ast$}{*}b)
+\item 
+GLfloat \mbox{\hyperlink{namespacegg_a2f383a711d58b805ebaf26bc004986ab}{gg\+::gg\+Length4}} (const GLfloat \texorpdfstring{$\ast$}{*}a)
+\item 
+GLfloat \mbox{\hyperlink{namespacegg_a9d84278231c4a950b533d6d90c510ec6}{gg\+::gg\+Distance4}} (const GLfloat \texorpdfstring{$\ast$}{*}a, const GLfloat \texorpdfstring{$\ast$}{*}b)
+\item 
+void \mbox{\hyperlink{namespacegg_a53de42a63451f28a4dc644143285b581}{gg\+::gg\+Normalize4}} (const GLfloat \texorpdfstring{$\ast$}{*}a, GLfloat \texorpdfstring{$\ast$}{*}b)
+\item 
+void \mbox{\hyperlink{namespacegg_ab2f149e2a719574c966ff6ad0fdc17cf}{gg\+::gg\+Normalize4}} (GLfloat \texorpdfstring{$\ast$}{*}a)
+\item 
+const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \& \mbox{\hyperlink{namespacegg_a213f65fc7388c1251c2e8fbb8d9b5774}{gg\+::operator+}} (const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&v)
+\item 
+\mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \mbox{\hyperlink{namespacegg_a81d4595fb49bfc30c3b77c34a86b90f2}{gg\+::operator+}} (GLfloat a, const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&b)
+\item 
+const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \mbox{\hyperlink{namespacegg_a267dcc250c978b60d746840361d7b205}{gg\+::operator-\/}} (const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&v)
+\item 
+\mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \mbox{\hyperlink{namespacegg_a9049da1fd7b42bebbec6de7604d4dc90}{gg\+::operator-\/}} (GLfloat a, const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&b)
+\item 
+\mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \mbox{\hyperlink{namespacegg_a7881bf9a01cd9bab5e968cab900e460f}{gg\+::operator\texorpdfstring{$\ast$}{*}}} (GLfloat a, const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&b)
+\item 
+\mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \mbox{\hyperlink{namespacegg_a44b3450fcea999d7b015384a94c30b47}{gg\+::operator/}} (GLfloat a, const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&b)
+\item 
+\mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \mbox{\hyperlink{namespacegg_a3e4152d613985419556992a591628dc2}{gg\+::gg\+Cross}} (const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&a, const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&b)
+\item 
+GLfloat \mbox{\hyperlink{namespacegg_a884a700a6f3d5367f0d7a7fb43bd61e0}{gg\+::gg\+Dot3}} (const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&a, const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&b)
+\item 
+GLfloat \mbox{\hyperlink{namespacegg_a01ccb3648bdfe2d689034136304a7ac5}{gg\+::gg\+Length3}} (const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&a)
+\item 
+GLfloat \mbox{\hyperlink{namespacegg_aa3a225df6ac13de39d971cb22ee8f46e}{gg\+::gg\+Distance3}} (const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&a, const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&b)
+\item 
+\mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \mbox{\hyperlink{namespacegg_a010fafe70a15a0aaa10ca2cceab23305}{gg\+::gg\+Normalize3}} (const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&a)
+\item 
+void \mbox{\hyperlink{namespacegg_a1d602aa5fe6f7037d0180852e26811a2}{gg\+::gg\+Normalize3}} (\mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \texorpdfstring{$\ast$}{*}a)
+\item 
+GLfloat \mbox{\hyperlink{namespacegg_a1f4640ffabc40dc38457d4b33ab21b87}{gg\+::gg\+Dot4}} (const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&a, const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&b)
+\item 
+GLfloat \mbox{\hyperlink{namespacegg_a2c5a85961402558c05dc869a1329f12d}{gg\+::gg\+Length4}} (const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&a)
+\item 
+GLfloat \mbox{\hyperlink{namespacegg_ababa9df1e37a168855d97d4db90b990b}{gg\+::gg\+Distance4}} (const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&a, const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&b)
+\item 
+\mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \mbox{\hyperlink{namespacegg_a873c34e94fe830ecf23c12a747b3c8ce}{gg\+::gg\+Normalize4}} (const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&a)
+\item 
+void \mbox{\hyperlink{namespacegg_ab8f809ed8f45e79d9054534d2f86f370}{gg\+::gg\+Normalize4}} (\mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \texorpdfstring{$\ast$}{*}a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_afca3af3d6f73db24e8309a0f83592356}{gg\+::gg\+Identity}} ()
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_a1c44cf87582b032f9eeac980ed17f73b}{gg\+::gg\+Translate}} (GLfloat x, GLfloat y, GLfloat z, GLfloat w=1.\+0f)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_ac0ac085839830ea37ad906e7b7b84241}{gg\+::gg\+Translate}} (const GLfloat \texorpdfstring{$\ast$}{*}t)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_affd8bb35ddcc19b1dec8e059b2ae6061}{gg\+::gg\+Translate}} (const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&t)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_a0335a1458ae067bb59bc657dd7523c39}{gg\+::gg\+Scale}} (GLfloat x, GLfloat y, GLfloat z, GLfloat w=1.\+0f)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_ad55cce9930ee50df35028ffa90b4eac6}{gg\+::gg\+Scale}} (const GLfloat \texorpdfstring{$\ast$}{*}s)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_ab12cdc8afc2f0d47c66dfcf87f110356}{gg\+::gg\+Scale}} (const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&s)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_acaf06b5bfe66fc430155ae3d4410d854}{gg\+::gg\+RotateX}} (GLfloat a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_aca81032319d49c6a3565c40928413360}{gg\+::gg\+RotateY}} (GLfloat a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_a15b8b49e0ab9fe3bde8eee67bcdb7e81}{gg\+::gg\+RotateZ}} (GLfloat a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_a36b3a41ab6b33b6f0198e2b762263987}{gg\+::gg\+Rotate}} (GLfloat x, GLfloat y, GLfloat z, GLfloat a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_adb4636af6589498fd33cda7617df62f7}{gg\+::gg\+Rotate}} (const GLfloat \texorpdfstring{$\ast$}{*}r, GLfloat a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_a753b36dbd5df5ba68b073ece2632bf53}{gg\+::gg\+Rotate}} (const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&r, GLfloat a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_a642ba614e059326830b70210d4f31b4f}{gg\+::gg\+Rotate}} (const GLfloat \texorpdfstring{$\ast$}{*}r)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_a9ef4c60ab8a1afaf9ec8f4b44b83dbee}{gg\+::gg\+Rotate}} (const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&r)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_a2924895ad284e08b08a2cfd115c5a7bf}{gg\+::gg\+Lookat}} (GLfloat ex, GLfloat ey, GLfloat ez, GLfloat tx, GLfloat ty, GLfloat tz, GLfloat ux, GLfloat uy, GLfloat uz)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_ac1cdaece765c03e31eed78d124bf7313}{gg\+::gg\+Lookat}} (const GLfloat \texorpdfstring{$\ast$}{*}e, const GLfloat \texorpdfstring{$\ast$}{*}t, const GLfloat \texorpdfstring{$\ast$}{*}u)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_a8daeffd9150b585dd699dfe9307c9527}{gg\+::gg\+Lookat}} (const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&e, const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&t, const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&u)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_ab0d21209e3184a0e423ec8c902a5d4d6}{gg\+::gg\+Orthogonal}} (GLfloat left, GLfloat right, GLfloat bottom, GLfloat top, GLfloat z\+Near, GLfloat z\+Far)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_a6045dfb6776b306492ac593db94be7ab}{gg\+::gg\+Frustum}} (GLfloat left, GLfloat right, GLfloat bottom, GLfloat top, GLfloat z\+Near, GLfloat z\+Far)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_a7dcbaa73755efd46f1f19b0b3a39b473}{gg\+::gg\+Perspective}} (GLfloat fovy, GLfloat aspect, GLfloat z\+Near, GLfloat z\+Far)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_a883c792de89aa42cacf270381b5d31da}{gg\+::gg\+Transpose}} (const \mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \&m)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_af3d4cc9af9b0b96137c762b0400d6c3b}{gg\+::gg\+Invert}} (const \mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \&m)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_a350b2d7c3e52ba2fe973c9aff0ba76c3}{gg\+::gg\+Normal}} (const \mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \&m)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \mbox{\hyperlink{namespacegg_af887bffaeaee67620ed2f7e020cb6a6a}{gg\+::gg\+Identity\+Quaternion}} ()
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \mbox{\hyperlink{namespacegg_abda2bc7b53d21f5a64e00377888dc25f}{gg\+::gg\+Matrix\+Quaternion}} (const GLfloat \texorpdfstring{$\ast$}{*}a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \mbox{\hyperlink{namespacegg_a53f2c3e5f7d5b444b27b7e5e1d849e98}{gg\+::gg\+Matrix\+Quaternion}} (const \mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \&m)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_aaebe1f427ad451c6768aaee18da84c66}{gg\+::gg\+Quaternion\+Matrix}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \&q)
+\item 
+\mbox{\hyperlink{classgg_1_1GgMatrix}{Gg\+Matrix}} \mbox{\hyperlink{namespacegg_a01f9b60e48e923f40f5a183a3e54d94e}{gg\+::gg\+Quaternion\+Transpose\+Matrix}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \&q)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \mbox{\hyperlink{namespacegg_a65baca1998bd9ea2b31a3fc1648d53dd}{gg\+::gg\+Rotate\+Quaternion}} (GLfloat x, GLfloat y, GLfloat z, GLfloat a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \mbox{\hyperlink{namespacegg_a4e721a0a9a903540b11921447ecac772}{gg\+::gg\+Rotate\+Quaternion}} (const GLfloat \texorpdfstring{$\ast$}{*}v, GLfloat a)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \mbox{\hyperlink{namespacegg_a0c5e5c6a1d6926d8911cc74865cc0fbb}{gg\+::gg\+Rotate\+Quaternion}} (const GLfloat \texorpdfstring{$\ast$}{*}v)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \mbox{\hyperlink{namespacegg_aacfb5aa2cd001a0ad0fc8c7831576860}{gg\+::gg\+Euler\+Quaternion}} (GLfloat heading, GLfloat pitch, GLfloat roll)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \mbox{\hyperlink{namespacegg_a3ac6682d2eb32fa126445a1df1e934b6}{gg\+::gg\+Euler\+Quaternion}} (const GLfloat \texorpdfstring{$\ast$}{*}e)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \mbox{\hyperlink{namespacegg_aa4da45ac0eaceae1ab1717c749b8d059}{gg\+::gg\+Euler\+Quaternion}} (const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&e)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \mbox{\hyperlink{namespacegg_a191d7b15d7374dfc6fa5243e3b667537}{gg\+::gg\+Slerp}} (const GLfloat \texorpdfstring{$\ast$}{*}a, const GLfloat \texorpdfstring{$\ast$}{*}b, GLfloat t)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \mbox{\hyperlink{namespacegg_af14e01e111b4a4b141c268038e69809e}{gg\+::gg\+Slerp}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \&q, const \mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \&r, GLfloat t)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \mbox{\hyperlink{namespacegg_a0df14e92a8460428403c7f82d32cf19b}{gg\+::gg\+Slerp}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \&q, const GLfloat \texorpdfstring{$\ast$}{*}a, GLfloat t)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \mbox{\hyperlink{namespacegg_a6485d9c8b7bda82d43bc8cc59158f1ba}{gg\+::gg\+Slerp}} (const GLfloat \texorpdfstring{$\ast$}{*}a, const \mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \&q, GLfloat t)
+\item 
+GLfloat \mbox{\hyperlink{namespacegg_aca5935d7314e7ba3f7d8043b56e04931}{gg\+::gg\+Norm}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \&q)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \mbox{\hyperlink{namespacegg_aab31210c17598a7d14ecb3c9f461040c}{gg\+::gg\+Normalize}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \&q)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \mbox{\hyperlink{namespacegg_a78e95511358dff0e43d4c4a3606bde0a}{gg\+::gg\+Conjugate}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \&q)
+\item 
+\mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \mbox{\hyperlink{namespacegg_ac834686c8605553fbe7c2709c685ba4e}{gg\+::gg\+Invert}} (const \mbox{\hyperlink{classgg_1_1GgQuaternion}{Gg\+Quaternion}} \&q)
+\item 
+bool \mbox{\hyperlink{namespacegg_ae450600cc658bd7d6b0f7ecb62156fe8}{gg\+::gg\+Save\+Tga}} (const std\+::string \&name, const void \texorpdfstring{$\ast$}{*}buffer, unsigned int width, unsigned int height, unsigned int depth)
+\item 
+bool \mbox{\hyperlink{namespacegg_a6dc1ef6d0e78a6694ae8aca973b1b9ae}{gg\+::gg\+Save\+Color}} (const std\+::string \&name)
+\item 
+bool \mbox{\hyperlink{namespacegg_a236701485bbc8278654781a810bf2880}{gg\+::gg\+Save\+Depth}} (const std\+::string \&name)
+\item 
+bool \mbox{\hyperlink{namespacegg_acce00f35f4b755cda72ec9f61b726c8f}{gg\+::gg\+Read\+Image}} (const std\+::string \&name, std\+::vector$<$ GLubyte $>$ \&image, GLsizei \texorpdfstring{$\ast$}{*}p\+Width, GLsizei \texorpdfstring{$\ast$}{*}p\+Height, GLenum \texorpdfstring{$\ast$}{*}p\+Format)
+\item 
+GLuint \mbox{\hyperlink{namespacegg_ab4085c8da7546d15a8e25dc2f11e79f6}{gg\+::gg\+Load\+Texture}} (const GLvoid \texorpdfstring{$\ast$}{*}image, GLsizei width, GLsizei height, GLenum format=GL\+\_\+\+RGB, GLenum type=GL\+\_\+\+UNSIGNED\+\_\+\+BYTE, GLenum internal=GL\+\_\+\+RGB, GLenum wrap=GL\+\_\+\+CLAMP\+\_\+\+TO\+\_\+\+EDGE, bool swizzle=false)
+\item 
+GLuint \mbox{\hyperlink{namespacegg_abb72b124c601db7888fa70aa2d6f584f}{gg\+::gg\+Load\+Image}} (const std\+::string \&name, GLsizei \texorpdfstring{$\ast$}{*}p\+Width=nullptr, GLsizei \texorpdfstring{$\ast$}{*}p\+Height=nullptr, GLenum internal=GL\+\_\+\+RGBA, GLenum wrap=GL\+\_\+\+CLAMP\+\_\+\+TO\+\_\+\+EDGE)
+\item 
+void \mbox{\hyperlink{namespacegg_a2cd46afb53daa13fa8bb2de14baf4e7b}{gg\+::gg\+Create\+Normal\+Map}} (const GLubyte \texorpdfstring{$\ast$}{*}hmap, GLsizei width, GLsizei height, GLenum format, GLfloat nz, GLenum internal, std\+::vector$<$ \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} $>$ \&nmap)
+\item 
+GLuint \mbox{\hyperlink{namespacegg_a53453ed6229bbd109c279a3765648d01}{gg\+::gg\+Load\+Height}} (const std\+::string \&name, GLfloat nz, GLsizei \texorpdfstring{$\ast$}{*}p\+Width=nullptr, GLsizei \texorpdfstring{$\ast$}{*}p\+Height=nullptr, GLenum internal=GL\+\_\+\+RGBA)
+\item 
+GLuint \mbox{\hyperlink{namespacegg_a047058f8d45e31ce77232ef66796e6b0}{gg\+::gg\+Create\+Shader}} (const std\+::string \&vsrc, const std\+::string \&fsrc="{}"{}, const std\+::string \&gsrc="{}"{}, GLint nvarying=0, const char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}varyings=nullptr, const std\+::string \&vtext="{}vertex shader"{}, const std\+::string \&ftext="{}fragment shader"{}, const std\+::string \&gtext="{}geometry shader"{})
+\item 
+GLuint \mbox{\hyperlink{namespacegg_acbe6e5044fcf43f001242937e14b6b43}{gg\+::gg\+Load\+Shader}} (const std\+::string \&vert, const std\+::string \&frag="{}"{}, const std\+::string \&geom="{}"{}, GLint nvarying=0, const char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}varyings=nullptr)
+\item 
+GLuint \mbox{\hyperlink{namespacegg_a9f177dd70c52afa2a155cc94ce429cfa}{gg\+::gg\+Load\+Shader}} (const std\+::array$<$ std\+::string, 3 $>$ \&files, GLint nvarying=0, const char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}varyings=nullptr)
+\item 
+GLuint \mbox{\hyperlink{namespacegg_adda35bc52f044dc237a3632553ad9d9c}{gg\+::gg\+Create\+Compute\+Shader}} (const std\+::string \&csrc, const std\+::string \&ctext="{}compute shader"{})
+\item 
+GLuint \mbox{\hyperlink{namespacegg_abca7443a911bd290af4be190f1835cf0}{gg\+::gg\+Load\+Compute\+Shader}} (const std\+::string \&comp)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classgg_1_1GgPoints}{Gg\+Points}} $>$ \mbox{\hyperlink{namespacegg_a63f9b914f19cd1e877ae22730aa9581d}{gg\+::gg\+Points\+Cube}} (GLsizei countv, GLfloat length=1.\+0f, GLfloat cx=0.\+0f, GLfloat cy=0.\+0f, GLfloat cz=0.\+0f)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classgg_1_1GgPoints}{Gg\+Points}} $>$ \mbox{\hyperlink{namespacegg_a33e667c9e5de5a1185077d9858375716}{gg\+::gg\+Points\+Sphere}} (GLsizei countv, GLfloat radius=0.\+5f, GLfloat cx=0.\+0f, GLfloat cy=0.\+0f, GLfloat cz=0.\+0f)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classgg_1_1GgTriangles}{Gg\+Triangles}} $>$ \mbox{\hyperlink{namespacegg_a23a2386c47f07cd53de2958985783c2d}{gg\+::gg\+Rectangle}} (GLfloat width=1.\+0f, GLfloat height=1.\+0f)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classgg_1_1GgTriangles}{Gg\+Triangles}} $>$ \mbox{\hyperlink{namespacegg_a2f5a44c7c7ee2c1095d3a659db0f530f}{gg\+::gg\+Ellipse}} (GLfloat width=1.\+0f, GLfloat height=1.\+0f, GLuint slices=16)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classgg_1_1GgTriangles}{Gg\+Triangles}} $>$ \mbox{\hyperlink{namespacegg_a27430d60881b68061b8a8093cfac74ce}{gg\+::gg\+Arrays\+Obj}} (const std\+::string \&name, bool normalize=false)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classgg_1_1GgElements}{Gg\+Elements}} $>$ \mbox{\hyperlink{namespacegg_a6b3f7b9af6577d60e0a6702fa7c1b3f7}{gg\+::gg\+Elements\+Obj}} (const std\+::string \&name, bool normalize=false)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classgg_1_1GgElements}{Gg\+Elements}} $>$ \mbox{\hyperlink{namespacegg_afe1fcb205a0f34a31eda2d2eb4012084}{gg\+::gg\+Elements\+Mesh}} (GLuint slices, GLuint stacks, const GLfloat(\texorpdfstring{$\ast$}{*}pos)\mbox{[}3\mbox{]}, const GLfloat(\texorpdfstring{$\ast$}{*}norm)\mbox{[}3\mbox{]}=nullptr)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classgg_1_1GgElements}{Gg\+Elements}} $>$ \mbox{\hyperlink{namespacegg_a04c512ca7268233b59fc61573dedcf80}{gg\+::gg\+Elements\+Sphere}} (GLfloat radius=1.\+0f, int slices=16, int stacks=8)
+\item 
+bool \mbox{\hyperlink{namespacegg_a8d6d4d94876d09aebddf88ef7e8387d8}{gg\+::gg\+Load\+Simple\+Obj}} (const std\+::string \&name, std\+::vector$<$ std\+::array$<$ GLuint, 3 $>$ $>$ \&group, std\+::vector$<$ \mbox{\hyperlink{structgg_1_1GgSimpleShader_1_1Material}{Gg\+Simple\+Shader\+::\+Material}} $>$ \&material, std\+::vector$<$ \mbox{\hyperlink{structgg_1_1GgVertex}{Gg\+Vertex}} $>$ \&vert, bool normalize=false)
+\item 
+bool \mbox{\hyperlink{namespacegg_a780ffd821376742a76828bb211193f70}{gg\+::gg\+Load\+Simple\+Obj}} (const std\+::string \&name, std\+::vector$<$ std\+::array$<$ GLuint, 3 $>$ $>$ \&group, std\+::vector$<$ \mbox{\hyperlink{structgg_1_1GgSimpleShader_1_1Material}{Gg\+Simple\+Shader\+::\+Material}} $>$ \&material, std\+::vector$<$ \mbox{\hyperlink{structgg_1_1GgVertex}{Gg\+Vertex}} $>$ \&vert, std\+::vector$<$ GLuint $>$ \&face, bool normalize=false)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+GLint \mbox{\hyperlink{namespacegg_a3760bb8490c7d6103a5f186b705b313e}{gg\+::gg\+Buffer\+Alignment}}
+\begin{DoxyCompactList}\small\item\em 使用している GPU のバッファアライメント. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+ゲームグラフィックス特論の宿題用補助プログラム GLFW3 版の宣言.
+
+\begin{DoxyAuthor}{著者}
+Kohe Tokoi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+July 17, 2025 
+\end{DoxyDate}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} に定義があります。
+
+
+
+\label{doc-define-members}
+\Hypertarget{gg_8h_doc-define-members}
+\doxysubsection{マクロ定義詳解}
+\Hypertarget{gg_8h_a0c4972fb66e9d9e2ca5682621e5bde85}\index{gg.h@{gg.h}!ggError@{ggError}}
+\index{ggError@{ggError}!gg.h@{gg.h}}
+\doxysubsubsection{\texorpdfstring{ggError}{ggError}}
+{\footnotesize\ttfamily \label{gg_8h_a0c4972fb66e9d9e2ca5682621e5bde85} 
+\#define gg\+Error(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Open\+GL のエラーの発生を検知したときにソースファイル名と行番号を表示する.
+
+\begin{DoxyNote}{覚え書き}
+このマクロを置いた場所（より前）で Open\+GL のエラーが発生していた時に, このマクロを置いたソースファイル名と行番号を出力する. リリースビルド時には無視される. 
+\end{DoxyNote}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01398}{1398}} 行目に定義があります。
+
+\Hypertarget{gg_8h_a0bf8b0b52d88e682da02e818adb4d16a}\index{gg.h@{gg.h}!ggFBOError@{ggFBOError}}
+\index{ggFBOError@{ggFBOError}!gg.h@{gg.h}}
+\doxysubsubsection{\texorpdfstring{ggFBOError}{ggFBOError}}
+{\footnotesize\ttfamily \label{gg_8h_a0bf8b0b52d88e682da02e818adb4d16a} 
+\#define gg\+FBOError(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+FBO のエラーの発生を検知したときにソースファイル名と行番号を表示する.
+
+\begin{DoxyNote}{覚え書き}
+このマクロを置いた場所（より前）で FBO のエラーが発生していた時に, このマクロを置いたソースファイル名と行番号を出力する. リリースビルド時には無視される. 
+\end{DoxyNote}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l01425}{1425}} 行目に定義があります。
+
+
+
+\label{doc-typedef-members}
+\Hypertarget{gg_8h_doc-typedef-members}
+\doxysubsection{型定義詳解}
+\Hypertarget{gg_8h_af70ef6365a062670f496b86f311000cf}\index{gg.h@{gg.h}!pathChar@{pathChar}}
+\index{pathChar@{pathChar}!gg.h@{gg.h}}
+\doxysubsubsection{\texorpdfstring{pathChar}{pathChar}}
+{\footnotesize\ttfamily \label{gg_8h_af70ef6365a062670f496b86f311000cf} 
+using \mbox{\hyperlink{gg_8h_af70ef6365a062670f496b86f311000cf}{path\+Char}} = char}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l00078}{78}} 行目に定義があります。
+
+\Hypertarget{gg_8h_a79e8f410a97d0a6e7bf6c4d3fe6b58fb}\index{gg.h@{gg.h}!pathString@{pathString}}
+\index{pathString@{pathString}!gg.h@{gg.h}}
+\doxysubsubsection{\texorpdfstring{pathString}{pathString}}
+{\footnotesize\ttfamily \label{gg_8h_a79e8f410a97d0a6e7bf6c4d3fe6b58fb} 
+using \mbox{\hyperlink{gg_8h_a79e8f410a97d0a6e7bf6c4d3fe6b58fb}{path\+String}} = std\+::string}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l00077}{77}} 行目に定義があります。
+
+
+
+\label{doc-func-members}
+\Hypertarget{gg_8h_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{gg_8h_a211a5875f00c0b97454d0b1e7a7a5769}\index{gg.h@{gg.h}!TCharToUtf8@{TCharToUtf8}}
+\index{TCharToUtf8@{TCharToUtf8}!gg.h@{gg.h}}
+\doxysubsubsection{\texorpdfstring{TCharToUtf8()}{TCharToUtf8()}}
+{\footnotesize\ttfamily \label{gg_8h_a211a5875f00c0b97454d0b1e7a7a5769} 
+std\+::string TChar\+To\+Utf8 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{gg_8h_a79e8f410a97d0a6e7bf6c4d3fe6b58fb}{path\+String}} \&}]{cstring}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l00080}{80}} 行目に定義があります。
+
+\Hypertarget{gg_8h_ac735c9fb18adb1f2127c90adcea87cd8}\index{gg.h@{gg.h}!Utf8ToTChar@{Utf8ToTChar}}
+\index{Utf8ToTChar@{Utf8ToTChar}!gg.h@{gg.h}}
+\doxysubsubsection{\texorpdfstring{Utf8ToTChar()}{Utf8ToTChar()}}
+{\footnotesize\ttfamily \label{gg_8h_ac735c9fb18adb1f2127c90adcea87cd8} 
+\mbox{\hyperlink{gg_8h_a79e8f410a97d0a6e7bf6c4d3fe6b58fb}{path\+String}} Utf8\+To\+TChar (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l00079}{79}} 行目に定義があります。
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gg_8h_ac735c9fb18adb1f2127c90adcea87cd8_icgraph}
+\end{center}
+\end{figure}

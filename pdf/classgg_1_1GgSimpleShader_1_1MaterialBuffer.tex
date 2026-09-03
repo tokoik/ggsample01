@@ -1,0 +1,751 @@
+\doxysection{gg\+::Gg\+Simple\+Shader\+::Material\+Buffer クラス}
+\hypertarget{classgg_1_1GgSimpleShader_1_1MaterialBuffer}{}\label{classgg_1_1GgSimpleShader_1_1MaterialBuffer}\index{gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}}
+
+
+{\ttfamily \#include $<$gg.\+h$>$}
+
+
+
+gg\+::Gg\+Simple\+Shader\+::Material\+Buffer の継承関係図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classgg_1_1GgSimpleShader_1_1MaterialBuffer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+gg\+::Gg\+Simple\+Shader\+::Material\+Buffer 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classgg_1_1GgSimpleShader_1_1MaterialBuffer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgg_1_1GgSimpleShader_1_1MaterialBuffer_abb1ac93a5f24d73fee1086df16e835ac}{Material\+Buffer}} (const \mbox{\hyperlink{structgg_1_1GgSimpleShader_1_1Material}{Material}} \texorpdfstring{$\ast$}{*}material=nullptr, GLsizei count=1, GLenum usage=GL\+\_\+\+STATIC\+\_\+\+DRAW)
+\item 
+\mbox{\hyperlink{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a2894a265a27c8e98efa8e63b04c8d3f1}{Material\+Buffer}} (const \mbox{\hyperlink{structgg_1_1GgSimpleShader_1_1Material}{Material}} \&material, GLsizei count=1, GLenum usage=GL\+\_\+\+STATIC\+\_\+\+DRAW)
+\item 
+\mbox{\hyperlink{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a8350a656b9a4b589fe78da6f3405791f}{Material\+Buffer}} (\mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} ambient, \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} diffuse, \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} specular, GLfloat shininess, GLsizei count=1, GLenum usage=GL\+\_\+\+STATIC\+\_\+\+DRAW)
+\item 
+virtual \mbox{\hyperlink{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a85046b49629ba1c6f330cc67b6941e49}{\texorpdfstring{$\sim$}{\string~}\+Material\+Buffer}} ()
+\item 
+void \mbox{\hyperlink{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a2362bd0ba0eadfba2e11c6322f5357ea}{load\+Ambient}} (GLfloat r, GLfloat g, GLfloat b, GLfloat a=1.\+0f, GLint first=0, GLsizei count=1) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a1fd1234a547efafc6e4d1c1969c552e5}{load\+Ambient}} (const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&ambient, GLint first=0, GLsizei count=1) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a683763773afb44009cbca19b1ef40ace}{load\+Ambient}} (const GLfloat \texorpdfstring{$\ast$}{*}ambient, GLint first=0, GLsizei count=1) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgSimpleShader_1_1MaterialBuffer_ae73be670a4aa8a4c3b316988b5357561}{load\+Diffuse}} (GLfloat r, GLfloat g, GLfloat b, GLfloat a=1.\+0f, GLint first=0, GLsizei count=1) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a6fc7787a0723c1204839d86806e41211}{load\+Diffuse}} (const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&diffuse, GLint first=0, GLsizei count=1) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgSimpleShader_1_1MaterialBuffer_aa21bc29a20ebdd31ca4d8e5b78d6b4fe}{load\+Diffuse}} (const GLfloat \texorpdfstring{$\ast$}{*}diffuse, GLint first=0, GLsizei count=1) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgSimpleShader_1_1MaterialBuffer_ac6fdf62b08115efab0c068313eae404f}{load\+Ambient\+And\+Diffuse}} (GLfloat r, GLfloat g, GLfloat b, GLfloat a=1.\+0f, GLint first=0, GLsizei count=1) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a3557fcdfe2079748f64e350311760cc7}{load\+Ambient\+And\+Diffuse}} (const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&color, GLint first=0, GLsizei count=1) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a137e456268648c0cb0d588efb3ec43db}{load\+Ambient\+And\+Diffuse}} (const GLfloat \texorpdfstring{$\ast$}{*}color, GLint first=0, GLsizei count=1) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a51f6f04e85233f86139bef53b49c352b}{load\+Specular}} (GLfloat r, GLfloat g, GLfloat b, GLfloat a=1.\+0f, GLint first=0, GLsizei count=1) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgSimpleShader_1_1MaterialBuffer_aff60f66132bf688d9cbcb363be916d90}{load\+Specular}} (const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&specular, GLint first=0, GLsizei count=1) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a454f09ee0599eb06e0c3d6d6024ce76a}{load\+Specular}} (const GLfloat \texorpdfstring{$\ast$}{*}specular, GLint first=0, GLsizei count=1) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a06ed0bb3f14b3f34ec2d96b5c4ef46e2}{load\+Shininess}} (GLfloat shininess, GLint first=0, GLsizei count=1) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a86609495863a6a126b8ebf799ed9f40a}{load\+Shininess}} (const GLfloat \texorpdfstring{$\ast$}{*}shininess, GLint first=0, GLsizei count=1) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgSimpleShader_1_1MaterialBuffer_ac0fae6a961ba2fdacbdb1e5d9d373f0a}{load}} (const \mbox{\hyperlink{structgg_1_1GgSimpleShader_1_1Material}{Material}} \texorpdfstring{$\ast$}{*}material, GLint first=0, GLsizei count=1) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a800848bfd9b578ea460948898ee014bb}{load}} (const \mbox{\hyperlink{structgg_1_1GgSimpleShader_1_1Material}{Material}} \&material, GLint first=0, GLsizei count=1) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a60222d434fad051866e4b99f6efcbfb6}{select}} (GLint i=0) const
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{classgg_1_1GgUniformBuffer}{gg\+::\+Gg\+Uniform\+Buffer$<$ Material $>$}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgg_1_1GgUniformBuffer_af7e78fd8c342e9ac9cb9b056c879c768}{Gg\+Uniform\+Buffer}} ()
+\item 
+virtual \mbox{\hyperlink{classgg_1_1GgUniformBuffer_affa4119e5f9aae08c74fda3a31e6ee8e}{\texorpdfstring{$\sim$}{\string~}\+Gg\+Uniform\+Buffer}} ()
+\item 
+const GLuint \& \mbox{\hyperlink{classgg_1_1GgUniformBuffer_ad097650d4355144a15deb49bf78e6198}{get\+Target}} () const
+\item 
+GLsizeiptr \mbox{\hyperlink{classgg_1_1GgUniformBuffer_ad4b0676ee460d8884f2f041fd2dc3506}{get\+Stride}} () const
+\item 
+const GLsizei \& \mbox{\hyperlink{classgg_1_1GgUniformBuffer_a476ed194c6ae2e4a6cbcdfe119db039b}{get\+Count}} () const
+\item 
+const GLuint \& \mbox{\hyperlink{classgg_1_1GgUniformBuffer_a2b32d9bbfd87830bc2db3d4431d89176}{get\+Buffer}} () const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer_abcc61a088d16f53a9a51749dd34c24b8}{bind}} () const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer_a4152f1f30958abd2af56ffb27fa8de04}{unbind}} () const
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classgg_1_1GgUniformBuffer_a978849adec295afa4e8772381cbe361f}{map}} () const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer_abea659ba10d6fae6677463b6d0718197}{unmap}} () const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer_a1af7292924eb187968a4ea1a9221e9e7}{load}} (const Material \texorpdfstring{$\ast$}{*}data, GLsizei count, GLenum usage=GL\+\_\+\+STATIC\+\_\+\+DRAW)
+\item 
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer_af998019f39e666887550170538e5ebd4}{send}} (const GLvoid \texorpdfstring{$\ast$}{*}data, GLint offset=0, GLsizei size=sizeof(Material), GLint first=0, GLsizei count=0) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer_a54af5ca44551f3d6799966590b80d7a1}{fill}} (const GLvoid \texorpdfstring{$\ast$}{*}data, GLint offset=0, GLsizei size=sizeof(Material), GLint first=0, GLsizei count=0) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer_ae9cc42d251faad15a2f506777d280c67}{read}} (GLvoid \texorpdfstring{$\ast$}{*}data, GLint offset=0, GLsizei size=sizeof(Material), GLint first=0, GLsizei count=0) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer_a0ad63590a48c6a54e92b98a3f0d53242}{copy}} (GLuint src\+\_\+buffer, GLint src\+\_\+first=0, GLint dst\+\_\+first=0, GLsizei count=0) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+三角形に単純な陰影付けを行うシェーダが参照する材質データのユニフォームバッファオブジェクト. 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07950}{7950}} 行目に定義があります。
+
+
+
+\label{doc-constructors}
+\Hypertarget{classgg_1_1GgSimpleShader_1_1MaterialBuffer_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{classgg_1_1GgSimpleShader_1_1MaterialBuffer_abb1ac93a5f24d73fee1086df16e835ac}\index{gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}!MaterialBuffer@{MaterialBuffer}}
+\index{MaterialBuffer@{MaterialBuffer}!gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}}
+\doxysubsubsection{\texorpdfstring{MaterialBuffer()}{MaterialBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleShader_1_1MaterialBuffer_abb1ac93a5f24d73fee1086df16e835ac} 
+gg\+::\+Gg\+Simple\+Shader\+::\+Material\+Buffer\+::\+Material\+Buffer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structgg_1_1GgSimpleShader_1_1Material}{Material}} \texorpdfstring{$\ast$}{*}}]{material}{ = {\ttfamily nullptr}, }\item[{GLsizei}]{count}{ = {\ttfamily 1}, }\item[{GLenum}]{usage}{ = {\ttfamily GL\+\_\+STATIC\+\_\+DRAW}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+デフォルトコンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em material} & \doxylink{structgg_1_1GgSimpleShader_1_1Material}{Gg\+Simple\+Shader\+::\+Material} 型の材質データのポインタ. \\
+\hline
+{\em count} & バッファ中の \doxylink{structgg_1_1GgSimpleShader_1_1Material}{Gg\+Simple\+Shader\+::\+Material} 型の材質データの数. \\
+\hline
+{\em usage} & バッファの使い方のパターン, gl\+Buffer\+Data() の第 4 引数の usage に渡される. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07962}{7962}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgSimpleShader_1_1MaterialBuffer_abb1ac93a5f24d73fee1086df16e835ac_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a2894a265a27c8e98efa8e63b04c8d3f1}\index{gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}!MaterialBuffer@{MaterialBuffer}}
+\index{MaterialBuffer@{MaterialBuffer}!gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}}
+\doxysubsubsection{\texorpdfstring{MaterialBuffer()}{MaterialBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a2894a265a27c8e98efa8e63b04c8d3f1} 
+gg\+::\+Gg\+Simple\+Shader\+::\+Material\+Buffer\+::\+Material\+Buffer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structgg_1_1GgSimpleShader_1_1Material}{Material}} \&}]{material}{, }\item[{GLsizei}]{count}{ = {\ttfamily 1}, }\item[{GLenum}]{usage}{ = {\ttfamily GL\+\_\+STATIC\+\_\+DRAW}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+同じデータで埋めるコンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em material} & \doxylink{structgg_1_1GgSimpleShader_1_1Material}{Gg\+Simple\+Shader\+::\+Material} 型の材質データ. \\
+\hline
+{\em count} & バッファ中の \doxylink{structgg_1_1GgSimpleShader_1_1Material}{Gg\+Simple\+Shader\+::\+Material} 型の材質データの数. \\
+\hline
+{\em usage} & バッファの使い方のパターン, gl\+Buffer\+Data() の第 4 引数の usage に渡される. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07978}{7978}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a2894a265a27c8e98efa8e63b04c8d3f1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a8350a656b9a4b589fe78da6f3405791f}\index{gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}!MaterialBuffer@{MaterialBuffer}}
+\index{MaterialBuffer@{MaterialBuffer}!gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}}
+\doxysubsubsection{\texorpdfstring{MaterialBuffer()}{MaterialBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a8350a656b9a4b589fe78da6f3405791f} 
+gg\+::\+Gg\+Simple\+Shader\+::\+Material\+Buffer\+::\+Material\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}}}]{ambient}{, }\item[{\mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}}}]{diffuse}{, }\item[{\mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}}}]{specular}{, }\item[{GLfloat}]{shininess}{, }\item[{GLsizei}]{count}{ = {\ttfamily 1}, }\item[{GLenum}]{usage}{ = {\ttfamily GL\+\_\+STATIC\+\_\+DRAW}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+同じ引数で埋めるコンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em ambient} & 環境光に対する反射係数. \\
+\hline
+{\em diffuse} & 拡散反射係数. \\
+\hline
+{\em specular} & 鏡面反射係数. \\
+\hline
+{\em shininess} & 輝き係数. \\
+\hline
+{\em count} & バッファ中の \doxylink{structgg_1_1GgSimpleShader_1_1Material}{Gg\+Simple\+Shader\+::\+Material} 型の材質データの数. \\
+\hline
+{\em usage} & バッファの使い方のパターン, gl\+Buffer\+Data() の第 4 引数の usage に渡される. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l07997}{7997}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a8350a656b9a4b589fe78da6f3405791f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a85046b49629ba1c6f330cc67b6941e49}\index{gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}!````~MaterialBuffer@{\texorpdfstring{$\sim$}{\string~}MaterialBuffer}}
+\index{````~MaterialBuffer@{\texorpdfstring{$\sim$}{\string~}MaterialBuffer}!gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}MaterialBuffer()}{\string~MaterialBuffer()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a85046b49629ba1c6f330cc67b6941e49} 
+virtual gg\+::\+Gg\+Simple\+Shader\+::\+Material\+Buffer\+::\texorpdfstring{$\sim$}{\string~}\+Material\+Buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+デストラクタ. 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l08012}{8012}} 行目に定義があります。
+
+
+
+\label{doc-func-members}
+\Hypertarget{classgg_1_1GgSimpleShader_1_1MaterialBuffer_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a800848bfd9b578ea460948898ee014bb}\index{gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}!load@{load}}
+\index{load@{load}!gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a800848bfd9b578ea460948898ee014bb} 
+void gg\+::\+Gg\+Simple\+Shader\+::\+Material\+Buffer\+::load (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structgg_1_1GgSimpleShader_1_1Material}{Material}} \&}]{material}{, }\item[{GLint}]{first}{ = {\ttfamily 0}, }\item[{GLsizei}]{count}{ = {\ttfamily 1}}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+材質を設定する.
+
+
+\begin{DoxyParams}{引数}
+{\em material} & 材質の特性の \doxylink{structgg_1_1GgSimpleShader_1_1Material}{Gg\+Simple\+Shader\+::\+Material} 構造体. \\
+\hline
+{\em first} & 値を設定する材質データの最初の番号, デフォルトは 0. \\
+\hline
+{\em count} & 値を設定する材質データの数, デフォルトは 1. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l08197}{8197}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a800848bfd9b578ea460948898ee014bb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgSimpleShader_1_1MaterialBuffer_ac0fae6a961ba2fdacbdb1e5d9d373f0a}\index{gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}!load@{load}}
+\index{load@{load}!gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleShader_1_1MaterialBuffer_ac0fae6a961ba2fdacbdb1e5d9d373f0a} 
+void gg\+::\+Gg\+Simple\+Shader\+::\+Material\+Buffer\+::load (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structgg_1_1GgSimpleShader_1_1Material}{Material}} \texorpdfstring{$\ast$}{*}}]{material}{, }\item[{GLint}]{first}{ = {\ttfamily 0}, }\item[{GLsizei}]{count}{ = {\ttfamily 1}}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+材質を設定する.
+
+
+\begin{DoxyParams}{引数}
+{\em material} & 材質の特性の \doxylink{structgg_1_1GgSimpleShader_1_1Material}{Gg\+Simple\+Shader\+::\+Material} 構造体のポインタ. \\
+\hline
+{\em first} & 値を設定する材質データの最初の番号, デフォルトは 0. \\
+\hline
+{\em count} & 値を設定する材質データの数, デフォルトは 1. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l08185}{8185}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classgg_1_1GgSimpleShader_1_1MaterialBuffer_ac0fae6a961ba2fdacbdb1e5d9d373f0a_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classgg_1_1GgSimpleShader_1_1MaterialBuffer_ac0fae6a961ba2fdacbdb1e5d9d373f0a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a1fd1234a547efafc6e4d1c1969c552e5}\index{gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}!loadAmbient@{loadAmbient}}
+\index{loadAmbient@{loadAmbient}!gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}}
+\doxysubsubsection{\texorpdfstring{loadAmbient()}{loadAmbient()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a1fd1234a547efafc6e4d1c1969c552e5} 
+void gg\+::\+Gg\+Simple\+Shader\+::\+Material\+Buffer\+::load\+Ambient (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&}]{ambient}{, }\item[{GLint}]{first}{ = {\ttfamily 0}, }\item[{GLsizei}]{count}{ = {\ttfamily 1}}\end{DoxyParamCaption}) const}
+
+三角形に単純な陰影付けを行うシェーダが参照する材質データ：環境光に対する反射係数を設定する.
+
+
+\begin{DoxyParams}{引数}
+{\em ambient} & 環境光に対する反射係数を格納した \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の変数. \\
+\hline
+{\em first} & 値を設定する材質データの最初の番号, デフォルトは 0. \\
+\hline
+{\em count} & 値を設定する材質データの数, デフォルトは 1. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l05737}{5737}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a1fd1234a547efafc6e4d1c1969c552e5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a683763773afb44009cbca19b1ef40ace}\index{gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}!loadAmbient@{loadAmbient}}
+\index{loadAmbient@{loadAmbient}!gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}}
+\doxysubsubsection{\texorpdfstring{loadAmbient()}{loadAmbient()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a683763773afb44009cbca19b1ef40ace} 
+void gg\+::\+Gg\+Simple\+Shader\+::\+Material\+Buffer\+::load\+Ambient (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{ambient}{, }\item[{GLint}]{first}{ = {\ttfamily 0}, }\item[{GLsizei}]{count}{ = {\ttfamily 1}}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+環境光に対する反射係数を設定する.
+
+
+\begin{DoxyParams}{引数}
+{\em ambient} & 環境光に対する反射係数を格納した GLfloat 型の 4 要素の配列変数. \\
+\hline
+{\em first} & 値を設定する材質データの最初の番号, デフォルトは 0. \\
+\hline
+{\em count} & 値を設定する材質データの数, デフォルトは 1. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l08047}{8047}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a683763773afb44009cbca19b1ef40ace_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a2362bd0ba0eadfba2e11c6322f5357ea}\index{gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}!loadAmbient@{loadAmbient}}
+\index{loadAmbient@{loadAmbient}!gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}}
+\doxysubsubsection{\texorpdfstring{loadAmbient()}{loadAmbient()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a2362bd0ba0eadfba2e11c6322f5357ea} 
+void gg\+::\+Gg\+Simple\+Shader\+::\+Material\+Buffer\+::load\+Ambient (\begin{DoxyParamCaption}\item[{GLfloat}]{r}{, }\item[{GLfloat}]{g}{, }\item[{GLfloat}]{b}{, }\item[{GLfloat}]{a}{ = {\ttfamily 1.0f}, }\item[{GLint}]{first}{ = {\ttfamily 0}, }\item[{GLsizei}]{count}{ = {\ttfamily 1}}\end{DoxyParamCaption}) const}
+
+環境光に対する反射係数を設定する.
+
+
+\begin{DoxyParams}{引数}
+{\em r} & 環境光に対する反射係数の赤成分. \\
+\hline
+{\em g} & 環境光に対する反射係数の緑成分. \\
+\hline
+{\em b} & 環境光に対する反射係数の青成分. \\
+\hline
+{\em a} & 環境光に対する反射係数の不透明度, デフォルトは 1. \\
+\hline
+{\em first} & 値を設定する材質データの最初の番号, デフォルトは 0. \\
+\hline
+{\em count} & 値を設定する材質データの数, デフォルトは 1. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l05711}{5711}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a2362bd0ba0eadfba2e11c6322f5357ea_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a3557fcdfe2079748f64e350311760cc7}\index{gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}!loadAmbientAndDiffuse@{loadAmbientAndDiffuse}}
+\index{loadAmbientAndDiffuse@{loadAmbientAndDiffuse}!gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}}
+\doxysubsubsection{\texorpdfstring{loadAmbientAndDiffuse()}{loadAmbientAndDiffuse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a3557fcdfe2079748f64e350311760cc7} 
+void gg\+::\+Gg\+Simple\+Shader\+::\+Material\+Buffer\+::load\+Ambient\+And\+Diffuse (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&}]{color}{, }\item[{GLint}]{first}{ = {\ttfamily 0}, }\item[{GLsizei}]{count}{ = {\ttfamily 1}}\end{DoxyParamCaption}) const}
+
+三角形に単純な陰影付けを行うシェーダが参照する材質データ：環境光に対する反射係数と拡散反射係数を設定する.
+
+
+\begin{DoxyParams}{引数}
+{\em color} & 環境光に対する反射係数と拡散反射係数を格納した \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の変数. \\
+\hline
+{\em first} & 値を設定する材質データの最初の番号, デフォルトは 0. \\
+\hline
+{\em count} & 値を設定する材質データの数, デフォルトは 1. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l05841}{5841}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a3557fcdfe2079748f64e350311760cc7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a137e456268648c0cb0d588efb3ec43db}\index{gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}!loadAmbientAndDiffuse@{loadAmbientAndDiffuse}}
+\index{loadAmbientAndDiffuse@{loadAmbientAndDiffuse}!gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}}
+\doxysubsubsection{\texorpdfstring{loadAmbientAndDiffuse()}{loadAmbientAndDiffuse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a137e456268648c0cb0d588efb3ec43db} 
+void gg\+::\+Gg\+Simple\+Shader\+::\+Material\+Buffer\+::load\+Ambient\+And\+Diffuse (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{color}{, }\item[{GLint}]{first}{ = {\ttfamily 0}, }\item[{GLsizei}]{count}{ = {\ttfamily 1}}\end{DoxyParamCaption}) const}
+
+環境光に対する反射係数と拡散反射係数を設定する.
+
+
+\begin{DoxyParams}{引数}
+{\em color} & 環境光に対する反射係数と拡散反射係数を格納した GLfloat 型の 4 要素の配列変数. \\
+\hline
+{\em first} & 値を設定する材質データの最初の番号, デフォルトは 0. \\
+\hline
+{\em count} & 値を設定する材質データの数, デフォルトは 1. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l05864}{5864}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a137e456268648c0cb0d588efb3ec43db_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgSimpleShader_1_1MaterialBuffer_ac6fdf62b08115efab0c068313eae404f}\index{gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}!loadAmbientAndDiffuse@{loadAmbientAndDiffuse}}
+\index{loadAmbientAndDiffuse@{loadAmbientAndDiffuse}!gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}}
+\doxysubsubsection{\texorpdfstring{loadAmbientAndDiffuse()}{loadAmbientAndDiffuse()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleShader_1_1MaterialBuffer_ac6fdf62b08115efab0c068313eae404f} 
+void gg\+::\+Gg\+Simple\+Shader\+::\+Material\+Buffer\+::load\+Ambient\+And\+Diffuse (\begin{DoxyParamCaption}\item[{GLfloat}]{r}{, }\item[{GLfloat}]{g}{, }\item[{GLfloat}]{b}{, }\item[{GLfloat}]{a}{ = {\ttfamily 1.0f}, }\item[{GLint}]{first}{ = {\ttfamily 0}, }\item[{GLsizei}]{count}{ = {\ttfamily 1}}\end{DoxyParamCaption}) const}
+
+環境光に対する反射係数と拡散反射係数を設定する.
+
+
+\begin{DoxyParams}{引数}
+{\em r} & 環境光に対する反射係数と拡散反射係数の赤成分. \\
+\hline
+{\em g} & 環境光に対する反射係数と拡散反射係数の緑成分. \\
+\hline
+{\em b} & 環境光に対する反射係数と拡散反射係数の青成分. \\
+\hline
+{\em a} & 環境光に対する反射係数と拡散反射係数の不透明度, デフォルトは 1. \\
+\hline
+{\em first} & 値を設定する材質データの最初の番号, デフォルトは 0. \\
+\hline
+{\em count} & 値を設定する材質データの数, デフォルトは 1. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l05815}{5815}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgSimpleShader_1_1MaterialBuffer_ac6fdf62b08115efab0c068313eae404f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a6fc7787a0723c1204839d86806e41211}\index{gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}!loadDiffuse@{loadDiffuse}}
+\index{loadDiffuse@{loadDiffuse}!gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}}
+\doxysubsubsection{\texorpdfstring{loadDiffuse()}{loadDiffuse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a6fc7787a0723c1204839d86806e41211} 
+void gg\+::\+Gg\+Simple\+Shader\+::\+Material\+Buffer\+::load\+Diffuse (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&}]{diffuse}{, }\item[{GLint}]{first}{ = {\ttfamily 0}, }\item[{GLsizei}]{count}{ = {\ttfamily 1}}\end{DoxyParamCaption}) const}
+
+三角形に単純な陰影付けを行うシェーダが参照する材質データ：拡散反射係数を設定する.
+
+
+\begin{DoxyParams}{引数}
+{\em diffuse} & 拡散反射係数を格納した \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の変数. \\
+\hline
+{\em first} & 値を設定する材質データの最初の番号, デフォルトは 0. \\
+\hline
+{\em count} & 値を設定する材質データの数, デフォルトは 1. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l05789}{5789}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a6fc7787a0723c1204839d86806e41211_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgSimpleShader_1_1MaterialBuffer_aa21bc29a20ebdd31ca4d8e5b78d6b4fe}\index{gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}!loadDiffuse@{loadDiffuse}}
+\index{loadDiffuse@{loadDiffuse}!gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}}
+\doxysubsubsection{\texorpdfstring{loadDiffuse()}{loadDiffuse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleShader_1_1MaterialBuffer_aa21bc29a20ebdd31ca4d8e5b78d6b4fe} 
+void gg\+::\+Gg\+Simple\+Shader\+::\+Material\+Buffer\+::load\+Diffuse (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{diffuse}{, }\item[{GLint}]{first}{ = {\ttfamily 0}, }\item[{GLsizei}]{count}{ = {\ttfamily 1}}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+拡散反射係数を設定する.
+
+
+\begin{DoxyParams}{引数}
+{\em diffuse} & 拡散反射係数を格納した GLfloat 型の 4 要素の配列変数. \\
+\hline
+{\em first} & 値を設定する材質データの最初の番号, デフォルトは 0. \\
+\hline
+{\em count} & 値を設定する材質データの数, デフォルトは 1. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l08084}{8084}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgSimpleShader_1_1MaterialBuffer_aa21bc29a20ebdd31ca4d8e5b78d6b4fe_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgSimpleShader_1_1MaterialBuffer_ae73be670a4aa8a4c3b316988b5357561}\index{gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}!loadDiffuse@{loadDiffuse}}
+\index{loadDiffuse@{loadDiffuse}!gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}}
+\doxysubsubsection{\texorpdfstring{loadDiffuse()}{loadDiffuse()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleShader_1_1MaterialBuffer_ae73be670a4aa8a4c3b316988b5357561} 
+void gg\+::\+Gg\+Simple\+Shader\+::\+Material\+Buffer\+::load\+Diffuse (\begin{DoxyParamCaption}\item[{GLfloat}]{r}{, }\item[{GLfloat}]{g}{, }\item[{GLfloat}]{b}{, }\item[{GLfloat}]{a}{ = {\ttfamily 1.0f}, }\item[{GLint}]{first}{ = {\ttfamily 0}, }\item[{GLsizei}]{count}{ = {\ttfamily 1}}\end{DoxyParamCaption}) const}
+
+拡散反射係数を設定する.
+
+
+\begin{DoxyParams}{引数}
+{\em r} & 拡散反射係数の赤成分. \\
+\hline
+{\em g} & 拡散反射係数の緑成分. \\
+\hline
+{\em b} & 拡散反射係数の青成分. \\
+\hline
+{\em a} & 拡散反射係数の不透明度, デフォルトは 1. \\
+\hline
+{\em first} & 値を設定する材質データの最初の番号, デフォルトは 0. \\
+\hline
+{\em count} & 値を設定する材質データの数, デフォルトは 1. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l05763}{5763}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgSimpleShader_1_1MaterialBuffer_ae73be670a4aa8a4c3b316988b5357561_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a86609495863a6a126b8ebf799ed9f40a}\index{gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}!loadShininess@{loadShininess}}
+\index{loadShininess@{loadShininess}!gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}}
+\doxysubsubsection{\texorpdfstring{loadShininess()}{loadShininess()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a86609495863a6a126b8ebf799ed9f40a} 
+void gg\+::\+Gg\+Simple\+Shader\+::\+Material\+Buffer\+::load\+Shininess (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{shininess}{, }\item[{GLint}]{first}{ = {\ttfamily 0}, }\item[{GLsizei}]{count}{ = {\ttfamily 1}}\end{DoxyParamCaption}) const}
+
+輝き係数を設定する.
+
+
+\begin{DoxyParams}{引数}
+{\em shininess} & 輝き係数. \\
+\hline
+{\em first} & 値を設定する材質データの最初の番号, デフォルトは 0. \\
+\hline
+{\em count} & 値を設定する材質データの数, デフォルトは 1. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l05977}{5977}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a86609495863a6a126b8ebf799ed9f40a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a06ed0bb3f14b3f34ec2d96b5c4ef46e2}\index{gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}!loadShininess@{loadShininess}}
+\index{loadShininess@{loadShininess}!gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}}
+\doxysubsubsection{\texorpdfstring{loadShininess()}{loadShininess()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a06ed0bb3f14b3f34ec2d96b5c4ef46e2} 
+void gg\+::\+Gg\+Simple\+Shader\+::\+Material\+Buffer\+::load\+Shininess (\begin{DoxyParamCaption}\item[{GLfloat}]{shininess}{, }\item[{GLint}]{first}{ = {\ttfamily 0}, }\item[{GLsizei}]{count}{ = {\ttfamily 1}}\end{DoxyParamCaption}) const}
+
+輝き係数を設定する.
+
+
+\begin{DoxyParams}{引数}
+{\em shininess} & 輝き係数. \\
+\hline
+{\em first} & 値を設定する材質データの最初の番号, デフォルトは 0. \\
+\hline
+{\em count} & 値を設定する材質データの数, デフォルトは 1. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l05956}{5956}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a06ed0bb3f14b3f34ec2d96b5c4ef46e2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgSimpleShader_1_1MaterialBuffer_aff60f66132bf688d9cbcb363be916d90}\index{gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}!loadSpecular@{loadSpecular}}
+\index{loadSpecular@{loadSpecular}!gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}}
+\doxysubsubsection{\texorpdfstring{loadSpecular()}{loadSpecular()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleShader_1_1MaterialBuffer_aff60f66132bf688d9cbcb363be916d90} 
+void gg\+::\+Gg\+Simple\+Shader\+::\+Material\+Buffer\+::load\+Specular (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgg_1_1GgVector}{Gg\+Vector}} \&}]{specular}{, }\item[{GLint}]{first}{ = {\ttfamily 0}, }\item[{GLsizei}]{count}{ = {\ttfamily 1}}\end{DoxyParamCaption}) const}
+
+三角形に単純な陰影付けを行うシェーダが参照する材質データ：鏡面反射係数を設定する.
+
+
+\begin{DoxyParams}{引数}
+{\em specular} & 鏡面反射係数を格納した \doxylink{classgg_1_1GgVector}{Gg\+Vector} 型の変数. \\
+\hline
+{\em first} & 値を設定する材質データの最初の番号, デフォルトは 0. \\
+\hline
+{\em count} & 値を設定する材質データの数, デフォルトは 1. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l05933}{5933}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgSimpleShader_1_1MaterialBuffer_aff60f66132bf688d9cbcb363be916d90_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a454f09ee0599eb06e0c3d6d6024ce76a}\index{gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}!loadSpecular@{loadSpecular}}
+\index{loadSpecular@{loadSpecular}!gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}}
+\doxysubsubsection{\texorpdfstring{loadSpecular()}{loadSpecular()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a454f09ee0599eb06e0c3d6d6024ce76a} 
+void gg\+::\+Gg\+Simple\+Shader\+::\+Material\+Buffer\+::load\+Specular (\begin{DoxyParamCaption}\item[{const GLfloat \texorpdfstring{$\ast$}{*}}]{specular}{, }\item[{GLint}]{first}{ = {\ttfamily 0}, }\item[{GLsizei}]{count}{ = {\ttfamily 1}}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+鏡面反射係数を設定する.
+
+
+\begin{DoxyParams}{引数}
+{\em specular} & 鏡面反射係数を格納した GLfloat 型の 4 要素の配列変数. \\
+\hline
+{\em first} & 値を設定する材質データの最初の番号, デフォルトは 0. \\
+\hline
+{\em count} & 値を設定する材質データの数, デフォルトは 1. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l08154}{8154}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a454f09ee0599eb06e0c3d6d6024ce76a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a51f6f04e85233f86139bef53b49c352b}\index{gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}!loadSpecular@{loadSpecular}}
+\index{loadSpecular@{loadSpecular}!gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}}
+\doxysubsubsection{\texorpdfstring{loadSpecular()}{loadSpecular()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a51f6f04e85233f86139bef53b49c352b} 
+void gg\+::\+Gg\+Simple\+Shader\+::\+Material\+Buffer\+::load\+Specular (\begin{DoxyParamCaption}\item[{GLfloat}]{r}{, }\item[{GLfloat}]{g}{, }\item[{GLfloat}]{b}{, }\item[{GLfloat}]{a}{ = {\ttfamily 1.0f}, }\item[{GLint}]{first}{ = {\ttfamily 0}, }\item[{GLsizei}]{count}{ = {\ttfamily 1}}\end{DoxyParamCaption}) const}
+
+鏡面反射係数を設定する.
+
+
+\begin{DoxyParams}{引数}
+{\em r} & 鏡面反射係数の赤成分. \\
+\hline
+{\em g} & 鏡面反射係数の緑成分. \\
+\hline
+{\em b} & 鏡面反射係数の青成分. \\
+\hline
+{\em a} & 鏡面反射係数の不透明度, デフォルトは 1. \\
+\hline
+{\em first} & 値を設定する材質データの最初の番号, デフォルトは 0. \\
+\hline
+{\em count} & 値を設定する材質データの数, デフォルトは 1. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l05907}{5907}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a51f6f04e85233f86139bef53b49c352b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a60222d434fad051866e4b99f6efcbfb6}\index{gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}!select@{select}}
+\index{select@{select}!gg::GgSimpleShader::MaterialBuffer@{gg::GgSimpleShader::MaterialBuffer}}
+\doxysubsubsection{\texorpdfstring{select()}{select()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a60222d434fad051866e4b99f6efcbfb6} 
+void gg\+::\+Gg\+Simple\+Shader\+::\+Material\+Buffer\+::select (\begin{DoxyParamCaption}\item[{GLint}]{i}{ = {\ttfamily 0}}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+材質を選択する.
+
+
+\begin{DoxyParams}{引数}
+{\em i} & 材質データの uniform block のインデックス. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l08207}{8207}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classgg_1_1GgSimpleShader_1_1MaterialBuffer_a60222d434fad051866e4b99f6efcbfb6_cgraph}
+\end{center}
+\end{figure}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gg_8h}{gg.\+h}}\item 
+\mbox{\hyperlink{gg_8cpp}{gg.\+cpp}}\end{DoxyCompactItemize}

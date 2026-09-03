@@ -1,0 +1,552 @@
+\doxysection{gg\+::Gg\+Uniform\+Buffer\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} クラステンプレート}
+\hypertarget{classgg_1_1GgUniformBuffer}{}\label{classgg_1_1GgUniformBuffer}\index{gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}}
+
+
+{\ttfamily \#include $<$gg.\+h$>$}
+
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgg_1_1GgUniformBuffer_af7e78fd8c342e9ac9cb9b056c879c768}{Gg\+Uniform\+Buffer}} ()
+\item 
+\mbox{\hyperlink{classgg_1_1GgUniformBuffer_ad35bb060eb37e5f3679e24f469016eeb}{Gg\+Uniform\+Buffer}} (const T \texorpdfstring{$\ast$}{*}data, GLsizei count, GLenum usage=GL\+\_\+\+STATIC\+\_\+\+DRAW)
+\item 
+\mbox{\hyperlink{classgg_1_1GgUniformBuffer_af737530228e2b2e70016e433f6c96e9d}{Gg\+Uniform\+Buffer}} (const T \&data, GLsizei count, GLenum usage=GL\+\_\+\+STATIC\+\_\+\+DRAW)
+\item 
+virtual \mbox{\hyperlink{classgg_1_1GgUniformBuffer_affa4119e5f9aae08c74fda3a31e6ee8e}{\texorpdfstring{$\sim$}{\string~}\+Gg\+Uniform\+Buffer}} ()
+\item 
+const GLuint \& \mbox{\hyperlink{classgg_1_1GgUniformBuffer_ad097650d4355144a15deb49bf78e6198}{get\+Target}} () const
+\item 
+GLsizeiptr \mbox{\hyperlink{classgg_1_1GgUniformBuffer_ad4b0676ee460d8884f2f041fd2dc3506}{get\+Stride}} () const
+\item 
+const GLsizei \& \mbox{\hyperlink{classgg_1_1GgUniformBuffer_a476ed194c6ae2e4a6cbcdfe119db039b}{get\+Count}} () const
+\item 
+const GLuint \& \mbox{\hyperlink{classgg_1_1GgUniformBuffer_a2b32d9bbfd87830bc2db3d4431d89176}{get\+Buffer}} () const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer_abcc61a088d16f53a9a51749dd34c24b8}{bind}} () const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer_a4152f1f30958abd2af56ffb27fa8de04}{unbind}} () const
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classgg_1_1GgUniformBuffer_a978849adec295afa4e8772381cbe361f}{map}} () const
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classgg_1_1GgUniformBuffer_ab2722c9543743039dcde0becd8329d30}{map}} (GLint first, GLsizei count) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer_abea659ba10d6fae6677463b6d0718197}{unmap}} () const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer_a1af7292924eb187968a4ea1a9221e9e7}{load}} (const T \texorpdfstring{$\ast$}{*}data, GLsizei count, GLenum usage=GL\+\_\+\+STATIC\+\_\+\+DRAW)
+\item 
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer_a94c5c828711212b404a18dcd1cc9e9b0}{load}} (const T \&data, GLsizei count, GLenum usage=GL\+\_\+\+STATIC\+\_\+\+DRAW)
+\item 
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer_af998019f39e666887550170538e5ebd4}{send}} (const GLvoid \texorpdfstring{$\ast$}{*}data, GLint offset=0, GLsizei size=sizeof(T), GLint first=0, GLsizei count=0) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer_a54af5ca44551f3d6799966590b80d7a1}{fill}} (const GLvoid \texorpdfstring{$\ast$}{*}data, GLint offset=0, GLsizei size=sizeof(T), GLint first=0, GLsizei count=0) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer_ae9cc42d251faad15a2f506777d280c67}{read}} (GLvoid \texorpdfstring{$\ast$}{*}data, GLint offset=0, GLsizei size=sizeof(T), GLint first=0, GLsizei count=0) const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer_a0ad63590a48c6a54e92b98a3f0d53242}{copy}} (GLuint src\+\_\+buffer, GLint src\+\_\+first=0, GLint dst\+\_\+first=0, GLsizei count=0) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+\subsubsection*{template$<$typename T$>$\newline
+class gg\+::\+Gg\+Uniform\+Buffer$<$ T $>$}
+ユニフォームバッファオブジェクト.
+
+\begin{DoxyNote}{覚え書き}
+ユニフォーム変数を格納するバッファオブジェクトの基底クラス. 
+\end{DoxyNote}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06050}{6050}} 行目に定義があります。
+
+
+
+\label{doc-constructors}
+\Hypertarget{classgg_1_1GgUniformBuffer_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{classgg_1_1GgUniformBuffer_af7e78fd8c342e9ac9cb9b056c879c768}\index{gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}!GgUniformBuffer@{GgUniformBuffer}}
+\index{GgUniformBuffer@{GgUniformBuffer}!gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GgUniformBuffer()}{GgUniformBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgUniformBuffer_af7e78fd8c342e9ac9cb9b056c879c768} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{classgg_1_1GgUniformBuffer}{gg\+::\+Gg\+Uniform\+Buffer}}$<$ T $>$\+::\+Gg\+Uniform\+Buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+コンストラクタ. 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06060}{6060}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgUniformBuffer_ad35bb060eb37e5f3679e24f469016eeb}\index{gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}!GgUniformBuffer@{GgUniformBuffer}}
+\index{GgUniformBuffer@{GgUniformBuffer}!gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GgUniformBuffer()}{GgUniformBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgUniformBuffer_ad35bb060eb37e5f3679e24f469016eeb} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{classgg_1_1GgUniformBuffer}{gg\+::\+Gg\+Uniform\+Buffer}}$<$ T $>$\+::\+Gg\+Uniform\+Buffer (\begin{DoxyParamCaption}\item[{const T \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{GLsizei}]{count}{, }\item[{GLenum}]{usage}{ = {\ttfamily GL\+\_\+STATIC\+\_\+DRAW}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+ユニフォームバッファオブジェクトのブロックごとにデータを転送するコンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em data} & データが格納されている領域の先頭のポインタ (nullptr ならデータを転送しない). \\
+\hline
+{\em count} & データの数. \\
+\hline
+{\em usage} & バッファオブジェクトの使い方. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06071}{6071}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgUniformBuffer_ad35bb060eb37e5f3679e24f469016eeb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgUniformBuffer_af737530228e2b2e70016e433f6c96e9d}\index{gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}!GgUniformBuffer@{GgUniformBuffer}}
+\index{GgUniformBuffer@{GgUniformBuffer}!gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GgUniformBuffer()}{GgUniformBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgUniformBuffer_af737530228e2b2e70016e433f6c96e9d} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{classgg_1_1GgUniformBuffer}{gg\+::\+Gg\+Uniform\+Buffer}}$<$ T $>$\+::\+Gg\+Uniform\+Buffer (\begin{DoxyParamCaption}\item[{const T \&}]{data}{, }\item[{GLsizei}]{count}{, }\item[{GLenum}]{usage}{ = {\ttfamily GL\+\_\+STATIC\+\_\+DRAW}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+ユニフォームバッファオブジェクトの全ブロックに同じデータを格納するコンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em data} & 格納するデータ. \\
+\hline
+{\em count} & 格納する数. \\
+\hline
+{\em usage} & バッファオブジェクトの使い方. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06083}{6083}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgUniformBuffer_af737530228e2b2e70016e433f6c96e9d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgUniformBuffer_affa4119e5f9aae08c74fda3a31e6ee8e}\index{gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}!````~GgUniformBuffer@{\texorpdfstring{$\sim$}{\string~}GgUniformBuffer}}
+\index{````~GgUniformBuffer@{\texorpdfstring{$\sim$}{\string~}GgUniformBuffer}!gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GgUniformBuffer()}{\string~GgUniformBuffer()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgUniformBuffer_affa4119e5f9aae08c74fda3a31e6ee8e} 
+template$<$typename T$>$ \\
+virtual \mbox{\hyperlink{classgg_1_1GgUniformBuffer}{gg\+::\+Gg\+Uniform\+Buffer}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classgg_1_1GgUniformBuffer_af7e78fd8c342e9ac9cb9b056c879c768}{Gg\+Uniform\+Buffer}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+デストラクタ. 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06091}{6091}} 行目に定義があります。
+
+
+
+\label{doc-func-members}
+\Hypertarget{classgg_1_1GgUniformBuffer_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{classgg_1_1GgUniformBuffer_abcc61a088d16f53a9a51749dd34c24b8}\index{gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}!bind@{bind}}
+\index{bind@{bind}!gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgUniformBuffer_abcc61a088d16f53a9a51749dd34c24b8} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer}{gg\+::\+Gg\+Uniform\+Buffer}}$<$ T $>$\+::bind (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+ユニフォームバッファオブジェクトを結合する. 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06138}{6138}} 行目に定義があります。
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgUniformBuffer_abcc61a088d16f53a9a51749dd34c24b8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgUniformBuffer_a0ad63590a48c6a54e92b98a3f0d53242}\index{gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}!copy@{copy}}
+\index{copy@{copy}!gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgUniformBuffer_a0ad63590a48c6a54e92b98a3f0d53242} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer}{gg\+::\+Gg\+Uniform\+Buffer}}$<$ T $>$\+::copy (\begin{DoxyParamCaption}\item[{GLuint}]{src\+\_\+buffer}{, }\item[{GLint}]{src\+\_\+first}{ = {\ttfamily 0}, }\item[{GLint}]{dst\+\_\+first}{ = {\ttfamily 0}, }\item[{GLsizei}]{count}{ = {\ttfamily 0}}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+別のバッファオブジェクトからデータを複写する.
+
+
+\begin{DoxyParams}{引数}
+{\em src\+\_\+buffer} & 複写元のバッファオブジェクト名. \\
+\hline
+{\em src\+\_\+first} & 複写元 (buffer) の先頭のデータの位置. \\
+\hline
+{\em dst\+\_\+first} & 複写先 (\doxylink{classgg_1_1GgUniformBuffer_a2b32d9bbfd87830bc2db3d4431d89176}{get\+Buffer()}) の先頭のデータの位置. \\
+\hline
+{\em count} & 複写するデータの数 (0 ならバッファオブジェクト全体). \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06349}{6349}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classgg_1_1GgUniformBuffer_a0ad63590a48c6a54e92b98a3f0d53242_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgUniformBuffer_a54af5ca44551f3d6799966590b80d7a1}\index{gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}!fill@{fill}}
+\index{fill@{fill}!gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{fill()}{fill()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgUniformBuffer_a54af5ca44551f3d6799966590b80d7a1} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer}{gg\+::\+Gg\+Uniform\+Buffer}}$<$ T $>$\+::fill (\begin{DoxyParamCaption}\item[{const GLvoid \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{GLint}]{offset}{ = {\ttfamily 0}, }\item[{GLsizei}]{size}{ = {\ttfamily sizeof(T)}, }\item[{GLint}]{first}{ = {\ttfamily 0}, }\item[{GLsizei}]{count}{ = {\ttfamily 0}}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+ユニフォームバッファオブジェクトの全ブロックのメンバーを同じデータを格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em data} & 格納するデータ. \\
+\hline
+{\em offset} & 格納先のメンバのブロックの先頭からのバイトオフセット. \\
+\hline
+{\em size} & 格納するデータの一個あたりのバイト数. \\
+\hline
+{\em first} & 格納先のバッファオブジェクトのブロックの先頭の番号. \\
+\hline
+{\em count} & 格納するデータの数. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06266}{6266}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classgg_1_1GgUniformBuffer_a54af5ca44551f3d6799966590b80d7a1_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classgg_1_1GgUniformBuffer_a54af5ca44551f3d6799966590b80d7a1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgUniformBuffer_a2b32d9bbfd87830bc2db3d4431d89176}\index{gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}!getBuffer@{getBuffer}}
+\index{getBuffer@{getBuffer}!gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getBuffer()}{getBuffer()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgUniformBuffer_a2b32d9bbfd87830bc2db3d4431d89176} 
+template$<$typename T$>$ \\
+const GLuint \& \mbox{\hyperlink{classgg_1_1GgUniformBuffer}{gg\+::\+Gg\+Uniform\+Buffer}}$<$ T $>$\+::get\+Buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+ユニフォームバッファオブジェクト名を取り出す.
+
+\begin{DoxyReturn}{戻り値}
+このユニフォームバッファオブジェクト名. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06130}{6130}} 行目に定義があります。
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classgg_1_1GgUniformBuffer_a2b32d9bbfd87830bc2db3d4431d89176_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgUniformBuffer_a476ed194c6ae2e4a6cbcdfe119db039b}\index{gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}!getCount@{getCount}}
+\index{getCount@{getCount}!gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getCount()}{getCount()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgUniformBuffer_a476ed194c6ae2e4a6cbcdfe119db039b} 
+template$<$typename T$>$ \\
+const GLsizei \& \mbox{\hyperlink{classgg_1_1GgUniformBuffer}{gg\+::\+Gg\+Uniform\+Buffer}}$<$ T $>$\+::get\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+データの数を取り出す.
+
+\begin{DoxyReturn}{戻り値}
+このユニフォームバッファオブジェクトのデータの数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06120}{6120}} 行目に定義があります。
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgUniformBuffer_a476ed194c6ae2e4a6cbcdfe119db039b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgUniformBuffer_ad4b0676ee460d8884f2f041fd2dc3506}\index{gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}!getStride@{getStride}}
+\index{getStride@{getStride}!gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getStride()}{getStride()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgUniformBuffer_ad4b0676ee460d8884f2f041fd2dc3506} 
+template$<$typename T$>$ \\
+GLsizeiptr \mbox{\hyperlink{classgg_1_1GgUniformBuffer}{gg\+::\+Gg\+Uniform\+Buffer}}$<$ T $>$\+::get\+Stride (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+ユニフォームバッファオブジェクトのアライメントを考慮したデータの間隔を取り出す.
+
+\begin{DoxyReturn}{戻り値}
+このユニフォームバッファオブジェクトのデータの間隔. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06110}{6110}} 行目に定義があります。
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgUniformBuffer_ad4b0676ee460d8884f2f041fd2dc3506_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgUniformBuffer_ad097650d4355144a15deb49bf78e6198}\index{gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}!getTarget@{getTarget}}
+\index{getTarget@{getTarget}!gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getTarget()}{getTarget()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgUniformBuffer_ad097650d4355144a15deb49bf78e6198} 
+template$<$typename T$>$ \\
+const GLuint \& \mbox{\hyperlink{classgg_1_1GgUniformBuffer}{gg\+::\+Gg\+Uniform\+Buffer}}$<$ T $>$\+::get\+Target (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+ユニフォームバッファオブジェクトのターゲットを取り出す.
+
+\begin{DoxyReturn}{戻り値}
+このユニフォームバッファオブジェクトのターゲット. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06100}{6100}} 行目に定義があります。
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgUniformBuffer_ad097650d4355144a15deb49bf78e6198_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgUniformBuffer_a94c5c828711212b404a18dcd1cc9e9b0}\index{gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}!load@{load}}
+\index{load@{load}!gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgUniformBuffer_a94c5c828711212b404a18dcd1cc9e9b0} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer}{gg\+::\+Gg\+Uniform\+Buffer}}$<$ T $>$\+::load (\begin{DoxyParamCaption}\item[{const T \&}]{data}{, }\item[{GLsizei}]{count}{, }\item[{GLenum}]{usage}{ = {\ttfamily GL\+\_\+STATIC\+\_\+DRAW}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+ユニフォームバッファオブジェクトを確保して全てのブロックに同じデータを格納する.
+
+
+\begin{DoxyParams}{引数}
+{\em data} & 格納するデータ. \\
+\hline
+{\em count} & 格納する数. \\
+\hline
+{\em usage} & バッファオブジェクトの使い方. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06207}{6207}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgUniformBuffer_a94c5c828711212b404a18dcd1cc9e9b0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgUniformBuffer_a1af7292924eb187968a4ea1a9221e9e7}\index{gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}!load@{load}}
+\index{load@{load}!gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgUniformBuffer_a1af7292924eb187968a4ea1a9221e9e7} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer}{gg\+::\+Gg\+Uniform\+Buffer}}$<$ T $>$\+::load (\begin{DoxyParamCaption}\item[{const T \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{GLsizei}]{count}{, }\item[{GLenum}]{usage}{ = {\ttfamily GL\+\_\+STATIC\+\_\+DRAW}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+ユニフォームバッファオブジェクトを確保してブロックごとにデータを転送する.
+
+
+\begin{DoxyParams}{引数}
+{\em data} & データが格納されている領域の先頭のポインタ (nullptr ならデータを転送しない). \\
+\hline
+{\em count} & データの数. \\
+\hline
+{\em usage} & バッファオブジェクトの使い方. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06188}{6188}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgUniformBuffer_a1af7292924eb187968a4ea1a9221e9e7_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classgg_1_1GgUniformBuffer_a1af7292924eb187968a4ea1a9221e9e7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgUniformBuffer_a978849adec295afa4e8772381cbe361f}\index{gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}!map@{map}}
+\index{map@{map}!gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{map()}{map()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgUniformBuffer_a978849adec295afa4e8772381cbe361f} 
+template$<$typename T$>$ \\
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classgg_1_1GgUniformBuffer}{gg\+::\+Gg\+Uniform\+Buffer}}$<$ T $>$\+::map (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+ユニフォームバッファオブジェクトをマップする.
+
+\begin{DoxyReturn}{戻り値}
+マップしたメモリの先頭のポインタ. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06156}{6156}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgUniformBuffer_ab2722c9543743039dcde0becd8329d30}\index{gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}!map@{map}}
+\index{map@{map}!gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{map()}{map()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgUniformBuffer_ab2722c9543743039dcde0becd8329d30} 
+template$<$typename T$>$ \\
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classgg_1_1GgUniformBuffer}{gg\+::\+Gg\+Uniform\+Buffer}}$<$ T $>$\+::map (\begin{DoxyParamCaption}\item[{GLint}]{first}{, }\item[{GLsizei}]{count}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+ユニフォームバッファオブジェクトの指定した範囲をマップする.
+
+
+\begin{DoxyParams}{引数}
+{\em first} & マップする範囲のバッファオブジェクトの先頭からの位置. \\
+\hline
+{\em count} & マップするデータの数 (0 ならバッファオブジェクト全体). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+マップしたメモリの先頭のポインタ. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06168}{6168}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgUniformBuffer_ae9cc42d251faad15a2f506777d280c67}\index{gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}!read@{read}}
+\index{read@{read}!gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgUniformBuffer_ae9cc42d251faad15a2f506777d280c67} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer}{gg\+::\+Gg\+Uniform\+Buffer}}$<$ T $>$\+::read (\begin{DoxyParamCaption}\item[{GLvoid \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{GLint}]{offset}{ = {\ttfamily 0}, }\item[{GLsizei}]{size}{ = {\ttfamily sizeof(T)}, }\item[{GLint}]{first}{ = {\ttfamily 0}, }\item[{GLsizei}]{count}{ = {\ttfamily 0}}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+ユニフォームバッファオブジェクトからデータを抽出する.
+
+
+\begin{DoxyParams}{引数}
+{\em data} & 抽出先の領域の先頭のポインタ. \\
+\hline
+{\em offset} & 抽出元のユニフォームバッファオブジェクトのメンバのブロックの先頭からのバイトオフセット. \\
+\hline
+{\em size} & 抽出するデータの一個あたりのバイト数. \\
+\hline
+{\em first} & 抽出元のユニフォームバッファオブジェクトのブロックの先頭の番号. \\
+\hline
+{\em count} & 抽出するデータの数 (0 ならユニフォームバッファオブジェクト全体). \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06301}{6301}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classgg_1_1GgUniformBuffer_ae9cc42d251faad15a2f506777d280c67_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgUniformBuffer_af998019f39e666887550170538e5ebd4}\index{gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}!send@{send}}
+\index{send@{send}!gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgUniformBuffer_af998019f39e666887550170538e5ebd4} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer}{gg\+::\+Gg\+Uniform\+Buffer}}$<$ T $>$\+::send (\begin{DoxyParamCaption}\item[{const GLvoid \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{GLint}]{offset}{ = {\ttfamily 0}, }\item[{GLsizei}]{size}{ = {\ttfamily sizeof(T)}, }\item[{GLint}]{first}{ = {\ttfamily 0}, }\item[{GLsizei}]{count}{ = {\ttfamily 0}}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+ユニフォームバッファオブジェクトを確保してユニフォームバッファオブジェクトのブロックごとのメンバを同じデータで埋める.
+
+
+\begin{DoxyParams}{引数}
+{\em data} & データが格納されている領域の先頭のポインタ. \\
+\hline
+{\em offset} & 格納先のメンバのブロックの先頭からのバイトオフセット. \\
+\hline
+{\em size} & 格納するデータの一個あたりのバイト数. \\
+\hline
+{\em first} & 格納先のバッファオブジェクトのブロックの先頭の番号. \\
+\hline
+{\em count} & 格納するデータの数. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06228}{6228}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classgg_1_1GgUniformBuffer_af998019f39e666887550170538e5ebd4_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgUniformBuffer_af998019f39e666887550170538e5ebd4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgUniformBuffer_a4152f1f30958abd2af56ffb27fa8de04}\index{gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}!unbind@{unbind}}
+\index{unbind@{unbind}!gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{unbind()}{unbind()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgUniformBuffer_a4152f1f30958abd2af56ffb27fa8de04} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer}{gg\+::\+Gg\+Uniform\+Buffer}}$<$ T $>$\+::unbind (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+ユニフォームバッファオブジェクトを解放する. 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06146}{6146}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgUniformBuffer_abea659ba10d6fae6677463b6d0718197}\index{gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}!unmap@{unmap}}
+\index{unmap@{unmap}!gg::GgUniformBuffer$<$ T $>$@{gg::GgUniformBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{unmap()}{unmap()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgUniformBuffer_abea659ba10d6fae6677463b6d0718197} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{classgg_1_1GgUniformBuffer}{gg\+::\+Gg\+Uniform\+Buffer}}$<$ T $>$\+::unmap (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+バッファオブジェクトをアンマップする. 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l06176}{6176}} 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gg_8h}{gg.\+h}}\end{DoxyCompactItemize}

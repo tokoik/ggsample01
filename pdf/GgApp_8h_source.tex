@@ -1,0 +1,764 @@
+\doxysection{Gg\+App.\+h}
+\hypertarget{GgApp_8h_source}{}\label{GgApp_8h_source}\mbox{\hyperlink{GgApp_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00003}00003\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00004}00004\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00005}00005\ \textcolor{comment}{ゲームグラフィックス特論用補助プログラム\ GLFW3\ 版}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00006}00006\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00007}00007\ \textcolor{comment}{Copyright\ (c)\ 2011-\/2025\ Kohe\ Tokoi.\ All\ Rights\ Reserved.}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00008}00008\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00009}00009\ \textcolor{comment}{Permission\ is\ hereby\ granted,\ free\ of\ charge,\ \ to\ any\ person\ obtaining\ a\ copy}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00010}00010\ \textcolor{comment}{of\ this\ software\ and\ associated\ documentation\ files\ (the\ "{}Software"{}),\ to\ deal}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00011}00011\ \textcolor{comment}{in\ the\ Software\ without\ restriction,\ \ including\ without\ limitation\ the\ rights}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00012}00012\ \textcolor{comment}{to\ use,\ copy,\ \ modify,\ merge,\ \ publish,\ distribute,\ \ sublicense,\ \ and/or\ sell}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00013}00013\ \textcolor{comment}{copies\ or\ substantial\ portions\ of\ the\ Software.}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00014}00014\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00015}00015\ \textcolor{comment}{The\ above\ \ copyright\ notice\ \ and\ this\ permission\ notice\ \ shall\ be\ included\ in}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00016}00016\ \textcolor{comment}{all\ copies\ or\ substantial\ portions\ of\ the\ Software.}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00017}00017\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00018}00018\ \textcolor{comment}{THE\ SOFTWARE\ \ IS\ PROVIDED\ "{}AS\ IS"{},\ \ WITHOUT\ WARRANTY\ OF\ ANY\ KIND,\ \ EXPRESS\ OR}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00019}00019\ \textcolor{comment}{IMPLIED,\ \ INCLUDING\ \ BUT\ \ NOT\ LIMITED\ \ TO\ THE\ WARRANTIES\ \ OF\ MERCHANTABILITY,}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00020}00020\ \textcolor{comment}{FITNESS\ \ FOR\ \ A\ PARTICULAR\ PURPOSE\ \ AND\ NONINFRINGEMENT.\ \ IN\ \ NO\ EVENT\ \ SHALL}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00021}00021\ \textcolor{comment}{KOHE\ TOKOI\ \ BE\ LIABLE\ FOR\ ANY\ CLAIM,\ \ DAMAGES\ OR\ OTHER\ LIABILITY,\ \ WHETHER\ IN}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00022}00022\ \textcolor{comment}{AN\ ACTION\ \ OF\ CONTRACT,\ \ TORT\ \ OR\ \ OTHERWISE,\ \ ARISING\ \ FROM,\ \ OUT\ OF\ \ OR\ \ IN}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00023}00023\ \textcolor{comment}{CONNECTION\ WITH\ THE\ SOFTWARE\ OR\ THE\ USE\ OR\ OTHER\ DEALINGS\ IN\ THE\ SOFTWARE.}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00024}00024\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00025}00025\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00035}00035\ \textcolor{comment}{//\ Dear\ ImGui\ を使うなら}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00036}00036\ \textcolor{preprocessor}{\#if\ !defined(GG\_USE\_IMGUI)\ \&\&\ !defined(GG\_NO\_IMGUI)}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00037}\mbox{\hyperlink{GgApp_8h_aa86aa98e9a069096e9b0463ed43b0bdd}{00037}}\ \textcolor{preprocessor}{\#\ \ define\ GG\_USE\_IMGUI}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00038}00038\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00040}00040\ \textcolor{comment}{//\ OpenXR\ を使うなら}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00041}00041\ \textcolor{comment}{//\#define\ GG\_USE\_OPENXR}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00043}00043\ \textcolor{comment}{//\ 使用するマウスのボタン数}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00044}00044\ \textcolor{preprocessor}{\#if\ !defined(GG\_BUTTON\_COUNT)}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00045}\mbox{\hyperlink{GgApp_8h_a1ed2c057903764ef8477b9da6ac4ed64}{00045}}\ \textcolor{preprocessor}{\#\ \ define\ GG\_BUTTON\_COUNT\ 3}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00046}00046\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00048}00048\ \textcolor{comment}{//\ 使用するユーザインタフェースの数}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00049}00049\ \textcolor{preprocessor}{\#if\ !defined(GG\_INTERFACE\_COUNT)}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00050}\mbox{\hyperlink{GgApp_8h_a65e9ad0c9a623761c24f44a8fbdf6d2d}{00050}}\ \textcolor{preprocessor}{\#\ \ define\ GG\_INTERFACE\_COUNT\ 5}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00051}00051\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00053}00053\ \textcolor{comment}{//\ 補助プログラム}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00054}00054\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gg_8h}{gg.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00056}00056\ \textcolor{comment}{//\ 標準ライブラリ}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00057}00057\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00058}00058\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00060}00060\ \textcolor{comment}{//\ ImGui\ の組み込み}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00061}00061\ \textcolor{preprocessor}{\#if\ defined(GG\_USE\_IMGUI)}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00062}00062\ \textcolor{preprocessor}{\#\ \ include\ "{}imgui.h"{}}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00063}00063\ \textcolor{preprocessor}{\#\ \ include\ "{}imgui\_impl\_glfw.h"{}}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00064}00064\ \textcolor{preprocessor}{\#\ \ include\ "{}imgui\_impl\_opengl3.h"{}}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00065}00065\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00067}00067\ \textcolor{comment}{//\ OpenXR\ ライブラリの組み込み}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00068}00068\ \textcolor{preprocessor}{\#if\ defined(GG\_USE\_OPENXR)}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00069}00069\ \textcolor{preprocessor}{\#\ \ if\ defined(\_WIN32)}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00070}00070\ \textcolor{preprocessor}{\#\ \ \ \ define\ XR\_USE\_PLATFORM\_WIN32}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00071}00071\ \textcolor{preprocessor}{\#\ \ \ \ define\ XR\_USE\_GRAPHICS\_API\_OPENGL}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00072}00072\ \textcolor{preprocessor}{\#\ \ \ \ define\ GLFW\_EXPOSE\_NATIVE\_WIN32}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00073}00073\ \textcolor{preprocessor}{\#\ \ \ \ define\ GLFW\_EXPOSE\_NATIVE\_WGL}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00074}00074\ \textcolor{preprocessor}{\#\ \ \ \ include\ <GLFW/glfw3native.h>}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00075}00075\ \textcolor{preprocessor}{\#\ \ \ \ include\ <windows.h>}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00076}00076\ \textcolor{preprocessor}{\#\ \ \ \ include\ <unknwn.h>}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00077}00077\ \textcolor{preprocessor}{\#\ \ else}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00078}00078\ \textcolor{preprocessor}{\#\ \ \ \ define\ XR\_USE\_PLATFORM\_XLIB}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00079}00079\ \textcolor{preprocessor}{\#\ \ \ \ define\ XR\_USE\_GRAPHICS\_API\_OPENGL}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00080}00080\ \textcolor{preprocessor}{\#\ \ \ \ define\ GLFW\_EXPOSE\_NATIVE\_X11}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00081}00081\ \textcolor{preprocessor}{\#\ \ \ \ define\ GLFW\_EXPOSE\_NATIVE\_GLX}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00082}00082\ \textcolor{preprocessor}{\#\ \ \ \ include\ <GLFW/glfw3native.h>}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00083}00083\ \textcolor{preprocessor}{\#\ \ endif}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00084}00084\ \textcolor{preprocessor}{\#\ \ include\ <openxr/openxr.h>}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00085}00085\ \textcolor{preprocessor}{\#\ \ include\ <openxr/openxr\_platform.h>}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00086}00086\ \textcolor{preprocessor}{\#\ \ include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00087}00087\ \textcolor{preprocessor}{\#\ \ include\ <cstring>}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00088}00088\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00093}\mbox{\hyperlink{classGgApp}{00093}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGgApp_a612eb78a646538d6441a25cfcd6d88d8}{GgApp}}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00094}00094\ \{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00095}00095\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00103}00103\ \ \ \mbox{\hyperlink{classGgApp_a612eb78a646538d6441a25cfcd6d88d8}{GgApp}}(\textcolor{keywordtype}{int}\ major\ =\ 0,\ \textcolor{keywordtype}{int}\ minor\ =\ 1);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00110}\mbox{\hyperlink{classGgApp_af905bd13f79aa30dd7f0a55ce9b67526}{00110}}\ \ \ \mbox{\hyperlink{classGgApp_af905bd13f79aa30dd7f0a55ce9b67526}{GgApp}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classGgApp_a612eb78a646538d6441a25cfcd6d88d8}{GgApp}}\&\ w)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00117}\mbox{\hyperlink{classGgApp_a3dcd6fed8efd0db4dd882ab59d3d5a30}{00117}}\ \ \ \mbox{\hyperlink{classGgApp_a3dcd6fed8efd0db4dd882ab59d3d5a30}{GgApp}}(\mbox{\hyperlink{classGgApp_a612eb78a646538d6441a25cfcd6d88d8}{GgApp}}\&\&\ w)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00122}00122\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classGgApp_a9468936a1ff450fa3e0d75ef88d55c5c}{\string~GgApp}}();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00130}\mbox{\hyperlink{classGgApp_a29bae97040d59fbf2a046c4e47e99de2}{00130}}\ \ \ \mbox{\hyperlink{classGgApp_a612eb78a646538d6441a25cfcd6d88d8}{GgApp}}\&\ \mbox{\hyperlink{classGgApp_a29bae97040d59fbf2a046c4e47e99de2}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classGgApp_a612eb78a646538d6441a25cfcd6d88d8}{GgApp}}\&\ w)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00138}\mbox{\hyperlink{classGgApp_a8772cedbd09638d96a55e434e8bd1430}{00138}}\ \ \ \mbox{\hyperlink{classGgApp_a612eb78a646538d6441a25cfcd6d88d8}{GgApp}}\&\ \mbox{\hyperlink{classGgApp_a8772cedbd09638d96a55e434e8bd1430}{operator=}}(\mbox{\hyperlink{classGgApp_a612eb78a646538d6441a25cfcd6d88d8}{GgApp}}\&\&\ w)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00147}00147\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classGgApp_ad2e50a5e84d4fd6162e03039ac00c7ae}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \textcolor{keyword}{const}*\ argv);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00155}\mbox{\hyperlink{classGgApp_1_1Window}{00155}}\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGgApp_1_1Window_a127c516045e716c271524fa45998cbc0}{Window}}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00156}00156\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00157}00157\ \ \ \ \ \textcolor{comment}{//\ ウィンドウの識別子}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00158}00158\ \ \ \ \ GLFWwindow*\ window\{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00160}00160\ \ \ \ \ \textcolor{comment}{//\ ビューポートの横幅と高さ}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00161}00161\ \ \ \ \ std::array<GLsizei,\ 2>\ size;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00163}00163\ \ \ \ \ \textcolor{comment}{//\ フレームバッファの横幅と高さ}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00164}00164\ \ \ \ \ std::array<GLsizei,\ 2>\ fboSize;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00165}00165\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00166}00166\ \textcolor{preprocessor}{\#if\ defined(IMGUI\_VERSION)}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00167}00167\ \ \ \ \ \textcolor{comment}{//\ メニューバーの高さ}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00168}00168\ \ \ \ \ GLsizei\ menubarHeight\{\ 0\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00169}00169\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00170}00170\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00171}00171\ \ \ \ \ \textcolor{comment}{//\ ビューポートの縦横比}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00172}00172\ \ \ \ \ GLfloat\ aspect\{\ 1.0f\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00174}00174\ \ \ \ \ \textcolor{comment}{//\ マウスの移動速度[X/Y/Z]}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00175}00175\ \ \ \ \ std::array<GLfloat,\ 3>\ velocity\{\ 1.0f,\ 1.0f,\ 0.1f\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00177}00177\ \ \ \ \ \textcolor{comment}{//\ マウスボタンの状態}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00178}00178\ \ \ \ \ std::array<bool,\ GG\_BUTTON\_COUNT>\ status\{\};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00179}00179\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00180}00180\ \ \ \ \ \textcolor{comment}{//\ ユーザインタフェースのデータ構造}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00181}00181\ \ \ \ \ \textcolor{keyword}{struct\ }HumanInterface}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00182}00182\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00183}00183\ \ \ \ \ \ \ \textcolor{comment}{//\ 最後にタイプしたキー}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00184}00184\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ lastKey\{\ 0\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00185}00185\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00186}00186\ \ \ \ \ \ \ \textcolor{comment}{//\ 矢印キー}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00187}00187\ \ \ \ \ \ \ std::array<std::array<int,\ 2>,\ 4>\ arrow\{\};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00189}00189\ \ \ \ \ \ \ \textcolor{comment}{//\ マウスの現在位置}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00190}00190\ \ \ \ \ \ \ std::array<GLfloat,\ 2>\ mouse\{\};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00191}00191\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00192}00192\ \ \ \ \ \ \ \textcolor{comment}{//\ マウスホイールの回転量}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00193}00193\ \ \ \ \ \ \ std::array<GLfloat,\ 2>\ wheel\{\};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00194}00194\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00195}00195\ \ \ \ \ \ \ \textcolor{comment}{//\ 平行移動量[ボタン][直前/更新][X/Y/Z]}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00196}00196\ \ \ \ \ \ \ std::array<std::array<gg::GgVector,\ 2>,\ \mbox{\hyperlink{GgApp_8h_a1ed2c057903764ef8477b9da6ac4ed64}{GG\_BUTTON\_COUNT}}>\ translation\{\};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00197}00197\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00198}00198\ \ \ \ \ \ \ \textcolor{comment}{//\ トラックボール}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00199}00199\ \ \ \ \ \ \ std::array<gg::GgTrackball,\ GG\_BUTTON\_COUNT>\ rotation;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00200}00200\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00201}00201\ \ \ \ \ \ \ \textcolor{comment}{//\ コンストラクタ}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00202}00202\ \ \ \ \ \ \ HumanInterface()}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00203}00203\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00204}00204\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGgApp_1_1Window_a7fbe5cd9550549cce2eb0c148653ac39}{resetTranslation}}();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00205}00205\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00206}00206\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00207}00207\ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00208}00208\ \ \ \ \ \ \ \textcolor{comment}{//\ マウスや矢印キーによる平行移動量を初期化する}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00209}00209\ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00210}00210\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGgApp_1_1Window_a7fbe5cd9550549cce2eb0c148653ac39}{resetTranslation}}();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00211}00211\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00212}00212\ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00213}00213\ \ \ \ \ \ \ \textcolor{comment}{//\ 平行移動量と回転量を更新する\ (X,\ Y\ のみ,\ Z\ は\ wheel()\ で計算する)}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00214}00214\ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00215}00215\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ calcTranslation(\textcolor{keywordtype}{int}\ button,\ \textcolor{keyword}{const}\ std::array<GLfloat,\ 3>\&\ velocity);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00216}00216\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00217}00217\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00218}00218\ \ \ \ \ \textcolor{comment}{//\ ヒューマンインタフェースデバイスのデータ}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00219}00219\ \ \ \ \ std::array<HumanInterface,\ GG\_INTERFACE\_COUNT>\ interfaceData;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00220}00220\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00221}00221\ \ \ \ \ \textcolor{comment}{//\ ヒューマンインタフェースデバイスの番号}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00222}00222\ \ \ \ \ \textcolor{keywordtype}{int}\ interfaceNo\{\ 0\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00223}00223\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00224}00224\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00225}00225\ \ \ \ \ \textcolor{comment}{//\ ユーザー定義のコールバック関数へのポインタ}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00226}00226\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00227}00227\ \ \ \ \ \textcolor{keywordtype}{void}*\ userPointer\{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00228}00228\ \ \ \ \ void\ (*resizeFunc)(\textcolor{keyword}{const}\ \mbox{\hyperlink{classGgApp_1_1Window_a127c516045e716c271524fa45998cbc0}{Window}}*\ window,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height)\{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00229}00229\ \ \ \ \ void\ (*keyboardFunc)(\textcolor{keyword}{const}\ \mbox{\hyperlink{classGgApp_1_1Window_a127c516045e716c271524fa45998cbc0}{Window}}*\ window,\ \textcolor{keywordtype}{int}\ key,\ \textcolor{keywordtype}{int}\ scancode,\ \textcolor{keywordtype}{int}\ action,\ \textcolor{keywordtype}{int}\ mods)\{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00230}00230\ \ \ \ \ void\ (*mouseFunc)(\textcolor{keyword}{const}\ \mbox{\hyperlink{classGgApp_1_1Window_a127c516045e716c271524fa45998cbc0}{Window}}*\ window,\ \textcolor{keywordtype}{int}\ button,\ \textcolor{keywordtype}{int}\ action,\ \textcolor{keywordtype}{int}\ mods)\{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00231}00231\ \ \ \ \ void\ (*wheelFunc)(\textcolor{keyword}{const}\ \mbox{\hyperlink{classGgApp_1_1Window_a127c516045e716c271524fa45998cbc0}{Window}}*\ window,\ \textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y)\{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00232}00232\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00233}00233\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00234}00234\ \ \ \ \ \textcolor{comment}{//\ ウィンドウのサイズ変更時の処理}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00235}00235\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00236}00236\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ resize(GLFWwindow*\ window,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00237}00237\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00238}00238\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00239}00239\ \ \ \ \ \textcolor{comment}{//\ キーボードをタイプした時の処理}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00240}00240\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00241}00241\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ keyboard(GLFWwindow*\ window,\ \textcolor{keywordtype}{int}\ key,\ \textcolor{keywordtype}{int}\ scancode,\ \textcolor{keywordtype}{int}\ action,\ \textcolor{keywordtype}{int}\ mods);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00242}00242\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00243}00243\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00244}00244\ \ \ \ \ \textcolor{comment}{//\ マウスボタンを操作したときの処理}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00245}00245\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00246}00246\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ mouse(GLFWwindow*\ window,\ \textcolor{keywordtype}{int}\ button,\ \textcolor{keywordtype}{int}\ action,\ \textcolor{keywordtype}{int}\ mods);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00247}00247\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00248}00248\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00249}00249\ \ \ \ \ \textcolor{comment}{//\ マウスホイールを操作した時の処理}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00250}00250\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00251}00251\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ wheel(GLFWwindow*\ window,\ \textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00252}00252\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00253}00253\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00254}00254\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00264}00264\ \ \ \ \ \mbox{\hyperlink{classGgApp_1_1Window_a127c516045e716c271524fa45998cbc0}{Window}}(\textcolor{keyword}{const}\ std::string\&\ title\ =\ \textcolor{stringliteral}{"{}GLFW\ Window"{}},\ \textcolor{keywordtype}{int}\ width\ =\ 640,\ \textcolor{keywordtype}{int}\ height\ =\ 480,}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00265}00265\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ fullscreen\ =\ 0,\ GLFWwindow*\ share\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00266}00266\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00272}\mbox{\hyperlink{classGgApp_1_1Window_ae5d861cc5384a9345370038451126247}{00272}}\ \ \ \ \ \mbox{\hyperlink{classGgApp_1_1Window_ae5d861cc5384a9345370038451126247}{Window}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classGgApp_1_1Window_a127c516045e716c271524fa45998cbc0}{Window}}\&\ w)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00273}00273\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00279}00279\ \ \ \ \ \mbox{\hyperlink{classGgApp_1_1Window_a127c516045e716c271524fa45998cbc0}{Window}}(\mbox{\hyperlink{classGgApp_1_1Window_a127c516045e716c271524fa45998cbc0}{Window}}\&\&\ w)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00280}00280\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00284}\mbox{\hyperlink{classGgApp_1_1Window_a94c6ee97910853aafc9dd886e0d44e05}{00284}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classGgApp_1_1Window_a94c6ee97910853aafc9dd886e0d44e05}{\string~Window}}()}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00285}00285\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00286}00286\ \ \ \ \ \ \ \textcolor{comment}{//\ ウィンドウが作成されていなければ戻る}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00287}00287\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!window)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00288}00288\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00289}00289\ \ \ \ \ \ \ \textcolor{comment}{//\ ウィンドウを破棄する}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00290}00290\ \ \ \ \ \ \ glfwDestroyWindow(window);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00291}00291\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00292}00292\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00299}\mbox{\hyperlink{classGgApp_1_1Window_aee308edd9b401ca148f3b28fc7f77774}{00299}}\ \ \ \ \ \mbox{\hyperlink{classGgApp_1_1Window_a127c516045e716c271524fa45998cbc0}{Window}}\&\ \mbox{\hyperlink{classGgApp_1_1Window_aee308edd9b401ca148f3b28fc7f77774}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classGgApp_1_1Window_a127c516045e716c271524fa45998cbc0}{Window}}\&\ w)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00300}00300\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00307}00307\ \ \ \ \ \mbox{\hyperlink{classGgApp_1_1Window_a127c516045e716c271524fa45998cbc0}{Window}}\&\ \mbox{\hyperlink{classGgApp_1_1Window_aee308edd9b401ca148f3b28fc7f77774}{operator=}}(\mbox{\hyperlink{classGgApp_1_1Window_a127c516045e716c271524fa45998cbc0}{Window}}\&\&\ w)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00308}00308\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00314}\mbox{\hyperlink{classGgApp_1_1Window_ae4d2d5b01b708a68cfbbd694eea14116}{00314}}\ \ \ \ \ \textcolor{keyword}{auto}*\ \mbox{\hyperlink{classGgApp_1_1Window_ae4d2d5b01b708a68cfbbd694eea14116}{get}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00315}00315\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00316}00316\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ window;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00317}00317\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00318}00318\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00324}\mbox{\hyperlink{classGgApp_1_1Window_a2c90728cd2fcebd0f3c0d6d48741c5fd}{00324}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGgApp_1_1Window_a2c90728cd2fcebd0f3c0d6d48741c5fd}{setClose}}(\textcolor{keywordtype}{int}\ flag\ =\ GLFW\_TRUE)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00325}00325\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00326}00326\ \ \ \ \ \ \ glfwSetWindowShouldClose(window,\ flag);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00327}00327\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00328}00328\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00334}\mbox{\hyperlink{classGgApp_1_1Window_aa8401b4de974f114d3fb9d1ecac74eb9}{00334}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGgApp_1_1Window_aa8401b4de974f114d3fb9d1ecac74eb9}{shouldClose}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00335}00335\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00336}00336\ \ \ \ \ \ \ \textcolor{comment}{//\ ウィンドウを閉じるべきなら\ true\ を返す}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00337}00337\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glfwWindowShouldClose(window)\ !=\ GLFW\_FALSE;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00338}00338\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00339}00339\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00345}00345\ \ \ \ \ \textcolor{keyword}{explicit}\ \textcolor{keyword}{operator}\ bool();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00346}00346\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00350}00350\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGgApp_1_1Window_a19ae0ed75fc177b2a0672fc2af3c78a4}{swapBuffers}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00351}00351\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00355}\mbox{\hyperlink{classGgApp_1_1Window_a515578a995bb8d3e37ce1767f4095efd}{00355}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGgApp_1_1Window_a515578a995bb8d3e37ce1767f4095efd}{restoreViewport}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00356}00356\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00357}00357\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!glfwGetWindowAttrib(window,\ GLFW\_ICONIFIED))\ glViewport(0,\ 0,\ fboSize[0],\ fboSize[1]);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00358}00358\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00359}00359\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00363}00363\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGgApp_1_1Window_a6b349c4887749cd9e5c6e655a0eea865}{updateViewport}}();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00364}00364\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00365}00365\ \textcolor{preprocessor}{\#if\ defined(IMGUI\_VERSION)}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00371}00371\ \ \ \ \ \textcolor{keywordtype}{void}\ setMenubarHeight(GLsizei\ height)}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00372}00372\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00373}00373\ \ \ \ \ \ \ \textcolor{comment}{//\ メニューバーの高さを保存する}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00374}00374\ \ \ \ \ \ \ menubarHeight\ =\ height;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00375}00375\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00376}00376\ \ \ \ \ \ \ \textcolor{comment}{//\ ビューポートを復帰する}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00377}00377\ \ \ \ \ \ \ \mbox{\hyperlink{classGgApp_1_1Window_a6b349c4887749cd9e5c6e655a0eea865}{updateViewport}}();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00378}00378\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00379}00379\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00380}00380\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00386}\mbox{\hyperlink{classGgApp_1_1Window_a579867ae1179b9d946e2a0e34a62e830}{00386}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classGgApp_1_1Window_a579867ae1179b9d946e2a0e34a62e830}{getWidth}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00387}00387\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00388}00388\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ size[0];}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00389}00389\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00390}00390\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00396}\mbox{\hyperlink{classGgApp_1_1Window_a6c9fe611549defaacbd77eb1178b63c5}{00396}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classGgApp_1_1Window_a6c9fe611549defaacbd77eb1178b63c5}{getHeight}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00397}00397\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00398}00398\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ size[1];}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00399}00399\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00400}00400\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00406}\mbox{\hyperlink{classGgApp_1_1Window_aa9584690e81de333b5ede0e10b184212}{00406}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classGgApp_1_1Window_aa9584690e81de333b5ede0e10b184212}{getFboWidth}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00407}00407\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00408}00408\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ fboSize[0];}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00409}00409\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00410}00410\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00416}\mbox{\hyperlink{classGgApp_1_1Window_a65f86fe33c40b5ca0f374484df5a2132}{00416}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classGgApp_1_1Window_a65f86fe33c40b5ca0f374484df5a2132}{getFboHeight}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00417}00417\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00418}00418\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ fboSize[1];}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00419}00419\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00420}00420\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00426}\mbox{\hyperlink{classGgApp_1_1Window_a4601eaeb4c129cfe4080b93a421df484}{00426}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ \mbox{\hyperlink{classGgApp_1_1Window_a4601eaeb4c129cfe4080b93a421df484}{getSize}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00427}00427\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00428}00428\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ size;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00429}00429\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00430}00430\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00436}\mbox{\hyperlink{classGgApp_1_1Window_a5efeec0d33380bc170b768db972a9150}{00436}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGgApp_1_1Window_a5efeec0d33380bc170b768db972a9150}{getSize}}(GLsizei*\ size)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00437}00437\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00438}00438\ \ \ \ \ \ \ size[0]\ =\ \mbox{\hyperlink{classGgApp_1_1Window_a579867ae1179b9d946e2a0e34a62e830}{getWidth}}();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00439}00439\ \ \ \ \ \ \ size[1]\ =\ \mbox{\hyperlink{classGgApp_1_1Window_a6c9fe611549defaacbd77eb1178b63c5}{getHeight}}();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00440}00440\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00441}00441\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00447}\mbox{\hyperlink{classGgApp_1_1Window_ae86fec088b4d80bbe2cac9f11ef95adb}{00447}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ \mbox{\hyperlink{classGgApp_1_1Window_ae86fec088b4d80bbe2cac9f11ef95adb}{getFboSize}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00448}00448\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00449}00449\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ fboSize;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00450}00450\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00451}00451\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00457}\mbox{\hyperlink{classGgApp_1_1Window_a55b581c4f03c8685f6632b69413aa774}{00457}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGgApp_1_1Window_a55b581c4f03c8685f6632b69413aa774}{getFboSize}}(GLsizei*\ fboSize)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00458}00458\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00459}00459\ \ \ \ \ \ \ fboSize[0]\ =\ \mbox{\hyperlink{classGgApp_1_1Window_aa9584690e81de333b5ede0e10b184212}{getFboWidth}}();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00460}00460\ \ \ \ \ \ \ fboSize[1]\ =\ \mbox{\hyperlink{classGgApp_1_1Window_a65f86fe33c40b5ca0f374484df5a2132}{getFboHeight}}();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00461}00461\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00462}00462\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00468}\mbox{\hyperlink{classGgApp_1_1Window_ac175ec3d297b415120c6cc29b6392fdd}{00468}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classGgApp_1_1Window_ac175ec3d297b415120c6cc29b6392fdd}{getAspect}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00469}00469\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00470}00470\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ aspect;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00471}00471\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00472}00472\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00478}\mbox{\hyperlink{classGgApp_1_1Window_ae35ef8daf8ae087a8972923ce7d6d22f}{00478}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGgApp_1_1Window_ae35ef8daf8ae087a8972923ce7d6d22f}{getKey}}(\textcolor{keywordtype}{int}\ key)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00479}00479\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00480}00480\ \textcolor{preprocessor}{\#if\ defined(IMGUI\_VERSION)}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00481}00481\ \ \ \ \ \ \ \textcolor{comment}{//\ ImGui\ がキーボードを使うときはキーボードの処理を行わない}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00482}00482\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ImGui::GetIO().WantCaptureKeyboard)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00483}00483\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00484}00484\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00485}00485\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glfwGetKey(window,\ key)\ !=\ GLFW\_RELEASE;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00486}00486\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00487}00487\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00493}\mbox{\hyperlink{classGgApp_1_1Window_a7c11756525ab64e276fbf90bff68bbc9}{00493}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGgApp_1_1Window_a7c11756525ab64e276fbf90bff68bbc9}{selectInterface}}(\textcolor{keywordtype}{int}\ no)}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00494}00494\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00495}00495\ \ \ \ \ \ \ assert(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(no)\ <\ interfaceData.size());}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00496}00496\ \ \ \ \ \ \ interfaceNo\ =\ no;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00497}00497\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00498}00498\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00506}\mbox{\hyperlink{classGgApp_1_1Window_a5026c2115f22e214b979655ca9820e13}{00506}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGgApp_1_1Window_a5026c2115f22e214b979655ca9820e13}{setVelocity}}(GLfloat\ vx,\ GLfloat\ vy,\ GLfloat\ vz\ =\ 0.1f)}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00507}00507\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00508}00508\ \ \ \ \ \ \ velocity\ =\ std::array<GLfloat,\ 3>\{\ vx,\ vy,\ vz\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00509}00509\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00510}00510\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00516}\mbox{\hyperlink{classGgApp_1_1Window_afc88ed5fdc4ad5c6b4c99e1dc73c44e8}{00516}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classGgApp_1_1Window_afc88ed5fdc4ad5c6b4c99e1dc73c44e8}{getLastKey}}()}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00517}00517\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00518}00518\ \ \ \ \ \ \ \textcolor{keyword}{auto}\&\ current\_if\{\ interfaceData[interfaceNo]\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00519}00519\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ key\{\ current\_if.lastKey\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00520}00520\ \ \ \ \ \ \ current\_if.lastKey\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00521}00521\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ key;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00522}00522\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00523}00523\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00531}\mbox{\hyperlink{classGgApp_1_1Window_affa358bdcc627505e042577790c8444a}{00531}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classGgApp_1_1Window_affa358bdcc627505e042577790c8444a}{getArrow}}(\textcolor{keywordtype}{int}\ direction\ =\ 0,\ \textcolor{keywordtype}{int}\ mods\ =\ 0)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00532}00532\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00533}00533\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ current\_if\{\ interfaceData[interfaceNo]\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00534}00534\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}GLfloat\textcolor{keyword}{>}(current\_if.arrow[mods\ \&\ 3][direction\ \&\ 1]);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00535}00535\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00536}00536\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00543}\mbox{\hyperlink{classGgApp_1_1Window_a78660227f814654a1bc2e886365e0996}{00543}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classGgApp_1_1Window_a78660227f814654a1bc2e886365e0996}{getArrowX}}(\textcolor{keywordtype}{int}\ mods\ =\ 0)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00544}00544\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00545}00545\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classGgApp_1_1Window_affa358bdcc627505e042577790c8444a}{getArrow}}(0,\ mods);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00546}00546\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00547}00547\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00554}\mbox{\hyperlink{classGgApp_1_1Window_a46411c2f5238715c5347356ba9282dfc}{00554}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classGgApp_1_1Window_a46411c2f5238715c5347356ba9282dfc}{getArrowY}}(\textcolor{keywordtype}{int}\ mods\ =\ 0)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00555}00555\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00556}00556\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classGgApp_1_1Window_affa358bdcc627505e042577790c8444a}{getArrow}}(1,\ mods);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00557}00557\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00558}00558\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00565}\mbox{\hyperlink{classGgApp_1_1Window_aed83d934df05d6cb8c8a902711a9329c}{00565}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGgApp_1_1Window_aed83d934df05d6cb8c8a902711a9329c}{getArrow}}(GLfloat*\ arrow,\ \textcolor{keywordtype}{int}\ mods\ =\ 0)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00566}00566\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00567}00567\ \ \ \ \ \ \ arrow[0]\ =\ \mbox{\hyperlink{classGgApp_1_1Window_a78660227f814654a1bc2e886365e0996}{getArrowX}}(mods);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00568}00568\ \ \ \ \ \ \ arrow[1]\ =\ \mbox{\hyperlink{classGgApp_1_1Window_a46411c2f5238715c5347356ba9282dfc}{getArrowY}}(mods);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00569}00569\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00570}00570\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00576}\mbox{\hyperlink{classGgApp_1_1Window_a0c2238b6a1ad09eaeaf9f268b79bf00d}{00576}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classGgApp_1_1Window_a0c2238b6a1ad09eaeaf9f268b79bf00d}{getShiftArrowX}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00577}00577\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00578}00578\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classGgApp_1_1Window_affa358bdcc627505e042577790c8444a}{getArrow}}(0,\ 1);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00579}00579\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00580}00580\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00586}\mbox{\hyperlink{classGgApp_1_1Window_ad622962036e9c6dc8210b16a67486862}{00586}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classGgApp_1_1Window_ad622962036e9c6dc8210b16a67486862}{getShiftArrowY}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00587}00587\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00588}00588\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classGgApp_1_1Window_affa358bdcc627505e042577790c8444a}{getArrow}}(1,\ 1);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00589}00589\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00590}00590\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00596}\mbox{\hyperlink{classGgApp_1_1Window_a2201654415ccd466ce8c2e25de831e7f}{00596}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGgApp_1_1Window_a2201654415ccd466ce8c2e25de831e7f}{getShiftArrow}}(GLfloat*\ shift\_arrow)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00597}00597\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00598}00598\ \ \ \ \ \ \ shift\_arrow[0]\ =\ \mbox{\hyperlink{classGgApp_1_1Window_a0c2238b6a1ad09eaeaf9f268b79bf00d}{getShiftArrowX}}();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00599}00599\ \ \ \ \ \ \ shift\_arrow[1]\ =\ \mbox{\hyperlink{classGgApp_1_1Window_ad622962036e9c6dc8210b16a67486862}{getShiftArrowY}}();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00600}00600\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00601}00601\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00607}\mbox{\hyperlink{classGgApp_1_1Window_a05de269eb17027de60e41e3776b581b2}{00607}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classGgApp_1_1Window_a05de269eb17027de60e41e3776b581b2}{getControlArrowX}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00608}00608\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00609}00609\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classGgApp_1_1Window_affa358bdcc627505e042577790c8444a}{getArrow}}(0,\ 2);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00610}00610\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00611}00611\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00617}\mbox{\hyperlink{classGgApp_1_1Window_a0707b5143ccc9f5c8df94cce446bdab2}{00617}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classGgApp_1_1Window_a0707b5143ccc9f5c8df94cce446bdab2}{getControlArrowY}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00618}00618\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00619}00619\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classGgApp_1_1Window_affa358bdcc627505e042577790c8444a}{getArrow}}(1,\ 2);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00620}00620\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00621}00621\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00627}\mbox{\hyperlink{classGgApp_1_1Window_a95461db15ac62a3f5200d9563d245d1d}{00627}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGgApp_1_1Window_a95461db15ac62a3f5200d9563d245d1d}{getControlArrow}}(GLfloat*\ control\_arrow)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00628}00628\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00629}00629\ \ \ \ \ \ \ control\_arrow[0]\ =\ \mbox{\hyperlink{classGgApp_1_1Window_a05de269eb17027de60e41e3776b581b2}{getControlArrowX}}();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00630}00630\ \ \ \ \ \ \ control\_arrow[1]\ =\ \mbox{\hyperlink{classGgApp_1_1Window_a0707b5143ccc9f5c8df94cce446bdab2}{getControlArrowY}}();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00631}00631\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00632}00632\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00638}\mbox{\hyperlink{classGgApp_1_1Window_ac41a2596b28817ae5f807af75d451121}{00638}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classGgApp_1_1Window_ac41a2596b28817ae5f807af75d451121}{getAltArrowX}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00639}00639\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00640}00640\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classGgApp_1_1Window_affa358bdcc627505e042577790c8444a}{getArrow}}(0,\ 3);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00641}00641\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00642}00642\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00648}\mbox{\hyperlink{classGgApp_1_1Window_abf24b249cfff5f6df4f05e3454ef5822}{00648}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classGgApp_1_1Window_abf24b249cfff5f6df4f05e3454ef5822}{getAltArrowY}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00649}00649\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00650}00650\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classGgApp_1_1Window_affa358bdcc627505e042577790c8444a}{getArrow}}(1,\ 3);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00651}00651\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00652}00652\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00658}\mbox{\hyperlink{classGgApp_1_1Window_a81b80d842793faa2f5becac5d92586e4}{00658}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGgApp_1_1Window_a81b80d842793faa2f5becac5d92586e4}{getAltArrow}}(GLfloat*\ alt\_arrow)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00659}00659\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00660}00660\ \ \ \ \ \ \ alt\_arrow[0]\ =\ \mbox{\hyperlink{classGgApp_1_1Window_ac41a2596b28817ae5f807af75d451121}{getAltArrowX}}();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00661}00661\ \ \ \ \ \ \ alt\_arrow[1]\ =\ \mbox{\hyperlink{classGgApp_1_1Window_abf24b249cfff5f6df4f05e3454ef5822}{getAltArrowY}}();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00662}00662\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00663}00663\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00669}\mbox{\hyperlink{classGgApp_1_1Window_a222e4a998fbef8e2e818bb8a3457dd9b}{00669}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}*\ \mbox{\hyperlink{classGgApp_1_1Window_a222e4a998fbef8e2e818bb8a3457dd9b}{getMouse}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00670}00670\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00671}00671\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ current\_if\{\ interfaceData[interfaceNo]\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00672}00672\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ current\_if.mouse.data();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00673}00673\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00674}00674\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00680}\mbox{\hyperlink{classGgApp_1_1Window_a7472df8c6089d4e85c236f16d5981c6e}{00680}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGgApp_1_1Window_a7472df8c6089d4e85c236f16d5981c6e}{getMouse}}(GLfloat*\ position)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00681}00681\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00682}00682\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ current\_if\{\ interfaceData[interfaceNo]\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00683}00683\ \ \ \ \ \ \ position[0]\ =\ current\_if.mouse[0];}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00684}00684\ \ \ \ \ \ \ position[1]\ =\ current\_if.mouse[1];}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00685}00685\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00686}00686\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00693}\mbox{\hyperlink{classGgApp_1_1Window_a4165aa1f7754ebacc0fb0a6dbcecd832}{00693}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classGgApp_1_1Window_a4165aa1f7754ebacc0fb0a6dbcecd832}{getMouse}}(\textcolor{keywordtype}{int}\ direction)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00694}00694\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00695}00695\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ current\_if\{\ interfaceData[interfaceNo]\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00696}00696\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ current\_if.mouse[direction\ \&\ 1];}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00697}00697\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00698}00698\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00704}\mbox{\hyperlink{classGgApp_1_1Window_a55666f5d7c3c754090622944b84a04a0}{00704}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classGgApp_1_1Window_a55666f5d7c3c754090622944b84a04a0}{getMouseX}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00705}00705\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00706}00706\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ current\_if\{\ interfaceData[interfaceNo]\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00707}00707\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ current\_if.mouse[0];}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00708}00708\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00709}00709\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00715}\mbox{\hyperlink{classGgApp_1_1Window_a7e6fb715e92cb734ba644c90916b1360}{00715}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classGgApp_1_1Window_a7e6fb715e92cb734ba644c90916b1360}{getMouseY}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00716}00716\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00717}00717\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ current\_if\{\ interfaceData[interfaceNo]\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00718}00718\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ current\_if.mouse[1];}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00719}00719\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00720}00720\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00726}\mbox{\hyperlink{classGgApp_1_1Window_af12e09dffd442b7b49d5a8386ff253c4}{00726}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}*\ \mbox{\hyperlink{classGgApp_1_1Window_af12e09dffd442b7b49d5a8386ff253c4}{getWheel}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00727}00727\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00728}00728\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ current\_if\{\ interfaceData[interfaceNo]\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00729}00729\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ current\_if.wheel.data();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00730}00730\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00731}00731\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00737}\mbox{\hyperlink{classGgApp_1_1Window_ad27764b87b9f7d09ca49de137cfbeb78}{00737}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGgApp_1_1Window_ad27764b87b9f7d09ca49de137cfbeb78}{getWheel}}(GLfloat*\ rotation)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00738}00738\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00739}00739\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ current\_if\{\ interfaceData[interfaceNo]\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00740}00740\ \ \ \ \ \ \ rotation[0]\ =\ current\_if.wheel[0];}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00741}00741\ \ \ \ \ \ \ rotation[1]\ =\ current\_if.wheel[1];}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00742}00742\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00743}00743\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00750}\mbox{\hyperlink{classGgApp_1_1Window_a37cdade6e1a2fe60049650552ea7505c}{00750}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classGgApp_1_1Window_a37cdade6e1a2fe60049650552ea7505c}{getWheel}}(\textcolor{keywordtype}{int}\ direction)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00751}00751\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00752}00752\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ current\_if\{\ interfaceData[interfaceNo]\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00753}00753\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ current\_if.wheel[direction\ \&\ 1];}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00754}00754\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00755}00755\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00761}\mbox{\hyperlink{classGgApp_1_1Window_ad45195a5efaae1bf44b20ffd1cf0c18d}{00761}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classGgApp_1_1Window_ad45195a5efaae1bf44b20ffd1cf0c18d}{getWheelX}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00762}00762\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00763}00763\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ current\_if\{\ interfaceData[interfaceNo]\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00764}00764\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ current\_if.wheel[0];}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00765}00765\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00766}00766\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00772}\mbox{\hyperlink{classGgApp_1_1Window_af0ffc69a289b38b33f137e40a2f4dae5}{00772}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classGgApp_1_1Window_af0ffc69a289b38b33f137e40a2f4dae5}{getWheelY}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00773}00773\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00774}00774\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ current\_if\{\ interfaceData[interfaceNo]\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00775}00775\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ current\_if.wheel[1];}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00776}00776\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00777}00777\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00784}\mbox{\hyperlink{classGgApp_1_1Window_a6227b2825a8a7e8481fb5bb27c8c3753}{00784}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ \mbox{\hyperlink{classGgApp_1_1Window_a6227b2825a8a7e8481fb5bb27c8c3753}{getTranslation}}(\textcolor{keywordtype}{int}\ button\ =\ GLFW\_MOUSE\_BUTTON\_1)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00785}00785\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00786}00786\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ current\_if\{\ interfaceData[interfaceNo]\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00787}00787\ \ \ \ \ \ \ assert(button\ >=\ GLFW\_MOUSE\_BUTTON\_1\ \&\&\ button\ <\ GLFW\_MOUSE\_BUTTON\_1\ +\ \mbox{\hyperlink{GgApp_8h_a1ed2c057903764ef8477b9da6ac4ed64}{GG\_BUTTON\_COUNT}});}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00788}00788\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ current\_if.translation[button][1];}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00789}00789\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00790}00790\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00797}\mbox{\hyperlink{classGgApp_1_1Window_a074e392cd47e92946d23308cae934e40}{00797}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classGgApp_1_1Window_a074e392cd47e92946d23308cae934e40}{getTranslationMatrix}}(\textcolor{keywordtype}{int}\ button\ =\ GLFW\_MOUSE\_BUTTON\_1)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00798}00798\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00799}00799\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ current\_if\{\ interfaceData[interfaceNo]\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00800}00800\ \ \ \ \ \ \ assert(button\ >=\ GLFW\_MOUSE\_BUTTON\_1\ \&\&\ button\ <\ GLFW\_MOUSE\_BUTTON\_1\ +\ \mbox{\hyperlink{GgApp_8h_a1ed2c057903764ef8477b9da6ac4ed64}{GG\_BUTTON\_COUNT}});}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00801}00801\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ t\{\ current\_if.translation[button][1]\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00802}00802\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00803}00803\ \ \ \ \ \ \ \mbox{\hyperlink{classgg_1_1GgMatrix}{gg::GgMatrix}}\ m}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00804}00804\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00805}00805\ \ \ \ \ \ \ \ \ 1.0f,\ 0.0f,\ 0.0f,\ 0.0f,}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00806}00806\ \ \ \ \ \ \ \ \ 0.0f,\ 1.0f,\ 0.0f,\ 0.0f,}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00807}00807\ \ \ \ \ \ \ \ \ 0.0f,\ 0.0f,\ 1.0f,\ 0.0f,}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00808}00808\ \ \ \ \ \ \ \ \ t[0],\ t[1],\ t[2],\ 1.0f}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00809}00809\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00810}00810\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00811}00811\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00812}00812\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00813}00813\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00820}\mbox{\hyperlink{classGgApp_1_1Window_a5a882289de8c5dabb26c1370d036607a}{00820}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classGgApp_1_1Window_a5a882289de8c5dabb26c1370d036607a}{getScrollMatrix}}(\textcolor{keywordtype}{int}\ button\ =\ GLFW\_MOUSE\_BUTTON\_1)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00821}00821\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00822}00822\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ current\_if\{\ interfaceData[interfaceNo]\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00823}00823\ \ \ \ \ \ \ assert(button\ >=\ GLFW\_MOUSE\_BUTTON\_1\ \&\&\ button\ <\ GLFW\_MOUSE\_BUTTON\_1\ +\ \mbox{\hyperlink{GgApp_8h_a1ed2c057903764ef8477b9da6ac4ed64}{GG\_BUTTON\_COUNT}});}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00824}00824\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ t\{\ current\_if.translation[button][1]\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00825}00825\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00826}00826\ \ \ \ \ \ \ \mbox{\hyperlink{classgg_1_1GgMatrix}{gg::GgMatrix}}\ m}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00827}00827\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00828}00828\ \ \ \ \ \ \ \ \ t[2]\ +\ 1.0f,\ 0.0f,\ 0.0f,\ 0.0f,}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00829}00829\ \ \ \ \ \ \ \ \ 0.0f,\ t[2]\ +\ 1.0f,\ 0.0f,\ 0.0f,}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00830}00830\ \ \ \ \ \ \ \ \ 0.0f,\ 0.0f,\ 1.0f,\ 0.0f,}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00831}00831\ \ \ \ \ \ \ \ \ t[0],\ t[1],\ 0.0f,\ 1.0f}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00832}00832\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00833}00833\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00834}00834\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00835}00835\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00836}00836\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00843}\mbox{\hyperlink{classGgApp_1_1Window_aa9b5b4830a2e6c5491292a83d2b744f5}{00843}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classGgApp_1_1Window_aa9b5b4830a2e6c5491292a83d2b744f5}{getRotation}}(\textcolor{keywordtype}{int}\ button\ =\ GLFW\_MOUSE\_BUTTON\_1)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00844}00844\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00845}00845\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ current\_if\{\ interfaceData[interfaceNo]\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00846}00846\ \ \ \ \ \ \ assert(button\ >=\ GLFW\_MOUSE\_BUTTON\_1\ \&\&\ button\ <\ GLFW\_MOUSE\_BUTTON\_1\ +\ \mbox{\hyperlink{GgApp_8h_a1ed2c057903764ef8477b9da6ac4ed64}{GG\_BUTTON\_COUNT}});}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00847}00847\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ current\_if.rotation[button].getQuaternion();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00848}00848\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00849}00849\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00856}\mbox{\hyperlink{classGgApp_1_1Window_ae072fc515e5a2fc54b8a11a552fc10b0}{00856}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classGgApp_1_1Window_ae072fc515e5a2fc54b8a11a552fc10b0}{getRotationMatrix}}(\textcolor{keywordtype}{int}\ button\ =\ GLFW\_MOUSE\_BUTTON\_1)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00857}00857\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00858}00858\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ current\_if\{\ interfaceData[interfaceNo]\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00859}00859\ \ \ \ \ \ \ assert(button\ >=\ GLFW\_MOUSE\_BUTTON\_1\ \&\&\ button\ <\ GLFW\_MOUSE\_BUTTON\_1\ +\ \mbox{\hyperlink{GgApp_8h_a1ed2c057903764ef8477b9da6ac4ed64}{GG\_BUTTON\_COUNT}});}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00860}00860\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ current\_if.rotation[button].getMatrix();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00861}00861\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00862}00862\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00866}\mbox{\hyperlink{classGgApp_1_1Window_aa0e5bf92c55529a7ac9b5722528ae2b6}{00866}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGgApp_1_1Window_aa0e5bf92c55529a7ac9b5722528ae2b6}{resetRotation}}()}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00867}00867\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00868}00868\ \ \ \ \ \ \ \textcolor{comment}{//\ トラックボールを初期化する}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00869}00869\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ tb\ :\ interfaceData[interfaceNo].rotation)\ tb.reset();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00870}00870\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00871}00871\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00875}\mbox{\hyperlink{classGgApp_1_1Window_a7fbe5cd9550549cce2eb0c148653ac39}{00875}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGgApp_1_1Window_a7fbe5cd9550549cce2eb0c148653ac39}{resetTranslation}}()}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00876}00876\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00877}00877\ \ \ \ \ \ \ \textcolor{comment}{//\ 現在のインターフェースの平行移動量を初期化する}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00878}00878\ \ \ \ \ \ \ interfaceData[interfaceNo].resetTranslation();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00879}00879\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00880}00880\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00884}\mbox{\hyperlink{classGgApp_1_1Window_a7931a21c03bd1865a90f7b05964f7cdc}{00884}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGgApp_1_1Window_a7931a21c03bd1865a90f7b05964f7cdc}{reset}}()}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00885}00885\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00886}00886\ \ \ \ \ \ \ \textcolor{comment}{//\ トラックボール処理を初期化する}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00887}00887\ \ \ \ \ \ \ \mbox{\hyperlink{classGgApp_1_1Window_aa0e5bf92c55529a7ac9b5722528ae2b6}{resetRotation}}();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00888}00888\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00889}00889\ \ \ \ \ \ \ \textcolor{comment}{//\ 平行移動量を初期化する}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00890}00890\ \ \ \ \ \ \ \mbox{\hyperlink{classGgApp_1_1Window_a7fbe5cd9550549cce2eb0c148653ac39}{resetTranslation}}();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00891}00891\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00892}00892\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00898}\mbox{\hyperlink{classGgApp_1_1Window_a5959f9f57f4b12cab5e729732a0b54e7}{00898}}\ \ \ \ \ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{classGgApp_1_1Window_a5959f9f57f4b12cab5e729732a0b54e7}{getUserPointer}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00899}00899\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00900}00900\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ userPointer;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00901}00901\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00902}00902\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00908}\mbox{\hyperlink{classGgApp_1_1Window_a3e8975f427f140148331b0bc294e931d}{00908}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGgApp_1_1Window_a3e8975f427f140148331b0bc294e931d}{setUserPointer}}(\textcolor{keywordtype}{void}*\ pointer)}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00909}00909\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00910}00910\ \ \ \ \ \ \ userPointer\ =\ pointer;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00911}00911\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00912}00912\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00918}\mbox{\hyperlink{classGgApp_1_1Window_ad40d89ff090cf184882fab3048a323d0}{00918}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGgApp_1_1Window_ad40d89ff090cf184882fab3048a323d0}{setResizeFunc}}(\textcolor{keywordtype}{void}\ (*func)(\textcolor{keyword}{const}\ \mbox{\hyperlink{classGgApp_1_1Window_a127c516045e716c271524fa45998cbc0}{Window}}*\ window,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height))}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00919}00919\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00920}00920\ \ \ \ \ \ \ resizeFunc\ =\ func;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00921}00921\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00922}00922\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00928}\mbox{\hyperlink{classGgApp_1_1Window_a3f03a692bf813089182b2331262265a6}{00928}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGgApp_1_1Window_a3f03a692bf813089182b2331262265a6}{setKeyboardFunc}}(\textcolor{keywordtype}{void}\ (*func)(\textcolor{keyword}{const}\ \mbox{\hyperlink{classGgApp_1_1Window_a127c516045e716c271524fa45998cbc0}{Window}}*\ window,\ \textcolor{keywordtype}{int}\ key,\ \textcolor{keywordtype}{int}\ scancode,\ \textcolor{keywordtype}{int}\ action,\ \textcolor{keywordtype}{int}\ mods))}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00929}00929\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00930}00930\ \ \ \ \ \ \ keyboardFunc\ =\ func;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00931}00931\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00932}00932\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00938}\mbox{\hyperlink{classGgApp_1_1Window_a3be62ffb0be6016f7ce531755667730b}{00938}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGgApp_1_1Window_a3be62ffb0be6016f7ce531755667730b}{setMouseFunc}}(\textcolor{keywordtype}{void}\ (*func)(\textcolor{keyword}{const}\ \mbox{\hyperlink{classGgApp_1_1Window_a127c516045e716c271524fa45998cbc0}{Window}}*\ window,\ \textcolor{keywordtype}{int}\ button,\ \textcolor{keywordtype}{int}\ action,\ \textcolor{keywordtype}{int}\ mods))}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00939}00939\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00940}00940\ \ \ \ \ \ \ mouseFunc\ =\ func;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00941}00941\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00942}00942\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00948}\mbox{\hyperlink{classGgApp_1_1Window_a658fd07bb623e4e6e0745211d1870e46}{00948}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGgApp_1_1Window_a658fd07bb623e4e6e0745211d1870e46}{setWheelFunc}}(\textcolor{keywordtype}{void}\ (*func)(\textcolor{keyword}{const}\ \mbox{\hyperlink{classGgApp_1_1Window_a127c516045e716c271524fa45998cbc0}{Window}}*\ window,\ \textcolor{keywordtype}{double}\ x,\ \textcolor{keywordtype}{double}\ y))}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00949}00949\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00950}00950\ \ \ \ \ \ \ wheelFunc\ =\ func;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00951}00951\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00952}00952\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00953}00953\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00954}00954\ \textcolor{preprocessor}{\#if\ defined(GG\_USE\_OPENXR)}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00961}00961\ \ \ \textcolor{keyword}{class\ }OpenXR}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00962}00962\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00963}00963\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00964}00964\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00968}00968\ \ \ \ \ \textcolor{keyword}{enum}\ Hand}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00969}00969\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00970}00970\ \ \ \ \ \ \ Left\ =\ 0,\ \ \ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00971}00971\ \ \ \ \ \ \ Right\ =\ 1,\ \ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00972}00972\ \ \ \ \ \ \ Count\ =\ 2\ \ \ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00973}00973\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00974}00974\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00975}00975\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00976}00976\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00977}00977\ \ \ \ \ \textcolor{comment}{//\ OpenXR\ のインスタンスとシステム}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00978}00978\ \ \ \ \ XrInstance\ instance\{\ XR\_NULL\_HANDLE\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00979}00979\ \ \ \ \ XrSystemId\ systemId\{\ XR\_NULL\_SYSTEM\_ID\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00980}00980\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00981}00981\ \ \ \ \ \textcolor{comment}{//\ OpenXR\ のセッション}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00982}00982\ \ \ \ \ XrSession\ session\{\ XR\_NULL\_HANDLE\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00983}00983\ \ \ \ \ XrSessionState\ sessionState\{\ XR\_SESSION\_STATE\_UNKNOWN\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00984}00984\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00985}00985\ \ \ \ \ \textcolor{comment}{//\ OpenXR\ の参照空間}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00986}00986\ \ \ \ \ XrSpace\ appSpace\{\ XR\_NULL\_HANDLE\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00987}00987\ \ \ \ \ XrReferenceSpaceType\ referenceSpaceType\{\ XR\_REFERENCE\_SPACE\_TYPE\_STAGE\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00988}00988\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00989}00989\ \ \ \ \ \textcolor{comment}{//\ ビュー設定とステート}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00990}00990\ \ \ \ \ std::vector<XrViewConfigurationView>\ views;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00991}00991\ \ \ \ \ std::vector<XrView>\ viewStates;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00992}00992\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00993}00993\ \ \ \ \ \textcolor{comment}{//\ OpenXR\ のスワップチェーン}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00994}00994\ \ \ \ \ std::vector<XrSwapchain>\ swapchains;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00995}00995\ \ \ \ \ std::vector<std::vector<XrSwapchainImageOpenGLKHR>>\ swapchainImages;}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00996}00996\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00997}00997\ \ \ \ \ \textcolor{comment}{//\ OpenXR\ へのレンダリングに使う\ FBO\ とデプステクスチャ}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00998}00998\ \ \ \ \ GLuint\ openxrFbo[2]\{\ 0,\ 0\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l00999}00999\ \ \ \ \ GLuint\ openxrDepth[2]\{\ 0,\ 0\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01000}01000\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01001}01001\ \ \ \ \ \textcolor{comment}{//\ フレームの同期状態}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01002}01002\ \ \ \ \ XrFrameState\ frameState\{\ XR\_TYPE\_FRAME\_STATE\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01003}01003\ \ \ \ \ \textcolor{keywordtype}{bool}\ isSessionRunning\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01004}01004\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01005}01005\ \ \ \ \ \textcolor{comment}{//\ 各フレームで取得したスワップチェーンイメージのインデックス}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01006}01006\ \ \ \ \ uint32\_t\ currentImageIndex[2]\{\ 0,\ 0\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01007}01007\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01008}01008\ \ \ \ \ \textcolor{comment}{//\ OpenXR\ のミラー表示を行うウィンドウ}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01009}01009\ \ \ \ \ \textcolor{keyword}{const}\ Window*\ window\{\ \textcolor{keyword}{nullptr}\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01010}01010\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01011}01011\ \ \ \ \ \textcolor{comment}{//\ アクションセット}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01012}01012\ \ \ \ \ XrActionSet\ actionSet\{\ XR\_NULL\_HANDLE\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01013}01013\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01014}01014\ \ \ \ \ \textcolor{comment}{//\ アクション定義}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01015}01015\ \ \ \ \ XrAction\ aimPoseAction\{\ XR\_NULL\_HANDLE\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01016}01016\ \ \ \ \ XrAction\ gripPoseAction\{\ XR\_NULL\_HANDLE\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01017}01017\ \ \ \ \ XrAction\ triggerAction\{\ XR\_NULL\_HANDLE\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01018}01018\ \ \ \ \ XrAction\ gripAction\{\ XR\_NULL\_HANDLE\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01019}01019\ \ \ \ \ XrAction\ thumbstickAction\{\ XR\_NULL\_HANDLE\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01020}01020\ \ \ \ \ XrAction\ thumbstickClickAction\{\ XR\_NULL\_HANDLE\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01021}01021\ \ \ \ \ XrAction\ primaryButtonAction\{\ XR\_NULL\_HANDLE\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01022}01022\ \ \ \ \ XrAction\ secondaryButtonAction\{\ XR\_NULL\_HANDLE\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01023}01023\ \ \ \ \ XrAction\ menuButtonAction\{\ XR\_NULL\_HANDLE\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01024}01024\ \ \ \ \ XrAction\ hapticAction\{\ XR\_NULL\_HANDLE\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01025}01025\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01026}01026\ \ \ \ \ \textcolor{comment}{//\ コントローラーのスペース}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01027}01027\ \ \ \ \ XrSpace\ aimSpace[Hand::Count]\{\ XR\_NULL\_HANDLE,\ XR\_NULL\_HANDLE\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01028}01028\ \ \ \ \ XrSpace\ gripSpace[Hand::Count]\{\ XR\_NULL\_HANDLE,\ XR\_NULL\_HANDLE\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01029}01029\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01030}01030\ \ \ \ \ \textcolor{comment}{//\ コントローラーの状態キャッシュ}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01031}01031\ \ \ \ \ \textcolor{keyword}{struct\ }ControllerState}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01032}01032\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01033}01033\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isTracked\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01034}01034\ \ \ \ \ \ \ XrPosef\ gripPose\{\ \{\ 0.0f,\ 0.0f,\ 0.0f,\ 1.0f\ \},\ \{\ 0.0f,\ 0.0f,\ 0.0f\ \}\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01035}01035\ \ \ \ \ \ \ XrPosef\ aimPose\{\ \{\ 0.0f,\ 0.0f,\ 0.0f,\ 1.0f\ \},\ \{\ 0.0f,\ 0.0f,\ 0.0f\ \}\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01036}01036\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ trigger\{\ 0.0f\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01037}01037\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ grip\{\ 0.0f\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01038}01038\ \ \ \ \ \ \ std::array<float,\ 2>\ thumbstick\{\ 0.0f,\ 0.0f\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01039}01039\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ thumbstickClick\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01040}01040\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ primaryButton\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01041}01041\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ secondaryButton\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01042}01042\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ menuButton\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01043}01043\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01044}01044\ \ \ \ \ ControllerState\ controllerStates[Hand::Count];}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01045}01045\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01046}01046\ \ \ \ \ \textcolor{comment}{//\ サポートするパスの文字列}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01047}01047\ \ \ \ \ XrPath\ handSubactionPath[Hand::Count]\{\ XR\_NULL\_PATH,\ XR\_NULL\_PATH\ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01048}01048\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01049}01049\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01050}01050\ \ \ \ \ \textcolor{comment}{//\ アクションシステムを初期化する}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01051}01051\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01052}01052\ \ \ \ \ \textcolor{keywordtype}{void}\ initActions();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01053}01053\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01054}01054\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01055}01055\ \ \ \ \ \textcolor{comment}{//\ アクション状態を更新する}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01056}01056\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01057}01057\ \ \ \ \ \textcolor{keywordtype}{void}\ pollActions();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01058}01058\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01059}01059\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01060}01060\ \ \ \ \ \textcolor{comment}{//\ コンストラクタ}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01061}01061\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01062}01062\ \ \ \ \ OpenXR();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01063}01063\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01064}01064\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01065}01065\ \ \ \ \ \textcolor{comment}{//\ デストラクタ}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01066}01066\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01067}01067\ \ \ \ \ \textcolor{keyword}{virtual}\ \string~OpenXR()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01068}01068\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01069}01069\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01070}01070\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01071}01071\ \ \ \ \ \textcolor{comment}{//\ シングルトンなのでコピー・ムーブ禁止}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01072}01072\ \ \ \ \ OpenXR(\textcolor{keyword}{const}\ OpenXR\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01073}01073\ \ \ \ \ OpenXR\&\ operator=(\textcolor{keyword}{const}\ OpenXR\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01074}01074\ \ \ \ \ OpenXR(OpenXR\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01075}01075\ \ \ \ \ OpenXR\&\ operator=(OpenXR\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01076}01076\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01083}01083\ \ \ \ \ \textcolor{keyword}{static}\ OpenXR\&\ initialize(\textcolor{keyword}{const}\ Window\&\ window,\ XrReferenceSpaceType\ spaceType\ =\ XR\_REFERENCE\_SPACE\_TYPE\_STAGE);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01084}01084\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01088}01088\ \ \ \ \ \textcolor{keywordtype}{void}\ terminate();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01089}01089\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01095}01095\ \ \ \ \ \textcolor{keywordtype}{bool}\ begin();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01096}01096\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01102}01102\ \ \ \ \ \textcolor{keywordtype}{void}\ select(\textcolor{keywordtype}{int}\ eye);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01103}01103\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01112}01112\ \ \ \ \ \textcolor{keywordtype}{void}\ select(\textcolor{keywordtype}{int}\ eye,\ GLfloat*\ screen,\ GLfloat*\ position,\ GLfloat*\ orientation);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01113}01113\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01119}01119\ \ \ \ \ \textcolor{keywordtype}{void}\ commit(\textcolor{keywordtype}{int}\ eye);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01120}01120\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01127}01127\ \ \ \ \ \textcolor{keywordtype}{bool}\ submit(\textcolor{keywordtype}{bool}\ mirror\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01128}01128\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01137}01137\ \ \ \ \ gg::GgMatrix\ getProjectionMatrix(\textcolor{keywordtype}{int}\ eye,\ GLfloat\ zNear\ =\ 0.1f,\ GLfloat\ zFar\ =\ 100.0f)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01138}01138\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01145}01145\ \ \ \ \ gg::GgMatrix\ getViewMatrix(\textcolor{keywordtype}{int}\ eye)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01146}01146\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01153}01153\ \ \ \ \ gg::GgMatrix\ getPoseMatrix(\textcolor{keywordtype}{int}\ eye)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01154}01154\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01161}01161\ \ \ \ \ gg::GgVector\ getPosition(\textcolor{keywordtype}{int}\ eye)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01162}01162\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01169}01169\ \ \ \ \ gg::GgQuaternion\ getOrientation(\textcolor{keywordtype}{int}\ eye)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01170}01170\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01177}01177\ \ \ \ \ \textcolor{keyword}{const}\ XrFovf\&\ getFov(\textcolor{keywordtype}{int}\ eye)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01178}01178\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01185}01185\ \ \ \ \ \textcolor{keyword}{const}\ XrPosef\&\ getPose(\textcolor{keywordtype}{int}\ eye)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01186}01186\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01193}01193\ \ \ \ \ GLsizei\ getWidth(\textcolor{keywordtype}{int}\ eye\ =\ 0)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01194}01194\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01201}01201\ \ \ \ \ GLsizei\ getHeight(\textcolor{keywordtype}{int}\ eye\ =\ 0)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01202}01202\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01209}01209\ \ \ \ \ GLfloat\ getAspect(\textcolor{keywordtype}{int}\ eye\ =\ 0)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01210}01210\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01216}01216\ \ \ \ \ uint32\_t\ getViewCount()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01217}01217\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01223}01223\ \ \ \ \ XrReferenceSpaceType\ getReferenceSpaceType()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01224}01224\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01231}01231\ \ \ \ \ \textcolor{keywordtype}{bool}\ isTracked(\textcolor{keywordtype}{int}\ hand)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01232}01232\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01239}01239\ \ \ \ \ gg::GgMatrix\ getGripMatrix(\textcolor{keywordtype}{int}\ hand)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01240}01240\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01247}01247\ \ \ \ \ gg::GgMatrix\ getAimMatrix(\textcolor{keywordtype}{int}\ hand)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01248}01248\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01255}01255\ \ \ \ \ gg::GgVector\ getGripPosition(\textcolor{keywordtype}{int}\ hand)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01256}01256\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01263}01263\ \ \ \ \ gg::GgQuaternion\ getGripOrientation(\textcolor{keywordtype}{int}\ hand)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01264}01264\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01271}01271\ \ \ \ \ gg::GgVector\ getAimPosition(\textcolor{keywordtype}{int}\ hand)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01272}01272\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01279}01279\ \ \ \ \ gg::GgQuaternion\ getAimOrientation(\textcolor{keywordtype}{int}\ hand)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01280}01280\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01287}01287\ \ \ \ \ \textcolor{keywordtype}{float}\ getTrigger(\textcolor{keywordtype}{int}\ hand)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01288}01288\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01295}01295\ \ \ \ \ \textcolor{keywordtype}{float}\ getGrip(\textcolor{keywordtype}{int}\ hand)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01296}01296\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01303}01303\ \ \ \ \ std::array<float,\ 2>\ getThumbstick(\textcolor{keywordtype}{int}\ hand)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01304}01304\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01311}01311\ \ \ \ \ \textcolor{keywordtype}{bool}\ getThumbstickClick(\textcolor{keywordtype}{int}\ hand)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01312}01312\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01319}01319\ \ \ \ \ \textcolor{keywordtype}{bool}\ getPrimaryButton(\textcolor{keywordtype}{int}\ hand)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01320}01320\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01327}01327\ \ \ \ \ \textcolor{keywordtype}{bool}\ getSecondaryButton(\textcolor{keywordtype}{int}\ hand)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01328}01328\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01335}01335\ \ \ \ \ \textcolor{keywordtype}{bool}\ getMenuButton(\textcolor{keywordtype}{int}\ hand\ =\ Hand::Left)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01336}01336\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01345}01345\ \ \ \ \ \textcolor{keywordtype}{void}\ applyHapticVibration(\textcolor{keywordtype}{int}\ hand,\ \textcolor{keywordtype}{float}\ durationSeconds\ =\ 0.1f,\ \textcolor{keywordtype}{float}\ frequency\ =\ XR\_FREQUENCY\_UNSPECIFIED,\ \textcolor{keywordtype}{float}\ amplitude\ =\ 0.5f);}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01346}01346\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01347}01347\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01348}01348\ }
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01354}01354\ \ \ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{classGgApp_ad1955da79da506e73e4dabb2673e2363}{getUsername}}();}
+\DoxyCodeLine{\Hypertarget{GgApp_8h_source_l01355}01355\ \};}
+
+\end{DoxyCode}

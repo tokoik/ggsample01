@@ -1,0 +1,367 @@
+\doxysection{gg\+::Gg\+Color\+Texture クラス}
+\hypertarget{classgg_1_1GgColorTexture}{}\label{classgg_1_1GgColorTexture}\index{gg::GgColorTexture@{gg::GgColorTexture}}
+
+
+{\ttfamily \#include $<$gg.\+h$>$}
+
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgg_1_1GgColorTexture_a19b43c4aaf2698f71914b14e65734a09}{Gg\+Color\+Texture}} ()
+\item 
+\mbox{\hyperlink{classgg_1_1GgColorTexture_ae8565003fd5b169fe21027803d642ec1}{Gg\+Color\+Texture}} (const GLvoid \texorpdfstring{$\ast$}{*}image, GLsizei width, GLsizei height, GLenum format=GL\+\_\+\+RGB, GLenum type=GL\+\_\+\+UNSIGNED\+\_\+\+BYTE, GLenum internal=GL\+\_\+\+RGB, GLenum wrap=GL\+\_\+\+CLAMP\+\_\+\+TO\+\_\+\+EDGE, bool swizzle=true)
+\item 
+\mbox{\hyperlink{classgg_1_1GgColorTexture_a903ecf406da9f95a19dc908d00bdf229}{Gg\+Color\+Texture}} (const std\+::string \&name, GLenum internal=0, GLenum wrap=GL\+\_\+\+CLAMP\+\_\+\+TO\+\_\+\+EDGE)
+\item 
+virtual \mbox{\hyperlink{classgg_1_1GgColorTexture_a68a5568459bd00cd1ab652bf3c7add39}{\texorpdfstring{$\sim$}{\string~}\+Gg\+Color\+Texture}} ()
+\item 
+void \mbox{\hyperlink{classgg_1_1GgColorTexture_aab0f5a583d503f5c94b5986781c57961}{load}} (const GLvoid \texorpdfstring{$\ast$}{*}image, GLsizei width, GLsizei height, GLenum format=GL\+\_\+\+RGB, GLenum type=GL\+\_\+\+UNSIGNED\+\_\+\+BYTE, GLenum internal=GL\+\_\+\+RGB, GLenum wrap=GL\+\_\+\+CLAMP\+\_\+\+TO\+\_\+\+EDGE, bool swizzle=true)
+\item 
+void \mbox{\hyperlink{classgg_1_1GgColorTexture_afdc734fb5c415a9f5b86e1b13e7ee7d6}{load}} (const std\+::string \&name, GLenum internal=0, GLenum wrap=GL\+\_\+\+CLAMP\+\_\+\+TO\+\_\+\+EDGE)
+\item 
+\mbox{\hyperlink{classgg_1_1GgColorTexture_a9765eddd468b1c24c7a95efcc0d228b3}{operator bool}} () const noexcept
+\item 
+bool \mbox{\hyperlink{classgg_1_1GgColorTexture_a562de744ce3a5539420a303e2eaac97d}{operator!}} () const noexcept
+\item 
+const \mbox{\hyperlink{classgg_1_1GgTexture}{Gg\+Texture}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classgg_1_1GgColorTexture_a03d0a098c30500b84a8af997d8c783fe}{get}} () const
+\item 
+GLuint \mbox{\hyperlink{classgg_1_1GgColorTexture_a234e4c87d83eb285ad50509880a9df4b}{get\+Texture}} () const
+\item 
+GLsizei \mbox{\hyperlink{classgg_1_1GgColorTexture_abaa1ef28a3393552647768d90f1bf458}{get\+Width}} () const
+\item 
+GLsizei \mbox{\hyperlink{classgg_1_1GgColorTexture_a245d672f2a48d9e8f4afe1d09714fcf2}{get\+Height}} () const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgColorTexture_ab47695c760f5a2c935231d851ba14f83}{get\+Size}} (GLsizei \texorpdfstring{$\ast$}{*}size) const
+\item 
+const GLsizei \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classgg_1_1GgColorTexture_a0c8cac105e41d992f5eef8d40b3f37d7}{get\+Size}} () const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgColorTexture_ac7883850935465269b68e7252f7db978}{bind}} () const
+\item 
+void \mbox{\hyperlink{classgg_1_1GgColorTexture_ac0ff431b6fb95af5aae485a6c42ff4fa}{unbind}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+カラーマップ.
+
+\begin{DoxyNote}{覚え書き}
+カラー画像を読み込んでテクスチャを作成する. 
+\end{DoxyNote}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05381}{5381}} 行目に定義があります。
+
+
+
+\label{doc-constructors}
+\Hypertarget{classgg_1_1GgColorTexture_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{classgg_1_1GgColorTexture_a19b43c4aaf2698f71914b14e65734a09}\index{gg::GgColorTexture@{gg::GgColorTexture}!GgColorTexture@{GgColorTexture}}
+\index{GgColorTexture@{GgColorTexture}!gg::GgColorTexture@{gg::GgColorTexture}}
+\doxysubsubsection{\texorpdfstring{GgColorTexture()}{GgColorTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgColorTexture_a19b43c4aaf2698f71914b14e65734a09} 
+gg\+::\+Gg\+Color\+Texture\+::\+Gg\+Color\+Texture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+コンストラクタ. 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05391}{5391}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgColorTexture_ae8565003fd5b169fe21027803d642ec1}\index{gg::GgColorTexture@{gg::GgColorTexture}!GgColorTexture@{GgColorTexture}}
+\index{GgColorTexture@{GgColorTexture}!gg::GgColorTexture@{gg::GgColorTexture}}
+\doxysubsubsection{\texorpdfstring{GgColorTexture()}{GgColorTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgColorTexture_ae8565003fd5b169fe21027803d642ec1} 
+gg\+::\+Gg\+Color\+Texture\+::\+Gg\+Color\+Texture (\begin{DoxyParamCaption}\item[{const GLvoid \texorpdfstring{$\ast$}{*}}]{image}{, }\item[{GLsizei}]{width}{, }\item[{GLsizei}]{height}{, }\item[{GLenum}]{format}{ = {\ttfamily GL\+\_\+RGB}, }\item[{GLenum}]{type}{ = {\ttfamily GL\+\_\+UNSIGNED\+\_\+BYTE}, }\item[{GLenum}]{internal}{ = {\ttfamily GL\+\_\+RGB}, }\item[{GLenum}]{wrap}{ = {\ttfamily GL\+\_\+CLAMP\+\_\+TO\+\_\+EDGE}, }\item[{bool}]{swizzle}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+メモリ上のデータからカラーのテクスチャを作成するコンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em image} & テクスチャとして用いる画像データ, nullptr ならデータを読み込まない. \\
+\hline
+{\em width} & 読み込む画像の横の画素数. \\
+\hline
+{\em height} & 読み込む画像の縦の画素数. \\
+\hline
+{\em format} & 読み込む画像のフォーマット. \\
+\hline
+{\em type} & 読み込む画像のデータ型. \\
+\hline
+{\em internal} & テクスチャの内部フォーマット. \\
+\hline
+{\em wrap} & テクスチャのラッピングモード. \\
+\hline
+{\em swizzle} & true ならテクスチャの赤と青を入れ替える, デフォルトは true. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05407}{5407}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classgg_1_1GgColorTexture_ae8565003fd5b169fe21027803d642ec1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgColorTexture_a903ecf406da9f95a19dc908d00bdf229}\index{gg::GgColorTexture@{gg::GgColorTexture}!GgColorTexture@{GgColorTexture}}
+\index{GgColorTexture@{GgColorTexture}!gg::GgColorTexture@{gg::GgColorTexture}}
+\doxysubsubsection{\texorpdfstring{GgColorTexture()}{GgColorTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgColorTexture_a903ecf406da9f95a19dc908d00bdf229} 
+gg\+::\+Gg\+Color\+Texture\+::\+Gg\+Color\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{GLenum}]{internal}{ = {\ttfamily 0}, }\item[{GLenum}]{wrap}{ = {\ttfamily GL\+\_\+CLAMP\+\_\+TO\+\_\+EDGE}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+TGA フォーマットの画像ファイルを読み込んでカラーのテクスチャを作成するコンストラクタ.
+
+
+\begin{DoxyParams}{引数}
+{\em name} & 読み込むファイル名. \\
+\hline
+{\em internal} & gl\+Tex\+Image2\+D() に指定するテクスチャの内部フォーマット, 0 なら外部フォーマットに合わせる. \\
+\hline
+{\em wrap} & テクスチャのラッピングモード, GL\+\_\+\+TEXTURE\+\_\+\+WRAP\+\_\+S および GL\+\_\+\+TEXTURE\+\_\+\+WRAP\+\_\+T に設定する値. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05428}{5428}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classgg_1_1GgColorTexture_a903ecf406da9f95a19dc908d00bdf229_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgColorTexture_a68a5568459bd00cd1ab652bf3c7add39}\index{gg::GgColorTexture@{gg::GgColorTexture}!````~GgColorTexture@{\texorpdfstring{$\sim$}{\string~}GgColorTexture}}
+\index{````~GgColorTexture@{\texorpdfstring{$\sim$}{\string~}GgColorTexture}!gg::GgColorTexture@{gg::GgColorTexture}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GgColorTexture()}{\string~GgColorTexture()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgColorTexture_a68a5568459bd00cd1ab652bf3c7add39} 
+virtual gg\+::\+Gg\+Color\+Texture\+::\texorpdfstring{$\sim$}{\string~}\+Gg\+Color\+Texture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+デストラクタ. 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05440}{5440}} 行目に定義があります。
+
+
+
+\label{doc-func-members}
+\Hypertarget{classgg_1_1GgColorTexture_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{classgg_1_1GgColorTexture_ac7883850935465269b68e7252f7db978}\index{gg::GgColorTexture@{gg::GgColorTexture}!bind@{bind}}
+\index{bind@{bind}!gg::GgColorTexture@{gg::GgColorTexture}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgColorTexture_ac7883850935465269b68e7252f7db978} 
+void gg\+::\+Gg\+Color\+Texture\+::bind (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+テクスチャの使用開始 (このテクスチャを使用する際に呼び出す). 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05567}{5567}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgColorTexture_a03d0a098c30500b84a8af997d8c783fe}\index{gg::GgColorTexture@{gg::GgColorTexture}!get@{get}}
+\index{get@{get}!gg::GgColorTexture@{gg::GgColorTexture}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgColorTexture_a03d0a098c30500b84a8af997d8c783fe} 
+const \mbox{\hyperlink{classgg_1_1GgTexture}{Gg\+Texture}} \texorpdfstring{$\ast$}{*} gg\+::\+Gg\+Color\+Texture\+::get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+テクスチャオブジェクトを取り出す.
+
+\begin{DoxyReturn}{戻り値}
+\doxylink{classgg_1_1GgTexture}{Gg\+Texture} オブジェクトのポインタ. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05509}{5509}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgColorTexture_a245d672f2a48d9e8f4afe1d09714fcf2}\index{gg::GgColorTexture@{gg::GgColorTexture}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!gg::GgColorTexture@{gg::GgColorTexture}}
+\doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgColorTexture_a245d672f2a48d9e8f4afe1d09714fcf2} 
+GLsizei gg\+::\+Gg\+Color\+Texture\+::get\+Height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+使用しているテクスチャの縦の画素数を取り出す.
+
+\begin{DoxyReturn}{戻り値}
+テクスチャの縦の画素数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05539}{5539}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgColorTexture_a0c8cac105e41d992f5eef8d40b3f37d7}\index{gg::GgColorTexture@{gg::GgColorTexture}!getSize@{getSize}}
+\index{getSize@{getSize}!gg::GgColorTexture@{gg::GgColorTexture}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgColorTexture_a0c8cac105e41d992f5eef8d40b3f37d7} 
+const GLsizei \texorpdfstring{$\ast$}{*} gg\+::\+Gg\+Color\+Texture\+::get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+使用しているテクスチャのサイズを取り出す.
+
+\begin{DoxyReturn}{戻り値}
+テクスチャのサイズを格納した配列へのポインタ. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05559}{5559}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgColorTexture_ab47695c760f5a2c935231d851ba14f83}\index{gg::GgColorTexture@{gg::GgColorTexture}!getSize@{getSize}}
+\index{getSize@{getSize}!gg::GgColorTexture@{gg::GgColorTexture}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgColorTexture_ab47695c760f5a2c935231d851ba14f83} 
+void gg\+::\+Gg\+Color\+Texture\+::get\+Size (\begin{DoxyParamCaption}\item[{GLsizei \texorpdfstring{$\ast$}{*}}]{size}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+使用しているテクスチャのサイズを取り出す.
+
+
+\begin{DoxyParams}{引数}
+{\em size} & テクスチャのサイズを格納する GLsizei 型の 2 要素の配列変数. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05549}{5549}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgColorTexture_a234e4c87d83eb285ad50509880a9df4b}\index{gg::GgColorTexture@{gg::GgColorTexture}!getTexture@{getTexture}}
+\index{getTexture@{getTexture}!gg::GgColorTexture@{gg::GgColorTexture}}
+\doxysubsubsection{\texorpdfstring{getTexture()}{getTexture()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgColorTexture_a234e4c87d83eb285ad50509880a9df4b} 
+GLuint gg\+::\+Gg\+Color\+Texture\+::get\+Texture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+使用しているテクスチャのテクスチャ名を得る.
+
+\begin{DoxyReturn}{戻り値}
+テクスチャ名. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05519}{5519}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgColorTexture_abaa1ef28a3393552647768d90f1bf458}\index{gg::GgColorTexture@{gg::GgColorTexture}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!gg::GgColorTexture@{gg::GgColorTexture}}
+\doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgColorTexture_abaa1ef28a3393552647768d90f1bf458} 
+GLsizei gg\+::\+Gg\+Color\+Texture\+::get\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+使用しているテクスチャの横の画素数を取り出す.
+
+\begin{DoxyReturn}{戻り値}
+テクスチャの横の画素数. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05529}{5529}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgColorTexture_aab0f5a583d503f5c94b5986781c57961}\index{gg::GgColorTexture@{gg::GgColorTexture}!load@{load}}
+\index{load@{load}!gg::GgColorTexture@{gg::GgColorTexture}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgColorTexture_aab0f5a583d503f5c94b5986781c57961} 
+void gg\+::\+Gg\+Color\+Texture\+::load (\begin{DoxyParamCaption}\item[{const GLvoid \texorpdfstring{$\ast$}{*}}]{image}{, }\item[{GLsizei}]{width}{, }\item[{GLsizei}]{height}{, }\item[{GLenum}]{format}{ = {\ttfamily GL\+\_\+RGB}, }\item[{GLenum}]{type}{ = {\ttfamily GL\+\_\+UNSIGNED\+\_\+BYTE}, }\item[{GLenum}]{internal}{ = {\ttfamily GL\+\_\+RGB}, }\item[{GLenum}]{wrap}{ = {\ttfamily GL\+\_\+CLAMP\+\_\+TO\+\_\+EDGE}, }\item[{bool}]{swizzle}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+メモリ上のデータを読み込んでテクスチャを作成する.
+
+
+\begin{DoxyParams}{引数}
+{\em image} & テクスチャとして用いる画像データ, nullptr ならデータを読み込まない. \\
+\hline
+{\em width} & テクスチャの横の画素数. \\
+\hline
+{\em height} & テクスチャの縦の画素数. \\
+\hline
+{\em format} & 読み込む画像のフォーマット. \\
+\hline
+{\em type} & 読み込む画像のデータ型. \\
+\hline
+{\em internal} & gl\+Tex\+Image2\+D() に指定するテクスチャの内部フォーマット. \\
+\hline
+{\em wrap} & テクスチャのラッピングモード (GL\+\_\+\+CLAMP\+\_\+\+TO\+\_\+\+EDGE, GL\+\_\+\+CLAMP\+\_\+\+TO\+\_\+\+BORDER, GL\+\_\+\+REPEAT, GL\+\_\+\+MIRRORED\+\_\+\+REPEAT). \\
+\hline
+{\em swizzle} & true ならテクスチャの赤と青を入れ替える, デフォルトは true. \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05456}{5456}} 行目に定義があります。
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classgg_1_1GgColorTexture_aab0f5a583d503f5c94b5986781c57961_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgColorTexture_afdc734fb5c415a9f5b86e1b13e7ee7d6}\index{gg::GgColorTexture@{gg::GgColorTexture}!load@{load}}
+\index{load@{load}!gg::GgColorTexture@{gg::GgColorTexture}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classgg_1_1GgColorTexture_afdc734fb5c415a9f5b86e1b13e7ee7d6} 
+void gg\+::\+Gg\+Color\+Texture\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{GLenum}]{internal}{ = {\ttfamily 0}, }\item[{GLenum}]{wrap}{ = {\ttfamily GL\+\_\+CLAMP\+\_\+TO\+\_\+EDGE}}\end{DoxyParamCaption})}
+
+TGA フォーマットの画像ファイルを読み込んでカラーのテクスチャを作成する.
+
+
+\begin{DoxyParams}{引数}
+{\em name} & 読み込むファイル名. \\
+\hline
+{\em internal} & gl\+Tex\+Image2\+D() に指定するテクスチャの内部フォーマット, 0 ならファイルの画像フォーマットに合わせる. \\
+\hline
+{\em wrap} & テクスチャのラッピングモード (GL\+\_\+\+CLAMP\+\_\+\+TO\+\_\+\+EDGE, GL\+\_\+\+CLAMP\+\_\+\+TO\+\_\+\+BORDER, GL\+\_\+\+REPEAT, GL\+\_\+\+MIRRORED\+\_\+\+REPEAT). \\
+\hline
+\end{DoxyParams}
+
+
+ \mbox{\hyperlink{gg_8cpp_source}{gg.\+cpp}} の \mbox{\hyperlink{gg_8cpp_source_l04044}{4044}} 行目に定義があります。
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgg_1_1GgColorTexture_afdc734fb5c415a9f5b86e1b13e7ee7d6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classgg_1_1GgColorTexture_a9765eddd468b1c24c7a95efcc0d228b3}\index{gg::GgColorTexture@{gg::GgColorTexture}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!gg::GgColorTexture@{gg::GgColorTexture}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgColorTexture_a9765eddd468b1c24c7a95efcc0d228b3} 
+gg\+::\+Gg\+Color\+Texture\+::operator bool (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+オブジェクトが有効かどうか調べる.
+
+\begin{DoxyReturn}{戻り値}
+オブジェクトが有効なら true. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05489}{5489}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgColorTexture_a562de744ce3a5539420a303e2eaac97d}\index{gg::GgColorTexture@{gg::GgColorTexture}!operator"!@{operator"!}}
+\index{operator"!@{operator"!}!gg::GgColorTexture@{gg::GgColorTexture}}
+\doxysubsubsection{\texorpdfstring{operator"!()}{operator!()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgColorTexture_a562de744ce3a5539420a303e2eaac97d} 
+bool gg\+::\+Gg\+Color\+Texture\+::operator! (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+オブジェクトが有効かどうかの結果を反転する.
+
+\begin{DoxyReturn}{戻り値}
+オブジェクトが有効なら false, 無効なら true. 
+\end{DoxyReturn}
+
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05499}{5499}} 行目に定義があります。
+
+\Hypertarget{classgg_1_1GgColorTexture_ac0ff431b6fb95af5aae485a6c42ff4fa}\index{gg::GgColorTexture@{gg::GgColorTexture}!unbind@{unbind}}
+\index{unbind@{unbind}!gg::GgColorTexture@{gg::GgColorTexture}}
+\doxysubsubsection{\texorpdfstring{unbind()}{unbind()}}
+{\footnotesize\ttfamily \label{classgg_1_1GgColorTexture_ac0ff431b6fb95af5aae485a6c42ff4fa} 
+void gg\+::\+Gg\+Color\+Texture\+::unbind (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+テクスチャの使用終了 (このテクスチャを使用しなくなったら呼び出す). 
+
+ \mbox{\hyperlink{gg_8h_source}{gg.\+h}} の \mbox{\hyperlink{gg_8h_source_l05575}{5575}} 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gg_8h}{gg.\+h}}\item 
+\mbox{\hyperlink{gg_8cpp}{gg.\+cpp}}\end{DoxyCompactItemize}
