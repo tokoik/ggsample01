@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 /*
 
@@ -34,7 +34,11 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 // Dear ImGui を使うなら
 #if !defined(GG_USE_IMGUI) && !defined(GG_NO_IMGUI)
-#  define GG_USE_IMGUI
+#  if defined(__has_include)
+#    if __has_include(<imgui.h>) || __has_include("imgui.h")
+#      define GG_USE_IMGUI
+#    endif
+#  endif
 #endif
 
 // OpenXR を使うなら
@@ -52,6 +56,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 // 補助プログラム
 #include "gg.h"
+using namespace gg;
 
 // 標準ライブラリ
 #include <stdexcept>
