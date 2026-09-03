@@ -5,7 +5,7 @@
 本プログラムは、GLFW 3 と Dear ImGui、および Native File Dialog Extended (NFD) を統合したモダン OpenGL のベースアプリケーションフレームワークです。
 
 - 移行元ブログ記事:
-  - [ゲームグラフィックス特論 (2018) - 床井研究室](https://tokoik.github.io/blog/2018/10/14/)
+  - [ゲームグラフィックス特論 (2018) - 床井研究室](https://tokoik.github.io/blog/2018-10-14.html)
 
 ## 2. 宿題の内容
 
