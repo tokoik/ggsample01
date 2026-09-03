@@ -7,13 +7,18 @@
 - 移行元ブログ記事:
   - [ゲームグラフィックス特論 (2018) - 床井研究室](https://tokoik.github.io/blog/2018/10/14/)
 
-## 2. 対応環境
+## 2. 宿題の内容
+
+[ggnote01.pdf](https://tokoik.github.io/gg/ggnote01.pdf) の宿題ひな型プログラムです。
+OpenGL の開発環境（GLFW 3, Dear ImGui, NFD, picojson）を整備し、本プログラムをビルドして正常に起動・操作できることを確認してください。
+
+## 3. 対応環境
 
 - **Windows**: Visual Studio 2019 / 2022 / 2026 (CMake 経由で GLFW, ImGui, NFD, picojson を自動構成)
 - **macOS**: Xcode (GLFW, ImGui, NFD を自動ダウンロード、OpenGL Framework を使用)
 - **Ubuntu Linux**: GCC / Make (システム標準の libglfw3-dev, libgl1-mesa-dev, libgtk-3-dev を使用)
 
-## 3. ビルド手順
+## 4. ビルド手順
 
 ### Windows (Visual Studio)
 
@@ -38,7 +43,7 @@ cmake -B build -S .
 cmake --build build
 ```
 
-## 4. 起動方法
+## 5. 起動方法
 
 ビルド完了後、生成された実行ファイルを実行します。
 
@@ -46,7 +51,7 @@ cmake --build build
 - **macOS**: `build/Release/ggsample01.app`
 - **Linux**: `build/ggsample01`
 
-## 5. 操作方法
+## 6. 操作方法
 
 - **マウス左ドラッグ**: シーンの視点回転
 - **マウス右ドラッグ**: 視点の平行移動
@@ -54,6 +59,6 @@ cmake --build build
 - **ImGui メニューパネル**: 光源位置・拡散反射光色のリアルタイム調整
 - **[q] / [Q] / [ESC]**: プログラムの終了
 
-## 6. プログラムの解説
+## 7. プログラムの解説
 
 `Menu.cpp` で Dear ImGui の GUI ウィジェットを構築し、光源パラメータを直接操作して `simple.vert` および `simple.frag` にユニフォーム変数として転送します。設定情報は `Config.cpp` および `picojson.h` により `ggsample01_config.json` へ保存・復元が可能です。
