@@ -1,9 +1,0 @@
-<map id="gg::GgVector" name="gg::GgVector">
-<area shape="rect" id="Node000001" title=" " alt="" coords="35,80,133,107"/>
-<area shape="rect" id="Node000003" href="$classgg_1_1GgQuaternion.html" title=" " alt="" coords="22,155,146,181"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="85,120,87,155,81,154,83,125"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,163,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,45,87,80,81,79,83,50"/>
-<area shape="rect" id="Node000004" href="$classgg_1_1GgTrackball.html" title=" " alt="" coords="27,229,141,256"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="86,195,86,230,82,228,82,199"/>
-</map>
