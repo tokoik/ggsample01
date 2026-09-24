@@ -45,3 +45,7 @@ cmake_install.cmake
 !*.json
 !*.ttf
 !*.otf
+
+# Backup files
+*.bak
+*~
